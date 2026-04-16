@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German A2 Course - Home</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        .home-hero {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .home-hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            animation: slideDown 0.6s ease;
+        }
+
+        .home-hero p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            animation: slideDown 0.6s ease 0.2s both;
+        }
+
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease 0.4s both;
+        }
+
+        .chapter-card {
+            background: linear-gradient(135deg, #f0f9ff, #e0e7ff);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #e0e7ff, #dbeafe);
+        }
+
+        .chapter-card.coming-soon {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .chapter-card.coming-soon:hover {
+            transform: none;
+        }
+
+        .chapter-number {
+            color: var(--primary-color);
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .chapter-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .chapter-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .chapter-stats {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-dark);
+        }
+
+        .chapter-card button {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .chapter-card button:hover {
+            background: #1e3a8a;
+        }
+
+        .features {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease 0.6s both;
+        }
+
+        .features h2 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-box {
+            padding: 20px;
+            background: var(--background);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .feature-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            color: var(--text-light);
+            font-size: 0.95em;
+        }
+
+        .progress-overview {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease 0.8s both;
+        }
+
+        .progress-overview h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .progress-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .progress-stat {
+            background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .progress-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .progress-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            animation: slideInUp 0.6s ease 1s both;
+        }
+
+        .cta-section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .btn-start {
+            background: white;
+            color: var(--accent-1);
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-start:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="home-hero">
+            <h1>🇩🇪 German A2 Course</h1>
+            <p>Learn German the Interactive Way - Fun, Engaging, and Effective</p>
+            <button class="btn-start" onclick="document.querySelector('.chapter-grid').scrollIntoView({behavior: 'smooth'})">
+                Start Learning →
+            </button>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Why Choose This Course?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Interactive</h3>
+                    <p>Engaging exercises that make learning fun and memorable</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Track your achievements and celebrate milestones</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Structured Learning</h3>
+                    <p>Well-organized chapters with clear grammar explanations</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Gamification</h3>
+                    <p>Unlock achievements and maintain learning streaks</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📚</div>
+                    <h3>Comprehensive</h3>
+                    <p>Vocabulary, grammar, and cultural insights all included</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real Results</h3>
+                    <p>Learn practical German for everyday conversations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Overview -->
+        <section class="progress-overview">
+            <h2>Your Progress</h2>
+            <div class="progress-stats">
+                <div class="progress-stat">
+                    <div class="progress-number" id="overallExercises">0</div>
+                    <div class="progress-label">Exercises Completed</div>
+                </div>
+                <div class="progress-stat">
+                    <div class="progress-number" id="overallScore">0</div>
+                    <div class="progress-label">Total Score</div>
+                </div>
+                <div class="progress-stat">
+                    <div class="progress-number" id="overallAchievements">0</div>
+                    <div class="progress-label">Achievements Unlocked</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapters Section -->
+        <section class="chapter-grid">
+            <div class="chapter-card">
+                <div class="chapter-number">CHAPTER 1</div>
+                <h3>Character Traits</h3>
+                <p>Learn how to describe personalities and character traits in German. Master adjectives and the verb "sein".</p>
+                <div class="chapter-stats">
+                    <div class="stat-item">📝 12 vocabulary words</div>
+                    <div class="stat-item">✏️ 5 exercises</div>
+                </div>
+                <button onclick="window.location.href='chapters/chapter1.html'">Start Chapter →</button>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-number">CHAPTER 2</div>
+                <h3>Conjunction "Weil"</h3>
+                <p>Master the most common reason conjunction. Learn proper word order and how to explain causes naturally.</p>
+                <div class="chapter-stats">
+                    <div class="stat-item">15 example sentences</div>
+                    <div class="stat-item">6 exercises</div>
+                </div>
+                <button onclick="window.location.href='chapters/chapter2.html'">Start Chapter →</button>
+            </div>
+
+            <div class="chapter-card coming-soon">
+                <div class="chapter-number">CHAPTER 3</div>
+                <h3>Daily Activities</h3>
+                <p>Learn vocabulary and sentences for everyday routines. Discuss what you do throughout the day.</p>
+                <div class="chapter-stats">
+                    <div class="stat-item">⏰ Coming Soon</div>
+                </div>
+                <button disabled>Coming Soon</button>
+            </div>
+
+            <div class="chapter-card coming-soon">
+                <div class="chapter-number">CHAPTER 4</div>
+                <h3>Travel & Places</h3>
+                <p>Navigate German-speaking countries. Learn location vocabulary and travel-related phrases.</p>
+                <div class="chapter-stats">
+                    <div class="stat-item">✈️ Coming Soon</div>
+                </div>
+                <button disabled>Coming Soon</button>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Start Your German Journey?</h2>
+            <p>Begin with Chapter 1 and work your way through our comprehensive A2 curriculum</p>
+            <button class="btn-start" onclick="window.location.href='chapters/chapter1.html'">
+                Start with Chapter 1 →
+            </button>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Update progress on home page
+        function updateHomeProgress() {
+            const stats = app.getStats();
+            document.getElementById('overallExercises').textContent = stats.exercisesCompleted;
+            document.getElementById('overallScore').textContent = stats.score;
+            document.getElementById('overallAchievements').textContent = stats.achievements;
+        }
+
+        // Update on page load and periodically
+        updateHomeProgress();
+        setInterval(updateHomeProgress, 1000);
+    </script>
+</body>
+</html>
