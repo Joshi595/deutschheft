@@ -29,8 +29,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
     min-height: 100vh;
-    padding: 20px;
+    padding: 16px 12px;
     color: var(--text-dark);
+    font-size: 16px;
 }
 
 .container {
@@ -44,9 +45,9 @@ body {
 
 header {
     background: var(--card-bg);
-    padding: 30px;
+    padding: 24px;
     border-radius: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     animation: slideDown 0.6s ease;
@@ -66,16 +67,18 @@ header {
 header h1 {
     color: var(--primary-color);
     margin-bottom: 10px;
-    font-size: 2em;
+    font-size: clamp(1.5em, 5vw, 2em);
     background: linear-gradient(135deg, var(--primary-color), var(--accent-1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    line-height: 1.2;
 }
 
 header p {
     color: var(--text-light);
-    font-size: 0.95em;
+    font-size: clamp(0.85em, 2.5vw, 0.95em);
+    line-height: 1.4;
 }
 
 .header-stats {
@@ -139,18 +142,18 @@ header p {
 .main-content {
     display: grid;
     grid-template-columns: 250px 1fr;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 26px;
+    margin-bottom: 26px;
 }
 
 .sidebar {
     background: var(--card-bg);
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     height: fit-content;
     position: sticky;
-    top: 20px;
+    top: 16px;
     animation: slideIn 0.6s ease 0.2s both;
 }
 
@@ -167,8 +170,9 @@ header p {
 
 .sidebar h3 {
     color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 1.1em;
+    margin-bottom: 18px;
+    font-size: clamp(0.95em, 3vw, 1.1em);
+    font-weight: 700;
 }
 
 .chapter-list {
@@ -235,10 +239,11 @@ header p {
 
 .content-area {
     background: var(--card-bg);
-    padding: 40px;
+    padding: clamp(20px, 5vw, 40px);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.6s ease;
+    overflow-x: hidden;
 }
 
 @keyframes fadeIn {
@@ -252,11 +257,13 @@ header p {
 
 .section-title {
     color: var(--primary-color);
-    font-size: 1.6em;
+    font-size: clamp(1.3em, 5vw, 1.6em);
     margin-bottom: 10px;
     border-bottom: 3px solid var(--warning-color);
     padding-bottom: 12px;
     position: relative;
+    line-height: 1.3;
+    font-weight: 700;
 }
 
 .section-title::after {
@@ -278,9 +285,10 @@ header p {
 
 .section-subtitle {
     color: var(--text-light);
-    font-size: 0.95em;
-    margin-bottom: 25px;
+    font-size: clamp(0.8em, 2vw, 0.95em);
+    margin-bottom: 24px;
     font-style: italic;
+    line-height: 1.4;
 }
 
 .lesson-content {
@@ -295,9 +303,9 @@ header p {
 .explanation-box {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 50%, #fce7f3 100%);
     border-left: 5px solid var(--primary-color);
-    padding: 18px;
+    padding: clamp(14px, 3vw, 18px);
     border-radius: 10px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     animation: slideInUp 0.5s ease;
     border-top: 3px solid var(--accent-3);
     position: relative;
@@ -317,25 +325,26 @@ header p {
 .explanation-box h4 {
     color: var(--primary-color);
     margin-bottom: 10px;
-    font-size: 1em;
-    font-weight: 600;
+    font-size: clamp(0.9em, 2.5vw, 1em);
+    font-weight: 700;
 }
 
 .explanation-box p {
     color: var(--text-dark);
     line-height: 1.6;
     margin-bottom: 8px;
-    font-size: 0.9em;
+    font-size: clamp(0.85em, 2vw, 0.9em);
 }
 
 .example {
     background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-    padding: 12px;
+    padding: clamp(10px, 2.5vw, 12px);
     border-left: 4px solid var(--primary-color);
     margin: 10px 0;
     border-radius: 6px;
-    font-size: 0.88em;
+    font-size: clamp(0.8em, 2vw, 0.88em);
     border-top: 2px solid var(--accent-3);
+    line-height: 1.5;
 }
 
 .example strong {
@@ -481,16 +490,18 @@ header p {
 .vocab-table th {
     background: var(--primary-color);
     color: white;
-    padding: 12px;
+    padding: clamp(10px, 2vw, 12px);
     text-align: left;
     font-weight: 600;
-    font-size: 0.9em;
+    font-size: clamp(0.8em, 2vw, 0.9em);
+    word-break: break-word;
 }
 
 .vocab-table td {
-    padding: 10px 12px;
+    padding: clamp(8px, 2vw, 10px) clamp(8px, 2vw, 12px);
     border-bottom: 1px solid var(--border-color);
-    font-size: 0.85em;
+    font-size: clamp(0.75em, 2vw, 0.85em);
+    line-height: 1.4;
 }
 
 .vocab-table tr:hover {
@@ -565,14 +576,14 @@ header p {
     color: var(--primary-color);
     font-weight: bold;
     margin-bottom: 8px;
-    font-size: 0.85em;
+    font-size: clamp(0.75em, 2vw, 0.85em);
 }
 
 .exercise-question {
     margin-bottom: 12px;
-    font-size: 0.9em;
+    font-size: clamp(0.8em, 2.5vw, 0.9em);
     color: var(--text-dark);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .option {
@@ -665,13 +676,17 @@ header p {
 }
 
 button {
-    padding: 10px 20px;
+    padding: clamp(10px, 2vw, 12px) clamp(16px, 3.5vw, 25px);
     border: none;
     border-radius: 6px;
-    font-size: 0.9em;
+    font-size: clamp(0.85em, 2vw, 1em);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button:active {
@@ -884,78 +899,102 @@ button:active {
    RESPONSIVE DESIGN
    ============================================ */
 
+/* Tablet & Medium Screens */
 @media (max-width: 768px) {
+    body {
+        padding: 12px 8px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
     .main-content {
         grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 18px;
     }
 
     .sidebar {
         position: static;
+        padding: 18px;
+        top: auto;
+        margin-bottom: 20px;
     }
 
     .stats-box {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+        margin-bottom: 24px;
     }
 
     .header-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
     }
 
-    header h1 {
-        font-size: 1.6em;
-    }
-
-    header p {
+    .header-stat {
+        padding: 8px 12px;
         font-size: 0.85em;
     }
 
     .section-title {
-        font-size: 1.3em;
+        font-size: 1.4em;
+        margin-bottom: 8px;
+        padding-bottom: 10px;
     }
 
     .section-subtitle {
+        margin-bottom: 20px;
         font-size: 0.9em;
     }
 
     .content-area {
-        padding: 16px;
+        padding: 18px;
     }
 
     .exercise-tracker {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
     }
 
     .exercise-item {
-        padding: 14px;
-    }
-
-    .exercise-number {
-        font-size: 0.8em;
+        padding: 12px;
+        margin-bottom: 12px;
     }
 
     .exercise-question {
         font-size: 0.85em;
     }
 
-    button {
-        padding: 9px 16px;
+    .explanation-box {
+        padding: 14px;
+        margin-bottom: 14px;
+    }
+
+    .example {
+        padding: 10px;
         font-size: 0.85em;
     }
-}
-
-@media (max-width: 480px) {
-    .button-group {
-        flex-direction: column;
-    }
 
     button {
-        width: 100%;
-        padding: 10px 12px;
-        font-size: 0.8em;
+        min-height: 40px;
+        font-size: 0.9em;
+    }
+
+    .btn-primary {
+        width: auto;
+    }
+
+    .option {
+        padding: 10px;
+        font-size: 0.9em;
+        margin: 8px 0;
     }
 
     .match-item {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .match-right {
@@ -967,61 +1006,348 @@ button:active {
         margin: 8px 0;
     }
 
+    .achievement-title {
+        font-size: 1.1em;
+    }
+
+    .achievement-message {
+        font-size: 0.9em;
+    }
+
+    .progress-bar {
+        height: 8px;
+        margin-top: 8px;
+    }
+
+    .progress-label {
+        font-size: 0.9em;
+        gap: 8px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    body {
+        padding: 10px 6px;
+    }
+
+    header {
+        padding: 18px;
+        margin-bottom: 18px;
+        border-radius: 12px;
+    }
+
     header h1 {
-        font-size: 1.4em;
+        font-size: 1.3em;
+        margin-bottom: 8px;
+        line-height: 1.1;
     }
 
     header p {
         font-size: 0.8em;
+        line-height: 1.3;
     }
 
-    .section-title {
+    .header-stats {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 14px;
+    }
+
+    .header-stat {
+        padding: 6px 10px;
+        font-size: 0.75em;
+    }
+
+    .header-stat strong {
         font-size: 1.1em;
     }
 
-    .section-subtitle {
-        font-size: 0.85em;
+    .main-content {
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .sidebar {
+        padding: 14px;
+        margin-bottom: 16px;
+        border-radius: 12px;
+    }
+
+    .sidebar h3 {
+        font-size: 0.95em;
+        margin-bottom: 14px;
+    }
+
+    .chapter-item {
+        padding: 8px 10px;
+        font-size: 0.8em;
+        margin-bottom: 6px;
+    }
+
+    .chapter-item .badge {
+        font-size: 0.65em;
+        padding: 2px 4px;
+        margin-left: 4px;
     }
 
     .content-area {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+        padding-bottom: 8px;
+        margin-bottom: 6px;
+    }
+
+    .section-title::after {
+        display: none;
+    }
+
+    .section-subtitle {
+        font-size: 0.8em;
+        margin-bottom: 16px;
+    }
+
+    .lesson-content {
+        margin-bottom: 24px;
+        font-size: 0.9em;
+        line-height: 1.6;
+    }
+
+    .explanation-box {
         padding: 12px;
+        margin-bottom: 12px;
+        border-left: 4px solid var(--primary-color);
+        border-radius: 8px;
+    }
+
+    .explanation-box h4 {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+
+    .explanation-box p {
+        font-size: 0.8em;
+        margin-bottom: 6px;
+        line-height: 1.5;
+    }
+
+    .example {
+        padding: 10px;
+        font-size: 0.8em;
+        margin: 8px 0;
+        border-radius: 6px;
+    }
+
+    .stats-box {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .stat-card {
+        padding: 16px;
+        border-radius: 10px;
+        animation: none;
+    }
+
+    .stat-number {
+        font-size: 1.8em;
+        margin-bottom: 4px;
+    }
+
+    .stat-label {
+        font-size: 0.8em;
+    }
+
+    .stat-card:hover {
+        transform: none;
+    }
+
+    .exercise-section {
+        padding: 16px;
+        margin-top: 24px;
+        border-radius: 12px;
+    }
+
+    .exercise-title {
+        font-size: 1.1em;
+        margin-bottom: 14px;
+    }
+
+    .exercise-title::before {
+        display: none;
+    }
+
+    .exercise-tracker {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .exercise-item {
         padding: 12px;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+
+    .exercise-item:hover {
+        transform: none;
     }
 
     .exercise-number {
-        font-size: 0.75em;
+        font-size: 0.7em;
+        margin-bottom: 6px;
     }
 
     .exercise-question {
         font-size: 0.8em;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+    .exercise-options {
+        margin: 10px 0;
     }
 
     .option {
-        padding: 8px 10px;
-        font-size: 0.85em;
-        margin: 6px 0;
+        padding: 10px;
+        font-size: 0.8em;
+        margin: 8px 0;
+        border-radius: 6px;
+        min-height: 44px;
+        line-height: 1.3;
+    }
+
+    .option:hover {
+        transform: none;
+    }
+
+    .option input[type="radio"],
+    .option input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        flex-shrink: 0;
+    }
+
+    .vocab-table {
+        margin: 16px 0;
+        font-size: 0.8em;
     }
 
     .vocab-table th {
         padding: 8px;
-        font-size: 0.8em;
+        font-size: 0.75em;
+        font-weight: 600;
     }
 
     .vocab-table td {
-        padding: 8px 10px;
-        font-size: 0.75em;
+        padding: 6px 8px;
+        font-size: 0.7em;
+        line-height: 1.3;
+    }
+
+    .vocab-table .german {
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 0.85em;
+        min-height: 44px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .btn-primary {
+        padding: 12px 16px;
+        width: 100%;
+    }
+
+    .btn-primary:active {
+        transform: scale(0.98);
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .button-group button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .progress-bar {
+        height: 6px;
+        margin-top: 8px;
+        border-radius: 3px;
+    }
+
+    .progress-label {
+        font-size: 0.8em;
+        gap: 6px;
+    }
+
+    .progress-label span {
+        display: block;
+        word-break: break-word;
+    }
+
+    .achievement-box {
+        padding: 16px;
+        margin: 14px 0;
+        border-radius: 10px;
     }
 
     .achievement-title {
         font-size: 1em;
+        margin-bottom: 6px;
     }
 
     .achievement-message {
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+
+    .match-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .match-left,
+    .match-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .match-select {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.8em;
+        margin: 6px 0;
+    }
+
+    .feedback {
         font-size: 0.85em;
+        padding: 10px;
+        margin-top: 8px;
+        border-radius: 6px;
+    }
+
+    .feedback.correct {
+        padding: 10px;
+    }
+
+    .feedback.incorrect {
+        padding: 10px;
     }
 }
 
@@ -1060,4 +1386,60 @@ button:active {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #1e3a8a;
+}
+
+/* ============================================
+   ACCESSIBILITY & PERFORMANCE
+   ============================================ */
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    /* Mobile devices don't need hover effects that slow down performance */
+    button:hover,
+    .option:hover,
+    .chapter-item:hover,
+    .stat-card:hover,
+    .exercise-item:hover {
+        transform: none;
+    }
+    
+    /* Larger touch targets for mobile */
+    button,
+    .option,
+    input[type="radio"],
+    input[type="checkbox"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Reduce animation on mobile for better performance */
+    * {
+        animation-duration: 0.3s;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    header,
+    .sidebar,
+    button,
+    .achievement-box,
+    .stat-card {
+        break-inside: avoid;
+    }
 }
