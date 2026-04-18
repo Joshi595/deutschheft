@@ -469,6 +469,7 @@
         </div>
     </div>
 
+    <script src="../js/groq-api.js"></script>
     <script src="../js/app.js"></script>
     <script>
         // Initialize app for this chapter
@@ -481,6 +482,44 @@
                 totalScore.textContent = app.score;
             }
         }, 500);
+
+        // Fill in the blanks validation with AI support
+        async function checkFillBlank(elementId, correctAnswer, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userAnswer = input.value.trim();
+            
+            resultBox.classList.add('show');
+            resultBox.innerHTML = `<div class="result-text">⏳ Checking your answer...</div>`;
+
+            // If Groq validator is available, use AI validation
+            if (groqValidator) {
+                const sentence = document.getElementById(elementId).dataset.sentence || 'Complete the sentence';
+                const validation = await groqValidator.validateFillBlank(userAnswer, correctAnswer, sentence);
+                
+                if (validation.isCorrect) {
+                    app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
+                    resultBox.classList.add('result-correct');
+                    resultBox.innerHTML = `<div class="result-text">✅ ${validation.feedback}<br><small>${validation.explanation}</small></div>`;
+                } else {
+                    resultBox.classList.add('result-incorrect');
+                    resultBox.innerHTML = `<div class="result-text">❌ ${validation.feedback}<br><small>${validation.explanation}</small></div>`;
+                }
+            } else {
+                // Fallback to basic validation if API not available
+                const userAnswerLower = userAnswer.toLowerCase();
+                if (userAnswerLower === correctAnswer.toLowerCase()) {
+                    app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
+                    resultBox.classList.add('result-correct');
+                    resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+                } else {
+                    resultBox.classList.add('result-incorrect');
+                    resultBox.innerHTML = `<div class="result-text">❌ Try again! The answer is: <strong>${correctAnswer}</strong></div>`;
+                }
+            }
+        }
 
         // Custom validation for weil sentences
         function checkCustomTranslation(elementId, keyword) {

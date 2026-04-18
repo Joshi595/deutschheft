@@ -455,6 +455,7 @@
         </div>
     </div>
 
+    <script src="../js/groq-api.js"></script>
     <script src="../js/app.js"></script>
     <script>
         // Initialize app for this chapter
@@ -482,20 +483,41 @@
             }
         }
 
-        // Fill in the blanks validation
-        function checkFillBlank(elementId, correctAnswer, message) {
+        // Fill in the blanks validation with AI support
+        async function checkFillBlank(elementId, correctAnswer, message) {
             const input = document.getElementById(elementId);
             const resultBox = document.getElementById(`result-${elementId}`);
             const userAnswer = input.value.trim();
+            
+            resultBox.classList.add('show');
+            resultBox.innerHTML = `<div class="result-text">\u23f3 Checking your answer...</div>`;
 
-            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-                const result = app.checkAnswer(true, message);
-                resultBox.classList.remove('result-incorrect');
-                resultBox.classList.add('show', 'result-correct');
-                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            // If Groq validator is available, use AI validation
+            if (groqValidator) {
+                const sentence = document.getElementById(elementId).dataset.sentence || 'Complete the sentence';
+                const validation = await groqValidator.validateFillBlank(userAnswer, correctAnswer, sentence);
+                
+                if (validation.isCorrect) {
+                    app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
+                    resultBox.classList.add('result-correct');
+                    resultBox.innerHTML = `<div class="result-text">\u2705 ${validation.feedback}<br><small>${validation.explanation}</small></div>`;
+                } else {
+                    resultBox.classList.add('result-incorrect');
+                    resultBox.innerHTML = `<div class="result-text">\u274c ${validation.feedback}<br><small>${validation.explanation}</small></div>`;
+                }
             } else {
-                resultBox.classList.add('show', 'result-incorrect');
-                resultBox.innerHTML = `<div class="result-text">❌ Try again! Answer: ${correctAnswer}</div>`;
+                // Fallback to basic validation if API not available
+                const userAnswerLower = userAnswer.toLowerCase();
+                if (userAnswerLower === correctAnswer.toLowerCase()) {
+                    app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
+                    resultBox.classList.add('result-correct');
+                    resultBox.innerHTML = `<div class="result-text">\u2705 ${message}</div>`;
+                } else {
+                    resultBox.classList.add('result-incorrect');
+                    resultBox.innerHTML = `<div class="result-text">\u274c Try again! Answer: ${correctAnswer}</div>`;
+                }
             }
         }
 
