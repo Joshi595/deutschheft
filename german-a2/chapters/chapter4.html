@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German A2 Course - Chapter 4: Travel & Places</title>
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇩🇪 German A2 Course</h1>
+            <p>Chapter 4: Travel & Places (Reisen und Orte)</p>
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>Exercises Completed</span>
+                    <span id="exerciseProgress">0/5</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3>📚 Chapters</h3>
+                <ul class="chapter-list">
+                    <li class="chapter-item" onclick="switchChapter(1)">
+                        Chapter 1: Character Traits
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(2)">
+                        Chapter 2: Conjunction Weil
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(3)">
+                        Chapter 3: Daily Activities
+                    </li>
+                    <li class="chapter-item active" onclick="switchChapter(4)">
+                        Chapter 4: Travel & Places
+                    </li>
+                </ul>
+            </aside>
+
+            <main class="content-area">
+                <div class="stats-box">
+                    <div class="stat-card">
+                        <div class="stat-number">25</div>
+                        <div class="stat-label">Travel Words</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Grammar Points</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalScore">0</div>
+                        <div class="stat-label">Score</div>
+                    </div>
+                </div>
+
+                <div id="chapterContent">
+                    <h2 class="section-title">Chapter 4: Travel & Places</h2>
+                    <p class="section-subtitle">Learn to navigate German-speaking countries and describe locations, directions, and travel experiences</p>
+
+                    <!-- Lesson Content -->
+                    <div class="lesson-content">
+                        <h3 style="color: var(--primary-color); margin-bottom: 15px;">📖 Introduction</h3>
+                        <p>Travel is one of the best ways to practice German! In this chapter, you'll learn essential vocabulary for navigating cities, asking for directions, describing locations, and booking accommodations. Being able to describe where you are and where you want to go is crucial for traveling in Germany, Austria, and Switzerland.</p>
+
+                        <!-- Grammar Point 1 -->
+                        <div class="explanation-box">
+                            <h4>Grammar Point 1: Dative and Accusative with Places</h4>
+                            <p>German uses two different cases for locations: the dative (where things are) and the accusative (where things are going to).</p>
+                            <div class="example">
+                                <strong>Dative (Wo? - Where at?):</strong><br>
+                                • Ich bin im Hotel. (I am in the hotel.)<br>
+                                • Der Bahnhof ist in der Stadt. (The train station is in the city.)<br><br>
+                                <strong>Accusative (Wohin? - Where to?):</strong><br>
+                                • Ich gehe ins Hotel. (I go into/to the hotel.)<br>
+                                • Der Zug fährt in die Stadt. (The train travels into/to the city.)
+                            </div>
+                        </div>
+
+                        <!-- Grammar Point 2 -->
+                        <div class="explanation-box">
+                            <h4>Grammar Point 2: Prepositions with Travel</h4>
+                            <p>Common prepositions used in travel contexts:</p>
+                            <div style="margin-top: 15px;">
+                                <strong>Direction Prepositions (Accusative):</strong><br>
+                                • zu (to) - Ich gehe zum Bahnhof. (I go to the station.)<br>
+                                • bis (until/to) - Bis zum Flughafen. (Until the airport.)<br>
+                                • nach (to/after) - Ich fliege nach Berlin. (I fly to Berlin.)<br><br>
+                                <strong>Location Prepositions (Dative):</strong><br>
+                                • bei (at/near) - Bei der Bushaltestelle. (At the bus stop.)<br>
+                                • von (from/of) - Der Zug von München. (The train from Munich.)<br>
+                                • zwischen (between) - Zwischen zwei Straßen. (Between two streets.)
+                            </div>
+                        </div>
+
+                        <!-- Grammar Point 3 -->
+                        <div class="explanation-box">
+                            <h4>Grammar Point 3: Imperatives for Directions</h4>
+                            <p>Use imperatives to give and receive directions:</p>
+                            <div class="example">
+                                <strong>Commands for directions:</strong><br>
+                                • Geh geradeaus! (Go straight!)<br>
+                                • Biege links ab! (Turn left!)<br>
+                                • Biege rechts ab! (Turn right!)<br>
+                                • Überquere die Straße! (Cross the street!)<br>
+                                • Folge mir! (Follow me!)<br><br>
+                                <strong>Polite questions:</strong><br>
+                                • Können Sie mir helfen? (Can you help me?)<br>
+                                • Wie komme ich zum Bahnhof? (How do I get to the train station?)<br>
+                                • Wo ist die nächste Bushaltestelle? (Where is the nearest bus stop?)
+                            </div>
+                        </div>
+
+                        <!-- Vocabulary Section -->
+                        <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">📝 Travel & Places Vocabulary</h3>
+                        
+                        <table class="vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>German</th>
+                                    <th>English</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="german">Bahnhof</td>
+                                    <td>train station</td>
+                                    <td>Der Bahnhof ist groß.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Flughafen</td>
+                                    <td>airport</td>
+                                    <td>Ich fahre zum Flughafen.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Bushaltestelle</td>
+                                    <td>bus stop</td>
+                                    <td>Wo ist die nächste Bushaltestelle?</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Taxi</td>
+                                    <td>taxi</td>
+                                    <td>Ich nehme ein Taxi ins Hotel.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Auto/Wagen</td>
+                                    <td>car</td>
+                                    <td>Hast du ein Auto?</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Zug</td>
+                                    <td>train</td>
+                                    <td>Der Zug ist pünktlich.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Flugzeug</td>
+                                    <td>airplane</td>
+                                    <td>Das Flugzeug fliegt nach München.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Straße</td>
+                                    <td>street</td>
+                                    <td>Die Straße ist breit.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Platz</td>
+                                    <td>square/plaza</td>
+                                    <td>Der Marktplatz ist schön.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Stadt</td>
+                                    <td>city</td>
+                                    <td>Berlin ist eine große Stadt.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Dorf</td>
+                                    <td>village</td>
+                                    <td>Das Dorf ist klein und gemütlich.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Berg</td>
+                                    <td>mountain</td>
+                                    <td>Die Alpen sind hohe Berge.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Fluss</td>
+                                    <td>river</td>
+                                    <td>Der Rhein ist ein großer Fluss.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">See</td>
+                                    <td>lake</td>
+                                    <td>Der Bodensee ist wunderschön.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Meer</td>
+                                    <td>sea</td>
+                                    <td>Das Meer ist blau.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Hotel</td>
+                                    <td>hotel</td>
+                                    <td>Ich übernachte im Hotel.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Haus</td>
+                                    <td>house</td>
+                                    <td>Das Haus ist alt.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Kirche</td>
+                                    <td>church</td>
+                                    <td>Die Kirche ist wunderschön.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Museum</td>
+                                    <td>museum</td>
+                                    <td>Das Museum hat viele Kunstwerke.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Restaurant</td>
+                                    <td>restaurant</td>
+                                    <td>Das Restaurant ist gemütlich.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Karte</td>
+                                    <td>map</td>
+                                    <td>Hast du eine Karte?</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Weg</td>
+                                    <td>way/path</td>
+                                    <td>Welcher Weg ist der richtige?</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">Richtung</td>
+                                    <td>direction</td>
+                                    <td>In welche Richtung?</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">rechts</td>
+                                    <td>right</td>
+                                    <td>Biege rechts ab.</td>
+                                </tr>
+                                <tr>
+                                    <td class="german">links</td>
+                                    <td>left</td>
+                                    <td>Das Geschäft ist links.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="explanation-box" style="margin-top: 30px;">
+                            <h4>🎯 Sample Travel Conversation</h4>
+                            <div class="example">
+                                <strong>A: Entschuldigung, wie komme ich zum Bahnhof?</strong><br>
+                                (Excuse me, how do I get to the train station?)<br><br>
+                                <strong>B: Geh geradeaus bis zur nächsten Ampel. Biege dann links ab.</strong><br>
+                                (Go straight until the next traffic light. Then turn left.)<br><br>
+                                <strong>A: Vielen Dank! Ist es weit?</strong><br>
+                                (Thank you! Is it far?)<br><br>
+                                <strong>B: Nein, es ist nur zehn Minuten zu Fuß.</strong><br>
+                                (No, it's only ten minutes on foot.)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercises Section -->
+                    <div class="exercise-section">
+                        <h3 class="exercise-title">Exercises</h3>
+
+                        <!-- Exercise Tracker -->
+                        <div class="exercise-tracker">
+                            <div class="exercise-status current" id="ex1-status">Ex 1</div>
+                            <div class="exercise-status" id="ex2-status">Ex 2</div>
+                            <div class="exercise-status" id="ex3-status">Ex 3</div>
+                            <div class="exercise-status" id="ex4-status">Ex 4</div>
+                            <div class="exercise-status" id="ex5-status">Ex 5</div>
+                        </div>
+
+                        <!-- Exercise 1: Multiple Choice -->
+                        <div class="exercise-item">
+                            <div class="exercise-number">Exercise 1: Match Travel Locations</div>
+                            <div class="exercise-question">Select the correct German word for each location:</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Where do airplanes land?</strong></p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="correct" onchange="checkMultipleChoice('q1', 'correct', 'Correct! Flughafen is airport.')">
+                                        Flughafen
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="wrong1" onchange="checkMultipleChoice('q1', 'wrong1', 'No, that is train station.')">
+                                        Bahnhof
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="wrong2" onchange="checkMultipleChoice('q1', 'wrong2', 'No, that is hotel.')">
+                                        Hotel
+                                    </label>
+                                </div>
+                                <div class="result-box" id="result-q1"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Where can you take a train?</strong></p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="wrong1" onchange="checkMultipleChoice('q2', 'wrong1', 'No, that is airport.')">
+                                        Flughafen
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="correct" onchange="checkMultipleChoice('q2', 'correct', 'Correct! Bahnhof is train station.')">
+                                        Bahnhof
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q2" value="wrong2" onchange="checkMultipleChoice('q2', 'wrong2', 'No, that is museum.')">
+                                        Museum
+                                    </label>
+                                </div>
+                                <div class="result-box" id="result-q2"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>3. A large body of saltwater is called:</strong></p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="q3" value="wrong1" onchange="checkMultipleChoice('q3', 'wrong1', 'No, that is a lake.')">
+                                        See
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q3" value="wrong2" onchange="checkMultipleChoice('q3', 'wrong2', 'No, that is a river.')">
+                                        Fluss
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q3" value="correct" onchange="checkMultipleChoice('q3', 'correct', 'Correct! Meer is sea.')">
+                                        Meer
+                                    </label>
+                                </div>
+                                <div class="result-box" id="result-q3"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2: Fill in Locations -->
+                        <div class="exercise-item">
+                            <div class="exercise-number">Exercise 2: Complete Travel Sentences</div>
+                            <div class="exercise-question">Fill in the missing travel vocabulary:</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Ich fahre mit dem Zug zum __________ (station).</strong></p>
+                                <input type="text" class="input-field" id="fill1" placeholder="Enter the word...">
+                                <button class="btn-primary" onclick="checkFillBlank('fill1', 'Bahnhof', 'Perfect!')">Check Answer</button>
+                                <div class="result-box" id="result-fill1"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Der __________ (river) Rhein fließt durch Deutschland.</strong></p>
+                                <input type="text" class="input-field" id="fill2" placeholder="Enter the word...">
+                                <button class="btn-primary" onclick="checkFillBlank('fill2', 'Fluss', 'Great!')">Check Answer</button>
+                                <div class="result-box" id="result-fill2"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>3. Ich übernachte im __________ (hotel) in Berlin.</strong></p>
+                                <input type="text" class="input-field" id="fill3" placeholder="Enter the word...">
+                                <button class="btn-primary" onclick="checkFillBlank('fill3', 'Hotel', 'Excellent!')">Check Answer</button>
+                                <div class="result-box" id="result-fill3"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3: Directions -->
+                        <div class="exercise-item">
+                            <div class="exercise-number">Exercise 3: Ask for and Give Directions</div>
+                            <div class="exercise-question">Translate these direction phrases to German:</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. How do I get to the train station?</strong></p>
+                                <input type="text" class="input-field" id="trans1" placeholder="Translate...">
+                                <button class="btn-primary" onclick="checkTranslation('trans1', 'Bahnhof', 'Good! You got the key word.')">Check Answer</button>
+                                <div class="result-box" id="result-trans1"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Go straight and turn left.</strong></p>
+                                <input type="text" class="input-field" id="trans2" placeholder="Translate...">
+                                <button class="btn-primary" onclick="checkTranslation('trans2', 'geradeaus links', 'Good! You got the directions.')">Check Answer</button>
+                                <div class="result-box" id="result-trans2"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4: Travel Planning -->
+                        <div class="exercise-item">
+                            <div class="exercise-number">Exercise 4: Plan Your Travel Day</div>
+                            <div class="exercise-question">Write 2 sentences about your travel plans using travel vocabulary:</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>Sentence 1:</strong></p>
+                                <textarea class="input-field" id="travel1" placeholder="Describe where you want to go..." style="min-height: 60px; resize: vertical;"></textarea>
+                                <button class="btn-primary" onclick="checkTravel('travel1')">Check Sentence</button>
+                                <div class="result-box" id="result-travel1"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>Sentence 2:</strong></p>
+                                <textarea class="input-field" id="travel2" placeholder="Describe how you will travel..." style="min-height: 60px; resize: vertical;"></textarea>
+                                <button class="btn-primary" onclick="checkTravel('travel2')">Check Sentence</button>
+                                <div class="result-box" id="result-travel2"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5: Location Descriptions -->
+                        <div class="exercise-item">
+                            <div class="exercise-number">Exercise 5: Match Locations to Descriptions</div>
+                            <div class="exercise-question">Match each location with its description:</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>Match correctly:</strong></p>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                    <div>
+                                        <p>1. Bahnhof</p>
+                                        <p>2. Flughafen</p>
+                                        <p>3. Restaurant</p>
+                                        <p>4. Kirche</p>
+                                        <p>5. Museum</p>
+                                    </div>
+                                    <div>
+                                        <p>A) Man isst hier</p>
+                                        <p>B) Züge fahren hier ab</p>
+                                        <p>C) Kunstwerke sind hier</p>
+                                        <p>D) Flugzeuge landen hier</p>
+                                        <p>E) Gott wird hier verehrt</p>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 20px; margin-bottom: 10px;"><strong>Your answer:</strong></p>
+                                <input type="text" class="input-field" id="match1" placeholder="e.g., 1B,2D,3A,4E,5C">
+                                <button class="btn-primary" onclick="checkMatching('match1', '1B,2D,3A,4E,5C', 'Perfect!')">Check Answer</button>
+                                <div class="result-box" id="result-match1"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Completion Feedback -->
+                    <div class="completion-section">
+                        <h3 class="completion-title">✨ Chapter 4 Complete!</h3>
+                        <p class="completion-message">Fantastic! You can now navigate German-speaking countries, ask for directions, and describe travel experiences!</p>
+                        <p style="color: white; margin-top: 15px;">Remember: <strong>Dative for location (where) + Accusative for direction (where to)!</strong></p>
+                        <button class="btn-primary" onclick="window.location.href='../index.html'" style="background: white; color: #667eea; margin-top: 20px;">Back to Home</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script>
+        // Initialize app for this chapter
+        app.setTotalExercises(5);
+        
+        // Update score display
+        setInterval(() => {
+            const totalScore = document.getElementById('totalScore');
+            if (totalScore) {
+                totalScore.textContent = app.score;
+            }
+        }, 500);
+
+        // Multiple choice validation
+        function checkMultipleChoice(questionId, answer, message) {
+            const resultBox = document.getElementById(`result-${questionId}`);
+            if (answer === 'correct') {
+                const result = app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('show', 'result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">❌ ${message}</div>`;
+            }
+        }
+
+        // Fill in the blanks validation
+        function checkFillBlank(elementId, correctAnswer, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userAnswer = input.value.trim();
+
+            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                const result = app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('show', 'result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">❌ Try again! Answer: ${correctAnswer}</div>`;
+            }
+        }
+
+        // Translation validation
+        function checkTranslation(elementId, keywords, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userInput = input.value.toLowerCase();
+            const keywordArray = keywords.split(' ');
+            let matchCount = 0;
+
+            for (let keyword of keywordArray) {
+                if (userInput.includes(keyword)) matchCount++;
+            }
+
+            if (matchCount >= Math.ceil(keywordArray.length / 2)) {
+                const result = app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('show', 'result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">💡 ${message} Try including key words.</div>`;
+            }
+        }
+
+        // Travel planning validation
+        function checkTravel(elementId) {
+            const textarea = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userInput = textarea.value.trim();
+
+            if (!userInput) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = '<div class="result-text">⚠️ Please write a sentence!</div>';
+                return;
+            }
+
+            const result = app.checkAnswer(true, 'Great effort!');
+            resultBox.classList.remove('result-incorrect');
+            resultBox.classList.add('show', 'result-correct');
+            resultBox.innerHTML = `<div class="result-text">✅ Great! Your travel sentence looks good. Make sure it includes travel vocabulary.</div>`;
+        }
+
+        // Matching validation
+        function checkMatching(elementId, correctAnswer, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userAnswer = input.value.trim().toUpperCase();
+
+            if (userAnswer === correctAnswer.toUpperCase()) {
+                const result = app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('show', 'result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message} All matches correct!</div>`;
+            } else {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">❌ Not quite. Correct answer: ${correctAnswer}</div>`;
+            }
+        }
+    </script>
+</body>
+</html>
