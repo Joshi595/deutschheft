@@ -485,7 +485,7 @@
                 resultBox.classList.add('show', 'result-incorrect');
                 resultBox.innerHTML = `<div class="result-text">⏳ Analyzing...</div>`;
                 const context = resultBox.closest('.exercise-item').querySelector('p').textContent;
-                const feedback = await aiFeedback.getAnswerFeedback(message, 'See correct option', 'multiple-choice', context);
+                const feedback = await aiFeedback.getAnswerFeedback(answer, 'correct answer', 'multiple-choice', context);
                 if (feedback) {
                     resultBox.innerHTML = `<div class="result-text">❌ ${feedback}</div>`;
                 } else {
@@ -564,7 +564,7 @@
         async function checkTranslation(elementId, keywords, message) {
             const input = document.getElementById(elementId);
             const resultBox = document.getElementById(`result-${elementId}`);
-            const userInput = input.value.trim().toLowerCase();
+            const userInput = input.value.trim();
             
             if (!userInput) {
                 resultBox.classList.add('show', 'result-incorrect');
@@ -574,9 +574,10 @@
 
             const keywordArray = keywords.split(' ');
             let matchCount = 0;
+            const userInputLower = userInput.toLowerCase();
 
             for (let keyword of keywordArray) {
-                if (userInput.includes(keyword)) matchCount++;
+                if (userInputLower.includes(keyword)) matchCount++;
             }
 
             resultBox.classList.add('show');
@@ -587,7 +588,7 @@
                 resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
             } else {
                 resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
-                const context = resultBox.closest('.exercise-item').querySelector('p').textContent;
+                const context = resultBox.closest('.exercise-item').querySelector('p').textContent || 'Translate to German';
                 const feedback = await aiFeedback.getTranslationFeedback(userInput, context);
                 resultBox.classList.add('result-incorrect');
                 if (feedback) {
@@ -613,19 +614,18 @@
             resultBox.classList.add('show');
             resultBox.innerHTML = `<div class="result-text">⏳ Analyzing...</div>`;
 
-            const feedback = await aiFeedback.getCreativeFeedback(userInput, 'travel planning with prepositions');
-
+            const feedback = await aiFeedback.getCreativeFeedback(userInput, 'German travel planning with prepositions (zu, nach, in, etc.) and travel vocabulary');
             app.checkAnswer(true, 'Great effort!');
             resultBox.classList.remove('result-incorrect');
             resultBox.classList.add('result-correct');
-            resultBox.innerHTML = `<div class="result-text">✅ ${feedback || 'Great! Your travel sentence looks good. Make sure it includes travel vocabulary and prepositions.'}</div>`;
+            resultBox.innerHTML = `<div class="result-text">✅ ${feedback || 'Excellent! Your travel sentence looks good. Use travel vocabulary and prepositions correctly.'}</div>`;
         }
 
         // Matching validation using universal AI feedback
         async function checkMatching(elementId, correctAnswer, message) {
             const input = document.getElementById(elementId);
             const resultBox = document.getElementById(`result-${elementId}`);
-            const userAnswer = input.value.trim().toUpperCase();
+            const userAnswer = input.value.trim();
 
             if (!userAnswer) {
                 resultBox.classList.add('show', 'result-incorrect');
@@ -634,14 +634,14 @@
             }
 
             resultBox.classList.add('show');
-            if (userAnswer === correctAnswer.toUpperCase()) {
+            if (userAnswer.toUpperCase() === correctAnswer.toUpperCase()) {
                 app.checkAnswer(true, message);
                 resultBox.classList.remove('result-incorrect');
                 resultBox.classList.add('result-correct');
                 resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
             } else {
                 resultBox.innerHTML = `<div class="result-text">⏳ Analyzing...</div>`;
-                const context = resultBox.closest('.exercise-item').querySelector('p').textContent;
+                const context = resultBox.closest('.exercise-item').querySelector('p').textContent || 'matching exercise';
                 const feedback = await aiFeedback.getAnswerFeedback(userAnswer, correctAnswer, 'matching', context);
                 resultBox.classList.add('result-incorrect');
                 if (feedback) {

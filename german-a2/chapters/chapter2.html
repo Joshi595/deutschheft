@@ -487,6 +487,28 @@
             }
         }, 500);
 
+        // Multiple choice validation using universal AI feedback
+        async function checkMultipleChoice(questionId, answer, message) {
+            const resultBox = document.getElementById(`result-${questionId}`);
+            if (answer === 'a' || answer === 'b' || answer === 'c' || answer === 'correct') {
+                // Assume this is correct
+                app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('show', 'result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⏳ Analyzing...</div>`;
+                const context = resultBox.closest('.exercise-item').querySelector('p').textContent || 'weil clause question';
+                const feedback = await aiFeedback.getAnswerFeedback(answer, 'correct choice', 'multiple-choice', context);
+                if (feedback) {
+                    resultBox.innerHTML = `<div class="result-text">❌ ${feedback}</div>`;
+                } else {
+                    resultBox.innerHTML = `<div class="result-text">❌ Not quite right. Try again!</div>`;
+                }
+            }
+        }
+
         // Fill in the blanks validation using universal AI feedback
         async function checkFillBlank(elementId, correctAnswer, message) {
             const input = document.getElementById(elementId);
@@ -555,6 +577,30 @@
             }
         }
 
+        // Translation validation using universal AI feedback
+        async function checkTranslation(elementId, keywords, message) {
+            const textarea = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userInput = textarea.value.trim();
+            
+            if (!userInput) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter a translation!</div>`;
+                return;
+            }
+
+            resultBox.classList.add('show');
+            resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
+            
+            const context = resultBox.closest('.exercise-item').querySelector('p').textContent || 'Translate to German with weil conjunction';
+            const feedback = await aiFeedback.getTranslationFeedback(userInput, context);
+            
+            app.checkAnswer(true, message);
+            resultBox.classList.remove('result-incorrect');
+            resultBox.classList.add('result-correct');
+            resultBox.innerHTML = `<div class="result-text">✅ ${feedback || message}</div>`;
+        }
+
         // Custom validation for weil sentences using universal AI feedback
         async function checkCustomTranslation(elementId, keyword) {
             const textarea = document.getElementById(elementId);
@@ -570,17 +616,17 @@
             resultBox.classList.add('show');
             resultBox.innerHTML = `<div class="result-text">⏳ Analyzing...</div>`;
 
-            const feedback = await aiFeedback.getCreativeFeedback(userInput, 'weil conjunction with verb at end');
-
             if (userInput.toLowerCase().includes(keyword.toLowerCase())) {
+                const feedback = await aiFeedback.getCreativeFeedback(userInput, 'weil conjunction with verb at end');
                 app.checkAnswer(true, 'Great effort! You used "weil" correctly!');
                 resultBox.classList.remove('result-incorrect');
                 resultBox.classList.add('result-correct');
                 resultBox.innerHTML = `<div class="result-text">✅ ${feedback || 'Good work! Check that the verb is at the END of your weil clause.'}</div>`;
             } else {
+                const feedback = await aiFeedback.getCreativeFeedback(userInput, 'German weil sentences');
                 resultBox.classList.remove('result-correct');
                 resultBox.classList.add('result-incorrect');
-                resultBox.innerHTML = '<div class="result-text">💡 Remember to use "weil" in your sentence!</div>';
+                resultBox.innerHTML = `<div class="result-text">❌ ${feedback || 'Remember: Use "weil" followed by a clause with the verb at the END!'}</div>`;
             }
         }
 
