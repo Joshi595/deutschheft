@@ -544,7 +544,8 @@
                 } else {
                     if (attempts >= 2) {
                         resultBox.classList.add('result-incorrect');
-                        resultBox.innerHTML = `<div class="result-text">❌ Not quite right.<br><br><strong>Correct Answer: ${correctAnswer}</strong><br><em>(This is your second attempt)</em></div>`;
+                        const explanation = message.includes(' - ') ? message.split(' - ')[1].replace('"', '') : '';
+                        resultBox.innerHTML = `<div class="result-text">❌ Not quite right.<br><br><strong>Correct Answer: ${correctAnswer}</strong><br><small>${explanation}</small><br><em>(This is your second attempt)</em></div>`;
                         input.disabled = true;
                         input.dataset.attempts = '0';
                     } else {
