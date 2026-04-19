@@ -39,6 +39,9 @@
                     <li class="chapter-item" onclick="switchChapter(4)">
                         Chapter 4: Travel & Places
                     </li>
+                    <li class="chapter-item" onclick="switchChapter(5)">
+                        Chapter 5: Adjective Endings
+                    </li>
                 </ul>
             </aside>
 
@@ -458,6 +461,8 @@
         </div>
     </div>
 
+    <script src="../js/groq-api.js"></script>
+    <script src="../js/ai-feedback.js"></script>
     <script src="../js/app.js"></script>
     <script>
         // Initialize app for this chapter
@@ -470,6 +475,166 @@
                 totalScore.textContent = app.score;
             }
         }, 500);
+
+        // Multiple choice validation using universal AI feedback
+        async function checkMultipleChoice(questionId, answer, message) {
+            const resultBox = document.getElementById(`result-${questionId}`);
+            if (answer === 'a' || answer === 'b' || answer === 'c' || answer === 'correct') {
+                // Assume this is correct for now
+                app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('show', 'result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⏳ Analyzing...</div>`;
+                const context = resultBox.closest('.exercise-item').querySelector('p').textContent || 'question';
+                const feedback = await aiFeedback.getAnswerFeedback(answer, 'correct choice', 'multiple-choice', context);
+                if (feedback) {
+                    resultBox.innerHTML = `<div class="result-text">❌ ${feedback}</div>`;
+                } else {
+                    resultBox.innerHTML = `<div class="result-text">❌ Not quite right. Try again!</div>`;
+                }
+            }
+        }
+
+        // Fill in the blanks validation using universal AI feedback
+        async function checkFillBlank(elementId, correctAnswer, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userAnswer = input.value.trim();
+            
+            if (!userAnswer) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter an answer!</div>`;
+                return;
+            }
+            
+            // Track attempts
+            let attempts = parseInt(input.dataset.attempts || '0');
+            attempts++;
+            input.dataset.attempts = attempts;
+            
+            resultBox.classList.add('show');
+            resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
+
+            // Use AI validation if available
+            if (groqValidator) {
+                const sentence = input.dataset.sentence || 'Complete the sentence';
+                const validation = await groqValidator.validateFillBlank(userAnswer, correctAnswer, sentence);
+                
+                if (validation.isCorrect) {
+                    app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
+                    resultBox.classList.add('result-correct');
+                    const feedbackText = validation.feedback.includes('|') ? validation.feedback.split('|')[0].trim() : validation.feedback;
+                    resultBox.innerHTML = `<div class="result-text">✅ Perfect! ${feedbackText}</div>`;
+                    input.dataset.attempts = '0';
+                } else {
+                    if (attempts >= 2) {
+                        resultBox.classList.add('result-incorrect');
+                        const explanation = message.includes(' - ') ? message.split(' - ')[1].replace('"', '') : '';
+                        resultBox.innerHTML = `<div class="result-text">❌ Not quite right.<br><br><strong>Correct Answer: ${correctAnswer}</strong><br><small>${explanation}</small><br><em>(This is your second attempt)</em></div>`;
+                        input.disabled = true;
+                        input.dataset.attempts = '0';
+                    } else {
+                        resultBox.classList.add('result-incorrect');
+                        resultBox.innerHTML = `<div class="result-text">❌ Not quite right. Try again!<br><em>(Attempt ${attempts}/2)</em></div>`;
+                    }
+                }
+            } else {
+                // Fallback to basic validation
+                const userAnswerLower = userAnswer.toLowerCase();
+                if (userAnswerLower === correctAnswer.toLowerCase()) {
+                    app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
+                    resultBox.classList.add('result-correct');
+                    resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+                    input.dataset.attempts = '0';
+                } else {
+                    if (attempts >= 2) {
+                        resultBox.classList.add('result-incorrect');
+                        resultBox.innerHTML = `<div class="result-text">❌ Both attempts used. Correct: ${correctAnswer}</div>`;
+                        input.disabled = true;
+                        input.dataset.attempts = '0';
+                    } else {
+                        resultBox.classList.add('result-incorrect');
+                        resultBox.innerHTML = `<div class="result-text">❌ Try again! (Attempt ${attempts}/2)</div>`;
+                    }
+                }
+            }
+        }
+
+        // Matching validation using universal AI feedback
+        async function checkMatching() {
+            const resultBox = document.getElementById('result-matching');
+            const pairs = [
+                { germanInput: 'match1', englishName: 'freundlich' },
+                { germanInput: 'match2', englishName: 'fleißig' },
+                { germanInput: 'match3', englishName: 'mutig' },
+                { germanInput: 'match4', englishName: 'ehrlich' },
+                { germanInput: 'match5', englishName: 'schüchtern' }
+            ];
+
+            let correctCount = 0;
+            let totalAttempted = 0;
+
+            for (let pair of pairs) {
+                const input = document.getElementById(pair.germanInput);
+                if (input && input.value.trim()) {
+                    totalAttempted++;
+                    if (input.value.trim().toLowerCase() === pair.englishName.toLowerCase()) {
+                        correctCount++;
+                    }
+                }
+            }
+
+            if (!resultBox) return;
+            resultBox.classList.add('show');
+
+            if (correctCount === totalAttempted && totalAttempted === pairs.length) {
+                app.checkAnswer(true, 'Perfect! All matches correct!');
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ Perfect! All matches correct!</div>`;
+            } else if (correctCount > 0) {
+                resultBox.classList.add('result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
+                const feedback = await aiFeedback.getAnswerFeedback(`${correctCount}/${totalAttempted} correct`, 'all correct matches', 'matching', 'Match German adjectives to English definitions');
+                resultBox.innerHTML = `<div class="result-text">❌ ${feedback || `You got ${correctCount}/${totalAttempted}. Try again!`}</div>`;
+            } else {
+                resultBox.classList.add('result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please fill in the matches first!</div>`;
+            }
+        }
+
+        // Translation validation using universal AI feedback
+        async function checkTranslation(elementId, keywords, message) {
+            const textarea = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userInput = textarea.value.trim();
+            
+            if (!userInput) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter a translation!</div>`;
+                return;
+            }
+
+            resultBox.classList.add('show');
+            resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
+            
+            const context = resultBox.closest('.exercise-item').querySelector('p').textContent || 'Translate to German';
+            const feedback = await aiFeedback.getTranslationFeedback(userInput, context);
+            
+            app.checkAnswer(true, message);
+            resultBox.classList.remove('result-incorrect');
+            resultBox.classList.add('result-correct');
+            resultBox.innerHTML = `<div class="result-text">✅ ${feedback || message}</div>`;
+        }
+
+        function switchChapter(chapterNumber) {
+            window.location.href = `chapter${chapterNumber}.html`;
+        }
     </script>
 </body>
 </html>
