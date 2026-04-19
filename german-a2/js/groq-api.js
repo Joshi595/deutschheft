@@ -9,6 +9,18 @@ class GroqValidator {
     }
 
     /**
+     * Remove accents and umlauts for comparison
+     */
+    removeAccents(str) {
+        return str.normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/ö/g, 'o')
+            .replace(/ä/g, 'a')
+            .replace(/ü/g, 'u')
+            .replace(/ß/g, 'ss');
+    }
+
+    /**
      * Validate a German fill-in-the-blanks answer using Groq AI
      * @param {string} userAnswer - The answer provided by the user
      * @param {string} correctAnswer - The expected answer
@@ -22,40 +34,47 @@ class GroqValidator {
             return this.basicValidation(userAnswer, correctAnswer);
         }
 
+        const userTrimmed = userAnswer.toLowerCase().trim();
+        const correctTrimmed = correctAnswer.toLowerCase().trim();
+        
+        // Exact match
+        if (userTrimmed === correctTrimmed) {
+            return {
+                isCorrect: true,
+                feedback: 'Perfect!',
+                explanation: 'Your answer is exactly correct.',
+                score: 10
+            };
+        }
+
+        // Check if they match ignoring accents/umlauts (very close match)
+        const userNoAccents = this.removeAccents(userTrimmed);
+        const correctNoAccents = this.removeAccents(correctTrimmed);
+        
+        if (userNoAccents === correctNoAccents) {
+            return {
+                isCorrect: true,
+                feedback: 'Correct! (Note: German uses umlauts - ä, ö, ü - which are important)',
+                explanation: `Your answer "${userAnswer}" is essentially correct. The proper spelling is "${correctAnswer}".`,
+                score: 10
+            };
+        }
+
         try {
-            // First, do exact matching (case-insensitive, trim spaces)
-            const userTrimmed = userAnswer.toLowerCase().trim();
-            const correctTrimmed = correctAnswer.toLowerCase().trim();
-            
-            // If it's an exact match, return immediately
-            if (userTrimmed === correctTrimmed) {
-                return {
-                    isCorrect: true,
-                    feedback: 'Correct! Well done!',
-                    explanation: 'Your answer matches perfectly.',
-                    score: 10
-                };
-            }
+            const prompt = `You are a strict German language teacher evaluating a fill-in-the-blank answer.
 
-            const prompt = `You are a strict German language teacher. Evaluate ONLY if this answer is EXACTLY correct or has only minor typos/accents:
-
-Sentence: ${sentence}
+Sentence context: ${sentence}
 Expected answer: ${correctAnswer}
 Student's answer: ${userAnswer}
 
-Be STRICT - minor variations are INCORRECT. Only accept:
-- Exact spelling (case doesn't matter)
-- Missing accents (ä, ö, ü as a, o, u) 
-- Single letter typos
-
-Respond ONLY with valid JSON (no extra text):
+Respond with ONLY valid JSON (no other text):
 {
-  "isCorrect": boolean (true ONLY if essentially the correct word),
-  "feedback": "Why it's wrong and what the correct answer is (2-3 sentences)",
-  "explanation": "How to form the correct answer"
+  "isCorrect": false,
+  "feedback": "The correct answer is '${correctAnswer}'. Your answer '${userAnswer}' is different.",
+  "explanation": "Make sure you provide the exact word needed."
 }`;
 
-            console.log('Calling Groq API...');
+            console.log('Calling Groq API for validation...');
             const response = await fetch(this.apiUrl, {
                 method: 'POST',
                 headers: {
@@ -76,8 +95,7 @@ Respond ONLY with valid JSON (no extra text):
             });
 
             if (!response.ok) {
-                console.error('Groq API error - Status:', response.status, response.statusText);
-                console.error('Response:', await response.text());
+                console.error('Groq API error - Status:', response.status);
                 return this.basicValidation(userAnswer, correctAnswer);
             }
 
@@ -101,7 +119,6 @@ Respond ONLY with valid JSON (no extra text):
             };
         } catch (error) {
             console.error('Error calling Groq API:', error);
-            console.log('Falling back to basic validation');
             return this.basicValidation(userAnswer, correctAnswer);
         }
     }
@@ -110,21 +127,40 @@ Respond ONLY with valid JSON (no extra text):
      * Fallback basic validation if API fails
      */
     basicValidation(userAnswer, correctAnswer) {
-        const userLower = userAnswer.toLowerCase().trim();
-        const correctLower = correctAnswer.toLowerCase().trim();
+        const userTrimmed = userAnswer.toLowerCase().trim();
+        const correctTrimmed = correctAnswer.toLowerCase().trim();
         
-        const isCorrect = userLower === correctLower;
+        // Exact match
+        const isExact = userTrimmed === correctTrimmed;
+        
+        // Match ignoring accents
+        const userNoAccents = this.removeAccents(userTrimmed);
+        const correctNoAccents = this.removeAccents(correctTrimmed);
+        const isCloseMatch = userNoAccents === correctNoAccents;
+        
+        if (isExact) {
+            return {
+                isCorrect: true,
+                feedback: 'Perfect! Your answer is exactly correct.',
+                explanation: 'Excellent work!',
+                score: 10
+            };
+        }
+        
+        if (isCloseMatch) {
+            return {
+                isCorrect: true,
+                feedback: 'Correct! (Note: proper spelling includes umlauts - ä, ö, ü)',
+                explanation: `Your answer "${userAnswer}" is essentially correct. The proper spelling is "${correctAnswer}".`,
+                score: 10
+            };
+        }
         
         return {
-            isCorrect: isCorrect,
-            feedback: isCorrect 
-                ? 'Perfect! Your answer is correct. | Perfekt! Deine Antwort ist richtig.' 
-                : `The expected answer is: ${correctAnswer} | Die erwartete Antwort ist: ${correctAnswer}`,
-            explanation: isCorrect
-                ? 'Great work! | Großartig!'
-                : 'Your answer does not match the expected response. Try again! | Deine Antwort stimmt nicht mit der erwarteten Antwort überein. Versuche es nochmal!',
-            score: isCorrect ? 10 : 0,
-            usingFallback: true
+            isCorrect: false,
+            feedback: `The correct answer is "${correctAnswer}", not "${userAnswer}".`,
+            explanation: `Your answer does not match. The expected answer is: ${correctAnswer}`,
+            score: 0
         };
     }
 }
