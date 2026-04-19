@@ -5,7 +5,7 @@ class GroqValidator {
     constructor(apiKey) {
         this.apiKey = apiKey;
         this.apiUrl = 'https://api.groq.com/openai/v1/chat/completions';
-        this.model = 'mixtral-8x7b-32768'; // Fast and free model
+        this.model = 'llama-3.1-8b-instant'; // Fast and free model
     }
 
     /**
@@ -18,6 +18,7 @@ class GroqValidator {
     async validateFillBlank(userAnswer, correctAnswer, sentence) {
         if (!this.apiKey) {
             // Fallback to basic validation if no API key
+            console.log('No API key found, using basic validation');
             return this.basicValidation(userAnswer, correctAnswer);
         }
 
@@ -35,6 +36,7 @@ Respond ONLY with valid JSON (no extra text):
   "explanation": "Why this is/isn't correct and how to improve"
 }`;
 
+            console.log('Calling Groq API...');
             const response = await fetch(this.apiUrl, {
                 method: 'POST',
                 headers: {
@@ -55,7 +57,8 @@ Respond ONLY with valid JSON (no extra text):
             });
 
             if (!response.ok) {
-                console.error('Groq API error:', response.status);
+                console.error('Groq API error - Status:', response.status, response.statusText);
+                console.error('Response:', await response.text());
                 return this.basicValidation(userAnswer, correctAnswer);
             }
 
@@ -65,10 +68,12 @@ Respond ONLY with valid JSON (no extra text):
             // Parse JSON response
             const jsonMatch = content.match(/\{[\s\S]*\}/);
             if (!jsonMatch) {
+                console.error('Could not parse JSON from response');
                 return this.basicValidation(userAnswer, correctAnswer);
             }
 
             const result = JSON.parse(jsonMatch[0]);
+            console.log('AI Validation result:', result);
             return {
                 isCorrect: result.isCorrect,
                 feedback: result.feedback,
@@ -77,6 +82,7 @@ Respond ONLY with valid JSON (no extra text):
             };
         } catch (error) {
             console.error('Error calling Groq API:', error);
+            console.log('Falling back to basic validation');
             return this.basicValidation(userAnswer, correctAnswer);
         }
     }
@@ -93,11 +99,11 @@ Respond ONLY with valid JSON (no extra text):
         return {
             isCorrect: isCorrect,
             feedback: isCorrect 
-                ? 'Perfect! Your answer is correct.' 
-                : `The expected answer is: ${correctAnswer}`,
+                ? 'Perfect! Your answer is correct. | Perfekt! Deine Antwort ist richtig.' 
+                : `The expected answer is: ${correctAnswer} | Die erwartete Antwort ist: ${correctAnswer}`,
             explanation: isCorrect
-                ? 'Great work!'
-                : 'Your answer does not match the expected response. Try again!',
+                ? 'Great work! | Großartig!'
+                : 'Your answer does not match the expected response. Try again! | Deine Antwort stimmt nicht mit der erwarteten Antwort überein. Versuche es nochmal!',
             score: isCorrect ? 10 : 0,
             usingFallback: true
         };
@@ -133,5 +139,10 @@ function getGroqApiKey() {
 // Auto-initialize on load
 document.addEventListener('DOMContentLoaded', () => {
     const apiKey = getGroqApiKey();
+    console.log('API Key status:', apiKey ? 'Found ✅' : 'Not found ❌');
+    if (apiKey) {
+        console.log('API Key starts with:', apiKey.substring(0, 10) + '...');
+    }
     initializeGroqValidator(apiKey);
+    console.log('groqValidator status:', groqValidator ? 'Initialized ✅' : 'Not initialized ❌');
 });

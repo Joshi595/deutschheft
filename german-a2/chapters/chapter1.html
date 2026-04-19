@@ -39,6 +39,9 @@
                     <li class="chapter-item" onclick="switchChapter(4)">
                         Chapter 4: Travel & Places
                     </li>
+                    <li class="chapter-item" onclick="switchChapter(5)">
+                        Chapter 5: Adjective Endings
+                    </li>
                 </ul>
             </aside>
 
@@ -459,6 +462,7 @@
     </div>
 
     <script src="../js/groq-api.js"></script>
+    <script src="../js/ai-feedback.js"></script>
     <script src="../js/app.js"></script>
     <script>
         // Initialize app for this chapter
@@ -472,42 +476,76 @@
             }
         }, 500);
 
-        // Fill in the blanks validation with AI support
+        // Fill in the blanks validation using universal AI feedback
         async function checkFillBlank(elementId, correctAnswer, message) {
             const input = document.getElementById(elementId);
             const resultBox = document.getElementById(`result-${elementId}`);
             const userAnswer = input.value.trim();
             
+            if (!userAnswer) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter an answer!</div>`;
+                return;
+            }
+            
+            // Track attempts
+            let attempts = parseInt(input.dataset.attempts || '0');
+            attempts++;
+            input.dataset.attempts = attempts;
+            
             resultBox.classList.add('show');
-            resultBox.innerHTML = `<div class="result-text">⏳ Checking your answer...</div>`;
+            resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
 
-            // If Groq validator is available, use AI validation
+            // Use AI validation if available
             if (groqValidator) {
-                const sentence = document.getElementById(elementId).dataset.sentence || 'Complete the sentence';
+                const sentence = input.dataset.sentence || 'Complete the sentence';
                 const validation = await groqValidator.validateFillBlank(userAnswer, correctAnswer, sentence);
                 
                 if (validation.isCorrect) {
                     app.checkAnswer(true, message);
                     resultBox.classList.remove('result-incorrect');
                     resultBox.classList.add('result-correct');
-                    resultBox.innerHTML = `<div class="result-text">✅ ${validation.feedback}<br><small>${validation.explanation}</small></div>`;
+                    const feedbackText = validation.feedback.includes('|') ? validation.feedback.split('|')[0].trim() : validation.feedback;
+                    resultBox.innerHTML = `<div class="result-text">✅ Perfect! ${feedbackText}</div>`;
+                    input.dataset.attempts = '0';
                 } else {
-                    resultBox.classList.add('result-incorrect');
-                    resultBox.innerHTML = `<div class="result-text">❌ ${validation.feedback}<br><small>${validation.explanation}</small></div>`;
+                    if (attempts >= 2) {
+                        resultBox.classList.add('result-incorrect');
+                        const feedbackText = validation.feedback.includes('|') ? validation.feedback.split('|')[0].trim() : validation.feedback;
+                        resultBox.innerHTML = `<div class="result-text">❌ Both attempts used!<br><small>${feedbackText}</small><br><br><strong>Correct: ${correctAnswer}</strong></div>`;
+                        input.disabled = true;
+                        input.dataset.attempts = '0';
+                    } else {
+                        resultBox.classList.add('result-incorrect');
+                        const feedbackText = validation.feedback.includes('|') ? validation.feedback.split('|')[0].trim() : validation.feedback;
+                        resultBox.innerHTML = `<div class="result-text">❌ ${feedbackText} (Attempt ${attempts}/2)</div>`;
+                    }
                 }
             } else {
-                // Fallback to basic validation if API not available
+                // Fallback to basic validation
                 const userAnswerLower = userAnswer.toLowerCase();
                 if (userAnswerLower === correctAnswer.toLowerCase()) {
                     app.checkAnswer(true, message);
                     resultBox.classList.remove('result-incorrect');
                     resultBox.classList.add('result-correct');
                     resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+                    input.dataset.attempts = '0';
                 } else {
-                    resultBox.classList.add('result-incorrect');
-                    resultBox.innerHTML = `<div class="result-text">❌ Try again! The answer is: <strong>${correctAnswer}</strong></div>`;
+                    if (attempts >= 2) {
+                        resultBox.classList.add('result-incorrect');
+                        resultBox.innerHTML = `<div class="result-text">❌ Both attempts used. Correct: ${correctAnswer}</div>`;
+                        input.disabled = true;
+                        input.dataset.attempts = '0';
+                    } else {
+                        resultBox.classList.add('result-incorrect');
+                        resultBox.innerHTML = `<div class="result-text">❌ Try again! (Attempt ${attempts}/2)</div>`;
+                    }
                 }
             }
+        }
+
+        function switchChapter(chapterNumber) {
+            window.location.href = `chapter${chapterNumber}.html`;
         }
     </script>
 </body>

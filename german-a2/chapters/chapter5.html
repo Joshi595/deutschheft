@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German A2 Course - Chapter 5: Adjective Endings</title>
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇩🇪 German A2 Course</h1>
+            <p>Chapter 5: Adjective Endings (Nominative Case)</p>
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>Exercises Completed</span>
+                    <span id="exerciseProgress">0/5</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3>📚 Chapters</h3>
+                <ul class="chapter-list">
+                    <li class="chapter-item" onclick="switchChapter(1)">
+                        Chapter 1: Character Traits
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(2)">
+                        Chapter 2: Conjunction Weil
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(3)">
+                        Chapter 3: Daily Activities
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(4)">
+                        Chapter 4: Travel & Places
+                    </li>
+                    <li class="chapter-item active" onclick="switchChapter(5)">
+                        Chapter 5: Adjective Endings
+                        <span class="badge">✓</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <main class="content-area">
+                <div class="stats-box">
+                    <div class="stat-card">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Adjectives</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Grammar Points</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalScore">0</div>
+                        <div class="stat-label">Score</div>
+                    </div>
+                </div>
+
+                <div id="chapterContent">
+                    <h2 class="section-title">Chapter 5: Adjective Endings (Nominative Case)</h2>
+                    <p class="section-subtitle">Master German adjective agreement in the nominative case</p>
+
+                    <!-- Lesson Content -->
+                    <div class="lesson-content">
+                        <h3 style="color: var(--primary-color); margin-bottom: 15px;">📖 Introduction</h3>
+                        <p>In German, adjectives must agree with the noun they describe. This agreement includes the adjective's <strong>ending</strong>, which changes based on:</p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li><strong>Gender</strong> of the noun (Masculine, Feminine, Neuter)</li>
+                            <li><strong>Article type</strong> before the noun (Definite, Indefinite, None, Negative/Possessive)</li>
+                            <li><strong>Number</strong> (Singular or Plural)</li>
+                            <li><strong>Case</strong> of the noun (today: Nominative only)</li>
+                        </ul>
+
+                        <!-- Explanation Box -->
+                        <div class="explanation-box">
+                            <h4>🎯 Why Learn Adjective Endings?</h4>
+                            <p><strong>✓ Essential for accuracy:</strong> Native speakers immediately notice wrong adjective endings</p>
+                            <p><strong>✓ Foundation for other cases:</strong> Nominative is the easiest - accusative, dative, and genitive build on this</p>
+                            <p><strong>✓ Improves listening comprehension:</strong> Recognizing adjective endings helps you understand spoken German</p>
+                            <p><strong>✓ Builds confidence:</strong> Correct usage sounds natural and professional</p>
+                        </div>
+
+                        <!-- Vocabulary Section -->
+                        <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">📝 Common Adjectives</h3>
+                        
+                        <table class="vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>German</th>
+                                    <th>English</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="german">groß</td>
+                                    <td>big</td>
+                                    <td><em>Der große Mann sitzt hier.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">klein</td>
+                                    <td>small</td>
+                                    <td><em>Das kleine Kind spielt.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">neu</td>
+                                    <td>new</td>
+                                    <td><em>Ich habe einen neuen Laptop.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">alt</td>
+                                    <td>old</td>
+                                    <td><em>Das alte Auto funktioniert.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">schön</td>
+                                    <td>beautiful</td>
+                                    <td><em>Die schöne Frau arbeitet hier.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">intelligent</td>
+                                    <td>intelligent</td>
+                                    <td><em>Ein intelligenter Schüler fragt.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">interessant</td>
+                                    <td>interesting</td>
+                                    <td><em>Das interessante Buch ist da.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">langweilig</td>
+                                    <td>boring</td>
+                                    <td><em>Der langweilige Film war schlecht.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">schnell</td>
+                                    <td>fast</td>
+                                    <td><em>Ein schneller Läufer gewinnt.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">langsam</td>
+                                    <td>slow</td>
+                                    <td><em>Die langsame Schildkröte ist da.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">heiß</td>
+                                    <td>hot</td>
+                                    <td><em>Der heiße Kaffee ist lecker.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">kalt</td>
+                                    <td>cold</td>
+                                    <td><em>Das kalte Wasser ist erfrischend.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">stark</td>
+                                    <td>strong</td>
+                                    <td><em>Ein starker Mann hebt das.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">schwach</td>
+                                    <td>weak</td>
+                                    <td><em>Die schwache Stimme ist leise.</em></td>
+                                </tr>
+                                <tr>
+                                    <td class="german">freundlich</td>
+                                    <td>friendly</td>
+                                    <td><em>Die freundliche Lehrerin hilft.</em></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Grammar Section -->
+                        <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">🎯 Grammar Points: Nominative Adjective Endings</h3>
+
+                        <table class="vocab-table" style="margin: 20px 0; font-size: 0.95em;">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Bestimmter Artikel<br>(Definite)</th>
+                                    <th>Unbestimmter Artikel<br>(Indefinite)</th>
+                                    <th>Negativ / Possessiv<br>(kein, mein, dein...)</th>
+                                    <th>Ohne<br>(No Article)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Maskulin</strong></td>
+                                    <td>der nette Mann<br><strong>-E</strong></td>
+                                    <td>ein / kein / mein netter Mann<br><strong>-ER</strong></td>
+                                    <td>ein / kein / mein netter Mann<br><strong>-ER</strong></td>
+                                    <td>netter Mann<br><strong>-ER</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Feminin</strong></td>
+                                    <td>die schöne Frau<br><strong>-E</strong></td>
+                                    <td>eine / keine / meine schöne Frau<br><strong>-E</strong></td>
+                                    <td>eine / keine / meine schöne Frau<br><strong>-E</strong></td>
+                                    <td>schöne Frau<br><strong>-E</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Neutral</strong></td>
+                                    <td>das kleine Kind<br><strong>-E</strong></td>
+                                    <td>ein / kein / mein kleines Kind<br><strong>-ES</strong></td>
+                                    <td>ein / kein / mein kleines Kind<br><strong>-ES</strong></td>
+                                    <td>kleines Kind<br><strong>-ES</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Plural</strong></td>
+                                    <td>die alten Bücher<br><strong>-EN</strong></td>
+                                    <td>keine / meine alten Bücher<br><strong>-EN</strong></td>
+                                    <td>keine / meine alten Bücher<br><strong>-EN</strong></td>
+                                    <td>alte Bücher<br><strong>-E</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="explanation-box">
+                            <h4>Key Rules for Nominative Endings:</h4>
+                            <p><strong>✓ Definite Article (der, die, das):</strong> Ending is always <strong>-E</strong> (singular) or <strong>-EN</strong> (plural)</p>
+                            <p><strong>✓ Indefinite Article (ein, eine, ein):</strong> Masculine -ER, Feminine -E, Neuter -ES, Plural -EN</p>
+                            <p><strong>✓ Negative/Possessive (kein, mein, dein, sein, ihr, unser, euer):</strong> Follow same pattern as indefinite article</p>
+                            <p><strong>✓ Without Article (Bare):</strong> Adjective takes the definite article ending itself (Masculine -ER, Feminine -E, Neuter -ES, Plural -E)</p>
+                        </div>
+
+                        <div class="explanation-box" style="background: #e3f2fd; border-left: 4px solid #1e40af;">
+                            <h4>💡 Memory Tip: The Pattern</h4>
+                            <p><strong>Notice the pattern:</strong> The adjective ending "echoes" or matches what the article would be if it were there!</p>
+                            <p>• <em>Der gute Mann</em> → <em>Ein gut<strong>ER</strong> Mann</em> (echoes masculine -ER from definite "der")</p>
+                            <p>• <em>Die schöne Frau</em> → <em>Ein<strong>E</strong> schöne Frau</em> (echoes feminine -E from definite "die")</p>
+                            <p>• <em>Das kleine Kind</em> → <em>Ein klein<strong>ES</strong> Kind</em> (echoes neuter -ES from definite "das")</p>
+                        </div>
+
+                        <div class="explanation-box" style="background: #fff3e0; border-left: 4px solid #f59e0b;">
+                            <h4>⚠️ Common Mistakes to Avoid</h4>
+                            <p><strong>❌ Wrong:</strong> <em>ein gute Mann</em> (mixing indefinite and definite patterns)</p>
+                            <p><strong>✓ Correct:</strong> <em>ein guter Mann</em> (indefinite uses -ER for masculine)</p>
+                            <p><strong>❌ Wrong:</strong> <em>Die schönen Frau</em> (using plural ending for singular)</p>
+                            <p><strong>✓ Correct:</strong> <em>Die schöne Frau</em> (definite article always uses -E for singular)</p>
+                        </div>
+                    </div>
+
+                    <!-- Exercises Section -->
+                    <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">✏️ Exercises (8 Levels)</h3>
+
+                    <!-- Exercise 1: Guided Multiple Choice -->
+                    <div class="exercise-group">
+                        <h4 class="exercise-title">Exercise 1: Definite Article Endings (Easy)</h4>
+                        <p class="exercise-instruction">Choose the correct adjective ending when using definite articles (der, die, das). <strong>All definite articles use -E in singular!</strong></p>
+                        
+                        <div class="exercise-item">
+                            <p><strong>1.</strong> Der gro____ Mann arbeitet hier.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q1', 'correct', 'Correct! With definite masculine (der), use -E. Der große Mann.')">A) ße</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q1', 'incorrect', 'Not correct. The -ER ending is for indefinite articles and bare nouns.')">B) ßer</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q1', 'incorrect', 'Wrong. The -ES ending is for neuter nouns, not masculine.')">C) ßes</button>
+                            </div>
+                            <div class="result-box" id="result-q1"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>2.</strong> Die schön____ Frau ist Arzt.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q2', 'correct', 'Perfect! With definite feminine (die), use -E. Die schöne Frau.')">A) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q2', 'incorrect', 'Not quite. Feminine definite articles always use -E, never -E.')">B) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q2', 'incorrect', 'Wrong. That is the neuter indefinite ending.')">C) es</button>
+                            </div>
+                            <div class="result-box" id="result-q2"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>3.</strong> Das klein____ Kind spielt im Park.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q3', 'correct', 'Excellent! With definite neuter (das), use -E. Das kleine Kind.')">A) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q3', 'incorrect', 'Not correct. Neuter definite uses -E, not -ER.')">B) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q3', 'incorrect', 'Wrong. This would only be for bare masculine nouns.')">C) (no ending)</button>
+                            </div>
+                            <div class="result-box" id="result-q3"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>4.</strong> Die alt____ Bücher sind interessant.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q4', 'correct', 'Perfect! With definite plural (die), use -EN. Die alten Bücher.')">A) en</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q4', 'incorrect', 'Not quite. Plural definite articles always use -EN.')">B) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q4', 'incorrect', 'Wrong. Only for singular feminine definite.')">C) (no ending)</button>
+                            </div>
+                            <div class="result-box" id="result-q4"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 2: Indefinite Article Endings -->
+                    <div class="exercise-group">
+                        <h4 class="exercise-title">Exercise 2: Indefinite Article Endings (Medium)</h4>
+                        <p class="exercise-instruction">Choose the correct adjective ending with indefinite articles (ein, eine, ein). <strong>Endings vary: -ER (masculine), -E (feminine), -ES (neuter), -EN (plural)</strong></p>
+                        
+                        <div class="exercise-item">
+                            <p><strong>1.</strong> Ein neu____ Laptop ist teuer.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q5', 'correct', 'Correct! Indefinite masculine (ein) uses -ER. Ein neuer Laptop.')">A) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q5', 'incorrect', 'Not correct. Indefinite masculine uses -ER, not -E.')">B) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q5', 'incorrect', 'Wrong. The -ES ending is for neuter indefinite (ein kleines Kind).')">C) es</button>
+                            </div>
+                            <div class="result-box" id="result-q5"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>2.</strong> Eine intelligent____ Schülerin gewinnt den Preis.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q6', 'correct', 'Perfect! Indefinite feminine (eine) uses -E. Eine intelligente Schülerin.')">A) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q6', 'incorrect', 'Not correct. Feminine indefinite uses -E, not -ER.')">B) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q6', 'incorrect', 'Wrong. This would be masculine bare noun.')">C) (no ending)</button>
+                            </div>
+                            <div class="result-box" id="result-q6"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>3.</strong> Ein alt____ Auto funktioniert noch.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q7', 'correct', 'Excellent! Neuter indefinite (ein) uses -ES. Ein altes Auto.')">A) es</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q7', 'incorrect', 'Not quite. Neuter indefinite uses -ES.')">B) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q7', 'incorrect', 'Wrong. Only definite uses -E for neuter.')">C) e</button>
+                            </div>
+                            <div class="result-box" id="result-q7"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 3: Possessive Adjectives -->
+                    <div class="exercise-group">
+                        <h4 class="exercise-title">Exercise 3: Possessive Adjectives (Medium)</h4>
+                        <p class="exercise-instruction">Possessive adjectives (mein, dein, sein, ihr, unser, euer, ihr) follow the same pattern as indefinite articles.</p>
+                        
+                        <div class="exercise-item">
+                            <p><strong>1.</strong> Mein alt____ Freund kommt zu Besuch.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q8', 'correct', 'Correct! Possessive masculine (mein) uses -ER. Mein alter Freund.')">A) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q8', 'incorrect', 'Not correct. Possessive follows indefinite pattern: masculine is -ER.')">B) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q8', 'incorrect', 'Wrong. This is for neuter possessive.')">C) es</button>
+                            </div>
+                            <div class="result-box" id="result-q8"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>2.</strong> Seine schön____ Schwester studiert Medizin.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q9', 'correct', 'Perfect! Possessive feminine (seine) uses -E. Seine schöne Schwester.')">A) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q9', 'incorrect', 'Not quite. Possessive feminine always uses -E.')">B) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q9', 'incorrect', 'Wrong. That is for masculine bare nouns.')">C) (no ending)</button>
+                            </div>
+                            <div class="result-box" id="result-q9"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>3.</strong> Unser klein____ Kind ist sehr süß.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q10', 'correct', 'Excellent! Possessive neuter (unser) uses -ES. Unser kleines Kind.')">A) es</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q10', 'incorrect', 'Not correct. Neuter possessive needs -ES.')">B) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q10', 'incorrect', 'Wrong. Only definite uses -E for neuter.')">C) e</button>
+                            </div>
+                            <div class="result-box" id="result-q10"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 4: Kein (Negative) -->
+                    <div class="exercise-group">
+                        <h4 class="exercise-title">Exercise 4: Negative "Kein" (Medium)</h4>
+                        <p class="exercise-instruction">The word "kein" means "no" or "not a" and follows the same adjective ending pattern as indefinite articles.</p>
+                        
+                        <div class="exercise-item">
+                            <p><strong>1.</strong> Das ist kein gut____ Film.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q11', 'correct', 'Correct! Kein + neuter uses -ES. Kein gutes Film.')">A) es</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q11', 'incorrect', 'Not correct. Neuter kein uses -ES.')">B) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q11', 'incorrect', 'Wrong. That is for masculine indefinite.')">C) e</button>
+                            </div>
+                            <div class="result-box" id="result-q11"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>2.</strong> Er hat keine intelligent____ Idee.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q12', 'correct', 'Perfect! Kein + feminine uses -E. Keine intelligente Idee.')">A) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q12', 'incorrect', 'Not quite. Feminine kein uses -E.')">B) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q12', 'incorrect', 'Wrong. Only bare masculine uses -ER.')">C) (no ending)</button>
+                            </div>
+                            <div class="result-box" id="result-q12"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 5: Bare (No Article) -->
+                    <div class="exercise-group">
+                        <h4 class="exercise-title">Exercise 5: Bare Nouns - No Article (Medium-Hard)</h4>
+                        <p class="exercise-instruction">When there's NO article at all, the adjective takes the definite article ending itself!</p>
+                        
+                        <div class="exercise-item">
+                            <p><strong>1.</strong> Alt____ Männer arbeiten dort.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q13', 'correct', 'Correct! Bare masculine uses -ER. Alter Mann.')">A) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q13', 'incorrect', 'Not correct. Bare masculine uses -ER.')">B) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q13', 'incorrect', 'Wrong. That is for indefinite articles.')">C) es</button>
+                            </div>
+                            <div class="result-box" id="result-q13"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>2.</strong> Schön____ Frauen sind überall!</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q14', 'correct', 'Perfect! Bare feminine plural uses -E. Schöne Frauen.')">A) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q14', 'incorrect', 'Not quite. Bare feminine uses -E.')">B) er</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q14', 'incorrect', 'Wrong. That is for neuter.')">C) es</button>
+                            </div>
+                            <div class="result-box" id="result-q14"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>3.</strong> Klein____ Kinder spielen gerne.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q15', 'correct', 'Excellent! Bare plural uses -E. Kleine Kinder.')">A) e</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q15', 'incorrect', 'Not correct. Plural always uses -E for bare nouns.')">B) en</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q15', 'incorrect', 'Wrong. That is for definite plural.')">C) es</button>
+                            </div>
+                            <div class="result-box" id="result-q15"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 6: Error Identification -->
+                    <div class="exercise-group">
+                        <h4 class="exercise-title">Exercise 6: Find and Fix the Error (Hard)</h4>
+                        <p class="exercise-instruction">Each sentence has one error in the adjective ending. Find it and select the correct version.</p>
+                        
+                        <div class="exercise-item">
+                            <p><strong>1.</strong> Ein intelligenter Kind ist hier.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q16', 'correct', 'Correct! Kind is neuter, so: Ein intelligentes Kind')">A) Ein intelligentes Kind</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q16', 'incorrect', 'The error is the ending. Kind is neuter, needs -ES.')">B) Ein intelligente Kind</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q16', 'incorrect', 'Still wrong. Neuter requires -ES ending.')">C) Ein intelligent Kind</button>
+                            </div>
+                            <div class="result-box" id="result-q16"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>2.</strong> Die alt Bücher sind wertvoll.</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkMultipleChoice('q17', 'correct', 'Perfect! Definite plural uses -EN: Die alten Bücher')">A) Die alten Bücher</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q17', 'incorrect', 'Not correct. Plural definite needs -EN.')">B) Die alte Bücher</button>
+                                <button class="option-btn" onclick="checkMultipleChoice('q17', 'incorrect', 'Still missing the ending. Should be -EN.')">C) Die altem Bücher</button>
+                            </div>
+                            <div class="result-box" id="result-q17"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 7: Fill in All Parts -->
+                    <div class="exercise-group">
+                        <h4 class="exercise-title">Exercise 7: Complete Sentences (Hard)</h4>
+                        <p class="exercise-instruction">Fill in the correct adjective ending for each sentence.</p>
+
+                        <div class="exercise-item">
+                            <p>Der jung<input type="text" id="fill1" placeholder="(e.g., e)" class="fill-input" maxlength="3" /> Mann studiert Mathematik.</p>
+                            <button class="btn-primary" onclick="checkFillBlank('fill1', 'e', 'Perfect! Definite masculine singular uses -E.')">Check</button>
+                            <div class="result-box" id="result-fill1"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p>Ein schnell<input type="text" id="fill2" placeholder="(e.g., er)" class="fill-input" maxlength="3" /> Läufer gewinnt immer.</p>
+                            <button class="btn-primary" onclick="checkFillBlank('fill2', 'er', 'Excellent! Indefinite masculine uses -ER.')">Check</button>
+                            <div class="result-box" id="result-fill2"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p>Mein neu<input type="text" id="fill3" placeholder="(e.g., es)" class="fill-input" maxlength="3" /> Zimmer ist groß.</p>
+                            <button class="btn-primary" onclick="checkFillBlank('fill3', 'es', 'Perfect! Possessive neuter uses -ES.')">Check</button>
+                            <div class="result-box" id="result-fill3"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p>Keine faulen<input type="text" id="fill4" placeholder="(e.g., (none))" class="fill-input" style="width: 60px;" maxlength="3" /> Menschen mögen arbeiten nicht.</p>
+                            <button class="btn-primary" onclick="checkFillBlank('fill4', '', 'Correct! Plural negative (kein) always ends in -EN (already on the adjective).')">Check</button>
+                            <div class="result-box" id="result-fill4"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p>Freundlich<input type="text" id="fill5" placeholder="(e.g., e)" class="fill-input" maxlength="3" /> Leute helfen gerne.</p>
+                            <button class="btn-primary" onclick="checkFillBlank('fill5', 'e', 'Excellent! Bare plural uses -E.')">Check</button>
+                            <div class="result-box" id="result-fill5"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 8: Real-World Scenario -->
+                    <div class="exercise-group">
+                        <h4 class="exercise-title">Exercise 8: Real Conversations (Hard)</h4>
+                        <p class="exercise-instruction">Complete these realistic dialogue sentences with correct adjective endings.</p>
+
+                        <div class="exercise-item">
+                            <p><em>Person A:</em> "Schau! Der neu<input type="text" id="fill6" placeholder="e" class="fill-input" maxlength="2" style="width: 40px;" /> Lehrer ist nett."</p>
+                            <button class="btn-primary" onclick="checkFillBlank('fill6', 'e', 'Correct! Definite masculine uses -E.')">Check</button>
+                            <div class="result-box" id="result-fill6"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><em>Person B:</em> "Ja, aber ein gut<input type="text" id="fill7" placeholder="er" class="fill-input" maxlength="3" style="width: 50px;" /> Lehrer ist selten!"</p>
+                            <button class="btn-primary" onclick="checkFillBlank('fill7', 'er', 'Perfect! Indefinite masculine uses -ER.')">Check</button>
+                            <div class="result-box" id="result-fill7"></div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><em>Person A:</em> "Du hast recht. Mein alt<input type="text" id="fill8" placeholder="e" class="fill-input" maxlength="2" style="width: 40px;" /> Schule war anders."</p>
+                            <button class="btn-primary" onclick="checkFillBlank('fill8', 'e', 'Correct! Possessive feminine uses -E.')">Check</button>
+                            <div class="result-box" id="result-fill8"></div>
+                        </div>
+                    </div>
+
+                    <!-- Completion Message -->
+                    <div class="completion-section">
+                        <h3 class="completion-title">✨ Chapter 5 Complete!</h3>
+                        <p class="completion-message">Excellent! You've mastered German adjective endings in the nominative case.</p>
+                        <button class="btn-completion" onclick="alert('Congratulations on finishing Chapter 5! You now understand adjective agreement.')">Celebrate Progress →</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/groq-api.js"></script>
+    <script src="../js/ai-feedback.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        // Initialize app for this chapter
+        app.setTotalExercises(8);
+        
+        // Update score display
+        setInterval(() => {
+            const totalScore = document.getElementById('totalScore');
+            if (totalScore) {
+                totalScore.textContent = app.score;
+            }
+        }, 500);
+
+        // Multiple choice validation using universal AI feedback
+        async function checkMultipleChoice(questionId, answer, message) {
+            const resultBox = document.getElementById(`result-${questionId}`);
+            if (answer === 'correct') {
+                app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('show', 'result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⏳ Analyzing...</div>`;
+                
+                const context = resultBox.closest('.exercise-item').querySelector('p').textContent;
+                const feedback = await aiFeedback.getAnswerFeedback(message, 'See correct option', 'multiple-choice', context);
+                
+                if (feedback) {
+                    resultBox.innerHTML = `<div class="result-text">❌ ${feedback}</div>`;
+                } else {
+                    resultBox.innerHTML = `<div class="result-text">❌ Not quite right. Try again!</div>`;
+                }
+            }
+        }
+
+        // Fill in the blanks validation using universal AI feedback
+        async function checkFillBlank(elementId, correctAnswer, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userAnswer = input.value.trim();
+            
+            if (!userAnswer) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter an answer!</div>`;
+                return;
+            }
+            
+            // Track attempts
+            let attempts = parseInt(input.dataset.attempts || '0');
+            attempts++;
+            input.dataset.attempts = attempts;
+            
+            resultBox.classList.add('show');
+            resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
+
+            // Use AI validation if available
+            if (groqValidator) {
+                const sentence = input.dataset.sentence || 'Complete the sentence';
+                const validation = await groqValidator.validateFillBlank(userAnswer, correctAnswer, sentence);
+                
+                if (validation.isCorrect) {
+                    app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
+                    resultBox.classList.add('result-correct');
+                    const feedbackText = validation.feedback.includes('|') ? validation.feedback.split('|')[0].trim() : validation.feedback;
+                    resultBox.innerHTML = `<div class="result-text">✅ Perfect! ${feedbackText}</div>`;
+                    input.dataset.attempts = '0';
+                } else {
+                    if (attempts >= 2) {
+                        resultBox.classList.add('result-incorrect');
+                        const feedbackText = validation.feedback.includes('|') ? validation.feedback.split('|')[0].trim() : validation.feedback;
+                        resultBox.innerHTML = `<div class="result-text">❌ Both attempts used!<br><small>${feedbackText}</small><br><br><strong>Correct: ${correctAnswer}</strong></div>`;
+                        input.disabled = true;
+                        input.dataset.attempts = '0';
+                    } else {
+                        resultBox.classList.add('result-incorrect');
+                        const feedbackText = validation.feedback.includes('|') ? validation.feedback.split('|')[0].trim() : validation.feedback;
+                        resultBox.innerHTML = `<div class="result-text">❌ ${feedbackText} (Attempt ${attempts}/2)</div>`;
+                    }
+                }
+            } else {
+                // Fallback to basic validation
+                const userAnswerLower = userAnswer.toLowerCase();
+                if (userAnswerLower === correctAnswer.toLowerCase()) {
+                    app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
+                    resultBox.classList.add('result-correct');
+                    resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+                    input.dataset.attempts = '0';
+                } else {
+                    if (attempts >= 2) {
+                        resultBox.classList.add('result-incorrect');
+                        resultBox.innerHTML = `<div class="result-text">❌ Both attempts used. Correct: ${correctAnswer}</div>`;
+                        input.disabled = true;
+                        input.dataset.attempts = '0';
+                    } else {
+                        resultBox.classList.add('result-incorrect');
+                        resultBox.innerHTML = `<div class="result-text">❌ Try again! (Attempt ${attempts}/2)</div>`;
+                    }
+                }
+            }
+        }
+
+        // Matching validation using universal AI feedback
+        async function checkMatching(elementId, correctAnswer, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userAnswer = input.value.trim().toLowerCase();
+
+            if (!userAnswer) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter an answer!</div>`;
+                return;
+            }
+
+            resultBox.classList.add('show');
+            if (userAnswer === correctAnswer.toLowerCase()) {
+                app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.innerHTML = `<div class="result-text">⏳ Analyzing...</div>`;
+                const context = resultBox.closest('.exercise-item').querySelector('p').textContent;
+                const feedback = await aiFeedback.getAnswerFeedback(userAnswer, correctAnswer, 'matching', context);
+                
+                resultBox.classList.add('result-incorrect');
+                if (feedback) {
+                    resultBox.innerHTML = `<div class="result-text">❌ ${feedback}</div>`;
+                } else {
+                    resultBox.innerHTML = `<div class="result-text">❌ Not correct. Answer: <strong>${correctAnswer}</strong></div>`;
+                }
+            }
+        }
+
+        // Translation validation using universal AI feedback
+        async function checkTranslation(elementId, keywords, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userInput = input.value.trim().toLowerCase();
+
+            if (!userInput) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter a translation!</div>`;
+                return;
+            }
+
+            resultBox.classList.add('show');
+            const keywordArray = keywords.split(' ');
+            let matchCount = 0;
+
+            for (let keyword of keywordArray) {
+                if (userInput.includes(keyword)) matchCount++;
+            }
+
+            if (matchCount >= keywordArray.length) {
+                app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
+                const context = resultBox.closest('.exercise-item').querySelector('p').textContent;
+                const feedback = await aiFeedback.getTranslationFeedback(userInput, context);
+                
+                resultBox.classList.add('result-incorrect');
+                if (feedback) {
+                    resultBox.innerHTML = `<div class="result-text">❌ ${feedback}</div>`;
+                } else {
+                    resultBox.innerHTML = `<div class="result-text">❌ Try to include: ${keywords}</div>`;
+                }
+            }
+        }
+
+        // Creative writing validation using universal AI feedback
+        async function checkCreative(elementId) {
+            const textarea = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userInput = textarea.value.trim();
+
+            if (!userInput) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = '<div class="result-text">⚠️ Please write something!</div>';
+                return;
+            }
+
+            resultBox.classList.add('show');
+            resultBox.innerHTML = `<div class="result-text">⏳ Analyzing...</div>`;
+
+            const feedback = await aiFeedback.getCreativeFeedback(userInput, 'nominative adjective endings');
+
+            if (feedback) {
+                app.checkAnswer(true, 'Good effort!');
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${feedback}</div>`;
+            } else {
+                app.checkAnswer(true, 'Great effort!');
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ Excellent work! Your sentence shows good understanding.</div>`;
+            }
+        }
+
+        // For navigation
+        function switchChapter(chapterNumber) {
+            window.location.href = `chapter${chapterNumber}.html`;
+        }
+    </script>
+</body>
+</html>
