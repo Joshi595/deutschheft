@@ -23,17 +23,36 @@ class GroqValidator {
         }
 
         try {
-            const prompt = `You are a German language teacher. Evaluate this answer:
+            // First, do exact matching (case-insensitive, trim spaces)
+            const userTrimmed = userAnswer.toLowerCase().trim();
+            const correctTrimmed = correctAnswer.toLowerCase().trim();
+            
+            // If it's an exact match, return immediately
+            if (userTrimmed === correctTrimmed) {
+                return {
+                    isCorrect: true,
+                    feedback: 'Correct! Well done!',
+                    explanation: 'Your answer matches perfectly.',
+                    score: 10
+                };
+            }
+
+            const prompt = `You are a strict German language teacher. Evaluate ONLY if this answer is EXACTLY correct or has only minor typos/accents:
 
 Sentence: ${sentence}
 Expected answer: ${correctAnswer}
 Student's answer: ${userAnswer}
 
+Be STRICT - minor variations are INCORRECT. Only accept:
+- Exact spelling (case doesn't matter)
+- Missing accents (ä, ö, ü as a, o, u) 
+- Single letter typos
+
 Respond ONLY with valid JSON (no extra text):
 {
-  "isCorrect": boolean (true if answer is essentially correct),
-  "feedback": "Brief feedback in English (2-3 sentences max)",
-  "explanation": "Why this is/isn't correct and how to improve"
+  "isCorrect": boolean (true ONLY if essentially the correct word),
+  "feedback": "Why it's wrong and what the correct answer is (2-3 sentences)",
+  "explanation": "How to form the correct answer"
 }`;
 
             console.log('Calling Groq API...');
@@ -51,7 +70,7 @@ Respond ONLY with valid JSON (no extra text):
                             content: prompt
                         }
                     ],
-                    temperature: 0.3,
+                    temperature: 0.1,
                     max_tokens: 200
                 })
             });
