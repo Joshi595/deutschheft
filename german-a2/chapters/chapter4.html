@@ -529,13 +529,13 @@
                     if (attempts >= 2) {
                         resultBox.classList.add('result-incorrect');
                         const feedbackText = validation.feedback.includes('|') ? validation.feedback.split('|')[0].trim() : validation.feedback;
-                        resultBox.innerHTML = `<div class="result-text">❌ Both attempts used!<br><small>${feedbackText}</small><br><br><strong>Correct: ${correctAnswer}</strong></div>`;
+                        resultBox.innerHTML = `<div class="result-text">❌ Both attempts used!<br><small>${feedbackText}</small><br><br><strong>Correct Answer: ${correctAnswer}</strong></div>`;
                         input.disabled = true;
                         input.dataset.attempts = '0';
                     } else {
                         resultBox.classList.add('result-incorrect');
                         const feedbackText = validation.feedback.includes('|') ? validation.feedback.split('|')[0].trim() : validation.feedback;
-                        resultBox.innerHTML = `<div class="result-text">❌ ${feedbackText} (Attempt ${attempts}/2)</div>`;
+                        resultBox.innerHTML = `<div class="result-text">❌ Not quite right! ${feedbackText}<br><em>(Attempt ${attempts}/2 - Try again!)</em></div>`;
                     }
                 }
             } else {
