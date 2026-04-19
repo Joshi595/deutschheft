@@ -246,284 +246,330 @@
                     </div>
 
                     <!-- Exercises Section -->
-                    <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">✏️ Exercises (8 Levels)</h3>
+                    <div class="exercise-section">
+                        <h3 class="exercise-title">Exercises</h3>
 
-                    <!-- Exercise 1: Guided Multiple Choice -->
-                    <div class="exercise-group">
-                        <h4 class="exercise-title">Exercise 1: Definite Article Endings (Easy)</h4>
-                        <p class="exercise-instruction">Choose the correct adjective ending when using definite articles (der, die, das). <strong>All definite articles use -E in singular!</strong></p>
-                        
-                        <div class="exercise-item">
-                            <p><strong>1.</strong> Der gro____ Mann arbeitet hier.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q1', 'correct', 'Correct! With definite masculine (der), use -E. Der große Mann.')">A) ße</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q1', 'incorrect', 'Not correct. The -ER ending is for indefinite articles and bare nouns.')">B) ßer</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q1', 'incorrect', 'Wrong. The -ES ending is for neuter nouns, not masculine.')">C) ßes</button>
-                            </div>
-                            <div class="result-box" id="result-q1"></div>
+                        <!-- Exercise Tracker -->
+                        <div class="exercise-tracker">
+                            <div class="exercise-status current" id="ex1-status">Exercise 1</div>
+                            <div class="exercise-status" id="ex2-status">Exercise 2</div>
+                            <div class="exercise-status" id="ex3-status">Exercise 3</div>
+                            <div class="exercise-status" id="ex4-status">Exercise 4</div>
+                            <div class="exercise-status" id="ex5-status">Exercise 5</div>
                         </div>
 
+                        <!-- Exercise 1: Definite Article Endings -->
                         <div class="exercise-item">
-                            <p><strong>2.</strong> Die schön____ Frau ist Arzt.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q2', 'correct', 'Perfect! With definite feminine (die), use -E. Die schöne Frau.')">A) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q2', 'incorrect', 'Not quite. Feminine definite articles always use -E, never -E.')">B) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q2', 'incorrect', 'Wrong. That is the neuter indefinite ending.')">C) es</button>
+                            <div class="exercise-number">Exercise 1: Definite Article Endings (Easy)</div>
+                            <div class="exercise-question">Choose the correct adjective ending when using definite articles (der, die, das). All definite articles use -E in singular!</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Der gro____ Mann arbeitet hier.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q1" value="a" id="q1a">
+                                    <label for="q1a">ße</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q1" value="b" id="q1b">
+                                    <label for="q1b">ßer</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q1" value="c" id="q1c">
+                                    <label for="q1c">ßes</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q1', 'a', 'Correct! With definite masculine (der), use -E. Der große Mann.')">Check Answer</button>
+                                <div class="result-box" id="result-q1"></div>
                             </div>
-                            <div class="result-box" id="result-q2"></div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Die schön____ Frau ist Arzt.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q2" value="a" id="q2a">
+                                    <label for="q2a">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q2" value="b" id="q2b">
+                                    <label for="q2b">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q2" value="c" id="q2c">
+                                    <label for="q2c">es</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q2', 'a', 'Perfect! With definite feminine (die), use -E. Die schöne Frau.')">Check Answer</button>
+                                <div class="result-box" id="result-q2"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>3. Das klein____ Kind spielt im Park.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q3" value="a" id="q3a">
+                                    <label for="q3a">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q3" value="b" id="q3b">
+                                    <label for="q3b">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q3" value="c" id="q3c">
+                                    <label for="q3c">(no ending)</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q3', 'a', 'Excellent! With definite neuter (das), use -E. Das kleine Kind.')">Check Answer</button>
+                                <div class="result-box" id="result-q3"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>4. Die alt____ Bücher sind interessant.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q4" value="a" id="q4a">
+                                    <label for="q4a">en</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q4" value="b" id="q4b">
+                                    <label for="q4b">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q4" value="c" id="q4c">
+                                    <label for="q4c">(no ending)</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q4', 'a', 'Perfect! With definite plural (die), use -EN. Die alten Bücher.')">Check Answer</button>
+                                <div class="result-box" id="result-q4"></div>
+                            </div>
                         </div>
 
+                        <!-- Exercise 2: Indefinite Article Endings -->
                         <div class="exercise-item">
-                            <p><strong>3.</strong> Das klein____ Kind spielt im Park.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q3', 'correct', 'Excellent! With definite neuter (das), use -E. Das kleine Kind.')">A) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q3', 'incorrect', 'Not correct. Neuter definite uses -E, not -ER.')">B) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q3', 'incorrect', 'Wrong. This would only be for bare masculine nouns.')">C) (no ending)</button>
+                            <div class="exercise-number">Exercise 2: Indefinite Article Endings (Medium)</div>
+                            <div class="exercise-question">Choose the correct adjective ending with indefinite articles (ein, eine, ein). Endings vary: -ER (masculine), -E (feminine), -ES (neuter), -EN (plural)</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Ein neu____ Laptop ist teuer.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q5" value="a" id="q5a">
+                                    <label for="q5a">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q5" value="b" id="q5b">
+                                    <label for="q5b">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q5" value="c" id="q5c">
+                                    <label for="q5c">es</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q5', 'a', 'Correct! Indefinite masculine (ein) uses -ER. Ein neuer Laptop.')">Check Answer</button>
+                                <div class="result-box" id="result-q5"></div>
                             </div>
-                            <div class="result-box" id="result-q3"></div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Eine intelligent____ Schülerin gewinnt den Preis.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q6" value="a" id="q6a">
+                                    <label for="q6a">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q6" value="b" id="q6b">
+                                    <label for="q6b">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q6" value="c" id="q6c">
+                                    <label for="q6c">(no ending)</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q6', 'a', 'Perfect! Indefinite feminine (eine) uses -E. Eine intelligente Schülerin.')">Check Answer</button>
+                                <div class="result-box" id="result-q6"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>3. Ein alt____ Auto funktioniert noch.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q7" value="a" id="q7a">
+                                    <label for="q7a">es</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q7" value="b" id="q7b">
+                                    <label for="q7b">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q7" value="c" id="q7c">
+                                    <label for="q7c">e</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q7', 'a', 'Excellent! Neuter indefinite (ein) uses -ES. Ein altes Auto.')">Check Answer</button>
+                                <div class="result-box" id="result-q7"></div>
+                            </div>
                         </div>
 
+                        <!-- Exercise 3: Possessive Adjectives -->
                         <div class="exercise-item">
-                            <p><strong>4.</strong> Die alt____ Bücher sind interessant.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q4', 'correct', 'Perfect! With definite plural (die), use -EN. Die alten Bücher.')">A) en</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q4', 'incorrect', 'Not quite. Plural definite articles always use -EN.')">B) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q4', 'incorrect', 'Wrong. Only for singular feminine definite.')">C) (no ending)</button>
+                            <div class="exercise-number">Exercise 3: Possessive Adjectives (Medium)</div>
+                            <div class="exercise-question">Possessive adjectives (mein, dein, sein, ihr, unser, euer, ihr) follow the same pattern as indefinite articles.</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Mein alt____ Freund kommt zu Besuch.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q8" value="a" id="q8a">
+                                    <label for="q8a">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q8" value="b" id="q8b">
+                                    <label for="q8b">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q8" value="c" id="q8c">
+                                    <label for="q8c">es</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q8', 'a', 'Correct! Possessive masculine (mein) uses -ER. Mein alter Freund.')">Check Answer</button>
+                                <div class="result-box" id="result-q8"></div>
                             </div>
-                            <div class="result-box" id="result-q4"></div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Seine schön____ Schwester studiert Medizin.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q9" value="a" id="q9a">
+                                    <label for="q9a">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q9" value="b" id="q9b">
+                                    <label for="q9b">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q9" value="c" id="q9c">
+                                    <label for="q9c">(no ending)</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q9', 'a', 'Perfect! Possessive feminine (seine) uses -E. Seine schöne Schwester.')">Check Answer</button>
+                                <div class="result-box" id="result-q9"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>3. Unser klein____ Kind ist sehr süß.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q10" value="a" id="q10a">
+                                    <label for="q10a">es</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q10" value="b" id="q10b">
+                                    <label for="q10b">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q10" value="c" id="q10c">
+                                    <label for="q10c">e</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q10', 'a', 'Excellent! Possessive neuter (unser) uses -ES. Unser kleines Kind.')">Check Answer</button>
+                                <div class="result-box" id="result-q10"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4: Kein (Negative) -->
+                        <div class="exercise-item">
+                            <div class="exercise-number">Exercise 4: Negative "Kein" (Medium)</div>
+                            <div class="exercise-question">The word "kein" means "no" or "not a" and follows the same adjective ending pattern as indefinite articles.</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Das ist kein gut____ Film.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q11" value="a" id="q11a">
+                                    <label for="q11a">es</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q11" value="b" id="q11b">
+                                    <label for="q11b">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q11" value="c" id="q11c">
+                                    <label for="q11c">e</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q11', 'a', 'Correct! Kein + neuter uses -ES. Kein gutes Film.')">Check Answer</button>
+                                <div class="result-box" id="result-q11"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Er hat keine intelligent____ Idee.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q12" value="a" id="q12a">
+                                    <label for="q12a">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q12" value="b" id="q12b">
+                                    <label for="q12b">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q12" value="c" id="q12c">
+                                    <label for="q12c">(no ending)</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q12', 'a', 'Perfect! Kein + feminine uses -E. Keine intelligente Idee.')">Check Answer</button>
+                                <div class="result-box" id="result-q12"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5: Bare (No Article) -->
+                        <div class="exercise-item">
+                            <div class="exercise-number">Exercise 5: Bare Nouns - No Article (Medium-Hard)</div>
+                            <div class="exercise-question">When there's NO article at all, the adjective takes the definite article ending itself!</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Alt____ Männer arbeiten dort.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q13" value="a" id="q13a">
+                                    <label for="q13a">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q13" value="b" id="q13b">
+                                    <label for="q13b">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q13" value="c" id="q13c">
+                                    <label for="q13c">es</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q13', 'a', 'Correct! Bare masculine uses -ER. Alter Mann.')">Check Answer</button>
+                                <div class="result-box" id="result-q13"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Schön____ Frauen sind überall!</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q14" value="a" id="q14a">
+                                    <label for="q14a">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q14" value="b" id="q14b">
+                                    <label for="q14b">er</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q14" value="c" id="q14c">
+                                    <label for="q14c">es</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q14', 'a', 'Perfect! Bare feminine plural uses -E. Schöne Frauen.')">Check Answer</button>
+                                <div class="result-box" id="result-q14"></div>
+                            </div>
+
+                            <div style="margin-top: 20px;">
+                                <p style="margin-bottom: 10px;"><strong>3. Klein____ Kinder spielen gerne.</strong></p>
+                                <div class="option">
+                                    <input type="radio" name="q15" value="a" id="q15a">
+                                    <label for="q15a">e</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q15" value="b" id="q15b">
+                                    <label for="q15b">en</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q15" value="c" id="q15c">
+                                    <label for="q15c">es</label>
+                                </div>
+                                <button class="btn-primary" onclick="checkMultipleChoice('q15', 'a', 'Excellent! Bare plural uses -E. Kleine Kinder.')">Check Answer</button>
+                                <div class="result-box" id="result-q15"></div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Exercise 2: Indefinite Article Endings -->
-                    <div class="exercise-group">
-                        <h4 class="exercise-title">Exercise 2: Indefinite Article Endings (Medium)</h4>
-                        <p class="exercise-instruction">Choose the correct adjective ending with indefinite articles (ein, eine, ein). <strong>Endings vary: -ER (masculine), -E (feminine), -ES (neuter), -EN (plural)</strong></p>
-                        
-                        <div class="exercise-item">
-                            <p><strong>1.</strong> Ein neu____ Laptop ist teuer.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q5', 'correct', 'Correct! Indefinite masculine (ein) uses -ER. Ein neuer Laptop.')">A) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q5', 'incorrect', 'Not correct. Indefinite masculine uses -ER, not -E.')">B) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q5', 'incorrect', 'Wrong. The -ES ending is for neuter indefinite (ein kleines Kind).')">C) es</button>
-                            </div>
-                            <div class="result-box" id="result-q5"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><strong>2.</strong> Eine intelligent____ Schülerin gewinnt den Preis.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q6', 'correct', 'Perfect! Indefinite feminine (eine) uses -E. Eine intelligente Schülerin.')">A) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q6', 'incorrect', 'Not correct. Feminine indefinite uses -E, not -ER.')">B) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q6', 'incorrect', 'Wrong. This would be masculine bare noun.')">C) (no ending)</button>
-                            </div>
-                            <div class="result-box" id="result-q6"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><strong>3.</strong> Ein alt____ Auto funktioniert noch.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q7', 'correct', 'Excellent! Neuter indefinite (ein) uses -ES. Ein altes Auto.')">A) es</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q7', 'incorrect', 'Not quite. Neuter indefinite uses -ES.')">B) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q7', 'incorrect', 'Wrong. Only definite uses -E for neuter.')">C) e</button>
-                            </div>
-                            <div class="result-box" id="result-q7"></div>
-                        </div>
-                    </div>
-
-                    <!-- Exercise 3: Possessive Adjectives -->
-                    <div class="exercise-group">
-                        <h4 class="exercise-title">Exercise 3: Possessive Adjectives (Medium)</h4>
-                        <p class="exercise-instruction">Possessive adjectives (mein, dein, sein, ihr, unser, euer, ihr) follow the same pattern as indefinite articles.</p>
-                        
-                        <div class="exercise-item">
-                            <p><strong>1.</strong> Mein alt____ Freund kommt zu Besuch.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q8', 'correct', 'Correct! Possessive masculine (mein) uses -ER. Mein alter Freund.')">A) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q8', 'incorrect', 'Not correct. Possessive follows indefinite pattern: masculine is -ER.')">B) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q8', 'incorrect', 'Wrong. This is for neuter possessive.')">C) es</button>
-                            </div>
-                            <div class="result-box" id="result-q8"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><strong>2.</strong> Seine schön____ Schwester studiert Medizin.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q9', 'correct', 'Perfect! Possessive feminine (seine) uses -E. Seine schöne Schwester.')">A) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q9', 'incorrect', 'Not quite. Possessive feminine always uses -E.')">B) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q9', 'incorrect', 'Wrong. That is for masculine bare nouns.')">C) (no ending)</button>
-                            </div>
-                            <div class="result-box" id="result-q9"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><strong>3.</strong> Unser klein____ Kind ist sehr süß.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q10', 'correct', 'Excellent! Possessive neuter (unser) uses -ES. Unser kleines Kind.')">A) es</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q10', 'incorrect', 'Not correct. Neuter possessive needs -ES.')">B) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q10', 'incorrect', 'Wrong. Only definite uses -E for neuter.')">C) e</button>
-                            </div>
-                            <div class="result-box" id="result-q10"></div>
-                        </div>
-                    </div>
-
-                    <!-- Exercise 4: Kein (Negative) -->
-                    <div class="exercise-group">
-                        <h4 class="exercise-title">Exercise 4: Negative "Kein" (Medium)</h4>
-                        <p class="exercise-instruction">The word "kein" means "no" or "not a" and follows the same adjective ending pattern as indefinite articles.</p>
-                        
-                        <div class="exercise-item">
-                            <p><strong>1.</strong> Das ist kein gut____ Film.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q11', 'correct', 'Correct! Kein + neuter uses -ES. Kein gutes Film.')">A) es</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q11', 'incorrect', 'Not correct. Neuter kein uses -ES.')">B) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q11', 'incorrect', 'Wrong. That is for masculine indefinite.')">C) e</button>
-                            </div>
-                            <div class="result-box" id="result-q11"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><strong>2.</strong> Er hat keine intelligent____ Idee.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q12', 'correct', 'Perfect! Kein + feminine uses -E. Keine intelligente Idee.')">A) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q12', 'incorrect', 'Not quite. Feminine kein uses -E.')">B) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q12', 'incorrect', 'Wrong. Only bare masculine uses -ER.')">C) (no ending)</button>
-                            </div>
-                            <div class="result-box" id="result-q12"></div>
-                        </div>
-                    </div>
-
-                    <!-- Exercise 5: Bare (No Article) -->
-                    <div class="exercise-group">
-                        <h4 class="exercise-title">Exercise 5: Bare Nouns - No Article (Medium-Hard)</h4>
-                        <p class="exercise-instruction">When there's NO article at all, the adjective takes the definite article ending itself!</p>
-                        
-                        <div class="exercise-item">
-                            <p><strong>1.</strong> Alt____ Männer arbeiten dort.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q13', 'correct', 'Correct! Bare masculine uses -ER. Alter Mann.')">A) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q13', 'incorrect', 'Not correct. Bare masculine uses -ER.')">B) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q13', 'incorrect', 'Wrong. That is for indefinite articles.')">C) es</button>
-                            </div>
-                            <div class="result-box" id="result-q13"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><strong>2.</strong> Schön____ Frauen sind überall!</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q14', 'correct', 'Perfect! Bare feminine plural uses -E. Schöne Frauen.')">A) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q14', 'incorrect', 'Not quite. Bare feminine uses -E.')">B) er</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q14', 'incorrect', 'Wrong. That is for neuter.')">C) es</button>
-                            </div>
-                            <div class="result-box" id="result-q14"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><strong>3.</strong> Klein____ Kinder spielen gerne.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q15', 'correct', 'Excellent! Bare plural uses -E. Kleine Kinder.')">A) e</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q15', 'incorrect', 'Not correct. Plural always uses -E for bare nouns.')">B) en</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q15', 'incorrect', 'Wrong. That is for definite plural.')">C) es</button>
-                            </div>
-                            <div class="result-box" id="result-q15"></div>
-                        </div>
-                    </div>
-
-                    <!-- Exercise 6: Error Identification -->
-                    <div class="exercise-group">
-                        <h4 class="exercise-title">Exercise 6: Find and Fix the Error (Hard)</h4>
-                        <p class="exercise-instruction">Each sentence has one error in the adjective ending. Find it and select the correct version.</p>
-                        
-                        <div class="exercise-item">
-                            <p><strong>1.</strong> Ein intelligenter Kind ist hier.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q16', 'correct', 'Correct! Kind is neuter, so: Ein intelligentes Kind')">A) Ein intelligentes Kind</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q16', 'incorrect', 'The error is the ending. Kind is neuter, needs -ES.')">B) Ein intelligente Kind</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q16', 'incorrect', 'Still wrong. Neuter requires -ES ending.')">C) Ein intelligent Kind</button>
-                            </div>
-                            <div class="result-box" id="result-q16"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><strong>2.</strong> Die alt Bücher sind wertvoll.</p>
-                            <div class="options">
-                                <button class="option-btn" onclick="checkMultipleChoice('q17', 'correct', 'Perfect! Definite plural uses -EN: Die alten Bücher')">A) Die alten Bücher</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q17', 'incorrect', 'Not correct. Plural definite needs -EN.')">B) Die alte Bücher</button>
-                                <button class="option-btn" onclick="checkMultipleChoice('q17', 'incorrect', 'Still missing the ending. Should be -EN.')">C) Die altem Bücher</button>
-                            </div>
-                            <div class="result-box" id="result-q17"></div>
-                        </div>
-                    </div>
-
-                    <!-- Exercise 7: Fill in All Parts -->
-                    <div class="exercise-group">
-                        <h4 class="exercise-title">Exercise 7: Complete Sentences (Hard)</h4>
-                        <p class="exercise-instruction">Fill in the correct adjective ending for each sentence.</p>
-
-                        <div class="exercise-item">
-                            <p>Der jung<input type="text" id="fill1" placeholder="(e.g., e)" class="fill-input" maxlength="3" /> Mann studiert Mathematik.</p>
-                            <button class="btn-primary" onclick="checkFillBlank('fill1', 'e', 'Perfect! Definite masculine singular uses -E.')">Check</button>
-                            <div class="result-box" id="result-fill1"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p>Ein schnell<input type="text" id="fill2" placeholder="(e.g., er)" class="fill-input" maxlength="3" /> Läufer gewinnt immer.</p>
-                            <button class="btn-primary" onclick="checkFillBlank('fill2', 'er', 'Excellent! Indefinite masculine uses -ER.')">Check</button>
-                            <div class="result-box" id="result-fill2"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p>Mein neu<input type="text" id="fill3" placeholder="(e.g., es)" class="fill-input" maxlength="3" /> Zimmer ist groß.</p>
-                            <button class="btn-primary" onclick="checkFillBlank('fill3', 'es', 'Perfect! Possessive neuter uses -ES.')">Check</button>
-                            <div class="result-box" id="result-fill3"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p>Keine faulen<input type="text" id="fill4" placeholder="(e.g., (none))" class="fill-input" style="width: 60px;" maxlength="3" /> Menschen mögen arbeiten nicht.</p>
-                            <button class="btn-primary" onclick="checkFillBlank('fill4', '', 'Correct! Plural negative (kein) always ends in -EN (already on the adjective).')">Check</button>
-                            <div class="result-box" id="result-fill4"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p>Freundlich<input type="text" id="fill5" placeholder="(e.g., e)" class="fill-input" maxlength="3" /> Leute helfen gerne.</p>
-                            <button class="btn-primary" onclick="checkFillBlank('fill5', 'e', 'Excellent! Bare plural uses -E.')">Check</button>
-                            <div class="result-box" id="result-fill5"></div>
-                        </div>
-                    </div>
-
-                    <!-- Exercise 8: Real-World Scenario -->
-                    <div class="exercise-group">
-                        <h4 class="exercise-title">Exercise 8: Real Conversations (Hard)</h4>
-                        <p class="exercise-instruction">Complete these realistic dialogue sentences with correct adjective endings.</p>
-
-                        <div class="exercise-item">
-                            <p><em>Person A:</em> "Schau! Der neu<input type="text" id="fill6" placeholder="e" class="fill-input" maxlength="2" style="width: 40px;" /> Lehrer ist nett."</p>
-                            <button class="btn-primary" onclick="checkFillBlank('fill6', 'e', 'Correct! Definite masculine uses -E.')">Check</button>
-                            <div class="result-box" id="result-fill6"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><em>Person B:</em> "Ja, aber ein gut<input type="text" id="fill7" placeholder="er" class="fill-input" maxlength="3" style="width: 50px;" /> Lehrer ist selten!"</p>
-                            <button class="btn-primary" onclick="checkFillBlank('fill7', 'er', 'Perfect! Indefinite masculine uses -ER.')">Check</button>
-                            <div class="result-box" id="result-fill7"></div>
-                        </div>
-
-                        <div class="exercise-item">
-                            <p><em>Person A:</em> "Du hast recht. Mein alt<input type="text" id="fill8" placeholder="e" class="fill-input" maxlength="2" style="width: 40px;" /> Schule war anders."</p>
-                            <button class="btn-primary" onclick="checkFillBlank('fill8', 'e', 'Correct! Possessive feminine uses -E.')">Check</button>
-                            <div class="result-box" id="result-fill8"></div>
-                        </div>
-                    </div>
-
-                    <!-- Completion Message -->
+                    <!-- Completion Feedback -->
                     <div class="completion-section">
                         <h3 class="completion-title">✨ Chapter 5 Complete!</h3>
                         <p class="completion-message">Excellent! You've mastered German adjective endings in the nominative case.</p>
-                        <button class="btn-completion" onclick="alert('Congratulations on finishing Chapter 5! You now understand adjective agreement.')">Celebrate Progress →</button>
+                        <button class="btn-primary" onclick="switchChapter(1)" style="background: white; color: #667eea; margin-top: 20px;">Back to Chapters</button>
                     </div>
                 </div>
             </main>
         </div>
     </div>
+
 
     <script src="../js/groq-api.js"></script>
     <script src="../js/ai-feedback.js"></script>
