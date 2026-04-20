@@ -1,3 +1,9 @@
+# Developer Documentation (Developers Only)
+CHAPTER_CONSISTENCY_GUIDE.md
+DEVELOPMENT.md
+DEVELOPER_NOTES.md
+README_DEV.md
+
 # Operating System Files
 .DS_Store
 Thumbs.db
