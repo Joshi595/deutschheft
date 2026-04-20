@@ -140,250 +140,258 @@
                                 </tr>
                             </tbody>
                         </table>
+
+                        <div class="explanation-box" style="background: #fff3e0; border-left: 4px solid #f59e0b;">
+                            <h4>⚠️ Common Mistakes to Avoid</h4>
+                            <p><strong>❌ Wrong:</strong> <em>Ich sehe den große Mann</em> (missing -EN ending)</p>
+                            <p><strong>✓ Correct:</strong> <em>Ich sehe den großen Mann</em> (accusative masculine requires -EN)</p>
+                            <p><strong>❌ Wrong:</strong> <em>Ich kaufe ein neuens Auto</em> (adding extra -s to neuter)</p>
+                            <p><strong>✓ Correct:</strong> <em>Ich kaufe ein neues Auto</em> (neuter accusative stays -ES)</p>
+                        </div>
                     </div>
 
-                    <!-- Exercise Tracker -->
-                    <div class="exercise-tracker">
-                        <span class="exercise-status current" onclick="scrollToExercise(1)">1</span>
-                        <span class="exercise-status" onclick="scrollToExercise(2)">2</span>
-                        <span class="exercise-status" onclick="scrollToExercise(3)">3</span>
-                        <span class="exercise-status" onclick="scrollToExercise(4)">4</span>
-                        <span class="exercise-status" onclick="scrollToExercise(5)">5</span>
-                        <span class="exercise-status" onclick="scrollToExercise(6)">6</span>
-                        <span class="exercise-status" onclick="scrollToExercise(7)">7</span>
-                        <span class="exercise-status" onclick="scrollToExercise(8)">8</span>
-                    </div>
-
-                    <!-- Exercise Section -->
+                    <!-- Exercises Section -->
                     <div class="exercise-section">
+                        <h3 class="exercise-title">Exercises</h3>
+
+                        <!-- Exercise Tracker - Clickable Navigation -->
+                        <div class="exercise-tracker">
+                            <div class="exercise-status current" id="ex1-status" onclick="scrollToExercise(1)" style="cursor: pointer;">Exercise 1</div>
+                            <div class="exercise-status" id="ex2-status" onclick="scrollToExercise(2)" style="cursor: pointer;">Exercise 2</div>
+                            <div class="exercise-status" id="ex3-status" onclick="scrollToExercise(3)" style="cursor: pointer;">Exercise 3</div>
+                            <div class="exercise-status" id="ex4-status" onclick="scrollToExercise(4)" style="cursor: pointer;">Exercise 4</div>
+                            <div class="exercise-status" id="ex5-status" onclick="scrollToExercise(5)" style="cursor: pointer;">Exercise 5</div>
+                            <div class="exercise-status" id="ex6-status" onclick="scrollToExercise(6)" style="cursor: pointer;">Exercise 6</div>
+                            <div class="exercise-status" id="ex7-status" onclick="scrollToExercise(7)" style="cursor: pointer;">Exercise 7</div>
+                            <div class="exercise-status" id="ex8-status" onclick="scrollToExercise(8)" style="cursor: pointer;">Exercise 8</div>
+                        </div>
+
                         <!-- Exercise 1: Fill-in-the-blanks - Definite Masculine -->
                         <div class="exercise-item" id="exercise-1">
-                            <div class="exercise-header">
-                                <h3>Exercise 1: Fill-in-the-blanks - Definite Masculine (Medium)</h3>
-                                <p>Complete with correct full adjective forms (den uses -EN for accusative masculine)</p>
+                            <div class="exercise-number">Exercise 1: Fill-in-the-blanks - Definite Masculine (Medium)</div>
+                            <div class="exercise-question">Complete with correct full adjective forms (den uses -EN for accusative masculine)</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Ich sehe den ___________ Mann. (großen)</strong></p>
+                                <input type="text" class="input-field" id="fill1" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill1', 'großen', 'Correct! Den großen Mann - accusative masculine uses -EN.')">Check</button>
+                                <div class="result-box" id="result-fill1"></div>
                             </div>
-                            <div class="exercise-content">
-                                <div class="fill-blank-group">
-                                    <div class="fill-blank-item">
-                                        <p>1. Ich sehe den ___________ Mann. (großen)</p>
-                                        <input type="text" id="fill1" placeholder="Enter the adjective" data-sentence="Ich sehe den ___________ Mann.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill1', 'großen', 'Correct! Den großen Mann - accusative masculine uses -EN.')">Check</button>
-                                        <div class="result" id="result-fill1"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>2. Du kaufst den ___________ Laptop. (neuen)</p>
-                                        <input type="text" id="fill2" placeholder="Enter the adjective" data-sentence="Du kaufst den ___________ Laptop.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill2', 'neuen', 'Perfect! Den neuen Laptop - accusative masculine uses -EN.')">Check</button>
-                                        <div class="result" id="result-fill2"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>3. Wir kennen den ___________ Jungen. (intelligenten)</p>
-                                        <input type="text" id="fill3" placeholder="Enter the adjective" data-sentence="Wir kennen den ___________ Jungen.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill3', 'intelligenten', 'Excellent! Den intelligenten Jungen - accusative masculine uses -EN.')">Check</button>
-                                        <div class="result" id="result-fill3"></div>
-                                    </div>
-                                </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Du kaufst den ___________ Laptop. (neuen)</strong></p>
+                                <input type="text" class="input-field" id="fill2" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill2', 'neuen', 'Perfect! Den neuen Laptop - accusative masculine uses -EN.')">Check</button>
+                                <div class="result-box" id="result-fill2"></div>
+                            </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>3. Wir kennen den ___________ Jungen. (intelligenten)</strong></p>
+                                <input type="text" class="input-field" id="fill3" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill3', 'intelligenten', 'Excellent! Den intelligenten Jungen - accusative masculine uses -EN.')">Check</button>
+                                <div class="result-box" id="result-fill3"></div>
                             </div>
                         </div>
 
-                        <!-- Exercise 2: Fill-in-the-blanks - Indefinite/Feminine -->
+                        <!-- Exercise 2: Fill-in-the-blanks - Feminine & Neuter -->
                         <div class="exercise-item" id="exercise-2">
-                            <div class="exercise-header">
-                                <h3>Exercise 2: Fill-in-the-blanks - Indefinite Feminine & Neuter (Easy-Medium)</h3>
-                                <p>Complete with correct full adjective forms (eine/ein use -E for feminine/neuter, -EN for masculine)</p>
+                            <div class="exercise-number">Exercise 2: Fill-in-the-blanks - Indefinite Feminine & Neuter (Easy-Medium)</div>
+                            <div class="exercise-question">Complete with correct full adjective forms (eine/ein use -E for feminine/neuter)</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Ich habe eine ___________ Katze. (schöne)</strong></p>
+                                <input type="text" class="input-field" id="fill4" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill4', 'schöne', 'Correct! Eine schöne Katze - feminine uses -E.')">Check</button>
+                                <div class="result-box" id="result-fill4"></div>
                             </div>
-                            <div class="exercise-content">
-                                <div class="fill-blank-group">
-                                    <div class="fill-blank-item">
-                                        <p>1. Ich habe eine ___________ Katze. (schöne)</p>
-                                        <input type="text" id="fill4" placeholder="Enter the adjective" data-sentence="Ich habe eine ___________ Katze.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill4', 'schöne', 'Correct! Eine schöne Katze - feminine uses -E.')">Check</button>
-                                        <div class="result" id="result-fill4"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>2. Wir sehen ein ___________ Kind. (kleines)</p>
-                                        <input type="text" id="fill5" placeholder="Enter the adjective" data-sentence="Wir sehen ein ___________ Kind.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill5', 'kleines', 'Perfect! Ein kleines Kind - neuter uses -E.')">Check</button>
-                                        <div class="result" id="result-fill5"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>3. Du möchtest einen ___________ Hut. (neuen)</p>
-                                        <input type="text" id="fill6" placeholder="Enter the adjective" data-sentence="Du möchtest einen ___________ Hut.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill6', 'neuen', 'Excellent! Einen neuen Hut - masculine uses -EN.')">Check</button>
-                                        <div class="result" id="result-fill6"></div>
-                                    </div>
-                                </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Wir sehen ein ___________ Kind. (kleines)</strong></p>
+                                <input type="text" class="input-field" id="fill5" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill5', 'kleines', 'Perfect! Ein kleines Kind - neuter uses -E.')">Check</button>
+                                <div class="result-box" id="result-fill5"></div>
+                            </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>3. Du möchtest einen ___________ Hut. (neuen)</strong></p>
+                                <input type="text" class="input-field" id="fill6" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill6', 'neuen', 'Excellent! Einen neuen Hut - masculine uses -EN.')">Check</button>
+                                <div class="result-box" id="result-fill6"></div>
                             </div>
                         </div>
 
                         <!-- Exercise 3: Translation - English to German -->
                         <div class="exercise-item" id="exercise-3">
-                            <div class="exercise-header">
-                                <h3>Exercise 3: Translation - Accusative Sentences (Medium)</h3>
-                                <p>Translate these English sentences to German (pay attention to accusative endings)</p>
+                            <div class="exercise-number">Exercise 3: Translation - Accusative Sentences (Medium)</div>
+                            <div class="exercise-question">Translate these English sentences to German (pay attention to accusative endings)</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. "I see the tall man." → ________________</strong></p>
+                                <input type="text" class="input-field" id="fill7" placeholder="">
+                                <button class="btn-primary" onclick="checkTranslation('fill7', 'großen Mann sehe', 'Correct! Ich sehe den großen Mann - accusative changes masculine adjective.')">Check</button>
+                                <div class="result-box" id="result-fill7"></div>
                             </div>
-                            <div class="exercise-content">
-                                <div class="fill-blank-group">
-                                    <div class="fill-blank-item">
-                                        <p>1. "I see the tall man." → ________________</p>
-                                        <input type="text" id="fill7" placeholder="German translation" data-sentence="Translate: I see the tall man">
-                                        <button class="btn-primary" onclick="checkTranslation('fill7', 'großen Mann sehe', 'Correct! Ich sehe den großen Mann - accusative changes masculine adjective.')">Check</button>
-                                        <div class="result" id="result-fill7"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>2. "We buy a new car." → ________________</p>
-                                        <input type="text" id="fill8" placeholder="German translation" data-sentence="Translate: We buy a new car">
-                                        <button class="btn-primary" onclick="checkTranslation('fill8', 'kaufen neuen Auto', 'Perfect! Wir kaufen einen neuen Auto - accusative requires -EN ending.')">Check</button>
-                                        <div class="result" id="result-fill8"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>3. "Do you like the small dog?" → ________________</p>
-                                        <input type="text" id="fill9" placeholder="German translation" data-sentence="Translate: Do you like the small dog">
-                                        <button class="btn-primary" onclick="checkTranslation('fill9', 'Hund kleinen magst', 'Excellent! Magst du den kleinen Hund? - accusative masculine changes article and adjective.')">Check</button>
-                                        <div class="result" id="result-fill9"></div>
-                                    </div>
-                                </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>2. "We buy a new car." → ________________</strong></p>
+                                <input type="text" class="input-field" id="fill8" placeholder="">
+                                <button class="btn-primary" onclick="checkTranslation('fill8', 'kaufen neuen Auto', 'Perfect! Wir kaufen einen neuen Auto - accusative requires -EN ending.')">Check</button>
+                                <div class="result-box" id="result-fill8"></div>
+                            </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>3. "Do you like the small dog?" → ________________</strong></p>
+                                <input type="text" class="input-field" id="fill9" placeholder="">
+                                <button class="btn-primary" onclick="checkTranslation('fill9', 'Hund kleinen magst', 'Excellent! Magst du den kleinen Hund? - accusative masculine changes article and adjective.')">Check</button>
+                                <div class="result-box" id="result-fill9"></div>
                             </div>
                         </div>
 
                         <!-- Exercise 4: Fill-in-the-blanks - Plural Accusative -->
                         <div class="exercise-item" id="exercise-4">
-                            <div class="exercise-header">
-                                <h3>Exercise 4: Fill-in-the-blanks - Plural Accusative (Medium)</h3>
-                                <p>Complete plural accusative adjectives (plural masculine/feminine/neuter all use -EN)</p>
+                            <div class="exercise-number">Exercise 4: Fill-in-the-blanks - Plural Accusative (Medium)</div>
+                            <div class="exercise-question">Complete plural accusative adjectives (plural all use -EN)</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Ich sehe die ___________ Menschen. (freundlichen)</strong></p>
+                                <input type="text" class="input-field" id="fill10" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill10', 'freundlichen', 'Correct! Die freundlichen Menschen - plural uses -EN.')">Check</button>
+                                <div class="result-box" id="result-fill10"></div>
                             </div>
-                            <div class="exercise-content">
-                                <div class="fill-blank-group">
-                                    <div class="fill-blank-item">
-                                        <p>1. Ich sehe die ___________ Menschen. (freundlichen)</p>
-                                        <input type="text" id="fill10" placeholder="Enter the adjective" data-sentence="Ich sehe die ___________ Menschen.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill10', 'freundlichen', 'Correct! Die freundlichen Menschen - plural uses -EN.')">Check</button>
-                                        <div class="result" id="result-fill10"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>2. Wir kaufen die ___________ Bücher. (neuen)</p>
-                                        <input type="text" id="fill11" placeholder="Enter the adjective" data-sentence="Wir kaufen die ___________ Bücher.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill11', 'neuen', 'Perfect! Die neuen Bücher - plural uses -EN.')">Check</button>
-                                        <div class="result" id="result-fill11"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>3. Du kennst die ___________ Mädchen. (intelligenten)</p>
-                                        <input type="text" id="fill12" placeholder="Enter the adjective" data-sentence="Du kennst die ___________ Mädchen.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill12', 'intelligenten', 'Excellent! Die intelligenten Mädchen - plural uses -EN.')">Check</button>
-                                        <div class="result" id="result-fill12"></div>
-                                    </div>
-                                </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Wir kaufen die ___________ Bücher. (neuen)</strong></p>
+                                <input type="text" class="input-field" id="fill11" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill11', 'neuen', 'Perfect! Die neuen Bücher - plural uses -EN.')">Check</button>
+                                <div class="result-box" id="result-fill11"></div>
+                            </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>3. Du kennst die ___________ Mädchen. (intelligenten)</strong></p>
+                                <input type="text" class="input-field" id="fill12" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill12', 'intelligenten', 'Excellent! Die intelligenten Mädchen - plural uses -EN.')">Check</button>
+                                <div class="result-box" id="result-fill12"></div>
                             </div>
                         </div>
 
                         <!-- Exercise 5: Fill-in-the-blanks - Real Sentences -->
                         <div class="exercise-item" id="exercise-5">
-                            <div class="exercise-header">
-                                <h3>Exercise 5: Fill-in-the-blanks - Real Accusative Sentences (Hard)</h3>
-                                <p>Complete accusative adjectives in realistic contexts</p>
+                            <div class="exercise-number">Exercise 5: Fill-in-the-blanks - Real Accusative Sentences (Hard)</div>
+                            <div class="exercise-question">Complete accusative adjectives in realistic contexts</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>1. Mein Sohn hat einen ___________ Freund. (alten)</strong></p>
+                                <input type="text" class="input-field" id="fill13" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill13', 'alten', 'Correct! Einen alten Freund - accusative masculine uses -EN.')">Check</button>
+                                <div class="result-box" id="result-fill13"></div>
                             </div>
-                            <div class="exercise-content">
-                                <div class="fill-blank-group">
-                                    <div class="fill-blank-item">
-                                        <p>1. Mein Sohn hat einen ___________ Freund. (alten)</p>
-                                        <input type="text" id="fill13" placeholder="Enter the adjective" data-sentence="Mein Sohn hat einen ___________ Freund.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill13', 'alten', 'Correct! Einen alten Freund - accusative masculine uses -EN.')">Check</button>
-                                        <div class="result" id="result-fill13"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>2. Ich fahre einen ___________ Zug. (schnellen)</p>
-                                        <input type="text" id="fill14" placeholder="Enter the adjective" data-sentence="Ich fahre einen ___________ Zug.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill14', 'schnellen', 'Perfect! Einen schnellen Zug - accusative masculine uses -EN.')">Check</button>
-                                        <div class="result" id="result-fill14"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>3. Sie besucht ein ___________ Museum. (großes)</p>
-                                        <input type="text" id="fill15" placeholder="Enter the adjective" data-sentence="Sie besucht ein ___________ Museum.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill15', 'großes', 'Excellent! Ein großes Museum - neuter uses -E.')">Check</button>
-                                        <div class="result" id="result-fill15"></div>
-                                    </div>
-                                    <div class="fill-blank-item">
-                                        <p>4. Wir haben die ___________ Lösung gefunden. (richtige)</p>
-                                        <input type="text" id="fill16" placeholder="Enter the adjective" data-sentence="Wir haben die ___________ Lösung gefunden.">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill16', 'richtige', 'Great! Die richtige Lösung - feminine uses -E.')">Check</button>
-                                        <div class="result" id="result-fill16"></div>
-                                    </div>
-                                </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>2. Ich fahre einen ___________ Zug. (schnellen)</strong></p>
+                                <input type="text" class="input-field" id="fill14" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill14', 'schnellen', 'Perfect! Einen schnellen Zug - accusative masculine uses -EN.')">Check</button>
+                                <div class="result-box" id="result-fill14"></div>
+                            </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>3. Sie besucht ein ___________ Museum. (großes)</strong></p>
+                                <input type="text" class="input-field" id="fill15" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill15', 'großes', 'Excellent! Ein großes Museum - neuter uses -E.')">Check</button>
+                                <div class="result-box" id="result-fill15"></div>
+                            </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>4. Wir haben die ___________ Lösung gefunden. (richtige)</strong></p>
+                                <input type="text" class="input-field" id="fill16" placeholder="">
+                                <button class="btn-primary" onclick="checkFillBlank('fill16', 'richtige', 'Great! Die richtige Lösung - feminine uses -E.')">Check</button>
+                                <div class="result-box" id="result-fill16"></div>
                             </div>
                         </div>
 
                         <!-- Exercise 6: Multiple Choice - Sentence Matching -->
                         <div class="exercise-item" id="exercise-6">
-                            <div class="exercise-header">
-                                <h3>Exercise 6: Multiple Choice - Accusative Sentences (Easy)</h3>
-                                <p>Select the correctly formed accusative sentence</p>
+                            <div class="exercise-number">Exercise 6: Multiple Choice - Accusative Sentences (Easy)</div>
+                            <div class="exercise-question">Select the correctly formed accusative sentence</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>Which sentence is correct?</strong></p>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc1" value="Ich sehe den große Mann"> Ich sehe den große Mann
+                                </label>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc1" value="Ich sehe den großen Mann"> Ich sehe den großen Mann
+                                </label>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc1" value="Ich sehe den großen Mannes"> Ich sehe den großen Mannes
+                                </label>
+                                <button class="btn-primary" onclick="checkMultipleChoice('mc1', 'Ich sehe den großen Mann', 'Perfect! Accusative masculine singular uses -EN.')">Check</button>
+                                <div class="result-box" id="result-mc1"></div>
                             </div>
-                            <div class="exercise-content">
-                                <div class="multiple-choice-group">
-                                    <div class="multiple-choice-item">
-                                        <p>Which sentence is correct?</p>
-                                        <label><input type="radio" name="mc1"> Ich sehe den große Mann</label>
-                                        <label><input type="radio" name="mc1"> Ich sehe den großen Mann</label>
-                                        <label><input type="radio" name="mc1"> Ich sehe den großen Mannes</label>
-                                        <button class="btn-primary" onclick="checkMultipleChoice('mc1', 'Ich sehe den großen Mann', 'Perfect! Accusative masculine singular uses -EN.')">Check</button>
-                                        <div class="result" id="result-mc1"></div>
-                                    </div>
-                                    <div class="multiple-choice-item">
-                                        <p>Which translation is correct?</p>
-                                        <label><input type="radio" name="mc2"> "We buy a new book." = Wir kaufen ein neuen Buch</label>
-                                        <label><input type="radio" name="mc2"> "We buy a new book." = Wir kaufen einen neuen Buches</label>
-                                        <label><input type="radio" name="mc2"> "We buy a new book." = Wir kaufen ein neues Buch</label>
-                                        <button class="btn-primary" onclick="checkMultipleChoice('mc2', 'Wir kaufen ein neues Buch', 'Correct! Neuter accusative = nominative, so -ES stays.')">Check</button>
-                                        <div class="result" id="result-mc2"></div>
-                                    </div>
-                                </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>Which translation is correct?</strong></p>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc2" value="Wir kaufen ein neuen Buch"> "We buy a new book." = Wir kaufen ein neuen Buch
+                                </label>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc2" value="Wir kaufen einen neuen Buches"> "We buy a new book." = Wir kaufen einen neuen Buches
+                                </label>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc2" value="Wir kaufen ein neues Buch"> "We buy a new book." = Wir kaufen ein neues Buch
+                                </label>
+                                <button class="btn-primary" onclick="checkMultipleChoice('mc2', 'Wir kaufen ein neues Buch', 'Correct! Neuter accusative = nominative, so -ES stays.')">Check</button>
+                                <div class="result-box" id="result-mc2"></div>
                             </div>
                         </div>
 
-                        <!-- Exercise 7: Accusative vs Nominative Comparison -->
+                        <!-- Exercise 7: Nominative vs Accusative Comparison -->
                         <div class="exercise-item" id="exercise-7">
-                            <div class="exercise-header">
-                                <h3>Exercise 7: Nominative vs Accusative (Hard)</h3>
-                                <p>Fill in the correct form - watch whether the noun is subject or object</p>
-                            </div>
-                            <div class="exercise-content">
-                                <div class="fill-blank-group">
-                                    <div class="fill-blank-item">
-                                        <p>Nominative: Der ___________ Mann schläft. (große) = The big man sleeps.<br>
-                                           Accusative: Ich sehe den ___________ Mann. (große) = I see the big man.</p>
-                                        <input type="text" id="fill17" placeholder="nom/acc form" data-sentence="Compare nominative and accusative">
-                                        <button class="btn-primary" onclick="checkFillBlank('fill17', 'große/großen', 'Correct! Nominative = große (with -E), Accusative masculine = großen (with -EN).')">Check</button>
-                                        <div class="result" id="result-fill17"></div>
-                                    </div>
-                                </div>
+                            <div class="exercise-number">Exercise 7: Nominative vs Accusative (Hard)</div>
+                            <div class="exercise-question">Fill in the correct form - watch whether the noun is subject or object</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>Nominative: Der ___________ Mann schläft. (große)</strong></p>
+                                <p style="margin-bottom: 10px;"><strong>Accusative: Ich sehe den ___________ Mann. (große)</strong></p>
+                                <p style="margin-bottom: 10px;">Answer with both forms separated by a slash: nom/acc</p>
+                                <input type="text" class="input-field" id="fill17" placeholder="nom/acc">
+                                <button class="btn-primary" onclick="checkFillBlank('fill17', 'große/großen', 'Correct! Nominative = große (with -E), Accusative masculine = großen (with -EN).')">Check</button>
+                                <div class="result-box" id="result-fill17"></div>
                             </div>
                         </div>
 
                         <!-- Exercise 8: Conversation Practice -->
                         <div class="exercise-item" id="exercise-8">
-                            <div class="exercise-header">
-                                <h3>Exercise 8: Conversation Practice (Medium)</h3>
-                                <p>Choose the natural response with correct accusative adjective</p>
+                            <div class="exercise-number">Exercise 8: Conversation Practice (Medium)</div>
+                            <div class="exercise-question">Choose the natural response with correct accusative adjective</div>
+                            
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>A: "Welchen Hund magst du?" (Which dog do you like?)<br>Your response:</strong></p>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc3" value="Ich mag den schwarz Hund"> Ich mag den schwarz Hund
+                                </label>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc3" value="Ich mag den schwarzen Hund"> Ich mag den schwarzen Hund
+                                </label>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc3" value="Ich mag den schwarze Hund"> Ich mag den schwarze Hund
+                                </label>
+                                <button class="btn-primary" onclick="checkMultipleChoice('mc3', 'Ich mag den schwarzen Hund', 'Perfect! Accusative masculine requires -EN ending on the adjective.')">Check</button>
+                                <div class="result-box" id="result-mc3"></div>
                             </div>
-                            <div class="exercise-content">
-                                <div class="multiple-choice-group">
-                                    <div class="multiple-choice-item">
-                                        <p><strong>A:</strong> "Welchen Hund magst du?" (Which dog do you like?)<br><strong>Your response:</strong></p>
-                                        <label><input type="radio" name="mc3"> Ich mag den schwarz Hund</label>
-                                        <label><input type="radio" name="mc3"> Ich mag den schwarzen Hund</label>
-                                        <label><input type="radio" name="mc3"> Ich mag den schwarze Hund</label>
-                                        <button class="btn-primary" onclick="checkMultipleChoice('mc3', 'Ich mag den schwarzen Hund', 'Perfect! Accusative masculine requires -EN ending on the adjective.')">Check</button>
-                                        <div class="result" id="result-mc3"></div>
-                                    </div>
-                                    <div class="multiple-choice-item">
-                                        <p><strong>A:</strong> "Trinkst du gerne Kaffee?" (Do you like to drink coffee?)<br><strong>Your response:</strong></p>
-                                        <label><input type="radio" name="mc4"> Ja, ich trinke den heiße Kaffee</label>
-                                        <label><input type="radio" name="mc4"> Ja, ich trinke einen heißen Kaffee</label>
-                                        <label><input type="radio" name="mc4"> Ja, ich trinke ein heißes Kaffee</label>
-                                        <button class="btn-primary" onclick="checkMultipleChoice('mc4', 'Ja, ich trinke einen heißen Kaffee', 'Excellent! Accusative masculine singular requires -EN.')">Check</button>
-                                        <div class="result" id="result-mc4"></div>
-                                    </div>
-                                </div>
+
+                            <div style="margin-top: 15px;">
+                                <p style="margin-bottom: 10px;"><strong>A: "Trinkst du gerne Kaffee?" (Do you like to drink coffee?)<br>Your response:</strong></p>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc4" value="Ja, ich trinke den heiße Kaffee"> Ja, ich trinke den heiße Kaffee
+                                </label>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc4" value="Ja, ich trinke einen heißen Kaffee"> Ja, ich trinke einen heißen Kaffee
+                                </label>
+                                <label style="display: block; margin: 8px 0;">
+                                    <input type="radio" name="mc4" value="Ja, ich trinke ein heißes Kaffee"> Ja, ich trinke ein heißes Kaffee
+                                </label>
+                                <button class="btn-primary" onclick="checkMultipleChoice('mc4', 'Ja, ich trinke einen heißen Kaffee', 'Excellent! Accusative masculine singular requires -EN.')">Check</button>
+                                <div class="result-box" id="result-mc4"></div>
                             </div>
                         </div>
 
