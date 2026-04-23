@@ -1,4 +1,4 @@
-# 🇩🇪 German A2 Course - Learn German Interactively!
+# 🇩🇪 German A2 Course - Learn German Interactively
 
 Welcome to your interactive German learning platform! This course is designed to make learning German fun, engaging, and effective.
 
