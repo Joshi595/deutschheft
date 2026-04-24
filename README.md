@@ -1,4 +1,4 @@
-# 🇩🇪 German A2 Course - Learn German Interactively!
+# 🇩🇪 German A2 Course - Learn German Interactively
 
 Welcome to your interactive German learning platform! This course is designed to make learning German fun, engaging, and effective.
 
@@ -10,7 +10,7 @@ Welcome to your interactive German learning platform! This course is designed to
 Learn how to describe people's personalities and character traits! 
 - 12 German vocabulary words for personality
 - Grammar rules for adjectives
-- 5 interactive exercises to practice
+- 5-8 interactive exercises to practice
 
 **What you can do**: Describe your friends, family, and characters - "Er ist freundlich und intelligent" (He is friendly and intelligent)
 
