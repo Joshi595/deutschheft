@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German A2 Course - Chapter 8: Dative Case - Adjective Endings</title>
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇩🇪 German A2 Course</h1>
+            <p>Chapter 8: Dative Case - Adjective Endings</p>
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>Exercises Completed</span>
+                    <span id="exerciseProgress">0/8</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3>📚 Chapters</h3>
+                <ul class="chapter-list">
+                    <li class="chapter-item" onclick="switchChapter(1)">
+                        Chapter 1: Character Traits
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(2)">
+                        Chapter 2: Conjunction Weil
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(3)">
+                        Chapter 3: Daily Activities
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(4)">
+                        Chapter 4: Travel & Places
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(5)">
+                        Chapter 5: Adjective Endings (Nominative)
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(6)">
+                        Chapter 6: Adjective Endings (Accusative)
+                    </li>
+                    <li class="chapter-item" onclick="switchChapter(7)">
+                        Chapter 7: Conditional Wenn
+                    </li>
+                    <li class="chapter-item active" onclick="switchChapter(8)">
+                        Chapter 8: Dative Case
+                        <span class="badge">✓</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <main class="content-area">
+                <div class="stats-box">
+                    <div class="stat-card">
+                        <div class="stat-number">18</div>
+                        <div class="stat-label">Dative Adjectives</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Grammar Points</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalScore">0</div>
+                        <div class="stat-label">Score</div>
+                    </div>
+                </div>
+
+                <div id="chapterContent">
+                    <h2 class="section-title">Chapter 8: Dative Case - Adjective Endings</h2>
+                    <p class="section-subtitle">Master dative case adjective agreement - the indirect object case</p>
+
+                    <div class="lesson-content">
+                        <h3 style="color: var(--primary-color); margin-bottom: 15px;">📖 Introduction</h3>
+                        <p>The dative case (Dativ) is the <strong>indirect object case</strong> in German. While the nominative case identifies the subject (who is doing something) and the accusative case identifies the direct object (what is being affected), the dative case identifies the <strong>indirect object</strong> - the person or thing who <strong>receives</strong> or is <strong>affected indirectly</strong> by the action.</p>
+                        
+                        <div class="explanation-box">
+                            <h4>📌 When Do We Use Dative?</h4>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li><strong>Indirect Objects:</strong> "I give <u>the old man</u> a book" (dem alten Mann)</li>
+                                <li><strong>After Dative Verbs:</strong> helfen (help), danken (thank), gefallen (please), gehören (belong to)</li>
+                                <li><strong>After Dative Prepositions:</strong> mit (with), zu (to), von (from/of), seit (since), nach (after/to), aus (from/out of), bei (at/near), außer (except)</li>
+                                <li><strong>Question Word:</strong> Dative answers "Wem?" (To whom?) or "Wem gehört das?" (To whom does that belong?)</li>
+                            </ul>
+                        </div>
+
+                        <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">🔍 The Three German Cases</h3>
+                        <p><strong>Understanding the progression:</strong> German nouns and adjectives change form (decline) based on their function in the sentence. You've now learned all three main cases:</p>
+                        <table class="vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>Case</th>
+                                    <th>Function</th>
+                                    <th>Example Adjective</th>
+                                    <th>Question</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Nominative</strong></td>
+                                    <td>Subject (who/what acts)</td>
+                                    <td>Der <u>große</u> Mann</td>
+                                    <td>Wer? (Who?)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Accusative</strong></td>
+                                    <td>Direct Object (who/what is affected)</td>
+                                    <td>Ich sehe den <u>großen</u> Mann</td>
+                                    <td>Wen? (Whom?)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Dative</strong></td>
+                                    <td>Indirect Object (to/for whom)</td>
+                                    <td>Ich helfe dem <u>großen</u> Mann</td>
+                                    <td>Wem? (To whom?)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">💡 Key Concept: The -EN Rule</h3>
+                        <p><strong>Here's the game-changer:</strong> In the dative case, <strong>ALL adjectives end in -EN</strong> regardless of gender, article type, or number. This is much simpler than nominative and accusative, which have multiple endings!</p>
+                        
+                        <div class="explanation-box">
+                            <h4>✨ The Simple Pattern</h4>
+                            <p><strong>Dative = Always -EN</strong></p>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>dem <u>großen</u> Mann (masculine)</li>
+                                <li>der <u>großen</u> Frau (feminine)</li>
+                                <li>dem <u>großen</u> Kind (neuter)</li>
+                                <li>den <u>großen</u> Männern (plural)</li>
+                            </ul>
+                            <p style="margin-top: 10px;"><strong>Notice:</strong> "großen" appears in every single example. The article changes, but the adjective ending is always -EN!</p>
+                        </div>
+
+                        <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">📝 Dative Adjective Endings - Complete Breakdown</h3>
+                        <table class="vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>Article Type</th>
+                                    <th>Masculine</th>
+                                    <th>Feminine</th>
+                                    <th>Neuter</th>
+                                    <th>Plural</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Definite (the)</strong></td>
+                                    <td>dem -EN</td>
+                                    <td>der -EN</td>
+                                    <td>dem -EN</td>
+                                    <td>den -EN</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Indefinite (a/an)</strong></td>
+                                    <td>einem -EN</td>
+                                    <td>einer -EN</td>
+                                    <td>einem -EN</td>
+                                    <td>-EN</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Possessive (my, your, etc.)</strong></td>
+                                    <td>meinem -EN</td>
+                                    <td>meiner -EN</td>
+                                    <td>meinem -EN</td>
+                                    <td>meinen -EN</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>No Article (Plural)</strong></td>
+                                    <td colspan="3">großen Häusern, jungen Leuten</td>
+                                    <td>-EN</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">📚 Dative Verbs - Verbs That Always Use Dative</h3>
+                        <p>Some German verbs <strong>always require the dative case</strong> for their object. These are important to memorize because they don't follow the typical subject-verb-object pattern:</p>
+                        <table class="vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>Verb</th>
+                                    <th>Meaning</th>
+                                    <th>Example Sentence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>helfen</strong></td>
+                                    <td>to help</td>
+                                    <td>Ich helfe dem <u>alten</u> Mann</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>danken</strong></td>
+                                    <td>to thank</td>
+                                    <td>Wir danken der <u>freundlichen</u> Frau</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>gefallen</strong></td>
+                                    <td>to please</td>
+                                    <td>Das gefällt dem <u>jungen</u> Mädchen</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>gehören</strong></td>
+                                    <td>to belong to</td>
+                                    <td>Das Buch gehört dem <u>intelligenten</u> Student</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>geben</strong></td>
+                                    <td>to give (indirect obj.)</td>
+                                    <td>Ich gebe dem <u>kleinen</u> Kind ein Spielzeug</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">📍 Dative Prepositions - Prepositions That Always Use Dative</h3>
+                        <p>These prepositions <strong>always</strong> require the dative case. When you see one of these prepositions, you know the following noun must be in dative:</p>
+                        <table class="vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>Preposition</th>
+                                    <th>Meaning</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>mit</strong></td>
+                                    <td>with</td>
+                                    <td>mit dem <u>großen</u> Mann</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>zu</strong></td>
+                                    <td>to (direction/destination)</td>
+                                    <td>zu der <u>schönen</u> Stadt</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>von</strong></td>
+                                    <td>from / of (possession)</td>
+                                    <td>von dem <u>alten</u> Haus</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>nach</strong></td>
+                                    <td>after / to (direction)</td>
+                                    <td>nach dem <u>interessanten</u> Film</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>seit</strong></td>
+                                    <td>since / for (time)</td>
+                                    <td>seit dem <u>kalten</u> Winter</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>aus</strong></td>
+                                    <td>from / out of</td>
+                                    <td>aus dem <u>großen</u> Haus</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>bei</strong></td>
+                                    <td>at / near / by</td>
+                                    <td>bei dem <u>jungen</u> Lehrer</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>außer</strong></td>
+                                    <td>except / besides</td>
+                                    <td>außer dem <u>armen</u> Mann</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="explanation-box">
+                            <h4>🎯 Practical Example: All Three Cases in One Sentence</h4>
+                            <p><strong>Sentence:</strong> "Der junge Mann gibt der alten Frau ein Buch."</p>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li><strong>Nominative:</strong> "der <u>junge</u> Mann" (subject - who is giving?) = adjective ends in -E</li>
+                                <li><strong>Accusative:</strong> "ein Buch" (direct object - what is given?) = No adjective, so no ending</li>
+                                <li><strong>Dative:</strong> "der <u>alten</u> Frau" (indirect object - to whom?) = adjective ends in -EN</li>
+                            </ul>
+                            <p style="margin-top: 10px;"><strong>English Translation:</strong> "The young man gives the old woman a book."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-section">
+                    <h3 class="exercise-title">Exercises</h3>
+
+                    <!-- Exercise Tracker -->
+                    <div class="exercise-tracker">
+                        <div class="exercise-status current" id="ex1-status" onclick="scrollToExercise(1)" style="cursor: pointer;">Exercise 1</div>
+                        <div class="exercise-status" id="ex2-status" onclick="scrollToExercise(2)" style="cursor: pointer;">Exercise 2</div>
+                        <div class="exercise-status" id="ex3-status" onclick="scrollToExercise(3)" style="cursor: pointer;">Exercise 3</div>
+                        <div class="exercise-status" id="ex4-status" onclick="scrollToExercise(4)" style="cursor: pointer;">Exercise 4</div>
+                        <div class="exercise-status" id="ex5-status" onclick="scrollToExercise(5)" style="cursor: pointer;">Exercise 5</div>
+                        <div class="exercise-status" id="ex6-status" onclick="scrollToExercise(6)" style="cursor: pointer;">Exercise 6</div>
+                        <div class="exercise-status" id="ex7-status" onclick="scrollToExercise(7)" style="cursor: pointer;">Exercise 7</div>
+                        <div class="exercise-status" id="ex8-status" onclick="scrollToExercise(8)" style="cursor: pointer;">Exercise 8</div>
+                    </div>
+
+                    <!-- Exercise 1: Fill-in-the-blanks - Definite Articles Dative -->
+                    <div class="exercise-item" id="exercise-1">
+                        <div class="exercise-number">Exercise 1: Fill-in-the-blanks - Dative with Definite Articles</div>
+                        <div class="exercise-question">Complete each sentence with the correct adjective in dative case (remember: ALL dative adjectives end in -EN):</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>1. Ich helfe dem ___________ Mann. (alt)</strong></p>
+                            <input type="text" class="input-field" id="fill1" placeholder="" data-sentence="Ich helfe dem ___________ Mann.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill1', 'alten', 'Correct! dem alten Mann - dative definite masculine uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill1"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>2. Sie spricht mit der ___________ Frau. (jung)</strong></p>
+                            <input type="text" class="input-field" id="fill2" placeholder="" data-sentence="Sie spricht mit der ___________ Frau.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill2', 'jungen', 'Correct! mit der jungen Frau - dative definite feminine uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill2"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>3. Das Buch gehört dem ___________ Kind. (klein)</strong></p>
+                            <input type="text" class="input-field" id="fill3" placeholder="" data-sentence="Das Buch gehört dem ___________ Kind.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill3', 'kleinen', 'Correct! dem kleinen Kind - dative definite neuter uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill3"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 2: Fill-in-the-blanks - Indefinite Articles Dative -->
+                    <div class="exercise-item" id="exercise-2">
+                        <div class="exercise-number">Exercise 2: Fill-in-the-blanks - Dative with Indefinite Articles</div>
+                        <div class="exercise-question">Complete each sentence with the correct adjective in dative case:</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>1. Ich gebe einem ___________ Jungen ein Geschenk. (freundlich)</strong></p>
+                            <input type="text" class="input-field" id="fill4" placeholder="" data-sentence="Ich gebe einem ___________ Jungen ein Geschenk.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill4', 'freundlichen', 'Correct! einem freundlichen Jungen - indefinite masculine dative uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill4"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>2. Sie antwortet einer ___________ Person. (dankbar)</strong></p>
+                            <input type="text" class="input-field" id="fill5" placeholder="" data-sentence="Sie antwortet einer ___________ Person.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill5', 'dankbaren', 'Correct! einer dankbaren Person - indefinite feminine dative uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill5"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>3. Er arbeitet mit einem ___________ Kollegen. (intelligent)</strong></p>
+                            <input type="text" class="input-field" id="fill6" placeholder="" data-sentence="Er arbeitet mit einem ___________ Kollegen.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill6', 'intelligenten', 'Correct! mit einem intelligenten Kollegen - indefinite neuter dative uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill6"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 3: Translation - English to Dative German -->
+                    <div class="exercise-item" id="exercise-3">
+                        <div class="exercise-number">Exercise 3: Translation - English to German (Dative Sentences)</div>
+                        <div class="exercise-question">Translate these English sentences to German, using dative case:</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>1. "I help the old man." → ________________</strong></p>
+                            <input type="text" class="input-field" id="fill7" placeholder="">
+                            <button class="btn-primary" onclick="checkTranslation('fill7', 'helfe alten Mann', 'Perfect! Ich helfe dem alten Mann - dative translation.')">Check</button>
+                            <div class="result-box" id="result-fill7"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>2. "She speaks to the young woman." → ________________</strong></p>
+                            <input type="text" class="input-field" id="fill8" placeholder="">
+                            <button class="btn-primary" onclick="checkTranslation('fill8', 'spricht jungen Frau', 'Excellent! Sie spricht mit der jungen Frau - dative with preposition.')">Check</button>
+                            <div class="result-box" id="result-fill8"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>3. "The book belongs to the small child." → ________________</strong></p>
+                            <input type="text" class="input-field" id="fill9" placeholder="">
+                            <button class="btn-primary" onclick="checkTranslation('fill9', 'Buch gehört kleinen Kind', 'Great! Das Buch gehört dem kleinen Kind - dative possession.')">Check</button>
+                            <div class="result-box" id="result-fill9"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 4: Fill-in-the-blanks - Possessive Adjectives in Dative -->
+                    <div class="exercise-item" id="exercise-4">
+                        <div class="exercise-number">Exercise 4: Fill-in-the-blanks - Dative with Possessive Adjectives</div>
+                        <div class="exercise-question">Complete each sentence with the correct possessive adjective + ending in dative case:</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>1. Ich schreibe meinem ___________ Bruder. (alt)</strong></p>
+                            <input type="text" class="input-field" id="fill10" placeholder="" data-sentence="Ich schreibe meinem ___________ Bruder.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill10', 'alten', 'Correct! meinem alten Bruder - possessive dative uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill10"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>2. Sie hilft ihrer ___________ Tochter. (lieblich)</strong></p>
+                            <input type="text" class="input-field" id="fill11" placeholder="" data-sentence="Sie hilft ihrer ___________ Tochter.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill11', 'lieblichen', 'Correct! ihrer lieblichen Tochter - possessive dative feminine uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill11"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>3. Wir sprechen mit unserem ___________ Lehrer. (erfahren)</strong></p>
+                            <input type="text" class="input-field" id="fill12" placeholder="" data-sentence="Wir sprechen mit unserem ___________ Lehrer.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill12', 'erfahrenen', 'Correct! mit unserem erfahrenen Lehrer - possessive dative uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill12"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 5: Fill-in-the-blanks - Real Sentences with Dative -->
+                    <div class="exercise-item" id="exercise-5">
+                        <div class="exercise-number">Exercise 5: Fill-in-the-blanks - Complete Real-World Dative Sentences</div>
+                        <div class="exercise-question">Fill in the missing dative adjectives in these real-world sentences:</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>1. Der Lehrer erklärt dem ___________ Schüler die Aufgabe. (fleißig)</strong></p>
+                            <input type="text" class="input-field" id="fill13" placeholder="" data-sentence="Der Lehrer erklärt dem ___________ Schüler die Aufgabe.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill13', 'fleißigen', 'Correct! dem fleißigen Schüler - dative with erklären.')">Check</button>
+                            <div class="result-box" id="result-fill13"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>2. Ich bin mit dem ___________ Ergebnis zufrieden. (gut)</strong></p>
+                            <input type="text" class="input-field" id="fill14" placeholder="" data-sentence="Ich bin mit dem ___________ Ergebnis zufrieden.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill14', 'guten', 'Correct! mit dem guten Ergebnis - dative with preposition mit.')">Check</button>
+                            <div class="result-box" id="result-fill14"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>3. Sie übergibt dem ___________ Kollegen die wichtigen Dateien. (zuverlässig)</strong></p>
+                            <input type="text" class="input-field" id="fill15" placeholder="" data-sentence="Sie übergibt dem ___________ Kollegen die wichtigen Dateien.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill15', 'zuverlässigen', 'Correct! dem zuverlässigen Kollegen - dative object.')">Check</button>
+                            <div class="result-box" id="result-fill15"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>4. Wir danken den ___________ Helfern für ihre Unterstützung. (groß)</strong></p>
+                            <input type="text" class="input-field" id="fill16" placeholder="" data-sentence="Wir danken den ___________ Helfern für ihre Unterstützung.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill16', 'großen', 'Correct! den großen Helfern - plural dative uses -EN.')">Check</button>
+                            <div class="result-box" id="result-fill16"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 6: Multiple Choice - Identify Correct Dative Forms -->
+                    <div class="exercise-item" id="exercise-6">
+                        <div class="exercise-number">Exercise 6: Multiple Choice - Identify Correct Dative Adjective Forms</div>
+                        <div class="exercise-question">Which sentence uses the correct dative adjective ending?</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Question 1:</strong></p>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc1" value="Ich helfe dem alte Mann"> Ich helfe dem alte Mann
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc1" value="Ich helfe dem alten Mann"> Ich helfe dem alten Mann
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc1" value="Ich helfe dem altem Mann"> Ich helfe dem altem Mann
+                            </label>
+                            <button class="btn-primary" onclick="checkMultipleChoice('mc1', 'Ich helfe dem alten Mann', 'Perfect! Dative adjectives ALWAYS end in -EN.')">Check</button>
+                            <div class="result-box" id="result-mc1"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>Question 2:</strong></p>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc2" value="Sie spricht mit einer junge Frau"> Sie spricht mit einer junge Frau
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc2" value="Sie spricht mit einer jungen Frau"> Sie spricht mit einer jungen Frau
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc2" value="Sie spricht mit einer junger Frau"> Sie spricht mit einer junger Frau
+                            </label>
+                            <button class="btn-primary" onclick="checkMultipleChoice('mc2', 'Sie spricht mit einer jungen Frau', 'Excellent! Indefinite feminine dative uses -EN.')">Check</button>
+                            <div class="result-box" id="result-mc2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 7: Nominative vs Accusative vs Dative Comparison -->
+                    <div class="exercise-item" id="exercise-7">
+                        <div class="exercise-number">Exercise 7: Case Comparison - Nominative, Accusative, and Dative</div>
+                        <div class="exercise-question">Identify which case is being used and select the correct form:</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Question 1: "The ___ man sees the car." (large)</strong></p>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc7" value="Der große Mann sieht das Auto"> Der große Mann sieht das Auto (Nominative)
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc7" value="Ich sehe den großen Mann"> Ich sehe den großen Mann (Accusative)
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc7" value="Ich helfe dem großen Mann"> Ich helfe dem großen Mann (Dative)
+                            </label>
+                            <button class="btn-primary" onclick="checkMultipleChoice('mc7', 'Der große Mann sieht das Auto', 'Perfect! Subject = Nominative (große).')">Check</button>
+                            <div class="result-box" id="result-mc7"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>Question 2: "I give the ___ woman a gift." (kind)</strong></p>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc8" value="Ich gebe der freundliche Frau ein Geschenk"> Ich gebe der freundliche Frau ein Geschenk (Nominative)
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc8" value="Ich gebe die freundliche Frau ein Geschenk"> Ich gebe die freundliche Frau ein Geschenk (Accusative)
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc8" value="Ich gebe der freundlichen Frau ein Geschenk"> Ich gebe der freundlichen Frau ein Geschenk (Dative)
+                            </label>
+                            <button class="btn-primary" onclick="checkMultipleChoice('mc8', 'Ich gebe der freundlichen Frau ein Geschenk', 'Excellent! Indirect object = Dative (freundlichen).')">Check</button>
+                            <div class="result-box" id="result-mc8"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 8: Conversation Practice - Real Dialogue -->
+                    <div class="exercise-item" id="exercise-8">
+                        <div class="exercise-number">Exercise 8: Conversation Practice - Using Dative in Dialogue</div>
+                        <div class="exercise-question">Choose the natural response using correct dative case:</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Question 1:</strong></p>
+                            <p style="margin-bottom: 10px;">A: "Hilfst du mir?" (Will you help me?)</p>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc9" value="Ja, ich helfe dem jungen Mann"> Ja, ich helfe dem jungen Mann
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc9" value="Ja, ich helfe dir gerne"> Ja, ich helfe dir gerne
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc9" value="Ja, ich höre den großen Mann"> Ja, ich höre den großen Mann
+                            </label>
+                            <button class="btn-primary" onclick="checkMultipleChoice('mc9', 'Ja, ich helfe dir gerne', 'Perfect! Dative personal pronoun (dir) in natural response.')">Check</button>
+                            <div class="result-box" id="result-mc9"></div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <p style="margin-bottom: 10px;"><strong>Question 2:</strong></p>
+                            <p style="margin-bottom: 10px;">A: "Sprichst du mit meinem Lehrer?" (Do you speak with my teacher?)</p>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc10" value="Ja, ich spreche mit deinem neuen Lehrer"> Ja, ich spreche mit deinem neuen Lehrer
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc10" value="Ja, ich spreche deinen Lehrer"> Ja, ich spreche deinen Lehrer
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc10" value="Ja, ich sehe den Lehrer"> Ja, ich sehe den Lehrer
+                            </label>
+                            <button class="btn-primary" onclick="checkMultipleChoice('mc10', 'Ja, ich spreche mit deinem neuen Lehrer', 'Excellent! Dative possessive (deinem) with dative adjective (neuen).')">Check</button>
+                            <div class="result-box" id="result-mc10"></div>
+                        </div>
+                    </div>
+
+                    <!-- Completion Feedback -->
+                    <div id="completionFeedback" style="display:none;" class="completion-section">
+                        <h2>🎉 Chapter Complete!</h2>
+                        <p id="completionMessage"></p>
+                        <button class="btn-primary" onclick="location.href='../index.html'">Back to Main Menu</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/groq-api.js"></script>
+    <script src="../js/ai-feedback.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        // Initialize app for this chapter
+        app.setTotalExercises(8);
+
+        // Update score display
+        setInterval(() => {
+            const totalScore = document.getElementById('totalScore');
+            if (totalScore) {
+                totalScore.textContent = app.score;
+            }
+        }, 500);
+
+        // Validation Functions
+        async function checkFillBlank(elementId, correctAnswer, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userAnswer = input.value.trim();
+
+            if (!userAnswer) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter an answer!</div>`;
+                return;
+            }
+
+            let attempts = parseInt(input.dataset.attempts || '0');
+            attempts++;
+            input.dataset.attempts = attempts;
+
+            resultBox.classList.add('show');
+            resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
+
+            if (groqValidator) {
+                const sentence = input.dataset.sentence || 'Complete the sentence';
+                const validation = await groqValidator.validateFillBlank(userAnswer, correctAnswer, sentence);
+
+                if (validation.isCorrect) {
+                    app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
+                    resultBox.classList.add('result-correct');
+                    resultBox.innerHTML = `<div class="result-text">✅ Perfect! ${validation.feedback}</div>`;
+                    input.dataset.attempts = '0';
+                } else {
+                    if (attempts >= 2) {
+                        resultBox.classList.add('result-incorrect');
+                        const explanation = message.includes(' - ') ? message.split(' - ')[1].replace('"', '') : '';
+                        resultBox.innerHTML = `<div class="result-text">❌ Not quite right.<br><br><strong>Correct Answer: ${correctAnswer}</strong><br><small>${explanation}</small><br><em>(This is your second attempt)</em></div>`;
+                        input.disabled = true;
+                        input.dataset.attempts = '0';
+                    } else {
+                        resultBox.classList.add('result-incorrect');
+                        resultBox.innerHTML = `<div class="result-text">❌ Not quite right. Try again!<br><em>(Attempt ${attempts}/2)</em></div>`;
+                    }
+                }
+            }
+        }
+
+        function checkMultipleChoice(questionId, answer, message) {
+            const resultBox = document.getElementById(`result-${questionId}`);
+            if (!resultBox) return;
+
+            const radio = document.querySelector(`input[name="${questionId}"]:checked`);
+            if (!radio) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please select an option!</div>`;
+                return;
+            }
+
+            if (radio.value === answer) {
+                app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('show', 'result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">❌ Not quite right. Try again!</div>`;
+            }
+        }
+
+        async function checkTranslation(elementId, keywords, message) {
+            const input = document.getElementById(elementId);
+            const resultBox = document.getElementById(`result-${elementId}`);
+            const userInput = input.value.trim().toLowerCase();
+
+            if (!userInput) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter a translation!</div>`;
+                return;
+            }
+
+            resultBox.classList.add('show');
+            const keywordArray = keywords.split(' ');
+            let matchCount = 0;
+
+            for (let keyword of keywordArray) {
+                if (userInput.includes(keyword)) matchCount++;
+            }
+
+            if (matchCount >= Math.ceil(keywordArray.length * 0.6)) {
+                app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.classList.add('result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">❌ Try to include: ${keywords}</div>`;
+            }
+        }
+
+        function scrollToExercise(exerciseNum) {
+            const exerciseElement = document.getElementById(`exercise-${exerciseNum}`);
+            if (exerciseElement) {
+                exerciseElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                const statuses = document.querySelectorAll('.exercise-status');
+                statuses.forEach((status, index) => {
+                    status.classList.remove('current');
+                    if (index === exerciseNum - 1) {
+                        status.classList.add('current');
+                    }
+                });
+            }
+        }
+
+        function switchChapter(chapterNumber) {
+            window.location.href = `chapter${chapterNumber}.html`;
+        }
+    </script>
+</body>
+</html>
