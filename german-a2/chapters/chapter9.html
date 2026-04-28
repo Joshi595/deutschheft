@@ -8,12 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <header>
+            <h1>🇩🇪 German A2 Course</h1>
+            <p>Chapter 9: Comparative & Superlative Adjectives</p>
             <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
+                <div class="progress-label">
+                    <span>Exercises Completed</span>
+                    <span id="exerciseProgress">0/8</span>
                 </div>
-                <span class="progress-label" id="exerciseProgress">0 / 8</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
             </div>
         </header>
 
@@ -52,24 +57,25 @@
                 </ul>
             </aside>
 
-            <main class="content">
+            <main class="content-area">
                 <div class="stats-box">
                     <div class="stat-card">
-                        <h4>Chapter</h4>
-                        <p>9 of 9</p>
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Adjectives (3 forms)</div>
                     </div>
                     <div class="stat-card">
-                        <h4>Exercises</h4>
-                        <p>8</p>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Comparison Levels</div>
                     </div>
                     <div class="stat-card">
-                        <h4>Total Score</h4>
-                        <p id="totalScore">0</p>
+                        <div class="stat-number" id="totalScore">0</div>
+                        <div class="stat-label">Score</div>
                     </div>
                 </div>
 
-                <div class="lesson-section">
-                    <h2 style="color: var(--primary-color); margin-bottom: 20px;">📚 Chapter 9: Comparative & Superlative Adjectives</h2>
+                <div id="chapterContent">
+                    <h2 class="section-title">Chapter 9: Comparative & Superlative Adjectives</h2>
+                    <p class="section-subtitle">Master degree of comparison and adjective agreement</p>
                     <div class="lesson-content">
                         <h3 style="color: var(--primary-color); margin-bottom: 15px;">📖 Introduction - Comparing Things in German</h3>
                         <p>Comparative and superlative forms allow you to compare adjectives and express different degrees of qualities. German has three levels: positive (base), comparative (more), and superlative (most).</p>
@@ -200,178 +206,158 @@
                             <p><strong>Important:</strong> Superlative adjectives MUST match gender and case with their noun. Think of them like regular adjectives with -ste ending.</p>
                         </div>
 
-                        <h3 style="color: var(--primary-color); margin: 30px 0 15px 0;">📝 Common Comparatives & Superlatives</h3>
-                        <table class="vocab-table">
-                            <thead>
-                                <tr>
-                                    <th>German (Positive)</th>
-                                    <th>Comparative</th>
-                                    <th>Superlative</th>
-                                    <th>English</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>schön</td>
-                                    <td>schöner</td>
-                                    <td>der schönste</td>
-                                    <td>beautiful, more beautiful, most beautiful</td>
-                                </tr>
-                                <tr>
-                                    <td>intelligent</td>
-                                    <td>intelligenter</td>
-                                    <td>der intelligenteste</td>
-                                    <td>intelligent, more intelligent, most intelligent</td>
-                                </tr>
-                                <tr>
-                                    <td>billig</td>
-                                    <td>billiger</td>
-                                    <td>der billigste</td>
-                                    <td>cheap, cheaper, cheapest</td>
-                                </tr>
-                                <tr>
-                                    <td>neu</td>
-                                    <td>neuer</td>
-                                    <td>der neueste</td>
-                                    <td>new, newer, newest</td>
-                                </tr>
-                                <tr>
-                                    <td>interessant</td>
-                                    <td>interessanter</td>
-                                    <td>der interessanteste</td>
-                                    <td>interesting, more interesting, most interesting</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                        <h3 class="exercise-title">Exercises</h3>
 
-                <div class="exercise-section">
-                    <h3 style="color: var(--primary-color); margin-bottom: 20px;">✏️ Exercises</h3>
-                    
-                    <div class="exercise-tracker" id="exerciseTracker">
-                        <div class="tracker-item" onclick="scrollToExercise(1)">1</div>
-                        <div class="tracker-item" onclick="scrollToExercise(2)">2</div>
-                        <div class="tracker-item" onclick="scrollToExercise(3)">3</div>
-                        <div class="tracker-item" onclick="scrollToExercise(4)">4</div>
-                        <div class="tracker-item" onclick="scrollToExercise(5)">5</div>
-                        <div class="tracker-item" onclick="scrollToExercise(6)">6</div>
-                        <div class="tracker-item" onclick="scrollToExercise(7)">7</div>
-                        <div class="tracker-item" onclick="scrollToExercise(8)">8</div>
+                    <!-- Exercise Tracker -->
+                    <div class="exercise-tracker">
+                        <div class="exercise-status current" id="ex1-status" onclick="scrollToExercise(1)" style="cursor: pointer;">Exercise 1</div>
+                        <div class="exercise-status" id="ex2-status" onclick="scrollToExercise(2)" style="cursor: pointer;">Exercise 2</div>
+                        <div class="exercise-status" id="ex3-status" onclick="scrollToExercise(3)" style="cursor: pointer;">Exercise 3</div>
+                        <div class="exercise-status" id="ex4-status" onclick="scrollToExercise(4)" style="cursor: pointer;">Exercise 4</div>
+                        <div class="exercise-status" id="ex5-status" onclick="scrollToExercise(5)" style="cursor: pointer;">Exercise 5</div>
+                        <div class="exercise-status" id="ex6-status" onclick="scrollToExercise(6)" style="cursor: pointer;">Exercise 6</div>
+                        <div class="exercise-status" id="ex7-status" onclick="scrollToExercise(7)" style="cursor: pointer;">Exercise 7</div>
+                        <div class="exercise-status" id="ex8-status" onclick="scrollToExercise(8)" style="cursor: pointer;">Exercise 8</div>
                     </div>
 
-                    <!-- Exercise 1: Fill in the Blank - Comparative -->
-                    <div class="exercise-item" id="exercise1">
-                        <div class="exercise-number">Exercise 1: Fill in the Blank - Regular Comparative</div>
-                        <div class="exercise-content">
-                            <p style="margin-bottom: 10px;"><strong>Complete the sentence with the correct comparative form.</strong></p>
-                            <p style="margin-bottom: 15px;">Mein Haus ist ____________ als dein Haus. (My house is _____ than your house.) - Use: alt (old)</p>
-                            <input type="text" id="ex1" placeholder="Type the comparative form" data-sentence="Mein Haus ist ___ als dein Haus.">
-                            <button onclick="checkFillBlank('ex1', 'älter', 'Correct! älter is the comparative of alt - Comparative forms add -ER, and single vowel adjectives (a/o/u) get umlauts in German.')">Check Answer</button>
-                            <div id="result-ex1" class="result-box"></div>
+                    <!-- Exercise 1: Fill-in-the-Blank - Regular Comparative -->
+                    <div class="exercise-item" id="exercise-1">
+                        <div class="exercise-number">Exercise 1: Fill-in-the-Blank - Regular Comparative</div>
+                        <div class="exercise-question">Complete the sentence with the correct comparative form.</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Mein Haus ist ____________ als dein Haus. (My house is _____ than your house.) - Use: alt (old)</strong></p>
+                            <input type="text" class="input-field" id="fill1" placeholder="" data-sentence="Mein Haus ist ___ als dein Haus.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill1', 'älter', 'Correct! älter is the comparative of alt - Comparative forms add -ER, and single vowel adjectives (a/o/u) get umlauts in German.')">Check</button>
+                            <div class="result-box" id="result-fill1"></div>
                         </div>
                     </div>
 
-                    <!-- Exercise 2: Fill in the Blank - Irregular Comparative -->
-                    <div class="exercise-item" id="exercise2">
-                        <div class="exercise-number">Exercise 2: Fill in the Blank - Irregular Comparative</div>
-                        <div class="exercise-content">
-                            <p style="margin-bottom: 10px;"><strong>Complete the sentence with the correct irregular comparative form.</strong></p>
-                            <p style="margin-bottom: 15px;">Die Schule ist ____________ als die Bibliothek. (School is _____ than the library.) - Use: gut (good)</p>
-                            <input type="text" id="ex2" placeholder="Type the comparative form" data-sentence="Die Schule ist ___ als die Bibliothek.">
-                            <button onclick="checkFillBlank('ex2', 'besser', 'Correct! besser is the irregular comparative of gut. Irregular forms must be memorized - gut→besser→best.')">Check Answer</button>
-                            <div id="result-ex2" class="result-box"></div>
+                    <!-- Exercise 2: Fill-in-the-Blank - Irregular Comparative -->
+                    <div class="exercise-item" id="exercise-2">
+                        <div class="exercise-number">Exercise 2: Fill-in-the-Blank - Irregular Comparative</div>
+                        <div class="exercise-question">Complete the sentence with the correct irregular comparative form.</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Die Schule ist ____________ als die Bibliothek. (School is _____ than the library.) - Use: gut (good)</strong></p>
+                            <input type="text" class="input-field" id="fill2" placeholder="" data-sentence="Die Schule ist ___ als die Bibliothek.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill2', 'besser', 'Correct! besser is the irregular comparative of gut. Irregular forms must be memorized - gut→besser→best.')">Check</button>
+                            <div class="result-box" id="result-fill2"></div>
                         </div>
                     </div>
 
-                    <!-- Exercise 3: Fill in the Blank - Superlative -->
-                    <div class="exercise-item" id="exercise3">
-                        <div class="exercise-number">Exercise 3: Fill in the Blank - Superlative with Article</div>
-                        <div class="exercise-content">
-                            <p style="margin-bottom: 10px;"><strong>Complete the sentence with the correct superlative form. Include the definite article!</strong></p>
-                            <p style="margin-bottom: 15px;">Das ist ____________ Mann in der Stadt. (That is the _____ man in the city.) - Use: groß (big/tall)</p>
-                            <input type="text" id="ex3" placeholder="Type the superlative with article" data-sentence="Das ist ___ Mann in der Stadt.">
-                            <button onclick="checkFillBlank('ex3', 'der größte', 'Correct! der größte is the superlative of groß. Superlatives must have the article (der/die/das) and match the noun\\'s gender and case.')">Check Answer</button>
-                            <div id="result-ex3" class="result-box"></div>
+                    <!-- Exercise 3: Fill-in-the-Blank - Superlative -->
+                    <div class="exercise-item" id="exercise-3">
+                        <div class="exercise-number">Exercise 3: Fill-in-the-Blank - Superlative with Article</div>
+                        <div class="exercise-question">Complete the sentence with the correct superlative form. Include the definite article!</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Das ist ____________ Mann in der Stadt. (That is the _____ man in the city.) - Use: groß (big/tall)</strong></p>
+                            <input type="text" class="input-field" id="fill3" placeholder="" data-sentence="Das ist ___ Mann in der Stadt.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill3', 'der größte', 'Correct! der größte is the superlative of groß. Superlatives must have the article (der/die/das) and match the noun\\'s gender and case.')">Check</button>
+                            <div class="result-box" id="result-fill3"></div>
                         </div>
                     </div>
 
-                    <!-- Exercise 4: Fill in the Blank - Umlaut Superlative -->
-                    <div class="exercise-item" id="exercise4">
-                        <div class="exercise-number">Exercise 4: Fill in the Blank - Superlative with Umlaut</div>
-                        <div class="exercise-content">
-                            <p style="margin-bottom: 10px;"><strong>Complete with the superlative form. Watch for umlaut changes!</strong></p>
-                            <p style="margin-bottom: 15px;">Sie ist ____________ Person in der Klasse. (She is the _____ person in the class.) - Use: jung (young)</p>
-                            <input type="text" id="ex4" placeholder="Type the superlative form" data-sentence="Sie ist ___ Person in der Klasse.">
-                            <button onclick="checkFillBlank('ex4', 'die jüngste', 'Correct! die jüngste is the superlative of jung. Short adjectives with u/a/o add umlauts: jung→jünger→jüngste.')">Check Answer</button>
-                            <div id="result-ex4" class="result-box"></div>
+                    <!-- Exercise 4: Fill-in-the-Blank - Superlative with Umlaut -->
+                    <div class="exercise-item" id="exercise-4">
+                        <div class="exercise-number">Exercise 4: Fill-in-the-Blank - Superlative with Umlaut</div>
+                        <div class="exercise-question">Complete with the superlative form. Watch for umlaut changes!</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Sie ist ____________ Person in der Klasse. (She is the _____ person in the class.) - Use: jung (young)</strong></p>
+                            <input type="text" class="input-field" id="fill4" placeholder="" data-sentence="Sie ist ___ Person in der Klasse.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill4', 'die jüngste', 'Correct! die jüngste is the superlative of jung. Short adjectives with u/a/o add umlauts: jung→jünger→jüngste.')">Check</button>
+                            <div class="result-box" id="result-fill4"></div>
                         </div>
                     </div>
 
                     <!-- Exercise 5: Multiple Choice - Comparative Sentence -->
-                    <div class="exercise-item" id="exercise5">
+                    <div class="exercise-item" id="exercise-5">
                         <div class="exercise-number">Exercise 5: Multiple Choice - Correct Comparative Form</div>
-                        <div class="exercise-content">
-                            <p style="margin-bottom: 15px;"><strong>Choose the correct comparative form:</strong></p>
-                            <p style="margin-bottom: 15px;">Dieses Buch ist __________ als jenes.</p>
-                            <div class="choice-group">
-                                <label><input type="radio" name="q5" value="interessanter"> interessanter</label>
-                                <label><input type="radio" name="q5" value="interessant"> interessant</label>
-                                <label><input type="radio" name="q5" value="interessanteste"> interessanteste</label>
-                                <label><input type="radio" name="q5" value="interessanterer"> interessanterer</label>
-                            </div>
-                            <button onclick="checkMultipleChoice('q5', 'interessanter', 'Correct! interessanter is the comparative form. Comparatives use -ER and \"als\" (than).')">Check Answer</button>
-                            <div id="result-q5" class="result-box"></div>
+                        <div class="exercise-question">Choose the correct comparative form:</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Dieses Buch ist __________ als jenes.</strong></p>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc5" value="interessanter"> interessanter
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc5" value="interessant"> interessant
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc5" value="interessanteste"> interessanteste
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc5" value="interessanterer"> interessanterer
+                            </label>
+                            <button class="btn-primary" onclick="checkMultipleChoice('mc5', 'interessanter', 'Correct! interessanter is the comparative form. Comparatives use -ER and \"als\" (than).')">Check</button>
+                            <div class="result-box" id="result-mc5"></div>
                         </div>
                     </div>
 
                     <!-- Exercise 6: Multiple Choice - Superlative Usage -->
-                    <div class="exercise-item" id="exercise6">
+                    <div class="exercise-item" id="exercise-6">
                         <div class="exercise-number">Exercise 6: Multiple Choice - Superlative Form</div>
-                        <div class="exercise-content">
-                            <p style="margin-bottom: 15px;"><strong>Choose the correct superlative:</strong></p>
-                            <p style="margin-bottom: 15px;">Das ist die __________ Lösung für das Problem.</p>
-                            <div class="choice-group">
-                                <label><input type="radio" name="q6" value="besser"> besser</label>
-                                <label><input type="radio" name="q6" value="beste"> beste</label>
-                                <label><input type="radio" name="q6" value="besten"> besten</label>
-                                <label><input type="radio" name="q6" value="bessere"> bessere</label>
-                            </div>
-                            <button onclick="checkMultipleChoice('q6', 'beste', 'Correct! beste matches feminine nominative \"die\". The superlative must agree with the article and noun\\'s gender/case.')">Check Answer</button>
-                            <div id="result-q6" class="result-box"></div>
+                        <div class="exercise-question">Choose the correct superlative:</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Das ist die __________ Lösung für das Problem.</strong></p>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc6" value="besser"> besser
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc6" value="beste"> beste
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc6" value="besten"> besten
+                            </label>
+                            <label style="display: block; margin: 8px 0;">
+                                <input type="radio" name="mc6" value="bessere"> bessere
+                            </label>
+                            <button class="btn-primary" onclick="checkMultipleChoice('mc6', 'beste', 'Correct! beste matches feminine nominative \"die\". The superlative must agree with the article and noun\\'s gender/case.')">Check</button>
+                            <div class="result-box" id="result-mc6"></div>
                         </div>
                     </div>
 
                     <!-- Exercise 7: Translation - Comparative -->
-                    <div class="exercise-item" id="exercise7">
+                    <div class="exercise-item" id="exercise-7">
                         <div class="exercise-number">Exercise 7: Translation - Comparative Sentence</div>
-                        <div class="exercise-content">
-                            <p style="margin-bottom: 10px;"><strong>Translate to German:</strong></p>
-                            <p style="margin-bottom: 15px;">This coffee is warmer than that one.</p>
-                            <input type="text" id="ex7" placeholder="Type the German translation">
-                            <button onclick="checkTranslation('ex7', ['Kaffee', 'wärmer', 'als'], 'Good effort! The sentence should include: \"Dieser Kaffee ist wärmer als jener.\" Key words: \"Kaffee\" (coffee), \"wärmer\" (warmer - comparative of warm), \"als\" (than).')">Check Answer</button>
-                            <div id="result-ex7" class="result-box"></div>
+                        <div class="exercise-question">Translate to German:</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>This coffee is warmer than that one.</strong></p>
+                            <input type="text" class="input-field" id="fill7" placeholder="">
+                            <button class="btn-primary" onclick="checkTranslation('fill7', ['Kaffee', 'wärmer', 'als'], 'Good effort! The sentence should include: \"Dieser Kaffee ist wärmer als jener.\" Key words: \"Kaffee\" (coffee), \"wärmer\" (warmer - comparative of warm), \"als\" (than).')">Check</button>
+                            <div class="result-box" id="result-fill7"></div>
                         </div>
                     </div>
 
-                    <!-- Exercise 8: Fill in the Blank - Mixed Comparative/Superlative -->
-                    <div class="exercise-item" id="exercise8">
-                        <div class="exercise-number">Exercise 8: Fill in the Blank - Comparative with Adjective Agreement</div>
-                        <div class="exercise-content">
-                            <p style="margin-bottom: 10px;"><strong>Complete with the correct comparative form that matches the noun.</strong></p>
-                            <p style="margin-bottom: 15px;">Sein Auto ist ____________ als meines. (His car is _____ than mine.) - Use: neu (new)</p>
-                            <input type="text" id="ex8" placeholder="Type the comparative form" data-sentence="Sein Auto ist ___ als meines.">
-                            <button onclick="checkFillBlank('ex8', 'neuer', 'Correct! neuer is the comparative of neu. In predicative position (after the verb), adjective comparatives don\\'t need to match case/gender endings.')">Check Answer</button>
-                            <div id="result-ex8" class="result-box"></div>
+                    <!-- Exercise 8: Fill-in-the-Blank - Comparative with Adjective Agreement -->
+                    <div class="exercise-item" id="exercise-8">
+                        <div class="exercise-number">Exercise 8: Fill-in-the-Blank - Comparative with Adjective Agreement</div>
+                        <div class="exercise-question">Complete with the correct comparative form that matches the noun.</div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="margin-bottom: 10px;"><strong>Sein Auto ist ____________ als meines. (His car is _____ than mine.) - Use: neu (new)</strong></p>
+                            <input type="text" class="input-field" id="fill8" placeholder="" data-sentence="Sein Auto ist ___ als meines.">
+                            <button class="btn-primary" onclick="checkFillBlank('fill8', 'neuer', 'Correct! neuer is the comparative of neu. In predicative position (after the verb), adjective comparatives don\\'t need to match case/gender endings.')">Check</button>
+                            <div class="result-box" id="result-fill8"></div>
                         </div>
                     </div>
-                </div>
 
-                <div class="navigation-buttons">
-                    <button class="nav-button" onclick="switchChapter(8)">← Previous Chapter</button>
-                    <button class="nav-button" onclick="switchChapter(1)">Return to Start</button>
+                    <!-- Completion Feedback -->
+                    <div id="completionFeedback" style="display:none;" class="completion-section">
+                        <h2>🎉 Chapter Complete!</h2>
+                        <p id="completionMessage"></p>
+                        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            <button class="btn-primary" onclick="location.href='../index.html'">Back to Main Menu</button>
+                        </div>
+                    </div>
                 </div>
             </main>
+        </div>
+    </div>
         </div>
     </div>
 
@@ -380,97 +366,134 @@
     <script src="../js/app.js"></script>
     
     <script>
-        // Initialize the chapter
-        app.setTotalExercises(8);
+        // Initialize chapter
+        let totalExercises = 8;
+        let completedExercises = 0;
 
-        function scrollToExercise(exerciseNum) {
-            const exerciseId = 'exercise' + exerciseNum;
-            document.getElementById(exerciseId).scrollIntoView({ behavior: 'smooth' });
-            
-            const items = document.querySelectorAll('.tracker-item');
-            items.forEach(item => item.classList.remove('active'));
-            items[exerciseNum - 1].classList.add('active');
+        app.setTotalExercises(totalExercises);
+
+        // Update progress
+        function updateProgress() {
+            const filled = Math.round((completedExercises / totalExercises) * 100);
+            document.getElementById('progressFill').style.width = filled + '%';
+            document.getElementById('exerciseProgress').textContent = completedExercises + '/' + totalExercises;
         }
 
-        function switchChapter(chapterNumber) {
-            if (chapterNumber >= 1 && chapterNumber <= 9) {
-                window.location.href = `chapter${chapterNumber}.html`;
-            }
-        }
+        setInterval(updateProgress, 500);
 
+        // Validation Functions
         async function checkFillBlank(elementId, correctAnswer, message) {
             const input = document.getElementById(elementId);
             const resultBox = document.getElementById(`result-${elementId}`);
             const userAnswer = input.value.trim();
-            
+
+            if (!userAnswer) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter an answer!</div>`;
+                return;
+            }
+
             let attempts = parseInt(input.dataset.attempts || '0');
             attempts++;
             input.dataset.attempts = attempts;
-            
+
+            resultBox.classList.add('show');
+            resultBox.innerHTML = `<div class="result-text">⏳ Checking...</div>`;
+
             if (groqValidator) {
                 const sentence = input.dataset.sentence || 'Complete the sentence';
                 const validation = await groqValidator.validateFillBlank(userAnswer, correctAnswer, sentence);
-                
+
                 if (validation.isCorrect) {
                     app.checkAnswer(true, message);
+                    resultBox.classList.remove('result-incorrect');
                     resultBox.classList.add('result-correct');
                     resultBox.innerHTML = `<div class="result-text">✅ Perfect! ${validation.feedback}</div>`;
                     input.dataset.attempts = '0';
                 } else {
                     if (attempts >= 2) {
+                        resultBox.classList.add('result-incorrect');
                         const explanation = message.includes(' - ') ? message.split(' - ')[1].replace('"', '') : '';
                         resultBox.innerHTML = `<div class="result-text">❌ Not quite right.<br><br><strong>Correct Answer: ${correctAnswer}</strong><br><small>${explanation}</small><br><em>(This is your second attempt)</em></div>`;
                         input.disabled = true;
+                        input.dataset.attempts = '0';
                     } else {
+                        resultBox.classList.add('result-incorrect');
                         resultBox.innerHTML = `<div class="result-text">❌ Not quite right. Try again!<br><em>(Attempt ${attempts}/2)</em></div>`;
                     }
                 }
             }
         }
 
-        function checkMultipleChoice(questionId, correctAnswer, message) {
-            const selected = document.querySelector(`input[name="${questionId}"]:checked`);
+        function checkMultipleChoice(questionId, answer, message) {
             const resultBox = document.getElementById(`result-${questionId}`);
-            
-            if (!selected) {
-                resultBox.innerHTML = '<div class="result-text">⚠️ Please select an answer first.</div>';
+            if (!resultBox) return;
+
+            const radio = document.querySelector(`input[name="${questionId}"]:checked`);
+            if (!radio) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please select an option!</div>`;
                 return;
             }
-            
-            if (selected.value === correctAnswer) {
+
+            if (radio.value === answer) {
                 app.checkAnswer(true, message);
-                resultBox.classList.add('result-correct');
-                resultBox.innerHTML = `<div class="result-text">✅ Perfect! ${message}</div>`;
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('show', 'result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
             } else {
-                app.checkAnswer(false, message);
-                resultBox.classList.add('result-incorrect');
-                resultBox.innerHTML = `<div class="result-text">❌ Incorrect. ${message}</div>`;
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">❌ Not quite right. Try again!</div>`;
             }
         }
 
-        function checkTranslation(elementId, keywords, message) {
+        async function checkTranslation(elementId, keywords, message) {
             const input = document.getElementById(elementId);
             const resultBox = document.getElementById(`result-${elementId}`);
-            const userAnswer = input.value.trim().toLowerCase();
-            
-            let matchCount = 0;
-            keywords.forEach(keyword => {
-                if (userAnswer.includes(keyword.toLowerCase())) {
-                    matchCount++;
-                }
-            });
-            
-            const matchPercentage = (matchCount / keywords.length) * 100;
-            
-            if (matchPercentage >= 60) {
-                app.checkAnswer(true, message);
-                resultBox.classList.add('result-correct');
-                resultBox.innerHTML = `<div class="result-text">✅ Great! ${message}</div>`;
-            } else {
-                app.checkAnswer(false, message);
-                resultBox.classList.add('result-incorrect');
-                resultBox.innerHTML = `<div class="result-text">❌ Not quite. ${message}</div>`;
+            const userInput = input.value.trim().toLowerCase();
+
+            if (!userInput) {
+                resultBox.classList.add('show', 'result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">⚠️ Please enter a translation!</div>`;
+                return;
             }
+
+            resultBox.classList.add('show');
+            const keywordArray = keywords;
+            let matchCount = 0;
+
+            for (let keyword of keywordArray) {
+                if (userInput.includes(keyword.toLowerCase())) matchCount++;
+            }
+
+            if (matchCount >= Math.ceil(keywordArray.length * 0.6)) {
+                app.checkAnswer(true, message);
+                resultBox.classList.remove('result-incorrect');
+                resultBox.classList.add('result-correct');
+                resultBox.innerHTML = `<div class="result-text">✅ ${message}</div>`;
+            } else {
+                resultBox.classList.add('result-incorrect');
+                resultBox.innerHTML = `<div class="result-text">❌ Try to include: ${keywords.join(', ')}</div>`;
+            }
+        }
+
+        function scrollToExercise(exerciseNum) {
+            const exerciseElement = document.getElementById(`exercise-${exerciseNum}`);
+            if (exerciseElement) {
+                exerciseElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                const statuses = document.querySelectorAll('.exercise-status');
+                statuses.forEach((status, index) => {
+                    status.classList.remove('current');
+                    if (index === exerciseNum - 1) {
+                        status.classList.add('current');
+                    }
+                });
+            }
+        }
+
+        function switchChapter(chapterNumber) {
+            window.location.href = `chapter${chapterNumber}.html`;
         }
     </script>
 </body>
