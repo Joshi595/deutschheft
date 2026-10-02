@@ -1,0 +1,215 @@
+lesson: a1.07
+sets:
+  - title: Family words
+    items:
+      - id: fam1
+        type: matching
+        tags: [family]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: die Eltern, right: parents }
+          - { left: die Geschwister, right: siblings }
+          - { left: die Tochter, right: daughter }
+          - { left: der Onkel, right: uncle }
+          - { left: die Großeltern, right: grandparents }
+          - { left: der Sohn, right: son }
+      - id: fam2
+        type: multiple-choice
+        tags: [family]
+        prompt: Der Vater und die Mutter sind die …
+        options: [Eltern, Geschwister, Großeltern]
+        answer: Eltern
+      - id: fam3
+        type: multiple-choice
+        tags: [family]
+        prompt: Der Bruder von meiner Mutter ist mein …
+        options: [Onkel, Opa, Sohn]
+        answer: Onkel
+        explanation: "My mother's brother is my uncle."
+      - id: fam4
+        type: multiple-choice
+        tags: [family]
+        prompt: Which word means "single"?
+        options: [ledig, verheiratet, geschieden]
+        answer: ledig
+
+  - title: The verb haben
+    instructions: Complete with a form of haben.
+    items:
+      - id: haben1
+        type: fill-blank
+        tags: [haben]
+        prompt: "Ich ___ eine Schwester."
+        answers: [habe]
+      - id: haben2
+        type: fill-blank
+        tags: [haben]
+        prompt: "___ du Geschwister?"
+        answers: [Hast]
+      - id: haben3
+        type: fill-blank
+        tags: [haben]
+        prompt: "Sie ___ zwei Kinder. [she]"
+        answers: [hat]
+      - id: haben4
+        type: fill-blank
+        tags: [haben]
+        prompt: "Wir ___ eine große Familie."
+        answers: [haben]
+      - id: haben5
+        type: fill-blank
+        tags: [haben]
+        prompt: "___ ihr Zeit?"
+        answers: [Habt]
+      - id: haben6
+        type: fill-blank
+        tags: [haben]
+        prompt: "___ Sie Kinder, Herr Schmidt?"
+        answers: [Haben]
+
+  - title: mein or meine?
+    instructions: Add the ending -e where it is needed.
+    items:
+      - id: poss1
+        type: fill-blank
+        tags: [possessives]
+        prompt: "Das ist ___ Vater. (mein)"
+        answers: [mein]
+      - id: poss2
+        type: fill-blank
+        tags: [possessives]
+        prompt: "Das ist ___ Mutter. (mein)"
+        answers: [meine]
+      - id: poss3
+        type: fill-blank
+        tags: [possessives]
+        prompt: "Das sind ___ Eltern. (mein)"
+        answers: [meine]
+        explanation: Plural takes -e.
+      - id: poss4
+        type: fill-blank
+        tags: [possessives]
+        prompt: "Wie heißt ___ Bruder? (dein)"
+        answers: [dein]
+      - id: poss5
+        type: fill-blank
+        tags: [possessives]
+        prompt: "Wo wohnt ___ Schwester? (dein)"
+        answers: [deine]
+      - id: poss6
+        type: fill-blank
+        tags: [possessives]
+        prompt: "___ Kinder lernen Deutsch. (unser)"
+        answers: [Unsere]
+
+  - title: sein or ihr?
+    instructions: First decide who the owner is, then add the ending.
+    items:
+      - id: his1
+        type: multiple-choice
+        tags: [possessives, sein and ihr]
+        prompt: Das ist Paul. ___ Schwester heißt Anna.
+        options: [Seine, Sein, Ihre]
+        answer: Seine
+        explanation: "The owner is Paul (sein-), and Schwester is feminine (-e)."
+      - id: his2
+        type: multiple-choice
+        tags: [possessives, sein and ihr]
+        prompt: Das ist Anna. ___ Bruder heißt Paul.
+        options: [Ihr, Ihre, Sein]
+        answer: Ihr
+        explanation: "The owner is Anna (ihr-), and Bruder is masculine (no ending)."
+      - id: his3
+        type: multiple-choice
+        tags: [possessives, sein and ihr]
+        prompt: Maria wohnt in Köln. ___ Eltern wohnen in Rom.
+        options: [Ihre, Ihr, Seine]
+        answer: Ihre
+      - id: his4
+        type: multiple-choice
+        tags: [possessives, sein and ihr]
+        prompt: Tom ist verheiratet. ___ Frau heißt Elena.
+        options: [Seine, Sein, Ihre]
+        answer: Seine
+
+  - title: Read about a family
+    instructions: Read the text, then answer.
+    stimulus:
+      kind: text
+      label: Text
+      title: Meine Familie
+      text: |
+        Ich heiße Priya. Ich bin verheiratet. Mein Mann heißt Arjun. Wir haben zwei Kinder: einen Sohn und eine Tochter.
+        Unser Sohn heißt Rohan und ist acht Jahre alt. Unsere Tochter heißt Mira und ist fünf.
+
+        Meine Eltern wohnen in Indien. Ich habe eine Schwester. Sie heißt Anita und ist ledig. Sie wohnt in Berlin.
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading, family]
+        prompt: Priya ist ledig.
+        answer: false
+      - id: read2
+        type: true-false
+        tags: [reading, family]
+        prompt: Priya und Arjun haben zwei Kinder.
+        answer: true
+      - id: read3
+        type: multiple-choice
+        tags: [reading, family]
+        prompt: Wie alt ist die Tochter?
+        options: [fünf Jahre, acht Jahre, zwei Jahre]
+        answer: fünf Jahre
+      - id: read4
+        type: multiple-choice
+        tags: [reading, family]
+        prompt: Wo wohnt Priyas Schwester?
+        options: [in Berlin, in Indien, in Hamburg]
+        answer: in Berlin
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [haben]
+        prompt: Do you have children? (formal)
+        answer: Haben Sie Kinder?
+      - id: order2
+        type: word-order
+        tags: [possessives]
+        prompt: My parents live in Hamburg.
+        answer: Meine Eltern wohnen in Hamburg.
+
+  - title: Say and write it
+    items:
+      - id: tr1
+        type: translation
+        tags: [possessives]
+        prompt: That is my mother.
+        answers: [Das ist meine Mutter.]
+      - id: tr2
+        type: translation
+        tags: [haben]
+        prompt: I have a sister.
+        answers: [Ich habe eine Schwester.]
+      - id: tr3
+        type: translation
+        tags: [family]
+        prompt: Are you married? (formal)
+        answers: [Sind Sie verheiratet?]
+      - id: write1
+        type: writing-task
+        tags: [writing, family]
+        prompt: Write about your family.
+        points:
+          - Whether you are married or single
+          - Your parents or your children
+          - Whether you have brothers or sisters
+        minWords: 20
+        phrases:
+          - Ich bin verheiratet / ledig.
+          - Meine Eltern wohnen in …
+          - Ich habe eine Schwester / zwei Brüder / keine Geschwister.
+          - Mein Bruder heißt … und ist … Jahre alt.
+        sample: "Ich bin ledig. Meine Eltern wohnen in Indien. Mein Vater ist sechzig Jahre alt und meine Mutter ist achtundfünfzig. Ich habe eine Schwester. Sie heißt Anita und wohnt in Berlin."

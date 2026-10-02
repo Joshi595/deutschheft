@@ -1,0 +1,170 @@
+lesson: a1.07
+items:
+  - id: familie
+    de: Familie
+    en: family
+    pos: noun
+    article: die
+    plural: Familien
+    example: Meine Familie wohnt in Indien.
+    exampleEn: My family lives in India.
+  - id: vater
+    de: Vater
+    en: father
+    pos: noun
+    article: der
+    plural: Väter
+    example: Mein Vater heißt Ravi.
+    exampleEn: My father is called Ravi.
+  - id: mutter
+    de: Mutter
+    en: mother
+    pos: noun
+    article: die
+    plural: Mütter
+    example: Meine Mutter ist Lehrerin.
+    exampleEn: My mother is a teacher.
+  - id: eltern
+    de: Eltern
+    en: parents
+    pos: noun
+    article: die
+    plural: Eltern
+    example: Meine Eltern wohnen in Hamburg.
+    exampleEn: My parents live in Hamburg.
+  - id: sohn
+    de: Sohn
+    en: son
+    pos: noun
+    article: der
+    plural: Söhne
+    example: Unser Sohn ist fünf Jahre alt.
+    exampleEn: Our son is five years old.
+  - id: tochter
+    de: Tochter
+    en: daughter
+    pos: noun
+    article: die
+    plural: Töchter
+    example: Ihre Tochter heißt Lena.
+    exampleEn: Her daughter is called Lena.
+  - id: bruder
+    de: Bruder
+    en: brother
+    pos: noun
+    article: der
+    plural: Brüder
+    example: Ich habe einen Bruder.
+    exampleEn: I have a brother.
+  - id: schwester
+    de: Schwester
+    en: sister
+    pos: noun
+    article: die
+    plural: Schwestern
+    example: Seine Schwester wohnt in Wien.
+    exampleEn: His sister lives in Vienna.
+  - id: geschwister
+    de: Geschwister
+    en: siblings, brothers and sisters
+    pos: noun
+    article: die
+    plural: Geschwister
+    example: Hast du Geschwister?
+    exampleEn: Do you have brothers or sisters?
+  - id: grosseltern
+    de: Großeltern
+    en: grandparents
+    pos: noun
+    article: die
+    plural: Großeltern
+    example: Meine Großeltern sind sehr alt.
+    exampleEn: My grandparents are very old.
+  - id: oma
+    de: Oma
+    en: grandma
+    pos: noun
+    article: die
+    plural: Omas
+    example: Meine Oma ist achtzig.
+    exampleEn: My grandma is eighty.
+  - id: opa
+    de: Opa
+    en: grandpa
+    pos: noun
+    article: der
+    plural: Opas
+    example: Mein Opa wohnt in Köln.
+    exampleEn: My grandpa lives in Cologne.
+  - id: onkel
+    de: Onkel
+    en: uncle
+    pos: noun
+    article: der
+    plural: Onkel
+    example: Mein Onkel kommt aus Polen.
+    exampleEn: My uncle comes from Poland.
+  - id: tante
+    de: Tante
+    en: aunt
+    pos: noun
+    article: die
+    plural: Tanten
+    example: Meine Tante hat drei Kinder.
+    exampleEn: My aunt has three children.
+  - id: mein
+    de: mein, meine
+    en: my
+    pos: other
+    example: Das ist mein Bruder.
+    exampleEn: That is my brother.
+  - id: dein
+    de: dein, deine
+    en: your (informal)
+    pos: other
+    example: Wie heißt deine Schwester?
+    exampleEn: What is your sister called?
+  - id: sein-poss
+    de: sein, seine
+    en: his
+    pos: other
+    example: Seine Mutter ist Ärztin.
+    exampleEn: His mother is a doctor.
+  - id: ihr-poss
+    de: ihr, ihre
+    en: her; their
+    pos: other
+    example: Ihr Bruder heißt Paul.
+    exampleEn: Her brother is called Paul.
+  - id: unser
+    de: unser, unsere
+    en: our
+    pos: other
+    example: Unsere Kinder lernen Deutsch.
+    exampleEn: Our children are learning German.
+  - id: verheiratet
+    de: verheiratet
+    en: married
+    pos: adjective
+    example: Ich bin verheiratet.
+    exampleEn: I am married.
+  - id: ledig
+    de: ledig
+    en: single, unmarried
+    pos: adjective
+    example: Mein Bruder ist ledig.
+    exampleEn: My brother is single.
+  - id: geschieden
+    de: geschieden
+    en: divorced
+    pos: adjective
+    example: Meine Tante ist geschieden.
+    exampleEn: My aunt is divorced.
+  - id: familienstand
+    de: Familienstand
+    en: marital status
+    pos: noun
+    article: der
+    plural: "-"
+    example: "Familienstand: verheiratet."
+    exampleEn: "Marital status: married."
