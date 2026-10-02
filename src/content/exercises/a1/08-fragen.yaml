@@ -1,0 +1,217 @@
+lesson: a1.08
+sets:
+  - title: Verb second
+    instructions: Put the words in the right order. Start with the word that has a capital letter.
+    items:
+      - id: v2a
+        type: word-order
+        tags: [verb second]
+        prompt: Today I am learning German.
+        answer: Heute lerne ich Deutsch.
+      - id: v2b
+        type: word-order
+        tags: [verb second]
+        prompt: Now we live in Cologne.
+        answer: Jetzt wohnen wir in Köln.
+      - id: v2c
+        type: word-order
+        tags: [verb second]
+        prompt: Tomorrow my sister is coming.
+        answer: Morgen kommt meine Schwester.
+      - id: v2d
+        type: multiple-choice
+        tags: [verb second]
+        prompt: Which sentence is correct?
+        options:
+          - Heute arbeite ich nicht.
+          - Heute ich arbeite nicht.
+          - Heute nicht ich arbeite.
+        answer: Heute arbeite ich nicht.
+      - id: v2e
+        type: multiple-choice
+        tags: [verb second]
+        prompt: Which sentence is correct?
+        options:
+          - "Ich komme aus Indien, aber ich wohne in Köln."
+          - "Ich komme aus Indien, aber wohne ich in Köln."
+        answer: "Ich komme aus Indien, aber ich wohne in Köln."
+        explanation: aber stands in position zero, so the next clause starts normally with the subject.
+
+  - title: Which question word?
+    items:
+      - id: w1
+        type: multiple-choice
+        tags: [question words]
+        prompt: ___ ist das? Das ist mein Bruder.
+        options: [Wer, Wo, Was]
+        answer: Wer
+        explanation: wer = who.
+      - id: w2
+        type: multiple-choice
+        tags: [question words]
+        prompt: ___ kommt der Bus? Um acht Uhr.
+        options: [Wann, Wo, Wie]
+        answer: Wann
+      - id: w3
+        type: multiple-choice
+        tags: [question words]
+        prompt: ___ gehst du? Nach Hause.
+        options: [Wohin, Woher, Wo]
+        answer: Wohin
+        explanation: "Movement to a place: wohin."
+      - id: w4
+        type: multiple-choice
+        tags: [question words]
+        prompt: ___ Kinder haben Sie? Zwei.
+        options: [Wie viele, Wie viel, Welche]
+        answer: Wie viele
+        explanation: Things you can count take wie viele.
+      - id: w5
+        type: multiple-choice
+        tags: [question words]
+        prompt: ___ kostet das Buch? Zwölf Euro.
+        options: [Wie viel, Wie viele, Wann]
+        answer: Wie viel
+      - id: w6
+        type: multiple-choice
+        tags: [question words]
+        prompt: ___ lernst du Deutsch? Ich arbeite in Deutschland.
+        options: [Warum, Wann, Wer]
+        answer: Warum
+      - id: w7
+        type: matching
+        tags: [question words]
+        prompt: Match each question word with its meaning.
+        pairs:
+          - { left: wer, right: who }
+          - { left: wo, right: where }
+          - { left: wann, right: when }
+          - { left: warum, right: why }
+          - { left: wie, right: how }
+          - { left: was, right: what }
+
+  - title: Make a yes/no question
+    instructions: Turn the statement into a question.
+    items:
+      - id: yn1
+        type: translation
+        tags: [yes-no questions]
+        prompt: "Du kommst aus Polen."
+        answers: [Kommst du aus Polen?]
+      - id: yn2
+        type: translation
+        tags: [yes-no questions]
+        prompt: "Sie haben Kinder. (formal)"
+        answers: [Haben Sie Kinder?]
+      - id: yn3
+        type: translation
+        tags: [yes-no questions]
+        prompt: "Er ist verheiratet."
+        answers: [Ist er verheiratet?]
+      - id: yn4
+        type: translation
+        tags: [yes-no questions]
+        prompt: "Ihr wohnt in Berlin."
+        answers: [Wohnt ihr in Berlin?]
+
+  - title: ja, nein or doch?
+    items:
+      - id: doch1
+        type: multiple-choice
+        tags: [ja nein doch]
+        prompt: "Hast du keine Zeit? ___, ich habe Zeit."
+        options: [Doch, Ja, Nein]
+        answer: Doch
+        explanation: A negative question is contradicted with doch.
+      - id: doch2
+        type: multiple-choice
+        tags: [ja nein doch]
+        prompt: "Kommst du aus Spanien? ___, ich komme aus Spanien."
+        options: [Ja, Doch, Nein]
+        answer: Ja
+      - id: doch3
+        type: multiple-choice
+        tags: [ja nein doch]
+        prompt: "Sprechen Sie nicht Deutsch? ___, ich spreche Deutsch."
+        options: [Doch, Ja, Nein]
+        answer: Doch
+      - id: doch4
+        type: multiple-choice
+        tags: [ja nein doch]
+        prompt: "Hast du keinen Hunger? ___, ich habe keinen Hunger."
+        options: [Nein, Doch, Ja]
+        answer: Nein
+
+  - title: Ask the question
+    instructions: This is what the speaking exam asks of you. Build a question for the answer given.
+    items:
+      - id: ask1
+        type: word-order
+        tags: [W-questions]
+        prompt: "Answer: Ich wohne in Hamburg. Ask the question (formal)."
+        answer: Wo wohnen Sie?
+      - id: ask2
+        type: word-order
+        tags: [W-questions]
+        prompt: "Answer: Ich habe zwei Geschwister. Ask the question (informal)."
+        answer: Wie viele Geschwister hast du?
+      - id: ask3
+        type: word-order
+        tags: [W-questions]
+        prompt: "Answer: Ich spreche Englisch und Hindi. Ask the question (formal)."
+        answer: Welche Sprachen sprechen Sie?
+
+  - title: Listen and answer
+    stimulus:
+      kind: audio
+      label: Gespräch
+      lines:
+        - speaker: Frau
+          text: "Guten Tag! Woher kommen Sie?"
+        - speaker: Mann
+          text: "Ich komme aus Ungarn."
+        - speaker: Frau
+          text: "Und wo wohnen Sie jetzt?"
+        - speaker: Mann
+          text: "Jetzt wohne ich in Stuttgart. Ich wohne schon drei Jahre hier."
+        - speaker: Frau
+          text: "Sprechen Sie nicht Englisch?"
+        - speaker: Mann
+          text: "Doch, ich spreche Englisch, Ungarisch und ein bisschen Deutsch."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Woher kommt der Mann?
+        options: [aus Ungarn, aus Stuttgart, aus England]
+        answer: aus Ungarn
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wie lange wohnt er schon in Stuttgart?
+        options: [drei Jahre, zwei Jahre, ein Jahr]
+        answer: drei Jahre
+      - id: listen3
+        type: true-false
+        tags: [listening]
+        prompt: Der Mann spricht Englisch.
+        answer: true
+        explanation: "He answers the negative question with Doch: yes, he does."
+
+  - title: Now you ask
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, questions]
+        prompt: "You draw four cards. Ask your partner one question for each, as in part two of the speaking exam."
+        cards: [Name, Wohnort, Sprachen, Geschwister]
+        phrases:
+          - Wie heißt du? / Wie heißen Sie?
+          - Wo wohnst du?
+          - Welche Sprachen sprichst du?
+          - Hast du Geschwister?
+        checklist:
+          - I asked a question for each of the four cards
+          - The verb was in second place after a question word, or first in a yes/no question
+          - I stayed with du or with Sie throughout
+        sample: "Wie heißen Sie? Wo wohnen Sie? Welche Sprachen sprechen Sie? Haben Sie Geschwister?"
