@@ -1,0 +1,140 @@
+lesson: a2.04
+items:
+  - id: sich-waschen
+    de: sich waschen
+    en: to wash (oneself)
+    pos: verb
+    example: Ich wasche mir die Hände.
+    exampleEn: I wash my hands.
+  - id: sich-duschen
+    de: sich duschen
+    en: to have a shower
+    pos: verb
+    example: Ich dusche mich jeden Morgen.
+    exampleEn: I have a shower every morning.
+  - id: sich-anziehen
+    de: sich anziehen
+    en: to get dressed
+    pos: verb
+    example: Ich ziehe mich schnell an.
+    exampleEn: I get dressed quickly.
+  - id: sich-umziehen
+    de: sich umziehen
+    en: to get changed
+    pos: verb
+    example: Nach dem Sport ziehe ich mich um.
+    exampleEn: After sport I get changed.
+  - id: sich-rasieren
+    de: sich rasieren
+    en: to shave
+    pos: verb
+    example: Er rasiert sich jeden Morgen.
+    exampleEn: He shaves every morning.
+  - id: sich-kaemmen
+    de: sich kämmen
+    en: to comb one's hair
+    pos: verb
+    example: Sie kämmt sich die Haare.
+    exampleEn: She combs her hair.
+  - id: sich-beeilen
+    de: sich beeilen
+    en: to hurry
+    pos: verb
+    example: Wir müssen uns beeilen.
+    exampleEn: We have to hurry.
+  - id: sich-ausruhen
+    de: sich ausruhen
+    en: to rest
+    pos: verb
+    example: Nach der Arbeit ruhe ich mich aus.
+    exampleEn: After work I rest.
+  - id: sich-setzen
+    de: sich setzen
+    en: to sit down
+    pos: verb
+    example: Setzen Sie sich, bitte.
+    exampleEn: Please sit down.
+  - id: sich-freuen
+    de: sich freuen
+    en: to be glad; to look forward
+    pos: verb
+    example: Ich freue mich auf das Wochenende.
+    exampleEn: I am looking forward to the weekend.
+  - id: sich-aergern
+    de: sich ärgern
+    en: to be annoyed
+    pos: verb
+    example: Er ärgert sich über den Lärm.
+    exampleEn: He is annoyed about the noise.
+  - id: sich-fuehlen
+    de: sich fühlen
+    en: to feel
+    pos: verb
+    example: Wie fühlst du dich heute?
+    exampleEn: How do you feel today?
+  - id: sich-interessieren
+    de: sich interessieren (für)
+    en: to be interested (in)
+    pos: verb
+    example: Er interessiert sich für Musik.
+    exampleEn: He is interested in music.
+  - id: sich-erinnern
+    de: sich erinnern (an)
+    en: to remember
+    pos: verb
+    example: Ich kann mich nicht erinnern.
+    exampleEn: I cannot remember.
+  - id: sich-entschuldigen
+    de: sich entschuldigen
+    en: to apologise
+    pos: verb
+    example: Ich möchte mich entschuldigen.
+    exampleEn: I would like to apologise.
+  - id: sich-unterhalten
+    de: sich unterhalten (er unterhält sich)
+    en: to chat, to talk
+    pos: verb
+    example: Wir unterhalten uns über den Film.
+    exampleEn: We are talking about the film.
+  - id: sich-erkaelten
+    de: sich erkälten
+    en: to catch a cold
+    pos: verb
+    example: Ich habe mich erkältet.
+    exampleEn: I have caught a cold.
+  - id: sich-kuemmern
+    de: sich kümmern (um)
+    en: to look after
+    pos: verb
+    example: Sie kümmert sich um die Kinder.
+    exampleEn: She looks after the children.
+  - id: zaehne-putzen
+    de: sich die Zähne putzen
+    en: to brush one's teeth
+    pos: phrase
+    example: Ich putze mir die Zähne.
+    exampleEn: I brush my teeth.
+  - id: mittagspause
+    de: Mittagspause
+    en: lunch break
+    pos: noun
+    article: die
+    plural: Mittagspausen
+    example: In der Mittagspause esse ich einen Salat.
+    exampleEn: In the lunch break I eat a salad.
+  - id: geschenk
+    de: Geschenk
+    en: present, gift
+    pos: noun
+    article: das
+    plural: Geschenke
+    example: Danke für das Geschenk!
+    exampleEn: Thank you for the present!
+  - id: laerm
+    de: Lärm
+    en: noise
+    pos: noun
+    article: der
+    plural: "-"
+    example: Der Lärm stört mich.
+    exampleEn: The noise disturbs me.
