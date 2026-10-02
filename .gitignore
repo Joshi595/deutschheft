@@ -1,97 +1,27 @@
-# Developer Documentation (Developers Only)
-CHAPTER_CONSISTENCY_GUIDE.md
-DEVELOPMENT.md
-DEVELOPER_NOTES.md
-README_DEV.md
-
-# Operating System Files
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*~
-.Spotlight-V100
-.Trashes
-desktop.ini
-
-# IDE & Editor Files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-*.code-workspace
-.atom/
-.project
-.classpath
-
-# Node.js (if used in future)
-node_modules/
-npm-debug.log
-yarn-error.log
-.npm
-.eslintcache
-
-# Python (if used in future)
-__pycache__/
-*.py[cod]
-*$py.class
-.Python
-venv/
-ENV/
-env/
-
-# Build & Distribution
+# build output
 dist/
-build/
-*.min.js
-*.min.css
+# generated types
+.astro/
 
-# Package Manager Locks (optional - uncomment if you want to track)
-# package-lock.json
-# yarn.lock
+# dependencies
+node_modules/
 
-# Environment Variables
-.env
-.env.local
-.env.*.local
-
-# Backup & Temporary Files
-*.bak
-*.backup
-*.tmp
+# logs
+npm-debug.log*
 *.log
-*~
-.~*
 
-# IDE Cache
-.cache/
-*.cache
+# environment variables
+.env
+.env.*
+!.env.example
 
-# OS Specific
-.AppleDouble
-.LSOverride
-._*
-.aped_pid*
+# local tooling environment (lives next to the repo, listed in case it is moved inside)
+venv_german/
 
-# Git Files
-.gitkeep
-
-# VS Code specific (additional)
-.vscode/settings.json
-.vscode/extensions.json
-
-# macOS
+# editors and OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
 .DS_Store
-.AppleDouble
-.LSOverride
-._*
-.Spotlight-V100
-.Trashes
-
-# Windows
 Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Linux
-.directory
+desktop.ini

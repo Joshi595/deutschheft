@@ -1,0 +1,17 @@
+---
+import SettingsPage from '../components/settings/SettingsPage';
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Settings" description="Theme, audio, optional AI key and data backup." width="narrow">
+  <header>
+    <p class="eyebrow" lang="de">Einstellungen</p>
+    <h1 class="mt-1 text-4xl sm:text-5xl">Settings</h1>
+  </header>
+
+  <div class="mt-8">
+    <SettingsPage client:only="react">
+      <div slot="fallback" class="card p-6 text-muted">Loading settings …</div>
+    </SettingsPage>
+  </div>
+</Base>

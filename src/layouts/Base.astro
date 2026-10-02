@@ -1,0 +1,141 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/fraunces';
+import '../styles/global.css';
+import { site } from '../site';
+import { url } from '../lib/url';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Narrow reading column (lessons) or wide (dashboards and lists). */
+  width?: 'narrow' | 'wide';
+}
+
+const { title, description = site.description, width = 'wide' } = Astro.props;
+const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.tagline}`;
+const path = Astro.url.pathname;
+
+const nav = [
+  { href: url(''), label: 'Learn' },
+  { href: url('review/'), label: 'Review' },
+  { href: url('notebook/'), label: 'Notebook' },
+  { href: url('settings/'), label: 'Settings' },
+];
+// Levels and lessons live under "Learn", so it is the fallback.
+const active = nav.slice(1).find((item) => path.startsWith(item.href)) ?? nav[0]!;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#131210" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+    <link rel="manifest" href={url('manifest.webmanifest')} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <script is:inline>
+      // Apply a saved theme before first paint to avoid a flash.
+      try {
+        var saved = JSON.parse(localStorage.getItem('lg:settings:v1') || '{}');
+        if (saved.theme === 'light' || saved.theme === 'dark') {
+          document.documentElement.dataset.theme = saved.theme;
+        }
+      } catch (error) {}
+    </script>
+  </head>
+  <body class="flex flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 btn">Skip to content</a>
+
+    <div class="flex h-1" aria-hidden="true">
+      <span class="flex-1" style="background: #000"></span>
+      <span class="flex-1" style="background: var(--flag-red)"></span>
+      <span class="flex-1 bg-accent"></span>
+    </div>
+
+    <header class="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
+      <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-3">
+        <a href={url('')} class="font-display text-xl font-semibold tracking-tight">
+          {site.name}<span class="text-accent">.</span>
+        </a>
+        <nav aria-label="Main" class="-mx-2 flex items-center text-sm font-semibold">
+          {
+            nav.map((item) => (
+              <a
+                href={item.href}
+                aria-current={item === active ? 'page' : undefined}
+                class:list={[
+                  'relative rounded-lg px-3 py-2 transition-colors hover:text-ink',
+                  item === active ? 'text-ink' : 'text-muted',
+                ]}
+              >
+                {item.label}
+                {item.label === 'Review' && (
+                  <span data-due-badge hidden class="chip chip-accent ml-1 px-1.5 text-[0.7rem]" />
+                )}
+                {item === active && <span class="absolute inset-x-3 -bottom-0.5 h-0.5 rounded bg-accent" />}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class:list={['mx-auto w-full flex-1 px-4 py-8 sm:py-12', width === 'narrow' ? 'max-w-3xl' : 'max-w-5xl']}>
+      <slot />
+    </main>
+
+    <footer class="border-t border-line">
+      <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-6 text-sm text-muted">
+        <p>{site.name}. Your progress is stored in this browser only.</p>
+        <a href={site.repo} class="underline underline-offset-4 hover:text-ink">Source on GitHub</a>
+      </div>
+    </footer>
+
+    <script>
+      import { germanAvailable, speak } from '../lib/speech';
+      import { dueCards } from '../lib/srs/scheduler';
+      import { $review, $settings } from '../lib/stores';
+
+      // Theme follows the setting live, including changes made in another tab.
+      $settings.subscribe((settings) => {
+        if (settings.theme === 'system') delete document.documentElement.dataset.theme;
+        else document.documentElement.dataset.theme = settings.theme;
+      });
+
+      // One click handler for every [data-speak] button on the page.
+      document.addEventListener('click', (event) => {
+        const button = (event.target as HTMLElement).closest<HTMLElement>('[data-speak]');
+        if (button?.dataset.speak) speak(button.dataset.speak, $settings.get().speechRate);
+      });
+
+      // Hide the listen buttons only when we know there is no German voice.
+      function checkVoices() {
+        document.documentElement.classList.toggle('no-german-voice', germanAvailable() === false);
+      }
+      checkVoices();
+      window.speechSynthesis?.addEventListener('voiceschanged', checkVoices);
+
+      // Due-card count next to "Review".
+      $review.subscribe((review) => {
+        const badge = document.querySelector<HTMLElement>('[data-due-badge]');
+        if (!badge) return;
+        const due = dueCards(review, new Date()).length;
+        badge.hidden = due === 0;
+        badge.textContent = due > 99 ? '99+' : String(due);
+        badge.setAttribute('aria-label', `${due} cards due`);
+      });
+
+      if ('serviceWorker' in navigator && import.meta.env.PROD) {
+        navigator.serviceWorker.register(`${import.meta.env.BASE_URL.replace(/\/+$/, '')}/sw.js`).catch(() => {});
+      }
+    </script>
+  </body>
+</html>

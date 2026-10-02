@@ -1,0 +1,27 @@
+---
+import ReviewSession from '../components/review/ReviewSession';
+import Base from '../layouts/Base.astro';
+import { getCatalog } from '../lib/content/catalog';
+import { url } from '../lib/url';
+
+const catalog = await getCatalog();
+const vocab = catalog.lessons.flatMap((lesson) => lesson.vocab);
+const exercises = catalog.lessons.flatMap((lesson) => lesson.sets.flatMap((set) => set.items));
+const lessons = Object.fromEntries(catalog.lessons.map((lesson) => [lesson.key, { title: lesson.title, href: lesson.href }]));
+---
+
+<Base title="Review" description="Spaced-repetition review of vocabulary and missed exercises." width="narrow">
+  <header>
+    <p class="eyebrow" lang="de">Wiederholung</p>
+    <h1 class="mt-1 text-4xl sm:text-5xl">Review</h1>
+    <p class="mt-3 text-muted">
+      Each card comes back just before you would forget it. A few minutes a day beats an hour once a week.
+    </p>
+  </header>
+
+  <div class="mt-8">
+    <ReviewSession client:only="react" vocab={vocab} exercises={exercises} lessons={lessons} homeHref={url('')}>
+      <div slot="fallback" class="card p-6 text-muted">Loading your cards …</div>
+    </ReviewSession>
+  </div>
+</Base>

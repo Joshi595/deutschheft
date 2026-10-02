@@ -1,0 +1,24 @@
+---
+import NotebookPage from '../components/notebook/NotebookPage';
+import Base from '../layouts/Base.astro';
+import { getCatalog } from '../lib/content/catalog';
+
+const catalog = await getCatalog();
+const lessons = Object.fromEntries(
+  catalog.lessons.map((lesson) => [lesson.key, { title: lesson.title, href: lesson.href, level: lesson.level }]),
+);
+---
+
+<Base title="Notebook" description="Your saved words, lesson notes and mistakes log." width="narrow">
+  <header>
+    <p class="eyebrow" lang="de">Mein Heft</p>
+    <h1 class="mt-1 text-4xl sm:text-5xl">Notebook</h1>
+    <p class="mt-3 text-muted">Your own words, the notes you wrote in lessons, and the answers you got wrong.</p>
+  </header>
+
+  <div class="mt-8">
+    <NotebookPage client:only="react" lessons={lessons}>
+      <div slot="fallback" class="card p-6 text-muted">Opening your notebook …</div>
+    </NotebookPage>
+  </div>
+</Base>

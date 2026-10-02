@@ -1,0 +1,15 @@
+---
+// Available in every lesson's MDX without an import.
+interface Props {
+  title: string;
+  /** Small label above the title. */
+  label?: string;
+}
+const { title, label = 'Grammar' } = Astro.props;
+---
+
+<aside class="card border-l-4 border-l-accent p-5">
+  <p class="eyebrow">{label}</p>
+  <p class="font-display mt-1 text-xl font-semibold">{title}</p>
+  <div class="mt-3 grid gap-3"><slot /></div>
+</aside>

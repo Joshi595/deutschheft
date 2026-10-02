@@ -1,0 +1,32 @@
+---
+// A German example sentence with its translation and a listen button.
+// Available in every lesson's MDX without an import. Mark the part to notice
+// with **double asterisks**: <Example de="Sie **ist** nett." en="She is nice." />
+import SpeakButton from '../ui/SpeakButton.astro';
+
+interface Props {
+  de: string;
+  en?: string;
+  /** Show the sentence as a mistake to avoid: struck through, not spoken. */
+  wrong?: boolean;
+}
+const { de, en, wrong = false } = Astro.props;
+
+const escape = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const html = escape(de).replace(/\*\*(.+?)\*\*/g, wrong ? '<strong>$1</strong>' : '<strong class="bg-accent-soft rounded px-0.5">$1</strong>');
+const plain = de.replace(/\*\*/g, '');
+---
+
+<p class="flex items-start gap-2">
+  {
+    wrong ? (
+      <span class="flex h-8 w-8 flex-none items-center justify-center font-bold text-bad" aria-label="Wrong">✗</span>
+    ) : (
+      <SpeakButton text={plain} />
+    )
+  }
+  <span class="pt-0.5">
+    <span lang="de" class:list={[wrong ? 'text-bad line-through decoration-1' : 'font-medium']} set:html={html} />
+    {en && <span class="block text-sm text-muted">{en}</span>}
+  </span>
+</p>

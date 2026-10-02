@@ -1,0 +1,60 @@
+---
+import ProgressMeter from '../../components/ui/ProgressMeter.astro';
+import Base from '../../layouts/Base.astro';
+import { getCatalog } from '../../lib/content/catalog';
+import { url } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const catalog = await getCatalog();
+  return catalog.levels.map((level) => ({ params: { level: level.id } }));
+}
+
+const catalog = await getCatalog();
+const level = catalog.levels.find((candidate) => candidate.id === Astro.params.level)!;
+const exerciseIds = level.lessons.flatMap((lesson) => lesson.exercises.map((exercise) => exercise.id));
+---
+
+<Base title={`${level.title} ${level.name}`} description={level.description}>
+  <nav aria-label="Breadcrumb" class="text-sm text-muted">
+    <a href={url('')} class="hover:text-ink">Learn</a>
+    <span aria-hidden="true"> / </span>
+    <span>{level.title}</span>
+  </nav>
+
+  <header class="mt-4 max-w-3xl">
+    <p class="eyebrow">{level.name}</p>
+    <h1 class="mt-1 text-5xl">{level.title}</h1>
+    <p class="mt-4 text-lg text-muted">{level.description}</p>
+    {exerciseIds.length > 0 && <div class="mt-6"><ProgressMeter ids={exerciseIds} /></div>}
+  </header>
+
+  {
+    level.lessons.length === 0 ? (
+      <p class="card mt-10 p-6 text-muted">No lessons here yet. This level is planned.</p>
+    ) : (
+      <ol class="mt-10 grid gap-3">
+        {level.lessons.map((lesson) => (
+          <li>
+            <a href={lesson.href} class="card group grid gap-3 p-4 transition-colors hover:border-ink sm:grid-cols-[3.5rem_1fr] sm:p-5">
+              <span class="font-display text-3xl font-semibold text-muted tabular-nums group-hover:text-ink">
+                {String(lesson.order).padStart(2, '0')}
+              </span>
+              <span class="grid gap-2">
+                <span>
+                  <span class="block text-xl font-semibold">{lesson.title}</span>
+                  {lesson.titleDe && <span class="text-sm text-muted" lang="de">{lesson.titleDe}</span>}
+                </span>
+                <span class="text-muted">{lesson.summary}</span>
+                <span class="flex flex-wrap gap-2">
+                  <span class="chip">{lesson.minutes} min</span>
+                  {lesson.topics.map((topic) => <span class="chip">{topic}</span>)}
+                </span>
+                <ProgressMeter ids={lesson.exercises.map((exercise) => exercise.id)} />
+              </span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    )
+  }
+</Base>

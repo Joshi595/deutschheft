@@ -1,0 +1,142 @@
+---
+import { render } from 'astro:content';
+import ExerciseRunner from '../../components/exercises/ExerciseRunner';
+import Example from '../../components/lesson/Example.astro';
+import GrammarBox from '../../components/lesson/GrammarBox.astro';
+import VocabList from '../../components/lesson/VocabList.astro';
+import LessonNotes from '../../components/notebook/LessonNotes';
+import ProgressMeter from '../../components/ui/ProgressMeter.astro';
+import Base from '../../layouts/Base.astro';
+import { getCatalog } from '../../lib/content/catalog';
+import { url } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const catalog = await getCatalog();
+  return catalog.lessons.map((lesson) => ({
+    params: { level: lesson.level, lesson: lesson.slug },
+    props: { lessonKey: lesson.key },
+  }));
+}
+
+interface Props {
+  lessonKey: string;
+}
+
+const catalog = await getCatalog();
+const level = catalog.levels.find((candidate) => candidate.id === Astro.params.level)!;
+const index = level.lessons.findIndex((candidate) => candidate.key === Astro.props.lessonKey);
+const lesson = level.lessons[index]!;
+const previous = level.lessons[index - 1];
+const next = level.lessons[index + 1];
+
+const { Content } = await render(lesson.entry);
+const exerciseIds = lesson.exercises.map((exercise) => exercise.id);
+
+const sections = [
+  { id: 'lesson', label: 'Lesson' },
+  ...(lesson.vocab.length > 0 ? [{ id: 'vocabulary', label: 'Vocabulary' }] : []),
+  ...(lesson.sets.length > 0 ? [{ id: 'practice', label: 'Practice' }] : []),
+  { id: 'notes', label: 'Notes' },
+];
+---
+
+<Base title={`${lesson.title} (${level.title})`} description={lesson.summary} width="narrow">
+  <nav aria-label="Breadcrumb" class="text-sm text-muted">
+    <a href={url('')} class="hover:text-ink">Learn</a>
+    <span aria-hidden="true"> / </span>
+    <a href={level.href} class="hover:text-ink">{level.title}</a>
+    <span aria-hidden="true"> / </span>
+    <span>Lesson {lesson.order}</span>
+  </nav>
+
+  <header class="mt-4">
+    {lesson.titleDe && <p class="eyebrow" lang="de">{lesson.titleDe}</p>}
+    <h1 class="mt-1 text-4xl sm:text-5xl">{lesson.title}</h1>
+    <p class="mt-4 text-lg text-muted">{lesson.summary}</p>
+    <p class="mt-4 flex flex-wrap gap-2">
+      <span class="chip">{lesson.minutes} min</span>
+      {lesson.vocab.length > 0 && <span class="chip">{lesson.vocab.length} words</span>}
+      {exerciseIds.length > 0 && <span class="chip">{exerciseIds.length} exercises</span>}
+    </p>
+    {exerciseIds.length > 0 && <div class="mt-5"><ProgressMeter ids={exerciseIds} /></div>}
+  </header>
+
+  <nav aria-label="In this lesson" class="top-[3.4rem] z-30 -mx-4 mt-8 sm:sticky border-y border-line bg-bg/95 px-4 backdrop-blur">
+    <ul class="flex gap-1 overflow-x-auto text-sm font-semibold">
+      {
+        sections.map((section) => (
+          <li><a href={`#${section.id}`} class="block px-3 py-2.5 text-muted hover:text-ink">{section.label}</a></li>
+        ))
+      }
+    </ul>
+  </nav>
+
+  <section id="lesson" class="prose mt-8">
+    <Content components={{ GrammarBox, Example }} />
+  </section>
+
+  {
+    lesson.vocab.length > 0 && (
+      <section id="vocabulary" class="mt-14">
+        <h2 class="text-3xl">Vocabulary</h2>
+        <p class="mt-2 mb-5 text-muted">
+          Tap the speaker to hear a word. These join your review deck when you start the exercises.
+        </p>
+        <VocabList items={lesson.vocab} />
+      </section>
+    )
+  }
+
+  {
+    lesson.sets.length > 0 && (
+      <section id="practice" class="mt-14">
+        <h2 class="text-3xl">Practice</h2>
+        <p class="mt-2 mb-6 text-muted">
+          You get a second try on typed answers. Anything you miss comes back in Review.
+        </p>
+        <ExerciseRunner
+          client:only="react"
+          topic={lesson.title}
+          sets={lesson.sets}
+          vocabIds={lesson.vocabIds}
+          next={next && { href: next.href, title: next.title }}
+        >
+          <p slot="fallback" class="text-muted">Loading exercises …</p>
+        </ExerciseRunner>
+      </section>
+    )
+  }
+
+  <section id="notes" class="mt-14">
+    <h2 class="text-3xl">Notes</h2>
+    <div class="mt-4">
+      <LessonNotes client:only="react" lessonKey={lesson.key} notebookHref={url('notebook/')} />
+    </div>
+  </section>
+
+  <nav aria-label="Lessons" class="mt-14 grid gap-3 border-t border-line pt-6 sm:grid-cols-2">
+    {
+      previous ? (
+        <a href={previous.href} class="card p-4 hover:border-ink">
+          <span class="eyebrow">Previous</span>
+          <span class="mt-1 block font-semibold">{previous.title}</span>
+        </a>
+      ) : (
+        <span />
+      )
+    }
+    {
+      next ? (
+        <a href={next.href} class="card p-4 text-right hover:border-ink">
+          <span class="eyebrow">Next</span>
+          <span class="mt-1 block font-semibold">{next.title}</span>
+        </a>
+      ) : (
+        <a href={level.href} class="card p-4 text-right hover:border-ink">
+          <span class="eyebrow">End of {level.title}</span>
+          <span class="mt-1 block font-semibold">Back to all lessons</span>
+        </a>
+      )
+    }
+  </nav>
+</Base>

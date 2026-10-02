@@ -1,0 +1,38 @@
+---
+// Shows how many of the given exercises are solved. Rendered as static HTML and
+// filled in from the progress store on the client.
+interface Props {
+  ids: string[];
+  label?: string;
+}
+const { ids, label = 'solved' } = Astro.props;
+---
+
+<div class="flex items-center gap-3" data-meter data-ids={JSON.stringify(ids)}>
+  <div class="meter-track flex-1"><div class="meter-fill" data-meter-fill></div></div>
+  <span class="text-sm text-muted tabular-nums whitespace-nowrap">
+    <span data-meter-done>0</span>/{ids.length} {label}
+  </span>
+</div>
+
+<script>
+  import { completion } from '../../lib/progress/logic';
+  import { $progress } from '../../lib/stores';
+
+  function paint() {
+    const state = $progress.get();
+    document.querySelectorAll<HTMLElement>('[data-meter]').forEach((meter) => {
+      const ids = JSON.parse(meter.dataset.ids ?? '[]') as string[];
+      const { done, percent, complete } = completion(state, ids);
+      const fill = meter.querySelector<HTMLElement>('[data-meter-fill]');
+      const count = meter.querySelector<HTMLElement>('[data-meter-done]');
+      if (fill) {
+        fill.style.width = `${percent}%`;
+        fill.dataset.complete = String(complete);
+      }
+      if (count) count.textContent = String(done);
+    });
+  }
+
+  $progress.subscribe(paint);
+</script>
