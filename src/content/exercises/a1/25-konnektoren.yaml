@@ -1,0 +1,212 @@
+lesson: a1.25
+sets:
+  - title: Which connector?
+    items:
+      - id: con1
+        type: multiple-choice
+        tags: [connectors]
+        prompt: Möchtest du Kaffee ___ Tee?
+        options: [oder, aber, denn]
+        answer: oder
+      - id: con2
+        type: multiple-choice
+        tags: [connectors]
+        prompt: "Ich bin müde, ___ ich muss arbeiten."
+        options: [aber, oder, sondern]
+        answer: aber
+      - id: con3
+        type: multiple-choice
+        tags: [connectors]
+        prompt: "Ich gehe nach Hause, ___ ich bin müde."
+        options: [denn, aber, oder]
+        answer: denn
+      - id: con4
+        type: multiple-choice
+        tags: [connectors, sondern]
+        prompt: "Ich komme nicht aus Polen, ___ aus Ungarn."
+        options: [sondern, aber, denn]
+        answer: sondern
+        explanation: A correction after a negative takes sondern.
+      - id: con5
+        type: multiple-choice
+        tags: [connectors]
+        prompt: Sie kauft Brot ___ Käse.
+        options: [und, denn, sondern]
+        answer: und
+      - id: con6
+        type: multiple-choice
+        tags: [connectors, sondern]
+        prompt: "Die Wohnung ist klein, ___ gemütlich."
+        options: [aber, sondern, denn]
+        answer: aber
+        explanation: Nothing was denied here, so it is aber.
+      - id: con7
+        type: multiple-choice
+        tags: [connectors, sondern]
+        prompt: "Das ist kein Kaffee, ___ Tee."
+        options: [sondern, aber, und]
+        answer: sondern
+      - id: con8
+        type: matching
+        tags: [connectors]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: und, right: and }
+          - { left: oder, right: or }
+          - { left: aber, right: but }
+          - { left: denn, right: because }
+          - { left: deshalb, right: that is why }
+          - { left: danach, right: after that }
+
+  - title: Position zero or position one?
+    instructions: Choose the sentence with the correct word order.
+    items:
+      - id: pos1
+        type: multiple-choice
+        tags: [connectors, word order]
+        prompt: Which is correct?
+        options:
+          - Dann fahre ich zur Arbeit.
+          - Dann ich fahre zur Arbeit.
+        answer: Dann fahre ich zur Arbeit.
+      - id: pos2
+        type: multiple-choice
+        tags: [connectors, word order]
+        prompt: Which is correct?
+        options:
+          - "Ich bin müde, aber ich muss arbeiten."
+          - "Ich bin müde, aber muss ich arbeiten."
+        answer: "Ich bin müde, aber ich muss arbeiten."
+      - id: pos3
+        type: multiple-choice
+        tags: [connectors, word order]
+        prompt: Which is correct?
+        options:
+          - "Ich bin krank. Deshalb bleibe ich zu Hause."
+          - "Ich bin krank. Deshalb ich bleibe zu Hause."
+        answer: "Ich bin krank. Deshalb bleibe ich zu Hause."
+      - id: pos4
+        type: multiple-choice
+        tags: [connectors, word order]
+        prompt: Which is correct?
+        options:
+          - "Wir bleiben zu Hause, denn es regnet."
+          - "Wir bleiben zu Hause, denn regnet es."
+          - "Denn es regnet, wir bleiben zu Hause."
+        answer: "Wir bleiben zu Hause, denn es regnet."
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [connectors, word order]
+        prompt: Then I go to work.
+        answer: Dann fahre ich zur Arbeit.
+      - id: order2
+        type: word-order
+        tags: [connectors, word order]
+        prompt: I am tired, but I have to work.
+        answer: "Ich bin müde, aber ich muss arbeiten."
+      - id: order3
+        type: word-order
+        tags: [connectors, word order]
+        prompt: After that we go to the cinema.
+        answer: Danach gehen wir ins Kino.
+      - id: order4
+        type: word-order
+        tags: [connectors, word order]
+        prompt: She cannot come because she is ill.
+        answer: "Sie kann nicht kommen, denn sie ist krank."
+
+  - title: Join the sentences
+    instructions: Make one sentence with the word in brackets.
+    items:
+      - id: join1
+        type: translation
+        tags: [connectors]
+        prompt: "Ich komme aus Indien. Ich wohne in Köln. (und)"
+        answers:
+          - Ich komme aus Indien und ich wohne in Köln.
+          - Ich komme aus Indien und wohne in Köln.
+      - id: join2
+        type: translation
+        tags: [connectors]
+        prompt: "Ich möchte kommen. Ich habe keine Zeit. (aber)"
+        answers:
+          - "Ich möchte kommen, aber ich habe keine Zeit."
+      - id: join3
+        type: translation
+        tags: [connectors]
+        prompt: "Wir bleiben zu Hause. Es regnet. (denn)"
+        answers:
+          - "Wir bleiben zu Hause, denn es regnet."
+      - id: join4
+        type: translation
+        tags: [connectors, word order]
+        prompt: "Ich bin krank. Ich gehe zum Arzt. (deshalb)"
+        answers:
+          - "Ich bin krank. Deshalb gehe ich zum Arzt."
+          - "Ich bin krank, deshalb gehe ich zum Arzt."
+        hint: deshalb takes position one, so the verb comes straight after it.
+
+  - title: Complete the text
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [connectors]
+        prompt: Fill the gaps with the words from the list.
+        text: "Am Samstag stehe ich spät auf ___ frühstücke lange. ___ gehe ich einkaufen. Ich möchte ins Kino gehen, ___ meine Freundin hat keine Zeit. ___ bleibe ich zu Hause."
+        gaps:
+          - [und]
+          - [Dann]
+          - [aber]
+          - [Deshalb]
+        bank: [und, Dann, aber, Deshalb, oder, sondern]
+
+  - title: Read and answer
+    stimulus:
+      kind: text
+      label: E-Mail
+      text: |
+        Liebe Sara,
+        ich kann am Freitag leider nicht kommen, denn ich muss arbeiten. Am Samstag habe ich Zeit.
+        Wollen wir zuerst in die Stadt gehen und danach zusammen kochen? Ich bringe keinen Wein mit, sondern Saft.
+        Viele Grüße
+        Lena
+    items:
+      - id: read1
+        type: multiple-choice
+        tags: [reading, connectors]
+        prompt: Warum kann Lena am Freitag nicht kommen?
+        options: [Sie muss arbeiten., Sie ist krank., Sie hat keine Lust.]
+        answer: Sie muss arbeiten.
+      - id: read2
+        type: true-false
+        tags: [reading, connectors]
+        prompt: Lena möchte zuerst kochen und dann in die Stadt gehen.
+        answer: false
+      - id: read3
+        type: true-false
+        tags: [reading, connectors]
+        prompt: Lena bringt Saft mit.
+        answer: true
+
+  - title: Write a connected text
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, connectors]
+        prompt: Describe your Saturday in a short text. Do not write a list of separate sentences.
+        points:
+          - What you do first, and what you do after that
+          - One thing you would like to do but cannot, with a reason
+          - At least three different connectors
+        minWords: 30
+        phrases:
+          - Zuerst … Dann … Danach …
+          - … und …
+          - Ich möchte …, aber …
+          - …, denn …
+          - Deshalb …
+        sample: "Am Samstag stehe ich um neun Uhr auf und frühstücke. Dann gehe ich einkaufen. Ich möchte am Nachmittag schwimmen gehen, aber das Wetter ist schlecht. Deshalb bleibe ich zu Hause und lese ein Buch. Am Abend koche ich, denn meine Freunde kommen."
