@@ -1,0 +1,92 @@
+lesson: a2.06
+items:
+  - id: sehen
+    de: sehen
+    en: to see
+    pos: verb
+    example: Ich sehe den großen Hund.
+    exampleEn: I see the big dog.
+  - id: kaufen
+    de: kaufen
+    en: to buy
+    pos: verb
+    example: Wir kaufen ein neues Auto.
+    exampleEn: We are buying a new car.
+  - id: kennen
+    de: kennen
+    en: to know (a person or place)
+    pos: verb
+    example: Kennst du den neuen Lehrer?
+    exampleEn: Do you know the new teacher?
+  - id: brauchen
+    de: brauchen
+    en: to need
+    pos: verb
+    example: Ich brauche einen warmen Mantel.
+    exampleEn: I need a warm coat.
+  - id: suchen
+    de: suchen
+    en: to look for
+    pos: verb
+    example: Sie sucht eine billige Wohnung.
+    exampleEn: She is looking for a cheap flat.
+  - id: moegen
+    de: mögen
+    en: to like
+    pos: verb
+    example: Ich mag den schwarzen Hund.
+    exampleEn: I like the black dog.
+  - id: besuchen
+    de: besuchen
+    en: to visit
+    pos: verb
+    example: Wir besuchen die neuen Nachbarn.
+    exampleEn: We are visiting the new neighbours.
+  - id: bestellen
+    de: bestellen
+    en: to order
+    pos: verb
+    example: Er bestellt einen großen Salat.
+    exampleEn: He orders a large salad.
+  - id: es-gibt
+    de: es gibt
+    en: there is, there are
+    pos: phrase
+    example: Hier gibt es einen guten Bäcker.
+    exampleEn: There is a good baker here.
+  - id: fuer
+    de: für
+    en: for (+ accusative)
+    pos: preposition
+    example: Das ist für meinen kleinen Bruder.
+    exampleEn: That is for my little brother.
+  - id: ohne
+    de: ohne
+    en: without (+ accusative)
+    pos: preposition
+    example: Ich gehe nie ohne meinen alten Hut aus dem Haus.
+    exampleEn: I never leave the house without my old hat.
+  - id: hund
+    de: Hund
+    en: dog
+    pos: noun
+    article: der
+    plural: Hunde
+    example: Der Hund schläft.
+    exampleEn: The dog is sleeping.
+  - id: wohnung
+    de: Wohnung
+    en: flat, apartment
+    pos: noun
+    article: die
+    plural: Wohnungen
+    example: Die Wohnung hat drei Zimmer.
+    exampleEn: The flat has three rooms.
+  - id: mantel
+    de: Mantel
+    en: coat
+    pos: noun
+    article: der
+    plural: Mäntel
+    example: Der Mantel ist warm.
+    exampleEn: The coat is warm.

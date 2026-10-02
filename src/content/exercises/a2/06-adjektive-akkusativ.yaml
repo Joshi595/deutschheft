@@ -1,0 +1,151 @@
+lesson: a2.06
+sets:
+  - title: Masculine objects
+    instructions: Write the adjective in brackets with its ending.
+    items:
+      - id: masc1
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Ich sehe den ___ Mann. (groß)"
+        answers: [großen]
+        explanation: Masculine accusative is always -en.
+      - id: masc2
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Du kaufst den ___ Laptop. (neu)"
+        answers: [neuen]
+      - id: masc3
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Du möchtest einen ___ Hut. (neu)"
+        answers: [neuen]
+      - id: masc4
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Er hat keinen ___ Freund. (gut)"
+        answers: [guten]
+
+  - title: Feminine, neuter and plural objects
+    instructions: These look the same as in the nominative.
+    items:
+      - id: other1
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Ich habe eine ___ Katze. (klein)"
+        answers: [kleine]
+      - id: other2
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Wir sehen ein ___ Kind. (klein)"
+        answers: [kleines]
+        explanation: "das Kind after ein: -es, in the nominative and in the accusative."
+      - id: other3
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Sie kauft ein ___ Auto. (alt)"
+        answers: [altes]
+        explanation: "das Auto is neuter: ein altes Auto."
+      - id: other4
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Wir besuchen die ___ Nachbarn. (neu)"
+        answers: [neuen]
+        explanation: Plural after an article takes -en.
+      - id: other5
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Ich kaufe ___ Bücher. (neu)"
+        answers: [neue]
+        explanation: Plural with no article takes -e.
+
+  - title: Subject or object?
+    instructions: Decide whether the noun is nominative or accusative, then choose.
+    items:
+      - id: case1
+        type: multiple-choice
+        tags: [adjective endings accusative, cases]
+        prompt: Der ___ Hund schläft.
+        options: [große, großen]
+        answer: große
+        explanation: The dog is the subject, so nominative.
+      - id: case2
+        type: multiple-choice
+        tags: [adjective endings accusative, cases]
+        prompt: Ich mag den ___ Hund.
+        options: [schwarze, schwarzen, schwarz]
+        answer: schwarzen
+      - id: case3
+        type: multiple-choice
+        tags: [adjective endings accusative, cases]
+        prompt: Das ist ein ___ Kaffee.
+        options: [guter, guten, gutes]
+        answer: guter
+        explanation: After sein the noun is nominative.
+      - id: case4
+        type: multiple-choice
+        tags: [adjective endings accusative, cases]
+        prompt: Ich trinke einen ___ Kaffee.
+        options: [heißer, heißen, heiße]
+        answer: heißen
+      - id: case5
+        type: multiple-choice
+        tags: [adjective endings accusative]
+        prompt: Which sentence is correct?
+        options:
+          - Wir kaufen ein neues Buch.
+          - Wir kaufen ein neuen Buch.
+          - Wir kaufen einen neuen Buch.
+        answer: Wir kaufen ein neues Buch.
+        explanation: "das Buch is neuter, so nothing changes in the accusative."
+
+  - title: After für and ohne
+    items:
+      - id: prep1
+        type: fill-blank
+        tags: [adjective endings accusative, accusative prepositions]
+        prompt: "Das Geschenk ist für meinen ___ Bruder. (klein)"
+        answers: [kleinen]
+      - id: prep2
+        type: fill-blank
+        tags: [adjective endings accusative, accusative prepositions]
+        prompt: "Ich trinke Kaffee ohne ___ Milch. (kalt)"
+        answers: [kalte]
+        explanation: "die Milch, no article: -e."
+      - id: prep3
+        type: fill-blank
+        tags: [adjective endings accusative]
+        prompt: "Hier gibt es einen ___ Bäcker. (gut)"
+        answers: [guten]
+        explanation: es gibt takes the accusative.
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [adjective endings accusative]
+        prompt: I see the tall man.
+        answers:
+          - Ich sehe den großen Mann.
+      - id: tr2
+        type: translation
+        tags: [adjective endings accusative]
+        prompt: We are buying a new car.
+        answers:
+          - Wir kaufen ein neues Auto.
+      - id: tr3
+        type: translation
+        tags: [adjective endings accusative]
+        prompt: Do you like the small dog? (to a friend)
+        answers:
+          - Magst du den kleinen Hund?
+      - id: tr4
+        type: translation
+        tags: [adjective endings accusative]
+        prompt: She needs a warm coat.
+        answers:
+          - Sie braucht einen warmen Mantel.
+      - id: order1
+        type: word-order
+        tags: [adjective endings accusative]
+        prompt: I am looking for a cheap flight to Berlin.
+        answer: Ich suche einen billigen Flug nach Berlin.
