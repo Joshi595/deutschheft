@@ -1,0 +1,147 @@
+lesson: a1.26
+sets:
+  - title: Form labels
+    items:
+      - id: label1
+        type: matching
+        tags: [exam writing, forms]
+        prompt: Match each label with its meaning.
+        pairs:
+          - { left: Familienstand, right: marital status }
+          - { left: Geburtsort, right: place of birth }
+          - { left: Staatsangehörigkeit, right: nationality }
+          - { left: Zahlungsweise, right: method of payment }
+          - { left: Anreise, right: arrival }
+          - { left: Unterschrift, right: signature }
+      - id: label2
+        type: multiple-choice
+        tags: [exam writing, forms]
+        prompt: "The text says: Sie ist nicht verheiratet. What goes in Familienstand?"
+        options: [ledig, verheiratet, geschieden]
+        answer: ledig
+      - id: label3
+        type: multiple-choice
+        tags: [exam writing, forms]
+        prompt: "The text says: zwei Erwachsene und drei Kinder. What goes in Anzahl der Personen?"
+        options: ["5", "2", "3"]
+        answer: "5"
+
+  - title: "Teil 1: fill in the form"
+    instructions: Take the missing information from the text.
+    items:
+      - id: form1
+        type: form
+        tags: [exam writing, forms]
+        prompt: Ihr Freund Paolo möchte einen Deutschkurs machen. Füllen Sie das Formular für ihn aus.
+        situation: "Paolo Bianchi kommt aus Italien und ist Koch von Beruf. Er ist 28 Jahre alt und wohnt in Stuttgart, in der Gartenstraße 14. Er möchte am Abend Deutsch lernen. Den Kurs bezahlt er bar."
+        fields:
+          - { label: Familienname, answers: [Bianchi] }
+          - { label: Beruf, answers: [Koch] }
+          - { label: Wohnort, answers: [Stuttgart] }
+          - { label: Hausnummer, answers: ["14"] }
+          - { label: "Kurs: am Vormittag oder am Abend?", answers: [am Abend, Abend] }
+          - { label: Zahlungsweise, answers: [bar] }
+      - id: form2
+        type: form
+        tags: [exam writing, forms]
+        prompt: Ihre Freundin Lin möchte ein Hotelzimmer buchen. Füllen Sie das Formular für sie aus.
+        situation: "Lin Chen und ihr Mann möchten mit ihren zwei Kindern nach Berlin fahren. Sie kommen am 12. Juli an und bleiben drei Nächte. Sie brauchen ein Zimmer mit Frühstück. Familie Chen zahlt mit Kreditkarte."
+        fields:
+          - { label: Familienname, answers: [Chen] }
+          - { label: Anzahl der Personen, answers: ["4", vier] }
+          - { label: Anreise, answers: ["12.07.", "12.7.", "12. Juli"] }
+          - { label: Anzahl der Nächte, answers: ["3", drei] }
+          - { label: Mit Frühstück? (ja / nein), answers: [ja] }
+          - { label: Zahlungsweise, answers: [Kreditkarte, mit Kreditkarte] }
+
+  - title: du or Sie?
+    items:
+      - id: reg1
+        type: multiple-choice
+        tags: [exam writing, register]
+        prompt: You are writing to your friend Tom. How do you start?
+        options: ["Lieber Tom,", "Liebe Tom,", "Sehr geehrter Herr Tom,"]
+        answer: "Lieber Tom,"
+      - id: reg2
+        type: multiple-choice
+        tags: [exam writing, register]
+        prompt: You are writing to a language school. You do not know who will read it. How do you start?
+        options: ["Sehr geehrte Damen und Herren,", "Hallo,", "Liebe Schule,"]
+        answer: "Sehr geehrte Damen und Herren,"
+      - id: reg3
+        type: multiple-choice
+        tags: [exam writing, register]
+        prompt: You started with "Sehr geehrte Frau Weber,". How do you end?
+        options: [Mit freundlichen Grüßen, Tschüs, Liebe Grüße]
+        answer: Mit freundlichen Grüßen
+      - id: reg4
+        type: multiple-choice
+        tags: [exam writing, register]
+        prompt: Which sentence fits a message to your landlord, Herr Koch?
+        options:
+          - Können Sie mir bitte helfen?
+          - Kannst du mir bitte helfen?
+        answer: Können Sie mir bitte helfen?
+      - id: reg5
+        type: cloze
+        tags: [exam writing, register]
+        prompt: Complete the informal message with the words from the list.
+        text: "___ Anna,\ndanke für ___ Einladung. Ich komme gern. Kann ich ___ helfen?\nViele ___\nMaria"
+        gaps:
+          - [Liebe]
+          - [deine]
+          - [dir]
+          - [Grüße]
+        bank: [Liebe, deine, dir, Grüße, Lieber, Ihre, Ihnen]
+
+  - title: "Teil 2: write the message"
+    instructions: Write about 30 words. Cover all three points, and do not forget the greeting and the closing.
+    items:
+      - id: msg1
+        type: writing-task
+        tags: [exam writing]
+        prompt: "Sie möchten im August Ihre Freundin Jana in Wien besuchen. Schreiben Sie ihr eine E-Mail."
+        points:
+          - Warum schreiben Sie?
+          - Wann kommen Sie?
+          - Wo können Sie schlafen?
+        minWords: 25
+        phrases:
+          - Liebe Jana,
+          - ich möchte dich … besuchen.
+          - Ich komme am …
+          - Kann ich bei dir schlafen?
+          - Viele Grüße
+        sample: "Liebe Jana, ich möchte dich im August in Wien besuchen. Ich komme am zehnten August mit dem Zug und bleibe drei Tage. Kann ich bei dir schlafen? Viele Grüße, Maria"
+      - id: msg2
+        type: writing-task
+        tags: [exam writing]
+        prompt: "Sie möchten einen Computerkurs machen. Schreiben Sie an die Volkshochschule."
+        points:
+          - Warum schreiben Sie?
+          - Wann möchten Sie den Kurs machen?
+          - Bitten Sie um Informationen über den Preis.
+        minWords: 25
+        phrases:
+          - Sehr geehrte Damen und Herren,
+          - ich möchte einen … machen.
+          - Ich habe am … Zeit.
+          - Was kostet der Kurs?
+          - Mit freundlichen Grüßen
+        sample: "Sehr geehrte Damen und Herren, ich möchte einen Computerkurs machen. Ich habe am Dienstag und am Donnerstag am Abend Zeit. Was kostet der Kurs? Können Sie mir bitte Informationen schicken? Mit freundlichen Grüßen, Karim Haddad"
+      - id: msg3
+        type: writing-task
+        tags: [exam writing]
+        prompt: "Ihr Kollege Herr Bauer hat Sie für Samstag zum Essen eingeladen. Sie können nicht kommen. Schreiben Sie ihm."
+        points:
+          - Danken Sie für die Einladung.
+          - Sagen Sie, warum Sie nicht kommen können.
+          - Schlagen Sie einen anderen Tag vor.
+        minWords: 25
+        phrases:
+          - Sehr geehrter Herr Bauer, / Lieber Herr Bauer,
+          - vielen Dank für die Einladung.
+          - Am Samstag kann ich leider nicht kommen, denn …
+          - Haben Sie am … Zeit?
+          - Mit freundlichen Grüßen
+        sample: "Lieber Herr Bauer, vielen Dank für die Einladung. Am Samstag kann ich leider nicht kommen, denn meine Eltern besuchen mich. Haben Sie am Sonntag Zeit? Mit freundlichen Grüßen, Elena Petrova"
