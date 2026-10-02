@@ -1,0 +1,108 @@
+lesson: a2.05
+items:
+  - id: weil
+    de: weil
+    en: because (verb at the end)
+    pos: conjunction
+    example: Ich esse, weil ich Hunger habe.
+    exampleEn: I am eating because I am hungry.
+  - id: denn
+    de: denn
+    en: because, for (normal word order)
+    pos: conjunction
+    example: Ich esse, denn ich habe Hunger.
+    exampleEn: I am eating, for I am hungry.
+  - id: warum
+    de: warum
+    en: why
+    pos: adverb
+    example: Warum lernst du Deutsch?
+    exampleEn: Why are you learning German?
+  - id: grund
+    de: Grund
+    en: reason
+    pos: noun
+    article: der
+    plural: Gründe
+    example: Das ist ein guter Grund.
+    exampleEn: That is a good reason.
+  - id: lust-haben
+    de: Lust haben
+    en: to feel like (doing something)
+    pos: phrase
+    example: Ich habe heute keine Lust.
+    exampleEn: I do not feel like it today.
+  - id: spass-machen
+    de: Spaß machen
+    en: to be fun
+    pos: phrase
+    example: Deutsch lernen macht mir Spaß.
+    exampleEn: I enjoy learning German.
+  - id: angst-haben
+    de: Angst haben (vor)
+    en: to be afraid (of)
+    pos: phrase
+    example: Ich habe Angst vor Hunden.
+    exampleEn: I am afraid of dogs.
+  - id: recht-haben
+    de: recht haben
+    en: to be right
+    pos: phrase
+    example: Du hast recht.
+    exampleEn: You are right.
+  - id: bestehen
+    de: bestehen, hat bestanden
+    en: to pass (an exam)
+    pos: verb
+    example: Er will die Prüfung bestehen.
+    exampleEn: He wants to pass the exam.
+  - id: studieren
+    de: studieren
+    en: to study (at university)
+    pos: verb
+    example: Ich möchte in Deutschland studieren.
+    exampleEn: I would like to study in Germany.
+  - id: verpassen
+    de: verpassen
+    en: to miss (a bus, a train)
+    pos: verb
+    example: Ich habe den Bus verpasst.
+    exampleEn: I missed the bus.
+  - id: zu-spaet
+    de: zu spät
+    en: too late
+    pos: phrase
+    example: Wir sind zu spät, weil der Bus nicht gekommen ist.
+    exampleEn: We are late because the bus did not come.
+  - id: wichtig
+    de: wichtig
+    en: important
+    pos: adjective
+    example: Ich lerne Deutsch, weil es wichtig ist.
+    exampleEn: I am learning German because it is important.
+  - id: stau
+    de: Stau
+    en: traffic jam
+    pos: noun
+    article: der
+    plural: Staus
+    example: Wir stehen im Stau.
+    exampleEn: We are stuck in a traffic jam.
+  - id: erklaeren
+    de: erklären
+    en: to explain
+    pos: verb
+    example: Kannst du mir das erklären?
+    exampleEn: Can you explain that to me?
+  - id: wahrscheinlich
+    de: wahrscheinlich
+    en: probably
+    pos: adverb
+    example: Er kommt wahrscheinlich später.
+    exampleEn: He will probably come later.
+  - id: leider
+    de: leider
+    en: unfortunately
+    pos: adverb
+    example: Ich kann leider nicht kommen, weil ich krank bin.
+    exampleEn: Unfortunately I cannot come because I am ill.
