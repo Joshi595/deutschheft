@@ -1,0 +1,223 @@
+lesson: a2.07
+sets:
+  - title: The verb in the wenn clause
+    instructions: Put the verb in brackets into the right form. It stands at the end of the wenn clause.
+    items:
+      - id: sub1
+        type: fill-blank
+        tags: [wenn word order]
+        prompt: "Wenn er Hunger ___, isst er einen Apfel. (haben)"
+        answers: [hat]
+      - id: sub2
+        type: fill-blank
+        tags: [wenn word order]
+        prompt: "Wenn du Fragen ___, kannst du mich anrufen. (haben)"
+        answers: [hast]
+      - id: sub3
+        type: fill-blank
+        tags: [wenn word order]
+        prompt: "Wenn du nach Berlin ___, musst du das Brandenburger Tor sehen. (fahren)"
+        answers: [fährst]
+        hint: fahren changes its vowel in the du form.
+      - id: sub4
+        type: fill-blank
+        tags: [wenn word order]
+        prompt: "Wenn du mitkommen ___, musst du dich beeilen. (wollen)"
+        answers: [willst]
+
+  - title: The verb in the main clause
+    instructions: The main verb comes straight after the comma.
+    items:
+      - id: main1
+        type: fill-blank
+        tags: [wenn word order]
+        prompt: "Wenn es regnet, ___ ich zu Hause. (bleiben)"
+        answers: [bleibe]
+      - id: main2
+        type: fill-blank
+        tags: [wenn word order]
+        prompt: "Wenn ich Zeit habe, ___ ich ins Kino. (gehen)"
+        answers: [gehe]
+      - id: main3
+        type: fill-blank
+        tags: [wenn word order]
+        prompt: "Wenn die Sonne scheint, ___ wir einen Ausflug. (machen)"
+        answers: [machen]
+      - id: main4
+        type: fill-blank
+        tags: [wenn word order]
+        prompt: "Wenn du Hunger hast, ___ wir etwas essen. (können)"
+        answers: [können]
+
+  - title: Which sentence is correct?
+    items:
+      - id: mc1
+        type: multiple-choice
+        tags: [wenn word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Wenn ich bin glücklich, tanze ich."
+          - "Wenn ich glücklich bin, tanze ich."
+          - "Wenn ich glücklich bin, ich tanze."
+        answer: "Wenn ich glücklich bin, tanze ich."
+      - id: mc2
+        type: multiple-choice
+        tags: [wenn word order, separable verbs]
+        prompt: Choose the correct sentence.
+        options:
+          - "Wenn sie anruft, ich antworte."
+          - "Wenn sie ruft an, antworte ich."
+          - "Wenn sie anruft, antworte ich."
+        answer: "Wenn sie anruft, antworte ich."
+        explanation: At the end of the clause a separable verb is written as one word.
+      - id: mc3
+        type: multiple-choice
+        tags: [wenn word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich komme, wenn ich habe Zeit."
+          - "Ich komme, wenn ich Zeit habe."
+        answer: "Ich komme, wenn ich Zeit habe."
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [wenn word order]
+        prompt: If it is cold, I wear a jacket.
+        answer: "Wenn es kalt ist, trage ich eine Jacke."
+      - id: order2
+        type: word-order
+        tags: [wenn word order]
+        prompt: I go to the cinema if I have time.
+        answer: "Ich gehe ins Kino, wenn ich Zeit habe."
+      - id: order3
+        type: word-order
+        tags: [wenn word order]
+        prompt: If you study hard, you will pass the exam.
+        answer: "Wenn du fleißig lernst, bestehst du die Prüfung."
+      - id: order4
+        type: word-order
+        tags: [wenn word order]
+        prompt: What do we do if it rains?
+        answer: "Was machen wir, wenn es regnet?"
+
+  - title: wenn, wann or als?
+    items:
+      - id: www1
+        type: multiple-choice
+        tags: [wenn wann als]
+        prompt: ___ kommst du nach Hause?
+        options: [Wann, Wenn, Als]
+        answer: Wann
+        explanation: Questions about time use wann.
+      - id: www2
+        type: multiple-choice
+        tags: [wenn wann als]
+        prompt: "___ ich Zeit habe, rufe ich dich an."
+        options: [Wenn, Wann, Als]
+        answer: Wenn
+      - id: www3
+        type: multiple-choice
+        tags: [wenn wann als]
+        prompt: "___ ich ein Kind war, wohnten wir in Köln."
+        options: [Als, Wenn, Wann]
+        answer: Als
+        explanation: One period in the past takes als.
+      - id: www4
+        type: multiple-choice
+        tags: [wenn wann als]
+        prompt: "Ich weiß nicht, ___ der Zug kommt."
+        options: [wann, wenn, als]
+        answer: wann
+        explanation: An indirect question about time still takes wann.
+      - id: www5
+        type: multiple-choice
+        tags: [wenn wann als]
+        prompt: "Immer ___ ich meine Oma besucht habe, hat sie Kuchen gebacken."
+        options: [wenn, als, wann]
+        answer: wenn
+        explanation: A repeated event, even in the past, takes wenn.
+
+  - title: Join the sentences
+    instructions: Start with Wenn.
+    items:
+      - id: join1
+        type: translation
+        tags: [wenn word order]
+        prompt: "Ich habe Zeit. Ich komme."
+        answers:
+          - "Wenn ich Zeit habe, komme ich."
+          - "Wenn ich Zeit habe, dann komme ich."
+      - id: join2
+        type: translation
+        tags: [wenn word order]
+        prompt: "Es regnet. Wir bleiben zu Hause."
+        answers:
+          - "Wenn es regnet, bleiben wir zu Hause."
+          - "Wenn es regnet, dann bleiben wir zu Hause."
+      - id: join3
+        type: translation
+        tags: [wenn word order]
+        prompt: "Du bist müde. Du musst schlafen."
+        answers:
+          - "Wenn du müde bist, musst du schlafen."
+          - "Wenn du müde bist, dann musst du schlafen."
+
+  - title: Planning a day out
+    stimulus:
+      kind: audio
+      label: Gespräch
+      lines:
+        - speaker: Ida
+          text: "Was machen wir am Sonntag? Wenn das Wetter schön ist, können wir an den See fahren."
+        - speaker: Ole
+          text: "Gute Idee. Und wenn es regnet?"
+        - speaker: Ida
+          text: "Wenn es regnet, gehen wir ins Museum. Das ist am Sonntag kostenlos."
+        - speaker: Ole
+          text: "Einverstanden. Wenn du willst, hole ich dich um zehn Uhr ab."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening, wenn]
+        prompt: Was machen Ida und Ole, wenn das Wetter schön ist?
+        options: [Sie fahren an den See., Sie gehen ins Museum., Sie bleiben zu Hause.]
+        answer: Sie fahren an den See.
+      - id: listen2
+        type: true-false
+        tags: [listening, wenn]
+        prompt: Wenn es regnet, gehen sie ins Museum.
+        answer: true
+      - id: listen3
+        type: multiple-choice
+        tags: [listening, wenn]
+        prompt: Wann will Ole Ida abholen?
+        options: [um zehn Uhr, um neun Uhr, um elf Uhr]
+        answer: um zehn Uhr
+
+  - title: Now you
+    items:
+      - id: write1
+        type: writing
+        tags: [wenn]
+        prompt: What do you do when the weather is nice? Answer in one sentence with wenn.
+        mustInclude: [wenn]
+        sample: "Wenn das Wetter schön ist, fahre ich mit dem Fahrrad an den See."
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, wenn, planning]
+        prompt: Plan next Saturday with a friend. Suggest something, say what you will do if it rains, and offer a time.
+        cards: [Samstag, schönes Wetter, Regen, Uhrzeit]
+        phrases:
+          - Wenn du am Samstag Zeit hast, können wir …
+          - Wenn das Wetter schön ist, …
+          - Wenn es regnet, …
+          - Wenn du willst, treffen wir uns um …
+        checklist:
+          - I made a suggestion with wenn
+          - I said what happens if it rains
+          - After each opening wenn clause, the main verb came next
+          - I suggested a time
+        sample: "Wenn du am Samstag Zeit hast, können wir etwas zusammen machen. Wenn das Wetter schön ist, gehen wir wandern. Wenn es regnet, gehen wir ins Kino. Wenn du willst, treffen wir uns um elf Uhr am Bahnhof."

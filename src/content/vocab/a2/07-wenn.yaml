@@ -1,0 +1,112 @@
+lesson: a2.07
+items:
+  - id: wenn
+    de: wenn
+    en: if; whenever; when
+    pos: conjunction
+    example: Wenn ich Zeit habe, komme ich.
+    exampleEn: If I have time, I will come.
+  - id: falls
+    de: falls
+    en: in case
+    pos: conjunction
+    example: Falls es schneit, bleiben wir hier.
+    exampleEn: In case it snows, we will stay here.
+  - id: als
+    de: als
+    en: when (one time in the past)
+    pos: conjunction
+    example: Als ich klein war, wohnten wir in Köln.
+    exampleEn: When I was little, we lived in Cologne.
+  - id: wann
+    de: wann
+    en: when (in questions)
+    pos: adverb
+    example: Wann beginnt der Film?
+    exampleEn: When does the film start?
+  - id: immer-wenn
+    de: immer wenn
+    en: whenever
+    pos: phrase
+    example: Immer wenn ich müde bin, trinke ich Kaffee.
+    exampleEn: Whenever I am tired, I drink coffee.
+  - id: hilfe
+    de: Hilfe
+    en: help
+    pos: noun
+    article: die
+    plural: Hilfen
+    example: Ruf mich an, wenn du Hilfe brauchst.
+    exampleEn: Call me if you need help.
+  - id: ausflug
+    de: Ausflug
+    en: trip, outing
+    pos: noun
+    article: der
+    plural: Ausflüge
+    example: Am Sonntag machen wir einen Ausflug.
+    exampleEn: On Sunday we are going on a trip.
+  - id: hausaufgaben
+    de: Hausaufgaben
+    en: homework
+    pos: noun
+    article: die
+    plural: Hausaufgaben
+    example: Hast du die Hausaufgaben gemacht?
+    exampleEn: Have you done the homework?
+  - id: gewinnen
+    de: gewinnen, hat gewonnen
+    en: to win
+    pos: verb
+    example: Wenn wir gewinnen, feiern wir.
+    exampleEn: If we win, we will celebrate.
+  - id: feiern
+    de: feiern
+    en: to celebrate
+    pos: verb
+    example: Wir feiern am Samstag.
+    exampleEn: We are celebrating on Saturday.
+  - id: backen
+    de: backen, hat gebacken
+    en: to bake
+    pos: verb
+    example: Meine Oma hat Kuchen gebacken.
+    exampleEn: My grandma baked cake.
+  - id: schneien
+    de: schneien
+    en: to snow
+    pos: verb
+    example: Wenn es schneit, fahren wir nicht.
+    exampleEn: If it snows, we will not go.
+  - id: reich
+    de: reich
+    en: rich
+    pos: adjective
+    example: Wenn ich reich wäre, würde ich viel reisen.
+    exampleEn: If I were rich, I would travel a lot.
+  - id: ausmachen
+    de: ausmachen
+    en: to switch off
+    pos: verb
+    example: Mach bitte das Licht aus.
+    exampleEn: Please switch off the light.
+  - id: licht
+    de: Licht
+    en: light
+    pos: noun
+    article: das
+    plural: Lichter
+    example: Das Licht ist an.
+    exampleEn: The light is on.
+  - id: moeglich
+    de: möglich
+    en: possible
+    pos: adjective
+    example: Wenn es möglich ist, komme ich früher.
+    exampleEn: If it is possible, I will come earlier.
+  - id: sonst
+    de: sonst
+    en: otherwise
+    pos: adverb
+    example: Beeil dich, sonst kommen wir zu spät.
+    exampleEn: Hurry up, otherwise we will be late.
