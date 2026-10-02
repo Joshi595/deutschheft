@@ -1,0 +1,206 @@
+lesson: a1.05
+sets:
+  - title: der, die or das?
+    instructions: Type the article.
+    items:
+      - id: art1
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Tisch"
+        answers: [der]
+      - id: art2
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Lampe"
+        answers: [die]
+      - id: art3
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Buch"
+        answers: [das]
+      - id: art4
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Stuhl"
+        answers: [der]
+      - id: art5
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Tasche"
+        answers: [die]
+      - id: art6
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Fenster"
+        answers: [das]
+      - id: art7
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Kind"
+        answers: [das]
+
+  - title: Use the ending
+    instructions: You may not know these words, but the ending tells you the gender.
+    items:
+      - id: clue1
+        type: multiple-choice
+        tags: [noun gender, gender clues]
+        prompt: ___ Übung (exercise)
+        options: [die, der, das]
+        answer: die
+        explanation: Nouns in -ung are always feminine.
+      - id: clue2
+        type: multiple-choice
+        tags: [noun gender, gender clues]
+        prompt: ___ Brötchen (bread roll)
+        options: [das, der, die]
+        answer: das
+        explanation: Nouns in -chen are always neuter.
+      - id: clue3
+        type: multiple-choice
+        tags: [noun gender, gender clues]
+        prompt: ___ Gesundheit (health)
+        options: [die, der, das]
+        answer: die
+        explanation: Nouns in -heit and -keit are always feminine.
+      - id: clue4
+        type: multiple-choice
+        tags: [noun gender, gender clues]
+        prompt: ___ Fahrer (driver)
+        options: [der, die, das]
+        answer: der
+        explanation: A person who does something, ending in -er, is masculine.
+      - id: clue5
+        type: multiple-choice
+        tags: [noun gender, gender clues]
+        prompt: ___ Station
+        options: [die, der, das]
+        answer: die
+        explanation: Nouns in -ion are always feminine.
+      - id: clue6
+        type: multiple-choice
+        tags: [noun gender, gender clues]
+        prompt: ___ Haustür (das Haus + die Tür)
+        options: [die, das, der]
+        answer: die
+        explanation: A compound takes the gender of its last part.
+
+  - title: The plural
+    instructions: Write the plural of the noun, without the article.
+    items:
+      - id: plural1
+        type: fill-blank
+        tags: [plural]
+        prompt: "die Lampe, zwei ___"
+        answers: [Lampen]
+        explanation: Feminine nouns in -e add -n.
+      - id: plural2
+        type: fill-blank
+        tags: [plural]
+        prompt: "das Kind, drei ___"
+        answers: [Kinder]
+      - id: plural3
+        type: fill-blank
+        tags: [plural]
+        prompt: "das Auto, vier ___"
+        answers: [Autos]
+      - id: plural4
+        type: fill-blank
+        tags: [plural]
+        prompt: "der Tisch, zwei ___"
+        answers: [Tische]
+      - id: plural5
+        type: fill-blank
+        tags: [plural]
+        prompt: "das Buch, fünf ___"
+        answers: [Bücher]
+        hint: This one takes -er and an umlaut.
+      - id: plural6
+        type: fill-blank
+        tags: [plural]
+        prompt: "der Stuhl, sechs ___"
+        answers: [Stühle]
+        hint: This one takes -e and an umlaut.
+      - id: plural7
+        type: fill-blank
+        tags: [plural]
+        prompt: "die Frau, zwei ___"
+        answers: [Frauen]
+      - id: plural8
+        type: multiple-choice
+        tags: [plural]
+        prompt: What is the article of every plural noun?
+        options: [die, der, das]
+        answer: die
+
+  - title: er, sie or es?
+    instructions: Replace the noun with the right pronoun.
+    items:
+      - id: pron1
+        type: fill-blank
+        tags: [pronouns, noun gender]
+        prompt: "Der Tisch ist neu. ___ ist groß."
+        answers: [Er]
+      - id: pron2
+        type: fill-blank
+        tags: [pronouns, noun gender]
+        prompt: "Die Lampe ist alt. ___ ist klein."
+        answers: [Sie]
+      - id: pron3
+        type: fill-blank
+        tags: [pronouns, noun gender]
+        prompt: "Das Buch ist gut. ___ ist interessant."
+        answers: [Es]
+      - id: pron4
+        type: fill-blank
+        tags: [pronouns, noun gender]
+        prompt: "Die Bücher sind neu. ___ sind teuer."
+        answers: [Sie]
+
+  - title: Singular and plural
+    items:
+      - id: match1
+        type: matching
+        tags: [plural]
+        prompt: Match each noun with its plural.
+        pairs:
+          - { left: der Mann, right: die Männer }
+          - { left: das Bild, right: die Bilder }
+          - { left: die Uhr, right: die Uhren }
+          - { left: das Handy, right: die Handys }
+          - { left: der Lehrer, right: die Lehrer }
+      - id: cloze1
+        type: cloze
+        tags: [noun gender]
+        prompt: Fill in der, die or das.
+        text: "___ Zimmer ist klein. ___ Tisch ist alt, aber ___ Lampe ist neu. ___ Bücher sind interessant."
+        gaps:
+          - [Das]
+          - [Der]
+          - [die]
+          - [Die]
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [noun gender]
+        prompt: The book is good.
+        answers: [Das Buch ist gut.]
+      - id: tr2
+        type: translation
+        tags: [noun gender]
+        prompt: The lamp is new.
+        answers: [Die Lampe ist neu.]
+      - id: tr3
+        type: translation
+        tags: [plural]
+        prompt: The children are small.
+        answers: [Die Kinder sind klein.]
+      - id: tr4
+        type: translation
+        tags: [pronouns]
+        prompt: Where is the pen? It is here.
+        answers:
+          - Wo ist der Stift? Er ist hier.
+        hint: der Stift is masculine, so "it" is er.
