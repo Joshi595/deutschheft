@@ -1,0 +1,211 @@
+lesson: a1.28
+sets:
+  - title: Warm-up for the ear
+    instructions: Numbers that sound alike. Write what you hear in figures.
+    items:
+      - id: ear1
+        type: multiple-choice
+        tags: [exam listening, numbers]
+        stimulus:
+          kind: audio
+          label: Zahl
+          lines:
+            - text: "dreißig"
+        prompt: Which number do you hear?
+        options: ["30", "13"]
+        answer: "30"
+      - id: ear2
+        type: multiple-choice
+        tags: [exam listening, numbers]
+        stimulus:
+          kind: audio
+          label: Zahl
+          lines:
+            - text: "sechzehn"
+        prompt: Which number do you hear?
+        options: ["16", "60"]
+        answer: "16"
+      - id: ear3
+        type: fill-blank
+        tags: [exam listening, numbers]
+        stimulus:
+          kind: audio
+          label: Zahl
+          lines:
+            - text: "siebenundachtzig"
+        prompt: "Die Zahl ist ___."
+        answers: ["87"]
+      - id: ear4
+        type: multiple-choice
+        tags: [exam listening, time]
+        stimulus:
+          kind: audio
+          label: Uhrzeit
+          lines:
+            - text: "Es ist halb neun."
+        prompt: Wie spät ist es?
+        options: ["8:30", "9:30", "9:00"]
+        answer: "8:30"
+
+  - title: "Teil 1: kurze Gespräche"
+    instructions: Was ist richtig? Sie hören jeden Text zweimal.
+    items:
+      - id: h1a
+        type: multiple-choice
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Gespräch
+          lines:
+            - speaker: Frau
+              text: "Entschuldigung, was kostet dieser Pullover?"
+            - speaker: Verkäufer
+              text: "Der rote kostet fünfundvierzig Euro. Aber der blaue ist im Angebot, er kostet nur neunundzwanzig Euro."
+            - speaker: Frau
+              text: "Dann nehme ich den blauen."
+        prompt: Was bezahlt die Frau?
+        options: ["29 Euro", "45 Euro", "54 Euro"]
+        answer: "29 Euro"
+        explanation: She takes the blue one, which is on offer for 29 euros. The 45 euros was for the red one.
+      - id: h1b
+        type: multiple-choice
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Gespräch
+          lines:
+            - speaker: Mann
+              text: "Wollen wir am Freitag ins Kino gehen?"
+            - speaker: Frau
+              text: "Am Freitag kann ich leider nicht. Aber am Samstag habe ich Zeit."
+            - speaker: Mann
+              text: "Gut, dann am Samstag um acht."
+        prompt: Wann gehen sie ins Kino?
+        options: [am Samstag, am Freitag, am Sonntag]
+        answer: am Samstag
+      - id: h1c
+        type: multiple-choice
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Gespräch
+          lines:
+            - speaker: Tourist
+              text: "Entschuldigung, wo ist die Post?"
+            - speaker: Frau
+              text: "Die Post? Gehen Sie hier geradeaus und dann die zweite Straße links. Die Post ist neben der Bank."
+        prompt: Wo ist die Post?
+        options: [neben der Bank, neben dem Bahnhof, an der Ampel]
+        answer: neben der Bank
+      - id: h1d
+        type: multiple-choice
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Gespräch
+          lines:
+            - speaker: Kellner
+              text: "Was möchten Sie trinken?"
+            - speaker: Gast
+              text: "Einen Kaffee, bitte. Nein, lieber einen Tee. Kaffee trinke ich am Abend nicht."
+        prompt: Was trinkt der Gast?
+        options: [einen Tee, einen Kaffee, ein Wasser]
+        answer: einen Tee
+        explanation: "He corrects himself: Nein, lieber einen Tee."
+
+  - title: "Teil 2: Durchsagen"
+    instructions: Richtig oder falsch? In der Prüfung hören Sie jeden Text nur einmal.
+    items:
+      - id: h2a
+        type: true-false
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Durchsage
+          plays: 1
+          lines:
+            - text: "Achtung an Gleis drei! Der Regionalexpress nach Leipzig fährt heute nicht von Gleis drei, sondern von Gleis sechs."
+        prompt: Der Zug nach Leipzig fährt von Gleis 3.
+        answer: false
+      - id: h2b
+        type: true-false
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Durchsage
+          plays: 1
+          lines:
+            - text: "Liebe Kundinnen und Kunden! Heute im Angebot: frische Tomaten, das Kilo nur ein Euro neunundneunzig. Sie finden die Tomaten am Eingang."
+        prompt: Ein Kilo Tomaten kostet heute 1,99 Euro.
+        answer: true
+      - id: h2c
+        type: true-false
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Durchsage
+          plays: 1
+          lines:
+            - text: "Sehr geehrte Fluggäste, der Flug nach Wien hat circa vierzig Minuten Verspätung. Wir bitten um Entschuldigung."
+        prompt: Das Flugzeug nach Wien fliegt pünktlich.
+        answer: false
+      - id: h2d
+        type: true-false
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Durchsage
+          plays: 1
+          lines:
+            - text: "Liebe Besucher, das Museum schließt in fünfzehn Minuten. Bitte gehen Sie zum Ausgang."
+        prompt: Das Museum ist noch eine Stunde geöffnet.
+        answer: false
+
+  - title: "Teil 3: Nachrichten am Telefon"
+    instructions: Was ist richtig? Sie hören jeden Text zweimal.
+    items:
+      - id: h3a
+        type: multiple-choice
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Anrufbeantworter
+          lines:
+            - text: "Hallo Maria, hier ist Jan. Wir wollten uns um sechs Uhr treffen, aber ich muss länger arbeiten. Ich kann erst um halb acht kommen. Bis später!"
+        prompt: Wann kommt Jan?
+        options: ["um 19:30 Uhr", "um 18:00 Uhr", "um 20:30 Uhr"]
+        answer: "um 19:30 Uhr"
+      - id: h3b
+        type: multiple-choice
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Anrufbeantworter
+          lines:
+            - text: "Guten Tag, Frau Kaya. Hier ist die Praxis Doktor Stein. Ihr Termin morgen um neun Uhr geht leider nicht. Bitte kommen Sie am Donnerstag um elf Uhr."
+        prompt: Wann soll Frau Kaya kommen?
+        options: [am Donnerstag um elf Uhr, morgen um neun Uhr, am Donnerstag um neun Uhr]
+        answer: am Donnerstag um elf Uhr
+      - id: h3c
+        type: multiple-choice
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Anrufbeantworter
+          lines:
+            - text: "Hallo Tom, hier ist Lena. Ich bin jetzt am Bahnhof, aber mein Handy ist fast leer. Ruf mich bitte bei meiner Schwester an. Die Nummer ist sieben, drei, null, vier, acht."
+        prompt: Welche Nummer soll Tom anrufen?
+        options: ["73048", "73084", "37048"]
+        answer: "73048"
+      - id: h3d
+        type: multiple-choice
+        tags: [exam listening]
+        stimulus:
+          kind: audio
+          label: Anrufbeantworter
+          lines:
+            - text: "Guten Tag, hier ist die Sprachschule. Der Deutschkurs beginnt nicht am ersten, sondern am achten September. Der Kurs ist im Raum fünf im ersten Stock."
+        prompt: Wann beginnt der Kurs?
+        options: ["am 8. September", "am 1. September", "am 5. September"]
+        answer: "am 8. September"
+        explanation: "nicht am ersten, sondern am achten. The five is the room number."
