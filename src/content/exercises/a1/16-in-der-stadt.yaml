@@ -1,0 +1,226 @@
+lesson: a1.16
+sets:
+  - title: Places in town
+    items:
+      - id: place1
+        type: matching
+        tags: [town]
+        prompt: Match each place with what you do there.
+        pairs:
+          - { left: die Post, right: einen Brief schicken }
+          - { left: die Bank, right: Geld holen }
+          - { left: der Bahnhof, right: mit dem Zug fahren }
+          - { left: die Apotheke, right: Medikamente kaufen }
+          - { left: das Kino, right: einen Film sehen }
+      - id: place2
+        type: fill-blank
+        tags: [town, noun gender]
+        prompt: "___ Bahnhof"
+        answers: [der]
+      - id: place3
+        type: fill-blank
+        tags: [town, noun gender]
+        prompt: "___ Post"
+        answers: [die]
+      - id: place4
+        type: fill-blank
+        tags: [town, noun gender]
+        prompt: "___ Rathaus"
+        answers: [das]
+
+  - title: The dative article
+    instructions: Put the article in brackets into the dative.
+    items:
+      - id: dat1
+        type: fill-blank
+        tags: [dative]
+        prompt: "Die Apotheke ist neben ___ Bank. (die)"
+        answers: [der]
+      - id: dat2
+        type: fill-blank
+        tags: [dative]
+        prompt: "Wir treffen uns vor ___ Kino. (das)"
+        answers: [dem]
+      - id: dat3
+        type: fill-blank
+        tags: [dative]
+        prompt: "Der Parkplatz ist hinter ___ Supermarkt. (der)"
+        answers: [dem]
+      - id: dat4
+        type: fill-blank
+        tags: [dative]
+        prompt: "Ich warte an ___ Haltestelle. (die)"
+        answers: [der]
+      - id: dat5
+        type: fill-blank
+        tags: [dative]
+        prompt: "Das Buch ist auf ___ Tisch. (der)"
+        answers: [dem]
+      - id: dat6
+        type: cloze
+        tags: [dative]
+        text: "Das Café ist zwischen ___ Post und ___ Hotel."
+        gaps:
+          - [der]
+          - [dem]
+        explanation: "die Post becomes der Post, das Hotel becomes dem Hotel."
+
+  - title: im, am, zum, zur
+    items:
+      - id: short1
+        type: fill-blank
+        tags: [dative, contractions]
+        prompt: "Ich bin ___ Supermarkt. (in + dem)"
+        answers: [im]
+      - id: short2
+        type: fill-blank
+        tags: [dative, contractions]
+        prompt: "Das Hotel ist ___ Bahnhof. (an + dem)"
+        answers: [am]
+      - id: short3
+        type: fill-blank
+        tags: [dative, contractions]
+        prompt: "Wie komme ich ___ Bahnhof?"
+        answers: [zum]
+      - id: short4
+        type: fill-blank
+        tags: [dative, contractions]
+        prompt: "Wie komme ich ___ Post?"
+        answers: [zur]
+      - id: short5
+        type: multiple-choice
+        tags: [dative, contractions]
+        prompt: Die Kinder sind ___ Schule.
+        options: [in der, im, in die]
+        answer: in der
+        explanation: The feminine does not shorten.
+      - id: short6
+        type: multiple-choice
+        tags: [dative, contractions]
+        prompt: Wie komme ich ___ Krankenhaus?
+        options: [zum, zur, zu]
+        answer: zum
+
+  - title: Which preposition?
+    items:
+      - id: prep1
+        type: matching
+        tags: [prepositions of place]
+        prompt: Match each preposition with its meaning.
+        pairs:
+          - { left: neben, right: next to }
+          - { left: vor, right: in front of }
+          - { left: hinter, right: behind }
+          - { left: zwischen, right: between }
+          - { left: unter, right: under }
+      - id: prep2
+        type: multiple-choice
+        tags: [prepositions of place]
+        prompt: Ich warte ___ der Haltestelle.
+        options: [an, in, unter]
+        answer: an
+      - id: prep3
+        type: multiple-choice
+        tags: [prepositions of place]
+        prompt: Wir kaufen Obst ___ dem Markt.
+        options: [auf, in, zwischen]
+        answer: auf
+
+  - title: Follow the directions
+    stimulus:
+      kind: audio
+      label: Auf der Straße
+      lines:
+        - speaker: Tourist
+          text: "Entschuldigung, wie komme ich zum Bahnhof?"
+        - speaker: Frau
+          text: "Gehen Sie geradeaus bis zur Ampel. Dann gehen Sie links. Der Bahnhof ist neben der Post."
+        - speaker: Tourist
+          text: "Ist es weit?"
+        - speaker: Frau
+          text: "Nein, nur zehn Minuten zu Fuß."
+    items:
+      - id: dir1
+        type: multiple-choice
+        tags: [listening, directions]
+        prompt: Wohin möchte der Tourist?
+        options: [zum Bahnhof, zur Post, zur Ampel]
+        answer: zum Bahnhof
+      - id: dir2
+        type: multiple-choice
+        tags: [listening, directions]
+        prompt: Wo geht man an der Ampel?
+        options: [links, rechts, geradeaus]
+        answer: links
+      - id: dir3
+        type: multiple-choice
+        tags: [listening, directions]
+        prompt: Wie lange geht man zu Fuß?
+        options: [zehn Minuten, zwei Minuten, zwanzig Minuten]
+        answer: zehn Minuten
+
+  - title: Read the note
+    stimulus:
+      kind: text
+      label: Notiz
+      text: |
+        Hallo Sara,
+        wir treffen uns heute um 18 Uhr im Café Blau. Das Café ist am Marktplatz, zwischen der Bank und dem Kino.
+        Du kannst vor dem Rathaus parken.
+        Bis später! Lena
+    items:
+      - id: note1
+        type: multiple-choice
+        tags: [reading, town]
+        prompt: Wo ist das Café?
+        options: [am Marktplatz, am Bahnhof, im Rathaus]
+        answer: am Marktplatz
+      - id: note2
+        type: true-false
+        tags: [reading, town]
+        prompt: Sara kann vor dem Rathaus parken.
+        answer: true
+      - id: note3
+        type: true-false
+        tags: [reading, town]
+        prompt: Das Café ist neben der Post.
+        answer: false
+
+  - title: Say it in German
+    items:
+      - id: order1
+        type: word-order
+        tags: [dative]
+        prompt: The pharmacy is next to the bank.
+        answer: Die Apotheke ist neben der Bank.
+      - id: order2
+        type: word-order
+        tags: [directions]
+        prompt: How do I get to the station?
+        answer: Wie komme ich zum Bahnhof?
+      - id: tr1
+        type: translation
+        tags: [dative]
+        prompt: I am in the cinema.
+        answers: [Ich bin im Kino.]
+      - id: tr2
+        type: translation
+        tags: [directions]
+        prompt: Excuse me, where is the post office?
+        answers: ["Entschuldigung, wo ist die Post?"]
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, directions]
+        prompt: Stop a stranger in the street. Ask politely where the pharmacy is, whether it is far, and thank them.
+        cards: [Entschuldigung, Apotheke?, weit?, danke]
+        phrases:
+          - Entschuldigung, wo ist …?
+          - Wie komme ich zum / zur …?
+          - Ist es weit?
+          - Vielen Dank!
+        checklist:
+          - I started with Entschuldigung
+          - I asked where the pharmacy is or how to get there
+          - I asked whether it is far
+          - I said thank you
+        sample: "Entschuldigung, wie komme ich zur Apotheke? Ist es weit? Vielen Dank!"

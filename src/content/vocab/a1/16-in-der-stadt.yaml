@@ -1,0 +1,172 @@
+lesson: a1.16
+items:
+  - id: bahnhof
+    de: Bahnhof
+    en: train station
+    pos: noun
+    article: der
+    plural: Bahnhöfe
+    example: Wie komme ich zum Bahnhof?
+    exampleEn: How do I get to the station?
+  - id: bank
+    de: Bank
+    en: bank
+    pos: noun
+    article: die
+    plural: Banken
+    example: Sie arbeitet in der Bank.
+    exampleEn: She works at the bank.
+  - id: post
+    de: Post
+    en: post office; post
+    pos: noun
+    article: die
+    plural: "-"
+    example: Wo ist die Post?
+    exampleEn: Where is the post office?
+  - id: rathaus
+    de: Rathaus
+    en: town hall
+    pos: noun
+    article: das
+    plural: Rathäuser
+    example: Die Post ist neben dem Rathaus.
+    exampleEn: The post office is next to the town hall.
+  - id: schule
+    de: Schule
+    en: school
+    pos: noun
+    article: die
+    plural: Schulen
+    example: Die Kinder sind in der Schule.
+    exampleEn: The children are at school.
+  - id: kirche
+    de: Kirche
+    en: church
+    pos: noun
+    article: die
+    plural: Kirchen
+    example: Gehen Sie bis zur Kirche.
+    exampleEn: Go as far as the church.
+  - id: krankenhaus
+    de: Krankenhaus
+    en: hospital
+    pos: noun
+    article: das
+    plural: Krankenhäuser
+    example: Das Krankenhaus ist nicht weit.
+    exampleEn: The hospital is not far.
+  - id: haltestelle
+    de: Haltestelle
+    en: (bus or tram) stop
+    pos: noun
+    article: die
+    plural: Haltestellen
+    example: Ich warte an der Haltestelle.
+    exampleEn: I am waiting at the stop.
+  - id: hotel
+    de: Hotel
+    en: hotel
+    pos: noun
+    article: das
+    plural: Hotels
+    example: Das Hotel ist am Bahnhof.
+    exampleEn: The hotel is by the station.
+  - id: platz
+    de: Platz
+    en: square; place; seat
+    pos: noun
+    article: der
+    plural: Plätze
+    example: Der Marktplatz ist im Zentrum.
+    exampleEn: The market square is in the centre.
+  - id: zentrum
+    de: Zentrum
+    en: centre
+    pos: noun
+    article: das
+    plural: Zentren
+    example: Wir wohnen im Zentrum.
+    exampleEn: We live in the centre.
+  - id: ampel
+    de: Ampel
+    en: traffic lights
+    pos: noun
+    article: die
+    plural: Ampeln
+    example: Gehen Sie an der Ampel links.
+    exampleEn: Go left at the traffic lights.
+  - id: kreuzung
+    de: Kreuzung
+    en: crossroads, junction
+    pos: noun
+    article: die
+    plural: Kreuzungen
+    example: An der Kreuzung gehen Sie rechts.
+    exampleEn: At the crossroads go right.
+  - id: neben
+    de: neben
+    en: next to
+    pos: preposition
+    example: Die Apotheke ist neben der Bank.
+    exampleEn: The pharmacy is next to the bank.
+  - id: vor
+    de: vor
+    en: in front of
+    pos: preposition
+    example: Wir treffen uns vor dem Kino.
+    exampleEn: We are meeting in front of the cinema.
+  - id: hinter
+    de: hinter
+    en: behind
+    pos: preposition
+    example: Der Parkplatz ist hinter dem Supermarkt.
+    exampleEn: The car park is behind the supermarket.
+  - id: zwischen
+    de: zwischen
+    en: between
+    pos: preposition
+    example: Das Café ist zwischen der Post und dem Hotel.
+    exampleEn: The café is between the post office and the hotel.
+  - id: auf
+    de: auf
+    en: on; at (an open place)
+    pos: preposition
+    example: Das Buch ist auf dem Tisch.
+    exampleEn: The book is on the table.
+  - id: an
+    de: an
+    en: at, by, on
+    pos: preposition
+    example: Ich warte an der Haltestelle.
+    exampleEn: I am waiting at the stop.
+  - id: geradeaus
+    de: geradeaus
+    en: straight on
+    pos: adverb
+    example: Gehen Sie geradeaus.
+    exampleEn: Go straight on.
+  - id: links
+    de: links
+    en: left, on the left
+    pos: adverb
+    example: Die Bank ist links.
+    exampleEn: The bank is on the left.
+  - id: rechts
+    de: rechts
+    en: right, on the right
+    pos: adverb
+    example: Das Hotel ist rechts.
+    exampleEn: The hotel is on the right.
+  - id: weit
+    de: weit
+    en: far
+    pos: adjective
+    example: Ist es weit?
+    exampleEn: Is it far?
+  - id: zu-fuss
+    de: zu Fuß
+    en: on foot
+    pos: phrase
+    example: Es sind fünf Minuten zu Fuß.
+    exampleEn: It is five minutes on foot.
