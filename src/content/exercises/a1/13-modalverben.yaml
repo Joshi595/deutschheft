@@ -1,0 +1,223 @@
+lesson: a1.13
+sets:
+  - title: The forms
+    instructions: Put the modal verb in brackets into the right form.
+    items:
+      - id: form1
+        type: fill-blank
+        tags: [modal verbs]
+        prompt: "Ich ___ gut schwimmen. (können)"
+        answers: [kann]
+      - id: form2
+        type: fill-blank
+        tags: [modal verbs]
+        prompt: "___ du morgen kommen? (können)"
+        answers: [Kannst]
+      - id: form3
+        type: fill-blank
+        tags: [modal verbs]
+        prompt: "Er ___ am Samstag arbeiten. (müssen)"
+        answers: [muss]
+      - id: form4
+        type: fill-blank
+        tags: [modal verbs]
+        prompt: "Wir ___ ins Kino gehen. (wollen)"
+        answers: [wollen]
+      - id: form5
+        type: fill-blank
+        tags: [modal verbs]
+        prompt: "___ ich hier parken? (dürfen)"
+        answers: [Darf]
+      - id: form6
+        type: fill-blank
+        tags: [modal verbs]
+        prompt: "Was ___ du heute machen? (wollen)"
+        answers: [willst]
+      - id: form7
+        type: fill-blank
+        tags: [modal verbs]
+        prompt: "Ihr ___ viel lernen. (müssen)"
+        answers: [müsst]
+      - id: form8
+        type: fill-blank
+        tags: [modal verbs]
+        prompt: "Ich ___ viel Wasser trinken. (sollen)"
+        answers: [soll]
+
+  - title: The infinitive goes to the end
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [sentence bracket]
+        prompt: I can swim well.
+        answer: Ich kann gut schwimmen.
+      - id: order2
+        type: word-order
+        tags: [sentence bracket]
+        prompt: We have to work today.
+        answer: Wir müssen heute arbeiten.
+      - id: order3
+        type: word-order
+        tags: [sentence bracket]
+        prompt: Can you help me, please? (formal)
+        answer: Können Sie mir bitte helfen?
+      - id: order4
+        type: word-order
+        tags: [sentence bracket, separable verbs]
+        prompt: I have to get up at six o'clock.
+        answer: Ich muss um sechs Uhr aufstehen.
+      - id: order5
+        type: multiple-choice
+        tags: [sentence bracket]
+        prompt: Which sentence is correct?
+        options:
+          - Ich will morgen nach Berlin fahren.
+          - Ich will fahren morgen nach Berlin.
+          - Ich will morgen fahren nach Berlin.
+        answer: Ich will morgen nach Berlin fahren.
+
+  - title: Which modal verb?
+    items:
+      - id: which1
+        type: multiple-choice
+        tags: [modal verbs, meaning]
+        prompt: Hier ___ man nicht rauchen. (It is forbidden.)
+        options: [darf, muss, will]
+        answer: darf
+      - id: which2
+        type: multiple-choice
+        tags: [modal verbs, meaning]
+        prompt: Ich ___ leider nicht kommen. Ich habe keine Zeit.
+        options: [kann, darf, soll]
+        answer: kann
+      - id: which3
+        type: multiple-choice
+        tags: [modal verbs, meaning]
+        prompt: Der Arzt sagt, ich ___ viel schlafen.
+        options: [soll, will, darf]
+        answer: soll
+        explanation: sollen passes on what someone else has told you to do.
+      - id: which4
+        type: multiple-choice
+        tags: [modal verbs, meaning]
+        prompt: Am Sonntag ___ ich nicht arbeiten. Ich habe frei.
+        options: [muss, darf, soll]
+        answer: muss
+        explanation: nicht müssen means "do not have to".
+      - id: which5
+        type: multiple-choice
+        tags: [modal verbs, meaning]
+        prompt: "\"You must not park here.\" In German:"
+        options:
+          - Hier darf man nicht parken.
+          - Hier muss man nicht parken.
+        answer: Hier darf man nicht parken.
+        explanation: "must not = nicht dürfen."
+      - id: which6
+        type: matching
+        tags: [modal verbs, meaning]
+        prompt: Match each verb with its meaning.
+        pairs:
+          - { left: können, right: can }
+          - { left: müssen, right: must }
+          - { left: wollen, right: want to }
+          - { left: dürfen, right: be allowed to }
+          - { left: sollen, right: be supposed to }
+
+  - title: Read the signs
+    instructions: As in the reading exam. Is the statement right or wrong?
+    items:
+      - id: sign1
+        type: true-false
+        tags: [reading, signs, modal verbs]
+        stimulus:
+          kind: text
+          label: Schild
+          text: Rauchen verboten!
+        prompt: Hier darf man rauchen.
+        answer: false
+      - id: sign2
+        type: true-false
+        tags: [reading, signs, modal verbs]
+        stimulus:
+          kind: text
+          label: Schild
+          text: |
+            Parkplatz
+            Nur für Kunden
+            Montag bis Samstag, 8 bis 20 Uhr
+        prompt: Kunden dürfen hier am Freitag parken.
+        answer: true
+      - id: sign3
+        type: true-false
+        tags: [reading, signs, modal verbs]
+        stimulus:
+          kind: text
+          label: Schild
+          text: |
+            Schwimmbad
+            Kinder unter 10 Jahren dürfen nur mit den Eltern schwimmen.
+        prompt: Ein Kind mit acht Jahren darf allein schwimmen.
+        answer: false
+
+  - title: Listen
+    stimulus:
+      kind: audio
+      label: Gespräch
+      lines:
+        - speaker: Tom
+          text: "Anna, wollen wir am Samstag ins Kino gehen?"
+        - speaker: Anna
+          text: "Am Samstag kann ich leider nicht. Ich muss arbeiten."
+        - speaker: Tom
+          text: "Und am Sonntag?"
+        - speaker: Anna
+          text: "Am Sonntag muss ich nicht arbeiten. Da kann ich kommen."
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening, modal verbs]
+        prompt: Anna muss am Samstag arbeiten.
+        answer: true
+      - id: listen2
+        type: true-false
+        tags: [listening, modal verbs]
+        prompt: Anna kann am Sonntag nicht kommen.
+        answer: false
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [modal verbs]
+        prompt: I have to go now.
+        answers:
+          - Ich muss jetzt gehen.
+      - id: tr2
+        type: translation
+        tags: [modal verbs]
+        prompt: Can you swim? (informal)
+        answers:
+          - Kannst du schwimmen?
+      - id: tr3
+        type: translation
+        tags: [modal verbs]
+        prompt: Unfortunately I cannot come.
+        answers:
+          - Ich kann leider nicht kommen.
+          - Leider kann ich nicht kommen.
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, requests]
+        prompt: "Part three of the speaking exam: you get a card and have to ask someone to do something. Make a polite request for each card."
+        cards: [Fenster, Stift, wiederholen, helfen]
+        phrases:
+          - Können Sie bitte …?
+          - Kannst du bitte …?
+          - Darf ich …?
+        checklist:
+          - I made a request for each card
+          - I used können or dürfen with bitte
+          - The second verb came at the end
+        sample: "Können Sie bitte das Fenster aufmachen? Kannst du mir bitte einen Stift geben? Können Sie das bitte wiederholen? Können Sie mir bitte helfen?"
