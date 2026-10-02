@@ -1,0 +1,158 @@
+lesson: a1.14
+items:
+  - id: freizeit
+    de: Freizeit
+    en: free time
+    pos: noun
+    article: die
+    plural: "-"
+    example: Was machen Sie in Ihrer Freizeit?
+    exampleEn: What do you do in your free time?
+  - id: hobby
+    de: Hobby
+    en: hobby
+    pos: noun
+    article: das
+    plural: Hobbys
+    example: Mein Hobby ist Kochen.
+    exampleEn: My hobby is cooking.
+  - id: fussball
+    de: Fußball
+    en: football
+    pos: noun
+    article: der
+    plural: "-"
+    example: Ich spiele gern Fußball.
+    exampleEn: I like playing football.
+  - id: musik
+    de: Musik
+    en: music
+    pos: noun
+    article: die
+    plural: "-"
+    example: Ich höre gern Musik.
+    exampleEn: I like listening to music.
+  - id: kino
+    de: Kino
+    en: cinema
+    pos: noun
+    article: das
+    plural: Kinos
+    example: Wollen wir ins Kino gehen?
+    exampleEn: Shall we go to the cinema?
+  - id: film
+    de: Film
+    en: film
+    pos: noun
+    article: der
+    plural: Filme
+    example: Der Film fängt um acht Uhr an.
+    exampleEn: The film starts at eight o'clock.
+  - id: sport
+    de: Sport
+    en: sport
+    pos: noun
+    article: der
+    plural: "-"
+    example: Ich mache zweimal pro Woche Sport.
+    exampleEn: I do sport twice a week.
+  - id: restaurant
+    de: Restaurant
+    en: restaurant
+    pos: noun
+    article: das
+    plural: Restaurants
+    example: Wir treffen uns im Restaurant.
+    exampleEn: We are meeting at the restaurant.
+  - id: park
+    de: Park
+    en: park
+    pos: noun
+    article: der
+    plural: Parks
+    example: Ich gehe gern im Park spazieren.
+    exampleEn: I like going for a walk in the park.
+  - id: spazieren-gehen
+    de: spazieren gehen
+    en: to go for a walk
+    pos: phrase
+    example: Am Sonntag gehen wir spazieren.
+    exampleEn: On Sunday we go for a walk.
+  - id: rad-fahren
+    de: Rad fahren
+    en: to cycle
+    pos: phrase
+    example: Sie fährt gern Rad.
+    exampleEn: She likes cycling.
+  - id: wandern
+    de: wandern
+    en: to hike
+    pos: verb
+    example: Im Sommer wandern wir oft.
+    exampleEn: In summer we often go hiking.
+  - id: fotografieren
+    de: fotografieren
+    en: to take photos
+    pos: verb
+    example: Er fotografiert gern.
+    exampleEn: He likes taking photos.
+  - id: sich-treffen
+    de: sich treffen
+    en: to meet (each other)
+    pos: verb
+    example: Wann treffen wir uns?
+    exampleEn: When shall we meet?
+  - id: lieber
+    de: lieber
+    en: rather, prefer to
+    pos: adverb
+    example: Ich trinke lieber Tee.
+    exampleEn: I prefer tea.
+  - id: am-liebsten
+    de: am liebsten
+    en: best of all
+    pos: adverb
+    example: Am liebsten gehe ich ins Kino.
+    exampleEn: Best of all I like going to the cinema.
+  - id: oft
+    de: oft
+    en: often
+    pos: adverb
+    example: Ich gehe oft ins Kino.
+    exampleEn: I often go to the cinema.
+  - id: manchmal
+    de: manchmal
+    en: sometimes
+    pos: adverb
+    example: Manchmal koche ich am Abend.
+    exampleEn: Sometimes I cook in the evening.
+  - id: nie
+    de: nie
+    en: never
+    pos: adverb
+    example: Ich tanze nie.
+    exampleEn: I never dance.
+  - id: immer
+    de: immer
+    en: always
+    pos: adverb
+    example: Sie kommt immer um acht Uhr.
+    exampleEn: She always comes at eight o'clock.
+  - id: wollen-wir
+    de: Wollen wir …?
+    en: Shall we …?
+    pos: phrase
+    example: Wollen wir essen gehen?
+    exampleEn: Shall we go out to eat?
+  - id: gute-idee
+    de: Gute Idee!
+    en: Good idea!
+    pos: phrase
+    example: Wollen wir schwimmen gehen? Gute Idee!
+    exampleEn: Shall we go swimming? Good idea!
+  - id: heute-abend
+    de: heute Abend
+    en: this evening
+    pos: phrase
+    example: Hast du heute Abend Zeit?
+    exampleEn: Do you have time this evening?
