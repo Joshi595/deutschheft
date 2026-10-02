@@ -1,0 +1,110 @@
+lesson: a2.09
+items:
+  - id: ob
+    de: ob
+    en: whether, if
+    pos: conjunction
+    example: Ich weiß nicht, ob er kommt.
+    exampleEn: I do not know whether he is coming.
+  - id: koennen-sie-mir-sagen
+    de: Können Sie mir sagen, …
+    en: Can you tell me …
+    pos: phrase
+    example: Können Sie mir sagen, wo die Post ist?
+    exampleEn: Can you tell me where the post office is?
+  - id: wissen-sie
+    de: Wissen Sie, …
+    en: Do you know …
+    pos: phrase
+    example: Wissen Sie, wann der Kurs beginnt?
+    exampleEn: Do you know when the course begins?
+  - id: darf-ich-fragen
+    de: Darf ich fragen, …
+    en: May I ask …
+    pos: phrase
+    example: Darf ich fragen, wie alt Sie sind?
+    exampleEn: May I ask how old you are?
+  - id: ich-moechte-wissen
+    de: Ich möchte wissen, …
+    en: I would like to know …
+    pos: phrase
+    example: Ich möchte wissen, was der Kurs kostet.
+    exampleEn: I would like to know what the course costs.
+  - id: keine-ahnung
+    de: keine Ahnung
+    en: no idea
+    pos: phrase
+    example: Ich habe keine Ahnung, wie das funktioniert.
+    exampleEn: I have no idea how that works.
+  - id: sich-fragen
+    de: sich fragen
+    en: to wonder
+    pos: verb
+    example: Ich frage mich, warum er nicht anruft.
+    exampleEn: I wonder why he does not call.
+  - id: funktionieren
+    de: funktionieren
+    en: to work, to function
+    pos: verb
+    example: Der Automat funktioniert nicht.
+    exampleEn: The machine does not work.
+  - id: auskunft
+    de: Auskunft
+    en: information (given on request)
+    pos: noun
+    article: die
+    plural: Auskünfte
+    example: Ich brauche eine Auskunft.
+    exampleEn: I need some information.
+  - id: frei
+    de: frei
+    en: free, vacant
+    pos: adjective
+    example: Haben Sie noch ein Zimmer frei?
+    exampleEn: Do you still have a room free?
+  - id: vielleicht
+    de: vielleicht
+    en: perhaps
+    pos: adverb
+    example: Wissen Sie vielleicht, wo der Bahnhof ist?
+    exampleEn: Do you happen to know where the station is?
+  - id: genau
+    de: genau
+    en: exactly
+    pos: adverb
+    example: Ich weiß nicht genau, wann er kommt.
+    exampleEn: I do not know exactly when he is coming.
+  - id: dauern
+    de: dauern
+    en: to last, to take (time)
+    pos: verb
+    example: Wie lange dauert der Kurs?
+    exampleEn: How long does the course last?
+  - id: automat
+    de: Automat
+    en: machine (ticket, vending)
+    pos: noun
+    article: der
+    plural: Automaten
+    example: Wo ist der Fahrkartenautomat?
+    exampleEn: Where is the ticket machine?
+  - id: toilette
+    de: Toilette
+    en: toilet
+    pos: noun
+    article: die
+    plural: Toiletten
+    example: Können Sie mir sagen, wo die Toiletten sind?
+    exampleEn: Can you tell me where the toilets are?
+  - id: in-der-naehe
+    de: in der Nähe
+    en: nearby
+    pos: phrase
+    example: Gibt es hier in der Nähe eine Apotheke?
+    exampleEn: Is there a pharmacy nearby?
+  - id: nachfragen
+    de: nachfragen
+    en: to ask, to enquire
+    pos: verb
+    example: Ich frage noch einmal nach.
+    exampleEn: I will ask again.

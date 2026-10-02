@@ -1,0 +1,216 @@
+lesson: a2.09
+sets:
+  - title: The verb goes to the end
+    instructions: Complete the indirect question.
+    items:
+      - id: verb1
+        type: fill-blank
+        tags: [indirect questions]
+        prompt: "Können Sie mir sagen, wo die Post ___?"
+        answers: [ist]
+      - id: verb2
+        type: fill-blank
+        tags: [indirect questions]
+        prompt: "Wissen Sie, wann der Kurs ___? (beginnen)"
+        answers: [beginnt]
+      - id: verb3
+        type: fill-blank
+        tags: [indirect questions]
+        prompt: "Ich weiß nicht, warum er nicht ___. (kommen)"
+        answers: [kommt]
+      - id: verb4
+        type: fill-blank
+        tags: [indirect questions]
+        prompt: "Wissen Sie, wo ich parken ___? (können)"
+        answers: [kann]
+      - id: verb5
+        type: fill-blank
+        tags: [indirect questions]
+        prompt: "Können Sie mir sagen, wann der Zug ___? (abfahren)"
+        answers: [abfährt]
+
+  - title: Which sentence is correct?
+    items:
+      - id: pos1
+        type: multiple-choice
+        tags: [indirect questions]
+        prompt: Choose the correct sentence.
+        options:
+          - "Können Sie mir sagen, wo der Bahnhof ist?"
+          - "Können Sie mir sagen, wo ist der Bahnhof?"
+        answer: "Können Sie mir sagen, wo der Bahnhof ist?"
+      - id: pos2
+        type: multiple-choice
+        tags: [indirect questions]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich weiß nicht, ob er heute kommt."
+          - "Ich weiß nicht, ob kommt er heute."
+          - "Ich weiß nicht, er kommt heute."
+        answer: "Ich weiß nicht, ob er heute kommt."
+      - id: pos3
+        type: multiple-choice
+        tags: [indirect questions]
+        prompt: Which sentence ends correctly?
+        options:
+          - "Ich weiß nicht, wo mein Schlüssel ist."
+          - "Ich weiß nicht, wo mein Schlüssel ist?"
+        answer: "Ich weiß nicht, wo mein Schlüssel ist."
+        explanation: The opening is a statement, so there is no question mark.
+
+  - title: ob or a question word?
+    items:
+      - id: ob1
+        type: multiple-choice
+        tags: [ob]
+        prompt: "Wissen Sie, ___ das Museum heute geöffnet ist?"
+        options: [ob, wo, was]
+        answer: ob
+        explanation: The direct question is a yes/no question, so it needs ob.
+      - id: ob2
+        type: multiple-choice
+        tags: [ob]
+        prompt: "Können Sie mir sagen, ___ der Kurs kostet?"
+        options: [was, ob, wo]
+        answer: was
+      - id: ob3
+        type: multiple-choice
+        tags: [ob]
+        prompt: "Ich bin nicht sicher, ___ ich Zeit habe."
+        options: [ob, wenn, dass]
+        answer: ob
+      - id: ob4
+        type: multiple-choice
+        tags: [ob]
+        prompt: "Ich möchte wissen, ___ der Zug ankommt."
+        options: [wann, ob, wenn]
+        answer: wann
+
+  - title: ob, wenn or dass?
+    items:
+      - id: owd1
+        type: multiple-choice
+        tags: [ob wenn dass]
+        prompt: "Ich weiß nicht, ___ er kommt oder nicht."
+        options: [ob, wenn, dass]
+        answer: ob
+      - id: owd2
+        type: multiple-choice
+        tags: [ob wenn dass]
+        prompt: "Ich freue mich, ___ er kommt. (if he does)"
+        options: [wenn, ob, was]
+        answer: wenn
+      - id: owd3
+        type: multiple-choice
+        tags: [ob wenn dass]
+        prompt: "Ich weiß, ___ er morgen kommt. (It is certain.)"
+        options: [dass, ob, wenn]
+        answer: dass
+
+  - title: Make it polite
+    instructions: Turn the direct question into an indirect one. Start as shown.
+    items:
+      - id: turn1
+        type: translation
+        tags: [indirect questions]
+        prompt: "Wo ist die Toilette? → Können Sie mir sagen, …"
+        answers:
+          - "Können Sie mir sagen, wo die Toilette ist?"
+      - id: turn2
+        type: translation
+        tags: [indirect questions]
+        prompt: "Wann beginnt der Film? → Wissen Sie, …"
+        answers:
+          - "Wissen Sie, wann der Film beginnt?"
+      - id: turn3
+        type: translation
+        tags: [indirect questions, ob]
+        prompt: "Ist der Platz frei? → Darf ich fragen, …"
+        answers:
+          - "Darf ich fragen, ob der Platz frei ist?"
+      - id: turn4
+        type: translation
+        tags: [indirect questions, ob]
+        prompt: "Kommt Anna auch? → Ich weiß nicht, …"
+        answers:
+          - "Ich weiß nicht, ob Anna auch kommt."
+      - id: turn5
+        type: translation
+        tags: [indirect questions]
+        prompt: "Was kostet das Ticket? → Ich möchte wissen, …"
+        answers:
+          - "Ich möchte wissen, was das Ticket kostet."
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [indirect questions]
+        prompt: Do you know when the train arrives?
+        answer: "Wissen Sie, wann der Zug ankommt?"
+      - id: order2
+        type: word-order
+        tags: [indirect questions, ob]
+        prompt: I am not sure whether I have time.
+        answer: "Ich bin nicht sicher, ob ich Zeit habe."
+      - id: order3
+        type: word-order
+        tags: [indirect questions]
+        prompt: I have no idea how that works.
+        answer: "Ich habe keine Ahnung, wie das funktioniert."
+
+  - title: At the information desk
+    stimulus:
+      kind: audio
+      label: An der Information
+      lines:
+        - speaker: Tourist
+          text: "Guten Tag. Können Sie mir sagen, wann das Stadtmuseum geöffnet ist?"
+        - speaker: Angestellte
+          text: "Ja, von zehn bis siebzehn Uhr. Aber am Montag ist es geschlossen."
+        - speaker: Tourist
+          text: "Und wissen Sie, ob es eine Führung auf Englisch gibt?"
+        - speaker: Angestellte
+          text: "Ja, jeden Tag um vierzehn Uhr."
+        - speaker: Tourist
+          text: "Darf ich noch fragen, was der Eintritt kostet?"
+        - speaker: Angestellte
+          text: "Acht Euro. Studenten zahlen fünf Euro."
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening, indirect questions]
+        prompt: Das Museum ist am Montag geöffnet.
+        answer: false
+      - id: listen2
+        type: multiple-choice
+        tags: [listening, indirect questions]
+        prompt: Wann gibt es eine Führung auf Englisch?
+        options: ["um 14 Uhr", "um 10 Uhr", "um 17 Uhr"]
+        answer: "um 14 Uhr"
+      - id: listen3
+        type: multiple-choice
+        tags: [listening, prices]
+        prompt: Was bezahlen Studenten?
+        options: ["5 Euro", "8 Euro", "nichts"]
+        answer: "5 Euro"
+
+  - title: Now you ask
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, indirect questions]
+        prompt: You are at a station information desk. Ask politely about each point, using an indirect question each time.
+        cards: [Zug nach Hamburg, Gleis, Fahrkarte kaufen, Verspätung?]
+        phrases:
+          - Können Sie mir sagen, wann …?
+          - Wissen Sie, von welchem Gleis …?
+          - Können Sie mir sagen, wo ich … kann?
+          - Wissen Sie, ob …?
+        checklist:
+          - I asked about all four points
+          - I used a polite opening each time
+          - The verb was at the end of each indirect question
+          - I used ob for the yes/no question
+        sample: "Guten Tag. Können Sie mir sagen, wann der nächste Zug nach Hamburg fährt? Wissen Sie, von welchem Gleis er abfährt? Können Sie mir sagen, wo ich eine Fahrkarte kaufen kann? Und wissen Sie, ob der Zug Verspätung hat?"
