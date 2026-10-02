@@ -1,0 +1,228 @@
+lesson: a1.20
+sets:
+  - title: haben or sein?
+    instructions: "Ask: does the subject move to another place, or change state?"
+    items:
+      - id: hs1
+        type: multiple-choice
+        tags: [haben or sein]
+        prompt: Ich ___ nach Berlin gefahren.
+        options: [bin, habe]
+        answer: bin
+      - id: hs2
+        type: multiple-choice
+        tags: [haben or sein]
+        prompt: Ich ___ ein Buch gekauft.
+        options: [habe, bin]
+        answer: habe
+        explanation: A verb with a direct object takes haben.
+      - id: hs3
+        type: multiple-choice
+        tags: [haben or sein]
+        prompt: Wir ___ ins Kino gegangen.
+        options: [sind, haben]
+        answer: sind
+      - id: hs4
+        type: multiple-choice
+        tags: [haben or sein]
+        prompt: Er ___ gut geschlafen.
+        options: [hat, ist]
+        answer: hat
+        explanation: Sleeping is a state, not a change.
+      - id: hs5
+        type: multiple-choice
+        tags: [haben or sein]
+        prompt: Sie ___ um sechs Uhr aufgestanden.
+        options: [ist, hat]
+        answer: ist
+        explanation: Getting up is a change of state.
+      - id: hs6
+        type: multiple-choice
+        tags: [haben or sein]
+        prompt: Ich ___ am Wochenende zu Hause geblieben.
+        options: [bin, habe]
+        answer: bin
+        explanation: bleiben is an exception that takes sein.
+      - id: hs7
+        type: multiple-choice
+        tags: [haben or sein]
+        prompt: Wir ___ Pizza gegessen.
+        options: [haben, sind]
+        answer: haben
+      - id: hs8
+        type: multiple-choice
+        tags: [haben or sein]
+        prompt: Wann ___ du nach Hause gekommen?
+        options: [bist, hast]
+        answer: bist
+
+  - title: The participles
+    items:
+      - id: part1
+        type: matching
+        tags: [participles]
+        prompt: Match each verb with its participle.
+        pairs:
+          - { left: gehen, right: gegangen }
+          - { left: fahren, right: gefahren }
+          - { left: kommen, right: gekommen }
+          - { left: fliegen, right: geflogen }
+          - { left: bleiben, right: geblieben }
+          - { left: aufstehen, right: aufgestanden }
+      - id: part2
+        type: fill-blank
+        tags: [participles]
+        prompt: "Wir sind nach Spanien ___. (fliegen)"
+        answers: [geflogen]
+      - id: part3
+        type: fill-blank
+        tags: [participles]
+        prompt: "Der Zug ist pünktlich ___. (ankommen)"
+        answers: [angekommen]
+      - id: part4
+        type: fill-blank
+        tags: [participles]
+        prompt: "Ich bin zu Hause ___. (bleiben)"
+        answers: [geblieben]
+
+  - title: war and hatte
+    items:
+      - id: war1
+        type: fill-blank
+        tags: [war and hatte]
+        prompt: "Ich ___ gestern im Kino. (sein)"
+        answers: [war]
+      - id: war2
+        type: fill-blank
+        tags: [war and hatte]
+        prompt: "Wo ___ du am Samstag? (sein)"
+        answers: [warst]
+      - id: war3
+        type: fill-blank
+        tags: [war and hatte]
+        prompt: "Wir ___ in Italien. (sein)"
+        answers: [waren]
+      - id: war4
+        type: fill-blank
+        tags: [war and hatte]
+        prompt: "Ich ___ keine Zeit. (haben)"
+        answers: [hatte]
+      - id: war5
+        type: fill-blank
+        tags: [war and hatte]
+        prompt: "Wir ___ viel Spaß. (haben)"
+        answers: [hatten]
+      - id: war6
+        type: fill-blank
+        tags: [war and hatte]
+        prompt: "Das Wetter ___ schön. (sein)"
+        answers: [war]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [perfect tense, word order]
+        prompt: I went to Berlin by train.
+        answer: Ich bin mit dem Zug nach Berlin gefahren.
+      - id: order2
+        type: word-order
+        tags: [perfect tense, word order]
+        prompt: Yesterday we went to the cinema.
+        answer: Gestern sind wir ins Kino gegangen.
+      - id: order3
+        type: word-order
+        tags: [perfect tense, word order]
+        prompt: When did you get up?
+        answer: Wann bist du aufgestanden?
+
+  - title: A weekend in Hamburg
+    instructions: Read the text, then answer.
+    stimulus:
+      kind: text
+      label: E-Mail
+      text: |
+        Hallo Lena,
+        am Wochenende war ich in Hamburg. Ich bin am Samstag um sieben Uhr aufgestanden und mit dem Zug gefahren. Um elf Uhr bin ich angekommen.
+        Zuerst habe ich meine Schwester getroffen. Dann sind wir in die Stadt gegangen und haben Fisch gegessen. Das Wetter war leider nicht gut.
+        Am Sonntag sind wir zu Hause geblieben und haben einen Film gesehen. Am Abend bin ich wieder nach Köln gefahren.
+        Viele Grüße
+        Tom
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading, perfect tense]
+        prompt: Tom ist mit dem Auto nach Hamburg gefahren.
+        answer: false
+      - id: read2
+        type: multiple-choice
+        tags: [reading, perfect tense]
+        prompt: Wann ist Tom in Hamburg angekommen?
+        options: [um elf Uhr, um sieben Uhr, am Abend]
+        answer: um elf Uhr
+      - id: read3
+        type: true-false
+        tags: [reading, perfect tense]
+        prompt: Das Wetter war schön.
+        answer: false
+      - id: read4
+        type: multiple-choice
+        tags: [reading, perfect tense]
+        prompt: Was haben Tom und seine Schwester am Sonntag gemacht?
+        options:
+          - Sie sind zu Hause geblieben.
+          - Sie sind in die Stadt gegangen.
+          - Sie haben Fisch gegessen.
+        answer: Sie sind zu Hause geblieben.
+
+  - title: Complete the story
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [haben or sein]
+        prompt: Fill each gap with the right form of haben or sein.
+        text: "Gestern ___ ich um acht Uhr aufgestanden. Ich ___ gefrühstückt und ___ dann zur Arbeit gefahren. Am Abend ___ ich meine Freundin getroffen. Wir ___ ins Restaurant gegangen."
+        gaps:
+          - [bin]
+          - [habe]
+          - [bin]
+          - [habe]
+          - [sind]
+
+  - title: Say and write it
+    items:
+      - id: tr1
+        type: translation
+        tags: [perfect tense]
+        prompt: I stayed at home.
+        answers:
+          - Ich bin zu Hause geblieben.
+      - id: tr2
+        type: translation
+        tags: [war and hatte]
+        prompt: Where were you yesterday? (informal)
+        answers:
+          - Wo warst du gestern?
+      - id: tr3
+        type: translation
+        tags: [perfect tense]
+        prompt: We went to the cinema.
+        answers:
+          - Wir sind ins Kino gegangen.
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, perfect tense]
+        prompt: Tell someone what you did last weekend, in four or five sentences.
+        cards: [Samstag, wohin?, mit wem?, Wetter, Sonntag]
+        phrases:
+          - Am Samstag bin ich … gefahren / gegangen.
+          - Ich habe … getroffen / gegessen / gemacht.
+          - Das Wetter war …
+          - Am Sonntag bin ich zu Hause geblieben.
+        checklist:
+          - I used sein with a verb of movement
+          - I used haben with at least one other verb
+          - I used war or hatte once
+          - The participle came at the end each time
+        sample: "Am Samstag bin ich mit dem Bus in die Stadt gefahren. Ich habe einen Freund getroffen und wir haben Kaffee getrunken. Das Wetter war schön. Am Sonntag bin ich zu Hause geblieben und habe ein Buch gelesen."
