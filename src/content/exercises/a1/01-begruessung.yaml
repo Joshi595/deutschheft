@@ -1,0 +1,237 @@
+lesson: a1.01
+sets:
+  - title: The right greeting
+    instructions: Choose what you would say.
+    items:
+      - id: time1
+        type: multiple-choice
+        tags: [greetings]
+        prompt: It is 8 o'clock in the morning. You meet your neighbour, Mrs Weber.
+        options: ["Guten Morgen, Frau Weber!", "Guten Abend, Frau Weber!", "Gute Nacht, Frau Weber!"]
+        answer: "Guten Morgen, Frau Weber!"
+      - id: time2
+        type: multiple-choice
+        tags: [greetings]
+        prompt: It is 2 o'clock in the afternoon. You walk into a shop.
+        options: [Guten Tag!, Guten Morgen!, Gute Nacht!]
+        answer: Guten Tag!
+      - id: time3
+        type: multiple-choice
+        tags: [greetings]
+        prompt: It is 8 o'clock in the evening. You arrive at a restaurant.
+        options: [Guten Abend!, Gute Nacht!, Guten Morgen!]
+        answer: Guten Abend!
+        explanation: Gute Nacht is only said when someone is going to bed.
+      - id: time4
+        type: multiple-choice
+        tags: [greetings]
+        prompt: You leave your friend Tom after coffee.
+        options: ["Tschüs, bis bald!", "Auf Wiedersehen, Herr Tom!", "Guten Tag!"]
+        answer: "Tschüs, bis bald!"
+
+  - title: What does it mean?
+    items:
+      - id: match1
+        type: matching
+        tags: [greetings]
+        prompt: Match each expression with its meaning.
+        pairs:
+          - { left: Guten Abend, right: good evening }
+          - { left: Auf Wiedersehen, right: goodbye }
+          - { left: Bis morgen, right: see you tomorrow }
+          - { left: Entschuldigung, right: excuse me }
+          - { left: Tut mir leid, right: I am sorry }
+          - { left: Es geht, right: so-so }
+
+  - title: Formal or informal?
+    items:
+      - id: formal1
+        type: multiple-choice
+        tags: [formal and informal]
+        prompt: You greet your doctor, Dr Schmidt. How do you ask how he is?
+        options: [Wie geht es Ihnen?, Wie geht es dir?, Wie geht's?]
+        answer: Wie geht es Ihnen?
+      - id: formal2
+        type: multiple-choice
+        tags: [formal and informal]
+        prompt: You greet your friend Anna. How do you ask how she is?
+        options: [Wie geht es dir?, Wie geht es Ihnen?]
+        answer: Wie geht es dir?
+      - id: formal3
+        type: multiple-choice
+        tags: [formal and informal]
+        prompt: Which greeting is correct?
+        options: ["Guten Tag, Frau Weber.", "Guten Tag, Frau Anna.", "Hallo, Herr Tom."]
+        answer: "Guten Tag, Frau Weber."
+        explanation: Herr and Frau go with the family name.
+
+  - title: Complete the conversation
+    items:
+      - id: fill1
+        type: fill-blank
+        tags: [formal and informal]
+        prompt: "Guten Tag, Frau Weber. Wie geht es ___?"
+        answers: [Ihnen]
+        translation: Hello, Mrs Weber. How are you?
+      - id: fill2
+        type: fill-blank
+        tags: [formal and informal]
+        prompt: "Hallo Tom! Wie geht es ___?"
+        answers: [dir]
+        translation: Hi Tom! How are you?
+      - id: fill3
+        type: fill-blank
+        tags: [greetings]
+        prompt: "Auf ___, Herr Schmidt!"
+        answers: [Wiedersehen]
+        translation: Goodbye, Mr Schmidt!
+      - id: cloze1
+        type: cloze
+        tags: [greetings]
+        prompt: Fill the gaps with the words from the list.
+        text: "Guten ___, Herr Meier. Wie geht es Ihnen?\nDanke, ___. Und ___?\nAuch gut, danke. Auf ___!"
+        gaps:
+          - [Tag]
+          - [gut]
+          - [Ihnen]
+          - [Wiedersehen]
+        bank: [Tag, gut, Ihnen, Wiedersehen, dir, Nacht]
+
+  - title: How does it sound?
+    instructions: Think of the sound rules, then choose.
+    items:
+      - id: sound1
+        type: multiple-choice
+        tags: [pronunciation]
+        prompt: The w in "Wasser" sounds like the English letter …
+        options: [v, w, f]
+        answer: v
+      - id: sound2
+        type: multiple-choice
+        tags: [pronunciation]
+        prompt: The v in "Vater" sounds like the English letter …
+        options: [f, v, w]
+        answer: f
+      - id: sound3
+        type: multiple-choice
+        tags: [pronunciation]
+        prompt: The ei in "nein" sounds like the English word …
+        options: [eye, see, say]
+        answer: eye
+        explanation: "ei = eye, ie = ee. Say the name of the second letter in English."
+      - id: sound4
+        type: multiple-choice
+        tags: [pronunciation]
+        prompt: The ie in "wie" sounds like the English …
+        options: [ee, eye, eh]
+        answer: ee
+      - id: sound5
+        type: multiple-choice
+        tags: [pronunciation]
+        prompt: The z in "Zeit" sounds like …
+        options: [ts, z as in zoo, s]
+        answer: ts
+      - id: sound6
+        type: multiple-choice
+        tags: [pronunciation]
+        prompt: Which word starts with a "sh" sound?
+        options: [Sport, Sonne, sehr]
+        answer: Sport
+        explanation: sp and st at the start of a word are pronounced shp and sht.
+
+  - title: Listen and choose the name
+    instructions: Someone spells a name. Which one is it?
+    items:
+      - id: spell1
+        type: multiple-choice
+        tags: [alphabet]
+        prompt: Which name do you hear?
+        stimulus:
+          kind: audio
+          label: Buchstabieren
+          lines:
+            - text: "M, Ü, L, L, E, R."
+        options: [Müller, Miller, Möller]
+        answer: Müller
+      - id: spell2
+        type: multiple-choice
+        tags: [alphabet]
+        prompt: Which name do you hear?
+        stimulus:
+          kind: audio
+          label: Buchstabieren
+          lines:
+            - text: "W, E, B, E, R."
+        options: [Weber, Veber, Wiber]
+        answer: Weber
+        explanation: "W is called veh, and E is called eh."
+      - id: spell3
+        type: multiple-choice
+        tags: [alphabet]
+        prompt: Which name do you hear?
+        stimulus:
+          kind: audio
+          label: Buchstabieren
+          lines:
+            - text: "V, O, G, E, L."
+        options: [Vogel, Wogel, Fogel]
+        answer: Vogel
+        explanation: "V is called fow. It is the letter that sounds like f."
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [greetings]
+        prompt: Hello, how are you? (formal)
+        answer: "Guten Tag, wie geht es Ihnen?"
+      - id: order2
+        type: word-order
+        tags: [greetings]
+        prompt: Thank you, I am fine.
+        answer: "Danke, mir geht es gut."
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [greetings]
+        prompt: Good morning!
+        answers: [Guten Morgen!]
+      - id: tr2
+        type: translation
+        tags: [greetings]
+        prompt: See you tomorrow!
+        answers: [Bis morgen!]
+      - id: tr3
+        type: translation
+        tags: [greetings]
+        prompt: Goodbye! (formal)
+        answers: [Auf Wiedersehen!]
+      - id: tr4
+        type: translation
+        tags: [greetings]
+        prompt: Fine, thanks. And you? (formal)
+        answers:
+          - "Gut, danke. Und Ihnen?"
+          - "Danke, gut. Und Ihnen?"
+
+  - title: Now you speak
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [greetings, speaking]
+        prompt: You meet your teacher, Frau Weber, in the afternoon. Greet her, ask how she is, answer her question, and say goodbye.
+        cards: [Begrüßung, Wie geht es …?, Antwort, Abschied]
+        phrases:
+          - Guten Tag, Frau …
+          - Wie geht es Ihnen?
+          - Danke, gut. Und Ihnen?
+          - Auf Wiedersehen!
+        checklist:
+          - I used a formal greeting that fits the time of day
+          - I asked how she is with Ihnen, not dir
+          - I answered and returned the question
+          - I said goodbye formally
+        sample: "Guten Tag, Frau Weber! Wie geht es Ihnen? Danke, mir geht es gut. Auf Wiedersehen, bis morgen!"

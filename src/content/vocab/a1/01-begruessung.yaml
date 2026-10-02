@@ -1,0 +1,144 @@
+lesson: a1.01
+items:
+  - id: hallo
+    de: Hallo
+    en: hello, hi
+    pos: phrase
+    example: Hallo, Anna!
+    exampleEn: Hi, Anna!
+  - id: guten-morgen
+    de: Guten Morgen
+    en: good morning
+    pos: phrase
+    example: Guten Morgen, Frau Weber!
+    exampleEn: Good morning, Mrs Weber!
+  - id: guten-tag
+    de: Guten Tag
+    en: hello, good day
+    pos: phrase
+    example: Guten Tag, Herr Schmidt.
+    exampleEn: Hello, Mr Schmidt.
+  - id: guten-abend
+    de: Guten Abend
+    en: good evening
+    pos: phrase
+    example: Guten Abend, Herr Meier!
+    exampleEn: Good evening, Mr Meier!
+  - id: gute-nacht
+    de: Gute Nacht
+    en: good night (at bedtime)
+    pos: phrase
+    example: Gute Nacht, bis morgen!
+    exampleEn: Good night, see you tomorrow!
+  - id: auf-wiedersehen
+    de: Auf Wiedersehen
+    en: goodbye (formal)
+    pos: phrase
+    example: Auf Wiedersehen, Frau Weber!
+    exampleEn: Goodbye, Mrs Weber!
+  - id: tschues
+    de: Tschüs
+    en: bye (informal)
+    pos: phrase
+    example: Tschüs, Tom!
+    exampleEn: Bye, Tom!
+  - id: bis-bald
+    de: Bis bald
+    en: see you soon
+    pos: phrase
+    example: Tschüs, bis bald!
+    exampleEn: Bye, see you soon!
+  - id: bis-morgen
+    de: Bis morgen
+    en: see you tomorrow
+    pos: phrase
+    example: Auf Wiedersehen, bis morgen!
+    exampleEn: Goodbye, see you tomorrow!
+  - id: wie-geht-es-ihnen
+    de: Wie geht es Ihnen?
+    en: How are you? (formal)
+    pos: phrase
+    example: Guten Tag, Frau Weber. Wie geht es Ihnen?
+    exampleEn: Hello, Mrs Weber. How are you?
+  - id: wie-geht-es-dir
+    de: Wie geht es dir?
+    en: How are you? (informal)
+    pos: phrase
+    example: Hallo Tom, wie geht es dir?
+    exampleEn: Hi Tom, how are you?
+  - id: gut
+    de: gut
+    en: good, well
+    pos: adjective
+    example: Danke, gut.
+    exampleEn: Fine, thanks.
+  - id: sehr
+    de: sehr
+    en: very
+    pos: adverb
+    example: Sehr gut, danke.
+    exampleEn: Very well, thank you.
+  - id: es-geht
+    de: Es geht.
+    en: So-so.
+    pos: phrase
+    example: Wie geht's? Es geht.
+    exampleEn: How's it going? So-so.
+  - id: danke
+    de: danke
+    en: thank you
+    pos: other
+    example: Danke, sehr gut.
+    exampleEn: Thank you, very well.
+  - id: bitte
+    de: bitte
+    en: please; you're welcome
+    pos: other
+    example: Können Sie das bitte buchstabieren?
+    exampleEn: Can you spell that, please?
+  - id: entschuldigung
+    de: Entschuldigung
+    en: excuse me; sorry
+    pos: other
+    example: Entschuldigung, wie schreibt man das?
+    exampleEn: Excuse me, how do you write that?
+  - id: tut-mir-leid
+    de: Tut mir leid.
+    en: I am sorry.
+    pos: phrase
+    example: Nicht so gut. Tut mir leid.
+    exampleEn: Not so good. I am sorry.
+  - id: ja
+    de: ja
+    en: "yes"
+    pos: other
+    example: Ja, bitte.
+    exampleEn: Yes, please.
+  - id: nein
+    de: nein
+    en: "no"
+    pos: other
+    example: Nein, danke.
+    exampleEn: No, thank you.
+  - id: herr
+    de: Herr
+    en: Mr; gentleman
+    pos: noun
+    article: der
+    plural: Herren
+    example: Guten Tag, Herr Schmidt.
+    exampleEn: Hello, Mr Schmidt.
+  - id: frau
+    de: Frau
+    en: Mrs, Ms; woman
+    pos: noun
+    article: die
+    plural: Frauen
+    example: Guten Morgen, Frau Weber.
+    exampleEn: Good morning, Mrs Weber.
+  - id: buchstabieren
+    de: buchstabieren
+    en: to spell
+    pos: verb
+    example: Können Sie das bitte buchstabieren?
+    exampleEn: Can you spell that, please?
