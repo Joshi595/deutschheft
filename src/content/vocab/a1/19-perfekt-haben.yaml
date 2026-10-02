@@ -1,0 +1,150 @@
+lesson: a1.19
+items:
+  - id: gemacht
+    de: machen, hat gemacht
+    en: to do, did
+    pos: verb
+    example: Was hast du gestern gemacht?
+    exampleEn: What did you do yesterday?
+  - id: gekauft
+    de: kaufen, hat gekauft
+    en: to buy, bought
+    pos: verb
+    example: Ich habe ein Buch gekauft.
+    exampleEn: I bought a book.
+  - id: gearbeitet
+    de: arbeiten, hat gearbeitet
+    en: to work, worked
+    pos: verb
+    example: Er hat lange gearbeitet.
+    exampleEn: He worked late.
+  - id: gegessen
+    de: essen, hat gegessen
+    en: to eat, ate
+    pos: verb
+    example: Wir haben Pizza gegessen.
+    exampleEn: We ate pizza.
+  - id: getrunken
+    de: trinken, hat getrunken
+    en: to drink, drank
+    pos: verb
+    example: Ich habe einen Kaffee getrunken.
+    exampleEn: I drank a coffee.
+  - id: gelesen
+    de: lesen, hat gelesen
+    en: to read, read
+    pos: verb
+    example: Sie hat die Zeitung gelesen.
+    exampleEn: She read the newspaper.
+  - id: gesehen
+    de: sehen, hat gesehen
+    en: to see, saw
+    pos: verb
+    example: Hast du den Film gesehen?
+    exampleEn: Have you seen the film?
+  - id: geschrieben
+    de: schreiben, hat geschrieben
+    en: to write, wrote
+    pos: verb
+    example: Ich habe eine E-Mail geschrieben.
+    exampleEn: I wrote an email.
+  - id: gesprochen
+    de: sprechen, hat gesprochen
+    en: to speak, spoke
+    pos: verb
+    example: Wir haben Deutsch gesprochen.
+    exampleEn: We spoke German.
+  - id: genommen
+    de: nehmen, hat genommen
+    en: to take, took
+    pos: verb
+    example: Ich habe den Bus genommen.
+    exampleEn: I took the bus.
+  - id: getroffen
+    de: treffen, hat getroffen
+    en: to meet, met
+    pos: verb
+    example: Ich habe meine Freunde getroffen.
+    exampleEn: I met my friends.
+  - id: gefunden
+    de: finden, hat gefunden
+    en: to find, found
+    pos: verb
+    example: Ich habe den Schlüssel gefunden.
+    exampleEn: I found the key.
+  - id: geschlafen
+    de: schlafen, hat geschlafen
+    en: to sleep, slept
+    pos: verb
+    example: Wir haben lange geschlafen.
+    exampleEn: We slept late.
+  - id: geholfen
+    de: helfen, hat geholfen
+    en: to help, helped
+    pos: verb
+    example: Er hat mir geholfen.
+    exampleEn: He helped me.
+  - id: besucht
+    de: besuchen, hat besucht
+    en: to visit, visited
+    pos: verb
+    example: Ich habe meine Eltern besucht.
+    exampleEn: I visited my parents.
+  - id: verstanden
+    de: verstehen, hat verstanden
+    en: to understand, understood
+    pos: verb
+    example: Hast du das verstanden?
+    exampleEn: Did you understand that?
+  - id: studiert
+    de: studieren, hat studiert
+    en: to study, studied
+    pos: verb
+    example: Sie hat in Berlin studiert.
+    exampleEn: She studied in Berlin.
+  - id: eingekauft
+    de: einkaufen, hat eingekauft
+    en: to shop, shopped
+    pos: verb
+    example: Ich habe im Supermarkt eingekauft.
+    exampleEn: I did the shopping at the supermarket.
+  - id: angerufen
+    de: anrufen, hat angerufen
+    en: to phone, phoned
+    pos: verb
+    example: Sie hat ihre Mutter angerufen.
+    exampleEn: She phoned her mother.
+  - id: gestern
+    de: gestern
+    en: yesterday
+    pos: adverb
+    example: Gestern habe ich gearbeitet.
+    exampleEn: Yesterday I worked.
+  - id: letzte-woche
+    de: letzte Woche
+    en: last week
+    pos: phrase
+    example: Letzte Woche habe ich Anna getroffen.
+    exampleEn: Last week I met Anna.
+  - id: noch-nicht
+    de: noch nicht
+    en: not yet
+    pos: phrase
+    example: Ich habe noch nicht gegessen.
+    exampleEn: I have not eaten yet.
+  - id: schluessel
+    de: Schlüssel
+    en: key
+    pos: noun
+    article: der
+    plural: Schlüssel
+    example: Wo ist mein Schlüssel?
+    exampleEn: Where is my key?
+  - id: e-mail
+    de: E-Mail
+    en: email
+    pos: noun
+    article: die
+    plural: E-Mails
+    example: Ich schreibe eine E-Mail.
+    exampleEn: I am writing an email.

@@ -1,0 +1,242 @@
+lesson: a1.19
+sets:
+  - title: Regular participles
+    instructions: Write the participle.
+    items:
+      - id: reg1
+        type: fill-blank
+        tags: [participles]
+        prompt: "machen: ___"
+        answers: [gemacht]
+      - id: reg2
+        type: fill-blank
+        tags: [participles]
+        prompt: "kaufen: ___"
+        answers: [gekauft]
+      - id: reg3
+        type: fill-blank
+        tags: [participles]
+        prompt: "lernen: ___"
+        answers: [gelernt]
+      - id: reg4
+        type: fill-blank
+        tags: [participles]
+        prompt: "arbeiten: ___"
+        answers: [gearbeitet]
+        hint: The stem ends in -t.
+      - id: reg5
+        type: fill-blank
+        tags: [participles]
+        prompt: "spielen: ___"
+        answers: [gespielt]
+
+  - title: Irregular participles
+    items:
+      - id: irr1
+        type: matching
+        tags: [participles]
+        prompt: Match each verb with its participle.
+        pairs:
+          - { left: essen, right: gegessen }
+          - { left: trinken, right: getrunken }
+          - { left: schreiben, right: geschrieben }
+          - { left: nehmen, right: genommen }
+          - { left: sprechen, right: gesprochen }
+          - { left: helfen, right: geholfen }
+      - id: irr2
+        type: fill-blank
+        tags: [participles]
+        prompt: "sehen: ___"
+        answers: [gesehen]
+      - id: irr3
+        type: fill-blank
+        tags: [participles]
+        prompt: "lesen: ___"
+        answers: [gelesen]
+      - id: irr4
+        type: fill-blank
+        tags: [participles]
+        prompt: "schlafen: ___"
+        answers: [geschlafen]
+      - id: irr5
+        type: fill-blank
+        tags: [participles]
+        prompt: "finden: ___"
+        answers: [gefunden]
+
+  - title: With ge- or without?
+    items:
+      - id: ge1
+        type: multiple-choice
+        tags: [participles, no ge]
+        prompt: besuchen
+        options: [besucht, gebesucht, begesucht]
+        answer: besucht
+        explanation: Verbs with be- take no ge-.
+      - id: ge2
+        type: multiple-choice
+        tags: [participles, no ge]
+        prompt: studieren
+        options: [studiert, gestudiert, studieren]
+        answer: studiert
+        explanation: Verbs in -ieren take no ge-.
+      - id: ge3
+        type: multiple-choice
+        tags: [participles, separable verbs]
+        prompt: einkaufen
+        options: [eingekauft, geeinkauft, einkauft]
+        answer: eingekauft
+        explanation: In a separable verb, ge- goes in the middle.
+      - id: ge4
+        type: multiple-choice
+        tags: [participles, separable verbs]
+        prompt: anrufen
+        options: [angerufen, geanrufen, anruft]
+        answer: angerufen
+      - id: ge5
+        type: multiple-choice
+        tags: [participles, no ge]
+        prompt: verstehen
+        options: [verstanden, geverstanden, vergestanden]
+        answer: verstanden
+      - id: ge6
+        type: multiple-choice
+        tags: [participles, no ge]
+        prompt: bezahlen
+        options: [bezahlt, gebezahlt, bezahlen]
+        answer: bezahlt
+
+  - title: The right form of haben
+    items:
+      - id: haben1
+        type: fill-blank
+        tags: [perfect tense]
+        prompt: "Ich ___ gestern Deutsch gelernt."
+        answers: [habe]
+      - id: haben2
+        type: fill-blank
+        tags: [perfect tense]
+        prompt: "Was ___ du am Wochenende gemacht?"
+        answers: [hast]
+      - id: haben3
+        type: fill-blank
+        tags: [perfect tense]
+        prompt: "Er ___ lange gearbeitet."
+        answers: [hat]
+      - id: haben4
+        type: fill-blank
+        tags: [perfect tense]
+        prompt: "Wir ___ Pizza gegessen."
+        answers: [haben]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order. The participle goes to the end.
+    items:
+      - id: order1
+        type: word-order
+        tags: [perfect tense, word order]
+        prompt: I bought a book yesterday.
+        answer: Ich habe gestern ein Buch gekauft.
+      - id: order2
+        type: word-order
+        tags: [perfect tense, word order]
+        prompt: Have you seen the film?
+        answer: Hast du den Film gesehen?
+      - id: order3
+        type: word-order
+        tags: [perfect tense, word order]
+        prompt: Yesterday we watched TV.
+        answer: Gestern haben wir ferngesehen.
+      - id: order4
+        type: word-order
+        tags: [perfect tense, word order]
+        prompt: I did not understand that.
+        answer: Ich habe das nicht verstanden.
+
+  - title: From present to past
+    instructions: Rewrite the sentence in the Perfekt.
+    items:
+      - id: past1
+        type: translation
+        tags: [perfect tense]
+        prompt: "Ich kaufe Brot."
+        answers: [Ich habe Brot gekauft.]
+      - id: past2
+        type: translation
+        tags: [perfect tense]
+        prompt: "Sie liest die Zeitung. [she]"
+        answers: [Sie hat die Zeitung gelesen.]
+      - id: past3
+        type: translation
+        tags: [perfect tense]
+        prompt: "Wir besuchen Anna."
+        answers: [Wir haben Anna besucht.]
+      - id: past4
+        type: translation
+        tags: [perfect tense]
+        prompt: "Er ruft seine Mutter an."
+        answers: [Er hat seine Mutter angerufen.]
+
+  - title: What happened?
+    stimulus:
+      kind: audio
+      label: Am Montag im Büro
+      lines:
+        - speaker: Jan
+          text: "Hallo Sara! Was hast du am Wochenende gemacht?"
+        - speaker: Sara
+          text: "Am Samstag habe ich eingekauft und für meine Freunde gekocht. Am Sonntag habe ich lange geschlafen und ein Buch gelesen. Und du?"
+        - speaker: Jan
+          text: "Ich habe am Samstag gearbeitet. Am Sonntag habe ich meine Eltern besucht."
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening, perfect tense]
+        prompt: Sara hat am Samstag gekocht.
+        answer: true
+      - id: listen2
+        type: multiple-choice
+        tags: [listening, perfect tense]
+        prompt: Was hat Sara am Sonntag gemacht?
+        options:
+          - Sie hat lange geschlafen und gelesen.
+          - Sie hat eingekauft.
+          - Sie hat ihre Eltern besucht.
+        answer: Sie hat lange geschlafen und gelesen.
+      - id: listen3
+        type: true-false
+        tags: [listening, perfect tense]
+        prompt: Jan hat am Samstag seine Eltern besucht.
+        answer: false
+        explanation: He worked on Saturday and visited his parents on Sunday.
+
+  - title: Say and write it
+    items:
+      - id: tr1
+        type: translation
+        tags: [perfect tense]
+        prompt: What did you do yesterday? (informal)
+        answers:
+          - Was hast du gestern gemacht?
+      - id: tr2
+        type: translation
+        tags: [perfect tense]
+        prompt: I have not eaten yet.
+        answers:
+          - Ich habe noch nicht gegessen.
+      - id: write1
+        type: writing-task
+        tags: [writing, perfect tense]
+        prompt: Write four sentences about what you did last weekend. Use only verbs that take haben.
+        points:
+          - Something you did on Saturday
+          - Something you ate or drank
+          - Someone you met, visited or phoned
+          - Something you did on Sunday
+        minWords: 25
+        phrases:
+          - Am Samstag habe ich …
+          - Ich habe … gegessen / getrunken.
+          - Ich habe … getroffen / besucht / angerufen.
+          - Am Sonntag habe ich …
+        sample: "Am Samstag habe ich eingekauft und die Wohnung aufgeräumt. Am Abend habe ich mit Freunden Pizza gegessen. Am Sonntag habe ich lange geschlafen. Dann habe ich meine Eltern angerufen und ein Buch gelesen."
