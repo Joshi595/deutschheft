@@ -1,0 +1,182 @@
+lesson: a1.24
+items:
+  - id: wetter
+    de: Wetter
+    en: weather
+    pos: noun
+    article: das
+    plural: "-"
+    example: Wie ist das Wetter?
+    exampleEn: What is the weather like?
+  - id: sonne
+    de: Sonne
+    en: sun
+    pos: noun
+    article: die
+    plural: Sonnen
+    example: Die Sonne scheint.
+    exampleEn: The sun is shining.
+  - id: regen
+    de: Regen
+    en: rain
+    pos: noun
+    article: der
+    plural: "-"
+    example: Der Regen hört nicht auf.
+    exampleEn: The rain is not stopping.
+  - id: schnee
+    de: Schnee
+    en: snow
+    pos: noun
+    article: der
+    plural: "-"
+    example: Im Winter gibt es Schnee.
+    exampleEn: In winter there is snow.
+  - id: wind
+    de: Wind
+    en: wind
+    pos: noun
+    article: der
+    plural: Winde
+    example: Der Wind ist kalt.
+    exampleEn: The wind is cold.
+  - id: regnen
+    de: regnen
+    en: to rain
+    pos: verb
+    example: Es regnet.
+    exampleEn: It is raining.
+  - id: schneien
+    de: schneien
+    en: to snow
+    pos: verb
+    example: Es schneit.
+    exampleEn: It is snowing.
+  - id: scheinen
+    de: scheinen
+    en: to shine
+    pos: verb
+    example: Heute scheint die Sonne.
+    exampleEn: The sun is shining today.
+  - id: warm
+    de: warm
+    en: warm
+    pos: adjective
+    example: Im Sommer ist es warm.
+    exampleEn: In summer it is warm.
+  - id: kalt
+    de: kalt
+    en: cold
+    pos: adjective
+    example: Heute ist es kalt.
+    exampleEn: It is cold today.
+  - id: heiss
+    de: heiß
+    en: hot
+    pos: adjective
+    example: Im August ist es heiß.
+    exampleEn: In August it is hot.
+  - id: grad
+    de: Grad
+    en: degree
+    pos: noun
+    article: der
+    plural: Grad
+    example: Heute sind es zwanzig Grad.
+    exampleEn: It is twenty degrees today.
+  - id: fruehling
+    de: Frühling
+    en: spring
+    pos: noun
+    article: der
+    plural: Frühlinge
+    example: Im Frühling ist es schön.
+    exampleEn: In spring it is nice.
+  - id: sommer
+    de: Sommer
+    en: summer
+    pos: noun
+    article: der
+    plural: Sommer
+    example: Im Sommer fahren wir ans Meer.
+    exampleEn: In summer we go to the seaside.
+  - id: herbst
+    de: Herbst
+    en: autumn
+    pos: noun
+    article: der
+    plural: Herbste
+    example: Im Herbst regnet es oft.
+    exampleEn: In autumn it often rains.
+  - id: winter
+    de: Winter
+    en: winter
+    pos: noun
+    article: der
+    plural: Winter
+    example: Im Winter schneit es.
+    exampleEn: In winter it snows.
+  - id: monat
+    de: Monat
+    en: month
+    pos: noun
+    article: der
+    plural: Monate
+    example: Das Jahr hat zwölf Monate.
+    exampleEn: The year has twelve months.
+  - id: datum
+    de: Datum
+    en: date
+    pos: noun
+    article: das
+    plural: Daten
+    example: Welches Datum ist heute?
+    exampleEn: What is the date today?
+  - id: geburtstag
+    de: Geburtstag
+    en: birthday
+    pos: noun
+    article: der
+    plural: Geburtstage
+    example: Wann hast du Geburtstag?
+    exampleEn: When is your birthday?
+  - id: geburtsdatum
+    de: Geburtsdatum
+    en: date of birth
+    pos: noun
+    article: das
+    plural: Geburtsdaten
+    example: "Geburtsdatum: 05.05.1995."
+    exampleEn: "Date of birth: 5 May 1995."
+  - id: geboren
+    de: geboren
+    en: born
+    pos: adjective
+    example: Ich bin 1995 geboren.
+    exampleEn: I was born in 1995.
+  - id: erste
+    de: der erste
+    en: the first
+    pos: other
+    example: Heute ist der erste Mai.
+    exampleEn: Today is the first of May.
+  - id: dritte
+    de: der dritte
+    en: the third
+    pos: other
+    example: Am dritten Juni habe ich einen Termin.
+    exampleEn: On the third of June I have an appointment.
+  - id: herzlichen-glueckwunsch
+    de: Herzlichen Glückwunsch!
+    en: Congratulations!
+    pos: phrase
+    example: Herzlichen Glückwunsch zum Geburtstag!
+    exampleEn: Happy birthday!
+  - id: ferien
+    de: Ferien
+    en: holidays (from school)
+    pos: noun
+    article: die
+    plural: Ferien
+    example: Die Ferien beginnen im Juli.
+    exampleEn: The holidays begin in July.
