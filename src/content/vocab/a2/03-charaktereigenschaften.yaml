@@ -1,0 +1,152 @@
+lesson: a2.03
+items:
+  - id: freundlich
+    de: freundlich
+    en: friendly
+    pos: adjective
+    example: Sie ist sehr freundlich.
+    exampleEn: She is very friendly.
+  - id: hoeflich
+    de: höflich
+    en: polite
+    pos: adjective
+    example: Der Verkäufer war sehr höflich.
+    exampleEn: The shop assistant was very polite.
+  - id: ehrlich
+    de: ehrlich
+    en: honest
+    pos: adjective
+    example: Er ist immer ehrlich.
+    exampleEn: He is always honest.
+  - id: geduldig
+    de: geduldig
+    en: patient
+    pos: adjective
+    example: Unsere Lehrerin ist sehr geduldig.
+    exampleEn: Our teacher is very patient.
+  - id: zuverlaessig
+    de: zuverlässig
+    en: reliable
+    pos: adjective
+    example: Mein Kollege ist zuverlässig.
+    exampleEn: My colleague is reliable.
+  - id: fleissig
+    de: fleißig
+    en: hard-working
+    pos: adjective
+    example: Die Schüler sind fleißig.
+    exampleEn: The pupils are hard-working.
+  - id: faul
+    de: faul
+    en: lazy
+    pos: adjective
+    example: Am Sonntag bin ich faul.
+    exampleEn: On Sundays I am lazy.
+  - id: mutig
+    de: mutig
+    en: brave
+    pos: adjective
+    example: Sie ist sehr mutig.
+    exampleEn: She is very brave.
+  - id: lustig
+    de: lustig
+    en: funny
+    pos: adjective
+    example: Mein Freund ist sehr lustig.
+    exampleEn: My friend is very funny.
+  - id: ernst
+    de: ernst
+    en: serious
+    pos: adjective
+    example: Er ist viel zu ernst.
+    exampleEn: He is far too serious.
+  - id: schuechtern
+    de: schüchtern
+    en: shy
+    pos: adjective
+    example: Das Kind ist schüchtern.
+    exampleEn: The child is shy.
+  - id: selbstbewusst
+    de: selbstbewusst
+    en: self-confident
+    pos: adjective
+    example: Er wirkt sehr selbstbewusst.
+    exampleEn: He seems very self-confident.
+  - id: grosszuegig
+    de: großzügig
+    en: generous
+    pos: adjective
+    example: Meine Oma ist sehr großzügig.
+    exampleEn: My grandma is very generous.
+  - id: nervoes
+    de: nervös
+    en: nervous
+    pos: adjective
+    example: Vor der Prüfung bin ich nervös.
+    exampleEn: I am nervous before the exam.
+  - id: sympathisch
+    de: sympathisch
+    en: likeable
+    pos: adjective
+    example: Ich finde sie sehr sympathisch.
+    exampleEn: I find her very likeable.
+  - id: schlank
+    de: schlank
+    en: slim
+    pos: adjective
+    example: Er ist groß und schlank.
+    exampleEn: He is tall and slim.
+  - id: huebsch
+    de: hübsch
+    en: pretty
+    pos: adjective
+    example: Das Kleid ist hübsch.
+    exampleEn: The dress is pretty.
+  - id: haar
+    de: Haar
+    en: hair
+    pos: noun
+    article: das
+    plural: Haare
+    example: Sie hat lange, blonde Haare.
+    exampleEn: She has long blonde hair.
+  - id: bart
+    de: Bart
+    en: beard
+    pos: noun
+    article: der
+    plural: Bärte
+    example: Mein Vater hat einen Bart.
+    exampleEn: My father has a beard.
+  - id: brille
+    de: Brille
+    en: glasses
+    pos: noun
+    article: die
+    plural: Brillen
+    example: Sie trägt eine Brille.
+    exampleEn: She wears glasses.
+  - id: aussehen
+    de: aussehen (er sieht aus)
+    en: to look (appear)
+    pos: verb
+    example: Du siehst müde aus.
+    exampleEn: You look tired.
+  - id: wirken
+    de: wirken
+    en: to seem
+    pos: verb
+    example: Er wirkt sympathisch.
+    exampleEn: He seems likeable.
+  - id: ziemlich
+    de: ziemlich
+    en: quite, rather
+    pos: adverb
+    example: Mein Bruder ist ziemlich faul.
+    exampleEn: My brother is rather lazy.
+  - id: gar-nicht
+    de: gar nicht
+    en: not at all
+    pos: phrase
+    example: Sie ist gar nicht schüchtern.
+    exampleEn: She is not shy at all.
