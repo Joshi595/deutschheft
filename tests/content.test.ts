@@ -42,9 +42,10 @@ const MIN = {
 
 /** What each level's mock exam has to contain, after the Goethe exam regulations. */
 const EXAM_FORMAT: Record<string, { skill: string; minutes: number; needs?: Exercise['type'][] }[]> = {
+  // Start Deutsch 1 begins with listening; A2 and B1 begin with reading.
   a1: [
-    { skill: 'reading', minutes: 25 },
     { skill: 'listening', minutes: 20 },
+    { skill: 'reading', minutes: 25 },
     { skill: 'writing', minutes: 20, needs: ['form', 'writing-task'] },
     { skill: 'speaking', minutes: 15, needs: ['speaking-task'] },
   ],

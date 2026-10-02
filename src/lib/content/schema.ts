@@ -85,6 +85,8 @@ const multipleChoice = z.object({
   options: z.array(z.string()).min(2),
   /** Must be one of `options`, written out in full. */
   answer: z.string(),
+  /** Options are shown in a shuffled order. Set to false when the order matters, as with "a" and "b". */
+  shuffle: z.boolean().default(true),
 });
 
 const trueFalse = z.object({

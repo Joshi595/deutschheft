@@ -38,7 +38,7 @@ const choiceClass = (state: 'plain' | 'chosen' | 'right' | 'wrong', locked: bool
     .join(' ');
 
 export function MultipleChoice({ item, response, onChange, locked }: WidgetProps<'multiple-choice'>) {
-  const options = useMemo(() => seededShuffle(item.options, item.id), [item]);
+  const options = useMemo(() => (item.shuffle ? seededShuffle(item.options, item.id) : item.options), [item]);
   return (
     <div role="radiogroup" aria-label={item.prompt} className="grid gap-2 sm:grid-cols-2">
       {options.map((option) => {

@@ -1,0 +1,462 @@
+level: a1
+title: Modelltest 1
+description: >-
+  A complete practice exam in the format of Start Deutsch 1: listening, reading, writing and
+  speaking, with the real time limits. Allow about 80 minutes and do it in one sitting.
+passMark: 60
+scoring: total
+modules:
+  # ------------------------------------------------------------------ Hören
+  - skill: listening
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Mann
+                  text: "Entschuldigung, wann fährt der nächste Bus zum Bahnhof?"
+                - speaker: Frau
+                  text: "Der Bus um zehn nach drei ist schon weg. Der nächste kommt um halb vier."
+            prompt: Wann fährt der nächste Bus?
+            options: ["um 15:30 Uhr", "um 15:10 Uhr", "um 16:30 Uhr"]
+            answer: "um 15:30 Uhr"
+            explanation: "The 15:10 bus has gone. halb vier is 3:30."
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Verkäuferin
+                  text: "Guten Tag. Was darf es sein?"
+                - speaker: Kunde
+                  text: "Ich hätte gern ein Kilo Äpfel und sechs Eier."
+                - speaker: Verkäuferin
+                  text: "Die Äpfel kosten zwei Euro fünfzig, die Eier ein Euro achtzig. Das macht zusammen vier Euro dreißig."
+            prompt: Was bezahlt der Kunde?
+            options: ["4,30 Euro", "2,50 Euro", "1,80 Euro"]
+            answer: "4,30 Euro"
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Wo wollen wir uns treffen? Am Bahnhof?"
+                - speaker: Mann
+                  text: "Nein, der Bahnhof ist zu weit. Treffen wir uns lieber vor dem Kino."
+                - speaker: Frau
+                  text: "Gut, um sieben vor dem Kino."
+            prompt: Wo treffen sich die zwei?
+            options: [vor dem Kino, am Bahnhof, im Restaurant]
+            answer: vor dem Kino
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Arzt
+                  text: "Was fehlt Ihnen denn?"
+                - speaker: Patientin
+                  text: "Ich habe seit gestern Halsschmerzen. Fieber habe ich nicht, und der Kopf tut auch nicht weh."
+            prompt: Was hat die Frau?
+            options: [Halsschmerzen, Fieber, Kopfschmerzen]
+            answer: Halsschmerzen
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Kollege
+                  text: "Wie kommst du eigentlich zur Arbeit? Mit dem Auto?"
+                - speaker: Kollegin
+                  text: "Nein, ich habe kein Auto. Im Sommer fahre ich mit dem Fahrrad, aber jetzt im Winter nehme ich die U-Bahn."
+            prompt: Wie fährt die Frau im Winter zur Arbeit?
+            options: [mit der U-Bahn, mit dem Fahrrad, mit dem Auto]
+            answer: mit der U-Bahn
+          - id: h1-6
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 6
+              lines:
+                - speaker: Mann
+                  text: "Guten Tag, ich möchte ein Zimmer für zwei Nächte."
+                - speaker: Rezeptionistin
+                  text: "Gern. Ein Einzelzimmer kostet siebzig Euro pro Nacht, ein Doppelzimmer neunzig."
+                - speaker: Mann
+                  text: "Ich bin allein. Ich nehme das Einzelzimmer."
+            prompt: Was kostet das Zimmer pro Nacht?
+            options: ["70 Euro", "90 Euro", "17 Euro"]
+            answer: "70 Euro"
+
+      - title: "Hören, Teil 2"
+        instructions: Richtig oder falsch? Sie hören jeden Text nur einmal.
+        items:
+          - id: h2-1
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 1
+              plays: 1
+              lines:
+                - text: "Achtung, eine Durchsage für Reisende nach Frankfurt: Der Intercity nach Frankfurt fährt heute von Gleis neun. Ich wiederhole: von Gleis neun."
+            prompt: Der Zug nach Frankfurt fährt von Gleis 9.
+            answer: true
+          - id: h2-2
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 2
+              plays: 1
+              lines:
+                - text: "Liebe Kundinnen und Kunden, unser Geschäft schließt in zehn Minuten. Bitte gehen Sie jetzt zur Kasse. Morgen sind wir ab acht Uhr wieder für Sie da."
+            prompt: Das Geschäft ist noch eine Stunde geöffnet.
+            answer: false
+          - id: h2-3
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 3
+              plays: 1
+              lines:
+                - text: "Und nun das Wetter. Heute ist es sonnig und warm, bis fünfundzwanzig Grad. Morgen regnet es im ganzen Land."
+            prompt: Morgen scheint die Sonne.
+            answer: false
+          - id: h2-4
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 4
+              plays: 1
+              lines:
+                - text: "Der kleine Max, fünf Jahre alt, sucht seine Mutter. Frau Schneider, bitte kommen Sie zur Information im Erdgeschoss."
+            prompt: Frau Schneider soll zur Information kommen.
+            answer: true
+
+      - title: "Hören, Teil 3"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 1
+              lines:
+                - text: "Hallo Petra, hier ist Markus. Ich kann heute Abend leider nicht zum Essen kommen. Meine Tochter ist krank. Hast du am Freitag Zeit? Ruf mich bitte an."
+            prompt: Warum kommt Markus heute nicht?
+            options: [Seine Tochter ist krank., Er muss arbeiten., Er hat am Freitag Zeit.]
+            answer: Seine Tochter ist krank.
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 2
+              lines:
+                - text: "Guten Tag, Herr Yilmaz. Hier ist das Autohaus Braun. Ihr Auto ist fertig. Sie können es heute bis achtzehn Uhr oder morgen ab neun Uhr abholen."
+            prompt: Bis wann kann Herr Yilmaz das Auto heute abholen?
+            options: ["bis 18 Uhr", "bis 9 Uhr", "bis 8 Uhr"]
+            answer: "bis 18 Uhr"
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 3
+              lines:
+                - text: "Hallo Julia, ich bin's, Mama. Ich komme am Sonntag mit dem Zug. Ich bin um elf Uhr zwanzig am Hauptbahnhof. Kannst du mich abholen?"
+            prompt: Wann kommt die Mutter an?
+            options: ["um 11:20 Uhr", "um 11:12 Uhr", "um 12:20 Uhr"]
+            answer: "um 11:20 Uhr"
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 4
+              lines:
+                - text: "Guten Tag. Sie sind mit der Praxis Doktor Hoffmann verbunden. Unsere Praxis ist diese Woche wegen Urlaub geschlossen. Ab Montag sind wir wieder für Sie da. Im Notfall rufen Sie bitte Doktor Klein an."
+            prompt: Was ist mit der Praxis diese Woche?
+            options: [Sie ist geschlossen., Sie ist am Montag geschlossen., Doktor Klein arbeitet dort.]
+            answer: Sie ist geschlossen.
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 5
+              lines:
+                - text: "Hallo Stefan, hier ist Nina. Die Party ist nicht bei mir, sondern bei Lukas, in der Bergstraße vierzehn. Wir fangen um acht Uhr an. Bring bitte etwas zu trinken mit."
+            prompt: Was soll Stefan mitbringen?
+            options: [etwas zu trinken, etwas zu essen, Musik]
+            answer: etwas zu trinken
+
+  # ------------------------------------------------------------------ Lesen
+  - skill: reading
+    minutes: 25
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1 (Text 1)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Hallo Daniel,
+            ich bin seit Montag in Hamburg. Die Stadt ist toll, aber das Wetter ist schlecht: Es regnet jeden Tag. Mein Hotel ist klein und liegt direkt am Hafen.
+            Morgen fahre ich mit dem Zug nach Berlin und bleibe dort bis Sonntag. Kommst du auch nach Berlin? Dann können wir zusammen essen gehen.
+            Viele Grüße
+            Sven
+        items:
+          - id: l1-1
+            type: true-false
+            prompt: Das Wetter in Hamburg ist gut.
+            answer: false
+          - id: l1-2
+            type: true-false
+            prompt: Sven fährt morgen nach Berlin.
+            answer: true
+
+      - title: "Lesen, Teil 1 (Text 2)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: Notiz
+          text: |
+            Liebe Frau Petrova,
+            Ihr Paket ist heute gekommen, aber Sie waren nicht zu Hause. Es liegt jetzt bei mir im Erdgeschoss, Wohnung 2.
+            Ich bin heute bis 20 Uhr zu Hause. Morgen bin ich erst ab 17 Uhr da, denn ich muss arbeiten.
+            Ihr Nachbar
+            Thomas Wagner
+        items:
+          - id: l1-3
+            type: true-false
+            prompt: Das Paket ist bei Herrn Wagner.
+            answer: true
+          - id: l1-4
+            type: true-false
+            prompt: Herr Wagner wohnt im ersten Stock.
+            answer: false
+          - id: l1-5
+            type: true-false
+            prompt: Frau Petrova kann das Paket morgen um 15 Uhr holen.
+            answer: false
+            explanation: "Tomorrow he is at home only from 17 Uhr: erst ab 17 Uhr."
+
+      - title: "Lesen, Teil 2"
+        instructions: Lesen Sie die Situationen und die Anzeigen. Wo finden Sie Informationen? Wählen Sie a oder b.
+        items:
+          - id: l2-1
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) www.schwimmbad-nord.de: Hallenbad. Montag bis Freitag 6 bis 22 Uhr. Schwimmkurse für Erwachsene am Abend.
+
+                b) www.freibad-see.de: Freibad am See. Geöffnet von Mai bis September, täglich 10 bis 19 Uhr.
+            prompt: Es ist Januar. Sie möchten nach der Arbeit schwimmen gehen.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Reisebüro Sonne: Flüge in die ganze Welt. Billige Angebote für Spanien und Italien.
+
+                b) Deutsche Bahn Reisezentrum: Fahrkarten für Züge in Deutschland und Europa. Auch Reservierungen.
+            prompt: Sie möchten mit dem Zug von Köln nach München fahren und brauchen eine Fahrkarte.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Möbelhaus Wohnen: Neue Betten, Schränke und Sofas. Wir bringen die Möbel zu Ihnen nach Hause.
+
+                b) Flohmarkt am Samstag: Gebrauchte Möbel, Bücher und Kleidung. Sehr günstig! Marktplatz, 8 bis 14 Uhr.
+            prompt: Sie brauchen einen Tisch und haben nicht viel Geld.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Kinderärztin Dr. Maier: Sprechstunde Montag bis Freitag 8 bis 12 Uhr. Termine nur nach Anmeldung.
+
+                b) Zahnarzt Dr. Schulz: Auch am Samstag geöffnet. Kommen Sie ohne Termin.
+            prompt: Ihr Sohn (4 Jahre) hat Fieber. Sie suchen einen Arzt.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Sprachschule Aktiv: Deutsch intensiv, jeden Tag 4 Stunden am Vormittag. Kurse A1 bis B2.
+
+                b) Sprachcafé im Stadtteilzentrum: Jeden Mittwoch 19 Uhr. Deutsch sprechen bei Kaffee und Kuchen. Kostenlos.
+            prompt: Sie möchten am Abend Deutsch sprechen üben und nichts bezahlen.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die Texte und die Aufgaben. Richtig oder falsch?
+        items:
+          - id: l3-1
+            type: true-false
+            stimulus:
+              kind: text
+              label: An der Tür der Bibliothek
+              text: |
+                Öffnungszeiten
+                Dienstag bis Freitag: 10 bis 18 Uhr
+                Samstag: 10 bis 13 Uhr
+                Montag geschlossen
+            prompt: Am Montag können Sie Bücher holen.
+            answer: false
+          - id: l3-2
+            type: true-false
+            stimulus:
+              kind: text
+              label: Im Restaurant
+              text: Rauchen ist nur auf der Terrasse erlaubt.
+            prompt: Auf der Terrasse darf man rauchen.
+            answer: true
+          - id: l3-3
+            type: true-false
+            stimulus:
+              kind: text
+              label: Am Fahrkartenautomaten
+              text: |
+                Automat defekt.
+                Fahrkarten bekommen Sie heute beim Fahrer.
+            prompt: Sie können heute am Automaten eine Fahrkarte kaufen.
+            answer: false
+          - id: l3-4
+            type: true-false
+            stimulus:
+              kind: text
+              label: In der Sprachschule
+              text: |
+                Anmeldung für den neuen Kurs:
+                bis 30. September im Büro, Zimmer 3.
+                Bitte bringen Sie Ihren Ausweis mit.
+            prompt: Für die Anmeldung brauchen Sie Ihren Ausweis.
+            answer: true
+          - id: l3-5
+            type: true-false
+            stimulus:
+              kind: text
+              label: Im Supermarkt
+              text: |
+                Heute bis 22 Uhr geöffnet!
+                Ab morgen wieder wie immer bis 20 Uhr.
+            prompt: Morgen ist der Supermarkt bis 22 Uhr geöffnet.
+            answer: false
+
+  # --------------------------------------------------------------- Schreiben
+  - skill: writing
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Ihre Freundin Amira möchte sich in der Stadtbibliothek anmelden. Im Formular fehlen fünf Informationen. Helfen Sie ihr und schreiben Sie die fehlenden Informationen in das Formular.
+        items:
+          - id: s1
+            type: form
+            situation: "Amira Hassan ist am 14. März 1992 in Kairo geboren. Sie wohnt mit ihrem Mann und ihrer Tochter in Bremen, in der Lindenstraße 27. Sie ist Krankenpflegerin von Beruf. Den Bibliotheksausweis möchte sie für ein Jahr haben. Er kostet 20 Euro, und sie bezahlt bar."
+            fields:
+              - { label: Familienname, answers: [Hassan] }
+              - { label: Geburtsdatum, answers: ["14.03.1992", "14.3.1992"] }
+              - { label: Geburtsort, answers: [Kairo] }
+              - { label: Familienstand, answers: [verheiratet] }
+              - { label: Beruf, answers: [Krankenpflegerin] }
+            explanation: "Familienstand is not stated directly. She lives with her husband (mit ihrem Mann), so she is verheiratet."
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht die Anrede und den Gruß.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie möchten am Wochenende mit Ihrem Freund Felix einen Ausflug machen. Schreiben Sie ihm eine E-Mail."
+            points:
+              - Wohin möchten Sie fahren?
+              - Wann und wo treffen Sie sich?
+              - Was soll Felix mitbringen?
+            minWords: 25
+            sample: "Lieber Felix, ich möchte am Samstag einen Ausflug an den See machen. Kommst du mit? Wir treffen uns um neun Uhr am Bahnhof. Bring bitte etwas zu trinken und eine Jacke mit. Viele Grüße, Maria"
+
+  # ---------------------------------------------------------------- Sprechen
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: sich vorstellen"
+        instructions: Stellen Sie sich vor. Sprechen Sie laut, und nehmen Sie sich auf, wenn Sie können.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Stellen Sie sich bitte vor. Buchstabieren Sie danach Ihren Familiennamen und sagen Sie Ihre Telefonnummer."
+            cards: [Name?, Alter?, Land?, Wohnort?, Sprachen?, Beruf?, Hobby?]
+            checklist:
+              - I said something for all seven cue words, in full sentences
+              - I spelled my surname with the German letter names
+              - I said a phone number digit by digit
+              - I spoke without long pauses
+            sample: "Guten Tag. Ich heiße Karim Haddad. Ich bin vierunddreißig Jahre alt und komme aus Syrien. Ich wohne in Leipzig. Ich spreche Arabisch, Englisch und ein bisschen Deutsch. Ich bin Programmierer von Beruf. In meiner Freizeit spiele ich gern Fußball. Mein Familienname ist Haddad: H, A, D, D, A, D. Meine Telefonnummer ist null, drei, vier, eins, fünf, fünf, sechs, sieben."
+
+      - title: "Sprechen, Teil 2: um Informationen bitten und Informationen geben"
+        instructions: Stellen Sie zu jeder Karte eine Frage und antworten Sie selbst darauf.
+        items:
+          - id: sp2a
+            type: speaking-task
+            prompt: "Thema: Einkaufen. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [Supermarkt, Samstag, Obst]
+            checklist:
+              - I asked a real question for each of the three cards
+              - The verb was in the right place in every question
+              - I answered each question in a full sentence
+            sample: "Wo ist hier ein Supermarkt? Der Supermarkt ist in der Bahnhofstraße. Kaufen Sie am Samstag ein? Ja, ich kaufe immer am Samstag ein. Welches Obst essen Sie gern? Ich esse gern Äpfel und Bananen."
+          - id: sp2b
+            type: speaking-task
+            prompt: "Thema: Wohnen. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [Wohnung, Zimmer, Garten]
+            checklist:
+              - I asked a real question for each of the three cards
+              - I used at least two different kinds of question
+              - I answered each question in a full sentence
+            sample: "Wo ist Ihre Wohnung? Meine Wohnung ist im Zentrum. Wie viele Zimmer hat Ihre Wohnung? Sie hat drei Zimmer. Haben Sie einen Garten? Nein, ich habe keinen Garten, aber einen Balkon."
+
+      - title: "Sprechen, Teil 3: Bitten formulieren und darauf reagieren"
+        instructions: Formulieren Sie zu jeder Karte eine Bitte und reagieren Sie darauf.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Formulieren Sie zu jeder Karte eine Bitte und eine Antwort."
+            cards: [Tür, Kaffee, Handy, Kugelschreiber]
+            checklist:
+              - I made a polite request for each card, with bitte
+              - I used the imperative with Sie or a question with können
+              - I gave a response to each request
+              - At least one response was a polite no with a reason
+            sample: "Machen Sie bitte die Tür zu. Ja, gern. Bringen Sie mir bitte einen Kaffee. Ja, natürlich, einen Moment. Kann ich bitte Ihr Handy benutzen? Tut mir leid, mein Handy ist leer. Können Sie mir bitte einen Kugelschreiber geben? Hier, bitte."

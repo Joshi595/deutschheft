@@ -145,6 +145,7 @@ describe('grade', () => {
       prompt: 'freundlich',
       options: ['friendly', 'lazy'],
       answer: 'friendly',
+      shuffle: true,
     };
     expect(grade(item, { type: 'multiple-choice', choice: 'friendly' }).correct).toBe(true);
     expect(grade(item, { type: 'multiple-choice', choice: 'lazy' }).correct).toBe(false);
