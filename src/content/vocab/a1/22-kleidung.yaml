@@ -1,0 +1,182 @@
+lesson: a1.22
+items:
+  - id: kleidung
+    de: Kleidung
+    en: clothes, clothing
+    pos: noun
+    article: die
+    plural: "-"
+    example: Ich brauche neue Kleidung.
+    exampleEn: I need new clothes.
+  - id: hose
+    de: Hose
+    en: trousers
+    pos: noun
+    article: die
+    plural: Hosen
+    example: Die Hose ist zu klein.
+    exampleEn: The trousers are too small.
+  - id: jacke
+    de: Jacke
+    en: jacket
+    pos: noun
+    article: die
+    plural: Jacken
+    example: Die Jacke gefällt mir.
+    exampleEn: I like the jacket.
+  - id: pullover
+    de: Pullover
+    en: jumper, sweater
+    pos: noun
+    article: der
+    plural: Pullover
+    example: Der Pullover ist warm.
+    exampleEn: The jumper is warm.
+  - id: hemd
+    de: Hemd
+    en: shirt
+    pos: noun
+    article: das
+    plural: Hemden
+    example: Das Hemd ist weiß.
+    exampleEn: The shirt is white.
+  - id: kleid
+    de: Kleid
+    en: dress
+    pos: noun
+    article: das
+    plural: Kleider
+    example: Das Kleid steht dir gut.
+    exampleEn: The dress suits you.
+  - id: mantel
+    de: Mantel
+    en: coat
+    pos: noun
+    article: der
+    plural: Mäntel
+    example: Im Winter trage ich einen Mantel.
+    exampleEn: In winter I wear a coat.
+  - id: rock
+    de: Rock
+    en: skirt
+    pos: noun
+    article: der
+    plural: Röcke
+    example: Der Rock ist zu kurz.
+    exampleEn: The skirt is too short.
+  - id: schuh
+    de: Schuh
+    en: shoe
+    pos: noun
+    article: der
+    plural: Schuhe
+    example: Die Schuhe gefallen mir.
+    exampleEn: I like the shoes.
+  - id: t-shirt
+    de: T-Shirt
+    en: T-shirt
+    pos: noun
+    article: das
+    plural: T-Shirts
+    example: Das T-Shirt kostet zehn Euro.
+    exampleEn: The T-shirt costs ten euros.
+  - id: farbe
+    de: Farbe
+    en: colour
+    pos: noun
+    article: die
+    plural: Farben
+    example: Welche Farbe hat das Hemd?
+    exampleEn: What colour is the shirt?
+  - id: rot
+    de: rot
+    en: red
+    pos: adjective
+    example: Das Kleid ist rot.
+    exampleEn: The dress is red.
+  - id: blau
+    de: blau
+    en: blue
+    pos: adjective
+    example: Die Jacke ist blau.
+    exampleEn: The jacket is blue.
+  - id: gruen
+    de: grün
+    en: green
+    pos: adjective
+    example: Der Pullover ist grün.
+    exampleEn: The jumper is green.
+  - id: gelb
+    de: gelb
+    en: yellow
+    pos: adjective
+    example: Das T-Shirt ist gelb.
+    exampleEn: The T-shirt is yellow.
+  - id: schwarz
+    de: schwarz
+    en: black
+    pos: adjective
+    example: Die Schuhe sind schwarz.
+    exampleEn: The shoes are black.
+  - id: weiss
+    de: weiß
+    en: white
+    pos: adjective
+    example: Das Hemd ist weiß.
+    exampleEn: The shirt is white.
+  - id: grau
+    de: grau
+    en: grey
+    pos: adjective
+    example: Der Mantel ist grau.
+    exampleEn: The coat is grey.
+  - id: braun
+    de: braun
+    en: brown
+    pos: adjective
+    example: Die Tasche ist braun.
+    exampleEn: The bag is brown.
+  - id: gefallen
+    de: gefallen (es gefällt)
+    en: to please; to be liked
+    pos: verb
+    example: Die Jacke gefällt mir.
+    exampleEn: I like the jacket.
+  - id: passen
+    de: passen
+    en: to fit
+    pos: verb
+    example: Die Hose passt mir nicht.
+    exampleEn: The trousers do not fit me.
+  - id: anprobieren
+    de: anprobieren
+    en: to try on
+    pos: verb
+    example: Kann ich das anprobieren?
+    exampleEn: Can I try this on?
+  - id: groesse
+    de: Größe
+    en: size
+    pos: noun
+    article: die
+    plural: Größen
+    example: Welche Größe haben Sie?
+    exampleEn: What size are you?
+  - id: dieser
+    de: dieser, diese, dieses
+    en: this
+    pos: other
+    example: Dieser Pullover gefällt mir.
+    exampleEn: I like this jumper.
+  - id: mir
+    de: mir
+    en: to me, me (dative)
+    pos: other
+    example: Können Sie mir helfen?
+    exampleEn: Can you help me?
+  - id: dir
+    de: dir
+    en: to you, you (dative, informal)
+    pos: other
+    example: Gefällt dir die Jacke?
+    exampleEn: Do you like the jacket?
