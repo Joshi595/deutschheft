@@ -113,7 +113,8 @@ export function promptOf(item: Exercise): string {
 export function spokenSolution(item: Exercise, result: GradeResult): string | undefined {
   switch (item.type) {
     case 'fill-blank':
-      return item.prompt.replace('___', result.expected).replace(/\s*\([^)]*\)\s*$/, '');
+      // Drop the cues after the sentence, such as "(kommen)" or "[she]".
+      return item.prompt.replace('___', result.expected).replace(/(\s*[([][^)\]]*[)\]])+\s*$/, '');
     case 'cloze': {
       let index = 0;
       return item.text.replace(/___/g, () => item.gaps[index++]?.[0] ?? '');
