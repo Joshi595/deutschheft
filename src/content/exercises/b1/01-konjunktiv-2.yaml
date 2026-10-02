@@ -1,0 +1,142 @@
+lesson: b1.01
+sets:
+  - title: The forms
+    items:
+      - id: form1
+        type: matching
+        tags: [Konjunktiv II forms]
+        prompt: Match each verb with its Konjunktiv II form.
+        pairs:
+          - { left: haben, right: hätte }
+          - { left: sein, right: wäre }
+          - { left: können, right: könnte }
+          - { left: müssen, right: müsste }
+          - { left: werden, right: würde }
+      - id: form2
+        type: fill-blank
+        tags: [Konjunktiv II forms]
+        prompt: "Wenn ich mehr Zeit ___, würde ich mehr lesen. (haben)"
+        answers: [hätte]
+      - id: form3
+        type: fill-blank
+        tags: [Konjunktiv II forms]
+        prompt: "Wenn du hier ___, könnten wir zusammen kochen. (sein)"
+        answers: [wärst, wärest]
+      - id: form4
+        type: fill-blank
+        tags: [Konjunktiv II forms]
+        prompt: "Wir ___ gern länger bleiben, aber wir müssen gehen. (werden)"
+        answers: [würden]
+      - id: form5
+        type: fill-blank
+        tags: [Konjunktiv II forms]
+        prompt: "___ ihr uns am Samstag helfen? (können)"
+        answers: [Könntet]
+
+  - title: Real or unreal?
+    items:
+      - id: real1
+        type: multiple-choice
+        tags: [unreal conditions]
+        prompt: Wenn ich Geld hätte, ___ ich ein Haus kaufen.
+        options: [würde, werde, wäre]
+        answer: würde
+      - id: real2
+        type: multiple-choice
+        tags: [unreal conditions]
+        prompt: Wenn ich reich ___, würde ich nicht mehr arbeiten.
+        options: [wäre, hätte, würde sein]
+        answer: wäre
+        explanation: "sein has its own form. German avoids würde sein."
+      - id: real3
+        type: multiple-choice
+        tags: [unreal conditions]
+        prompt: "\"Wenn ich Zeit hätte, würde ich kommen.\" What does the speaker mean?"
+        options:
+          - I do not have time, so I am not coming.
+          - I will probably have time and come.
+        answer: I do not have time, so I am not coming.
+      - id: real4
+        type: multiple-choice
+        tags: [unreal conditions, word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Wenn sie hier wäre, könnten wir anfangen."
+          - "Wenn sie wäre hier, könnten wir anfangen."
+          - "Wenn sie hier wäre, wir könnten anfangen."
+        answer: "Wenn sie hier wäre, könnten wir anfangen."
+
+  - title: Make it polite
+    instructions: Choose the more polite version.
+    items:
+      - id: polite1
+        type: multiple-choice
+        tags: [polite requests]
+        prompt: Kannst du mir helfen?
+        options:
+          - Könntest du mir helfen?
+          - Hilf mir!
+          - Du musst mir helfen.
+        answer: Könntest du mir helfen?
+      - id: polite2
+        type: fill-blank
+        tags: [polite requests]
+        prompt: "Ich ___ gern einen Kaffee, bitte."
+        answers: [hätte]
+        translation: I would like a coffee, please.
+      - id: polite3
+        type: fill-blank
+        tags: [polite requests]
+        prompt: "___ Sie bitte das Fenster zumachen?"
+        answers: [Würden, Könnten]
+        translation: Would you close the window, please?
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [unreal conditions, word order]
+        prompt: If I had money, I would travel a lot.
+        answer: "Wenn ich Geld hätte, würde ich viel reisen."
+      - id: order2
+        type: word-order
+        tags: [advice]
+        prompt: If I were you, I would go to the doctor.
+        answer: An deiner Stelle würde ich zum Arzt gehen.
+      - id: order3
+        type: word-order
+        tags: [wishes]
+        prompt: I would like to be at the seaside now.
+        answer: Ich wäre jetzt gern am Meer.
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [unreal conditions]
+        prompt: If I had time, I would come.
+        answers:
+          - "Wenn ich Zeit hätte, würde ich kommen."
+          - "Ich würde kommen, wenn ich Zeit hätte."
+          - "Wenn ich Zeit hätte, käme ich."
+      - id: tr2
+        type: translation
+        tags: [polite requests]
+        prompt: Could you help me, please? (to a friend)
+        answers:
+          - Könntest du mir bitte helfen?
+          - Könntest du mir helfen, bitte?
+          - Könntest du mir helfen?
+      - id: tr3
+        type: translation
+        tags: [advice]
+        prompt: You should sleep more. (to a friend)
+        answers:
+          - Du solltest mehr schlafen.
+      - id: write1
+        type: writing
+        tags: [unreal conditions]
+        prompt: What would you do if you had a year off? One sentence with wenn and würde.
+        mustInclude: [wenn, würde]
+        sample: "Wenn ich ein Jahr frei hätte, würde ich durch Südamerika reisen."
