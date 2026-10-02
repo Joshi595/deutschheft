@@ -1,0 +1,100 @@
+lesson: a2.10
+items:
+  - id: wessen
+    de: wessen
+    en: whose
+    pos: other
+    example: Wessen Tasche ist das?
+    exampleEn: Whose bag is that?
+  - id: wegen
+    de: wegen
+    en: because of (+ genitive)
+    pos: preposition
+    example: Wegen des Regens bleibe ich zu Hause.
+    exampleEn: Because of the rain I am staying at home.
+  - id: trotz
+    de: trotz
+    en: despite (+ genitive)
+    pos: preposition
+    example: Trotz der Kälte gehen wir spazieren.
+    exampleEn: Despite the cold we are going for a walk.
+  - id: waehrend
+    de: während
+    en: during (+ genitive)
+    pos: preposition
+    example: Während des Unterrichts ist das Handy aus.
+    exampleEn: During class the phone is off.
+  - id: statt
+    de: statt
+    en: instead of (+ genitive)
+    pos: preposition
+    example: Statt eines Autos kauft er ein Fahrrad.
+    exampleEn: Instead of a car he buys a bicycle.
+  - id: innerhalb
+    de: innerhalb
+    en: within, inside (+ genitive)
+    pos: preposition
+    example: Innerhalb der Stadt fährt man langsam.
+    exampleEn: Within the city you drive slowly.
+  - id: ausserhalb
+    de: außerhalb
+    en: outside (+ genitive)
+    pos: preposition
+    example: Wir wohnen außerhalb der Stadt.
+    exampleEn: We live outside the city.
+  - id: farbe
+    de: Farbe
+    en: colour
+    pos: noun
+    article: die
+    plural: Farben
+    example: Die Farbe des Autos ist rot.
+    exampleEn: The colour of the car is red.
+  - id: preis
+    de: Preis
+    en: price; prize
+    pos: noun
+    article: der
+    plural: Preise
+    example: Der Preis der Wohnung ist hoch.
+    exampleEn: The price of the flat is high.
+  - id: regen
+    de: Regen
+    en: rain
+    pos: noun
+    article: der
+    plural: "-"
+    example: Der Regen hört nicht auf.
+    exampleEn: The rain is not stopping.
+  - id: kaelte
+    de: Kälte
+    en: cold (noun)
+    pos: noun
+    article: die
+    plural: "-"
+    example: Die Kälte macht mir nichts aus.
+    exampleEn: I do not mind the cold.
+  - id: unterricht
+    de: Unterricht
+    en: lesson, class, teaching
+    pos: noun
+    article: der
+    plural: "-"
+    example: Der Unterricht beginnt um acht Uhr.
+    exampleEn: Class starts at eight o'clock.
+  - id: pause
+    de: Pause
+    en: break
+    pos: noun
+    article: die
+    plural: Pausen
+    example: Wir machen eine kurze Pause.
+    exampleEn: We are taking a short break.
+  - id: besitzer
+    de: Besitzer
+    en: owner
+    pos: noun
+    article: der
+    plural: Besitzer
+    example: Der Besitzer des Hundes wohnt nebenan.
+    exampleEn: The dog's owner lives next door.
