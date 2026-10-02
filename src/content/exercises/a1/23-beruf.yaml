@@ -1,0 +1,221 @@
+lesson: a1.23
+sets:
+  - title: Jobs
+    items:
+      - id: job1
+        type: matching
+        tags: [jobs]
+        prompt: Match each job with what the person does.
+        pairs:
+          - { left: der Koch, right: Er kocht im Restaurant. }
+          - { left: die Lehrerin, right: Sie arbeitet in der Schule. }
+          - { left: der Arzt, right: Er hilft kranken Menschen. }
+          - { left: die Verkäuferin, right: Sie arbeitet im Geschäft. }
+          - { left: der Fahrer, right: Er fährt einen Bus. }
+      - id: job2
+        type: fill-blank
+        tags: [jobs, female forms]
+        prompt: "der Lehrer, die ___"
+        answers: [Lehrerin]
+      - id: job3
+        type: fill-blank
+        tags: [jobs, female forms]
+        prompt: "der Arzt, die ___"
+        answers: [Ärztin]
+        hint: This one takes an umlaut.
+      - id: job4
+        type: fill-blank
+        tags: [jobs, female forms]
+        prompt: "der Verkäufer, die ___"
+        answers: [Verkäuferin]
+      - id: job5
+        type: fill-blank
+        tags: [jobs, female forms]
+        prompt: "der Koch, die ___"
+        answers: [Köchin]
+      - id: job6
+        type: fill-blank
+        tags: [jobs, female forms]
+        prompt: "der Student, die ___"
+        answers: [Studentin]
+
+  - title: Article or no article?
+    items:
+      - id: art1
+        type: multiple-choice
+        tags: [jobs, no article]
+        prompt: Which is correct?
+        options: [Ich bin Ingenieur., Ich bin ein Ingenieur., Ich bin der Ingenieur.]
+        answer: Ich bin Ingenieur.
+      - id: art2
+        type: multiple-choice
+        tags: [jobs, no article]
+        prompt: Meine Schwester ist ___.
+        options: [Ärztin, Arzt, eine Arzt]
+        answer: Ärztin
+      - id: art3
+        type: multiple-choice
+        tags: [jobs]
+        prompt: Ich arbeite ___ Kellner.
+        options: [als, wie, bei]
+        answer: als
+      - id: art4
+        type: multiple-choice
+        tags: [jobs]
+        prompt: Er arbeitet ___ Siemens.
+        options: [bei, als, für]
+        answer: bei
+
+  - title: Where and since when?
+    items:
+      - id: where1
+        type: fill-blank
+        tags: [dative, jobs]
+        prompt: "Sie arbeitet in ___ Krankenhaus. (ein)"
+        answers: [einem]
+      - id: where2
+        type: fill-blank
+        tags: [dative, jobs]
+        prompt: "Er arbeitet in ___ Schule. (eine)"
+        answers: [einer]
+      - id: where3
+        type: fill-blank
+        tags: [seit]
+        prompt: "Ich arbeite ___ zwei Jahren bei dieser Firma."
+        answers: [seit]
+      - id: where4
+        type: word-order
+        tags: [jobs]
+        prompt: What is your job? (formal)
+        answer: Was sind Sie von Beruf?
+      - id: where5
+        type: word-order
+        tags: [jobs, seit]
+        prompt: I have been working here for three years.
+        answer: Ich arbeite seit drei Jahren hier.
+
+  - title: Work words
+    items:
+      - id: word1
+        type: matching
+        tags: [work]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: die Firma, right: company }
+          - { left: der Kollege, right: colleague }
+          - { left: die Pause, right: break }
+          - { left: die Stelle, right: position }
+          - { left: arbeitslos, right: unemployed }
+          - { left: verdienen, right: to earn }
+
+  - title: Listen to three people
+    items:
+      - id: hear1
+        type: multiple-choice
+        tags: [listening, jobs]
+        stimulus:
+          kind: audio
+          label: Vorstellung
+          lines:
+            - text: "Hallo, ich heiße Elena. Ich bin Krankenpflegerin und arbeite seit fünf Jahren in einem Krankenhaus in München."
+        prompt: Was ist Elena von Beruf?
+        options: [Krankenpflegerin, Ärztin, Lehrerin]
+        answer: Krankenpflegerin
+      - id: hear2
+        type: multiple-choice
+        tags: [listening, jobs]
+        stimulus:
+          kind: audio
+          label: Vorstellung
+          lines:
+            - text: "Guten Tag. Mein Name ist Karim Haddad. Ich bin Programmierer. Ich arbeite bei einer Firma in Leipzig, von Montag bis Donnerstag. Am Freitag habe ich frei."
+        prompt: Wann hat Karim frei?
+        options: [am Freitag, am Montag, am Donnerstag]
+        answer: am Freitag
+      - id: hear3
+        type: true-false
+        tags: [listening, jobs]
+        stimulus:
+          kind: audio
+          label: Vorstellung
+          lines:
+            - text: "Ich bin Tom. Ich bin Student und arbeite am Wochenende als Kellner in einem Café. Die Arbeit ist anstrengend, aber sie macht mir Spaß."
+        prompt: Tom arbeitet jeden Tag als Kellner.
+        answer: false
+        explanation: He works at weekends only.
+
+  - title: Read the adverts
+    instructions: As in the reading exam. Which advert fits?
+    items:
+      - id: ad1
+        type: multiple-choice
+        tags: [reading, adverts]
+        stimulus:
+          kind: text
+          label: Anzeige
+          text: |
+            Café am Markt sucht ab sofort
+            Kellner/Kellnerin (m/w/d)
+            Arbeitszeit: Samstag und Sonntag, 10 bis 18 Uhr
+            12 Euro pro Stunde. Tel. 0341 22 33 44
+        prompt: Wann muss man arbeiten?
+        options: [am Wochenende, von Montag bis Freitag, am Abend]
+        answer: am Wochenende
+      - id: ad2
+        type: true-false
+        tags: [reading, adverts]
+        stimulus:
+          kind: text
+          label: Anzeige
+          text: |
+            Café am Markt sucht ab sofort
+            Kellner/Kellnerin (m/w/d)
+            Arbeitszeit: Samstag und Sonntag, 10 bis 18 Uhr
+            12 Euro pro Stunde. Tel. 0341 22 33 44
+        prompt: Man verdient zwölf Euro pro Tag.
+        answer: false
+        explanation: "pro Stunde: per hour."
+      - id: ad3
+        type: multiple-choice
+        tags: [reading, adverts]
+        stimulus:
+          kind: text
+          label: Anzeige
+          text: |
+            Taxi Berger sucht Fahrer (m/w/d) in Vollzeit.
+            Führerschein und gute Deutschkenntnisse nötig.
+            Bewerbung per E-Mail.
+        prompt: Sie haben keinen Führerschein. Passt die Stelle?
+        options: ["Nein, man braucht einen Führerschein.", "Ja, man braucht keinen Führerschein."]
+        answer: "Nein, man braucht einen Führerschein."
+
+  - title: Say and write it
+    items:
+      - id: tr1
+        type: translation
+        tags: [jobs]
+        prompt: I am a teacher. (said by a woman)
+        answers:
+          - Ich bin Lehrerin.
+      - id: tr2
+        type: translation
+        tags: [jobs]
+        prompt: I work as a cook. (said by a man)
+        answers:
+          - Ich arbeite als Koch.
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, jobs]
+        prompt: Talk about your work or studies in three or four sentences.
+        cards: [Beruf?, Wo?, Seit wann?, Arbeitszeit?]
+        phrases:
+          - Ich bin … / Ich arbeite als …
+          - Ich arbeite bei … / in einem …
+          - Ich arbeite seit … Jahren dort.
+          - Ich arbeite von … bis …
+        checklist:
+          - I named my job without an article
+          - I said where I work with bei or in
+          - I said since when, using seit and the present tense
+          - I said something about my hours or what the work is like
+        sample: "Ich bin Programmierer. Ich arbeite bei einer Firma in Köln. Ich arbeite seit drei Jahren dort, von Montag bis Freitag. Die Arbeit ist interessant."

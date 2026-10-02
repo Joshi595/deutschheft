@@ -1,0 +1,186 @@
+lesson: a1.23
+items:
+  - id: beruf
+    de: Beruf
+    en: job, profession
+    pos: noun
+    article: der
+    plural: Berufe
+    example: Was sind Sie von Beruf?
+    exampleEn: What is your job?
+  - id: arbeit
+    de: Arbeit
+    en: work
+    pos: noun
+    article: die
+    plural: Arbeiten
+    example: Meine Arbeit macht mir Spaß.
+    exampleEn: I enjoy my work.
+  - id: verkaeufer
+    de: Verkäufer
+    en: shop assistant (male)
+    pos: noun
+    article: der
+    plural: Verkäufer
+    example: Der Verkäufer ist sehr freundlich.
+    exampleEn: The shop assistant is very friendly.
+  - id: koch
+    de: Koch
+    en: cook (male)
+    pos: noun
+    article: der
+    plural: Köche
+    example: Mein Bruder ist Koch.
+    exampleEn: My brother is a cook.
+  - id: kellnerin
+    de: Kellnerin
+    en: waitress
+    pos: noun
+    article: die
+    plural: Kellnerinnen
+    example: Sie arbeitet als Kellnerin.
+    exampleEn: She works as a waitress.
+  - id: ingenieur
+    de: Ingenieur
+    en: engineer (male)
+    pos: noun
+    article: der
+    plural: Ingenieure
+    example: Ich bin Ingenieur.
+    exampleEn: I am an engineer.
+  - id: student
+    de: Student
+    en: student (male)
+    pos: noun
+    article: der
+    plural: Studenten
+    example: Er ist Student in Berlin.
+    exampleEn: He is a student in Berlin.
+  - id: krankenpfleger
+    de: Krankenpfleger
+    en: nurse (male)
+    pos: noun
+    article: der
+    plural: Krankenpfleger
+    example: Er arbeitet als Krankenpfleger.
+    exampleEn: He works as a nurse.
+  - id: fahrer
+    de: Fahrer
+    en: driver (male)
+    pos: noun
+    article: der
+    plural: Fahrer
+    example: Der Fahrer wartet vor dem Hotel.
+    exampleEn: The driver is waiting outside the hotel.
+  - id: firma
+    de: Firma
+    en: company, firm
+    pos: noun
+    article: die
+    plural: Firmen
+    example: Die Firma hat hundert Mitarbeiter.
+    exampleEn: The company has a hundred employees.
+  - id: buero
+    de: Büro
+    en: office
+    pos: noun
+    article: das
+    plural: Büros
+    example: Ich arbeite im Büro.
+    exampleEn: I work in the office.
+  - id: chef
+    de: Chef
+    en: boss (male)
+    pos: noun
+    article: der
+    plural: Chefs
+    example: Mein Chef ist nett.
+    exampleEn: My boss is nice.
+  - id: kollege
+    de: Kollege
+    en: colleague (male)
+    pos: noun
+    article: der
+    plural: Kollegen
+    example: Mein Kollege kommt aus Polen.
+    exampleEn: My colleague comes from Poland.
+  - id: kollegin
+    de: Kollegin
+    en: colleague (female)
+    pos: noun
+    article: die
+    plural: Kolleginnen
+    example: Meine Kollegin hilft mir.
+    exampleEn: My colleague helps me.
+  - id: kunde
+    de: Kunde
+    en: customer (male)
+    pos: noun
+    article: der
+    plural: Kunden
+    example: Ich telefoniere mit Kunden.
+    exampleEn: I talk to customers on the phone.
+  - id: stelle
+    de: Stelle
+    en: position, job
+    pos: noun
+    article: die
+    plural: Stellen
+    example: Ich suche eine neue Stelle.
+    exampleEn: I am looking for a new job.
+  - id: pause
+    de: Pause
+    en: break
+    pos: noun
+    article: die
+    plural: Pausen
+    example: Um zwölf Uhr machen wir Pause.
+    exampleEn: At twelve we take a break.
+  - id: arbeitslos
+    de: arbeitslos
+    en: unemployed
+    pos: adjective
+    example: Er ist seit einem Jahr arbeitslos.
+    exampleEn: He has been unemployed for a year.
+  - id: verdienen
+    de: verdienen
+    en: to earn
+    pos: verb
+    example: Sie verdient gut.
+    exampleEn: She earns well.
+  - id: suchen
+    de: suchen
+    en: to look for
+    pos: verb
+    example: Ich suche Arbeit.
+    exampleEn: I am looking for work.
+  - id: als
+    de: als
+    en: as (in the role of)
+    pos: other
+    example: Ich arbeite als Koch.
+    exampleEn: I work as a cook.
+  - id: bei
+    de: bei
+    en: at, for (an employer); near
+    pos: preposition
+    example: Ich arbeite bei einer Bank.
+    exampleEn: I work for a bank.
+  - id: frei-haben
+    de: frei haben
+    en: to be off work
+    pos: phrase
+    example: Am Wochenende habe ich frei.
+    exampleEn: At the weekend I am off.
+  - id: anstrengend
+    de: anstrengend
+    en: tiring, strenuous
+    pos: adjective
+    example: Die Arbeit ist anstrengend.
+    exampleEn: The work is tiring.
+  - id: interessant
+    de: interessant
+    en: interesting
+    pos: adjective
+    example: Mein Beruf ist interessant.
+    exampleEn: My job is interesting.
