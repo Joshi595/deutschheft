@@ -11,6 +11,7 @@ import {
   type SavedWord,
 } from './notebook/logic';
 import { applyAttempt, emptyProgress, markStudyDay, type ProgressState } from './progress/logic';
+import { addAttempt, type QuizAttempt, type QuizHistory } from './quiz/score';
 import { cardId, enroll, schedule, type CardKind, type ReviewGrade, type ReviewState } from './srs/scheduler';
 
 /**
@@ -52,6 +53,7 @@ export const SETTINGS_KEY = 'lg:settings:v1';
 export const $progress = persistentAtom<ProgressState>('lg:progress:v1', emptyProgress, json(emptyProgress));
 export const $review = persistentAtom<ReviewState>('lg:review:v1', {}, json<ReviewState>({}));
 export const $notebook = persistentAtom<NotebookState>('lg:notebook:v1', emptyNotebook, json(emptyNotebook));
+export const $quizzes = persistentAtom<QuizHistory>('lg:quizzes:v1', {}, json<QuizHistory>({}));
 export const $settings = persistentAtom<Settings>(
   SETTINGS_KEY,
   defaultSettings,
@@ -105,6 +107,13 @@ export function removeCard(id: string): void {
   $review.set(rest);
 }
 
+// --- Mock exams and checkpoints ----------------------------------------------
+
+export function recordQuizAttempt(quizId: string, attempt: QuizAttempt, now = new Date()): void {
+  $quizzes.set(addAttempt($quizzes.get(), quizId, attempt));
+  $progress.set(markStudyDay($progress.get(), now));
+}
+
 // --- Notebook --------------------------------------------------------------
 
 export function saveNote(lessonKey: string, text: string): void {
@@ -134,7 +143,10 @@ export function updateSettings(patch: Partial<Settings>): void {
 }
 
 export function exportBackup(now = new Date()): Backup {
-  return buildBackup({ progress: $progress.get(), review: $review.get(), notebook: $notebook.get() }, now);
+  return buildBackup(
+    { progress: $progress.get(), review: $review.get(), notebook: $notebook.get(), quizzes: $quizzes.get() },
+    now,
+  );
 }
 
 /** Replace all stored learning data with the contents of a backup file. */
@@ -143,10 +155,12 @@ export function importBackup(fileText: string): void {
   $progress.set(data.progress);
   $review.set(data.review);
   $notebook.set(data.notebook);
+  $quizzes.set(data.quizzes);
 }
 
 export function resetAll(): void {
   $progress.set(emptyProgress);
   $review.set({});
   $notebook.set(emptyNotebook);
+  $quizzes.set({});
 }

@@ -13,10 +13,12 @@ interface Props {
   onSubmit?: () => void;
   /** Width in characters for a gap inside a sentence; omit for full width. */
   size?: number;
+  /** Height of a multiline input, in lines. */
+  rows?: number;
 }
 
 /** Text input with buttons for the letters a non-German keyboard lacks. */
-export function GermanInput({ value, onChange, label, placeholder, disabled, multiline, onSubmit, size }: Props) {
+export function GermanInput({ value, onChange, label, placeholder, disabled, multiline, onSubmit, size, rows = 3 }: Props) {
   const ref = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
 
   function insert(char: string) {
@@ -47,7 +49,7 @@ export function GermanInput({ value, onChange, label, placeholder, disabled, mul
   return (
     <span className={size ? 'inline-flex flex-col gap-1 align-middle' : 'flex flex-col gap-2'}>
       {multiline ? (
-        <textarea {...shared} rows={3} className="field resize-y" />
+        <textarea {...shared} rows={rows} className="field resize-y" />
       ) : (
         <input
           {...shared}

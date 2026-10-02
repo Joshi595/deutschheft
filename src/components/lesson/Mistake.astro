@@ -1,0 +1,29 @@
+---
+// A typical mistake next to its correction, with the reason.
+// Available in every lesson's MDX.
+// <Mistake wrong="Ich **habe** 30 Jahre." right="Ich **bin** 30 Jahre alt." why="Age uses sein, not haben." />
+import SpeakButton from '../ui/SpeakButton.astro';
+
+interface Props {
+  wrong: string;
+  right: string;
+  why: string;
+}
+const { wrong, right, why } = Astro.props;
+
+const escape = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const mark = (text: string) => escape(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+---
+
+<div class="card overflow-hidden">
+  <p class="flex items-start gap-3 bg-bad-soft px-4 py-3 text-bad">
+    <span class="font-bold" aria-label="Wrong">✗</span>
+    <span class="line-through decoration-1" lang="de" set:html={mark(wrong)} />
+  </p>
+  <p class="flex items-start gap-3 bg-good-soft px-4 py-3 text-good">
+    <span class="font-bold" aria-label="Right">✓</span>
+    <span class="flex-1 font-semibold" lang="de" set:html={mark(right)} />
+    <SpeakButton text={right.replace(/\*\*/g, '')} />
+  </p>
+  <p class="px-4 py-3 text-sm">{why}</p>
+</div>

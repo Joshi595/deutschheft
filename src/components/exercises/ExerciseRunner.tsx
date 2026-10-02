@@ -3,6 +3,7 @@ import type { ClientExerciseSet } from '../../lib/content/types';
 import { completion } from '../../lib/progress/logic';
 import { $progress, enrollCards } from '../../lib/stores';
 import { ExerciseCard } from './ExerciseCard';
+import { StimulusView } from './StimulusView';
 
 interface Props {
   topic: string;
@@ -20,12 +21,17 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
   return (
     <div className="grid gap-10">
       {sets.map((set, index) => (
-        <section key={set.title} aria-labelledby={`set-${index}`}>
+        <section key={index} aria-labelledby={`set-${index}`}>
           <p className="eyebrow">Exercise {index + 1}</p>
           <h3 id={`set-${index}`} className="text-xl">
             {set.title}
           </h3>
           {set.instructions && <p className="mt-1 text-muted">{set.instructions}</p>}
+          {set.stimulus && (
+            <div className="mt-4">
+              <StimulusView stimulus={set.stimulus} />
+            </div>
+          )}
           <div className="mt-4 grid gap-3">
             {set.items.map((item, position) => (
               <ExerciseCard

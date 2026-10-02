@@ -12,6 +12,11 @@ describe('backup', () => {
       progress: applyAttempt(emptyProgress, 'a2.01.mc1', true, now),
       review: enroll({}, 'vocab', ['a2.01.freundlich'], now),
       notebook: setNote(emptyNotebook, 'a2.01', 'Predicate adjectives take no ending.'),
+      quizzes: {
+        'exam:a1/modelltest-1': [
+          { at: now.toISOString(), total: 72, passed: true, sections: [{ skill: 'reading', points: 18, max: 25 }] },
+        ],
+      },
     };
     const json = JSON.stringify(buildBackup(data, now));
     expect(parseBackup(json)).toEqual(data);
@@ -23,11 +28,12 @@ describe('backup', () => {
     expect(() => parseBackup('{"app":"learn-german","version":99}')).toThrow('newer version');
   });
 
-  it('fills in missing sections with empty values', () => {
+  it('fills in missing sections with empty values, including in a version 1 backup', () => {
     expect(parseBackup('{"app":"learn-german","version":1}')).toEqual({
       progress: emptyProgress,
       review: {},
       notebook: emptyNotebook,
+      quizzes: {},
     });
   });
 });

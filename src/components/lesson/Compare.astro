@@ -1,0 +1,31 @@
+---
+// English and German side by side, to show where the two languages differ.
+// Available in every lesson's MDX.
+// <Compare en="I am 30 years old." de="Ich **bin** 30 Jahre alt." note="Same verb: to be." />
+import SpeakButton from '../ui/SpeakButton.astro';
+
+interface Props {
+  en: string;
+  de: string;
+  note?: string;
+}
+const { en, de, note } = Astro.props;
+
+const escape = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const mark = (text: string) => escape(text).replace(/\*\*(.+?)\*\*/g, '<strong class="bg-accent-soft rounded px-0.5">$1</strong>');
+---
+
+<div class="card grid overflow-hidden sm:grid-cols-2">
+  <div class="border-b border-line p-4 sm:border-b-0 sm:border-r">
+    <p class="eyebrow mb-1">English</p>
+    <p set:html={mark(en)} />
+  </div>
+  <div class="p-4">
+    <p class="eyebrow mb-1">German</p>
+    <p class="flex items-start gap-1">
+      <span class="de flex-1" lang="de" set:html={mark(de)} />
+      <SpeakButton text={de.replace(/\*\*/g, '')} />
+    </p>
+  </div>
+  {note && <p class="border-t border-line bg-surface-2 px-4 py-2 text-sm sm:col-span-2">{note}</p>}
+</div>

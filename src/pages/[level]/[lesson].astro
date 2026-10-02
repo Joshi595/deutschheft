@@ -2,7 +2,11 @@
 import { render } from 'astro:content';
 import ExerciseRunner from '../../components/exercises/ExerciseRunner';
 import Example from '../../components/lesson/Example.astro';
+import Compare from '../../components/lesson/Compare.astro';
 import GrammarBox from '../../components/lesson/GrammarBox.astro';
+import Mistake from '../../components/lesson/Mistake.astro';
+import Step from '../../components/lesson/Step.astro';
+import Summary from '../../components/lesson/Summary.astro';
 import VocabList from '../../components/lesson/VocabList.astro';
 import LessonNotes from '../../components/notebook/LessonNotes';
 import ProgressMeter from '../../components/ui/ProgressMeter.astro';
@@ -71,8 +75,25 @@ const sections = [
     </ul>
   </nav>
 
-  <section id="lesson" class="prose mt-8">
-    <Content components={{ GrammarBox, Example }} />
+  <section id="lesson" class="mt-8">
+    {
+      lesson.objectives.length > 0 && (
+        <div class="card mb-8 border-l-4 border-l-accent p-5">
+          <p class="eyebrow">After this chapter you can</p>
+          <ul class="mt-2 grid gap-1.5">
+            {lesson.objectives.map((objective) => (
+              <li class="flex gap-2">
+                <span class="font-bold text-good" aria-hidden="true">✓</span>
+                <span>{objective}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+    <div class="prose">
+      <Content components={{ GrammarBox, Example, Step, Compare, Mistake, Summary }} />
+    </div>
   </section>
 
   {

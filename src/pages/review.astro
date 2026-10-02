@@ -6,7 +6,10 @@ import { url } from '../lib/url';
 
 const catalog = await getCatalog();
 const vocab = catalog.lessons.flatMap((lesson) => lesson.vocab);
-const exercises = catalog.lessons.flatMap((lesson) => lesson.sets.flatMap((set) => set.items));
+// In review an exercise appears on its own, so it takes its set's reading or listening text with it.
+const exercises = catalog.lessons.flatMap((lesson) =>
+  lesson.sets.flatMap((set) => set.items.map((item) => ({ ...item, stimulus: item.stimulus ?? set.stimulus }))),
+);
 const lessons = Object.fromEntries(catalog.lessons.map((lesson) => [lesson.key, { title: lesson.title, href: lesson.href }]));
 ---
 

@@ -3,10 +3,11 @@ import { useState } from 'react';
 import { groqProvider } from '../../lib/ai/provider';
 import type { ClientExercise } from '../../lib/content/types';
 import { describeResponse, grade, type GradeResult, type Response } from '../../lib/grading/grade';
-import { tokenize } from '../../lib/grading/shuffle';
+import { emptyResponse, headingOf, isReady, isSelfAssessed, promptOf, spokenSolution } from '../../lib/grading/response';
 import { speak } from '../../lib/speech';
 import { $progress, $settings, recordAnswer } from '../../lib/stores';
-import { FillBlank, Matching, MultipleChoice, Translation, WordOrder, Writing } from './widgets';
+import { StimulusView } from './StimulusView';
+import { ItemWidget } from './widgets';
 
 type Status = 'idle' | 'retry' | 'solved' | 'revealed';
 
@@ -23,59 +24,13 @@ interface Props {
   onFinish?: (correct: boolean) => void;
 }
 
-function emptyResponse(item: ClientExercise): Response {
-  switch (item.type) {
-    case 'multiple-choice':
-      return { type: 'multiple-choice', choice: '' };
-    case 'matching':
-      return { type: 'matching', selection: {} };
-    case 'word-order':
-      return { type: 'word-order', tokens: [] };
-    default:
-      return { type: item.type, text: '' };
-  }
-}
-
-function isReady(item: ClientExercise, response: Response): boolean {
-  switch (response.type) {
-    case 'multiple-choice':
-      return response.choice !== '';
-    case 'matching':
-      return item.type === 'matching' && item.pairs.every((pair) => response.selection[pair.left]);
-    case 'word-order':
-      return item.type === 'word-order' && response.tokens.length === tokenize(item.answer).length;
-    default:
-      return response.text.trim() !== '';
-  }
-}
-
-const FALLBACK_PROMPT: Partial<Record<ClientExercise['type'], string>> = {
-  matching: 'Match each word with its meaning.',
-  'word-order': 'Put the words in the right order.',
-};
-
-function promptOf(item: ClientExercise): string {
-  return item.prompt ?? FALLBACK_PROMPT[item.type] ?? '';
-}
-
-/** The full correct German sentence, if this exercise has one worth hearing. */
-function spokenSolution(item: ClientExercise, result: GradeResult): string | undefined {
-  switch (item.type) {
-    case 'fill-blank':
-      return item.prompt.replace('___', result.expected);
-    case 'translation':
-      return result.expected;
-    case 'word-order':
-      return item.answer;
-    case 'writing':
-      return item.sample;
-    default:
-      return undefined;
-  }
+/** Choosing between a few options, or marking your own work, gets one go. Typed answers get two. */
+function defaultAttempts(item: ClientExercise): number {
+  return item.type === 'multiple-choice' || item.type === 'true-false' || isSelfAssessed(item) ? 1 : 2;
 }
 
 export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFinish }: Props) {
-  const allowed = maxAttempts ?? (item.type === 'multiple-choice' ? 1 : 2);
+  const allowed = maxAttempts ?? defaultAttempts(item);
   const record = useStore($progress).exercises[item.id];
   const settings = useStore($settings);
 
@@ -88,6 +43,8 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
 
   const locked = status === 'solved' || status === 'revealed';
   const ready = isReady(item, response);
+  const selfAssessed = isSelfAssessed(item);
+  const freeText = item.type === 'writing' || item.type === 'writing-task';
 
   function check() {
     if (locked || !ready) return;
@@ -128,56 +85,41 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
     setAi({ state: 'loading' });
     try {
       const provider = groqProvider(settings.aiKey.trim(), settings.aiModel.trim());
-      const given = describeResponse(response);
-      const text =
-        item.type === 'writing' && status === 'solved'
-          ? await provider.reviewWriting({ prompt: item.prompt, text: given, topic })
-          : await provider.explainMistake({ prompt: promptOf(item), expected: result?.expected ?? '', given, topic });
+      const given = response.type === 'writing-task' ? response.text : describeResponse(response);
+      const text = freeText
+        ? await provider.reviewWriting({ prompt: item.prompt ?? '', text: given, topic })
+        : await provider.explainMistake({ prompt: promptOf(item), expected: result?.expected ?? '', given, topic });
       setAi({ state: 'done', text });
     } catch (error) {
       setAi({ state: 'error', text: error instanceof Error ? error.message : 'The AI request failed.' });
     }
   }
 
-  function renderWidget() {
-    const shared = { onChange: setResponse, locked, result, onSubmit: check };
-    if (item.type === 'multiple-choice' && response.type === 'multiple-choice') {
-      return <MultipleChoice item={item} response={response} {...shared} />;
-    }
-    if (item.type === 'fill-blank' && response.type === 'fill-blank') {
-      return <FillBlank item={item} response={response} {...shared} />;
-    }
-    if (item.type === 'translation' && response.type === 'translation') {
-      return <Translation item={item} response={response} {...shared} />;
-    }
-    if (item.type === 'writing' && response.type === 'writing') {
-      return <Writing item={item} response={response} {...shared} />;
-    }
-    if (item.type === 'matching' && response.type === 'matching') {
-      return <Matching item={item} response={response} {...shared} />;
-    }
-    if (item.type === 'word-order' && response.type === 'word-order') {
-      // Keyed by round so "Try again" clears the tiles it keeps internally.
-      return <WordOrder key={round} item={item} response={response} {...shared} />;
-    }
-    return null;
-  }
-
-  const solution = result && locked ? spokenSolution(item, result) : undefined;
+  const solution = result && locked && !selfAssessed ? spokenSolution(item, result) : undefined;
+  // The gaps and fields show their own solutions in place; tasks show a model answer.
+  const showsOwnSolution = item.type === 'cloze' || item.type === 'form' || selfAssessed;
   const aiAvailable =
-    settings.aiKey.trim() !== '' && (status === 'revealed' || (status === 'solved' && item.type === 'writing'));
+    settings.aiKey.trim() !== '' &&
+    item.type !== 'speaking-task' &&
+    (status === 'revealed' || (locked && freeText));
 
   return (
     <article className="card p-4 sm:p-5" aria-labelledby={`${item.id}-prompt`}>
       <header className="mb-3 flex items-start justify-between gap-3">
         <p id={`${item.id}-prompt`} className="font-semibold">
           <span className="mr-2 text-muted tabular-nums">{number}.</span>
-          {item.type === 'fill-blank' ? 'Fill in the gap.' : promptOf(item)}
+          {headingOf(item)}
         </p>
         {record?.correct && <span className="chip chip-good">Solved</span>}
       </header>
 
-      {renderWidget()}
+      {item.stimulus && (
+        <div className="mb-4">
+          <StimulusView stimulus={item.stimulus} />
+        </div>
+      )}
+
+      <ItemWidget key={round} item={item} response={response} onChange={setResponse} locked={locked} result={result} onSubmit={check} />
 
       <div className="mt-4 grid gap-3" aria-live="polite">
         {status === 'retry' && (
@@ -190,7 +132,7 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
 
         {status === 'solved' && (
           <div className="rounded-xl bg-good-soft px-4 py-3 text-good">
-            <p className="font-semibold">Richtig!</p>
+            <p className="font-semibold">{selfAssessed ? 'Gut gemacht!' : 'Richtig!'}</p>
             {result?.note && <p className="text-sm">{result.note}</p>}
           </div>
         )}
@@ -202,14 +144,12 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
           </div>
         )}
 
-        {locked && result && (
+        {locked && result && (!showsOwnSolution || item.explanation) && (
           <div className="rounded-xl bg-surface-2 px-4 py-3 text-sm">
-            {(status === 'revealed' || item.type === 'writing') && (
-              <p className="flex items-center gap-1">
-                <span>
-                  <span className="text-muted">{item.type === 'writing' ? 'One possible answer: ' : 'Answer: '}</span>
-                  <span className="de text-base" lang="de">{result.expected}</span>
-                </span>
+            {!showsOwnSolution && (status === 'revealed' || item.type === 'writing') && (
+              <p>
+                <span className="text-muted">{item.type === 'writing' ? 'One possible answer: ' : 'Answer: '}</span>
+                <span className="de text-base" lang="de">{result.expected}</span>
               </p>
             )}
             {item.explanation && <p className="mt-1">{item.explanation}</p>}
@@ -223,15 +163,15 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
 
         {ai.state !== 'idle' && (
           <div className={`rounded-xl border px-4 py-3 text-sm ${ai.state === 'error' ? 'border-bad text-bad' : 'border-line'}`}>
-            <p className="eyebrow mb-1">AI explanation</p>
-            <p>{ai.state === 'loading' ? 'Thinking …' : ai.text}</p>
+            <p className="eyebrow mb-1">AI feedback</p>
+            <p className="whitespace-pre-line">{ai.state === 'loading' ? 'Thinking …' : ai.text}</p>
           </div>
         )}
 
         <div className="flex flex-wrap items-center gap-2">
           {!locked && (
             <button type="button" className="btn btn-primary" onClick={check} disabled={!ready}>
-              Check
+              {selfAssessed ? 'Done' : 'Check'}
             </button>
           )}
           {locked && (
@@ -241,7 +181,7 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
           )}
           {aiAvailable && ai.state !== 'loading' && ai.state !== 'done' && (
             <button type="button" className="btn btn-quiet" onClick={askAi}>
-              {status === 'solved' ? 'Get feedback on my sentence' : 'Explain my mistake'}
+              {freeText ? 'Get feedback on my text' : 'Explain my mistake'}
             </button>
           )}
         </div>

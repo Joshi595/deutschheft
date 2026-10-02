@@ -1,16 +1,19 @@
 import { emptyNotebook, type NotebookState } from './notebook/logic';
 import { emptyProgress, type ProgressState } from './progress/logic';
+import type { QuizHistory } from './quiz/score';
 import type { ReviewState } from './srs/scheduler';
 
 /** Export and import of everything the learner has stored in the browser. */
 
 export const BACKUP_APP = 'learn-german';
-export const BACKUP_VERSION = 1;
+export const BACKUP_VERSION = 2;
 
 export interface BackupData {
   progress: ProgressState;
   review: ReviewState;
   notebook: NotebookState;
+  /** Mock exam and checkpoint results. Absent in version 1 backups. */
+  quizzes: QuizHistory;
 }
 
 export interface Backup extends BackupData {
@@ -56,5 +59,6 @@ export function parseBackup(json: string): BackupData {
       words: Array.isArray(notebook.words) ? (notebook.words as NotebookState['words']) : [],
       mistakes: Array.isArray(notebook.mistakes) ? (notebook.mistakes as NotebookState['mistakes']) : [],
     },
+    quizzes: isRecord(raw.quizzes) ? (raw.quizzes as QuizHistory) : {},
   };
 }

@@ -1,11 +1,23 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { isSelfAssessed } from '../grading/response';
+import { seededShuffle } from '../grading/shuffle';
 import { url } from '../url';
-import type { ClientExerciseSet, ClientVocabItem, LessonSummary, LevelSummary } from './types';
+import type {
+  ClientExercise,
+  ClientExerciseSet,
+  ClientQuiz,
+  ClientVocabItem,
+  ExamLink,
+  LessonSummary,
+  LevelSummary,
+  UnitSummary,
+} from './types';
 
 /**
- * Build-time view of all content: levels, their lessons, and each lesson's
- * exercises and vocabulary joined by lesson key. Pages read from here and never
- * mention a specific level or lesson themselves.
+ * Build-time view of all content: levels, their units and lessons, each lesson's
+ * exercises and vocabulary joined by lesson key, plus mock exams and the unit
+ * checkpoints derived from the lessons. Pages read from here and never mention
+ * a specific level or lesson themselves.
  */
 
 export interface LessonBundle extends LessonSummary {
@@ -14,10 +26,22 @@ export interface LessonBundle extends LessonSummary {
   vocab: ClientVocabItem[];
 }
 
+export interface LevelBundle extends LevelSummary {
+  lessons: LessonBundle[];
+  /** Full mock exams of this level. */
+  quizzes: ClientQuiz[];
+  /** Checkpoint quizzes, by unit number. */
+  checkpoints: Map<number, ClientQuiz>;
+}
+
 export interface Catalog {
-  levels: (LevelSummary & { lessons: LessonBundle[] })[];
+  levels: LevelBundle[];
   lessons: LessonBundle[];
 }
+
+/** Questions per checkpoint, spread evenly over the unit's lessons. */
+const CHECKPOINT_SIZE = 12;
+const CHECKPOINT_MIN = 6;
 
 let cached: Promise<Catalog> | undefined;
 
@@ -27,11 +51,12 @@ export function getCatalog(): Promise<Catalog> {
 }
 
 async function build(): Promise<Catalog> {
-  const [levelEntries, lessonEntries, exerciseEntries, vocabEntries] = await Promise.all([
+  const [levelEntries, lessonEntries, exerciseEntries, vocabEntries, examEntries] = await Promise.all([
     getCollection('levels'),
     getCollection('lessons'),
     getCollection('exercises'),
     getCollection('vocab'),
+    getCollection('exams'),
   ]);
 
   const lessonKeys = new Set<string>();
@@ -56,6 +81,7 @@ async function build(): Promise<Catalog> {
     const sets: ClientExerciseSet[] = (exercisesByLesson.get(key)?.data.sets ?? []).map((set) => ({
       title: set.title,
       instructions: set.instructions,
+      stimulus: set.stimulus,
       items: set.items.map((item) => ({ ...item, id: `${key}.${item.id}`, lessonKey: key })),
     }));
     const vocab: ClientVocabItem[] = (vocabByLesson.get(key)?.data.items ?? []).map((item) => ({
@@ -76,6 +102,9 @@ async function build(): Promise<Catalog> {
       order: entry.data.order,
       minutes: entry.data.minutes,
       topics: entry.data.topics,
+      objectives: entry.data.objectives,
+      unit: entry.data.unit,
+      kind: entry.data.kind,
       exercises: sets.flatMap((set) => set.items.map((item) => ({ id: item.id, tags: item.tags }))),
       vocabIds: vocab.map((item) => item.id),
       sets,
@@ -89,15 +118,70 @@ async function build(): Promise<Catalog> {
       throw new Error(`Lesson "${lesson.key}" refers to level "${lesson.level}", which has no file in content/levels/`);
     }
   }
+  for (const exam of examEntries) {
+    if (!levelIds.has(exam.data.level) || !exam.id.startsWith(`${exam.data.level}/`)) {
+      throw new Error(`Exam "${exam.id}" has level "${exam.data.level}", so it belongs in exams/${exam.data.level}/`);
+    }
+  }
 
-  const levels = levelEntries
+  const levels: LevelBundle[] = levelEntries
     .sort((a, b) => a.data.order - b.data.order)
-    .map((entry) => ({
-      id: entry.id,
-      ...entry.data,
-      href: url(`${entry.id}/`),
-      lessons: lessons.filter((lesson) => lesson.level === entry.id).sort((a, b) => a.order - b.order),
-    }));
+    .map((entry) => {
+      const levelLessons = lessons.filter((lesson) => lesson.level === entry.id).sort((a, b) => a.order - b.order);
+      const href = url(`${entry.id}/`);
+
+      // A level without declared units is shown as one unnamed unit.
+      const declared = entry.data.units.length > 0 ? entry.data.units : [{ title: '' }];
+      for (const lesson of levelLessons) {
+        if (lesson.unit > declared.length) {
+          throw new Error(`Lesson "${lesson.key}" is in unit ${lesson.unit}, but level "${entry.id}" declares ${declared.length}`);
+        }
+      }
+
+      const checkpoints = new Map<number, ClientQuiz>();
+      const units: UnitSummary[] = declared.map((unit, index) => {
+        const number = index + 1;
+        const unitLessons = levelLessons.filter((lesson) => lesson.unit === number);
+        const quiz = buildCheckpoint(entry.id, entry.data.title, number, unit.title, unitLessons, href);
+        if (quiz) checkpoints.set(number, quiz);
+        return {
+          number,
+          title: unit.title,
+          summary: unit.summary,
+          lessonKeys: unitLessons.map((lesson) => lesson.key),
+          checkpointHref: quiz && url(`${entry.id}/checkpoint/${number}/`),
+          checkpointId: quiz?.id,
+        };
+      });
+
+      const quizzes = examEntries
+        .filter((exam) => exam.data.level === entry.id)
+        .sort((a, b) => a.id.localeCompare(b.id))
+        .map((exam) => buildExam(exam, href));
+
+      const exams: ExamLink[] = quizzes.map((quiz) => ({
+        id: quiz.id,
+        title: quiz.title,
+        description: quiz.description,
+        href: url(`${entry.id}/exam/${quiz.id.split('/')[1]}/`),
+        minutes: quiz.sections.reduce((sum, section) => sum + (section.minutes ?? 0), 0),
+      }));
+
+      return {
+        id: entry.id,
+        title: entry.data.title,
+        name: entry.data.name,
+        description: entry.data.description,
+        status: entry.data.status,
+        exam: entry.data.exam,
+        href,
+        units,
+        lessons: levelLessons,
+        exams,
+        quizzes,
+        checkpoints,
+      };
+    });
 
   return { levels, lessons: levels.flatMap((level) => level.lessons) };
 }
@@ -121,12 +205,85 @@ function indexByLesson<C extends 'exercises' | 'vocab'>(
   return map;
 }
 
+function buildExam(entry: CollectionEntry<'exams'>, backHref: string): ClientQuiz {
+  const lessonKey = `${entry.data.level}.exam`;
+  return {
+    id: `exam:${entry.id}`,
+    kind: 'exam',
+    title: entry.data.title,
+    description: entry.data.description,
+    passMark: entry.data.passMark,
+    scoring: entry.data.scoring,
+    backHref,
+    sections: entry.data.modules.map((module) => ({
+      skill: module.skill,
+      minutes: module.minutes,
+      points: module.points,
+      parts: module.parts.map((part) => ({
+        title: part.title,
+        instructions: part.instructions,
+        stimulus: part.stimulus,
+        items: part.items.map((item) => ({ ...item, id: `${entry.id}.${item.id}`, lessonKey })),
+      })),
+    })),
+  };
+}
+
+/**
+ * A short mixed quiz over one unit, drawn from its lessons' own exercises.
+ * Only items the grader can mark, and only ones that stand on their own
+ * (no shared reading text).
+ */
+function buildCheckpoint(
+  level: string,
+  levelTitle: string,
+  number: number,
+  title: string,
+  lessons: LessonBundle[],
+  backHref: string,
+): ClientQuiz | undefined {
+  const teaching = lessons.filter((lesson) => lesson.kind !== 'exam');
+  if (teaching.length === 0) return undefined;
+  const perLesson = Math.max(2, Math.ceil(CHECKPOINT_SIZE / teaching.length));
+
+  const parts: ClientExerciseSet[] = teaching
+    .map((lesson) => {
+      const eligible: ClientExercise[] = lesson.sets
+        .filter((set) => !set.stimulus)
+        .flatMap((set) => set.items)
+        .filter((item) => !item.stimulus && !isSelfAssessed(item) && item.type !== 'writing');
+      return {
+        title: lesson.title,
+        items: seededShuffle(eligible, `${level}-${number}-${lesson.key}`).slice(0, perLesson),
+      };
+    })
+    .filter((part) => part.items.length > 0);
+
+  if (parts.reduce((sum, part) => sum + part.items.length, 0) < CHECKPOINT_MIN) return undefined;
+
+  return {
+    id: `checkpoint:${level}:${number}`,
+    kind: 'checkpoint',
+    title: title ? `Checkpoint: ${title}` : `${levelTitle} checkpoint`,
+    description: 'A short mixed quiz over this unit. No hints, no second tries; you see the results at the end.',
+    passMark: 60,
+    scoring: 'total',
+    backHref,
+    sections: [{ skill: 'mixed', points: 100, parts }],
+  };
+}
+
 /** Strip a lesson bundle down to what client components may receive. */
 export function toSummary(lesson: LessonBundle): LessonSummary {
   const { entry: _entry, sets: _sets, vocab: _vocab, ...summary } = lesson;
   return summary;
 }
 
+export function toLevelSummary(level: LevelBundle): LevelSummary {
+  const { quizzes: _quizzes, checkpoints: _checkpoints, ...summary } = level;
+  return { ...summary, lessons: level.lessons.map(toSummary) };
+}
+
 export function toLevelSummaries(catalog: Catalog): LevelSummary[] {
-  return catalog.levels.map((level) => ({ ...level, lessons: level.lessons.map(toSummary) }));
+  return catalog.levels.map(toLevelSummary);
 }
