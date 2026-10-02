@@ -1,0 +1,104 @@
+lesson: a2.05
+items:
+  - id: gross
+    de: groß
+    en: big, tall
+    pos: adjective
+    example: Der große Mann ist mein Onkel.
+    exampleEn: The tall man is my uncle.
+  - id: klein
+    de: klein
+    en: small
+    pos: adjective
+    example: Das kleine Kind spielt.
+    exampleEn: The small child is playing.
+  - id: neu
+    de: neu
+    en: new
+    pos: adjective
+    example: Mein neuer Laptop ist sehr schnell.
+    exampleEn: My new laptop is very fast.
+  - id: alt
+    de: alt
+    en: old
+    pos: adjective
+    example: Das alte Auto fährt noch gut.
+    exampleEn: The old car still runs well.
+  - id: jung
+    de: jung
+    en: young
+    pos: adjective
+    example: Die junge Ärztin ist sehr nett.
+    exampleEn: The young doctor is very nice.
+  - id: schoen
+    de: schön
+    en: beautiful, nice
+    pos: adjective
+    example: Das ist eine schöne Stadt.
+    exampleEn: That is a beautiful city.
+  - id: gut
+    de: gut
+    en: good
+    pos: adjective
+    example: Das ist eine gute Idee.
+    exampleEn: That is a good idea.
+  - id: schlecht
+    de: schlecht
+    en: bad
+    pos: adjective
+    example: Das ist kein schlechter Film.
+    exampleEn: That is not a bad film.
+  - id: interessant
+    de: interessant
+    en: interesting
+    pos: adjective
+    example: Das ist ein interessantes Buch.
+    exampleEn: That is an interesting book.
+  - id: langweilig
+    de: langweilig
+    en: boring
+    pos: adjective
+    example: Der langweilige Film dauert drei Stunden.
+    exampleEn: The boring film lasts three hours.
+  - id: schnell
+    de: schnell
+    en: fast
+    pos: adjective
+    example: Ein schneller Zug fährt nach Köln.
+    exampleEn: A fast train goes to Cologne.
+  - id: langsam
+    de: langsam
+    en: slow
+    pos: adjective
+    example: Der langsame Bus kommt immer zu spät.
+    exampleEn: The slow bus is always late.
+  - id: heiss
+    de: heiß
+    en: hot
+    pos: adjective
+    example: Heißer Tee ist gut gegen Kälte.
+    exampleEn: Hot tea is good against the cold.
+  - id: kalt
+    de: kalt
+    en: cold
+    pos: adjective
+    example: Kaltes Wasser ist erfrischend.
+    exampleEn: Cold water is refreshing.
+  - id: teuer
+    de: teuer
+    en: expensive
+    pos: adjective
+    example: Das ist ein teures Hotel.
+    exampleEn: That is an expensive hotel.
+  - id: billig
+    de: billig
+    en: cheap
+    pos: adjective
+    example: Ein billiger Flug ist schwer zu finden.
+    exampleEn: A cheap flight is hard to find.
+  - id: nett
+    de: nett
+    en: nice, kind
+    pos: adjective
+    example: Die netten Nachbarn helfen uns.
+    exampleEn: The nice neighbours help us.
