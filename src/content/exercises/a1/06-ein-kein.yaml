@@ -1,0 +1,208 @@
+lesson: a1.06
+sets:
+  - title: ein or eine?
+    items:
+      - id: ein1
+        type: fill-blank
+        tags: [indefinite article]
+        prompt: "Das ist ___ Tisch."
+        answers: [ein]
+      - id: ein2
+        type: fill-blank
+        tags: [indefinite article]
+        prompt: "Das ist ___ Lampe."
+        answers: [eine]
+      - id: ein3
+        type: fill-blank
+        tags: [indefinite article]
+        prompt: "Das ist ___ Buch."
+        answers: [ein]
+      - id: ein4
+        type: fill-blank
+        tags: [indefinite article]
+        prompt: "Hier ist ___ Tasche."
+        answers: [eine]
+      - id: ein5
+        type: fill-blank
+        tags: [indefinite article]
+        prompt: "Das ist ein Buch. ___ Buch ist neu."
+        answers: [Das]
+        explanation: Once the book has been mentioned, it takes the definite article.
+
+  - title: kein or keine?
+    items:
+      - id: kein1
+        type: fill-blank
+        tags: [kein]
+        prompt: "Das ist ___ Tisch. Das ist ein Stuhl."
+        answers: [kein]
+      - id: kein2
+        type: fill-blank
+        tags: [kein]
+        prompt: "Ich habe ___ Zeit."
+        answers: [keine]
+        explanation: "die Zeit is feminine: keine."
+      - id: kein3
+        type: fill-blank
+        tags: [kein]
+        prompt: "Wir haben ___ Auto."
+        answers: [kein]
+      - id: kein4
+        type: fill-blank
+        tags: [kein]
+        prompt: "Hier sind ___ Kinder."
+        answers: [keine]
+        explanation: Plural takes keine.
+      - id: kein5
+        type: fill-blank
+        tags: [kein]
+        prompt: "Das ist ___ Problem."
+        answers: [kein]
+
+  - title: kein or nicht?
+    instructions: A noun with ein or no article takes kein. Everything else takes nicht.
+    items:
+      - id: choose1
+        type: multiple-choice
+        tags: [kein or nicht]
+        prompt: Das ist ___ gut.
+        options: [nicht, kein, keine]
+        answer: nicht
+        explanation: gut is an adjective.
+      - id: choose2
+        type: multiple-choice
+        tags: [kein or nicht]
+        prompt: Ich habe ___ Geld.
+        options: [kein, nicht, keine]
+        answer: kein
+        explanation: "Geld is a noun without an article, and it is neuter."
+      - id: choose3
+        type: multiple-choice
+        tags: [kein or nicht]
+        prompt: Ich komme heute ___.
+        options: [nicht, kein, keine]
+        answer: nicht
+        explanation: A verb is negated with nicht.
+      - id: choose4
+        type: multiple-choice
+        tags: [kein or nicht]
+        prompt: Das ist ___ Anna. Das ist Maria.
+        options: [nicht, kein, keine]
+        answer: nicht
+        explanation: Names are negated with nicht.
+      - id: choose5
+        type: multiple-choice
+        tags: [kein or nicht]
+        prompt: Sie hat ___ Idee.
+        options: [keine, nicht, kein]
+        answer: keine
+      - id: choose6
+        type: multiple-choice
+        tags: [kein or nicht]
+        prompt: Wir wohnen ___ in Berlin.
+        options: [nicht, kein, keine]
+        answer: nicht
+        explanation: A phrase with a preposition is negated with nicht in front of it.
+      - id: choose7
+        type: multiple-choice
+        tags: [kein or nicht]
+        prompt: Das ist ___ der Lehrer.
+        options: [nicht, kein, keine]
+        answer: nicht
+        explanation: A noun with der, die or das is negated with nicht.
+
+  - title: Make it negative
+    instructions: Write the negative sentence.
+    items:
+      - id: neg1
+        type: translation
+        tags: [kein or nicht]
+        prompt: "Ich habe Zeit."
+        answers: [Ich habe keine Zeit.]
+      - id: neg2
+        type: translation
+        tags: [kein or nicht]
+        prompt: "Das ist richtig."
+        answers: [Das ist nicht richtig.]
+      - id: neg3
+        type: translation
+        tags: [kein or nicht]
+        prompt: "Das ist ein Problem."
+        answers: [Das ist kein Problem.]
+      - id: neg4
+        type: translation
+        tags: [kein or nicht]
+        prompt: "Er arbeitet."
+        answers: [Er arbeitet nicht.]
+
+  - title: Where does nicht go?
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [nicht position]
+        prompt: The book is not expensive.
+        answer: Das Buch ist nicht teuer.
+      - id: order2
+        type: word-order
+        tags: [nicht position]
+        prompt: He is not coming today.
+        answer: Er kommt heute nicht.
+      - id: order3
+        type: word-order
+        tags: [nicht position]
+        prompt: I do not live in Hamburg.
+        answer: Ich wohne nicht in Hamburg.
+
+  - title: Listen and decide
+    stimulus:
+      kind: audio
+      label: Gespräch
+      lines:
+        - speaker: Tom
+          text: "Hallo Anna! Hast du heute Zeit?"
+        - speaker: Anna
+          text: "Nein, tut mir leid. Heute habe ich keine Zeit. Ich arbeite."
+        - speaker: Tom
+          text: "Und morgen?"
+        - speaker: Anna
+          text: "Morgen arbeite ich nicht. Morgen habe ich Zeit."
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening]
+        prompt: Anna hat heute Zeit.
+        answer: false
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Anna arbeitet heute.
+        answer: true
+      - id: listen3
+        type: true-false
+        tags: [listening]
+        prompt: Anna arbeitet morgen.
+        answer: false
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [kein]
+        prompt: I have no time.
+        answers: [Ich habe keine Zeit.]
+      - id: tr2
+        type: translation
+        tags: [kein]
+        prompt: That is no problem.
+        answers: [Das ist kein Problem.]
+      - id: tr3
+        type: translation
+        tags: [nicht position]
+        prompt: That is not right.
+        answers: [Das ist nicht richtig.]
+      - id: tr4
+        type: translation
+        tags: [indefinite article]
+        prompt: What is that? That is a bag.
+        answers: [Was ist das? Das ist eine Tasche.]
