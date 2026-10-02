@@ -1,0 +1,238 @@
+lesson: a1.21
+sets:
+  - title: The body
+    items:
+      - id: body1
+        type: matching
+        tags: [body]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: der Kopf, right: head }
+          - { left: der Bauch, right: stomach }
+          - { left: das Bein, right: leg }
+          - { left: der Rücken, right: back }
+          - { left: das Ohr, right: ear }
+          - { left: der Zahn, right: tooth }
+      - id: body2
+        type: fill-blank
+        tags: [body, noun gender]
+        prompt: "___ Kopf"
+        answers: [der]
+      - id: body3
+        type: fill-blank
+        tags: [body, noun gender]
+        prompt: "___ Auge"
+        answers: [das]
+      - id: body4
+        type: fill-blank
+        tags: [body, noun gender]
+        prompt: "___ Hand"
+        answers: [die]
+      - id: body5
+        type: fill-blank
+        tags: [body, plural]
+        prompt: "der Fuß, zwei ___"
+        answers: [Füße]
+      - id: body6
+        type: fill-blank
+        tags: [body, plural]
+        prompt: "das Auge, zwei ___"
+        answers: [Augen]
+
+  - title: What hurts?
+    items:
+      - id: hurt1
+        type: fill-blank
+        tags: [health]
+        prompt: "Mein Kopf tut weh. Ich habe ___."
+        answers: [Kopfschmerzen]
+      - id: hurt2
+        type: fill-blank
+        tags: [health]
+        prompt: "Mein Bauch tut weh. Ich habe ___."
+        answers: [Bauchschmerzen]
+      - id: hurt3
+        type: multiple-choice
+        tags: [health, wehtun]
+        prompt: Meine Augen ___ weh.
+        options: [tun, tut, tust]
+        answer: tun
+        explanation: Augen is plural.
+      - id: hurt4
+        type: multiple-choice
+        tags: [health, wehtun]
+        prompt: Mein Rücken ___ weh.
+        options: [tut, tun, ist]
+        answer: tut
+      - id: hurt5
+        type: multiple-choice
+        tags: [health]
+        prompt: Ich ___ Fieber.
+        options: [habe, bin, tue]
+        answer: habe
+      - id: hurt6
+        type: multiple-choice
+        tags: [health]
+        prompt: Ich ___ erkältet.
+        options: [bin, habe, tue]
+        answer: bin
+        explanation: erkältet is an adjective, so it takes sein.
+      - id: hurt7
+        type: word-order
+        tags: [health]
+        prompt: I have had a cough for three days.
+        answer: Ich habe seit drei Tagen Husten.
+
+  - title: mich, dich, ihn
+    instructions: Replace the noun with the right accusative pronoun.
+    items:
+      - id: pron1
+        type: fill-blank
+        tags: [accusative pronouns]
+        prompt: "Kennst du Herrn Weber? Ja, ich kenne ___."
+        answers: [ihn]
+      - id: pron2
+        type: fill-blank
+        tags: [accusative pronouns]
+        prompt: "Wo ist die Tablette? Ich habe ___ hier."
+        answers: [sie]
+      - id: pron3
+        type: fill-blank
+        tags: [accusative pronouns]
+        prompt: "Wo ist der Schlüssel? Ich finde ___ nicht."
+        answers: [ihn]
+        explanation: "der Schlüssel is masculine, so the pronoun is ihn."
+      - id: pron4
+        type: fill-blank
+        tags: [accusative pronouns]
+        prompt: "Das Buch ist gut. Ich lese ___ gern."
+        answers: [es]
+      - id: pron5
+        type: multiple-choice
+        tags: [accusative pronouns]
+        prompt: Der Arzt untersucht ___. (me)
+        options: [mich, ich, mir]
+        answer: mich
+      - id: pron6
+        type: multiple-choice
+        tags: [accusative pronouns]
+        prompt: Ich rufe ___ morgen an. (you, informal)
+        options: [dich, du, dir]
+        answer: dich
+      - id: pron7
+        type: multiple-choice
+        tags: [accusative pronouns]
+        prompt: Besuchst du ___ am Wochenende? (us)
+        options: [uns, wir, unser]
+        answer: uns
+
+  - title: A message from the surgery
+    instructions: As in the listening exam. You hear the message twice.
+    stimulus:
+      kind: audio
+      label: Anrufbeantworter
+      lines:
+        - text: "Guten Tag, Herr Novak. Hier ist die Praxis Doktor Lang. Ihr Termin am Dienstag um zehn Uhr geht leider nicht. Können Sie am Mittwoch um halb neun kommen? Bitte rufen Sie uns an. Unsere Nummer ist vier, vier, sieben, null, zwei."
+    items:
+      - id: msg1
+        type: multiple-choice
+        tags: [listening, health]
+        prompt: Wann ist der neue Termin?
+        options: [am Mittwoch um 8:30 Uhr, am Dienstag um 10 Uhr, am Mittwoch um 9:30 Uhr]
+        answer: am Mittwoch um 8:30 Uhr
+      - id: msg2
+        type: true-false
+        tags: [listening, health]
+        prompt: Herr Novak soll die Praxis anrufen.
+        answer: true
+      - id: msg3
+        type: fill-blank
+        tags: [listening, numbers]
+        prompt: "Die Telefonnummer ist ___."
+        answers: ["44702"]
+
+  - title: At the doctor's
+    stimulus:
+      kind: audio
+      label: Beim Arzt
+      lines:
+        - speaker: Ärztin
+          text: "Guten Tag, Frau Kaya. Was fehlt Ihnen?"
+        - speaker: Frau Kaya
+          text: "Ich habe seit zwei Tagen Halsschmerzen und Fieber."
+        - speaker: Ärztin
+          text: "Sie sind erkältet. Bleiben Sie drei Tage im Bett und trinken Sie viel Tee. Hier ist ein Rezept."
+        - speaker: Frau Kaya
+          text: "Darf ich arbeiten?"
+        - speaker: Ärztin
+          text: "Nein, diese Woche dürfen Sie nicht arbeiten. Gute Besserung!"
+    items:
+      - id: doc1
+        type: multiple-choice
+        tags: [listening, health]
+        prompt: Was hat Frau Kaya?
+        options: [Halsschmerzen und Fieber, Bauchschmerzen, Zahnschmerzen]
+        answer: Halsschmerzen und Fieber
+      - id: doc2
+        type: true-false
+        tags: [listening, health]
+        prompt: Frau Kaya soll viel Tee trinken.
+        answer: true
+      - id: doc3
+        type: true-false
+        tags: [listening, health]
+        prompt: Frau Kaya darf diese Woche arbeiten.
+        answer: false
+
+  - title: Read the notice
+    stimulus:
+      kind: text
+      label: Schild
+      title: Praxis Dr. Lang
+      text: |
+        Sprechstunde
+        Montag, Dienstag, Donnerstag: 8 bis 12 Uhr und 15 bis 18 Uhr
+        Mittwoch und Freitag: 8 bis 13 Uhr
+        Termine nur nach Anmeldung. Im Notfall rufen Sie bitte 112.
+    items:
+      - id: notice1
+        type: true-false
+        tags: [reading, health]
+        prompt: Am Mittwoch um 16 Uhr ist die Praxis geöffnet.
+        answer: false
+      - id: notice2
+        type: true-false
+        tags: [reading, health]
+        prompt: Man braucht einen Termin.
+        answer: true
+
+  - title: Say and write it
+    items:
+      - id: tr1
+        type: translation
+        tags: [health]
+        prompt: I have a headache.
+        answers:
+          - Ich habe Kopfschmerzen.
+      - id: tr2
+        type: translation
+        tags: [health]
+        prompt: I need an appointment.
+        answers:
+          - Ich brauche einen Termin.
+      - id: write1
+        type: writing-task
+        tags: [writing, health]
+        prompt: "You are ill and cannot come to your German course tomorrow. Write a short message to your teacher, Frau Berger."
+        points:
+          - Say that you cannot come
+          - Say what is wrong with you
+          - Say when you will be back
+        minWords: 20
+        phrases:
+          - Liebe Frau Berger,
+          - ich kann morgen leider nicht kommen.
+          - Ich bin krank. Ich habe …
+          - Am … komme ich wieder.
+          - Viele Grüße
+        sample: "Liebe Frau Berger, ich kann morgen leider nicht zum Kurs kommen. Ich bin krank. Ich habe Fieber und Halsschmerzen. Am Montag komme ich wieder. Viele Grüße, Maria Rossi"
