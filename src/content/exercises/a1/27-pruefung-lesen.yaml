@@ -1,0 +1,199 @@
+lesson: a1.27
+sets:
+  - title: Same idea, other words
+    items:
+      - id: para1
+        type: matching
+        tags: [exam reading]
+        prompt: Match each expression with the one that means the same.
+        pairs:
+          - { left: täglich, right: jeden Tag }
+          - { left: kostenlos, right: Sie zahlen nichts }
+          - { left: Ruhetag, right: geschlossen }
+          - { left: nur nach Anmeldung, right: Man braucht einen Termin. }
+          - { left: verboten, right: nicht erlaubt }
+      - id: para2
+        type: multiple-choice
+        tags: [exam reading]
+        prompt: "A sign says: Geöffnet täglich außer Montag. When is the shop closed?"
+        options: [am Montag, jeden Tag, am Sonntag]
+        answer: am Montag
+      - id: para3
+        type: multiple-choice
+        tags: [exam reading]
+        prompt: "A sign says: Ab 18 Uhr geschlossen. Can you go in at 19 Uhr?"
+        options: [Nein, Ja]
+        answer: Nein
+
+  - title: "Teil 1: richtig oder falsch?"
+    instructions: Lesen Sie den Text und die Aufgaben. Sind die Aussagen richtig oder falsch?
+    stimulus:
+      kind: text
+      label: E-Mail
+      text: |
+        Liebe Sofia,
+        vielen Dank für deine Einladung zum Geburtstag am Samstag. Ich komme gern, aber ich kann erst um acht Uhr da sein, denn ich muss bis sieben arbeiten.
+        Mein Bruder Luis ist auch in Berlin. Darf er mitkommen? Ich bringe einen Kuchen mit.
+        Bis Samstag!
+        Carla
+    items:
+      - id: t1a
+        type: true-false
+        tags: [exam reading]
+        prompt: Carla kommt zum Geburtstag von Sofia.
+        answer: true
+      - id: t1b
+        type: true-false
+        tags: [exam reading]
+        prompt: Carla kommt um sieben Uhr.
+        answer: false
+        explanation: "She works until seven and can only be there at eight: erst um acht Uhr."
+      - id: t1c
+        type: true-false
+        tags: [exam reading]
+        prompt: Carla möchte ihren Bruder mitbringen.
+        answer: true
+        explanation: "Darf er mitkommen? means the same in other words."
+
+  - title: "Teil 1: a second text"
+    stimulus:
+      kind: text
+      label: Notiz
+      text: |
+        Hallo Herr Aydin,
+        der Deutschkurs am Donnerstag ist leider nicht im Raum 12, sondern im Raum 8 im zweiten Stock. Wir fangen wie immer um 18 Uhr an.
+        Bitte bringen Sie Ihr Buch mit.
+        Viele Grüße
+        M. Berger
+    items:
+      - id: t1d
+        type: true-false
+        tags: [exam reading]
+        prompt: Der Kurs ist am Donnerstag im Raum 12.
+        answer: false
+        explanation: "nicht im Raum 12, sondern im Raum 8."
+      - id: t1e
+        type: true-false
+        tags: [exam reading]
+        prompt: Der Kurs beginnt um 18 Uhr.
+        answer: true
+
+  - title: "Teil 2: a oder b?"
+    instructions: Lesen Sie die Situation und die zwei Anzeigen. Welche Anzeige passt?
+    items:
+      - id: t2a
+        type: multiple-choice
+        tags: [exam reading]
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Sprachschule Lingua: Deutschkurse A1 und A2. Montag bis Freitag, 9 bis 12 Uhr. Beginn jeden Monat.
+
+            b) Volkshochschule Mitte: Deutsch für Anfänger. Dienstag und Donnerstag, 18.30 bis 20 Uhr. Beginn im September.
+        prompt: Sie arbeiten bis 17 Uhr und möchten Deutsch lernen.
+        options: [Anzeige a, Anzeige b]
+        answer: Anzeige b
+        shuffle: false
+        explanation: Only b has courses in the evening.
+      - id: t2b
+        type: multiple-choice
+        tags: [exam reading]
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) 2-Zimmer-Wohnung, 50 qm, im Zentrum, 3. Stock, kein Balkon. 600 € warm.
+
+            b) 2-Zimmer-Wohnung, 55 qm, ruhig, Erdgeschoss mit kleinem Garten. 650 € warm.
+        prompt: Sie suchen eine Wohnung mit Garten.
+        options: [Anzeige a, Anzeige b]
+        answer: Anzeige b
+        shuffle: false
+      - id: t2c
+        type: multiple-choice
+        tags: [exam reading]
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Restaurant Sonne: Mittagstisch von 11.30 bis 14 Uhr. Sonntag Ruhetag.
+
+            b) Café Mond: Frühstück, Mittagessen, Kaffee und Kuchen. Täglich von 8 bis 22 Uhr.
+        prompt: Sie möchten am Sonntag mit Freunden essen gehen.
+        options: [Anzeige a, Anzeige b]
+        answer: Anzeige b
+        shuffle: false
+        explanation: "Restaurant Sonne is closed on Sundays: Sonntag Ruhetag."
+      - id: t2d
+        type: multiple-choice
+        tags: [exam reading]
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Fahrrad zu verkaufen. Damenrad, fast neu, 120 €. Tel. 0170 33 44 55
+
+            b) Suche günstiges Fahrrad für mein Kind (8 Jahre). Tel. 0151 66 77 88
+        prompt: Sie möchten ein Fahrrad kaufen.
+        options: [Anzeige a, Anzeige b]
+        answer: Anzeige a
+        shuffle: false
+        explanation: "In b someone is looking for a bicycle: Suche …"
+
+  - title: "Teil 3: Schilder"
+    instructions: Lesen Sie das Schild und die Aussage. Ist die Aussage richtig oder falsch?
+    items:
+      - id: t3a
+        type: true-false
+        tags: [exam reading]
+        stimulus:
+          kind: text
+          label: An der Tür einer Bäckerei
+          text: |
+            Wir machen Urlaub vom 1. bis 15. August.
+            Ab 16. August sind wir wieder für Sie da.
+        prompt: Am 10. August können Sie hier Brot kaufen.
+        answer: false
+      - id: t3b
+        type: true-false
+        tags: [exam reading]
+        stimulus:
+          kind: text
+          label: Im Bus
+          text: Bitte beim Fahrer einsteigen und die Fahrkarte zeigen.
+        prompt: Sie müssen dem Fahrer Ihre Fahrkarte zeigen.
+        answer: true
+      - id: t3c
+        type: true-false
+        tags: [exam reading]
+        stimulus:
+          kind: text
+          label: Am Museum
+          text: |
+            Geöffnet Dienstag bis Sonntag, 10 bis 17 Uhr.
+            Kinder bis 12 Jahre: Eintritt frei.
+        prompt: Ein Kind mit zehn Jahren muss Eintritt bezahlen.
+        answer: false
+      - id: t3d
+        type: true-false
+        tags: [exam reading]
+        stimulus:
+          kind: text
+          label: Im Sprachinstitut
+          text: |
+            Heute kein Unterricht!
+            Frau Berger ist krank. Der Kurs findet morgen statt.
+        prompt: Der Kurs ist heute.
+        answer: false
+      - id: t3e
+        type: true-false
+        tags: [exam reading]
+        stimulus:
+          kind: text
+          label: Am Parkplatz
+          text: |
+            Parken nur für Gäste des Hotels.
+            Andere Autos werden abgeschleppt.
+        prompt: Hier dürfen alle parken.
+        answer: false
