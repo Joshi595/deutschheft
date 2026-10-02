@@ -1,0 +1,110 @@
+lesson: a2.08
+items:
+  - id: helfen
+    de: helfen
+    en: to help (+ dative)
+    pos: verb
+    example: Ich helfe dem alten Mann.
+    exampleEn: I am helping the old man.
+  - id: danken
+    de: danken
+    en: to thank (+ dative)
+    pos: verb
+    example: Wir danken der freundlichen Frau.
+    exampleEn: We thank the friendly woman.
+  - id: gehoeren
+    de: gehören
+    en: to belong to (+ dative)
+    pos: verb
+    example: Das Auto gehört meinem Bruder.
+    exampleEn: The car belongs to my brother.
+  - id: gefallen
+    de: gefallen
+    en: to please, to be liked by (+ dative)
+    pos: verb
+    example: Das Kleid gefällt mir.
+    exampleEn: I like the dress.
+  - id: antworten
+    de: antworten
+    en: to answer (+ dative)
+    pos: verb
+    example: Er antwortet dem Chef nicht.
+    exampleEn: He does not answer the boss.
+  - id: schmecken
+    de: schmecken
+    en: to taste good to (+ dative)
+    pos: verb
+    example: Die Suppe schmeckt den Kindern.
+    exampleEn: The children like the soup.
+  - id: gratulieren
+    de: gratulieren
+    en: to congratulate (+ dative)
+    pos: verb
+    example: Ich gratuliere dir zum Geburtstag.
+    exampleEn: Happy birthday to you.
+  - id: geben
+    de: geben
+    en: to give
+    pos: verb
+    example: Ich gebe dem Kind einen Apfel.
+    exampleEn: I give the child an apple.
+  - id: schenken
+    de: schenken
+    en: to give as a present
+    pos: verb
+    example: Sie schenkt ihrer Mutter Blumen.
+    exampleEn: She gives her mother flowers.
+  - id: zeigen
+    de: zeigen
+    en: to show
+    pos: verb
+    example: Kannst du mir den Weg zeigen?
+    exampleEn: Can you show me the way?
+  - id: erklaeren
+    de: erklären
+    en: to explain
+    pos: verb
+    example: Der Lehrer erklärt dem Schüler die Aufgabe.
+    exampleEn: The teacher explains the task to the pupil.
+  - id: aus
+    de: aus
+    en: out of, from (+ dative)
+    pos: preposition
+    example: Sie kommt aus der Schweiz.
+    exampleEn: She comes from Switzerland.
+  - id: bei
+    de: bei
+    en: at, near, at someone's place (+ dative)
+    pos: preposition
+    example: Ich wohne bei meinen Eltern.
+    exampleEn: I live with my parents.
+  - id: mit
+    de: mit
+    en: with, by (+ dative)
+    pos: preposition
+    example: Ich fahre mit dem Bus.
+    exampleEn: I am going by bus.
+  - id: seit
+    de: seit
+    en: since, for (+ dative)
+    pos: preposition
+    example: Ich lerne seit einem Jahr Deutsch.
+    exampleEn: I have been learning German for a year.
+  - id: von
+    de: von
+    en: from, of (+ dative)
+    pos: preposition
+    example: Das ist ein Geschenk von meiner Tante.
+    exampleEn: That is a present from my aunt.
+  - id: zu
+    de: zu
+    en: to (+ dative)
+    pos: preposition
+    example: Ich gehe zum Arzt.
+    exampleEn: I am going to the doctor.
+  - id: wem
+    de: wem
+    en: to whom, whom (dative)
+    pos: other
+    example: Wem gehört diese Tasche?
+    exampleEn: Who does this bag belong to?
