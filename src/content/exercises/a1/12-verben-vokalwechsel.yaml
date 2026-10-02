@@ -1,0 +1,186 @@
+lesson: a1.12
+sets:
+  - title: e becomes i
+    instructions: Put the verb in brackets into the right form.
+    items:
+      - id: ei1
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "Er ___ gut Deutsch. (sprechen)"
+        answers: [spricht]
+      - id: ei2
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "Was ___ du gern? (essen)"
+        answers: [isst]
+      - id: ei3
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "Sie ___ mir das Buch. (geben) [she]"
+        answers: [gibt]
+      - id: ei4
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "___ du mir? (helfen)"
+        answers: [Hilfst]
+      - id: ei5
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "Er ___ den Bus. (nehmen)"
+        answers: [nimmt]
+        hint: The consonants change too.
+      - id: ei6
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "Ich ___ Englisch und Hindi. (sprechen)"
+        answers: [spreche]
+        explanation: The ich form never changes its vowel.
+
+  - title: e becomes ie
+    items:
+      - id: eie1
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "Sie ___ die Zeitung. (lesen) [she]"
+        answers: [liest]
+      - id: eie2
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "___ du den Mann dort? (sehen)"
+        answers: [Siehst]
+      - id: eie3
+        type: fill-blank
+        tags: [stem-changing verbs, separable verbs]
+        prompt: "Er ___ am Abend fern. (fernsehen)"
+        answers: [sieht]
+
+  - title: a becomes ä
+    items:
+      - id: ae1
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "Er ___ nach Hamburg. (fahren)"
+        answers: [fährt]
+      - id: ae2
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "Das Kind ___. (schlafen)"
+        answers: [schläft]
+      - id: ae3
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "Wann ___ der Kurs an? (anfangen)"
+        answers: [fängt]
+      - id: ae4
+        type: fill-blank
+        tags: [stem-changing verbs]
+        prompt: "___ du mit dem Bus? (fahren)"
+        answers: [Fährst]
+
+  - title: Change or no change?
+    instructions: The plural and the ich form stay regular.
+    items:
+      - id: plural1
+        type: multiple-choice
+        tags: [stem-changing verbs]
+        prompt: Wir ___ nach Berlin.
+        options: [fahren, fähren, fährt]
+        answer: fahren
+        explanation: The plural never changes its vowel.
+      - id: plural2
+        type: multiple-choice
+        tags: [stem-changing verbs]
+        prompt: Ihr ___ sehr gut Deutsch.
+        options: [sprecht, spricht, sprichst]
+        answer: sprecht
+      - id: plural3
+        type: multiple-choice
+        tags: [stem-changing verbs]
+        prompt: Ich ___ ein Buch.
+        options: [lese, liese, liest]
+        answer: lese
+      - id: plural4
+        type: multiple-choice
+        tags: [stem-changing verbs]
+        prompt: Die Kinder ___ schon.
+        options: [schlafen, schläfen, schläft]
+        answer: schlafen
+      - id: plural5
+        type: multiple-choice
+        tags: [stem-changing verbs]
+        prompt: Du ___ zu viel Schokolade.
+        options: [isst, esst, essst]
+        answer: isst
+
+  - title: Infinitive and er form
+    items:
+      - id: match1
+        type: matching
+        tags: [stem-changing verbs]
+        prompt: Match each infinitive with its er form.
+        pairs:
+          - { left: nehmen, right: nimmt }
+          - { left: lesen, right: liest }
+          - { left: sehen, right: sieht }
+          - { left: fahren, right: fährt }
+          - { left: geben, right: gibt }
+          - { left: wissen, right: weiß }
+
+  - title: wissen
+    items:
+      - id: wissen1
+        type: fill-blank
+        tags: [wissen]
+        prompt: "Ich ___ es nicht. (wissen)"
+        answers: [weiß]
+      - id: wissen2
+        type: fill-blank
+        tags: [wissen]
+        prompt: "___ du, wo der Bahnhof ist? (wissen)"
+        answers: [Weißt]
+      - id: wissen3
+        type: multiple-choice
+        tags: [wissen]
+        prompt: "Do you know Mrs Weber? Which verb?"
+        options: [Kennst du Frau Weber?, Weißt du Frau Weber?]
+        answer: Kennst du Frau Weber?
+        explanation: People and places take kennen. Facts take wissen.
+
+  - title: Complete the text
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [stem-changing verbs]
+        prompt: Put each verb into the right form.
+        text: "Das ist Lena. Sie ___ (sprechen) Deutsch und Englisch. Am Morgen ___ (lesen) sie die Zeitung. Dann ___ (fahren) sie mit dem Bus zur Arbeit. Am Abend ___ (treffen) sie ihre Freunde."
+        gaps:
+          - [spricht]
+          - [liest]
+          - [fährt]
+          - [trifft]
+
+  - title: Say it in German
+    items:
+      - id: order1
+        type: word-order
+        tags: [stem-changing verbs]
+        prompt: He takes the bus at eight o'clock.
+        answer: Er nimmt um acht Uhr den Bus.
+      - id: tr1
+        type: translation
+        tags: [stem-changing verbs]
+        prompt: She speaks English.
+        answers: [Sie spricht Englisch.]
+      - id: tr2
+        type: translation
+        tags: [wissen]
+        prompt: I do not know.
+        answers:
+          - Ich weiß es nicht.
+          - Ich weiß nicht.
+          - Das weiß ich nicht.
+      - id: tr3
+        type: translation
+        tags: [stem-changing verbs]
+        prompt: The child is sleeping.
+        answers: [Das Kind schläft.]

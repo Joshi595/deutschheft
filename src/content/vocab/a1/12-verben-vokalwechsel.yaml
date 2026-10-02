@@ -1,0 +1,126 @@
+lesson: a1.12
+items:
+  - id: sprechen
+    de: sprechen (er spricht)
+    en: to speak
+    pos: verb
+    example: Er spricht drei Sprachen.
+    exampleEn: He speaks three languages.
+  - id: essen
+    de: essen (er isst)
+    en: to eat
+    pos: verb
+    example: Was isst du gern?
+    exampleEn: What do you like eating?
+  - id: geben
+    de: geben (er gibt)
+    en: to give
+    pos: verb
+    example: Sie gibt mir das Buch.
+    exampleEn: She gives me the book.
+  - id: helfen
+    de: helfen (er hilft)
+    en: to help
+    pos: verb
+    example: Er hilft seiner Mutter.
+    exampleEn: He helps his mother.
+  - id: treffen
+    de: treffen (er trifft)
+    en: to meet
+    pos: verb
+    example: Sie trifft ihre Freunde am Abend.
+    exampleEn: She meets her friends in the evening.
+  - id: nehmen
+    de: nehmen (er nimmt)
+    en: to take
+    pos: verb
+    example: Er nimmt den Bus.
+    exampleEn: He takes the bus.
+  - id: lesen
+    de: lesen (er liest)
+    en: to read
+    pos: verb
+    example: Sie liest die Zeitung.
+    exampleEn: She is reading the newspaper.
+  - id: sehen
+    de: sehen (er sieht)
+    en: to see
+    pos: verb
+    example: Siehst du den Mann dort?
+    exampleEn: Do you see the man over there?
+  - id: fahren
+    de: fahren (er fährt)
+    en: to drive, to go (by vehicle)
+    pos: verb
+    example: Er fährt nach Hamburg.
+    exampleEn: He is going to Hamburg.
+  - id: schlafen
+    de: schlafen (er schläft)
+    en: to sleep
+    pos: verb
+    example: Das Kind schläft.
+    exampleEn: The child is sleeping.
+  - id: tragen
+    de: tragen (er trägt)
+    en: to carry; to wear
+    pos: verb
+    example: Sie trägt eine Tasche.
+    exampleEn: She is carrying a bag.
+  - id: waschen
+    de: waschen (er wäscht)
+    en: to wash
+    pos: verb
+    example: Er wäscht das Auto.
+    exampleEn: He is washing the car.
+  - id: laufen
+    de: laufen (er läuft)
+    en: to run; to walk
+    pos: verb
+    example: Sie läuft jeden Morgen.
+    exampleEn: She goes running every morning.
+  - id: wissen
+    de: wissen (er weiß)
+    en: to know (a fact)
+    pos: verb
+    example: Ich weiß es nicht.
+    exampleEn: I do not know.
+  - id: kennen
+    de: kennen
+    en: to know (a person or place)
+    pos: verb
+    example: Kennst du Frau Weber?
+    exampleEn: Do you know Mrs Weber?
+  - id: freund
+    de: Freund
+    en: friend (male); boyfriend
+    pos: noun
+    article: der
+    plural: Freunde
+    example: Mein Freund heißt Tom.
+    exampleEn: My friend is called Tom.
+  - id: freundin
+    de: Freundin
+    en: friend (female); girlfriend
+    pos: noun
+    article: die
+    plural: Freundinnen
+    example: Meine Freundin kommt aus Polen.
+    exampleEn: My friend comes from Poland.
+  - id: dort
+    de: dort
+    en: there, over there
+    pos: adverb
+    example: Der Bahnhof ist dort.
+    exampleEn: The station is over there.
+  - id: jeden-tag
+    de: jeden Tag
+    en: every day
+    pos: phrase
+    example: Ich lerne jeden Tag Deutsch.
+    exampleEn: I learn German every day.
+  - id: lange
+    de: lange
+    en: for a long time
+    pos: adverb
+    example: Am Sonntag schlafe ich lange.
+    exampleEn: On Sunday I sleep late.
