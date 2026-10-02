@@ -1,0 +1,208 @@
+lesson: a2.08
+sets:
+  - title: Which connector?
+    items:
+      - id: con1
+        type: multiple-choice
+        tags: [deshalb trotzdem sonst]
+        prompt: "Ich bin krank. ___ bleibe ich zu Hause."
+        options: [Deshalb, Trotzdem, Sonst]
+        answer: Deshalb
+      - id: con2
+        type: multiple-choice
+        tags: [deshalb trotzdem sonst]
+        prompt: "Es regnet. ___ gehen wir spazieren."
+        options: [Trotzdem, Deshalb, Sonst]
+        answer: Trotzdem
+        explanation: Rain would normally keep you in, so going out is against expectation.
+      - id: con3
+        type: multiple-choice
+        tags: [deshalb trotzdem sonst]
+        prompt: "Beeil dich, ___ kommen wir zu spät."
+        options: [sonst, deshalb, trotzdem]
+        answer: sonst
+      - id: con4
+        type: multiple-choice
+        tags: [deshalb trotzdem sonst]
+        prompt: "Das Auto ist sehr teuer. ___ kaufe ich es."
+        options: [Trotzdem, Deshalb, Sonst]
+        answer: Trotzdem
+      - id: con5
+        type: multiple-choice
+        tags: [deshalb trotzdem sonst]
+        prompt: "Ich habe kein Geld. ___ kann ich nicht ins Kino gehen."
+        options: [Deshalb, Trotzdem, Sonst]
+        answer: Deshalb
+      - id: con6
+        type: multiple-choice
+        tags: [deshalb trotzdem sonst]
+        prompt: "Zieh eine Jacke an, ___ erkältest du dich."
+        options: [sonst, also, trotzdem]
+        answer: sonst
+      - id: con7
+        type: matching
+        tags: [deshalb trotzdem sonst]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: deshalb, right: therefore }
+          - { left: trotzdem, right: nevertheless }
+          - { left: sonst, right: otherwise }
+          - { left: außerdem, right: besides }
+          - { left: also, right: so }
+
+  - title: Word order
+    instructions: Choose the correct sentence.
+    items:
+      - id: wo1
+        type: multiple-choice
+        tags: [connectors, word order]
+        prompt: Which is correct?
+        options:
+          - Deshalb bleibe ich zu Hause.
+          - Deshalb ich bleibe zu Hause.
+          - Deshalb ich zu Hause bleibe.
+        answer: Deshalb bleibe ich zu Hause.
+      - id: wo2
+        type: multiple-choice
+        tags: [connectors, word order]
+        prompt: Which is correct?
+        options:
+          - "Ich bin müde, trotzdem muss ich arbeiten."
+          - "Ich bin müde, trotzdem ich muss arbeiten."
+        answer: "Ich bin müde, trotzdem muss ich arbeiten."
+      - id: wo3
+        type: multiple-choice
+        tags: [connectors, word order]
+        prompt: Which is correct?
+        options:
+          - "Ich bleibe zu Hause, weil ich krank bin."
+          - "Ich bleibe zu Hause, weil bin ich krank."
+          - "Ich bleibe zu Hause, weil ich bin krank."
+        answer: "Ich bleibe zu Hause, weil ich krank bin."
+        explanation: weil is a subordinating conjunction, so the verb goes to the end.
+      - id: wo4
+        type: word-order
+        tags: [connectors, word order]
+        prompt: That is why I am taking an umbrella.
+        answer: Deshalb nehme ich einen Schirm mit.
+      - id: wo5
+        type: word-order
+        tags: [connectors, word order]
+        prompt: Nevertheless we are going for a walk.
+        answer: Trotzdem gehen wir spazieren.
+      - id: wo6
+        type: word-order
+        tags: [connectors, word order]
+        prompt: Hurry up, otherwise we will be late.
+        answer: "Beeil dich, sonst kommen wir zu spät."
+
+  - title: weil or deshalb?
+    items:
+      - id: wd1
+        type: multiple-choice
+        tags: [weil and deshalb]
+        prompt: "Ich bleibe zu Hause, ___ ich krank bin."
+        options: [weil, deshalb]
+        answer: weil
+        explanation: The verb is at the end, and this part gives the reason.
+      - id: wd2
+        type: multiple-choice
+        tags: [weil and deshalb]
+        prompt: "Ich bin krank, ___ bleibe ich zu Hause."
+        options: [deshalb, weil]
+        answer: deshalb
+        explanation: The verb follows directly, and this part gives the result.
+      - id: wd3
+        type: multiple-choice
+        tags: [weil and deshalb]
+        prompt: "Der Bus hatte Verspätung, ___ bin ich zu spät gekommen."
+        options: [deshalb, weil]
+        answer: deshalb
+
+  - title: Rewrite with deshalb
+    instructions: Turn the weil sentence round. Start the second part with deshalb.
+    items:
+      - id: turn1
+        type: translation
+        tags: [weil and deshalb]
+        prompt: "Ich gehe ins Bett, weil ich müde bin. → Ich bin müde, …"
+        answers:
+          - "Ich bin müde, deshalb gehe ich ins Bett."
+          - "Ich bin müde. Deshalb gehe ich ins Bett."
+      - id: turn2
+        type: translation
+        tags: [weil and deshalb]
+        prompt: "Er nimmt ein Taxi, weil der Bus nicht kommt. → Der Bus kommt nicht, …"
+        answers:
+          - "Der Bus kommt nicht, deshalb nimmt er ein Taxi."
+          - "Der Bus kommt nicht. Deshalb nimmt er ein Taxi."
+      - id: turn3
+        type: translation
+        tags: [weil and deshalb]
+        prompt: "Wir bleiben zu Hause, weil es regnet. → Es regnet, …"
+        answers:
+          - "Es regnet, deshalb bleiben wir zu Hause."
+          - "Es regnet. Deshalb bleiben wir zu Hause."
+
+  - title: Complete the text
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [deshalb trotzdem sonst]
+        prompt: Fill the gaps with the words from the list.
+        text: "Morgen habe ich eine Prüfung. ___ muss ich heute viel lernen. Ich bin sehr müde. ___ gehe ich nicht ins Bett. Ich muss noch zwei Kapitel lesen, ___ bestehe ich die Prüfung nicht."
+        gaps:
+          - [Deshalb]
+          - [Trotzdem]
+          - [sonst]
+        bank: [Deshalb, Trotzdem, sonst, weil, aber]
+
+  - title: Read and answer
+    stimulus:
+      kind: text
+      label: E-Mail
+      text: |
+        Hallo Marie,
+        ich habe gestern das neue Restaurant am Markt probiert. Das Essen war teuer und der Kellner war unfreundlich. Trotzdem möchte ich noch einmal hingehen, denn der Kuchen war fantastisch.
+        Am Samstag habe ich leider keine Zeit, deshalb schlage ich Sonntag vor. Wir müssen aber einen Tisch reservieren, sonst bekommen wir keinen Platz.
+        Liebe Grüße
+        Clara
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading, connectors]
+        prompt: Clara möchte nicht mehr in das Restaurant gehen.
+        answer: false
+        explanation: "Trotzdem möchte ich noch einmal hingehen: she wants to go again all the same."
+      - id: read2
+        type: multiple-choice
+        tags: [reading, connectors]
+        prompt: Warum schlägt Clara Sonntag vor?
+        options:
+          - Weil sie am Samstag keine Zeit hat.
+          - Weil das Restaurant am Samstag geschlossen ist.
+          - Weil der Kuchen am Sonntag besser ist.
+        answer: Weil sie am Samstag keine Zeit hat.
+      - id: read3
+        type: true-false
+        tags: [reading, connectors]
+        prompt: Man soll einen Tisch reservieren.
+        answer: true
+
+  - title: Write
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, connectors]
+        prompt: Write about a day when something did not go as planned.
+        points:
+          - What you wanted to do
+          - What the problem was, with deshalb
+          - What you did anyway, with trotzdem
+        minWords: 30
+        phrases:
+          - Am … wollte ich …
+          - Aber … Deshalb …
+          - Trotzdem …
+          - Ich musste …, sonst …
+        sample: "Am Samstag wollte ich mit Freunden wandern gehen. Aber es hat den ganzen Tag geregnet. Deshalb sind wir nicht in die Berge gefahren. Trotzdem war der Tag schön. Wir haben zusammen gekocht und einen Film gesehen."

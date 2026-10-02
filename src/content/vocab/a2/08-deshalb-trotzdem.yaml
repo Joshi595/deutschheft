@@ -1,0 +1,112 @@
+lesson: a2.08
+items:
+  - id: deshalb
+    de: deshalb
+    en: therefore, that is why
+    pos: adverb
+    example: Ich bin krank. Deshalb bleibe ich zu Hause.
+    exampleEn: I am ill. That is why I am staying at home.
+  - id: deswegen
+    de: deswegen
+    en: therefore, because of that
+    pos: adverb
+    example: Ich habe kein Geld. Deswegen kann ich nicht mitkommen.
+    exampleEn: I have no money. That is why I cannot come along.
+  - id: trotzdem
+    de: trotzdem
+    en: nevertheless, anyway
+    pos: adverb
+    example: Es regnet. Trotzdem gehen wir spazieren.
+    exampleEn: It is raining. Nevertheless we are going for a walk.
+  - id: sonst
+    de: sonst
+    en: otherwise, or else
+    pos: adverb
+    example: Beeil dich, sonst kommen wir zu spät.
+    exampleEn: Hurry up, otherwise we will be late.
+  - id: ausserdem
+    de: außerdem
+    en: besides, in addition
+    pos: adverb
+    example: Ich habe keine Zeit. Außerdem bin ich müde.
+    exampleEn: I have no time. Besides, I am tired.
+  - id: also
+    de: also
+    en: so, therefore
+    pos: adverb
+    example: Es ist spät, also gehen wir jetzt.
+    exampleEn: It is late, so we are going now.
+  - id: darum
+    de: darum
+    en: therefore, that is why
+    pos: adverb
+    example: Er war müde. Darum ist er früh ins Bett gegangen.
+    exampleEn: He was tired. That is why he went to bed early.
+  - id: schirm
+    de: Schirm
+    en: umbrella
+    pos: noun
+    article: der
+    plural: Schirme
+    example: Nimm einen Schirm mit!
+    exampleEn: Take an umbrella with you!
+  - id: mitnehmen
+    de: mitnehmen (er nimmt mit)
+    en: to take along
+    pos: verb
+    example: Ich nehme einen Schirm mit.
+    exampleEn: I am taking an umbrella.
+  - id: verspaetung
+    de: Verspätung
+    en: delay
+    pos: noun
+    article: die
+    plural: Verspätungen
+    example: Der Bus hatte Verspätung.
+    exampleEn: The bus was late.
+  - id: sich-beeilen
+    de: sich beeilen
+    en: to hurry
+    pos: verb
+    example: Beeil dich!
+    exampleEn: Hurry up!
+  - id: muede
+    de: müde
+    en: tired
+    pos: adjective
+    example: Ich bin müde. Trotzdem muss ich arbeiten.
+    exampleEn: I am tired. All the same I have to work.
+  - id: geld
+    de: Geld
+    en: money
+    pos: noun
+    article: das
+    plural: "-"
+    example: Ich habe kein Geld dabei.
+    exampleEn: I have no money on me.
+  - id: sparen
+    de: sparen
+    en: to save (money)
+    pos: verb
+    example: Ich spare für ein neues Auto.
+    exampleEn: I am saving for a new car.
+  - id: gesund
+    de: gesund
+    en: healthy
+    pos: adjective
+    example: Obst ist gesund. Deshalb esse ich jeden Tag einen Apfel.
+    exampleEn: Fruit is healthy. That is why I eat an apple every day.
+  - id: folge
+    de: Folge
+    en: consequence
+    pos: noun
+    article: die
+    plural: Folgen
+    example: Das hat Folgen.
+    exampleEn: That has consequences.
+  - id: anstrengend
+    de: anstrengend
+    en: tiring, exhausting
+    pos: adjective
+    example: Die Arbeit ist anstrengend. Trotzdem macht sie mir Spaß.
+    exampleEn: The work is tiring. I enjoy it all the same.
