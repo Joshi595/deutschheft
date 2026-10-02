@@ -1,0 +1,192 @@
+lesson: a1.15
+items:
+  - id: haus
+    de: Haus
+    en: house
+    pos: noun
+    article: das
+    plural: Häuser
+    example: Wir wohnen in einem Haus mit Garten.
+    exampleEn: We live in a house with a garden.
+  - id: miete
+    de: Miete
+    en: rent
+    pos: noun
+    article: die
+    plural: Mieten
+    example: Die Miete ist sechshundert Euro.
+    exampleEn: The rent is 600 euros.
+  - id: wohnzimmer
+    de: Wohnzimmer
+    en: living room
+    pos: noun
+    article: das
+    plural: Wohnzimmer
+    example: Das Wohnzimmer ist groß und hell.
+    exampleEn: The living room is big and bright.
+  - id: schlafzimmer
+    de: Schlafzimmer
+    en: bedroom
+    pos: noun
+    article: das
+    plural: Schlafzimmer
+    example: Das Schlafzimmer ist ruhig.
+    exampleEn: The bedroom is quiet.
+  - id: kueche
+    de: Küche
+    en: kitchen
+    pos: noun
+    article: die
+    plural: Küchen
+    example: Die Küche ist klein, aber gemütlich.
+    exampleEn: The kitchen is small but cosy.
+  - id: bad
+    de: Bad
+    en: bathroom
+    pos: noun
+    article: das
+    plural: Bäder
+    example: Das Bad hat eine Dusche.
+    exampleEn: The bathroom has a shower.
+  - id: flur
+    de: Flur
+    en: hall
+    pos: noun
+    article: der
+    plural: Flure
+    example: Der Flur ist dunkel.
+    exampleEn: The hall is dark.
+  - id: balkon
+    de: Balkon
+    en: balcony
+    pos: noun
+    article: der
+    plural: Balkone
+    example: Die Wohnung hat einen Balkon.
+    exampleEn: The flat has a balcony.
+  - id: garten
+    de: Garten
+    en: garden
+    pos: noun
+    article: der
+    plural: Gärten
+    example: Es gibt keinen Garten.
+    exampleEn: There is no garden.
+  - id: stock
+    de: Stock
+    en: floor, storey
+    pos: noun
+    article: der
+    plural: Stockwerke
+    example: Wir wohnen im zweiten Stock.
+    exampleEn: We live on the second floor.
+  - id: bett
+    de: Bett
+    en: bed
+    pos: noun
+    article: das
+    plural: Betten
+    example: Das Bett ist neu.
+    exampleEn: The bed is new.
+  - id: schrank
+    de: Schrank
+    en: cupboard, wardrobe
+    pos: noun
+    article: der
+    plural: Schränke
+    example: Im Schlafzimmer gibt es einen Schrank.
+    exampleEn: There is a wardrobe in the bedroom.
+  - id: sofa
+    de: Sofa
+    en: sofa
+    pos: noun
+    article: das
+    plural: Sofas
+    example: Das Sofa ist sehr gemütlich.
+    exampleEn: The sofa is very cosy.
+  - id: regal
+    de: Regal
+    en: shelf, shelves
+    pos: noun
+    article: das
+    plural: Regale
+    example: Die Bücher sind im Regal.
+    exampleEn: The books are on the shelf.
+  - id: kuehlschrank
+    de: Kühlschrank
+    en: fridge
+    pos: noun
+    article: der
+    plural: Kühlschränke
+    example: In der Küche gibt es einen Kühlschrank.
+    exampleEn: There is a fridge in the kitchen.
+  - id: herd
+    de: Herd
+    en: cooker
+    pos: noun
+    article: der
+    plural: Herde
+    example: Der Herd ist kaputt.
+    exampleEn: The cooker is broken.
+  - id: waschmaschine
+    de: Waschmaschine
+    en: washing machine
+    pos: noun
+    article: die
+    plural: Waschmaschinen
+    example: Wir haben keine Waschmaschine.
+    exampleEn: We do not have a washing machine.
+  - id: dusche
+    de: Dusche
+    en: shower
+    pos: noun
+    article: die
+    plural: Duschen
+    example: Das Bad hat eine Dusche.
+    exampleEn: The bathroom has a shower.
+  - id: moebel
+    de: Möbel
+    en: furniture
+    pos: noun
+    article: die
+    plural: Möbel
+    example: Die Möbel sind neu.
+    exampleEn: The furniture is new.
+  - id: hell
+    de: hell
+    en: bright, light
+    pos: adjective
+    example: Das Zimmer ist hell.
+    exampleEn: The room is bright.
+  - id: dunkel
+    de: dunkel
+    en: dark
+    pos: adjective
+    example: Der Flur ist dunkel.
+    exampleEn: The hall is dark.
+  - id: ruhig
+    de: ruhig
+    en: quiet
+    pos: adjective
+    example: Die Straße ist ruhig.
+    exampleEn: The street is quiet.
+  - id: laut
+    de: laut
+    en: loud, noisy
+    pos: adjective
+    example: Die Nachbarn sind laut.
+    exampleEn: The neighbours are noisy.
+  - id: gemuetlich
+    de: gemütlich
+    en: cosy
+    pos: adjective
+    example: Die Küche ist gemütlich.
+    exampleEn: The kitchen is cosy.
+  - id: nachbar
+    de: Nachbar
+    en: neighbour
+    pos: noun
+    article: der
+    plural: Nachbarn
+    example: Mein Nachbar ist sehr nett.
+    exampleEn: My neighbour is very nice.
