@@ -1,0 +1,171 @@
+lesson: a2.09
+sets:
+  - title: Comparative
+    instructions: Write the comparative of the word in brackets.
+    items:
+      - id: comp1
+        type: fill-blank
+        tags: [comparative]
+        prompt: "Mein Haus ist ___ als dein Haus. (alt)"
+        answers: [älter]
+        explanation: Short adjectives with a, o or u usually take an umlaut.
+      - id: comp2
+        type: fill-blank
+        tags: [comparative]
+        prompt: "Sein Auto ist ___ als meins. (neu)"
+        answers: [neuer]
+      - id: comp3
+        type: fill-blank
+        tags: [comparative, irregular comparison]
+        prompt: "Das Buch ist ___ als der Film. (gut)"
+        answers: [besser]
+      - id: comp4
+        type: fill-blank
+        tags: [comparative]
+        prompt: "Im Sommer sind die Tage ___ als im Winter. (lang)"
+        answers: [länger]
+      - id: comp5
+        type: fill-blank
+        tags: [comparative]
+        prompt: "Das Hotel ist ___ als die Jugendherberge. (teuer)"
+        answers: [teurer]
+        hint: teuer drops an e.
+      - id: comp6
+        type: fill-blank
+        tags: [comparative, irregular comparison]
+        prompt: "Ich trinke ___ Tee als Kaffee. (gern)"
+        answers: [lieber]
+
+  - title: Superlative
+    instructions: Write the superlative of the word in brackets.
+    items:
+      - id: sup1
+        type: fill-blank
+        tags: [superlative]
+        prompt: "Er ist der ___ Mann in der Stadt. (groß)"
+        answers: [größte]
+        explanation: "Before a noun: der größte, with the ending -e after der."
+      - id: sup2
+        type: fill-blank
+        tags: [superlative]
+        prompt: "Sie ist die ___ Schülerin in der Klasse. (jung)"
+        answers: [jüngste]
+      - id: sup3
+        type: fill-blank
+        tags: [superlative]
+        prompt: "Das ist das ___ Auto. (schnell)"
+        answers: [schnellste]
+      - id: sup4
+        type: fill-blank
+        tags: [superlative, irregular comparison]
+        prompt: "Dieser Berg ist am ___. (hoch)"
+        answers: [höchsten]
+      - id: sup5
+        type: fill-blank
+        tags: [superlative]
+        prompt: "Im Januar ist es am ___. (kalt)"
+        answers: [kältesten]
+        explanation: After -t the superlative adds an extra e.
+      - id: sup6
+        type: fill-blank
+        tags: [superlative, irregular comparison]
+        prompt: "Pizza esse ich am ___. (gern)"
+        answers: [liebsten]
+
+  - title: Irregular forms
+    items:
+      - id: irr1
+        type: matching
+        tags: [irregular comparison]
+        prompt: Match each word with its comparative.
+        pairs:
+          - { left: gut, right: besser }
+          - { left: viel, right: mehr }
+          - { left: gern, right: lieber }
+          - { left: hoch, right: höher }
+          - { left: nah, right: näher }
+
+  - title: Pick the right form
+    items:
+      - id: mc1
+        type: multiple-choice
+        tags: [comparative]
+        prompt: Dieses Buch ist ___ als das andere.
+        options: [interessanter, interessant, mehr interessant, am interessantesten]
+        answer: interessanter
+        explanation: German never forms the comparative with mehr.
+      - id: mc2
+        type: multiple-choice
+        tags: [superlative]
+        prompt: Das ist die ___ Lösung.
+        options: [beste, besser, am besten, besten]
+        answer: beste
+        explanation: "Before a noun: die beste Lösung."
+      - id: mc3
+        type: multiple-choice
+        tags: [als and wie]
+        prompt: Sie ist älter ___ ich.
+        options: [als, wie]
+        answer: als
+      - id: mc4
+        type: multiple-choice
+        tags: [als and wie]
+        prompt: Er ist so groß ___ sein Bruder.
+        options: [als, wie]
+        answer: wie
+      - id: mc5
+        type: multiple-choice
+        tags: [superlative]
+        prompt: Wer läuft ___?
+        options: [am schnellsten, der schnellste, schnellsten]
+        answer: am schnellsten
+        explanation: After a verb, with no noun, use am …sten.
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [comparative]
+        prompt: My brother is two years younger than me.
+        answer: Mein Bruder ist zwei Jahre jünger als ich.
+      - id: order2
+        type: word-order
+        tags: [als and wie]
+        prompt: The film is not as good as the book.
+        answer: Der Film ist nicht so gut wie das Buch.
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [comparative]
+        prompt: She is older than me.
+        answers:
+          - Sie ist älter als ich.
+      - id: tr2
+        type: translation
+        tags: [comparative]
+        prompt: The coffee is warmer than the tea.
+        answers:
+          - Der Kaffee ist wärmer als der Tee.
+      - id: tr3
+        type: translation
+        tags: [superlative]
+        prompt: Berlin is the biggest city in Germany.
+        answers:
+          - Berlin ist die größte Stadt in Deutschland.
+          - Berlin ist die größte Stadt Deutschlands.
+      - id: tr4
+        type: translation
+        tags: [als and wie]
+        prompt: I am as tall as my father.
+        answers:
+          - Ich bin so groß wie mein Vater.
+          - Ich bin genauso groß wie mein Vater.
+      - id: write1
+        type: writing
+        tags: [comparative]
+        prompt: Compare two cities, people or things you know. One sentence with a comparative and als.
+        mustInclude: [als]
+        sample: Hamburg ist größer als Köln, aber Köln ist älter.

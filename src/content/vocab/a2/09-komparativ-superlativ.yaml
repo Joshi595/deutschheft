@@ -1,0 +1,98 @@
+lesson: a2.09
+items:
+  - id: besser
+    de: besser
+    en: better
+    pos: adjective
+    example: Das Buch ist besser als der Film.
+    exampleEn: The book is better than the film.
+  - id: am-besten
+    de: am besten
+    en: best
+    pos: adverb
+    example: Meine Mutter kocht am besten.
+    exampleEn: My mother cooks best.
+  - id: mehr
+    de: mehr
+    en: more
+    pos: adverb
+    example: Er arbeitet mehr als ich.
+    exampleEn: He works more than I do.
+  - id: am-meisten
+    de: am meisten
+    en: most
+    pos: adverb
+    example: Im Winter schlafe ich am meisten.
+    exampleEn: I sleep most in winter.
+  - id: lieber
+    de: lieber
+    en: rather, preferably
+    pos: adverb
+    example: Ich trinke lieber Tee als Kaffee.
+    exampleEn: I prefer tea to coffee.
+  - id: am-liebsten
+    de: am liebsten
+    en: best of all, most of all (liking)
+    pos: adverb
+    example: Am liebsten esse ich Pizza.
+    exampleEn: I like pizza best of all.
+  - id: aelter
+    de: älter
+    en: older
+    pos: adjective
+    example: Sie ist älter als ich.
+    exampleEn: She is older than me.
+  - id: juenger
+    de: jünger
+    en: younger
+    pos: adjective
+    example: Mein Bruder ist zwei Jahre jünger als ich.
+    exampleEn: My brother is two years younger than me.
+  - id: groesser
+    de: größer
+    en: bigger, taller
+    pos: adjective
+    example: Berlin ist größer als München.
+    exampleEn: Berlin is bigger than Munich.
+  - id: hoeher
+    de: höher
+    en: higher
+    pos: adjective
+    example: Die Zugspitze ist höher als der Brocken.
+    exampleEn: The Zugspitze is higher than the Brocken.
+  - id: teurer
+    de: teurer
+    en: more expensive
+    pos: adjective
+    example: Das Hotel ist teurer als die Pension.
+    exampleEn: The hotel is more expensive than the guesthouse.
+  - id: als-than
+    de: als
+    en: than (after a comparative)
+    pos: conjunction
+    example: Er ist größer als sein Vater.
+    exampleEn: He is taller than his father.
+  - id: so-wie
+    de: so … wie
+    en: as … as
+    pos: phrase
+    example: Ich bin so groß wie mein Vater.
+    exampleEn: I am as tall as my father.
+  - id: lang
+    de: lang
+    en: long
+    pos: adjective
+    example: Im Sommer sind die Tage lang.
+    exampleEn: In summer the days are long.
+  - id: kurz
+    de: kurz
+    en: short
+    pos: adjective
+    example: Der Weg ist kurz.
+    exampleEn: The way is short.
+  - id: warm
+    de: warm
+    en: warm
+    pos: adjective
+    example: Heute ist es wärmer als gestern.
+    exampleEn: Today it is warmer than yesterday.
