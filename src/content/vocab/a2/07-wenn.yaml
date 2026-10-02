@@ -1,0 +1,98 @@
+lesson: a2.07
+items:
+  - id: wenn
+    de: wenn
+    en: if; whenever
+    pos: conjunction
+    example: Wenn ich Zeit habe, komme ich.
+    exampleEn: If I have time, I will come.
+  - id: falls
+    de: falls
+    en: in case
+    pos: conjunction
+    example: Falls es schneit, bleiben wir hier.
+    exampleEn: In case it snows, we will stay here.
+  - id: wann
+    de: wann
+    en: when (in questions)
+    pos: adverb
+    example: Wann kommst du nach Hause?
+    exampleEn: When are you coming home?
+  - id: als
+    de: als
+    en: when (one time in the past)
+    pos: conjunction
+    example: Als ich klein war, wohnten wir in Köln.
+    exampleEn: When I was little, we lived in Cologne.
+  - id: dann
+    de: dann
+    en: then
+    pos: adverb
+    example: Wenn es regnet, dann bleibe ich zu Hause.
+    exampleEn: If it rains, then I stay at home.
+  - id: wetter
+    de: Wetter
+    en: weather
+    pos: noun
+    article: das
+    plural: "-"
+    example: Wenn das Wetter schön ist, gehe ich spazieren.
+    exampleEn: If the weather is nice, I go for a walk.
+  - id: regnen
+    de: regnen
+    en: to rain
+    pos: verb
+    example: Es regnet seit gestern.
+    exampleEn: It has been raining since yesterday.
+  - id: schneien
+    de: schneien
+    en: to snow
+    pos: verb
+    example: Im Januar schneit es oft.
+    exampleEn: It often snows in January.
+  - id: sonne-scheint
+    de: Die Sonne scheint.
+    en: The sun is shining.
+    pos: phrase
+    example: Wenn die Sonne scheint, machen wir einen Ausflug.
+    exampleEn: If the sun shines, we will go on a trip.
+  - id: ausflug
+    de: Ausflug
+    en: trip, outing
+    pos: noun
+    article: der
+    plural: Ausflüge
+    example: Am Sonntag machen wir einen Ausflug.
+    exampleEn: On Sunday we are going on a trip.
+  - id: pruefung
+    de: Prüfung
+    en: exam
+    pos: noun
+    article: die
+    plural: Prüfungen
+    example: Die Prüfung ist am Freitag.
+    exampleEn: The exam is on Friday.
+  - id: bestehen
+    de: bestehen
+    en: to pass (an exam)
+    pos: verb
+    example: Wenn du lernst, bestehst du die Prüfung.
+    exampleEn: If you study, you will pass the exam.
+  - id: zu-hause-bleiben
+    de: zu Hause bleiben
+    en: to stay at home
+    pos: phrase
+    example: Wenn ich krank bin, bleibe ich zu Hause.
+    exampleEn: If I am ill, I stay at home.
+  - id: anrufen
+    de: anrufen
+    en: to call, to phone
+    pos: verb
+    example: Wenn du Fragen hast, ruf mich an.
+    exampleEn: If you have questions, call me.
+  - id: sich-beeilen
+    de: sich beeilen
+    en: to hurry
+    pos: verb
+    example: Wir müssen uns beeilen.
+    exampleEn: We have to hurry.
