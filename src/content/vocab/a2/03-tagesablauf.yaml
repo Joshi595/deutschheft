@@ -1,0 +1,140 @@
+lesson: a2.03
+items:
+  - id: aufstehen
+    de: aufstehen
+    en: to get up
+    pos: verb
+    example: Ich stehe um sieben Uhr auf.
+    exampleEn: I get up at seven o'clock.
+  - id: sich-waschen
+    de: sich waschen
+    en: to wash (oneself)
+    pos: verb
+    example: Er wäscht sich nach dem Aufstehen.
+    exampleEn: He washes after getting up.
+  - id: sich-anziehen
+    de: sich anziehen
+    en: to get dressed
+    pos: verb
+    example: Ich ziehe mich morgens schnell an.
+    exampleEn: I get dressed quickly in the morning.
+  - id: zaehne-putzen
+    de: sich die Zähne putzen
+    en: to brush one's teeth
+    pos: phrase
+    example: Ich putze mir abends die Zähne.
+    exampleEn: I brush my teeth in the evening.
+  - id: fruehstuecken
+    de: frühstücken
+    en: to have breakfast
+    pos: verb
+    example: Wir frühstücken um acht Uhr.
+    exampleEn: We have breakfast at eight o'clock.
+  - id: arbeiten
+    de: arbeiten
+    en: to work
+    pos: verb
+    example: Ich arbeite von neun bis siebzehn Uhr.
+    exampleEn: I work from nine to five.
+  - id: zur-schule-gehen
+    de: zur Schule gehen
+    en: to go to school
+    pos: phrase
+    example: Die Kinder gehen zur Schule.
+    exampleEn: The children go to school.
+  - id: zu-mittag-essen
+    de: zu Mittag essen
+    en: to have lunch
+    pos: phrase
+    example: Sie essen um zwölf Uhr zu Mittag.
+    exampleEn: They have lunch at twelve.
+  - id: spazieren-gehen
+    de: spazieren gehen
+    en: to go for a walk
+    pos: phrase
+    example: Ich gehe nachmittags spazieren.
+    exampleEn: I go for a walk in the afternoon.
+  - id: sport-machen
+    de: Sport machen
+    en: to do sport, to exercise
+    pos: phrase
+    example: Er macht abends Sport.
+    exampleEn: He exercises in the evening.
+  - id: fernsehen
+    de: fernsehen
+    en: to watch TV
+    pos: verb
+    example: Wir sehen abends fern.
+    exampleEn: We watch TV in the evening.
+  - id: lesen
+    de: lesen
+    en: to read
+    pos: verb
+    example: Sie liest vor dem Schlafen.
+    exampleEn: She reads before going to sleep.
+  - id: kochen
+    de: kochen
+    en: to cook
+    pos: verb
+    example: Meine Mutter kocht jeden Tag.
+    exampleEn: My mother cooks every day.
+  - id: einkaufen
+    de: einkaufen
+    en: to shop, to do the shopping
+    pos: verb
+    example: Ich kaufe am Samstag ein.
+    exampleEn: I do the shopping on Saturday.
+  - id: telefonieren
+    de: telefonieren
+    en: to talk on the phone
+    pos: verb
+    example: Er telefoniert mit seinen Freunden.
+    exampleEn: He is on the phone with his friends.
+  - id: fahren
+    de: fahren
+    en: to drive, to go (by vehicle)
+    pos: verb
+    example: Ich fahre mit dem Auto zur Arbeit.
+    exampleEn: I drive to work.
+  - id: sich-treffen
+    de: sich treffen
+    en: to meet up
+    pos: verb
+    example: Wir treffen uns am Nachmittag.
+    exampleEn: We are meeting up in the afternoon.
+  - id: musik-hoeren
+    de: Musik hören
+    en: to listen to music
+    pos: phrase
+    example: Sie hört jeden Tag Musik.
+    exampleEn: She listens to music every day.
+  - id: hausaufgaben-machen
+    de: Hausaufgaben machen
+    en: to do homework
+    pos: phrase
+    example: Der Schüler macht seine Hausaufgaben.
+    exampleEn: The pupil is doing his homework.
+  - id: ins-bett-gehen
+    de: ins Bett gehen
+    en: to go to bed
+    pos: phrase
+    example: Sie geht um zehn Uhr ins Bett.
+    exampleEn: She goes to bed at ten o'clock.
+  - id: manchmal
+    de: manchmal
+    en: sometimes
+    pos: adverb
+    example: Manchmal gehe ich ins Kino.
+    exampleEn: Sometimes I go to the cinema.
+  - id: selten
+    de: selten
+    en: rarely
+    pos: adverb
+    example: Ich sehe selten fern.
+    exampleEn: I rarely watch TV.
+  - id: meistens
+    de: meistens
+    en: usually, mostly
+    pos: adverb
+    example: Meistens frühstücke ich zu Hause.
+    exampleEn: I usually have breakfast at home.
