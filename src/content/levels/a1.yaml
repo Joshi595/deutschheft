@@ -1,7 +1,23 @@
 title: A1
 name: Beginner
 description: >-
-  First words and sentences: introducing yourself, numbers, the present tense, articles,
-  and simple questions.
+  Start from zero: greet people, introduce yourself, shop, tell the time, talk about your day,
+  your home and your plans, and say what happened yesterday.
 order: 1
-status: planned
+status: active
+exam: "Goethe-Zertifikat A1: Start Deutsch 1"
+units:
+  - title: First contact
+    summary: Greetings, your name and where you are from, numbers, and your first verbs.
+  - title: Things and people
+    summary: Nouns and their articles, saying no, family, and asking questions.
+  - title: Everyday life
+    summary: Food, shopping, the clock and your daily routine.
+  - title: Plans and places
+    summary: What you can, must and want to do; free time, home, town and travel.
+  - title: The past and other people
+    summary: Asking people to do things, saying what happened, and going to the doctor.
+  - title: Rounding off
+    summary: Clothes, work, weather and dates, and joining sentences together.
+  - title: Exam training
+    summary: The four parts of Start Deutsch 1, one at a time, then a full mock exam.
