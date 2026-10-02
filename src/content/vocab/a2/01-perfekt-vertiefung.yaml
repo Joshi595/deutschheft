@@ -1,0 +1,132 @@
+lesson: a2.01
+items:
+  - id: verlieren
+    de: verlieren, hat verloren
+    en: to lose, lost
+    pos: verb
+    example: Ich habe meinen Schlüssel verloren.
+    exampleEn: I have lost my key.
+  - id: bekommen
+    de: bekommen, hat bekommen
+    en: to get, to receive
+    pos: verb
+    example: Ich habe einen Brief bekommen.
+    exampleEn: I received a letter.
+  - id: erzaehlen
+    de: erzählen, hat erzählt
+    en: to tell
+    pos: verb
+    example: Er hat mir alles erzählt.
+    exampleEn: He told me everything.
+  - id: empfehlen
+    de: empfehlen, hat empfohlen
+    en: to recommend
+    pos: verb
+    example: Sie hat mir das Restaurant empfohlen.
+    exampleEn: She recommended the restaurant to me.
+  - id: bringen
+    de: bringen, hat gebracht
+    en: to bring, brought
+    pos: verb
+    example: Er hat mir Blumen gebracht.
+    exampleEn: He brought me flowers.
+  - id: mitbringen
+    de: mitbringen, hat mitgebracht
+    en: to bring along
+    pos: verb
+    example: Ich habe dir etwas mitgebracht.
+    exampleEn: I have brought you something.
+  - id: denken
+    de: denken, hat gedacht
+    en: to think, thought
+    pos: verb
+    example: Ich habe an dich gedacht.
+    exampleEn: I thought of you.
+  - id: wissen
+    de: wissen, hat gewusst
+    en: to know (a fact), knew
+    pos: verb
+    example: Das habe ich nicht gewusst.
+    exampleEn: I did not know that.
+  - id: singen
+    de: singen, hat gesungen
+    en: to sing, sang
+    pos: verb
+    example: Die Kinder haben ein Lied gesungen.
+    exampleEn: The children sang a song.
+  - id: sitzen
+    de: sitzen, hat gesessen
+    en: to sit, sat
+    pos: verb
+    example: Wir haben im Garten gesessen.
+    exampleEn: We sat in the garden.
+  - id: stehen
+    de: stehen, hat gestanden
+    en: to stand, stood
+    pos: verb
+    example: Ich habe lange an der Haltestelle gestanden.
+    exampleEn: I stood at the stop for a long time.
+  - id: steigen
+    de: steigen, ist gestiegen
+    en: to climb, to rise; to get (on, off)
+    pos: verb
+    example: Die Preise sind gestiegen.
+    exampleEn: Prices have risen.
+  - id: wachsen
+    de: wachsen, ist gewachsen
+    en: to grow, grew
+    pos: verb
+    example: Das Kind ist schnell gewachsen.
+    exampleEn: The child has grown fast.
+  - id: werden
+    de: werden, ist geworden
+    en: to become, became
+    pos: verb
+    example: Sie ist Ärztin geworden.
+    exampleEn: She became a doctor.
+  - id: zurueckkommen
+    de: zurückkommen, ist zurückgekommen
+    en: to come back
+    pos: verb
+    example: Wann bist du zurückgekommen?
+    exampleEn: When did you come back?
+  - id: aufwachen
+    de: aufwachen, ist aufgewacht
+    en: to wake up
+    pos: verb
+    example: Ich bin um sechs Uhr aufgewacht.
+    exampleEn: I woke up at six o'clock.
+  - id: schon-einmal
+    de: schon einmal
+    en: ever, once before
+    pos: phrase
+    example: Warst du schon einmal in Berlin?
+    exampleEn: Have you ever been to Berlin?
+  - id: noch-nie
+    de: noch nie
+    en: never (so far)
+    pos: phrase
+    example: Ich war noch nie in Japan.
+    exampleEn: I have never been to Japan.
+  - id: gerade
+    de: gerade
+    en: just, right now
+    pos: adverb
+    example: Ich habe gerade gegessen.
+    exampleEn: I have just eaten.
+  - id: brief
+    de: Brief
+    en: letter
+    pos: noun
+    article: der
+    plural: Briefe
+    example: Ich habe einen Brief geschrieben.
+    exampleEn: I wrote a letter.
+  - id: lied
+    de: Lied
+    en: song
+    pos: noun
+    article: das
+    plural: Lieder
+    example: Das Lied gefällt mir.
+    exampleEn: I like the song.
