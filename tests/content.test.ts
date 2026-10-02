@@ -26,7 +26,7 @@ const root = join(import.meta.dirname, '..', 'src', 'content');
  * Levels whose chapters must follow the full template. A level joins this list
  * once its chapters have been written to it.
  */
-const TEMPLATE_LEVELS = ['a1'];
+const TEMPLATE_LEVELS = ['a1', 'a2'];
 
 const REQUIRED_HEADINGS = {
   grammar: ['The idea', 'Step by step', 'Compared with English', 'Typical mistakes', 'Summary'],
