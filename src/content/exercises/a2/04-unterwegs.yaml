@@ -1,0 +1,175 @@
+lesson: a2.04
+sets:
+  - title: Places
+    instructions: Choose the right word.
+    items:
+      - id: place1
+        type: multiple-choice
+        tags: [places]
+        prompt: Where do aeroplanes land?
+        options: [der Flughafen, der Bahnhof, das Hotel]
+        answer: der Flughafen
+      - id: place2
+        type: multiple-choice
+        tags: [places]
+        prompt: Where do you catch a train?
+        options: [der Flughafen, der Bahnhof, das Museum]
+        answer: der Bahnhof
+      - id: place3
+        type: multiple-choice
+        tags: [places]
+        prompt: A large body of salt water is …
+        options: [der See, der Fluss, das Meer]
+        answer: das Meer
+        explanation: "der See is a lake, der Fluss a river. Careful: die See (feminine) also means the sea."
+      - id: place4
+        type: matching
+        tags: [places]
+        prompt: Match each place with what happens there.
+        pairs:
+          - { left: der Bahnhof, right: Hier fahren Züge ab. }
+          - { left: der Flughafen, right: Hier landen Flugzeuge. }
+          - { left: das Restaurant, right: Hier isst man. }
+          - { left: das Museum, right: Hier sieht man Kunst. }
+          - { left: das Hotel, right: Hier übernachtet man. }
+
+  - title: der, die or das?
+    instructions: Type the article.
+    items:
+      - id: art1
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Bahnhof"
+        answers: [der]
+      - id: art2
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Stadt"
+        answers: [die]
+      - id: art3
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Museum"
+        answers: [das]
+      - id: art4
+        type: fill-blank
+        tags: [noun gender]
+        prompt: "___ Bushaltestelle"
+        answers: [die]
+        explanation: Compound nouns take the gender of their last part, here die Stelle.
+
+  - title: Wo? or Wohin?
+    instructions: Complete with the right preposition or article.
+    items:
+      - id: wo1
+        type: fill-blank
+        tags: [wo and wohin]
+        prompt: "Ich bin ___ Hotel."
+        answers: [im]
+        translation: I am in the hotel.
+        explanation: "Location (Wo?) takes the dative: in dem = im."
+      - id: wo2
+        type: fill-blank
+        tags: [wo and wohin]
+        prompt: "Ich gehe ___ Hotel."
+        answers: [ins]
+        translation: I am going to the hotel.
+        explanation: "Direction (Wohin?) takes the accusative: in das = ins."
+      - id: wo3
+        type: fill-blank
+        tags: [wo and wohin]
+        prompt: "Er wohnt in ___ Stadt."
+        answers: [der]
+        translation: He lives in the city.
+        explanation: "Wo? Dative, and the dative of die is der."
+      - id: wo4
+        type: fill-blank
+        tags: [wo and wohin]
+        prompt: "Wir fahren in ___ Stadt."
+        answers: [die]
+        translation: We are driving into the city.
+        explanation: "Wohin? Accusative, so die stays die."
+      - id: wo5
+        type: fill-blank
+        tags: [dative prepositions]
+        prompt: "Wir fliegen ___ Berlin."
+        answers: [nach]
+        translation: We are flying to Berlin.
+        explanation: Cities and most countries take nach.
+      - id: wo6
+        type: fill-blank
+        tags: [dative prepositions]
+        prompt: "Wie komme ich ___ Bahnhof?"
+        answers: [zum]
+        translation: How do I get to the station?
+        explanation: "zu + dem = zum."
+      - id: wo7
+        type: fill-blank
+        tags: [dative prepositions]
+        prompt: "Wie komme ich ___ Bushaltestelle?"
+        answers: [zur]
+        translation: How do I get to the bus stop?
+        explanation: "zu + der = zur."
+      - id: wo8
+        type: fill-blank
+        tags: [dative prepositions]
+        prompt: "Ich fahre mit ___ Zug."
+        answers: [dem]
+        translation: I am going by train.
+        explanation: mit always takes the dative.
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [directions]
+        prompt: Excuse me, how do I get to the airport?
+        answer: "Entschuldigung, wie komme ich zum Flughafen?"
+      - id: order2
+        type: word-order
+        tags: [directions, separable verbs]
+        prompt: Turn right at the traffic lights.
+        answer: Biegen Sie an der Ampel rechts ab.
+      - id: order3
+        type: word-order
+        tags: [directions]
+        prompt: It is only ten minutes on foot.
+        answer: Es sind nur zehn Minuten zu Fuß.
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [directions]
+        prompt: How do I get to the train station?
+        answers:
+          - Wie komme ich zum Bahnhof?
+      - id: tr2
+        type: translation
+        tags: [directions]
+        prompt: Where is the nearest bus stop?
+        answers:
+          - Wo ist die nächste Bushaltestelle?
+      - id: tr3
+        type: translation
+        tags: [directions]
+        prompt: Go straight on and turn left. (to a stranger)
+        answers:
+          - Gehen Sie geradeaus und biegen Sie links ab.
+          - Gehen Sie geradeaus und biegen Sie dann links ab.
+          - Gehen Sie geradeaus und dann biegen Sie links ab.
+        hint: Use the Sie form, and remember that abbiegen is separable.
+      - id: tr4
+        type: translation
+        tags: [directions]
+        prompt: Is it far?
+        answers:
+          - Ist es weit?
+          - Ist das weit?
+      - id: write1
+        type: writing
+        tags: [places]
+        prompt: Where are you going this weekend, and how are you getting there? One sentence.
+        mustInclude: []
+        sample: Am Wochenende fahre ich mit dem Zug nach Hamburg.

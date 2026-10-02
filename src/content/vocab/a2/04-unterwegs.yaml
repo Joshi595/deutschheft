@@ -1,0 +1,200 @@
+lesson: a2.04
+items:
+  - id: bahnhof
+    de: Bahnhof
+    en: train station
+    pos: noun
+    article: der
+    plural: Bahnhöfe
+    example: Der Bahnhof ist im Zentrum.
+    exampleEn: The station is in the centre.
+  - id: flughafen
+    de: Flughafen
+    en: airport
+    pos: noun
+    article: der
+    plural: Flughäfen
+    example: Ich fahre zum Flughafen.
+    exampleEn: I am going to the airport.
+  - id: bushaltestelle
+    de: Bushaltestelle
+    en: bus stop
+    pos: noun
+    article: die
+    plural: Bushaltestellen
+    example: Wo ist die nächste Bushaltestelle?
+    exampleEn: Where is the nearest bus stop?
+  - id: zug
+    de: Zug
+    en: train
+    pos: noun
+    article: der
+    plural: Züge
+    example: Der Zug ist pünktlich.
+    exampleEn: The train is on time.
+  - id: flugzeug
+    de: Flugzeug
+    en: aeroplane
+    pos: noun
+    article: das
+    plural: Flugzeuge
+    example: Das Flugzeug fliegt nach München.
+    exampleEn: The plane is flying to Munich.
+  - id: auto
+    de: Auto
+    en: car
+    pos: noun
+    article: das
+    plural: Autos
+    example: Hast du ein Auto?
+    exampleEn: Do you have a car?
+  - id: strasse
+    de: Straße
+    en: street, road
+    pos: noun
+    article: die
+    plural: Straßen
+    example: Die Straße ist sehr breit.
+    exampleEn: The street is very wide.
+  - id: platz
+    de: Platz
+    en: square; seat; space
+    pos: noun
+    article: der
+    plural: Plätze
+    example: Der Marktplatz ist schön.
+    exampleEn: The market square is beautiful.
+  - id: stadt
+    de: Stadt
+    en: town, city
+    pos: noun
+    article: die
+    plural: Städte
+    example: Berlin ist eine große Stadt.
+    exampleEn: Berlin is a big city.
+  - id: dorf
+    de: Dorf
+    en: village
+    pos: noun
+    article: das
+    plural: Dörfer
+    example: Das Dorf ist klein und ruhig.
+    exampleEn: The village is small and quiet.
+  - id: berg
+    de: Berg
+    en: mountain
+    pos: noun
+    article: der
+    plural: Berge
+    example: Die Alpen sind hohe Berge.
+    exampleEn: The Alps are high mountains.
+  - id: fluss
+    de: Fluss
+    en: river
+    pos: noun
+    article: der
+    plural: Flüsse
+    example: Der Rhein ist ein langer Fluss.
+    exampleEn: The Rhine is a long river.
+  - id: see
+    de: See
+    en: lake
+    pos: noun
+    article: der
+    plural: Seen
+    example: Der Bodensee ist ein großer See.
+    exampleEn: Lake Constance is a big lake.
+  - id: meer
+    de: Meer
+    en: sea
+    pos: noun
+    article: das
+    plural: Meere
+    example: Im Sommer fahren wir ans Meer.
+    exampleEn: In summer we go to the seaside.
+  - id: hotel
+    de: Hotel
+    en: hotel
+    pos: noun
+    article: das
+    plural: Hotels
+    example: Ich übernachte im Hotel.
+    exampleEn: I am staying the night at the hotel.
+  - id: kirche
+    de: Kirche
+    en: church
+    pos: noun
+    article: die
+    plural: Kirchen
+    example: Die Kirche ist sehr alt.
+    exampleEn: The church is very old.
+  - id: museum
+    de: Museum
+    en: museum
+    pos: noun
+    article: das
+    plural: Museen
+    example: Das Museum ist montags geschlossen.
+    exampleEn: The museum is closed on Mondays.
+  - id: stadtplan
+    de: Stadtplan
+    en: street map
+    pos: noun
+    article: der
+    plural: Stadtpläne
+    example: Hast du einen Stadtplan?
+    exampleEn: Do you have a street map?
+  - id: weg
+    de: Weg
+    en: way, path
+    pos: noun
+    article: der
+    plural: Wege
+    example: Können Sie mir den Weg zeigen?
+    exampleEn: Can you show me the way?
+  - id: ampel
+    de: Ampel
+    en: traffic lights
+    pos: noun
+    article: die
+    plural: Ampeln
+    example: Biegen Sie an der Ampel rechts ab.
+    exampleEn: Turn right at the traffic lights.
+  - id: kreuzung
+    de: Kreuzung
+    en: crossroads, junction
+    pos: noun
+    article: die
+    plural: Kreuzungen
+    example: Gehen Sie bis zur Kreuzung.
+    exampleEn: Go as far as the crossroads.
+  - id: geradeaus
+    de: geradeaus
+    en: straight on
+    pos: adverb
+    example: Gehen Sie immer geradeaus.
+    exampleEn: Keep going straight on.
+  - id: links
+    de: links
+    en: left, on the left
+    pos: adverb
+    example: Das Geschäft ist links.
+    exampleEn: The shop is on the left.
+  - id: rechts
+    de: rechts
+    en: right, on the right
+    pos: adverb
+    example: Die Apotheke ist rechts.
+    exampleEn: The pharmacy is on the right.
+  - id: abbiegen
+    de: abbiegen
+    en: to turn (off)
+    pos: verb
+    example: Biegen Sie hier links ab.
+    exampleEn: Turn left here.
+  - id: weit
+    de: weit
+    en: far
+    pos: adjective
+    example: Ist es weit von hier?
+    exampleEn: Is it far from here?
