@@ -1,0 +1,186 @@
+lesson: a1.04
+sets:
+  - title: The pronouns
+    items:
+      - id: pron1
+        type: matching
+        tags: [pronouns]
+        prompt: Match each pronoun with its meaning.
+        pairs:
+          - { left: ich, right: I }
+          - { left: wir, right: we }
+          - { left: er, right: he }
+          - { left: es, right: it }
+          - { left: ihr, right: you (several friends) }
+          - { left: du, right: you (one friend) }
+      - id: pron2
+        type: multiple-choice
+        tags: [du and Sie]
+        prompt: You ask a police officer for directions. Which word for "you"?
+        options: [Sie, du, ihr]
+        answer: Sie
+      - id: pron3
+        type: multiple-choice
+        tags: [du and Sie]
+        prompt: You talk to your two friends Anna and Tom. Which word for "you"?
+        options: [ihr, du, Sie]
+        answer: ihr
+      - id: pron4
+        type: multiple-choice
+        tags: [du and Sie]
+        prompt: You talk to a five-year-old child. Which word for "you"?
+        options: [du, Sie, ihr]
+        answer: du
+
+  - title: The right ending
+    instructions: Put the verb in brackets into the right form.
+    items:
+      - id: end1
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Ich ___ Deutsch. (lernen)"
+        answers: [lerne]
+      - id: end2
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Was ___ du? (machen)"
+        answers: [machst]
+      - id: end3
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Sie ___ Kaffee. (trinken) [she]"
+        answers: [trinkt]
+      - id: end4
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Wir ___ in Köln. (wohnen)"
+        answers: [wohnen]
+      - id: end5
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Woher ___ ihr? (kommen)"
+        answers: [kommt]
+      - id: end6
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Die Kinder ___ Fußball. (spielen)"
+        answers: [spielen]
+        hint: Die Kinder is plural, like sie (they).
+      - id: end7
+        type: fill-blank
+        tags: [present tense]
+        prompt: "___ Sie Musik, Herr Schmidt? (hören)"
+        answers: [Hören]
+
+  - title: Stems in -t, -d and s-sounds
+    instructions: Watch for the extra e, and for du after an s-sound.
+    items:
+      - id: stem1
+        type: fill-blank
+        tags: [present tense, stem endings]
+        prompt: "Er ___ in Berlin. (arbeiten)"
+        answers: [arbeitet]
+      - id: stem2
+        type: fill-blank
+        tags: [present tense, stem endings]
+        prompt: "Wo ___ du? (arbeiten)"
+        answers: [arbeitest]
+      - id: stem3
+        type: fill-blank
+        tags: [present tense, stem endings]
+        prompt: "___ ihr schon lange? (warten)"
+        answers: [Wartet]
+      - id: stem4
+        type: fill-blank
+        tags: [present tense, stem endings]
+        prompt: "Du ___ sehr gut. (tanzen)"
+        answers: [tanzt]
+        explanation: "The stem tanz- ends in an s-sound, so du adds only -t."
+      - id: stem5
+        type: fill-blank
+        tags: [present tense, stem endings]
+        prompt: "Sie ___ das Buch nicht. (finden) [she]"
+        answers: [findet]
+
+  - title: Who is sie?
+    items:
+      - id: sie1
+        type: multiple-choice
+        tags: [pronouns]
+        prompt: "\"Sie lernt Deutsch.\" Who is learning?"
+        options: [she, they, you (formal)]
+        answer: she
+        explanation: The ending -t can only go with one person.
+      - id: sie2
+        type: multiple-choice
+        tags: [pronouns]
+        prompt: "\"Was machen Sie, Frau Weber?\" Who is meant by Sie?"
+        options: [you (formal), she, they]
+        answer: you (formal)
+      - id: sie3
+        type: multiple-choice
+        tags: [pronouns]
+        prompt: "\"Anna und Tom? Sie wohnen in Köln.\" Who lives in Cologne?"
+        options: [they, she, you (formal)]
+        answer: they
+
+  - title: Complete the text
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [present tense]
+        prompt: Put each verb into the right form.
+        text: "Das ist Paul. Er ___ (kommen) aus Polen und ___ (wohnen) in Köln. Paul und Anna ___ (lernen) zusammen Deutsch. Anna ___ (arbeiten) in Bonn."
+        gaps:
+          - [kommt]
+          - [wohnt]
+          - [lernen]
+          - [arbeitet]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [present tense, word order]
+        prompt: We are learning German together.
+        answer: Wir lernen zusammen Deutsch.
+      - id: order2
+        type: word-order
+        tags: [present tense, word order]
+        prompt: Where do you work? (informal)
+        answer: Wo arbeitest du?
+      - id: order3
+        type: word-order
+        tags: [present tense, word order]
+        prompt: Tomorrow I am not working.
+        answer: Morgen arbeite ich nicht.
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [present tense]
+        prompt: I am learning German.
+        answers: [Ich lerne Deutsch.]
+      - id: tr2
+        type: translation
+        tags: [present tense]
+        prompt: She works in Berlin.
+        answers: [Sie arbeitet in Berlin.]
+      - id: tr3
+        type: translation
+        tags: [present tense]
+        prompt: What are you doing? (informal, one person)
+        answers: [Was machst du?]
+      - id: tr4
+        type: translation
+        tags: [present tense]
+        prompt: We live in Cologne.
+        answers: [Wir wohnen in Köln.]
+      - id: write1
+        type: writing
+        tags: [present tense]
+        prompt: Write one sentence about what you and a friend do together. Start with Wir.
+        mustInclude: [wir]
+        sample: Wir lernen zusammen Deutsch und hören gern Musik.
