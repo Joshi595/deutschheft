@@ -1,0 +1,230 @@
+lesson: a2.01
+sets:
+  - title: Irregular participles
+    items:
+      - id: fam1
+        type: matching
+        tags: [participles]
+        prompt: Match each verb with its participle.
+        pairs:
+          - { left: schreiben, right: geschrieben }
+          - { left: fliegen, right: geflogen }
+          - { left: finden, right: gefunden }
+          - { left: sprechen, right: gesprochen }
+          - { left: verlieren, right: verloren }
+          - { left: bleiben, right: geblieben }
+      - id: fam2
+        type: fill-blank
+        tags: [participles]
+        prompt: "trinken: ___"
+        answers: [getrunken]
+      - id: fam3
+        type: fill-blank
+        tags: [participles]
+        prompt: "helfen: ___"
+        answers: [geholfen]
+      - id: fam4
+        type: fill-blank
+        tags: [participles]
+        prompt: "singen: ___"
+        answers: [gesungen]
+      - id: fam5
+        type: fill-blank
+        tags: [participles]
+        prompt: "steigen: ___"
+        answers: [gestiegen]
+
+  - title: Mixed verbs
+    items:
+      - id: mix1
+        type: fill-blank
+        tags: [participles, mixed verbs]
+        prompt: "bringen: ___"
+        answers: [gebracht]
+      - id: mix2
+        type: fill-blank
+        tags: [participles, mixed verbs]
+        prompt: "denken: ___"
+        answers: [gedacht]
+      - id: mix3
+        type: fill-blank
+        tags: [participles, mixed verbs]
+        prompt: "wissen: ___"
+        answers: [gewusst]
+      - id: mix4
+        type: multiple-choice
+        tags: [participles, mixed verbs]
+        prompt: Ich habe ihn nicht ___.
+        options: [gekannt, gekennt, gekennen]
+        answer: gekannt
+
+  - title: Where does ge- go?
+    items:
+      - id: ge1
+        type: multiple-choice
+        tags: [participles, prefixes]
+        prompt: aufstehen
+        options: [aufgestanden, geaufstanden, aufstanden]
+        answer: aufgestanden
+      - id: ge2
+        type: multiple-choice
+        tags: [participles, prefixes]
+        prompt: bekommen
+        options: [bekommen, gebekommen, begekommen]
+        answer: bekommen
+        explanation: be- never separates, so there is no ge-.
+      - id: ge3
+        type: multiple-choice
+        tags: [participles, prefixes]
+        prompt: mitbringen
+        options: [mitgebracht, gemitbracht, mitbracht]
+        answer: mitgebracht
+      - id: ge4
+        type: multiple-choice
+        tags: [participles, prefixes]
+        prompt: erzählen
+        options: [erzählt, geerzählt, ergezählt]
+        answer: erzählt
+      - id: ge5
+        type: multiple-choice
+        tags: [participles, prefixes]
+        prompt: zurückkommen
+        options: [zurückgekommen, gezurückkommen, zurückkommen]
+        answer: zurückgekommen
+      - id: ge6
+        type: multiple-choice
+        tags: [participles, prefixes]
+        prompt: empfehlen
+        options: [empfohlen, geempfohlen, empgefohlen]
+        answer: empfohlen
+
+  - title: haben or sein?
+    items:
+      - id: hs1
+        type: fill-blank
+        tags: [haben or sein]
+        prompt: "Wir ___ nach Italien gefahren."
+        answers: [sind]
+      - id: hs2
+        type: fill-blank
+        tags: [haben or sein]
+        prompt: "Ich ___ einen Brief bekommen."
+        answers: [habe]
+      - id: hs3
+        type: fill-blank
+        tags: [haben or sein]
+        prompt: "Das Kind ___ schnell gewachsen."
+        answers: [ist]
+      - id: hs4
+        type: fill-blank
+        tags: [haben or sein]
+        prompt: "Was ___ passiert?"
+        answers: [ist]
+      - id: hs5
+        type: fill-blank
+        tags: [haben or sein]
+        prompt: "Ich ___ gut geschlafen."
+        answers: [habe]
+      - id: hs6
+        type: fill-blank
+        tags: [haben or sein]
+        prompt: "Ich ___ sofort eingeschlafen."
+        answers: [bin]
+        explanation: Falling asleep is a change of state.
+      - id: hs7
+        type: fill-blank
+        tags: [haben or sein]
+        prompt: "Sie ___ Ärztin geworden. [she]"
+        answers: [ist]
+
+  - title: Complete the story
+    items:
+      - id: story1
+        type: cloze
+        tags: [perfect tense]
+        prompt: Put each verb into the Perfekt participle.
+        text: "Letzten Sommer sind wir nach Spanien ___ (fliegen). Wir haben in einem kleinen Hotel ___ (wohnen) und jeden Tag Fisch ___ (essen). Ich habe viele Fotos ___ (machen) und meinen Eltern eine Karte ___ (schreiben). Leider habe ich am letzten Tag meine Sonnenbrille ___ (verlieren)."
+        gaps:
+          - [geflogen]
+          - [gewohnt]
+          - [gegessen]
+          - [gemacht]
+          - [geschrieben]
+          - [verloren]
+
+  - title: Listen
+    stimulus:
+      kind: audio
+      label: Am Telefon
+      lines:
+        - speaker: Mia
+          text: "Hallo Ben! Wie war dein Wochenende?"
+        - speaker: Ben
+          text: "Sehr schön. Ich bin am Samstag nach Köln gefahren und habe meine Schwester besucht. Wir sind in ein Museum gegangen."
+        - speaker: Mia
+          text: "Warst du schon einmal in Köln?"
+        - speaker: Ben
+          text: "Ja, schon zweimal. Und du? Was hast du gemacht?"
+        - speaker: Mia
+          text: "Ich bin zu Hause geblieben. Ich hatte Kopfschmerzen und habe viel geschlafen."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening, perfect tense]
+        prompt: Was hat Ben am Samstag gemacht?
+        options:
+          - Er hat seine Schwester besucht.
+          - Er ist zu Hause geblieben.
+          - Er hat viel geschlafen.
+        answer: Er hat seine Schwester besucht.
+      - id: listen2
+        type: true-false
+        tags: [listening, perfect tense]
+        prompt: Ben war noch nie in Köln.
+        answer: false
+      - id: listen3
+        type: true-false
+        tags: [listening, perfect tense]
+        prompt: Mia hatte Kopfschmerzen.
+        answer: true
+
+  - title: Say and write it
+    items:
+      - id: order1
+        type: word-order
+        tags: [perfect tense, word order]
+        prompt: Have you ever been to Berlin?
+        answer: Warst du schon einmal in Berlin?
+      - id: order2
+        type: word-order
+        tags: [perfect tense, word order]
+        prompt: I have brought you something.
+        answer: Ich habe dir etwas mitgebracht.
+      - id: tr1
+        type: translation
+        tags: [perfect tense]
+        prompt: I have lost my key.
+        answers:
+          - Ich habe meinen Schlüssel verloren.
+      - id: tr2
+        type: translation
+        tags: [perfect tense]
+        prompt: What happened?
+        answers:
+          - Was ist passiert?
+      - id: write1
+        type: writing-task
+        tags: [writing, perfect tense]
+        prompt: Write about your last holiday or your last free day.
+        points:
+          - Where you went and how
+          - What you did there
+          - What the weather or the food was like
+          - Something that went wrong, or something you liked best
+        minWords: 40
+        phrases:
+          - Letzten Sommer / Letztes Wochenende bin ich nach … gefahren.
+          - Dort habe ich …
+          - Das Wetter war … / Das Essen war …
+          - Leider habe ich … / Am besten hat mir … gefallen.
+        sample: "Letzten Sommer bin ich mit dem Zug nach Wien gefahren. Dort habe ich meine Freundin besucht. Wir sind viel spazieren gegangen und haben das Schloss gesehen. Das Wetter war sehr schön, aber das Essen war teuer. Leider habe ich meinen Hut im Zug vergessen. Am besten hat mir das Museum gefallen."

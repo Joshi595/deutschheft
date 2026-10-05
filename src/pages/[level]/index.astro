@@ -1,0 +1,113 @@
+---
+import ReadinessPanel from '../../components/dashboard/ReadinessPanel';
+import ProgressMeter from '../../components/ui/ProgressMeter.astro';
+import Base from '../../layouts/Base.astro';
+import { getCatalog, toLevelSummary } from '../../lib/content/catalog';
+import { url } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const catalog = await getCatalog();
+  return catalog.levels.map((level) => ({ params: { level: level.id } }));
+}
+
+const catalog = await getCatalog();
+const level = catalog.levels.find((candidate) => candidate.id === Astro.params.level)!;
+const exerciseIds = level.lessons.flatMap((lesson) => lesson.exercises.map((exercise) => exercise.id));
+const byKey = new Map(level.lessons.map((lesson) => [lesson.key, lesson]));
+const units = level.units.filter((unit) => unit.lessonKeys.length > 0);
+---
+
+<Base title={`${level.title} ${level.name}`} description={level.description}>
+  <nav aria-label="Breadcrumb" class="text-sm text-muted">
+    <a href={url('')} class="hover:text-ink">Learn</a>
+    <span aria-hidden="true"> / </span>
+    <span>{level.title}</span>
+  </nav>
+
+  <header class="mt-4 max-w-3xl">
+    <p class="eyebrow">{level.name}</p>
+    <h1 class="mt-1 text-5xl">{level.title}</h1>
+    <p class="mt-4 text-lg text-muted">{level.description}</p>
+    {exerciseIds.length > 0 && <div class="mt-6"><ProgressMeter ids={exerciseIds} /></div>}
+  </header>
+
+  {
+    level.lessons.length === 0 ? (
+      <p class="card mt-10 p-6 text-muted">No lessons here yet. This level is planned.</p>
+    ) : (
+      <>
+        <section class="mt-8" aria-label="Exam readiness">
+          <ReadinessPanel client:only="react" level={toLevelSummary(level)} />
+        </section>
+
+        {units.map((unit) => (
+          <section class="mt-12" aria-labelledby={`unit-${unit.number}`}>
+            {unit.title && (
+              <header class="mb-4">
+                <p class="eyebrow">Unit {unit.number}</p>
+                <h2 id={`unit-${unit.number}`} class="text-3xl">{unit.title}</h2>
+                {unit.summary && <p class="mt-1 text-muted">{unit.summary}</p>}
+              </header>
+            )}
+            <ol class="grid gap-3">
+              {unit.lessonKeys.map((key) => {
+                const lesson = byKey.get(key)!;
+                return (
+                  <li>
+                    <a href={lesson.href} class="card group grid gap-3 p-4 transition-colors hover:border-ink sm:grid-cols-[3.5rem_1fr] sm:p-5">
+                      <span class="font-display text-3xl font-semibold text-muted tabular-nums group-hover:text-ink">
+                        {String(lesson.order).padStart(2, '0')}
+                      </span>
+                      <span class="grid gap-2">
+                        <span>
+                          <span class="block text-xl font-semibold">{lesson.title}</span>
+                          {lesson.titleDe && <span class="text-sm text-muted" lang="de">{lesson.titleDe}</span>}
+                        </span>
+                        <span class="text-muted">{lesson.summary}</span>
+                        <span class="flex flex-wrap gap-2">
+                          {lesson.kind === 'exam' && <span class="chip chip-accent">Exam training</span>}
+                          <span class="chip">{lesson.minutes} min</span>
+                          {lesson.topics.map((topic) => <span class="chip">{topic}</span>)}
+                        </span>
+                        <ProgressMeter ids={lesson.exercises.map((exercise) => exercise.id)} />
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ol>
+            {unit.checkpointHref && (
+              <a href={unit.checkpointHref} class="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-[14px] border border-dashed border-line p-4 transition-colors hover:border-ink">
+                <span>
+                  <span class="block font-semibold">{unit.title ? `Checkpoint: ${unit.title}` : 'Checkpoint'}</span>
+                  <span class="text-sm text-muted">A short mixed quiz over this unit, with no hints.</span>
+                </span>
+                <span class="btn btn-small">Take the checkpoint</span>
+              </a>
+            )}
+          </section>
+        ))}
+
+        {level.exams.length > 0 && (
+          <section class="mt-12" aria-labelledby="mock-exams">
+            <p class="eyebrow">{level.exam ?? 'Exam'}</p>
+            <h2 id="mock-exams" class="text-3xl">Mock exams</h2>
+            <ul class="mt-4 grid gap-3">
+              {level.exams.map((exam) => (
+                <li>
+                  <a href={exam.href} class="card flex flex-wrap items-center justify-between gap-3 border-l-4 border-l-accent p-5 transition-colors hover:border-ink">
+                    <span>
+                      <span class="block text-xl font-semibold">{exam.title}</span>
+                      <span class="text-muted">{exam.description}</span>
+                    </span>
+                    <span class="chip">{exam.minutes} min</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </>
+    )
+  }
+</Base>

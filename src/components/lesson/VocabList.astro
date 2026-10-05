@@ -1,0 +1,39 @@
+---
+import type { ClientVocabItem } from '../../lib/content/types';
+import SpeakButton from '../ui/SpeakButton.astro';
+
+interface Props {
+  items: ClientVocabItem[];
+}
+const { items } = Astro.props;
+
+const headword = (item: ClientVocabItem) => (item.article ? `${item.article} ${item.de}` : item.de);
+---
+
+<ul class="card divide-y divide-line">
+  {
+    items.map((item) => (
+      <li class="flex items-start gap-2 px-3 py-3 sm:px-4">
+        <SpeakButton text={headword(item)} />
+        <div class="min-w-0 flex-1">
+          <p class="flex flex-wrap items-baseline gap-x-2">
+            <span class="de text-lg" lang="de">{headword(item)}</span>
+            {item.plural && item.plural !== '-' && (
+              <span class="text-sm text-muted" lang="de">pl. die {item.plural}</span>
+            )}
+            <span class="text-muted">{item.en}</span>
+          </p>
+          {item.example && (
+            <p class="mt-0.5 flex items-start gap-1 text-sm">
+              <span>
+                <span lang="de">{item.example}</span>
+                {item.exampleEn && <span class="text-muted"> {item.exampleEn}</span>}
+              </span>
+            </p>
+          )}
+        </div>
+        {item.example && <SpeakButton text={item.example} />}
+      </li>
+    ))
+  }
+</ul>

@@ -1,0 +1,110 @@
+lesson: a2.06
+items:
+  - id: dass
+    de: dass
+    en: that (conjunction)
+    pos: conjunction
+    example: Ich weiß, dass du recht hast.
+    exampleEn: I know that you are right.
+  - id: glauben
+    de: glauben
+    en: to believe, to think
+    pos: verb
+    example: Ich glaube, dass er krank ist.
+    exampleEn: I think that he is ill.
+  - id: denken
+    de: denken
+    en: to think
+    pos: verb
+    example: Ich denke, dass wir mehr Zeit brauchen.
+    exampleEn: I think that we need more time.
+  - id: finden
+    de: finden
+    en: to find; to think (opinion)
+    pos: verb
+    example: Ich finde, dass der Film gut ist.
+    exampleEn: I think the film is good.
+  - id: meinen
+    de: meinen
+    en: to mean; to think
+    pos: verb
+    example: Was meinst du?
+    exampleEn: What do you think?
+  - id: hoffen
+    de: hoffen
+    en: to hope
+    pos: verb
+    example: Ich hoffe, dass du bald gesund bist.
+    exampleEn: I hope that you are well soon.
+  - id: sagen
+    de: sagen
+    en: to say
+    pos: verb
+    example: Sie sagt, dass sie morgen kommt.
+    exampleEn: She says that she is coming tomorrow.
+  - id: meinung
+    de: Meinung
+    en: opinion
+    pos: noun
+    article: die
+    plural: Meinungen
+    example: Was ist deine Meinung?
+    exampleEn: What is your opinion?
+  - id: sicher
+    de: sicher
+    en: sure, certain; safe
+    pos: adjective
+    example: Ich bin sicher, dass er kommt.
+    exampleEn: I am sure that he is coming.
+  - id: schade
+    de: schade
+    en: a pity
+    pos: adjective
+    example: Schade, dass du nicht kommen kannst.
+    exampleEn: A pity that you cannot come.
+  - id: es-tut-mir-leid
+    de: Es tut mir leid, dass …
+    en: I am sorry that …
+    pos: phrase
+    example: Es tut mir leid, dass ich zu spät bin.
+    exampleEn: I am sorry that I am late.
+  - id: stimmen
+    de: stimmen
+    en: to be right, to be true
+    pos: verb
+    example: Das stimmt.
+    exampleEn: That is right.
+  - id: einfach
+    de: einfach
+    en: easy, simple
+    pos: adjective
+    example: Die Aufgabe ist einfach.
+    exampleEn: The task is easy.
+  - id: schwer
+    de: schwer
+    en: difficult; heavy
+    pos: adjective
+    example: Ich finde, dass Deutsch nicht so schwer ist.
+    exampleEn: I find that German is not that hard.
+  - id: schwierig
+    de: schwierig
+    en: difficult
+    pos: adjective
+    example: Die Prüfung war schwierig.
+    exampleEn: The exam was difficult.
+  - id: gesund
+    de: gesund
+    en: healthy, well
+    pos: adjective
+    example: Ich hoffe, dass du bald wieder gesund bist.
+    exampleEn: I hope you are well again soon.
+  - id: das-sehe-ich-anders
+    de: Das sehe ich anders.
+    en: I see that differently.
+    pos: phrase
+  - id: ob
+    de: ob
+    en: whether, if
+    pos: conjunction
+    example: Ich bin nicht sicher, ob er kommt.
+    exampleEn: I am not sure whether he is coming.

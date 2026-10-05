@@ -1,0 +1,114 @@
+lesson: a1.28
+items:
+  - id: durchsage
+    de: Durchsage
+    en: announcement
+    pos: noun
+    article: die
+    plural: Durchsagen
+    example: Achtung, eine Durchsage!
+    exampleEn: Attention, an announcement!
+  - id: anrufbeantworter
+    de: Anrufbeantworter
+    en: answering machine
+    pos: noun
+    article: der
+    plural: Anrufbeantworter
+    example: Bitte sprechen Sie auf den Anrufbeantworter.
+    exampleEn: Please leave a message on the answering machine.
+  - id: nachricht
+    de: Nachricht
+    en: message
+    pos: noun
+    article: die
+    plural: Nachrichten
+    example: Sie haben eine neue Nachricht.
+    exampleEn: You have a new message.
+  - id: zurueckrufen
+    de: zurückrufen
+    en: to call back
+    pos: verb
+    example: Ruf mich bitte zurück.
+    exampleEn: Please call me back.
+  - id: gespraech
+    de: Gespräch
+    en: conversation
+    pos: noun
+    article: das
+    plural: Gespräche
+    example: Sie hören ein Gespräch.
+    exampleEn: You will hear a conversation.
+  - id: flug
+    de: Flug
+    en: flight
+    pos: noun
+    article: der
+    plural: Flüge
+    example: Der Flug nach Wien hat Verspätung.
+    exampleEn: The flight to Vienna is late.
+  - id: kunde-kundin
+    de: Kundin
+    en: customer (female)
+    pos: noun
+    article: die
+    plural: Kundinnen
+    example: Liebe Kundinnen und Kunden!
+    exampleEn: Dear customers!
+  - id: in-ordnung
+    de: in Ordnung
+    en: all right, fine
+    pos: phrase
+    example: Um acht Uhr? Ja, in Ordnung.
+    exampleEn: At eight? Yes, all right.
+  - id: genau
+    de: genau
+    en: exactly
+    pos: adverb
+    example: Um zehn Uhr? Genau.
+    exampleEn: At ten o'clock? Exactly.
+  - id: das-geht
+    de: Das geht.
+    en: That works.
+    pos: phrase
+    example: Am Montag? Ja, das geht.
+    exampleEn: On Monday? Yes, that works.
+  - id: das-geht-nicht
+    de: Das geht nicht.
+    en: That does not work.
+    pos: phrase
+    example: Am Freitag? Nein, das geht leider nicht.
+    exampleEn: On Friday? No, unfortunately that does not work.
+  - id: einverstanden
+    de: einverstanden
+    en: agreed
+    pos: adjective
+    example: Um sieben vor dem Kino? Einverstanden.
+    exampleEn: At seven outside the cinema? Agreed.
+  - id: ausgang
+    de: Ausgang
+    en: exit
+    pos: noun
+    article: der
+    plural: Ausgänge
+    example: Der Ausgang ist links.
+    exampleEn: The exit is on the left.
+  - id: eingang
+    de: Eingang
+    en: entrance
+    pos: noun
+    article: der
+    plural: Eingänge
+    example: Wir treffen uns am Eingang.
+    exampleEn: We are meeting at the entrance.
+  - id: hoeren-sie
+    de: Hören Sie.
+    en: Listen.
+    pos: phrase
+    example: Hören Sie den Text zweimal.
+    exampleEn: Listen to the text twice.
+  - id: zweimal
+    de: zweimal
+    en: twice
+    pos: adverb
+    example: Sie hören jeden Text zweimal.
+    exampleEn: You hear each text twice.

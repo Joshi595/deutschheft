@@ -1,0 +1,149 @@
+lesson: a1.29
+sets:
+  - title: Building blocks
+    items:
+      - id: block1
+        type: matching
+        tags: [exam speaking]
+        prompt: Match each cue word with the sentence that goes with it.
+        pairs:
+          - { left: Alter, right: Ich bin 28 Jahre alt. }
+          - { left: Land, right: Ich komme aus Italien. }
+          - { left: Wohnort, right: Ich wohne in München. }
+          - { left: Beruf, right: Ich bin Köchin. }
+          - { left: Hobby, right: Ich lese gern. }
+      - id: block2
+        type: word-order
+        tags: [exam speaking, questions]
+        prompt: "Card: Frühstück. Ask what the other person has for breakfast."
+        answer: Was essen Sie zum Frühstück?
+      - id: block3
+        type: word-order
+        tags: [exam speaking, questions]
+        prompt: "Card: Wochenende. Ask what the other person does at the weekend."
+        answer: Was machen Sie am Wochenende?
+      - id: block4
+        type: word-order
+        tags: [exam speaking, requests]
+        prompt: "Card: a pen. Ask for it politely."
+        answer: Geben Sie mir bitte den Stift.
+      - id: block5
+        type: word-order
+        tags: [exam speaking, requests]
+        prompt: "Card: a window. Ask for it to be closed."
+        answer: Machen Sie bitte das Fenster zu.
+      - id: block6
+        type: multiple-choice
+        tags: [exam speaking, questions]
+        prompt: "Card: Auto. Which question works?"
+        options: [Haben Sie ein Auto?, Sie haben Auto?, Auto Sie haben?]
+        answer: Haben Sie ein Auto?
+      - id: block7
+        type: multiple-choice
+        tags: [exam speaking, requests]
+        prompt: "Someone asks: Können Sie mir bitte den Stift geben? You have none. You say:"
+        options:
+          - "Tut mir leid, ich habe keinen Stift."
+          - "Nein."
+          - "Ja, gern. Hier, bitte."
+        answer: "Tut mir leid, ich habe keinen Stift."
+      - id: block8
+        type: multiple-choice
+        tags: [exam speaking]
+        prompt: You did not understand the examiner. What do you say?
+        options:
+          - Können Sie das bitte wiederholen?
+          - Was?
+          - Ich möchte gehen.
+        answer: Können Sie das bitte wiederholen?
+
+  - title: "Teil 1: sich vorstellen"
+    instructions: Speak for about half a minute. Record yourself if you can, then compare.
+    items:
+      - id: t1a
+        type: speaking-task
+        tags: [exam speaking]
+        prompt: Stellen Sie sich bitte vor.
+        cards: [Name?, Alter?, Land?, Wohnort?, Sprachen?, Beruf?, Hobby?]
+        phrases:
+          - Ich heiße …
+          - Ich bin … Jahre alt.
+          - Ich komme aus …
+          - Ich wohne in …
+          - Ich spreche …
+          - Ich bin … von Beruf.
+          - Meine Hobbys sind …
+        checklist:
+          - I said something for all seven cue words
+          - I used full sentences, not single words
+          - I spoke without long pauses
+          - Someone listening could understand every sentence
+        sample: "Guten Tag. Ich heiße Maria Rossi. Ich bin achtundzwanzig Jahre alt und komme aus Italien. Jetzt wohne ich in München. Ich spreche Italienisch, Englisch und ein bisschen Deutsch. Ich bin Köchin von Beruf. In meiner Freizeit lese ich gern und fahre Rad."
+      - id: t1b
+        type: speaking-task
+        tags: [exam speaking, alphabet]
+        prompt: "Buchstabieren Sie bitte Ihren Familiennamen. Und wie ist Ihre Telefonnummer?"
+        cards: [buchstabieren, Telefonnummer]
+        phrases:
+          - Mein Familienname ist … Ich buchstabiere …
+          - Meine Telefonnummer ist …
+        checklist:
+          - I spelled my surname with the German letter names
+          - I said A, E and I the German way
+          - I said my phone number one digit at a time
+        sample: "Mein Familienname ist Rossi. Ich buchstabiere: R, O, S, S, I. Meine Telefonnummer ist null, eins, sieben, sechs, vier, drei, zwei, neun."
+
+  - title: "Teil 2: um Informationen bitten und Informationen geben"
+    instructions: For each card, ask a question, then answer it yourself as the other candidate would.
+    items:
+      - id: t2a
+        type: speaking-task
+        tags: [exam speaking, questions]
+        prompt: "Thema: Essen und Trinken. Ask one question for each card, and answer each one."
+        cards: [Frühstück, Lieblingsessen, Kaffee, Restaurant]
+        phrases:
+          - Was essen Sie zum …?
+          - Was ist Ihr …?
+          - Trinken Sie gern …?
+          - Gehen Sie oft ins …?
+        checklist:
+          - I asked a real question for each card
+          - The verb was in the right place in every question
+          - I answered each question in a full sentence
+        sample: "Was essen Sie zum Frühstück? Ich esse Brot mit Käse. Was ist Ihr Lieblingsessen? Mein Lieblingsessen ist Pizza. Trinken Sie gern Kaffee? Ja, ich trinke jeden Morgen Kaffee. Gehen Sie oft ins Restaurant? Nein, ich koche lieber zu Hause."
+      - id: t2b
+        type: speaking-task
+        tags: [exam speaking, questions]
+        prompt: "Thema: Freizeit. Ask one question for each card, and answer each one."
+        cards: [Wochenende, Sport, Kino, Urlaub]
+        phrases:
+          - Was machen Sie am …?
+          - Machen Sie gern …?
+          - Wie oft gehen Sie ins …?
+          - Wohin fahren Sie im …?
+        checklist:
+          - I asked a real question for each card
+          - I used at least two different kinds of question
+          - I answered each question in a full sentence
+        sample: "Was machen Sie am Wochenende? Ich treffe meine Freunde. Machen Sie gern Sport? Ja, ich schwimme gern. Wie oft gehen Sie ins Kino? Ich gehe einmal im Monat ins Kino. Wohin fahren Sie im Urlaub? Im Sommer fahre ich nach Italien."
+
+  - title: "Teil 3: Bitten formulieren und darauf reagieren"
+    instructions: For each card, make a polite request, then respond to it.
+    items:
+      - id: t3a
+        type: speaking-task
+        tags: [exam speaking, requests]
+        prompt: Make a request for each card, and give a response to each.
+        cards: [Stift, Fenster, Glas Wasser, Buch]
+        phrases:
+          - Geben Sie mir bitte …
+          - Machen Sie bitte … auf / zu.
+          - Bringen Sie mir bitte …
+          - Können Sie mir bitte … geben?
+          - Ja, gern. / Hier, bitte. / Tut mir leid, …
+        checklist:
+          - I made a request for each card and used bitte
+          - A masculine object got den or einen
+          - I gave a response to each request
+          - At least one response was a polite no with a reason
+        sample: "Geben Sie mir bitte den Stift. Ja, gern, hier bitte. Machen Sie bitte das Fenster zu. Ja, natürlich. Bringen Sie mir bitte ein Glas Wasser. Tut mir leid, ich habe kein Wasser. Können Sie mir bitte das Buch geben? Ja, hier bitte."

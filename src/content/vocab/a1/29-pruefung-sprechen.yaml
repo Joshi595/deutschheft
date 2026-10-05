@@ -1,0 +1,112 @@
+lesson: a1.29
+items:
+  - id: sich-vorstellen
+    de: sich vorstellen
+    en: to introduce oneself
+    pos: verb
+    example: Stellen Sie sich bitte vor.
+    exampleEn: Please introduce yourself.
+  - id: alter
+    de: Alter
+    en: age
+    pos: noun
+    article: das
+    plural: "-"
+    example: "Alter: 28 Jahre."
+    exampleEn: "Age: 28."
+  - id: thema
+    de: Thema
+    en: topic
+    pos: noun
+    article: das
+    plural: Themen
+    example: Das Thema ist Essen und Trinken.
+    exampleEn: The topic is food and drink.
+  - id: karte
+    de: Karte
+    en: card
+    pos: noun
+    article: die
+    plural: Karten
+    example: Nehmen Sie bitte eine Karte.
+    exampleEn: Please take a card.
+  - id: bitte-noun
+    de: Bitte
+    en: request
+    pos: noun
+    article: die
+    plural: Bitten
+    example: Ich habe eine Bitte.
+    exampleEn: I have a request.
+  - id: benutzen
+    de: benutzen
+    en: to use
+    pos: verb
+    example: Kann ich Ihr Telefon benutzen?
+    exampleEn: Can I use your phone?
+  - id: glas
+    de: Glas
+    en: glass
+    pos: noun
+    article: das
+    plural: Gläser
+    example: Ein Glas Wasser, bitte.
+    exampleEn: A glass of water, please.
+  - id: telefon
+    de: Telefon
+    en: telephone
+    pos: noun
+    article: das
+    plural: Telefone
+    example: Das Telefon ist kaputt.
+    exampleEn: The phone is broken.
+  - id: ich-verstehe-nicht
+    de: Ich verstehe nicht.
+    en: I do not understand.
+    pos: phrase
+    example: Entschuldigung, ich verstehe nicht.
+    exampleEn: Sorry, I do not understand.
+  - id: noch-einmal
+    de: noch einmal
+    en: once more, again
+    pos: phrase
+    example: Noch einmal, bitte.
+    exampleEn: Once more, please.
+  - id: wie-heisst-das
+    de: Wie heißt das auf Deutsch?
+    en: What is that called in German?
+    pos: phrase
+  - id: wie-oft
+    de: wie oft
+    en: how often
+    pos: phrase
+    example: Wie oft gehen Sie ins Kino?
+    exampleEn: How often do you go to the cinema?
+  - id: lieblingsessen
+    de: Lieblingsessen
+    en: favourite food
+    pos: noun
+    article: das
+    plural: "-"
+    example: Mein Lieblingsessen ist Pizza.
+    exampleEn: My favourite food is pizza.
+  - id: zum-fruehstueck
+    de: zum Frühstück
+    en: for breakfast
+    pos: phrase
+    example: Was essen Sie zum Frühstück?
+    exampleEn: What do you have for breakfast?
+  - id: pruefung
+    de: Prüfung
+    en: exam
+    pos: noun
+    article: die
+    plural: Prüfungen
+    example: Die Prüfung beginnt um neun Uhr.
+    exampleEn: The exam begins at nine o'clock.
+  - id: viel-erfolg
+    de: Viel Erfolg!
+    en: Good luck! (literally much success)
+    pos: phrase
+    example: Viel Erfolg bei der Prüfung!
+    exampleEn: Good luck in the exam!

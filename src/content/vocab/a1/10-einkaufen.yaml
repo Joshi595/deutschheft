@@ -1,0 +1,188 @@
+lesson: a1.10
+items:
+  - id: einkaufen
+    de: einkaufen
+    en: to shop, to go shopping
+    pos: verb
+    example: Ich kaufe heute ein.
+    exampleEn: I am going shopping today.
+  - id: supermarkt
+    de: Supermarkt
+    en: supermarket
+    pos: noun
+    article: der
+    plural: Supermärkte
+    example: Der Supermarkt ist bis 20 Uhr geöffnet.
+    exampleEn: The supermarket is open until 8 pm.
+  - id: baeckerei
+    de: Bäckerei
+    en: bakery
+    pos: noun
+    article: die
+    plural: Bäckereien
+    example: Ich kaufe Brot in der Bäckerei.
+    exampleEn: I buy bread at the bakery.
+  - id: metzgerei
+    de: Metzgerei
+    en: butcher's
+    pos: noun
+    article: die
+    plural: Metzgereien
+    example: Die Metzgerei ist heute geschlossen.
+    exampleEn: The butcher's is closed today.
+  - id: markt
+    de: Markt
+    en: market
+    pos: noun
+    article: der
+    plural: Märkte
+    example: Wir kaufen Obst auf dem Markt.
+    exampleEn: We buy fruit at the market.
+  - id: apotheke
+    de: Apotheke
+    en: pharmacy
+    pos: noun
+    article: die
+    plural: Apotheken
+    example: Wo ist die Apotheke?
+    exampleEn: Where is the pharmacy?
+  - id: geschaeft
+    de: Geschäft
+    en: shop
+    pos: noun
+    article: das
+    plural: Geschäfte
+    example: Das Geschäft ist klein.
+    exampleEn: The shop is small.
+  - id: kasse
+    de: Kasse
+    en: checkout, till
+    pos: noun
+    article: die
+    plural: Kassen
+    example: Bitte zahlen Sie an der Kasse.
+    exampleEn: Please pay at the checkout.
+  - id: kilo
+    de: Kilo
+    en: kilo
+    pos: noun
+    article: das
+    plural: Kilo
+    example: Ein Kilo Äpfel, bitte.
+    exampleEn: A kilo of apples, please.
+  - id: gramm
+    de: Gramm
+    en: gram
+    pos: noun
+    article: das
+    plural: Gramm
+    example: Zweihundert Gramm Käse, bitte.
+    exampleEn: 200 grams of cheese, please.
+  - id: liter
+    de: Liter
+    en: litre
+    pos: noun
+    article: der
+    plural: Liter
+    example: Ich brauche einen Liter Milch.
+    exampleEn: I need a litre of milk.
+  - id: flasche
+    de: Flasche
+    en: bottle
+    pos: noun
+    article: die
+    plural: Flaschen
+    example: Ich nehme eine Flasche Wasser.
+    exampleEn: I will take a bottle of water.
+  - id: packung
+    de: Packung
+    en: packet
+    pos: noun
+    article: die
+    plural: Packungen
+    example: Eine Packung Reis kostet zwei Euro.
+    exampleEn: A packet of rice costs two euros.
+  - id: dose
+    de: Dose
+    en: tin, can
+    pos: noun
+    article: die
+    plural: Dosen
+    example: Wir brauchen eine Dose Tomaten.
+    exampleEn: We need a tin of tomatoes.
+  - id: stueck
+    de: Stück
+    en: piece
+    pos: noun
+    article: das
+    plural: Stücke
+    example: Ein Stück Kuchen, bitte.
+    exampleEn: A piece of cake, please.
+  - id: tomate
+    de: Tomate
+    en: tomato
+    pos: noun
+    article: die
+    plural: Tomaten
+    example: Haben Sie Tomaten?
+    exampleEn: Do you have tomatoes?
+  - id: reis
+    de: Reis
+    en: rice
+    pos: noun
+    article: der
+    plural: "-"
+    example: Ich esse gern Reis.
+    exampleEn: I like eating rice.
+  - id: preis
+    de: Preis
+    en: price
+    pos: noun
+    article: der
+    plural: Preise
+    example: Der Preis ist gut.
+    exampleEn: The price is good.
+  - id: angebot
+    de: Angebot
+    en: offer, special offer
+    pos: noun
+    article: das
+    plural: Angebote
+    example: Die Äpfel sind heute im Angebot.
+    exampleEn: The apples are on offer today.
+  - id: billig
+    de: billig
+    en: cheap
+    pos: adjective
+    example: Das ist sehr billig.
+    exampleEn: That is very cheap.
+  - id: geoeffnet
+    de: geöffnet
+    en: open
+    pos: adjective
+    example: Die Bäckerei ist ab sieben Uhr geöffnet.
+    exampleEn: The bakery is open from seven o'clock.
+  - id: geschlossen
+    de: geschlossen
+    en: closed
+    pos: adjective
+    example: Am Sonntag ist der Supermarkt geschlossen.
+    exampleEn: The supermarket is closed on Sundays.
+  - id: ich-haette-gern
+    de: Ich hätte gern …
+    en: I would like …
+    pos: phrase
+    example: Ich hätte gern ein Kilo Äpfel.
+    exampleEn: I would like a kilo of apples.
+  - id: sonst-noch-etwas
+    de: Sonst noch etwas?
+    en: Anything else?
+    pos: phrase
+    example: Sonst noch etwas? Nein danke, das ist alles.
+    exampleEn: Anything else? No thanks, that is all.
+  - id: das-ist-alles
+    de: Das ist alles.
+    en: That is all.
+    pos: phrase
+    example: Nein danke, das ist alles.
+    exampleEn: No thank you, that is all.

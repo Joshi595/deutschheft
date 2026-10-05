@@ -1,0 +1,218 @@
+lesson: a1.15
+sets:
+  - title: Rooms and furniture
+    items:
+      - id: room1
+        type: matching
+        tags: [home]
+        prompt: Match each room with what you do there.
+        pairs:
+          - { left: die Küche, right: kochen }
+          - { left: das Schlafzimmer, right: schlafen }
+          - { left: das Bad, right: duschen }
+          - { left: das Wohnzimmer, right: fernsehen }
+      - id: room2
+        type: multiple-choice
+        tags: [home]
+        prompt: Where is the Kühlschrank?
+        options: [in der Küche, im Schlafzimmer, im Bad]
+        answer: in der Küche
+      - id: room3
+        type: multiple-choice
+        tags: [home]
+        prompt: Where is the Bett?
+        options: [im Schlafzimmer, in der Küche, im Flur]
+        answer: im Schlafzimmer
+      - id: room4
+        type: fill-blank
+        tags: [home, noun gender]
+        prompt: "___ Wohnzimmer"
+        answers: [das]
+        explanation: Every compound in -zimmer is neuter.
+      - id: room5
+        type: fill-blank
+        tags: [home, noun gender]
+        prompt: "___ Küche"
+        answers: [die]
+      - id: room6
+        type: fill-blank
+        tags: [home, noun gender]
+        prompt: "___ Balkon"
+        answers: [der]
+      - id: room7
+        type: matching
+        tags: [home]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: der Schrank, right: cupboard }
+          - { left: das Regal, right: shelves }
+          - { left: der Herd, right: cooker }
+          - { left: die Miete, right: rent }
+          - { left: der Flur, right: hall }
+
+  - title: es gibt and haben
+    instructions: Both take the accusative.
+    items:
+      - id: gibt1
+        type: fill-blank
+        tags: [es gibt, accusative]
+        prompt: "In der Küche gibt es ___ Kühlschrank. (ein)"
+        answers: [einen]
+      - id: gibt2
+        type: fill-blank
+        tags: [es gibt, accusative]
+        prompt: "Im Wohnzimmer gibt es ___ Sofa. (ein)"
+        answers: [ein]
+      - id: gibt3
+        type: fill-blank
+        tags: [es gibt, accusative]
+        prompt: "Die Wohnung hat ___ Balkon. (ein)"
+        answers: [einen]
+      - id: gibt4
+        type: fill-blank
+        tags: [es gibt, accusative]
+        prompt: "Es gibt ___ Garten. (kein)"
+        answers: [keinen]
+      - id: gibt5
+        type: fill-blank
+        tags: [es gibt, accusative]
+        prompt: "Wir haben ___ Waschmaschine. (kein)"
+        answers: [keine]
+      - id: gibt6
+        type: multiple-choice
+        tags: [es gibt]
+        prompt: Which sentence is correct?
+        options: [Es gibt zwei Schlafzimmer., Es geben zwei Schlafzimmer.]
+        answer: Es gibt zwei Schlafzimmer.
+
+  - title: Describing
+    items:
+      - id: adj1
+        type: matching
+        tags: [adjectives]
+        prompt: Match each adjective with its opposite.
+        pairs:
+          - { left: groß, right: klein }
+          - { left: hell, right: dunkel }
+          - { left: ruhig, right: laut }
+          - { left: billig, right: teuer }
+          - { left: neu, right: alt }
+      - id: adj2
+        type: multiple-choice
+        tags: [adjectives]
+        prompt: Die Wohnung kostet 2000 Euro. Sie ist ___ teuer für mich.
+        options: [zu, sehr gern, nicht]
+        answer: zu
+      - id: adj3
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Ich finde ___ Balkon zu klein. (der)"
+        answers: [den]
+      - id: adj4
+        type: multiple-choice
+        tags: [home]
+        prompt: Die Möbel ___ neu.
+        options: [sind, ist]
+        answer: sind
+        explanation: Möbel is a plural word.
+
+  - title: Read the adverts
+    instructions: As in the reading exam. Which advert fits?
+    items:
+      - id: ad1
+        type: multiple-choice
+        tags: [reading, adverts]
+        stimulus:
+          kind: text
+          label: Anzeige
+          text: |
+            2-Zi.-Wohnung, 55 qm, 2. OG, Balkon, ruhig.
+            Miete 520 € + NK. Ab sofort frei.
+            Tel. 0221 44 55 66
+        prompt: Wie viele Zimmer hat die Wohnung?
+        options: [zwei, fünf, fünfundfünfzig]
+        answer: zwei
+      - id: ad2
+        type: true-false
+        tags: [reading, adverts]
+        stimulus:
+          kind: text
+          label: Anzeige
+          text: |
+            2-Zi.-Wohnung, 55 qm, 2. OG, Balkon, ruhig.
+            Miete 520 € + NK. Ab sofort frei.
+            Tel. 0221 44 55 66
+        prompt: Die Wohnung ist im Erdgeschoss.
+        answer: false
+        explanation: "2. OG means the second floor."
+      - id: ad3
+        type: multiple-choice
+        tags: [reading, adverts]
+        stimulus:
+          kind: text
+          label: Anzeige
+          text: |
+            Möbliertes Zimmer für Studenten, 18 qm, im Zentrum.
+            Küche und Bad zusammen mit zwei Mitbewohnern.
+            350 € warm.
+        prompt: Sie suchen ein Zimmer mit Möbeln. Passt diese Anzeige?
+        options: ["Ja, das Zimmer ist möbliert.", "Nein, es gibt keine Möbel."]
+        answer: "Ja, das Zimmer ist möbliert."
+
+  - title: Listen to the description
+    stimulus:
+      kind: audio
+      label: Meine Wohnung
+      lines:
+        - text: "Meine Wohnung ist im dritten Stock. Sie hat zwei Zimmer, eine Küche und ein Bad. Das Wohnzimmer ist groß und hell. Die Küche ist klein. Es gibt einen Balkon, aber keinen Garten. Die Miete ist fünfhundertachtzig Euro."
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening, home]
+        prompt: Die Wohnung hat einen Garten.
+        answer: false
+      - id: listen2
+        type: multiple-choice
+        tags: [listening, home]
+        prompt: Wie ist das Wohnzimmer?
+        options: [groß und hell, klein und dunkel, klein und hell]
+        answer: groß und hell
+      - id: listen3
+        type: fill-blank
+        tags: [listening, numbers]
+        prompt: "Die Miete ist ___ Euro."
+        answers: ["580"]
+
+  - title: Say and write it
+    items:
+      - id: order1
+        type: word-order
+        tags: [home]
+        prompt: My flat has two rooms and a kitchen.
+        answer: Meine Wohnung hat zwei Zimmer und eine Küche.
+      - id: tr1
+        type: translation
+        tags: [es gibt]
+        prompt: There is no garden.
+        answers: [Es gibt keinen Garten.]
+      - id: tr2
+        type: translation
+        tags: [adjectives]
+        prompt: The flat is too expensive.
+        answers: [Die Wohnung ist zu teuer.]
+      - id: write1
+        type: writing-task
+        tags: [writing, home]
+        prompt: Describe where you live.
+        points:
+          - How many rooms there are
+          - What one room is like
+          - What there is, or what is missing
+          - What you think of your home
+        minWords: 25
+        phrases:
+          - Meine Wohnung hat … Zimmer.
+          - Das … ist groß / klein / hell.
+          - Es gibt einen / eine / ein … Es gibt keinen …
+          - Ich finde meine Wohnung …
+        sample: "Meine Wohnung hat zwei Zimmer, eine Küche und ein Bad. Das Wohnzimmer ist groß und hell. Es gibt einen Balkon, aber keinen Garten. Ich finde meine Wohnung sehr gemütlich."

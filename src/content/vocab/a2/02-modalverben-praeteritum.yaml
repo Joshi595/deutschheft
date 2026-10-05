@@ -1,0 +1,118 @@
+lesson: a2.02
+items:
+  - id: konnte
+    de: konnte
+    en: could, was able to
+    pos: verb
+    example: Ich konnte gestern nicht kommen.
+    exampleEn: I could not come yesterday.
+  - id: musste
+    de: musste
+    en: had to
+    pos: verb
+    example: Wir mussten lange warten.
+    exampleEn: We had to wait a long time.
+  - id: wollte
+    de: wollte
+    en: wanted to
+    pos: verb
+    example: Ich wollte dich anrufen.
+    exampleEn: I wanted to call you.
+  - id: durfte
+    de: durfte
+    en: was allowed to
+    pos: verb
+    example: Als Kind durfte ich nicht lange fernsehen.
+    exampleEn: As a child I was not allowed to watch TV for long.
+  - id: sollte
+    de: sollte
+    en: was supposed to; should
+    pos: verb
+    example: Ich sollte um neun Uhr da sein.
+    exampleEn: I was supposed to be there at nine.
+  - id: mochte
+    de: mochte
+    en: liked
+    pos: verb
+    example: Als Kind mochte ich keinen Fisch.
+    exampleEn: As a child I did not like fish.
+  - id: als-kind
+    de: als Kind
+    en: as a child
+    pos: phrase
+    example: Als Kind wollte ich Pilot werden.
+    exampleEn: As a child I wanted to become a pilot.
+  - id: frueher
+    de: früher
+    en: in the past, formerly
+    pos: adverb
+    example: Früher konnte ich gut schwimmen.
+    exampleEn: I used to be able to swim well.
+  - id: damals
+    de: damals
+    en: back then
+    pos: adverb
+    example: Damals hatten wir kein Auto.
+    exampleEn: Back then we had no car.
+  - id: kindheit
+    de: Kindheit
+    en: childhood
+    pos: noun
+    article: die
+    plural: "-"
+    example: Meine Kindheit war schön.
+    exampleEn: My childhood was happy.
+  - id: jugend
+    de: Jugend
+    en: youth
+    pos: noun
+    article: die
+    plural: "-"
+    example: In meiner Jugend habe ich viel Sport gemacht.
+    exampleEn: In my youth I did a lot of sport.
+  - id: erlauben
+    de: erlauben
+    en: to allow
+    pos: verb
+    example: Meine Eltern haben das nicht erlaubt.
+    exampleEn: My parents did not allow that.
+  - id: verbieten
+    de: verbieten, hat verboten
+    en: to forbid
+    pos: verb
+    example: Der Lehrer hat Handys verboten.
+    exampleEn: The teacher has banned mobile phones.
+  - id: bestellen
+    de: bestellen
+    en: to order
+    pos: verb
+    example: Ich habe eine Pizza bestellt.
+    exampleEn: I ordered a pizza.
+  - id: entschuldigung-noun
+    de: Entschuldigung
+    en: excuse; apology
+    pos: noun
+    article: die
+    plural: Entschuldigungen
+    example: Das ist keine Entschuldigung.
+    exampleEn: That is no excuse.
+  - id: nicht-einmal
+    de: nicht einmal
+    en: not even
+    pos: phrase
+    example: Ich konnte nicht einmal kochen.
+    exampleEn: I could not even cook.
+  - id: pilot
+    de: Pilot
+    en: pilot
+    pos: noun
+    article: der
+    plural: Piloten
+    example: Er wollte Pilot werden.
+    exampleEn: He wanted to become a pilot.
+  - id: allein
+    de: allein
+    en: alone
+    pos: adjective
+    example: Ich durfte nicht allein gehen.
+    exampleEn: I was not allowed to go alone.

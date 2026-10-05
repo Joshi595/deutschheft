@@ -1,0 +1,142 @@
+lesson: a1.20
+items:
+  - id: gegangen
+    de: gehen, ist gegangen
+    en: to go, went
+    pos: verb
+    example: Wir sind ins Kino gegangen.
+    exampleEn: We went to the cinema.
+  - id: gefahren
+    de: fahren, ist gefahren
+    en: to go (by vehicle), went
+    pos: verb
+    example: Ich bin nach Berlin gefahren.
+    exampleEn: I went to Berlin.
+  - id: gekommen
+    de: kommen, ist gekommen
+    en: to come, came
+    pos: verb
+    example: Er ist spät gekommen.
+    exampleEn: He came late.
+  - id: geflogen
+    de: fliegen, ist geflogen
+    en: to fly, flew
+    pos: verb
+    example: Wir sind nach Spanien geflogen.
+    exampleEn: We flew to Spain.
+  - id: gelaufen
+    de: laufen, ist gelaufen
+    en: to run or walk, ran
+    pos: verb
+    example: Ich bin zum Bahnhof gelaufen.
+    exampleEn: I walked to the station.
+  - id: gereist
+    de: reisen, ist gereist
+    en: to travel, travelled
+    pos: verb
+    example: Sie ist viel gereist.
+    exampleEn: She has travelled a lot.
+  - id: angekommen
+    de: ankommen, ist angekommen
+    en: to arrive, arrived
+    pos: verb
+    example: Der Zug ist pünktlich angekommen.
+    exampleEn: The train arrived on time.
+  - id: aufgestanden
+    de: aufstehen, ist aufgestanden
+    en: to get up, got up
+    pos: verb
+    example: Ich bin um sieben Uhr aufgestanden.
+    exampleEn: I got up at seven o'clock.
+  - id: eingeschlafen
+    de: einschlafen, ist eingeschlafen
+    en: to fall asleep, fell asleep
+    pos: verb
+    example: Das Kind ist sofort eingeschlafen.
+    exampleEn: The child fell asleep straight away.
+  - id: geblieben
+    de: bleiben, ist geblieben
+    en: to stay, stayed
+    pos: verb
+    example: Ich bin zu Hause geblieben.
+    exampleEn: I stayed at home.
+  - id: umgezogen
+    de: umziehen, ist umgezogen
+    en: to move house, moved
+    pos: verb
+    example: Letztes Jahr sind wir umgezogen.
+    exampleEn: Last year we moved house.
+  - id: passiert
+    de: passieren, ist passiert
+    en: to happen, happened
+    pos: verb
+    example: Was ist passiert?
+    exampleEn: What happened?
+  - id: war
+    de: war
+    en: was
+    pos: verb
+    example: Das Wetter war schön.
+    exampleEn: The weather was nice.
+  - id: hatte
+    de: hatte
+    en: had
+    pos: verb
+    example: Ich hatte keine Zeit.
+    exampleEn: I had no time.
+  - id: zuerst
+    de: zuerst
+    en: first, at first
+    pos: adverb
+    example: Zuerst habe ich gefrühstückt.
+    exampleEn: First I had breakfast.
+  - id: dann
+    de: dann
+    en: then
+    pos: adverb
+    example: Dann bin ich zur Arbeit gefahren.
+    exampleEn: Then I went to work.
+  - id: danach
+    de: danach
+    en: after that
+    pos: adverb
+    example: Danach haben wir Kaffee getrunken.
+    exampleEn: After that we had coffee.
+  - id: spaeter
+    de: später
+    en: later
+    pos: adverb
+    example: Später sind wir ins Kino gegangen.
+    exampleEn: Later we went to the cinema.
+  - id: frueh
+    de: früh
+    en: early
+    pos: adjective
+    example: Ich bin früh aufgestanden.
+    exampleEn: I got up early.
+  - id: spaet
+    de: spät
+    en: late
+    pos: adjective
+    example: Er ist spät nach Hause gekommen.
+    exampleEn: He came home late.
+  - id: zu-hause
+    de: zu Hause
+    en: at home
+    pos: phrase
+    example: Ich bin zu Hause geblieben.
+    exampleEn: I stayed at home.
+  - id: spass
+    de: Spaß
+    en: fun
+    pos: noun
+    article: der
+    plural: "-"
+    example: Wir hatten viel Spaß.
+    exampleEn: We had a lot of fun.
+  - id: wieder
+    de: wieder
+    en: again
+    pos: adverb
+    example: Am Abend bin ich wieder nach Hause gefahren.
+    exampleEn: In the evening I went home again.

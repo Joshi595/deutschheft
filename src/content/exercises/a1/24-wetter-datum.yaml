@@ -1,0 +1,231 @@
+lesson: a1.24
+sets:
+  - title: The weather
+    items:
+      - id: weather1
+        type: matching
+        tags: [weather]
+        prompt: Match each sentence with its meaning.
+        pairs:
+          - { left: Es regnet., right: It is raining. }
+          - { left: Es schneit., right: It is snowing. }
+          - { left: Die Sonne scheint., right: The sun is shining. }
+          - { left: Es ist bewölkt., right: It is cloudy. }
+          - { left: Es ist windig., right: It is windy. }
+      - id: weather2
+        type: multiple-choice
+        tags: [weather]
+        prompt: Es sind 35 Grad. Es ist ___.
+        options: [heiß, kalt, kühl]
+        answer: heiß
+      - id: weather3
+        type: multiple-choice
+        tags: [weather]
+        prompt: Which is correct?
+        options: [Es regnet., Es ist regnet., Es regnen.]
+        answer: Es regnet.
+      - id: weather4
+        type: multiple-choice
+        tags: [weather]
+        prompt: Im Winter ___ es oft.
+        options: [schneit, scheint, sonnig]
+        answer: schneit
+
+  - title: Months and seasons
+    items:
+      - id: month1
+        type: multiple-choice
+        tags: [months]
+        prompt: Welcher Monat kommt nach März?
+        options: [April, Mai, Februar]
+        answer: April
+      - id: month2
+        type: multiple-choice
+        tags: [seasons]
+        prompt: Juni, Juli und August sind die Monate im …
+        options: [Sommer, Winter, Herbst]
+        answer: Sommer
+      - id: month3
+        type: matching
+        tags: [seasons]
+        prompt: Match each season with its meaning.
+        pairs:
+          - { left: der Frühling, right: spring }
+          - { left: der Sommer, right: summer }
+          - { left: der Herbst, right: autumn }
+          - { left: der Winter, right: winter }
+
+  - title: um, am or im?
+    items:
+      - id: prep1
+        type: fill-blank
+        tags: [time prepositions]
+        prompt: "___ Sommer ist es warm."
+        answers: [Im]
+      - id: prep2
+        type: fill-blank
+        tags: [time prepositions]
+        prompt: "___ Januar habe ich Geburtstag."
+        answers: [Im]
+      - id: prep3
+        type: fill-blank
+        tags: [time prepositions]
+        prompt: "Der Kurs beginnt ___ ersten September."
+        answers: [am]
+      - id: prep4
+        type: fill-blank
+        tags: [time prepositions]
+        prompt: "Der Film fängt ___ acht Uhr an."
+        answers: [um]
+      - id: prep5
+        type: multiple-choice
+        tags: [time prepositions]
+        prompt: Ich bin ___ 1995 geboren.
+        options: [(no preposition), in, im]
+        answer: (no preposition)
+        explanation: German puts nothing before a year.
+
+  - title: Ordinal numbers
+    items:
+      - id: ord1
+        type: fill-blank
+        tags: [ordinals]
+        prompt: "1. = der ___"
+        answers: [erste]
+      - id: ord2
+        type: fill-blank
+        tags: [ordinals]
+        prompt: "3. = der ___"
+        answers: [dritte]
+      - id: ord3
+        type: fill-blank
+        tags: [ordinals]
+        prompt: "7. = der ___"
+        answers: [siebte]
+      - id: ord4
+        type: fill-blank
+        tags: [ordinals]
+        prompt: "10. = der ___"
+        answers: [zehnte]
+      - id: ord5
+        type: fill-blank
+        tags: [ordinals]
+        prompt: "20. = der ___"
+        answers: [zwanzigste]
+        hint: From 20 upwards the ending is -ste.
+      - id: ord6
+        type: multiple-choice
+        tags: [ordinals, dates]
+        prompt: Heute ist der ___ Mai.
+        options: [dritte, dritten, drei]
+        answer: dritte
+      - id: ord7
+        type: multiple-choice
+        tags: [ordinals, dates]
+        prompt: Ich habe am ___ Mai Geburtstag.
+        options: [fünften, fünfte, fünf]
+        answer: fünften
+        explanation: After am the ordinal ends in -en.
+
+  - title: Listen for dates and weather
+    instructions: As in the listening exam.
+    items:
+      - id: hear1
+        type: multiple-choice
+        tags: [listening, weather]
+        stimulus:
+          kind: audio
+          label: Wetterbericht
+          lines:
+            - text: "Und nun das Wetter für morgen. Am Vormittag scheint die Sonne. Am Nachmittag regnet es. Die Temperaturen liegen bei fünfzehn Grad."
+        prompt: Wie ist das Wetter morgen Nachmittag?
+        options: [Es regnet., Die Sonne scheint., Es schneit.]
+        answer: Es regnet.
+      - id: hear2
+        type: fill-blank
+        tags: [listening, numbers]
+        stimulus:
+          kind: audio
+          label: Wetterbericht
+          lines:
+            - text: "Und nun das Wetter für morgen. Am Vormittag scheint die Sonne. Am Nachmittag regnet es. Die Temperaturen liegen bei fünfzehn Grad."
+        prompt: "Es sind ___ Grad."
+        answers: ["15"]
+      - id: hear3
+        type: multiple-choice
+        tags: [listening, dates]
+        stimulus:
+          kind: audio
+          label: Am Telefon
+          lines:
+            - speaker: Frau Lang
+              text: "Guten Tag, Herr Novak. Ihr Deutschkurs beginnt am zwölften Oktober um neun Uhr."
+            - speaker: Herr Novak
+              text: "Am zwölften Oktober. Vielen Dank!"
+        prompt: Wann beginnt der Kurs?
+        options: ["am 12.10.", "am 20.10.", "am 12.08."]
+        answer: "am 12.10."
+      - id: hear4
+        type: multiple-choice
+        tags: [listening, dates]
+        stimulus:
+          kind: audio
+          label: Gespräch
+          lines:
+            - speaker: Anna
+              text: "Wann hast du Geburtstag, Tom?"
+            - speaker: Tom
+              text: "Am einunddreißigsten März. Und du?"
+            - speaker: Anna
+              text: "Ich habe im Juli Geburtstag, am siebten Juli."
+        prompt: Wann hat Anna Geburtstag?
+        options: ["am 7. Juli", "am 31. März", "am 17. Juli"]
+        answer: "am 7. Juli"
+
+  - title: Dates on a form
+    instructions: Write the date as on a German form, day.month.year.
+    items:
+      - id: form1
+        type: form
+        tags: [writing, forms, dates]
+        situation: "Elena Petrova ist am siebten April neunzehnhundertneunzig in Sofia geboren. Sie wohnt seit dem ersten Juni zweitausendzwanzig in Deutschland."
+        fields:
+          - { label: Familienname, answers: [Petrova] }
+          - { label: Geburtsdatum, answers: ["07.04.1990", "7.4.1990"] }
+          - { label: Geburtsort, answers: [Sofia] }
+          - { label: In Deutschland seit, answers: ["01.06.2020", "1.6.2020"] }
+
+  - title: Say and write it
+    items:
+      - id: order1
+        type: word-order
+        tags: [dates]
+        prompt: My birthday is on the fifth of May.
+        answer: Ich habe am fünften Mai Geburtstag.
+      - id: tr1
+        type: translation
+        tags: [weather]
+        prompt: What is the weather like?
+        answers:
+          - Wie ist das Wetter?
+      - id: tr2
+        type: translation
+        tags: [dates]
+        prompt: Today is the first of May.
+        answers:
+          - Heute ist der erste Mai.
+          - Heute ist der 1. Mai.
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, dates]
+        prompt: Say when your birthday is, in which year you were born, and what the weather is usually like then.
+        cards: [Geburtstag?, Jahr?, Wetter?]
+        phrases:
+          - Ich habe am … Geburtstag.
+          - Ich bin … geboren.
+          - Im … ist es meistens …
+        checklist:
+          - I gave the date with am and an ordinal ending in -en
+          - I said the year without a preposition
+          - I described the weather with es
+        sample: "Ich habe am fünften Mai Geburtstag. Ich bin neunzehnhundertfünfundneunzig geboren. Im Mai ist es meistens warm und die Sonne scheint."

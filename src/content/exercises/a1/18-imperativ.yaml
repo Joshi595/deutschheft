@@ -1,0 +1,233 @@
+lesson: a1.18
+sets:
+  - title: The Sie form
+    instructions: Write the request to someone you address as Sie.
+    items:
+      - id: sie1
+        type: translation
+        tags: [imperative]
+        prompt: Please come! (formal)
+        answers:
+          - Kommen Sie bitte!
+          - Bitte kommen Sie!
+      - id: sie2
+        type: word-order
+        tags: [imperative]
+        prompt: Please speak slowly.
+        answer: Sprechen Sie bitte langsam.
+      - id: sie3
+        type: word-order
+        tags: [imperative]
+        prompt: Please wait a moment.
+        answer: Warten Sie bitte einen Moment.
+      - id: sie4
+        type: word-order
+        tags: [imperative, separable verbs]
+        prompt: Please fill in the form.
+        answer: Füllen Sie bitte das Formular aus.
+
+  - title: The du form
+    instructions: Write the imperative for du. One word.
+    items:
+      - id: du1
+        type: fill-blank
+        tags: [imperative]
+        prompt: "___ bitte her! (kommen)"
+        answers: [Komm]
+      - id: du2
+        type: fill-blank
+        tags: [imperative]
+        prompt: "___ bitte die Tür zu. (machen)"
+        answers: [Mach]
+      - id: du3
+        type: fill-blank
+        tags: [imperative]
+        prompt: "___ bitte einen Moment. (warten)"
+        answers: [Warte]
+        explanation: A stem ending in -t keeps an -e.
+      - id: du4
+        type: fill-blank
+        tags: [imperative, stem-changing verbs]
+        prompt: "___ den Bus! (nehmen)"
+        answers: [Nimm]
+      - id: du5
+        type: fill-blank
+        tags: [imperative, stem-changing verbs]
+        prompt: "___ mir bitte das Buch. (geben)"
+        answers: [Gib]
+      - id: du6
+        type: fill-blank
+        tags: [imperative, stem-changing verbs]
+        prompt: "___ langsam! (fahren)"
+        answers: [Fahr]
+        explanation: Verbs with a → ä lose the umlaut in the imperative.
+      - id: du7
+        type: fill-blank
+        tags: [imperative, stem-changing verbs]
+        prompt: "___ bitte den Text. (lesen)"
+        answers: [Lies]
+      - id: du8
+        type: fill-blank
+        tags: [imperative]
+        prompt: "___ bitte ruhig! (sein)"
+        answers: [Sei]
+
+  - title: Which form?
+    items:
+      - id: form1
+        type: multiple-choice
+        tags: [imperative]
+        prompt: You speak to your friend Tom.
+        options: [Komm bitte!, Kommen Sie bitte!, Kommt bitte!]
+        answer: Komm bitte!
+      - id: form2
+        type: multiple-choice
+        tags: [imperative]
+        prompt: You speak to your children, Lena and Max.
+        options: [Kommt bitte!, Komm bitte!, Kommen Sie bitte!]
+        answer: Kommt bitte!
+      - id: form3
+        type: multiple-choice
+        tags: [imperative]
+        prompt: You speak to a customer in a shop.
+        options: [Kommen Sie bitte!, Komm bitte!, Kommt bitte!]
+        answer: Kommen Sie bitte!
+      - id: form4
+        type: multiple-choice
+        tags: [imperative]
+        prompt: Which is correct?
+        options: [Nimm den Bus!, Nehm den Bus!, Nimmst den Bus!]
+        answer: Nimm den Bus!
+      - id: form5
+        type: multiple-choice
+        tags: [imperative, separable verbs]
+        prompt: Which is correct?
+        options:
+          - Machen Sie bitte das Fenster auf.
+          - Aufmachen Sie bitte das Fenster.
+          - Machen Sie auf bitte das Fenster.
+        answer: Machen Sie bitte das Fenster auf.
+
+  - title: Signs and instructions
+    items:
+      - id: sign1
+        type: multiple-choice
+        tags: [reading, signs]
+        stimulus:
+          kind: text
+          label: Schild
+          text: Bitte nicht rauchen.
+        prompt: Was bedeutet das Schild?
+        options:
+          - Man darf hier nicht rauchen.
+          - Man muss hier rauchen.
+          - Man kann hier Zigaretten kaufen.
+        answer: Man darf hier nicht rauchen.
+      - id: sign2
+        type: multiple-choice
+        tags: [reading, signs]
+        stimulus:
+          kind: text
+          label: Schild
+          text: |
+            Anmeldung
+            Bitte ziehen Sie eine Nummer und warten Sie.
+        prompt: Was müssen Sie machen?
+        options:
+          - Eine Nummer nehmen und warten.
+          - Sofort zur Anmeldung gehen.
+          - Ein Formular unterschreiben.
+        answer: Eine Nummer nehmen und warten.
+      - id: sign3
+        type: true-false
+        tags: [reading, signs]
+        stimulus:
+          kind: text
+          label: Schild
+          text: |
+            Achtung!
+            Tür bitte immer schließen.
+        prompt: Die Tür soll offen bleiben.
+        answer: false
+
+  - title: Request and answer
+    items:
+      - id: ask1
+        type: matching
+        tags: [requests]
+        prompt: Match each request with a fitting answer.
+        pairs:
+          - { left: Geben Sie mir bitte den Stift., right: "Hier, bitte." }
+          - { left: Können Sie das bitte wiederholen?, right: "Ja, natürlich. Noch einmal …" }
+          - { left: Haben Sie einen Ausweis?, right: "Ja, einen Moment." }
+          - { left: Machen Sie bitte das Fenster zu., right: "Ja, gern. Es ist kalt." }
+      - id: ask2
+        type: multiple-choice
+        tags: [requests]
+        prompt: "Someone asks: Können Sie mir bitte helfen? You are happy to. You say:"
+        options: ["Ja, gern.", "Nein, danke.", "Bitte nicht."]
+        answer: "Ja, gern."
+
+  - title: At the office
+    stimulus:
+      kind: audio
+      label: Im Büro
+      lines:
+        - speaker: Angestellte
+          text: "Guten Tag. Nehmen Sie bitte Platz. Füllen Sie bitte das Formular aus und unterschreiben Sie hier unten."
+        - speaker: Herr Kaya
+          text: "Entschuldigung, können Sie bitte langsam sprechen?"
+        - speaker: Angestellte
+          text: "Natürlich. Füllen Sie bitte das Formular aus. Und zeigen Sie mir bitte Ihren Ausweis."
+    items:
+      - id: office1
+        type: true-false
+        tags: [listening, requests]
+        prompt: Herr Kaya soll ein Formular ausfüllen.
+        answer: true
+      - id: office2
+        type: multiple-choice
+        tags: [listening, requests]
+        prompt: Was sagt Herr Kaya?
+        options:
+          - Die Frau soll langsam sprechen.
+          - Er hat keinen Ausweis.
+          - Er möchte gehen.
+        answer: Die Frau soll langsam sprechen.
+      - id: office3
+        type: true-false
+        tags: [listening, requests]
+        prompt: Die Angestellte möchte den Ausweis sehen.
+        answer: true
+
+  - title: Now you ask
+    items:
+      - id: tr1
+        type: translation
+        tags: [imperative]
+        prompt: Please give me the book. (formal)
+        answers:
+          - Geben Sie mir bitte das Buch.
+          - Bitte geben Sie mir das Buch.
+      - id: tr2
+        type: translation
+        tags: [imperative]
+        prompt: Do not forget the book! (informal, one person)
+        answers:
+          - Vergiss das Buch nicht!
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, requests]
+        prompt: "Speaking exam, part three. For each card make a polite request, as you would to the other candidate."
+        cards: [Stift, Tür, Wasser, Buch]
+        phrases:
+          - Geben Sie mir bitte …
+          - Machen Sie bitte … auf / zu.
+          - Können Sie mir bitte … geben?
+          - Bringen Sie mir bitte …
+        checklist:
+          - I made one request for each card
+          - I used bitte every time
+          - A masculine object got den or einen
+          - A separable verb had its prefix at the end
+        sample: "Geben Sie mir bitte den Stift. Machen Sie bitte die Tür zu. Bringen Sie mir bitte ein Glas Wasser. Können Sie mir bitte das Buch geben?"

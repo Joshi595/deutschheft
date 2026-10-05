@@ -1,0 +1,206 @@
+lesson: a1.21
+items:
+  - id: kopf
+    de: Kopf
+    en: head
+    pos: noun
+    article: der
+    plural: Köpfe
+    example: Mein Kopf tut weh.
+    exampleEn: My head hurts.
+  - id: hals
+    de: Hals
+    en: neck, throat
+    pos: noun
+    article: der
+    plural: Hälse
+    example: Ich habe Halsschmerzen.
+    exampleEn: I have a sore throat.
+  - id: bauch
+    de: Bauch
+    en: stomach, belly
+    pos: noun
+    article: der
+    plural: Bäuche
+    example: Mein Bauch tut weh.
+    exampleEn: My stomach hurts.
+  - id: ruecken
+    de: Rücken
+    en: back
+    pos: noun
+    article: der
+    plural: Rücken
+    example: Er hat Rückenschmerzen.
+    exampleEn: He has backache.
+  - id: arm
+    de: Arm
+    en: arm
+    pos: noun
+    article: der
+    plural: Arme
+    example: Mein Arm tut weh.
+    exampleEn: My arm hurts.
+  - id: bein
+    de: Bein
+    en: leg
+    pos: noun
+    article: das
+    plural: Beine
+    example: Mein Bein tut weh.
+    exampleEn: My leg hurts.
+  - id: fuss
+    de: Fuß
+    en: foot
+    pos: noun
+    article: der
+    plural: Füße
+    example: Meine Füße tun weh.
+    exampleEn: My feet hurt.
+  - id: hand
+    de: Hand
+    en: hand
+    pos: noun
+    article: die
+    plural: Hände
+    example: Gib mir deine Hand.
+    exampleEn: Give me your hand.
+  - id: auge
+    de: Auge
+    en: eye
+    pos: noun
+    article: das
+    plural: Augen
+    example: Meine Augen tun weh.
+    exampleEn: My eyes hurt.
+  - id: ohr
+    de: Ohr
+    en: ear
+    pos: noun
+    article: das
+    plural: Ohren
+    example: Das Kind hat Ohrenschmerzen.
+    exampleEn: The child has earache.
+  - id: zahn
+    de: Zahn
+    en: tooth
+    pos: noun
+    article: der
+    plural: Zähne
+    example: Ich habe Zahnschmerzen.
+    exampleEn: I have toothache.
+  - id: schmerzen
+    de: Schmerzen
+    en: pain, pains
+    pos: noun
+    article: die
+    plural: Schmerzen
+    example: Haben Sie Schmerzen?
+    exampleEn: Are you in pain?
+  - id: wehtun
+    de: wehtun
+    en: to hurt
+    pos: verb
+    example: Wo tut es weh?
+    exampleEn: Where does it hurt?
+  - id: krank
+    de: krank
+    en: ill, sick
+    pos: adjective
+    example: Ich bin krank.
+    exampleEn: I am ill.
+  - id: gesund
+    de: gesund
+    en: healthy, well
+    pos: adjective
+    example: Obst ist gesund.
+    exampleEn: Fruit is healthy.
+  - id: erkaeltet
+    de: erkältet
+    en: having a cold
+    pos: adjective
+    example: Ich bin erkältet.
+    exampleEn: I have a cold.
+  - id: fieber
+    de: Fieber
+    en: fever, temperature
+    pos: noun
+    article: das
+    plural: "-"
+    example: Das Kind hat Fieber.
+    exampleEn: The child has a temperature.
+  - id: husten
+    de: Husten
+    en: cough
+    pos: noun
+    article: der
+    plural: "-"
+    example: Ich habe Husten.
+    exampleEn: I have a cough.
+  - id: arzt
+    de: Arzt
+    en: doctor (male)
+    pos: noun
+    article: der
+    plural: Ärzte
+    example: Ich gehe zum Arzt.
+    exampleEn: I am going to the doctor.
+  - id: aerztin
+    de: Ärztin
+    en: doctor (female)
+    pos: noun
+    article: die
+    plural: Ärztinnen
+    example: Die Ärztin untersucht mich.
+    exampleEn: The doctor examines me.
+  - id: termin
+    de: Termin
+    en: appointment
+    pos: noun
+    article: der
+    plural: Termine
+    example: Ich brauche einen Termin.
+    exampleEn: I need an appointment.
+  - id: praxis
+    de: Praxis
+    en: surgery, practice
+    pos: noun
+    article: die
+    plural: Praxen
+    example: Die Praxis ist am Freitag geschlossen.
+    exampleEn: The surgery is closed on Fridays.
+  - id: medikament
+    de: Medikament
+    en: medicine, medication
+    pos: noun
+    article: das
+    plural: Medikamente
+    example: Nehmen Sie das Medikament dreimal am Tag.
+    exampleEn: Take the medicine three times a day.
+  - id: tablette
+    de: Tablette
+    en: tablet
+    pos: noun
+    article: die
+    plural: Tabletten
+    example: Ich nehme eine Tablette.
+    exampleEn: I am taking a tablet.
+  - id: rezept
+    de: Rezept
+    en: prescription; recipe
+    pos: noun
+    article: das
+    plural: Rezepte
+    example: Hier ist Ihr Rezept.
+    exampleEn: Here is your prescription.
+  - id: gute-besserung
+    de: Gute Besserung!
+    en: Get well soon!
+    pos: phrase
+    example: Du bist krank? Gute Besserung!
+    exampleEn: You are ill? Get well soon!
+  - id: seit
+    de: seit
+    en: since, for (time)
+    pos: preposition
+    example: Ich bin seit drei Tagen krank.
+    exampleEn: I have been ill for three days.

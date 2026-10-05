@@ -1,0 +1,126 @@
+lesson: a1.08
+items:
+  - id: wann
+    de: wann
+    en: when
+    pos: adverb
+    example: Wann kommt der Bus?
+    exampleEn: When does the bus come?
+  - id: warum
+    de: warum
+    en: why
+    pos: adverb
+    example: Warum lernst du Deutsch?
+    exampleEn: Why are you learning German?
+  - id: wohin
+    de: wohin
+    en: where to
+    pos: adverb
+    example: Wohin gehst du?
+    exampleEn: Where are you going?
+  - id: wie-viele
+    de: wie viele
+    en: how many
+    pos: phrase
+    example: Wie viele Kinder haben Sie?
+    exampleEn: How many children do you have?
+  - id: wie-lange
+    de: wie lange
+    en: how long
+    pos: phrase
+    example: Wie lange lernst du schon Deutsch?
+    exampleEn: How long have you been learning German?
+  - id: welche
+    de: welcher, welche, welches
+    en: which
+    pos: other
+    example: Welche Sprachen sprechen Sie?
+    exampleEn: Which languages do you speak?
+  - id: doch
+    de: doch
+    en: yes (contradicting a negative question)
+    pos: other
+    example: Hast du keine Zeit? Doch!
+    exampleEn: Don't you have time? Yes, I do!
+  - id: und
+    de: und
+    en: and
+    pos: conjunction
+    example: Er lernt Deutsch und sie lernt Englisch.
+    exampleEn: He is learning German and she is learning English.
+  - id: aber
+    de: aber
+    en: but
+    pos: conjunction
+    example: Ich komme aus Indien, aber ich wohne in Köln.
+    exampleEn: I come from India, but I live in Cologne.
+  - id: oder
+    de: oder
+    en: or
+    pos: conjunction
+    example: Kaffee oder Tee?
+    exampleEn: Coffee or tea?
+  - id: frage-stellen
+    de: eine Frage stellen
+    en: to ask a question
+    pos: phrase
+    example: Darf ich eine Frage stellen?
+    exampleEn: May I ask a question?
+  - id: verstehen
+    de: verstehen
+    en: to understand
+    pos: verb
+    example: Ich verstehe das nicht.
+    exampleEn: I do not understand that.
+  - id: wiederholen
+    de: wiederholen
+    en: to repeat
+    pos: verb
+    example: Können Sie das bitte wiederholen?
+    exampleEn: Can you repeat that, please?
+  - id: sagen
+    de: sagen
+    en: to say
+    pos: verb
+    example: Wie sagt man das auf Deutsch?
+    exampleEn: How do you say that in German?
+  - id: bus
+    de: Bus
+    en: bus
+    pos: noun
+    article: der
+    plural: Busse
+    example: Der Bus kommt um acht Uhr.
+    exampleEn: The bus comes at eight o'clock.
+  - id: nach-hause
+    de: nach Hause
+    en: (to) home
+    pos: phrase
+    example: Ich gehe nach Hause.
+    exampleEn: I am going home.
+  - id: schon
+    de: schon
+    en: already
+    pos: adverb
+    example: Ich wohne schon zwei Jahre hier.
+    exampleEn: I have already lived here for two years.
+  - id: noch
+    de: noch
+    en: still
+    pos: adverb
+    example: Wohnst du noch in Köln?
+    exampleEn: Do you still live in Cologne?
+  - id: langsam
+    de: langsam
+    en: slow, slowly
+    pos: adjective
+    example: Bitte sprechen Sie langsam.
+    exampleEn: Please speak slowly.
+  - id: wort
+    de: Wort
+    en: word
+    pos: noun
+    article: das
+    plural: Wörter
+    example: Was bedeutet das Wort?
+    exampleEn: What does the word mean?

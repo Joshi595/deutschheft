@@ -1,0 +1,209 @@
+lesson: a2.04
+sets:
+  - title: The reflexive pronoun
+    instructions: Complete with mich, dich, sich, uns or euch.
+    items:
+      - id: ref1
+        type: fill-blank
+        tags: [reflexive pronouns]
+        prompt: "Ich wasche ___."
+        answers: [mich]
+      - id: ref2
+        type: fill-blank
+        tags: [reflexive pronouns]
+        prompt: "Er rasiert ___ jeden Morgen."
+        answers: [sich]
+      - id: ref3
+        type: fill-blank
+        tags: [reflexive pronouns]
+        prompt: "Wir treffen ___ um acht."
+        answers: [uns]
+      - id: ref4
+        type: fill-blank
+        tags: [reflexive pronouns]
+        prompt: "Freust du ___?"
+        answers: [dich]
+      - id: ref5
+        type: fill-blank
+        tags: [reflexive pronouns]
+        prompt: "Ihr müsst ___ beeilen."
+        answers: [euch]
+      - id: ref6
+        type: fill-blank
+        tags: [reflexive pronouns]
+        prompt: "Setzen Sie ___, bitte."
+        answers: [sich]
+      - id: ref7
+        type: fill-blank
+        tags: [reflexive pronouns]
+        prompt: "Die Kinder freuen ___ auf die Ferien."
+        answers: [sich]
+
+  - title: What does it mean?
+    items:
+      - id: mean1
+        type: matching
+        tags: [reflexive verbs]
+        prompt: Match each verb with its meaning.
+        pairs:
+          - { left: sich beeilen, right: to hurry }
+          - { left: sich ausruhen, right: to rest }
+          - { left: sich erinnern, right: to remember }
+          - { left: sich ärgern, right: to be annoyed }
+          - { left: sich erkälten, right: to catch a cold }
+          - { left: sich unterhalten, right: to chat }
+      - id: mean2
+        type: multiple-choice
+        tags: [reflexive verbs]
+        prompt: Er interessiert sich ___ Musik.
+        options: [für, auf, über]
+        answer: für
+      - id: mean3
+        type: multiple-choice
+        tags: [reflexive verbs]
+        prompt: Ich freue mich ___ das Wochenende. (It is still to come.)
+        options: [auf, für, an]
+        answer: auf
+        explanation: "sich freuen auf: to look forward to. sich freuen über: to be pleased about."
+
+  - title: mich or mir?
+    instructions: Accusative for the whole person, dative when a part or thing is named.
+    items:
+      - id: dat1
+        type: multiple-choice
+        tags: [dative reflexive]
+        prompt: Ich wasche ___.
+        options: [mich, mir]
+        answer: mich
+      - id: dat2
+        type: multiple-choice
+        tags: [dative reflexive]
+        prompt: Ich wasche ___ die Hände.
+        options: [mir, mich]
+        answer: mir
+      - id: dat3
+        type: multiple-choice
+        tags: [dative reflexive]
+        prompt: Ich putze ___ die Zähne.
+        options: [mir, mich]
+        answer: mir
+      - id: dat4
+        type: multiple-choice
+        tags: [dative reflexive]
+        prompt: Du kämmst ___ die Haare.
+        options: [dir, dich]
+        answer: dir
+      - id: dat5
+        type: multiple-choice
+        tags: [dative reflexive]
+        prompt: Ich ziehe ___ schnell an.
+        options: [mich, mir]
+        answer: mich
+
+  - title: Word order
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [reflexive verbs, word order]
+        prompt: Today I do not feel well.
+        answer: Heute fühle ich mich nicht gut.
+      - id: order2
+        type: word-order
+        tags: [reflexive verbs, word order]
+        prompt: You have to hurry. (informal)
+        answer: Du musst dich beeilen.
+      - id: order3
+        type: word-order
+        tags: [time manner place]
+        prompt: I go to work by bus every day.
+        answer: Ich fahre jeden Tag mit dem Bus zur Arbeit.
+      - id: order4
+        type: word-order
+        tags: [time manner place]
+        prompt: We are going to the cinema together on Saturday.
+        answer: Wir gehen am Samstag zusammen ins Kino.
+      - id: order5
+        type: multiple-choice
+        tags: [time manner place]
+        prompt: Which sentence is in the usual German order?
+        options:
+          - Sie fährt heute mit dem Rad in die Stadt.
+          - Sie fährt in die Stadt mit dem Rad heute.
+        answer: Sie fährt heute mit dem Rad in die Stadt.
+
+  - title: In the past
+    items:
+      - id: past1
+        type: multiple-choice
+        tags: [reflexive verbs, perfect tense]
+        prompt: Ich ___ mich beeilt.
+        options: [habe, bin]
+        answer: habe
+        explanation: Reflexive verbs always take haben.
+      - id: past2
+        type: word-order
+        tags: [reflexive verbs, perfect tense]
+        prompt: She was pleased with the present.
+        answer: Sie hat sich über das Geschenk gefreut.
+      - id: past3
+        type: fill-blank
+        tags: [reflexive verbs, perfect tense]
+        prompt: "Wir haben ___ im Café getroffen."
+        answers: [uns]
+
+  - title: Sara's morning
+    stimulus:
+      kind: audio
+      label: Mein Morgen
+      lines:
+        - text: "Mein Wecker klingelt um sechs Uhr, aber ich stehe erst um Viertel nach sechs auf. Zuerst dusche ich mich und putze mir die Zähne. Dann ziehe ich mich an und frühstücke. Um sieben Uhr muss ich mich beeilen, denn mein Bus fährt um zehn nach sieben. Im Bus ruhe ich mich noch ein bisschen aus."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening, daily routine]
+        prompt: Wann steht Sara auf?
+        options: ["um 6:15 Uhr", "um 6:00 Uhr", "um 7:00 Uhr"]
+        answer: "um 6:15 Uhr"
+      - id: listen2
+        type: true-false
+        tags: [listening, daily routine]
+        prompt: Sara frühstückt und zieht sich dann an.
+        answer: false
+        explanation: She gets dressed first, then has breakfast.
+      - id: listen3
+        type: multiple-choice
+        tags: [listening, daily routine]
+        prompt: Was macht Sara im Bus?
+        options: [Sie ruht sich aus., Sie frühstückt., Sie beeilt sich.]
+        answer: Sie ruht sich aus.
+
+  - title: Say and write it
+    items:
+      - id: tr1
+        type: translation
+        tags: [reflexive verbs]
+        prompt: I am looking forward to the weekend.
+        answers:
+          - Ich freue mich auf das Wochenende.
+      - id: tr2
+        type: translation
+        tags: [dative reflexive]
+        prompt: I brush my teeth.
+        answers:
+          - Ich putze mir die Zähne.
+      - id: write1
+        type: writing-task
+        tags: [writing, daily routine]
+        prompt: Describe your morning in detail. Use at least three reflexive verbs.
+        points:
+          - When you get up and what you do in the bathroom
+          - How you get to work or to your course
+          - When you have to hurry, or when you can rest
+        minWords: 35
+        phrases:
+          - Ich stehe um … auf und dusche mich.
+          - Dann ziehe ich mich an und …
+          - Ich fahre um … mit dem … zur Arbeit.
+          - Ich muss mich beeilen, denn …
+        sample: "Ich stehe um halb sieben auf und dusche mich. Dann ziehe ich mich an und putze mir die Zähne. Um halb acht muss ich mich beeilen, denn der Bus fährt um acht. Ich fahre jeden Tag mit dem Bus zur Arbeit. Im Bus ruhe ich mich aus und höre Musik."

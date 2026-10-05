@@ -1,0 +1,225 @@
+lesson: a1.09
+sets:
+  - title: der, die or das?
+    items:
+      - id: art1
+        type: fill-blank
+        tags: [food, noun gender]
+        prompt: "___ Kaffee"
+        answers: [der]
+      - id: art2
+        type: fill-blank
+        tags: [food, noun gender]
+        prompt: "___ Milch"
+        answers: [die]
+      - id: art3
+        type: fill-blank
+        tags: [food, noun gender]
+        prompt: "___ Brot"
+        answers: [das]
+      - id: art4
+        type: fill-blank
+        tags: [food, noun gender]
+        prompt: "___ Apfel"
+        answers: [der]
+      - id: art5
+        type: matching
+        tags: [food]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: das Gemüse, right: vegetables }
+          - { left: das Obst, right: fruit }
+          - { left: das Fleisch, right: meat }
+          - { left: der Käse, right: cheese }
+          - { left: das Ei, right: egg }
+          - { left: der Saft, right: juice }
+
+  - title: den, die or das?
+    instructions: The noun is the direct object. Remember that only masculine changes.
+    items:
+      - id: acc1
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Ich trinke ___ Kaffee. (der)"
+        answers: [den]
+      - id: acc2
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Wir essen ___ Suppe. (die)"
+        answers: [die]
+        explanation: Feminine does not change in the accusative.
+      - id: acc3
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Er kauft ___ Brot. (das)"
+        answers: [das]
+        explanation: Neuter does not change in the accusative.
+      - id: acc4
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Sie nimmt ___ Salat. (der)"
+        answers: [den]
+      - id: acc5
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Ich brauche ___ Eier. (die, plural)"
+        answers: [die]
+
+  - title: ein, eine or einen?
+    items:
+      - id: ein1
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Ich esse ___ Apfel."
+        answers: [einen]
+      - id: ein2
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Sie möchte ___ Suppe."
+        answers: [eine]
+      - id: ein3
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Wir kaufen ___ Brot."
+        answers: [ein]
+      - id: ein4
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Ich möchte ___ Tee, bitte."
+        answers: [einen]
+      - id: ein5
+        type: cloze
+        tags: [accusative]
+        text: "Ich habe ___ Bruder und ___ Schwester."
+        gaps:
+          - [einen]
+          - [eine]
+        explanation: "einen Bruder (masculine), eine Schwester (feminine)."
+      - id: ein6
+        type: multiple-choice
+        tags: [accusative, sein]
+        prompt: Das ist ___ Apfel.
+        options: [ein, einen, eine]
+        answer: ein
+        explanation: After sein there is no accusative.
+
+  - title: kein, keine or keinen?
+    items:
+      - id: kein1
+        type: fill-blank
+        tags: [accusative, kein]
+        prompt: "Er trinkt ___ Kaffee."
+        answers: [keinen]
+      - id: kein2
+        type: fill-blank
+        tags: [accusative, kein]
+        prompt: "Ich esse ___ Fleisch."
+        answers: [kein]
+      - id: kein3
+        type: fill-blank
+        tags: [accusative, kein]
+        prompt: "Wir haben ___ Milch."
+        answers: [keine]
+
+  - title: mögen or möchten?
+    items:
+      - id: mag1
+        type: fill-blank
+        tags: [mögen]
+        prompt: "Ich ___ Kaffee. (mögen)"
+        answers: [mag]
+      - id: mag2
+        type: fill-blank
+        tags: [mögen]
+        prompt: "___ du Fisch? (mögen)"
+        answers: [Magst]
+      - id: mag3
+        type: fill-blank
+        tags: [möchten]
+        prompt: "Was ___ Sie trinken? (möchten)"
+        answers: [möchten]
+      - id: mag4
+        type: multiple-choice
+        tags: [mögen, möchten]
+        prompt: You are ordering in a café. Which is right?
+        options:
+          - "Ich möchte einen Kaffee, bitte."
+          - "Ich mag einen Kaffee, bitte."
+        answer: "Ich möchte einen Kaffee, bitte."
+      - id: mag5
+        type: multiple-choice
+        tags: [gern]
+        prompt: How do you say "I like eating pizza"?
+        options: [Ich esse gern Pizza., Ich mag essen Pizza., Ich gern esse Pizza.]
+        answer: Ich esse gern Pizza.
+
+  - title: In the café
+    stimulus:
+      kind: audio
+      label: Im Café
+      lines:
+        - speaker: Kellner
+          text: "Guten Tag. Was möchten Sie?"
+        - speaker: Frau
+          text: "Ich möchte einen Tee und ein Stück Kuchen, bitte."
+        - speaker: Kellner
+          text: "Gern. Und Sie?"
+        - speaker: Mann
+          text: "Ich nehme einen Kaffee. Ich esse nichts, danke."
+        - speaker: Kellner
+          text: "Ein Tee, ein Kaffee und ein Kuchen. Das macht neun Euro vierzig."
+    items:
+      - id: cafe1
+        type: multiple-choice
+        tags: [listening, food]
+        prompt: Was trinkt die Frau?
+        options: [einen Tee, einen Kaffee, einen Saft]
+        answer: einen Tee
+      - id: cafe2
+        type: true-false
+        tags: [listening, food]
+        prompt: Der Mann isst ein Stück Kuchen.
+        answer: false
+      - id: cafe3
+        type: multiple-choice
+        tags: [listening, prices]
+        prompt: Was kostet alles zusammen?
+        options: ["9,40 €", "9,14 €", "19,40 €"]
+        answer: "9,40 €"
+
+  - title: Say it in German
+    items:
+      - id: order1
+        type: word-order
+        tags: [accusative, möchten]
+        prompt: I would like a coffee and a piece of cake.
+        answer: Ich möchte einen Kaffee und ein Stück Kuchen.
+      - id: tr1
+        type: translation
+        tags: [accusative]
+        prompt: I am eating an apple.
+        answers: [Ich esse einen Apfel.]
+      - id: tr2
+        type: translation
+        tags: [mögen]
+        prompt: He does not like cheese.
+        answers: [Er mag keinen Käse.]
+      - id: tr3
+        type: translation
+        tags: [möchten]
+        prompt: We would like to pay.
+        answers: [Wir möchten zahlen.]
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, food]
+        prompt: You are in a café. Order a drink and something to eat, then ask for the bill.
+        cards: [Getränk, Essen, zahlen]
+        phrases:
+          - Ich möchte einen … / eine … / ein …, bitte.
+          - Ich nehme …
+          - Zahlen, bitte!
+        checklist:
+          - I ordered a drink with möchte or nehme
+          - I used einen for a masculine drink or dish
+          - I asked to pay
+        sample: "Guten Tag. Ich möchte einen Kaffee und ein Brötchen mit Käse, bitte. Zahlen, bitte!"

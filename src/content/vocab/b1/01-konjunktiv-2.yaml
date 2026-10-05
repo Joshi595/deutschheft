@@ -1,0 +1,78 @@
+lesson: b1.01
+items:
+  - id: wuerde
+    de: würde
+    en: would
+    pos: verb
+    example: Ich würde gern in Berlin wohnen.
+    exampleEn: I would like to live in Berlin.
+  - id: haette
+    de: hätte
+    en: would have, had (unreal)
+    pos: verb
+    example: Wenn ich Zeit hätte, würde ich kommen.
+    exampleEn: If I had time, I would come.
+  - id: waere
+    de: wäre
+    en: would be, were (unreal)
+    pos: verb
+    example: Wenn ich reich wäre, würde ich viel reisen.
+    exampleEn: If I were rich, I would travel a lot.
+  - id: koennte
+    de: könnte
+    en: could
+    pos: verb
+    example: Könntest du mir bitte helfen?
+    exampleEn: Could you help me, please?
+  - id: muesste
+    de: müsste
+    en: would have to
+    pos: verb
+    example: Dann müsste ich früher aufstehen.
+    exampleEn: Then I would have to get up earlier.
+  - id: sollte
+    de: sollte
+    en: should
+    pos: verb
+    example: Du solltest mehr schlafen.
+    exampleEn: You should sleep more.
+  - id: ich-haette-gern
+    de: Ich hätte gern …
+    en: I would like (to have) …
+    pos: phrase
+    example: Ich hätte gern einen Kaffee.
+    exampleEn: I would like a coffee.
+  - id: an-deiner-stelle
+    de: an deiner Stelle
+    en: in your place, if I were you
+    pos: phrase
+    example: An deiner Stelle würde ich zum Arzt gehen.
+    exampleEn: If I were you, I would go to the doctor.
+  - id: wenn-doch
+    de: Wenn … doch …!
+    en: If only …!
+    pos: phrase
+    example: Wenn ich doch mehr Zeit hätte!
+    exampleEn: If only I had more time!
+  - id: wunsch
+    de: Wunsch
+    en: wish
+    pos: noun
+    article: der
+    plural: Wünsche
+    example: Das ist mein größter Wunsch.
+    exampleEn: That is my greatest wish.
+  - id: rat
+    de: Rat
+    en: advice
+    pos: noun
+    article: der
+    plural: Ratschläge
+    example: Danke für deinen Rat.
+    exampleEn: Thank you for your advice.
+  - id: reich
+    de: reich
+    en: rich
+    pos: adjective
+    example: Wenn ich reich wäre, würde ich nicht mehr arbeiten.
+    exampleEn: If I were rich, I would stop working.

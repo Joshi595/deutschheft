@@ -1,0 +1,13 @@
+{
+  "name": "Deutschheft",
+  "short_name": "Deutschheft",
+  "description": "Lessons, exercises, spaced-repetition review and a personal notebook for learning German.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f7f5f0",
+  "theme_color": "#1b1a17",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

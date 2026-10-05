@@ -1,0 +1,154 @@
+lesson: a1.06
+items:
+  - id: ein
+    de: ein, eine
+    en: a, an
+    pos: other
+    example: Das ist ein Buch.
+    exampleEn: That is a book.
+  - id: kein
+    de: kein, keine
+    en: no, not a, not any
+    pos: other
+    example: Ich habe keine Zeit.
+    exampleEn: I have no time.
+  - id: nicht
+    de: nicht
+    en: not
+    pos: adverb
+    example: Ich komme nicht.
+    exampleEn: I am not coming.
+  - id: haben
+    de: haben
+    en: to have
+    pos: verb
+    example: Wir haben kein Auto.
+    exampleEn: We do not have a car.
+  - id: zeit
+    de: Zeit
+    en: time
+    pos: noun
+    article: die
+    plural: Zeiten
+    example: Hast du Zeit?
+    exampleEn: Do you have time?
+  - id: geld
+    de: Geld
+    en: money
+    pos: noun
+    article: das
+    plural: "-"
+    example: Sie hat kein Geld.
+    exampleEn: She has no money.
+  - id: hunger
+    de: Hunger
+    en: hunger
+    pos: noun
+    article: der
+    plural: "-"
+    example: Ich habe Hunger.
+    exampleEn: I am hungry.
+  - id: durst
+    de: Durst
+    en: thirst
+    pos: noun
+    article: der
+    plural: "-"
+    example: Hast du Durst?
+    exampleEn: Are you thirsty?
+  - id: problem
+    de: Problem
+    en: problem
+    pos: noun
+    article: das
+    plural: Probleme
+    example: Das ist kein Problem.
+    exampleEn: That is no problem.
+  - id: idee
+    de: Idee
+    en: idea
+    pos: noun
+    article: die
+    plural: Ideen
+    example: Das ist eine gute Idee.
+    exampleEn: That is a good idea.
+  - id: frage
+    de: Frage
+    en: question
+    pos: noun
+    article: die
+    plural: Fragen
+    example: Ich habe eine Frage.
+    exampleEn: I have a question.
+  - id: antwort
+    de: Antwort
+    en: answer
+    pos: noun
+    article: die
+    plural: Antworten
+    example: Die Antwort ist richtig.
+    exampleEn: The answer is right.
+  - id: kaffee
+    de: Kaffee
+    en: coffee
+    pos: noun
+    article: der
+    plural: "-"
+    example: Er trinkt keinen Kaffee.
+    exampleEn: He does not drink coffee.
+  - id: wasser
+    de: Wasser
+    en: water
+    pos: noun
+    article: das
+    plural: "-"
+    example: Ich trinke Wasser.
+    exampleEn: I am drinking water.
+  - id: richtig
+    de: richtig
+    en: right, correct
+    pos: adjective
+    example: Das ist richtig.
+    exampleEn: That is right.
+  - id: falsch
+    de: falsch
+    en: wrong
+    pos: adjective
+    example: Die Antwort ist falsch.
+    exampleEn: The answer is wrong.
+  - id: teuer
+    de: teuer
+    en: expensive
+    pos: adjective
+    example: Das Buch ist nicht teuer.
+    exampleEn: The book is not expensive.
+  - id: schwer
+    de: schwer
+    en: heavy; difficult
+    pos: adjective
+    example: Die Tasche ist schwer.
+    exampleEn: The bag is heavy.
+  - id: hier
+    de: hier
+    en: here
+    pos: adverb
+    example: Hier ist ein Stift.
+    exampleEn: Here is a pen.
+  - id: heute
+    de: heute
+    en: today
+    pos: adverb
+    example: Er kommt heute nicht.
+    exampleEn: He is not coming today.
+  - id: was
+    de: was
+    en: what
+    pos: other
+    example: Was ist das?
+    exampleEn: What is that?
+  - id: auch
+    de: auch
+    en: also, too
+    pos: adverb
+    example: Ich komme auch.
+    exampleEn: I am coming too.

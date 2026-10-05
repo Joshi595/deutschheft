@@ -1,0 +1,208 @@
+lesson: a1.14
+sets:
+  - title: Activities
+    items:
+      - id: act1
+        type: matching
+        tags: [free time]
+        prompt: Match each activity with its meaning.
+        pairs:
+          - { left: Rad fahren, right: to cycle }
+          - { left: spazieren gehen, right: to go for a walk }
+          - { left: Freunde treffen, right: to meet friends }
+          - { left: wandern, right: to hike }
+          - { left: Musik hören, right: to listen to music }
+          - { left: kochen, right: to cook }
+      - id: act2
+        type: multiple-choice
+        tags: [free time]
+        prompt: Ich ___ gern Gitarre.
+        options: [spiele, mache, gehe]
+        answer: spiele
+      - id: act3
+        type: multiple-choice
+        tags: [free time]
+        prompt: Wir ___ heute Abend ins Kino.
+        options: [gehen, spielen, machen]
+        answer: gehen
+      - id: act4
+        type: multiple-choice
+        tags: [free time]
+        prompt: Sie ___ zweimal pro Woche Sport.
+        options: [macht, spielt, fährt]
+        answer: macht
+
+  - title: gern, lieber, am liebsten
+    items:
+      - id: gern1
+        type: word-order
+        tags: [gern]
+        prompt: I like listening to music.
+        answer: Ich höre gern Musik.
+      - id: gern2
+        type: word-order
+        tags: [gern]
+        prompt: I do not like dancing.
+        answer: Ich tanze nicht gern.
+      - id: gern3
+        type: fill-blank
+        tags: [gern]
+        prompt: "Ich spiele gern Tennis, aber ich spiele ___ Fußball."
+        answers: [lieber]
+        translation: I like playing tennis, but I prefer playing football.
+      - id: gern4
+        type: fill-blank
+        tags: [gern]
+        prompt: "Am ___ treffe ich meine Freunde."
+        answers: [liebsten]
+        translation: Best of all I like meeting my friends.
+      - id: gern5
+        type: multiple-choice
+        tags: [gern]
+        prompt: How do you say "I like swimming"?
+        options: [Ich schwimme gern., Ich mag schwimmen., Ich gern schwimme.]
+        answer: Ich schwimme gern.
+      - id: gern6
+        type: multiple-choice
+        tags: [gern]
+        prompt: Ich trinke lieber Tee ___ Kaffee.
+        options: [als, wie, und]
+        answer: als
+
+  - title: How often?
+    items:
+      - id: often1
+        type: matching
+        tags: [frequency]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: immer, right: always }
+          - { left: oft, right: often }
+          - { left: manchmal, right: sometimes }
+          - { left: selten, right: rarely }
+          - { left: nie, right: never }
+
+  - title: Making an arrangement
+    items:
+      - id: plan1
+        type: multiple-choice
+        tags: [arrangements]
+        prompt: "Your friend asks: Wollen wir ins Kino gehen? You want to go. You say:"
+        options: ["Ja, gern!", "Tut mir leid.", "Um acht Uhr."]
+        answer: "Ja, gern!"
+      - id: plan2
+        type: multiple-choice
+        tags: [arrangements]
+        prompt: "You cannot come on Saturday. Which answer is polite?"
+        options:
+          - "Am Samstag kann ich leider nicht. Geht es am Sonntag?"
+          - "Nein."
+          - "Ich will nicht."
+        answer: "Am Samstag kann ich leider nicht. Geht es am Sonntag?"
+      - id: plan3
+        type: cloze
+        tags: [arrangements]
+        prompt: Complete the conversation with the words from the list.
+        text: "Hast du am Freitag ___? Wollen wir essen ___?\nAm Freitag ___ ich leider nicht. Geht es am Samstag?\nJa, Samstag ist gut. ___ wie viel Uhr?\nUm acht Uhr. ___ Samstag!"
+        gaps:
+          - [Zeit]
+          - [gehen]
+          - [kann]
+          - [Um]
+          - [Bis]
+        bank: [Zeit, gehen, kann, Um, Bis, Am, muss]
+      - id: plan4
+        type: word-order
+        tags: [arrangements]
+        prompt: When shall we meet?
+        answer: Wann treffen wir uns?
+      - id: plan5
+        type: word-order
+        tags: [arrangements]
+        prompt: Shall we go to the cinema?
+        answer: Wollen wir ins Kino gehen?
+
+  - title: Listen to the arrangement
+    stimulus:
+      kind: audio
+      label: Am Telefon
+      lines:
+        - speaker: Lena
+          text: "Hallo Paul, hier ist Lena. Hast du am Samstag Zeit? Wollen wir schwimmen gehen?"
+        - speaker: Paul
+          text: "Hallo Lena! Am Samstag muss ich leider arbeiten. Geht es am Sonntag?"
+        - speaker: Lena
+          text: "Ja, Sonntag geht auch. Um wie viel Uhr?"
+        - speaker: Paul
+          text: "Um zehn Uhr? Wir treffen uns vor dem Schwimmbad."
+        - speaker: Lena
+          text: "Gut, bis Sonntag!"
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening, arrangements]
+        prompt: Was wollen Lena und Paul machen?
+        options: [schwimmen gehen, ins Kino gehen, essen gehen]
+        answer: schwimmen gehen
+      - id: listen2
+        type: multiple-choice
+        tags: [listening, arrangements]
+        prompt: Wann treffen sie sich?
+        options: [am Sonntag um zehn Uhr, am Samstag um zehn Uhr, am Sonntag um zwölf Uhr]
+        answer: am Sonntag um zehn Uhr
+      - id: listen3
+        type: true-false
+        tags: [listening, arrangements]
+        prompt: Paul hat am Samstag Zeit.
+        answer: false
+
+  - title: Read the message
+    stimulus:
+      kind: text
+      label: SMS
+      text: |
+        Hallo Maria, ich kann heute Abend leider nicht ins Kino kommen. Ich muss lange arbeiten.
+        Hast du morgen Zeit? Der Film fängt um 19 Uhr an. Wir können uns um halb sieben vor dem Kino treffen.
+        Viele Grüße, Jan
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading, arrangements]
+        prompt: Jan kommt heute Abend ins Kino.
+        answer: false
+      - id: read2
+        type: multiple-choice
+        tags: [reading, arrangements]
+        prompt: Wann wollen sie sich morgen treffen?
+        options: ["um 18:30 Uhr", "um 19:00 Uhr", "um 19:30 Uhr"]
+        answer: "um 18:30 Uhr"
+        explanation: "halb sieben is 6:30, in the evening 18:30."
+
+  - title: Say and write it
+    items:
+      - id: tr1
+        type: translation
+        tags: [gern]
+        prompt: I like cooking.
+        answers: [Ich koche gern.]
+      - id: tr2
+        type: translation
+        tags: [arrangements]
+        prompt: Do you have time on Saturday? (informal)
+        answers: [Hast du am Samstag Zeit?]
+      - id: write1
+        type: writing-task
+        tags: [writing, arrangements]
+        prompt: "Your friend Anna has invited you to the cinema on Friday. You cannot come. Write her a short message."
+        points:
+          - Say that you cannot come on Friday
+          - Give a reason
+          - Suggest another day
+        minWords: 20
+        phrases:
+          - Liebe Anna, / Hallo Anna,
+          - Am Freitag kann ich leider nicht kommen.
+          - Ich muss …
+          - Hast du am … Zeit?
+          - Viele Grüße
+        sample: "Hallo Anna, danke für die Einladung. Am Freitag kann ich leider nicht kommen. Ich muss arbeiten. Hast du am Samstag Zeit? Viele Grüße, Tom"

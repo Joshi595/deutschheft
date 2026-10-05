@@ -1,0 +1,201 @@
+lesson: a2.06
+sets:
+  - title: The verb goes to the end
+    instructions: Complete the dass clause.
+    items:
+      - id: verb1
+        type: fill-blank
+        tags: [dass word order]
+        prompt: "Ich glaube, dass der Film gut ___."
+        answers: [ist]
+      - id: verb2
+        type: fill-blank
+        tags: [dass word order]
+        prompt: "Ich weiß, dass du viel Arbeit ___."
+        answers: [hast]
+      - id: verb3
+        type: fill-blank
+        tags: [dass word order]
+        prompt: "Ich glaube, dass er nicht kommen ___. (können)"
+        answers: [kann]
+      - id: verb4
+        type: fill-blank
+        tags: [dass word order]
+        prompt: "Ich weiß, dass sie in Berlin gewohnt ___. [she]"
+        answers: [hat]
+      - id: verb5
+        type: fill-blank
+        tags: [dass word order]
+        prompt: "Sie sagt, dass der Zug um acht ___. (abfahren)"
+        answers: [abfährt]
+        explanation: At the end of the clause the separable verb is one word.
+
+  - title: Which sentence is correct?
+    items:
+      - id: pos1
+        type: multiple-choice
+        tags: [dass word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich finde, dass Deutsch nicht schwer ist."
+          - "Ich finde, dass Deutsch ist nicht schwer."
+        answer: "Ich finde, dass Deutsch nicht schwer ist."
+      - id: pos2
+        type: multiple-choice
+        tags: [dass word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich glaube, er ist krank."
+          - "Ich glaube, er krank ist."
+        answer: "Ich glaube, er ist krank."
+        explanation: Without dass the clause keeps normal word order.
+      - id: pos3
+        type: multiple-choice
+        tags: [dass word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich hoffe, dass du dich bald besser fühlst."
+          - "Ich hoffe, dass du fühlst dich bald besser."
+          - "Ich hoffe, dass du dich fühlst bald besser."
+        answer: "Ich hoffe, dass du dich bald besser fühlst."
+
+  - title: das or dass?
+    items:
+      - id: das1
+        type: multiple-choice
+        tags: [das and dass]
+        prompt: Ich weiß, ___ du recht hast.
+        options: [dass, das]
+        answer: dass
+      - id: das2
+        type: multiple-choice
+        tags: [das and dass]
+        prompt: ___ Buch ist sehr interessant.
+        options: [Das, Dass]
+        answer: Das
+      - id: das3
+        type: cloze
+        tags: [das and dass]
+        prompt: Fill each gap with das or dass.
+        text: "Ich glaube, ___ ___ Wetter morgen schön ist."
+        gaps:
+          - [dass]
+          - [das]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [dass word order]
+        prompt: I think that we need more time.
+        answer: "Ich denke, dass wir mehr Zeit brauchen."
+      - id: order2
+        type: word-order
+        tags: [dass word order]
+        prompt: I am glad that you are coming.
+        answer: "Ich freue mich, dass du kommst."
+      - id: order3
+        type: word-order
+        tags: [dass word order]
+        prompt: I do not think that is correct.
+        answer: "Ich glaube nicht, dass das richtig ist."
+      - id: order4
+        type: word-order
+        tags: [dass word order]
+        prompt: I am sorry that I am late.
+        answer: "Es tut mir leid, dass ich zu spät bin."
+
+  - title: Report what they said
+    instructions: Start with the words given and use dass.
+    items:
+      - id: rep1
+        type: translation
+        tags: [reported speech]
+        prompt: "Tom: Ich komme später. → Tom sagt, …"
+        answers:
+          - "Tom sagt, dass er später kommt."
+      - id: rep2
+        type: translation
+        tags: [reported speech]
+        prompt: "Anna: Ich habe keine Zeit. → Anna sagt, …"
+        answers:
+          - "Anna sagt, dass sie keine Zeit hat."
+      - id: rep3
+        type: translation
+        tags: [reported speech]
+        prompt: "Die Lehrerin: Der Test ist am Montag. → Die Lehrerin sagt, …"
+        answers:
+          - "Die Lehrerin sagt, dass der Test am Montag ist."
+      - id: rep4
+        type: translation
+        tags: [reported speech]
+        prompt: "Paul: Ich kann nicht kommen. → Paul schreibt, …"
+        answers:
+          - "Paul schreibt, dass er nicht kommen kann."
+
+  - title: Opinion phrases
+    items:
+      - id: phr1
+        type: matching
+        tags: [opinions]
+        prompt: Match each phrase with its meaning.
+        pairs:
+          - { left: "Ich bin sicher, dass …", right: I am sure that … }
+          - { left: "Ich hoffe, dass …", right: I hope that … }
+          - { left: "Schade, dass …", right: A pity that … }
+          - { left: "Das sehe ich anders.", right: I see that differently. }
+          - { left: "Das stimmt.", right: That is right. }
+      - id: phr2
+        type: multiple-choice
+        tags: [opinions]
+        prompt: How do you disagree politely?
+        options:
+          - "Ich glaube nicht, dass das stimmt."
+          - "Ich glaube, dass das nicht."
+          - "Das ist falsch, dass."
+        answer: "Ich glaube nicht, dass das stimmt."
+
+  - title: Read the messages
+    stimulus:
+      kind: text
+      label: Chat
+      text: |
+        Mia: Hast du mit Felix gesprochen? Kommt er am Samstag?
+        Leon: Ja. Er sagt, dass er gern kommt, aber dass er erst um neun Uhr da sein kann. Er muss bis acht arbeiten.
+        Mia: Kein Problem. Ich hoffe nur, dass das Wetter gut ist. Wir wollen im Garten essen.
+        Leon: Ich glaube nicht, dass es regnet. Und Felix schreibt, dass er Getränke mitbringt.
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading, dass]
+        prompt: Felix kommt am Samstag um acht Uhr.
+        answer: false
+      - id: read2
+        type: true-false
+        tags: [reading, dass]
+        prompt: Leon glaubt, dass es am Samstag regnet.
+        answer: false
+      - id: read3
+        type: multiple-choice
+        tags: [reading, dass]
+        prompt: Was bringt Felix mit?
+        options: [Getränke, Essen, nichts]
+        answer: Getränke
+
+  - title: Your opinion
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, opinions]
+        prompt: Give your opinion on each topic in one sentence with dass.
+        cards: [Deutsch lernen, Fernsehen, Sport, das Wetter in Deutschland]
+        phrases:
+          - Ich finde, dass …
+          - Ich glaube, dass …
+          - Ich denke nicht, dass …
+        checklist:
+          - I gave an opinion on all four topics
+          - I used dass each time, with the verb at the end
+          - I used at least two different opinion verbs
+        sample: "Ich finde, dass Deutsch lernen Spaß macht. Ich glaube, dass viele Menschen zu viel fernsehen. Ich denke, dass Sport sehr wichtig ist. Ich finde nicht, dass das Wetter in Deutschland immer schlecht ist."

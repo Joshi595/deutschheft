@@ -1,0 +1,236 @@
+lesson: a1.03
+sets:
+  - title: Words to digits
+    instructions: Write the number in digits.
+    items:
+      - id: digit1
+        type: fill-blank
+        tags: [numbers]
+        prompt: "sieben = ___"
+        answers: ["7"]
+      - id: digit2
+        type: fill-blank
+        tags: [numbers]
+        prompt: "zwölf = ___"
+        answers: ["12"]
+      - id: digit3
+        type: fill-blank
+        tags: [numbers]
+        prompt: "sechzehn = ___"
+        answers: ["16"]
+      - id: digit4
+        type: fill-blank
+        tags: [numbers]
+        prompt: "dreißig = ___"
+        answers: ["30"]
+      - id: digit5
+        type: fill-blank
+        tags: [numbers, unit before ten]
+        prompt: "einundzwanzig = ___"
+        answers: ["21"]
+        hint: The unit is said first.
+      - id: digit6
+        type: fill-blank
+        tags: [numbers, unit before ten]
+        prompt: "siebenundvierzig = ___"
+        answers: ["47"]
+        hint: The unit is said first.
+      - id: digit7
+        type: fill-blank
+        tags: [numbers, unit before ten]
+        prompt: "dreiundneunzig = ___"
+        answers: ["93"]
+      - id: digit8
+        type: fill-blank
+        tags: [numbers]
+        prompt: "zweihundertfünfzig = ___"
+        answers: ["250"]
+
+  - title: Digits to words
+    items:
+      - id: word1
+        type: multiple-choice
+        tags: [numbers]
+        prompt: "17"
+        options: [siebzehn, siebenzehn, siebzig]
+        answer: siebzehn
+        explanation: sieben loses its -en before zehn and before zig.
+      - id: word2
+        type: multiple-choice
+        tags: [numbers]
+        prompt: "60"
+        options: [sechzig, sechszig, sechzehn]
+        answer: sechzig
+      - id: word3
+        type: multiple-choice
+        tags: [numbers, unit before ten]
+        prompt: "35"
+        options: [fünfunddreißig, dreiundfünfzig, dreißigfünf]
+        answer: fünfunddreißig
+      - id: word4
+        type: multiple-choice
+        tags: [numbers, unit before ten]
+        prompt: "82"
+        options: [zweiundachtzig, achtundzwanzig, achtzigzwei]
+        answer: zweiundachtzig
+      - id: word5
+        type: fill-blank
+        tags: [numbers]
+        prompt: "21 = ___"
+        answers: [einundzwanzig]
+        hint: eins loses its s.
+      - id: word6
+        type: fill-blank
+        tags: [numbers]
+        prompt: "13 = ___"
+        answers: [dreizehn]
+
+  - title: Listen and write the number
+    instructions: Write what you hear in digits.
+    items:
+      - id: hear1
+        type: fill-blank
+        tags: [listening, numbers]
+        stimulus:
+          kind: audio
+          label: Zahl
+          lines:
+            - text: "vierundzwanzig"
+        prompt: "Die Zahl ist ___."
+        answers: ["24"]
+      - id: hear2
+        type: fill-blank
+        tags: [listening, numbers]
+        stimulus:
+          kind: audio
+          label: Zahl
+          lines:
+            - text: "achtundsechzig"
+        prompt: "Die Zahl ist ___."
+        answers: ["68"]
+      - id: hear3
+        type: fill-blank
+        tags: [listening, numbers]
+        stimulus:
+          kind: audio
+          label: Zahl
+          lines:
+            - text: "dreihundertfünfzehn"
+        prompt: "Die Zahl ist ___."
+        answers: ["315"]
+      - id: hear4
+        type: multiple-choice
+        tags: [listening, prices]
+        stimulus:
+          kind: audio
+          label: Im Geschäft
+          lines:
+            - speaker: Kunde
+              text: "Entschuldigung, was kostet das Buch?"
+            - speaker: Verkäuferin
+              text: "Das Buch kostet zwölf Euro neunzig."
+        prompt: Was kostet das Buch?
+        options: ["12,90 €", "20,90 €", "12,19 €"]
+        answer: "12,90 €"
+      - id: hear5
+        type: multiple-choice
+        tags: [listening, phone numbers]
+        stimulus:
+          kind: audio
+          label: Am Telefon
+          lines:
+            - speaker: Frau Weber
+              text: "Meine Telefonnummer ist null, drei, null, vier, sieben, zwei, neun, eins."
+        prompt: Wie ist die Telefonnummer von Frau Weber?
+        options: ["030 47 291", "030 74 291", "030 47 921"]
+        answer: "030 47 291"
+
+  - title: Age
+    items:
+      - id: age1
+        type: fill-blank
+        tags: [age, sein]
+        prompt: "Ich ___ dreißig Jahre alt."
+        answers: [bin]
+        explanation: Age takes sein, not haben.
+      - id: age2
+        type: word-order
+        tags: [age]
+        prompt: How old are you? (formal)
+        answer: Wie alt sind Sie?
+      - id: age3
+        type: word-order
+        tags: [age]
+        prompt: I am twenty-five years old.
+        answer: Ich bin fünfundzwanzig Jahre alt.
+
+  - title: Prices
+    items:
+      - id: price1
+        type: matching
+        tags: [prices]
+        prompt: Match each price with how it is said.
+        pairs:
+          - { left: "3,50 €", right: drei Euro fünfzig }
+          - { left: "0,99 €", right: neunundneunzig Cent }
+          - { left: "15,00 €", right: fünfzehn Euro }
+          - { left: "50,30 €", right: fünfzig Euro dreißig }
+      - id: price2
+        type: multiple-choice
+        tags: [prices]
+        prompt: Which sentence is correct?
+        options: [Das kostet fünf Euro., Das kostet fünf Euros.]
+        answer: Das kostet fünf Euro.
+        explanation: After a number, Euro stays in the singular.
+
+  - title: Fill in the form
+    instructions: Take the information from the text. Write numbers in digits.
+    items:
+      - id: form1
+        type: form
+        tags: [writing, forms]
+        situation: "Paul Novak ist 34 Jahre alt. Er wohnt in Köln, in der Bahnhofstraße 8. Die Postleitzahl ist 50667. Seine Telefonnummer ist 0221 55 67."
+        fields:
+          - { label: Familienname, answers: [Novak] }
+          - { label: Alter, answers: ["34"] }
+          - { label: Straße, answers: [Bahnhofstraße] }
+          - { label: Hausnummer, answers: ["8"] }
+          - { label: Postleitzahl, answers: ["50667"] }
+          - { label: Wohnort, answers: [Köln] }
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [age]
+        prompt: I am 30 years old.
+        answers:
+          - Ich bin dreißig Jahre alt.
+          - Ich bin 30 Jahre alt.
+      - id: tr2
+        type: translation
+        tags: [prices]
+        prompt: What does that cost?
+        answers:
+          - Was kostet das?
+          - Wie viel kostet das?
+      - id: tr3
+        type: translation
+        tags: [age]
+        prompt: How old are you? (informal)
+        answers:
+          - Wie alt bist du?
+      - id: speak1
+        type: speaking-task
+        tags: [speaking]
+        prompt: Say your age, your phone number digit by digit, and your address.
+        cards: [Alter?, Telefonnummer?, Adresse?]
+        phrases:
+          - Ich bin … Jahre alt.
+          - Meine Telefonnummer ist …
+          - Ich wohne in der …straße …, in … (Postleitzahl) …
+        checklist:
+          - I gave my age with "Ich bin … Jahre alt"
+          - I said my phone number digit by digit
+          - I gave the street first and the house number after it
+        sample: "Ich bin achtundzwanzig Jahre alt. Meine Telefonnummer ist null, eins, sieben, sechs, vier, drei, zwei, neun. Ich wohne in der Goethestraße zwölf, in sechs null drei eins eins Frankfurt."

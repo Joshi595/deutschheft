@@ -1,0 +1,134 @@
+lesson: a1.04
+items:
+  - id: lernen
+    de: lernen
+    en: to learn
+    pos: verb
+    example: Ich lerne Deutsch.
+    exampleEn: I am learning German.
+  - id: machen
+    de: machen
+    en: to do, to make
+    pos: verb
+    example: Was machst du?
+    exampleEn: What are you doing?
+  - id: arbeiten
+    de: arbeiten
+    en: to work
+    pos: verb
+    example: Er arbeitet in Berlin.
+    exampleEn: He works in Berlin.
+  - id: spielen
+    de: spielen
+    en: to play
+    pos: verb
+    example: Die Kinder spielen Fußball.
+    exampleEn: The children are playing football.
+  - id: hoeren
+    de: hören
+    en: to hear, to listen to
+    pos: verb
+    example: Wir hören Musik.
+    exampleEn: We are listening to music.
+  - id: trinken
+    de: trinken
+    en: to drink
+    pos: verb
+    example: Sie trinkt Kaffee.
+    exampleEn: She is drinking coffee.
+  - id: gehen
+    de: gehen
+    en: to go, to walk
+    pos: verb
+    example: Wir gehen nach Hause.
+    exampleEn: We are going home.
+  - id: fragen
+    de: fragen
+    en: to ask
+    pos: verb
+    example: Der Lehrer fragt, die Schüler antworten.
+    exampleEn: The teacher asks, the pupils answer.
+  - id: antworten
+    de: antworten
+    en: to answer
+    pos: verb
+    example: Er antwortet nicht.
+    exampleEn: He does not answer.
+  - id: warten
+    de: warten
+    en: to wait
+    pos: verb
+    example: Wartest du schon lange?
+    exampleEn: Have you been waiting long?
+  - id: finden
+    de: finden
+    en: to find
+    pos: verb
+    example: Ich finde das Buch nicht.
+    exampleEn: I cannot find the book.
+  - id: tanzen
+    de: tanzen
+    en: to dance
+    pos: verb
+    example: Du tanzt sehr gut.
+    exampleEn: You dance very well.
+  - id: reisen
+    de: reisen
+    en: to travel
+    pos: verb
+    example: Wir reisen gern.
+    exampleEn: We like travelling.
+  - id: kaufen
+    de: kaufen
+    en: to buy
+    pos: verb
+    example: Ich kaufe Brot.
+    exampleEn: I am buying bread.
+  - id: wir
+    de: wir
+    en: we
+    pos: other
+    example: Wir wohnen in Köln.
+    exampleEn: We live in Cologne.
+  - id: ihr
+    de: ihr
+    en: you (several people, informal)
+    pos: other
+    example: Woher kommt ihr?
+    exampleEn: Where are you from?
+  - id: er
+    de: er
+    en: he
+    pos: other
+    example: Er heißt Paul.
+    exampleEn: His name is Paul.
+  - id: es
+    de: es
+    en: it
+    pos: other
+    example: Es kostet zehn Euro.
+    exampleEn: It costs ten euros.
+  - id: zusammen
+    de: zusammen
+    en: together
+    pos: adverb
+    example: Wir lernen zusammen.
+    exampleEn: We learn together.
+  - id: viel
+    de: viel
+    en: much, a lot
+    pos: adverb
+    example: Sie arbeitet viel.
+    exampleEn: She works a lot.
+  - id: gern
+    de: gern
+    en: "gladly; with a verb it means to like doing"
+    pos: adverb
+    example: Ich tanze gern.
+    exampleEn: I like dancing.
+  - id: morgen
+    de: morgen
+    en: tomorrow
+    pos: adverb
+    example: Morgen arbeite ich nicht.
+    exampleEn: Tomorrow I am not working.

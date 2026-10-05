@@ -1,0 +1,144 @@
+lesson: a1.18
+items:
+  - id: bringen
+    de: bringen
+    en: to bring
+    pos: verb
+    example: Bringen Sie mir bitte die Rechnung.
+    exampleEn: Please bring me the bill.
+  - id: zeigen
+    de: zeigen
+    en: to show
+    pos: verb
+    example: Zeigen Sie mir bitte Ihren Ausweis.
+    exampleEn: Please show me your ID.
+  - id: schreiben
+    de: schreiben
+    en: to write
+    pos: verb
+    example: Schreib mir bald!
+    exampleEn: Write to me soon!
+  - id: unterschreiben
+    de: unterschreiben
+    en: to sign
+    pos: verb
+    example: Unterschreiben Sie bitte hier.
+    exampleEn: Please sign here.
+  - id: ausfuellen
+    de: ausfüllen
+    en: to fill in
+    pos: verb
+    example: Füllen Sie bitte das Formular aus.
+    exampleEn: Please fill in the form.
+  - id: zuhoeren
+    de: zuhören
+    en: to listen
+    pos: verb
+    example: Hören Sie bitte zu.
+    exampleEn: Please listen.
+  - id: vergessen
+    de: vergessen (er vergisst)
+    en: to forget
+    pos: verb
+    example: Vergiss das Buch nicht!
+    exampleEn: Do not forget the book!
+  - id: schliessen
+    de: schließen
+    en: to close
+    pos: verb
+    example: Schließen Sie bitte die Tür.
+    exampleEn: Please close the door.
+  - id: oeffnen
+    de: öffnen
+    en: to open
+    pos: verb
+    example: Öffnen Sie bitte das Buch.
+    exampleEn: Please open the book.
+  - id: sitzen
+    de: sitzen
+    en: to sit
+    pos: verb
+    example: Wo sitzen Sie?
+    exampleEn: Where are you sitting?
+  - id: platz-nehmen
+    de: Platz nehmen
+    en: to take a seat
+    pos: phrase
+    example: Nehmen Sie bitte Platz.
+    exampleEn: Please take a seat.
+  - id: formular
+    de: Formular
+    en: form
+    pos: noun
+    article: das
+    plural: Formulare
+    example: Bitte füllen Sie das Formular aus.
+    exampleEn: Please fill in the form.
+  - id: ausweis
+    de: Ausweis
+    en: identity card, ID
+    pos: noun
+    article: der
+    plural: Ausweise
+    example: Haben Sie einen Ausweis?
+    exampleEn: Do you have ID?
+  - id: unterschrift
+    de: Unterschrift
+    en: signature
+    pos: noun
+    article: die
+    plural: Unterschriften
+    example: Hier fehlt die Unterschrift.
+    exampleEn: The signature is missing here.
+  - id: moment
+    de: Moment
+    en: moment
+    pos: noun
+    article: der
+    plural: Momente
+    example: Einen Moment, bitte.
+    exampleEn: One moment, please.
+  - id: rechnung
+    de: Rechnung
+    en: bill, invoice
+    pos: noun
+    article: die
+    plural: Rechnungen
+    example: Die Rechnung, bitte!
+    exampleEn: The bill, please!
+  - id: achtung
+    de: Achtung
+    en: attention; watch out
+    pos: other
+    example: Achtung, der Zug fährt ab!
+    exampleEn: Attention, the train is leaving!
+  - id: vorsicht
+    de: Vorsicht
+    en: careful; caution
+    pos: other
+    example: Vorsicht, die Suppe ist heiß!
+    exampleEn: Careful, the soup is hot!
+  - id: sofort
+    de: sofort
+    en: immediately
+    pos: adverb
+    example: Kommen Sie bitte sofort.
+    exampleEn: Please come immediately.
+  - id: herein
+    de: herein
+    en: in (towards the speaker)
+    pos: adverb
+    example: Kommen Sie bitte herein!
+    exampleEn: Please come in!
+  - id: bald
+    de: bald
+    en: soon
+    pos: adverb
+    example: Komm bald wieder!
+    exampleEn: Come back soon!
+  - id: ja-gern
+    de: Ja, gern.
+    en: Yes, gladly. Certainly.
+    pos: phrase
+    example: Können Sie mir helfen? Ja, gern.
+    exampleEn: Can you help me? Certainly.

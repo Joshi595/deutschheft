@@ -1,0 +1,180 @@
+lesson: a1.17
+items:
+  - id: zug
+    de: Zug
+    en: train
+    pos: noun
+    article: der
+    plural: Züge
+    example: Der Zug fährt um zehn Uhr ab.
+    exampleEn: The train leaves at ten o'clock.
+  - id: u-bahn
+    de: U-Bahn
+    en: underground, subway
+    pos: noun
+    article: die
+    plural: U-Bahnen
+    example: Ich fahre mit der U-Bahn.
+    exampleEn: I go by underground.
+  - id: strassenbahn
+    de: Straßenbahn
+    en: tram
+    pos: noun
+    article: die
+    plural: Straßenbahnen
+    example: Die Straßenbahn kommt in fünf Minuten.
+    exampleEn: The tram comes in five minutes.
+  - id: fahrrad
+    de: Fahrrad
+    en: bicycle
+    pos: noun
+    article: das
+    plural: Fahrräder
+    example: Ich fahre mit dem Fahrrad zur Arbeit.
+    exampleEn: I cycle to work.
+  - id: flugzeug
+    de: Flugzeug
+    en: aeroplane
+    pos: noun
+    article: das
+    plural: Flugzeuge
+    example: Wir fliegen mit dem Flugzeug.
+    exampleEn: We are going by plane.
+  - id: flughafen
+    de: Flughafen
+    en: airport
+    pos: noun
+    article: der
+    plural: Flughäfen
+    example: Wie komme ich zum Flughafen?
+    exampleEn: How do I get to the airport?
+  - id: taxi
+    de: Taxi
+    en: taxi
+    pos: noun
+    article: das
+    plural: Taxis
+    example: Wir nehmen ein Taxi.
+    exampleEn: We are taking a taxi.
+  - id: fahrkarte
+    de: Fahrkarte
+    en: ticket (for travel)
+    pos: noun
+    article: die
+    plural: Fahrkarten
+    example: Eine Fahrkarte nach München, bitte.
+    exampleEn: A ticket to Munich, please.
+  - id: gleis
+    de: Gleis
+    en: platform, track
+    pos: noun
+    article: das
+    plural: Gleise
+    example: Der Zug fährt von Gleis drei.
+    exampleEn: The train leaves from platform three.
+  - id: abfahrt
+    de: Abfahrt
+    en: departure
+    pos: noun
+    article: die
+    plural: Abfahrten
+    example: "Abfahrt: 14:30 Uhr."
+    exampleEn: "Departure: 14:30."
+  - id: ankunft
+    de: Ankunft
+    en: arrival
+    pos: noun
+    article: die
+    plural: Ankünfte
+    example: "Ankunft in Berlin: 18 Uhr."
+    exampleEn: "Arrival in Berlin: 18:00."
+  - id: verspaetung
+    de: Verspätung
+    en: delay
+    pos: noun
+    article: die
+    plural: Verspätungen
+    example: Der Zug hat zehn Minuten Verspätung.
+    exampleEn: The train is ten minutes late.
+  - id: abfahren
+    de: abfahren (er fährt ab)
+    en: to leave, to depart
+    pos: verb
+    example: Der Bus fährt um acht Uhr ab.
+    exampleEn: The bus leaves at eight o'clock.
+  - id: ankommen
+    de: ankommen
+    en: to arrive
+    pos: verb
+    example: Wann kommt der Zug an?
+    exampleEn: When does the train arrive?
+  - id: umsteigen
+    de: umsteigen
+    en: to change (trains, buses)
+    pos: verb
+    example: Sie müssen in Köln umsteigen.
+    exampleEn: You have to change in Cologne.
+  - id: einsteigen
+    de: einsteigen
+    en: to get on, to board
+    pos: verb
+    example: Bitte einsteigen!
+    exampleEn: Please board!
+  - id: aussteigen
+    de: aussteigen
+    en: to get off
+    pos: verb
+    example: Ich steige am Bahnhof aus.
+    exampleEn: I get off at the station.
+  - id: fliegen
+    de: fliegen
+    en: to fly
+    pos: verb
+    example: Wir fliegen nach Italien.
+    exampleEn: We are flying to Italy.
+  - id: reise
+    de: Reise
+    en: journey, trip
+    pos: noun
+    article: die
+    plural: Reisen
+    example: Gute Reise!
+    exampleEn: Have a good trip!
+  - id: urlaub
+    de: Urlaub
+    en: holiday, vacation
+    pos: noun
+    article: der
+    plural: Urlaube
+    example: Im Sommer machen wir Urlaub.
+    exampleEn: In summer we go on holiday.
+  - id: einfach
+    de: einfach
+    en: one way; simple
+    pos: adjective
+    example: Einfach oder hin und zurück?
+    exampleEn: One way or return?
+  - id: hin-und-zurueck
+    de: hin und zurück
+    en: return (there and back)
+    pos: phrase
+    example: Eine Fahrkarte hin und zurück, bitte.
+    exampleEn: A return ticket, please.
+  - id: puenktlich
+    de: pünktlich
+    en: on time, punctual
+    pos: adjective
+    example: Der Zug ist pünktlich.
+    exampleEn: The train is on time.
+  - id: nach
+    de: nach
+    en: to (cities, countries); after
+    pos: preposition
+    example: Ich fahre nach Berlin.
+    exampleEn: I am going to Berlin.
+  - id: mit
+    de: mit
+    en: with; by (transport)
+    pos: preposition
+    example: Ich fahre mit dem Bus.
+    exampleEn: I go by bus.

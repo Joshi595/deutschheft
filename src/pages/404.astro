@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/url';
+---
+
+<Base title="Page not found" width="narrow">
+  <p class="eyebrow" lang="de">Hoppla</p>
+  <h1 class="mt-1 text-4xl sm:text-5xl">This page does not exist.</h1>
+  <p class="mt-4 text-muted">The lesson may have been renamed or moved.</p>
+  <a href={url('')} class="btn btn-primary mt-6">Back to the start</a>
+</Base>

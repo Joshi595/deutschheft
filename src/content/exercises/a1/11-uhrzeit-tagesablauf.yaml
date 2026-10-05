@@ -1,0 +1,220 @@
+lesson: a1.11
+sets:
+  - title: Official time
+    instructions: Choose the time that matches.
+    items:
+      - id: off1
+        type: multiple-choice
+        tags: [time]
+        prompt: vierzehn Uhr dreißig
+        options: ["14:30", "4:13", "14:13"]
+        answer: "14:30"
+      - id: off2
+        type: multiple-choice
+        tags: [time]
+        prompt: neun Uhr fünfzehn
+        options: ["9:15", "9:50", "19:15"]
+        answer: "9:15"
+      - id: off3
+        type: multiple-choice
+        tags: [time]
+        prompt: achtzehn Uhr fünfundvierzig
+        options: ["18:45", "18:54", "8:45"]
+        answer: "18:45"
+
+  - title: Everyday time
+    instructions: Careful with halb.
+    items:
+      - id: day1
+        type: multiple-choice
+        tags: [time, halb]
+        prompt: halb vier
+        options: ["3:30", "4:30", "4:00"]
+        answer: "3:30"
+        explanation: halb names the hour that is coming.
+      - id: day2
+        type: multiple-choice
+        tags: [time]
+        prompt: Viertel nach acht
+        options: ["8:15", "7:45", "8:45"]
+        answer: "8:15"
+      - id: day3
+        type: multiple-choice
+        tags: [time]
+        prompt: Viertel vor zehn
+        options: ["9:45", "10:15", "10:45"]
+        answer: "9:45"
+      - id: day4
+        type: multiple-choice
+        tags: [time, halb]
+        prompt: halb eins
+        options: ["12:30", "1:30", "12:00"]
+        answer: "12:30"
+      - id: day5
+        type: multiple-choice
+        tags: [time]
+        prompt: zehn nach sieben
+        options: ["7:10", "6:50", "10:07"]
+        answer: "7:10"
+      - id: day6
+        type: fill-blank
+        tags: [time, halb]
+        prompt: "6:30 = halb ___"
+        answers: [sieben]
+      - id: day7
+        type: fill-blank
+        tags: [time]
+        prompt: "5:15 = Viertel ___ fünf"
+        answers: [nach]
+      - id: day8
+        type: fill-blank
+        tags: [time]
+        prompt: "5:45 = Viertel ___ sechs"
+        answers: [vor]
+
+  - title: Listen for the time
+    instructions: Announcements use the official way.
+    items:
+      - id: hear1
+        type: multiple-choice
+        tags: [listening, time]
+        stimulus:
+          kind: audio
+          label: Durchsage am Bahnhof
+          lines:
+            - text: "Achtung, bitte! Der Zug nach München fährt heute um sechzehn Uhr zwanzig."
+        prompt: Wann fährt der Zug nach München?
+        options: ["16:20", "6:20", "16:12"]
+        answer: "16:20"
+      - id: hear2
+        type: multiple-choice
+        tags: [listening, time]
+        stimulus:
+          kind: audio
+          label: Anrufbeantworter
+          lines:
+            - text: "Hallo Tom, hier ist Anna. Der Film fängt um halb acht an. Kommst du mit?"
+        prompt: Wann fängt der Film an?
+        options: ["19:30", "20:30", "8:00"]
+        answer: "19:30"
+        explanation: "halb acht is 7:30, and in the evening that is 19:30."
+      - id: hear3
+        type: multiple-choice
+        tags: [listening, days]
+        stimulus:
+          kind: audio
+          label: Ansage
+          lines:
+            - text: "Guten Tag. Die Praxis Doktor Weber ist von Montag bis Donnerstag von acht bis siebzehn Uhr geöffnet. Am Freitag ist die Praxis geschlossen."
+        prompt: Wann ist die Praxis geschlossen?
+        options: [am Freitag, am Donnerstag, am Montag]
+        answer: am Freitag
+
+  - title: um, am or von … bis?
+    items:
+      - id: prep1
+        type: fill-blank
+        tags: [time prepositions]
+        prompt: "Der Kurs beginnt ___ neun Uhr."
+        answers: [um]
+      - id: prep2
+        type: fill-blank
+        tags: [time prepositions]
+        prompt: "___ Samstag arbeite ich nicht."
+        answers: [Am]
+      - id: prep3
+        type: fill-blank
+        tags: [time prepositions]
+        prompt: "___ Abend sehe ich fern."
+        answers: [Am]
+      - id: prep4
+        type: fill-blank
+        tags: [time prepositions]
+        prompt: "Ich arbeite von acht ___ sechzehn Uhr."
+        answers: [bis]
+      - id: prep5
+        type: matching
+        tags: [days]
+        prompt: Match each day with its English name.
+        pairs:
+          - { left: Dienstag, right: Tuesday }
+          - { left: Donnerstag, right: Thursday }
+          - { left: Mittwoch, right: Wednesday }
+          - { left: Samstag, right: Saturday }
+          - { left: Sonntag, right: Sunday }
+
+  - title: Separable verbs
+    instructions: Put the words in the right order. The prefix goes to the end.
+    items:
+      - id: sep1
+        type: word-order
+        tags: [separable verbs]
+        prompt: I get up at seven o'clock.
+        answer: Ich stehe um sieben Uhr auf.
+      - id: sep2
+        type: word-order
+        tags: [separable verbs]
+        prompt: We go shopping on Saturday.
+        answer: Wir kaufen am Samstag ein.
+      - id: sep3
+        type: word-order
+        tags: [separable verbs]
+        prompt: When does the film start?
+        answer: Wann fängt der Film an?
+      - id: sep4
+        type: fill-blank
+        tags: [separable verbs]
+        prompt: "Sie ruft ihre Mutter ___. (anrufen)"
+        answers: [an]
+      - id: sep5
+        type: fill-blank
+        tags: [separable verbs]
+        prompt: "Am Abend sehe ich ___. (fernsehen)"
+        answers: [fern]
+      - id: sep6
+        type: multiple-choice
+        tags: [separable verbs]
+        prompt: Which sentence is correct?
+        options:
+          - Ich stehe um sechs Uhr auf.
+          - Ich aufstehe um sechs Uhr.
+          - Ich stehe auf um sechs Uhr.
+        answer: Ich stehe um sechs Uhr auf.
+
+  - title: Say and write it
+    items:
+      - id: tr1
+        type: translation
+        tags: [time]
+        prompt: What time is it?
+        answers:
+          - Wie spät ist es?
+          - Wie viel Uhr ist es?
+      - id: tr2
+        type: translation
+        tags: [time, halb]
+        prompt: It is half past three. (everyday way)
+        answers: [Es ist halb vier.]
+      - id: tr3
+        type: translation
+        tags: [time prepositions]
+        prompt: On Monday I work.
+        answers:
+          - Am Montag arbeite ich.
+          - Ich arbeite am Montag.
+      - id: write1
+        type: writing-task
+        tags: [writing, daily routine]
+        prompt: Describe your day in four or five sentences.
+        points:
+          - When you get up
+          - When you work or study
+          - What you do in the afternoon or evening
+          - When you go to bed
+        minWords: 25
+        phrases:
+          - Ich stehe um … Uhr auf.
+          - Ich arbeite von … bis … Uhr.
+          - Am Nachmittag / Am Abend …
+          - Um … Uhr gehe ich ins Bett.
+        sample: "Ich stehe um halb sieben auf. Um sieben Uhr frühstücke ich. Ich arbeite von acht bis sechzehn Uhr. Am Nachmittag kaufe ich ein. Am Abend sehe ich fern. Um elf Uhr gehe ich ins Bett."

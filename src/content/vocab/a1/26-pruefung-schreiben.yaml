@@ -1,0 +1,126 @@
+lesson: a1.26
+items:
+  - id: nachname
+    de: Nachname
+    en: surname
+    pos: noun
+    article: der
+    plural: Nachnamen
+    example: Mein Nachname ist Rossi.
+    exampleEn: My surname is Rossi.
+  - id: geburtsort
+    de: Geburtsort
+    en: place of birth
+    pos: noun
+    article: der
+    plural: Geburtsorte
+    example: "Geburtsort: Rom."
+    exampleEn: "Place of birth: Rome."
+  - id: staatsangehoerigkeit
+    de: Staatsangehörigkeit
+    en: nationality
+    pos: noun
+    article: die
+    plural: Staatsangehörigkeiten
+    example: "Staatsangehörigkeit: italienisch."
+    exampleEn: "Nationality: Italian."
+  - id: wohnort
+    de: Wohnort
+    en: place of residence
+    pos: noun
+    article: der
+    plural: Wohnorte
+    example: Mein Wohnort ist München.
+    exampleEn: My place of residence is Munich.
+  - id: anmeldung
+    de: Anmeldung
+    en: registration
+    pos: noun
+    article: die
+    plural: Anmeldungen
+    example: Die Anmeldung ist im ersten Stock.
+    exampleEn: Registration is on the first floor.
+  - id: sich-anmelden
+    de: sich anmelden
+    en: to register, to sign up
+    pos: verb
+    example: Ich möchte mich für den Kurs anmelden.
+    exampleEn: I would like to sign up for the course.
+  - id: einladen
+    de: einladen (er lädt ein)
+    en: to invite
+    pos: verb
+    example: Ich möchte dich zum Essen einladen.
+    exampleEn: I would like to invite you to a meal.
+  - id: einladung
+    de: Einladung
+    en: invitation
+    pos: noun
+    article: die
+    plural: Einladungen
+    example: Danke für die Einladung.
+    exampleEn: Thank you for the invitation.
+  - id: antwort
+    de: Antwort
+    en: answer, reply
+    pos: noun
+    article: die
+    plural: Antworten
+    example: Ich freue mich auf Ihre Antwort.
+    exampleEn: I look forward to your reply.
+  - id: schicken
+    de: schicken
+    en: to send
+    pos: verb
+    example: Können Sie mir Informationen schicken?
+    exampleEn: Can you send me information?
+  - id: information
+    de: Information
+    en: information
+    pos: noun
+    article: die
+    plural: Informationen
+    example: Ich brauche Informationen über den Kurs.
+    exampleEn: I need information about the course.
+  - id: kurs
+    de: Kurs
+    en: course
+    pos: noun
+    article: der
+    plural: Kurse
+    example: Der Kurs beginnt am Montag.
+    exampleEn: The course begins on Monday.
+  - id: sehr-geehrte
+    de: Sehr geehrte Damen und Herren
+    en: Dear Sir or Madam
+    pos: phrase
+    example: Sehr geehrte Damen und Herren, ich möchte einen Kurs machen.
+    exampleEn: Dear Sir or Madam, I would like to take a course.
+  - id: mit-freundlichen-gruessen
+    de: Mit freundlichen Grüßen
+    en: Yours sincerely
+    pos: phrase
+  - id: viele-gruesse
+    de: Viele Grüße
+    en: Best wishes
+    pos: phrase
+  - id: liebe-lieber
+    de: Liebe … / Lieber …
+    en: Dear … (to a woman / to a man)
+    pos: phrase
+    example: Liebe Anna, lieber Tom,
+    exampleEn: Dear Anna, dear Tom,
+  - id: bar
+    de: bar
+    en: in cash
+    pos: adverb
+    example: Ich zahle bar.
+    exampleEn: I am paying in cash.
+  - id: erwachsene
+    de: Erwachsene
+    en: adult
+    pos: noun
+    article: der
+    plural: Erwachsene
+    example: Zwei Erwachsene und ein Kind, bitte.
+    exampleEn: Two adults and one child, please.

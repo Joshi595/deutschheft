@@ -1,0 +1,196 @@
+lesson: a1.09
+items:
+  - id: essen
+    de: essen
+    en: to eat
+    pos: verb
+    example: Wir essen den Salat.
+    exampleEn: We are eating the salad.
+  - id: moegen
+    de: mögen
+    en: to like
+    pos: verb
+    example: Ich mag Kaffee.
+    exampleEn: I like coffee.
+  - id: moechten
+    de: möchten
+    en: would like
+    pos: verb
+    example: Ich möchte einen Tee, bitte.
+    exampleEn: I would like a tea, please.
+  - id: nehmen
+    de: nehmen
+    en: to take
+    pos: verb
+    example: Ich nehme den Fisch.
+    exampleEn: I will have the fish.
+  - id: brauchen
+    de: brauchen
+    en: to need
+    pos: verb
+    example: Ich brauche einen Stift.
+    exampleEn: I need a pen.
+  - id: zahlen
+    de: zahlen
+    en: to pay
+    pos: verb
+    example: Wir möchten zahlen.
+    exampleEn: We would like to pay.
+  - id: brot
+    de: Brot
+    en: bread
+    pos: noun
+    article: das
+    plural: Brote
+    example: Ich kaufe ein Brot.
+    exampleEn: I am buying a loaf of bread.
+  - id: broetchen
+    de: Brötchen
+    en: bread roll
+    pos: noun
+    article: das
+    plural: Brötchen
+    example: Zum Frühstück esse ich ein Brötchen.
+    exampleEn: For breakfast I eat a bread roll.
+  - id: kaese
+    de: Käse
+    en: cheese
+    pos: noun
+    article: der
+    plural: "-"
+    example: Er mag keinen Käse.
+    exampleEn: He does not like cheese.
+  - id: butter
+    de: Butter
+    en: butter
+    pos: noun
+    article: die
+    plural: "-"
+    example: Wir brauchen Butter.
+    exampleEn: We need butter.
+  - id: ei
+    de: Ei
+    en: egg
+    pos: noun
+    article: das
+    plural: Eier
+    example: Ich esse ein Ei.
+    exampleEn: I am eating an egg.
+  - id: milch
+    de: Milch
+    en: milk
+    pos: noun
+    article: die
+    plural: "-"
+    example: Das Kind trinkt Milch.
+    exampleEn: The child is drinking milk.
+  - id: apfel
+    de: Apfel
+    en: apple
+    pos: noun
+    article: der
+    plural: Äpfel
+    example: Ich esse einen Apfel.
+    exampleEn: I am eating an apple.
+  - id: salat
+    de: Salat
+    en: salad; lettuce
+    pos: noun
+    article: der
+    plural: Salate
+    example: Sie nimmt den Salat.
+    exampleEn: She is having the salad.
+  - id: suppe
+    de: Suppe
+    en: soup
+    pos: noun
+    article: die
+    plural: Suppen
+    example: Die Suppe ist heiß.
+    exampleEn: The soup is hot.
+  - id: fleisch
+    de: Fleisch
+    en: meat
+    pos: noun
+    article: das
+    plural: "-"
+    example: Ich esse kein Fleisch.
+    exampleEn: I do not eat meat.
+  - id: fisch
+    de: Fisch
+    en: fish
+    pos: noun
+    article: der
+    plural: Fische
+    example: Magst du Fisch?
+    exampleEn: Do you like fish?
+  - id: kartoffel
+    de: Kartoffel
+    en: potato
+    pos: noun
+    article: die
+    plural: Kartoffeln
+    example: Wir essen Kartoffeln.
+    exampleEn: We are eating potatoes.
+  - id: gemuese
+    de: Gemüse
+    en: vegetables
+    pos: noun
+    article: das
+    plural: "-"
+    example: Gemüse ist gesund.
+    exampleEn: Vegetables are healthy.
+  - id: obst
+    de: Obst
+    en: fruit
+    pos: noun
+    article: das
+    plural: "-"
+    example: Ich esse gern Obst.
+    exampleEn: I like eating fruit.
+  - id: kuchen
+    de: Kuchen
+    en: cake
+    pos: noun
+    article: der
+    plural: Kuchen
+    example: Ich möchte ein Stück Kuchen.
+    exampleEn: I would like a piece of cake.
+  - id: saft
+    de: Saft
+    en: juice
+    pos: noun
+    article: der
+    plural: Säfte
+    example: Sie trinkt einen Saft.
+    exampleEn: She is drinking a juice.
+  - id: tee
+    de: Tee
+    en: tea
+    pos: noun
+    article: der
+    plural: Tees
+    example: Ich nehme einen Tee.
+    exampleEn: I will have a tea.
+  - id: bier
+    de: Bier
+    en: beer
+    pos: noun
+    article: das
+    plural: Biere
+    example: Er trinkt ein Bier.
+    exampleEn: He is drinking a beer.
+  - id: fruehstueck
+    de: Frühstück
+    en: breakfast
+    pos: noun
+    article: das
+    plural: "-"
+    example: Das Frühstück ist um acht Uhr.
+    exampleEn: Breakfast is at eight o'clock.
+  - id: es-gibt
+    de: es gibt
+    en: there is, there are
+    pos: phrase
+    example: Hier gibt es einen Supermarkt.
+    exampleEn: There is a supermarket here.

@@ -1,0 +1,250 @@
+lesson: a1.17
+sets:
+  - title: nach, zu or in?
+    items:
+      - id: to1
+        type: multiple-choice
+        tags: [wohin]
+        prompt: Ich fahre ___ Berlin.
+        options: [nach, zu, in]
+        answer: nach
+        explanation: Cities take nach.
+      - id: to2
+        type: multiple-choice
+        tags: [wohin]
+        prompt: Ich gehe ___ Arzt.
+        options: [zum, nach, ins]
+        answer: zum
+        explanation: People take zu.
+      - id: to3
+        type: multiple-choice
+        tags: [wohin]
+        prompt: Wir gehen ___ Kino.
+        options: [ins, nach, zur]
+        answer: ins
+        explanation: "A building you go into: in + accusative, ins = in das."
+      - id: to4
+        type: multiple-choice
+        tags: [wohin]
+        prompt: Ich gehe ___ Hause.
+        options: [nach, zu, ins]
+        answer: nach
+      - id: to5
+        type: multiple-choice
+        tags: [wohin]
+        prompt: Sie fährt ___ Arbeit.
+        options: [zur, nach, ins]
+        answer: zur
+      - id: to6
+        type: multiple-choice
+        tags: [wohin]
+        prompt: Wir fliegen ___ Italien.
+        options: [nach, zu, in]
+        answer: nach
+      - id: to7
+        type: multiple-choice
+        tags: [wohin]
+        prompt: Wir fahren ___ Schweiz.
+        options: [in die, nach, zu]
+        answer: in die
+        explanation: "die Schweiz has an article, so it takes in, not nach."
+
+  - title: Wo or Wohin?
+    instructions: Staying takes the dative, moving takes the accusative.
+    items:
+      - id: wo1
+        type: multiple-choice
+        tags: [wo and wohin]
+        prompt: Ich bin ___ Kino.
+        options: [im, ins]
+        answer: im
+      - id: wo2
+        type: multiple-choice
+        tags: [wo and wohin]
+        prompt: Ich gehe ___ Kino.
+        options: [ins, im]
+        answer: ins
+      - id: wo3
+        type: multiple-choice
+        tags: [wo and wohin]
+        prompt: Wir fahren ___ Stadt.
+        options: [in die, in der]
+        answer: in die
+      - id: wo4
+        type: multiple-choice
+        tags: [wo and wohin]
+        prompt: Wir wohnen ___ Stadt.
+        options: [in der, in die]
+        answer: in der
+      - id: wo5
+        type: multiple-choice
+        tags: [wo and wohin]
+        prompt: Die Kinder gehen ___ Park.
+        options: [in den, im]
+        answer: in den
+      - id: wo6
+        type: multiple-choice
+        tags: [wo and wohin]
+        prompt: Die Kinder spielen ___ Park.
+        options: [im, in den]
+        answer: im
+
+  - title: How do you travel?
+    items:
+      - id: mit1
+        type: fill-blank
+        tags: [transport, dative]
+        prompt: "Ich fahre mit ___ Bus. (der)"
+        answers: [dem]
+      - id: mit2
+        type: fill-blank
+        tags: [transport, dative]
+        prompt: "Sie fährt mit ___ U-Bahn. (die)"
+        answers: [der]
+      - id: mit3
+        type: fill-blank
+        tags: [transport, dative]
+        prompt: "Wir fahren mit ___ Auto. (das)"
+        answers: [dem]
+      - id: mit4
+        type: multiple-choice
+        tags: [transport]
+        prompt: You walk to work. What do you say?
+        options: [Ich gehe zu Fuß., Ich fahre zu Fuß., Ich gehe mit dem Fuß.]
+        answer: Ich gehe zu Fuß.
+      - id: mit5
+        type: matching
+        tags: [transport]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: die Fahrkarte, right: ticket }
+          - { left: das Gleis, right: platform }
+          - { left: die Verspätung, right: delay }
+          - { left: die Abfahrt, right: departure }
+          - { left: die Ankunft, right: arrival }
+          - { left: umsteigen, right: to change trains }
+
+  - title: Station announcements
+    instructions: As in the listening exam. You hear each announcement twice.
+    items:
+      - id: ann1
+        type: multiple-choice
+        tags: [listening, travel]
+        stimulus:
+          kind: audio
+          label: Durchsage
+          lines:
+            - text: "Achtung an Gleis fünf! Der Intercity nach Hamburg fährt heute von Gleis acht. Ich wiederhole: Der Intercity nach Hamburg fährt von Gleis acht."
+        prompt: Von welchem Gleis fährt der Zug nach Hamburg?
+        options: [Gleis 8, Gleis 5, Gleis 18]
+        answer: Gleis 8
+      - id: ann2
+        type: multiple-choice
+        tags: [listening, travel]
+        stimulus:
+          kind: audio
+          label: Durchsage
+          lines:
+            - text: "Der Regionalexpress aus Köln, Ankunft vierzehn Uhr zehn, hat heute circa fünfzehn Minuten Verspätung."
+        prompt: Wie viel Verspätung hat der Zug?
+        options: [15 Minuten, 10 Minuten, 50 Minuten]
+        answer: 15 Minuten
+      - id: ann3
+        type: true-false
+        tags: [listening, travel]
+        stimulus:
+          kind: audio
+          label: Durchsage
+          lines:
+            - text: "Der Regionalexpress aus Köln, Ankunft vierzehn Uhr zehn, hat heute circa fünfzehn Minuten Verspätung."
+        prompt: Der Zug fährt nach Köln.
+        answer: false
+        explanation: "aus Köln: the train comes from Cologne."
+      - id: ann4
+        type: multiple-choice
+        tags: [listening, travel]
+        stimulus:
+          kind: audio
+          label: Am Schalter
+          lines:
+            - speaker: Kundin
+              text: "Guten Tag. Eine Fahrkarte nach Frankfurt, bitte."
+            - speaker: Angestellter
+              text: "Einfach oder hin und zurück?"
+            - speaker: Kundin
+              text: "Hin und zurück, bitte. Was kostet das?"
+            - speaker: Angestellter
+              text: "Das macht achtundfünfzig Euro. Der nächste Zug fährt um neun Uhr zwanzig von Gleis zwei."
+        prompt: Was kostet die Fahrkarte?
+        options: ["58 €", "85 €", "48 €"]
+        answer: "58 €"
+
+  - title: Read the timetable
+    stimulus:
+      kind: text
+      label: Fahrplan
+      title: Abfahrt Hauptbahnhof
+      text: |
+        09:20  ICE  nach Frankfurt   Gleis 2   pünktlich
+        09:35  RE   nach Bonn        Gleis 7   10 Minuten Verspätung
+        09:50  IC   nach Hamburg     Gleis 4   pünktlich
+    items:
+      - id: plan1
+        type: multiple-choice
+        tags: [reading, travel]
+        prompt: Sie möchten nach Hamburg fahren. Wann fährt der Zug?
+        options: ["09:50", "09:20", "09:35"]
+        answer: "09:50"
+      - id: plan2
+        type: true-false
+        tags: [reading, travel]
+        prompt: Der Zug nach Bonn fährt pünktlich.
+        answer: false
+      - id: plan3
+        type: multiple-choice
+        tags: [reading, travel]
+        prompt: Von welchem Gleis fährt der Zug nach Frankfurt?
+        options: [Gleis 2, Gleis 4, Gleis 7]
+        answer: Gleis 2
+
+  - title: Say it in German
+    items:
+      - id: order1
+        type: word-order
+        tags: [travel, separable verbs]
+        prompt: When does the train arrive in Berlin?
+        answer: Wann kommt der Zug in Berlin an?
+      - id: order2
+        type: word-order
+        tags: [transport]
+        prompt: I go to work by bus.
+        answer: Ich fahre mit dem Bus zur Arbeit.
+      - id: tr1
+        type: translation
+        tags: [travel]
+        prompt: A ticket to Munich, please.
+        answers:
+          - "Eine Fahrkarte nach München, bitte."
+          - "Ein Ticket nach München, bitte."
+      - id: tr2
+        type: translation
+        tags: [wohin]
+        prompt: I am going home.
+        answers:
+          - Ich gehe nach Hause.
+          - Ich fahre nach Hause.
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, travel]
+        prompt: You are at the ticket office. Buy a return ticket to Cologne, ask when the next train leaves and from which platform.
+        cards: [Fahrkarte, hin und zurück, wann?, Gleis?]
+        phrases:
+          - Eine Fahrkarte nach …, bitte.
+          - Hin und zurück.
+          - Wann fährt der nächste Zug?
+          - Von welchem Gleis?
+        checklist:
+          - I asked for a ticket with the destination
+          - I said whether it is one way or return
+          - I asked for the time and the platform
+        sample: "Guten Tag. Eine Fahrkarte nach Köln, bitte. Hin und zurück. Wann fährt der nächste Zug? Von welchem Gleis?"

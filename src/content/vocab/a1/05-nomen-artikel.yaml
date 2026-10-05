@@ -1,0 +1,204 @@
+lesson: a1.05
+items:
+  - id: tisch
+    de: Tisch
+    en: table
+    pos: noun
+    article: der
+    plural: Tische
+    example: Der Tisch ist groß.
+    exampleEn: The table is big.
+  - id: stuhl
+    de: Stuhl
+    en: chair
+    pos: noun
+    article: der
+    plural: Stühle
+    example: Der Stuhl ist neu.
+    exampleEn: The chair is new.
+  - id: lampe
+    de: Lampe
+    en: lamp
+    pos: noun
+    article: die
+    plural: Lampen
+    example: Die Lampe ist klein.
+    exampleEn: The lamp is small.
+  - id: buch
+    de: Buch
+    en: book
+    pos: noun
+    article: das
+    plural: Bücher
+    example: Das Buch ist interessant.
+    exampleEn: The book is interesting.
+  - id: heft
+    de: Heft
+    en: exercise book, notebook
+    pos: noun
+    article: das
+    plural: Hefte
+    example: Das Heft kostet zwei Euro.
+    exampleEn: The notebook costs two euros.
+  - id: stift
+    de: Stift
+    en: pen, pencil
+    pos: noun
+    article: der
+    plural: Stifte
+    example: Wo ist der Stift?
+    exampleEn: Where is the pen?
+  - id: tasche
+    de: Tasche
+    en: bag
+    pos: noun
+    article: die
+    plural: Taschen
+    example: Die Tasche ist schwer.
+    exampleEn: The bag is heavy.
+  - id: handy
+    de: Handy
+    en: mobile phone
+    pos: noun
+    article: das
+    plural: Handys
+    example: Das Handy ist neu.
+    exampleEn: The mobile phone is new.
+  - id: computer
+    de: Computer
+    en: computer
+    pos: noun
+    article: der
+    plural: Computer
+    example: Der Computer ist alt.
+    exampleEn: The computer is old.
+  - id: tuer
+    de: Tür
+    en: door
+    pos: noun
+    article: die
+    plural: Türen
+    example: Die Tür ist offen.
+    exampleEn: The door is open.
+  - id: fenster
+    de: Fenster
+    en: window
+    pos: noun
+    article: das
+    plural: Fenster
+    example: Das Fenster ist groß.
+    exampleEn: The window is big.
+  - id: bild
+    de: Bild
+    en: picture
+    pos: noun
+    article: das
+    plural: Bilder
+    example: Das Bild ist schön.
+    exampleEn: The picture is beautiful.
+  - id: uhr
+    de: Uhr
+    en: clock, watch
+    pos: noun
+    article: die
+    plural: Uhren
+    example: Die Uhr ist teuer.
+    exampleEn: The watch is expensive.
+  - id: auto
+    de: Auto
+    en: car
+    pos: noun
+    article: das
+    plural: Autos
+    example: Das Auto ist schnell.
+    exampleEn: The car is fast.
+  - id: kind
+    de: Kind
+    en: child
+    pos: noun
+    article: das
+    plural: Kinder
+    example: Das Kind spielt.
+    exampleEn: The child is playing.
+  - id: mann
+    de: Mann
+    en: man; husband
+    pos: noun
+    article: der
+    plural: Männer
+    example: Der Mann heißt Paul.
+    exampleEn: The man is called Paul.
+  - id: maedchen
+    de: Mädchen
+    en: girl
+    pos: noun
+    article: das
+    plural: Mädchen
+    example: Das Mädchen lernt Deutsch.
+    exampleEn: The girl is learning German.
+  - id: junge
+    de: Junge
+    en: boy
+    pos: noun
+    article: der
+    plural: Jungen
+    example: Der Junge spielt Fußball.
+    exampleEn: The boy is playing football.
+  - id: zeitung
+    de: Zeitung
+    en: newspaper
+    pos: noun
+    article: die
+    plural: Zeitungen
+    example: Die Zeitung kostet zwei Euro.
+    exampleEn: The newspaper costs two euros.
+  - id: wohnung
+    de: Wohnung
+    en: flat, apartment
+    pos: noun
+    article: die
+    plural: Wohnungen
+    example: Die Wohnung ist schön.
+    exampleEn: The flat is nice.
+  - id: zimmer
+    de: Zimmer
+    en: room
+    pos: noun
+    article: das
+    plural: Zimmer
+    example: Das Zimmer ist klein.
+    exampleEn: The room is small.
+  - id: lehrer
+    de: Lehrer
+    en: teacher (male)
+    pos: noun
+    article: der
+    plural: Lehrer
+    example: Der Lehrer kommt aus Wien.
+    exampleEn: The teacher comes from Vienna.
+  - id: lehrerin
+    de: Lehrerin
+    en: teacher (female)
+    pos: noun
+    article: die
+    plural: Lehrerinnen
+    example: Die Lehrerin ist sehr nett.
+    exampleEn: The teacher is very nice.
+  - id: gross
+    de: groß
+    en: big, tall
+    pos: adjective
+    example: Der Tisch ist groß.
+    exampleEn: The table is big.
+  - id: klein
+    de: klein
+    en: small
+    pos: adjective
+    example: Das Zimmer ist klein.
+    exampleEn: The room is small.
+  - id: neu
+    de: neu
+    en: new
+    pos: adjective
+    example: Das Handy ist neu.
+    exampleEn: The mobile phone is new.

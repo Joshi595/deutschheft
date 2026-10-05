@@ -1,0 +1,116 @@
+lesson: a1.25
+items:
+  - id: und
+    de: und
+    en: and
+    pos: conjunction
+    example: Ich komme aus Indien und wohne in Köln.
+    exampleEn: I come from India and live in Cologne.
+  - id: oder
+    de: oder
+    en: or
+    pos: conjunction
+    example: Möchtest du Kaffee oder Tee?
+    exampleEn: Would you like coffee or tea?
+  - id: aber
+    de: aber
+    en: but
+    pos: conjunction
+    example: Ich bin müde, aber ich muss arbeiten.
+    exampleEn: I am tired, but I have to work.
+  - id: denn
+    de: denn
+    en: because (normal word order)
+    pos: conjunction
+    example: Ich gehe nach Hause, denn ich bin müde.
+    exampleEn: I am going home because I am tired.
+  - id: sondern
+    de: sondern
+    en: but rather (after a negative)
+    pos: conjunction
+    example: Das ist kein Kaffee, sondern Tee.
+    exampleEn: That is not coffee but tea.
+  - id: deshalb
+    de: deshalb
+    en: therefore, that is why
+    pos: adverb
+    example: Ich bin krank. Deshalb bleibe ich zu Hause.
+    exampleEn: I am ill. That is why I am staying at home.
+  - id: zuerst
+    de: zuerst
+    en: first
+    pos: adverb
+    example: Zuerst frühstücke ich.
+    exampleEn: First I have breakfast.
+  - id: danach
+    de: danach
+    en: after that
+    pos: adverb
+    example: Danach kaufe ich ein.
+    exampleEn: After that I go shopping.
+  - id: am-ende
+    de: am Ende
+    en: in the end
+    pos: phrase
+    example: Am Ende waren wir sehr müde.
+    exampleEn: In the end we were very tired.
+  - id: auch
+    de: auch
+    en: also, too
+    pos: adverb
+    example: Ich komme auch.
+    exampleEn: I am coming too.
+  - id: nur
+    de: nur
+    en: only
+    pos: adverb
+    example: Ich habe nur zehn Minuten Zeit.
+    exampleEn: I only have ten minutes.
+  - id: muede
+    de: müde
+    en: tired
+    pos: adjective
+    example: Ich bin sehr müde.
+    exampleEn: I am very tired.
+  - id: fertig
+    de: fertig
+    en: finished, ready
+    pos: adjective
+    example: Bist du fertig?
+    exampleEn: Are you ready?
+  - id: grund
+    de: Grund
+    en: reason
+    pos: noun
+    article: der
+    plural: Gründe
+    example: Was ist der Grund?
+    exampleEn: What is the reason?
+  - id: satz
+    de: Satz
+    en: sentence
+    pos: noun
+    article: der
+    plural: Sätze
+    example: Schreiben Sie drei Sätze.
+    exampleEn: Write three sentences.
+  - id: text
+    de: Text
+    en: text
+    pos: noun
+    article: der
+    plural: Texte
+    example: Lesen Sie den Text.
+    exampleEn: Read the text.
+  - id: bleiben
+    de: bleiben
+    en: to stay
+    pos: verb
+    example: Wir bleiben zu Hause.
+    exampleEn: We are staying at home.
+  - id: meistens
+    de: meistens
+    en: mostly, usually
+    pos: adverb
+    example: Meistens esse ich um zwölf Uhr.
+    exampleEn: I usually eat at twelve.

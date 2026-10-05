@@ -1,0 +1,110 @@
+lesson: a1.27
+items:
+  - id: taeglich
+    de: täglich
+    en: daily, every day
+    pos: adverb
+    example: Täglich geöffnet von 8 bis 20 Uhr.
+    exampleEn: Open daily from 8 am to 8 pm.
+  - id: ruhetag
+    de: Ruhetag
+    en: closing day, day off
+    pos: noun
+    article: der
+    plural: Ruhetage
+    example: Montag Ruhetag.
+    exampleEn: Closed on Mondays.
+  - id: ausser
+    de: außer
+    en: except
+    pos: preposition
+    example: Geöffnet täglich außer Sonntag.
+    exampleEn: Open daily except Sunday.
+  - id: ab
+    de: ab
+    en: from (a time onwards)
+    pos: preposition
+    example: Ab Montag ist das Büro wieder geöffnet.
+    exampleEn: From Monday the office is open again.
+  - id: bis
+    de: bis
+    en: until
+    pos: preposition
+    example: Das Geschäft ist bis 20 Uhr geöffnet.
+    exampleEn: The shop is open until 8 pm.
+  - id: kostenlos
+    de: kostenlos
+    en: free of charge
+    pos: adjective
+    example: Der Eintritt ist kostenlos.
+    exampleEn: Admission is free.
+  - id: eintritt
+    de: Eintritt
+    en: admission, entry
+    pos: noun
+    article: der
+    plural: "-"
+    example: Eintritt frei.
+    exampleEn: Admission free.
+  - id: guenstig
+    de: günstig
+    en: good value, inexpensive
+    pos: adjective
+    example: Die Wohnung ist günstig.
+    exampleEn: The flat is inexpensive.
+  - id: anzeige
+    de: Anzeige
+    en: advert, advertisement
+    pos: noun
+    article: die
+    plural: Anzeigen
+    example: Ich lese die Anzeigen in der Zeitung.
+    exampleEn: I read the adverts in the newspaper.
+  - id: schild
+    de: Schild
+    en: sign
+    pos: noun
+    article: das
+    plural: Schilder
+    example: Auf dem Schild steht "Geschlossen".
+    exampleEn: The sign says "Closed".
+  - id: aufgabe
+    de: Aufgabe
+    en: task, exercise
+    pos: noun
+    article: die
+    plural: Aufgaben
+    example: Lesen Sie die Aufgabe.
+    exampleEn: Read the task.
+  - id: beispiel
+    de: Beispiel
+    en: example
+    pos: noun
+    article: das
+    plural: Beispiele
+    example: Hier ist ein Beispiel.
+    exampleEn: Here is an example.
+  - id: ankreuzen
+    de: ankreuzen
+    en: to tick, to mark with a cross
+    pos: verb
+    example: Kreuzen Sie an, richtig oder falsch.
+    exampleEn: Mark right or wrong.
+  - id: nur-nach-anmeldung
+    de: nur nach Anmeldung
+    en: by appointment only
+    pos: phrase
+    example: Termine nur nach Anmeldung.
+    exampleEn: Appointments by registration only.
+  - id: zu-vermieten
+    de: zu vermieten
+    en: to let, for rent
+    pos: phrase
+    example: Zimmer zu vermieten.
+    exampleEn: Room to let.
+  - id: zu-verkaufen
+    de: zu verkaufen
+    en: for sale
+    pos: phrase
+    example: Fahrrad zu verkaufen.
+    exampleEn: Bicycle for sale.

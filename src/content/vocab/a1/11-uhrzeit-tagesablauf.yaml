@@ -1,0 +1,192 @@
+lesson: a1.11
+items:
+  - id: uhr
+    de: Uhr
+    en: clock; o'clock
+    pos: noun
+    article: die
+    plural: Uhren
+    example: Es ist drei Uhr.
+    exampleEn: It is three o'clock.
+  - id: stunde
+    de: Stunde
+    en: hour
+    pos: noun
+    article: die
+    plural: Stunden
+    example: Der Kurs dauert zwei Stunden.
+    exampleEn: The course lasts two hours.
+  - id: minute
+    de: Minute
+    en: minute
+    pos: noun
+    article: die
+    plural: Minuten
+    example: Der Bus kommt in fünf Minuten.
+    exampleEn: The bus comes in five minutes.
+  - id: wie-spaet
+    de: Wie spät ist es?
+    en: What time is it?
+    pos: phrase
+    example: Entschuldigung, wie spät ist es?
+    exampleEn: Excuse me, what time is it?
+  - id: halb
+    de: halb
+    en: half (to the next hour)
+    pos: adverb
+    example: Es ist halb vier.
+    exampleEn: It is half past three.
+  - id: viertel
+    de: Viertel
+    en: quarter
+    pos: noun
+    article: das
+    plural: Viertel
+    example: Es ist Viertel nach acht.
+    exampleEn: It is quarter past eight.
+  - id: montag
+    de: Montag
+    en: Monday
+    pos: noun
+    article: der
+    plural: Montage
+    example: Am Montag arbeite ich.
+    exampleEn: On Monday I work.
+  - id: dienstag
+    de: Dienstag
+    en: Tuesday
+    pos: noun
+    article: der
+    plural: Dienstage
+  - id: mittwoch
+    de: Mittwoch
+    en: Wednesday
+    pos: noun
+    article: der
+    plural: Mittwoche
+  - id: donnerstag
+    de: Donnerstag
+    en: Thursday
+    pos: noun
+    article: der
+    plural: Donnerstage
+  - id: freitag
+    de: Freitag
+    en: Friday
+    pos: noun
+    article: der
+    plural: Freitage
+  - id: samstag
+    de: Samstag
+    en: Saturday
+    pos: noun
+    article: der
+    plural: Samstage
+    example: Am Samstag kaufen wir ein.
+    exampleEn: On Saturday we go shopping.
+  - id: sonntag
+    de: Sonntag
+    en: Sunday
+    pos: noun
+    article: der
+    plural: Sonntage
+    example: Am Sonntag schlafe ich lange.
+    exampleEn: On Sunday I sleep late.
+  - id: wochenende
+    de: Wochenende
+    en: weekend
+    pos: noun
+    article: das
+    plural: Wochenenden
+    example: Was machst du am Wochenende?
+    exampleEn: What are you doing at the weekend?
+  - id: tag
+    de: Tag
+    en: day
+    pos: noun
+    article: der
+    plural: Tage
+    example: Der Tag beginnt um sieben Uhr.
+    exampleEn: The day begins at seven o'clock.
+  - id: woche
+    de: Woche
+    en: week
+    pos: noun
+    article: die
+    plural: Wochen
+    example: Die Woche hat sieben Tage.
+    exampleEn: The week has seven days.
+  - id: morgen-noun
+    de: Morgen
+    en: morning
+    pos: noun
+    article: der
+    plural: Morgen
+    example: Am Morgen trinke ich Kaffee.
+    exampleEn: In the morning I drink coffee.
+  - id: nachmittag
+    de: Nachmittag
+    en: afternoon
+    pos: noun
+    article: der
+    plural: Nachmittage
+    example: Am Nachmittag kaufe ich ein.
+    exampleEn: In the afternoon I go shopping.
+  - id: abend
+    de: Abend
+    en: evening
+    pos: noun
+    article: der
+    plural: Abende
+    example: Am Abend sehe ich fern.
+    exampleEn: In the evening I watch TV.
+  - id: nacht
+    de: Nacht
+    en: night
+    pos: noun
+    article: die
+    plural: Nächte
+    example: In der Nacht schlafe ich.
+    exampleEn: At night I sleep.
+  - id: aufstehen
+    de: aufstehen
+    en: to get up
+    pos: verb
+    example: Ich stehe um sieben Uhr auf.
+    exampleEn: I get up at seven o'clock.
+  - id: anfangen
+    de: anfangen
+    en: to begin, to start
+    pos: verb
+    example: Der Film fängt um acht Uhr an.
+    exampleEn: The film starts at eight o'clock.
+  - id: anrufen
+    de: anrufen
+    en: to phone, to call
+    pos: verb
+    example: Ich rufe meine Mutter an.
+    exampleEn: I am phoning my mother.
+  - id: fernsehen
+    de: fernsehen
+    en: to watch TV
+    pos: verb
+    example: Am Abend sehe ich fern.
+    exampleEn: In the evening I watch TV.
+  - id: mitkommen
+    de: mitkommen
+    en: to come along
+    pos: verb
+    example: Kommst du mit?
+    exampleEn: Are you coming along?
+  - id: fruehstuecken
+    de: frühstücken
+    en: to have breakfast
+    pos: verb
+    example: Um sieben Uhr frühstücke ich.
+    exampleEn: At seven o'clock I have breakfast.
+  - id: beginnen
+    de: beginnen
+    en: to begin
+    pos: verb
+    example: Der Kurs beginnt um neun Uhr.
+    exampleEn: The course begins at nine o'clock.

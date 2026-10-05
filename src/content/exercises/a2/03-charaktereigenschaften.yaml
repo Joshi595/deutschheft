@@ -1,0 +1,196 @@
+lesson: a2.03
+sets:
+  - title: Character words
+    items:
+      - id: char1
+        type: matching
+        tags: [character]
+        prompt: Match each adjective with its meaning.
+        pairs:
+          - { left: geduldig, right: patient }
+          - { left: zuverlässig, right: reliable }
+          - { left: großzügig, right: generous }
+          - { left: schüchtern, right: shy }
+          - { left: ehrlich, right: honest }
+          - { left: ernst, right: serious }
+      - id: char2
+        type: matching
+        tags: [character, opposites]
+        prompt: Match each adjective with its opposite.
+        pairs:
+          - { left: fleißig, right: faul }
+          - { left: mutig, right: feige }
+          - { left: lustig, right: ernst }
+          - { left: großzügig, right: geizig }
+          - { left: ruhig, right: nervös }
+      - id: char3
+        type: fill-blank
+        tags: [character, opposites]
+        prompt: "freundlich ↔ ___"
+        answers: [unfreundlich]
+      - id: char4
+        type: fill-blank
+        tags: [character, opposites]
+        prompt: "geduldig ↔ ___"
+        answers: [ungeduldig]
+      - id: char5
+        type: fill-blank
+        tags: [character, opposites]
+        prompt: "höflich ↔ ___"
+        answers: [unhöflich]
+
+  - title: Ending or no ending?
+    items:
+      - id: pred1
+        type: multiple-choice
+        tags: [predicate adjectives]
+        prompt: Die Frau ist ___.
+        options: [freundlich, freundliche, freundlicher]
+        answer: freundlich
+        explanation: After sein the adjective takes no ending.
+      - id: pred2
+        type: multiple-choice
+        tags: [predicate adjectives]
+        prompt: Meine Eltern sind sehr ___.
+        options: [geduldig, geduldige, geduldigen]
+        answer: geduldig
+      - id: pred3
+        type: multiple-choice
+        tags: [predicate adjectives]
+        prompt: Er wirkt ___.
+        options: [sympathisch, sympathischer, sympathische]
+        answer: sympathisch
+        explanation: wirken behaves like sein.
+
+  - title: Appearance
+    items:
+      - id: look1
+        type: multiple-choice
+        tags: [appearance]
+        prompt: Sie ___ lange, blonde Haare.
+        options: [hat, ist, sieht]
+        answer: hat
+      - id: look2
+        type: multiple-choice
+        tags: [appearance]
+        prompt: Er ___ groß und schlank.
+        options: [ist, hat, trägt]
+        answer: ist
+      - id: look3
+        type: multiple-choice
+        tags: [appearance]
+        prompt: Mein Vater ___ eine Brille.
+        options: [trägt, ist, sieht]
+        answer: trägt
+      - id: look4
+        type: word-order
+        tags: [appearance, separable verbs]
+        prompt: What does your brother look like?
+        answer: Wie sieht dein Bruder aus?
+      - id: look5
+        type: word-order
+        tags: [appearance, separable verbs]
+        prompt: You look tired.
+        answer: Du siehst müde aus.
+      - id: look6
+        type: multiple-choice
+        tags: [appearance]
+        prompt: "\"Wie ist deine Schwester?\" asks about her …"
+        options: [character, appearance, age]
+        answer: character
+
+  - title: Stronger and weaker
+    items:
+      - id: int1
+        type: matching
+        tags: [intensifiers]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: ziemlich, right: quite }
+          - { left: ein bisschen, right: a little }
+          - { left: gar nicht, right: not at all }
+          - { left: viel zu, right: far too }
+          - { left: besonders, right: especially }
+      - id: int2
+        type: word-order
+        tags: [intensifiers]
+        prompt: My sister is quite self-confident.
+        answer: Meine Schwester ist ziemlich selbstbewusst.
+      - id: int3
+        type: word-order
+        tags: [intensifiers]
+        prompt: She is not shy at all.
+        answer: Sie ist gar nicht schüchtern.
+
+  - title: Your opinion
+    items:
+      - id: op1
+        type: fill-blank
+        tags: [finden, accusative pronouns]
+        prompt: "Kennst du den neuen Kollegen? Ja, ich finde ___ sehr nett."
+        answers: [ihn]
+      - id: op2
+        type: fill-blank
+        tags: [finden, accusative pronouns]
+        prompt: "Das ist meine Chefin. Ich finde ___ ein bisschen streng."
+        answers: [sie]
+
+  - title: Who is it?
+    instructions: Listen to the descriptions.
+    items:
+      - id: who1
+        type: multiple-choice
+        tags: [listening, appearance]
+        stimulus:
+          kind: audio
+          label: Beschreibung
+          lines:
+            - text: "Mein Bruder Paul ist dreißig Jahre alt. Er ist sehr groß und hat kurze, dunkle Haare. Er trägt eine Brille. Paul ist ruhig und ein bisschen schüchtern, aber sehr zuverlässig."
+        prompt: Wie sieht Paul aus?
+        options:
+          - Er ist groß und trägt eine Brille.
+          - Er ist klein und hat blonde Haare.
+          - Er hat lange Haare und einen Bart.
+        answer: Er ist groß und trägt eine Brille.
+      - id: who2
+        type: true-false
+        tags: [listening, character]
+        stimulus:
+          kind: audio
+          label: Beschreibung
+          lines:
+            - text: "Mein Bruder Paul ist dreißig Jahre alt. Er ist sehr groß und hat kurze, dunkle Haare. Er trägt eine Brille. Paul ist ruhig und ein bisschen schüchtern, aber sehr zuverlässig."
+        prompt: Paul ist laut und selbstbewusst.
+        answer: false
+
+  - title: Say and write it
+    items:
+      - id: tr1
+        type: translation
+        tags: [character]
+        prompt: He is brave and hard-working.
+        answers:
+          - Er ist mutig und fleißig.
+          - Er ist fleißig und mutig.
+      - id: tr2
+        type: translation
+        tags: [intensifiers]
+        prompt: My brother is far too lazy.
+        answers:
+          - Mein Bruder ist viel zu faul.
+      - id: write1
+        type: writing-task
+        tags: [writing, character]
+        prompt: Describe a friend or a member of your family.
+        points:
+          - Who the person is
+          - What the person looks like
+          - What the person is like, with at least three adjectives
+          - What you think of the person
+        minWords: 35
+        phrases:
+          - Mein Freund / Meine Schwester heißt …
+          - Er ist … und hat … Haare.
+          - Sie ist sehr … und ein bisschen …
+          - Ich finde ihn / sie …
+        sample: "Meine beste Freundin heißt Lena. Sie ist groß und hat kurze, dunkle Haare. Lena ist sehr lustig und immer optimistisch. Manchmal ist sie ein bisschen ungeduldig. Ich finde sie sehr sympathisch. Sie ist ehrlich und zuverlässig."

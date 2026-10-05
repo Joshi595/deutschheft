@@ -1,0 +1,144 @@
+lesson: a1.03
+items:
+  - id: "null"
+    de: "null"
+    en: zero
+    pos: other
+  - id: eins
+    de: eins
+    en: one
+    pos: other
+  - id: zwei
+    de: zwei
+    en: two
+    pos: other
+  - id: drei
+    de: drei
+    en: three
+    pos: other
+  - id: vier
+    de: vier
+    en: four
+    pos: other
+  - id: fuenf
+    de: fünf
+    en: five
+    pos: other
+  - id: sechs
+    de: sechs
+    en: six
+    pos: other
+  - id: sieben
+    de: sieben
+    en: seven
+    pos: other
+  - id: acht
+    de: acht
+    en: eight
+    pos: other
+  - id: neun
+    de: neun
+    en: nine
+    pos: other
+  - id: zehn
+    de: zehn
+    en: ten
+    pos: other
+  - id: elf
+    de: elf
+    en: eleven
+    pos: other
+  - id: zwoelf
+    de: zwölf
+    en: twelve
+    pos: other
+  - id: zwanzig
+    de: zwanzig
+    en: twenty
+    pos: other
+  - id: dreissig
+    de: dreißig
+    en: thirty
+    pos: other
+  - id: hundert
+    de: hundert
+    en: a hundred
+    pos: other
+  - id: tausend
+    de: tausend
+    en: a thousand
+    pos: other
+  - id: zahl
+    de: Zahl
+    en: number
+    pos: noun
+    article: die
+    plural: Zahlen
+    example: Die Zahl sieben ist meine Glückszahl.
+    exampleEn: The number seven is my lucky number.
+  - id: jahr
+    de: Jahr
+    en: year
+    pos: noun
+    article: das
+    plural: Jahre
+    example: Ich bin dreißig Jahre alt.
+    exampleEn: I am thirty years old.
+  - id: alt
+    de: alt
+    en: old
+    pos: adjective
+    example: Wie alt sind Sie?
+    exampleEn: How old are you?
+  - id: telefonnummer
+    de: Telefonnummer
+    en: phone number
+    pos: noun
+    article: die
+    plural: Telefonnummern
+    example: Wie ist Ihre Telefonnummer?
+    exampleEn: What is your phone number?
+  - id: adresse
+    de: Adresse
+    en: address
+    pos: noun
+    article: die
+    plural: Adressen
+    example: Wie ist Ihre Adresse?
+    exampleEn: What is your address?
+  - id: strasse
+    de: Straße
+    en: street
+    pos: noun
+    article: die
+    plural: Straßen
+    example: Ich wohne in der Goethestraße.
+    exampleEn: I live in Goethestraße.
+  - id: postleitzahl
+    de: Postleitzahl
+    en: postcode
+    pos: noun
+    article: die
+    plural: Postleitzahlen
+    example: Die Postleitzahl ist 60311.
+    exampleEn: The postcode is 60311.
+  - id: euro
+    de: Euro
+    en: euro
+    pos: noun
+    article: der
+    plural: Euro
+    example: Das kostet fünf Euro.
+    exampleEn: That costs five euros.
+  - id: kosten
+    de: kosten
+    en: to cost
+    pos: verb
+    example: Was kostet das?
+    exampleEn: What does that cost?
+  - id: wie-viel
+    de: wie viel
+    en: how much
+    pos: phrase
+    example: Wie viel kostet der Kaffee?
+    exampleEn: How much is the coffee?

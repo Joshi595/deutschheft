@@ -1,0 +1,45 @@
+---
+import QuizRunner from '../../../components/quiz/QuizRunner';
+import Base from '../../../layouts/Base.astro';
+import { getCatalog } from '../../../lib/content/catalog';
+import { url } from '../../../lib/url';
+
+export async function getStaticPaths() {
+  const catalog = await getCatalog();
+  return catalog.levels.flatMap((level) =>
+    level.quizzes.map((quiz) => ({
+      params: { level: level.id, exam: quiz.id.split('/')[1]! },
+      props: { quizId: quiz.id },
+    })),
+  );
+}
+
+interface Props {
+  quizId: string;
+}
+
+const catalog = await getCatalog();
+const level = catalog.levels.find((candidate) => candidate.id === Astro.params.level)!;
+const quiz = level.quizzes.find((candidate) => candidate.id === Astro.props.quizId)!;
+---
+
+<Base title={`${quiz.title} (${level.title})`} description={quiz.description} width="narrow">
+  <nav aria-label="Breadcrumb" class="text-sm text-muted">
+    <a href={url('')} class="hover:text-ink">Learn</a>
+    <span aria-hidden="true"> / </span>
+    <a href={level.href} class="hover:text-ink">{level.title}</a>
+    <span aria-hidden="true"> / </span>
+    <span>Mock exam</span>
+  </nav>
+
+  <header class="mt-4">
+    <p class="eyebrow">{level.exam ?? `${level.title} mock exam`}</p>
+    <h1 class="mt-1 text-4xl sm:text-5xl">{quiz.title}</h1>
+  </header>
+
+  <div class="mt-8">
+    <QuizRunner client:only="react" quiz={quiz}>
+      <div slot="fallback" class="card p-6 text-muted">Loading the exam …</div>
+    </QuizRunner>
+  </div>
+</Base>

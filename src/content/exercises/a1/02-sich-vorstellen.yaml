@@ -1,0 +1,246 @@
+lesson: a1.02
+sets:
+  - title: The right verb form
+    instructions: Put the verb in brackets into the right form.
+    items:
+      - id: verb1
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Ich ___ aus Indien. (kommen)"
+        answers: [komme]
+      - id: verb2
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Woher ___ du? (kommen)"
+        answers: [kommst]
+      - id: verb3
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Er ___ in Berlin. (wohnen)"
+        answers: [wohnt]
+      - id: verb4
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Wo ___ Sie? (wohnen)"
+        answers: [wohnen]
+        explanation: The formal Sie takes the -en form.
+      - id: verb5
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Wie ___ du? (heißen)"
+        answers: [heißt]
+        explanation: "The stem heiß- already ends in an s-sound, so du adds only -t."
+      - id: verb6
+        type: fill-blank
+        tags: [present tense]
+        prompt: "Sie ___ Anna. (heißen)"
+        answers: [heißt]
+        translation: Her name is Anna.
+
+  - title: The verb sein
+    instructions: Complete with a form of sein.
+    items:
+      - id: sein1
+        type: fill-blank
+        tags: [sein]
+        prompt: "Ich ___ Tom."
+        answers: [bin]
+      - id: sein2
+        type: fill-blank
+        tags: [sein]
+        prompt: "___ du Anna?"
+        answers: [Bist]
+      - id: sein3
+        type: fill-blank
+        tags: [sein]
+        prompt: "Das ___ Herr Schmidt."
+        answers: [ist]
+      - id: sein4
+        type: fill-blank
+        tags: [sein]
+        prompt: "___ Sie Frau Weber?"
+        answers: [Sind]
+
+  - title: Which question word?
+    items:
+      - id: w1
+        type: multiple-choice
+        tags: [W-questions]
+        prompt: ___ heißen Sie?
+        options: [Wie, Wo, Woher]
+        answer: Wie
+      - id: w2
+        type: multiple-choice
+        tags: [W-questions]
+        prompt: ___ kommst du? Aus Spanien.
+        options: [Woher, Wo, Wer]
+        answer: Woher
+        explanation: Origin is asked with woher, not wo.
+      - id: w3
+        type: multiple-choice
+        tags: [W-questions]
+        prompt: ___ wohnen Sie? In Hamburg.
+        options: [Wo, Woher, Wie]
+        answer: Wo
+      - id: w4
+        type: multiple-choice
+        tags: [W-questions]
+        prompt: ___ ist das? Das ist Frau Weber.
+        options: [Wer, Wie, Wo]
+        answer: Wer
+      - id: w5
+        type: matching
+        tags: [W-questions]
+        prompt: Match each question with its answer.
+        pairs:
+          - { left: Wie heißt du?, right: Ich heiße Paul. }
+          - { left: Woher kommst du?, right: Aus Polen. }
+          - { left: Wo wohnst du?, right: In Köln. }
+          - { left: Welche Sprachen sprichst du?, right: Polnisch und Deutsch. }
+
+  - title: aus or in?
+    items:
+      - id: prep1
+        type: fill-blank
+        tags: [aus and in]
+        prompt: "Ich komme ___ Italien."
+        answers: [aus]
+      - id: prep2
+        type: fill-blank
+        tags: [aus and in]
+        prompt: "Sie wohnt ___ München."
+        answers: [in]
+      - id: prep3
+        type: multiple-choice
+        tags: [aus and in]
+        prompt: Er kommt ___ Türkei.
+        options: [aus der, aus, in]
+        answer: aus der
+        explanation: "die Türkei is one of the few countries with an article: aus der Türkei."
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [W-questions, word order]
+        prompt: Where do you come from? (formal)
+        answer: Woher kommen Sie?
+        hint: Question word first, verb second.
+      - id: order2
+        type: word-order
+        tags: [word order]
+        prompt: I speak English and a little German.
+        answer: Ich spreche Englisch und ein bisschen Deutsch.
+      - id: order3
+        type: word-order
+        tags: [word order]
+        prompt: Now I live in Munich.
+        answer: Jetzt wohne ich in München.
+        explanation: "The sentence starts with Jetzt, so the verb comes next and ich follows it."
+
+  - title: Read and decide
+    instructions: Read the text, then say whether each statement is right or wrong.
+    stimulus:
+      kind: text
+      label: Text
+      title: Das ist Karim
+      text: |
+        Hallo! Ich heiße Karim Haddad. Ich komme aus Syrien, aus Damaskus. Jetzt wohne ich in Leipzig.
+        Ich spreche Arabisch, Englisch und ein bisschen Deutsch.
+
+        Das ist Elena. Sie kommt aus Spanien und wohnt in Berlin. Sie spricht Spanisch und sehr gut Deutsch.
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading]
+        prompt: Karim kommt aus Syrien.
+        answer: true
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: Karim wohnt in Damaskus.
+        answer: false
+        explanation: "He comes from Damascus. He lives in Leipzig now: Jetzt wohne ich in Leipzig."
+      - id: read3
+        type: true-false
+        tags: [reading]
+        prompt: Elena wohnt in Berlin.
+        answer: true
+      - id: read4
+        type: true-false
+        tags: [reading]
+        prompt: Elena spricht Arabisch.
+        answer: false
+
+  - title: Fill in the form
+    instructions: This is the first writing task of the A1 exam. Take the information from the text.
+    items:
+      - id: form1
+        type: form
+        tags: [writing, forms]
+        prompt: Fill in the form for Maria.
+        situation: "Maria Rossi kommt aus Italien. Sie wohnt in München und spricht Italienisch und Englisch."
+        fields:
+          - { label: Vorname, answers: [Maria] }
+          - { label: Familienname, answers: [Rossi] }
+          - { label: Land, answers: [Italien] }
+          - { label: Wohnort, answers: [München] }
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [introducing yourself]
+        prompt: What is your name? (formal)
+        answers: [Wie heißen Sie?]
+      - id: tr2
+        type: translation
+        tags: [introducing yourself]
+        prompt: I come from India.
+        answers: [Ich komme aus Indien.]
+      - id: tr3
+        type: translation
+        tags: [introducing yourself]
+        prompt: Where do you live? (informal)
+        answers: [Wo wohnst du?]
+      - id: tr4
+        type: translation
+        tags: [introducing yourself]
+        prompt: That is Mrs Weber.
+        answers: [Das ist Frau Weber.]
+
+  - title: Write and speak about yourself
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, introducing yourself]
+        prompt: Write four sentences introducing yourself.
+        points:
+          - Your name
+          - Where you come from
+          - Where you live now
+          - Which languages you speak
+        minWords: 15
+        phrases:
+          - Ich heiße …
+          - Ich komme aus …
+          - Ich wohne in …
+          - Ich spreche … und ein bisschen Deutsch.
+        sample: "Ich heiße Karim Haddad. Ich komme aus Syrien. Jetzt wohne ich in Leipzig. Ich spreche Arabisch, Englisch und ein bisschen Deutsch."
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, introducing yourself]
+        prompt: "Stellen Sie sich bitte vor. Introduce yourself, using the cue cards."
+        cards: [Name?, Land?, Wohnort?, Sprachen?]
+        phrases:
+          - Ich heiße …
+          - Ich komme aus …
+          - Ich wohne in …
+          - Ich spreche …
+        checklist:
+          - I said my name with heißen or sein
+          - I said where I come from with aus
+          - I said where I live with in
+          - I named at least one language I speak
+        sample: "Guten Tag. Ich heiße Maria Rossi. Ich komme aus Italien. Ich wohne in München. Ich spreche Italienisch, Englisch und ein bisschen Deutsch."

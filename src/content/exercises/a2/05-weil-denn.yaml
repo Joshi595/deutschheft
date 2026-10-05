@@ -1,0 +1,212 @@
+lesson: a2.05
+sets:
+  - title: Which sentence is correct?
+    instructions: In a weil clause the conjugated verb stands at the end.
+    items:
+      - id: pos1
+        type: multiple-choice
+        tags: [weil word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Er kommt nicht, weil er ist krank."
+          - "Er kommt nicht, weil er krank ist."
+        answer: "Er kommt nicht, weil er krank ist."
+      - id: pos2
+        type: multiple-choice
+        tags: [weil word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich mache das, weil ich möchte dir helfen."
+          - "Ich mache das, weil ich dir helfen möchte."
+          - "Ich mache das, weil ich dir möchte helfen."
+        answer: "Ich mache das, weil ich dir helfen möchte."
+        explanation: With a modal verb, the infinitive comes first and the conjugated modal goes last.
+      - id: pos3
+        type: multiple-choice
+        tags: [weil word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Weil ich krank bin, ich gehe zum Arzt."
+          - "Weil ich krank bin, gehe ich zum Arzt."
+          - "Weil ich bin krank, gehe ich zum Arzt."
+        answer: "Weil ich krank bin, gehe ich zum Arzt."
+        explanation: When the weil clause comes first, the main clause starts with its verb.
+      - id: pos4
+        type: multiple-choice
+        tags: [weil word order, separable verbs]
+        prompt: Choose the correct sentence.
+        options:
+          - "Wir müssen gehen, weil der Zug um acht abfährt."
+          - "Wir müssen gehen, weil der Zug um acht fährt ab."
+          - "Wir müssen gehen, weil der Zug fährt um acht ab."
+        answer: "Wir müssen gehen, weil der Zug um acht abfährt."
+
+  - title: The missing verb
+    instructions: Complete the weil clause.
+    items:
+      - id: verb1
+        type: fill-blank
+        tags: [weil word order]
+        prompt: "Ich esse, weil ich Hunger ___."
+        answers: [habe]
+      - id: verb2
+        type: fill-blank
+        tags: [weil word order]
+        prompt: "Sie schläft lange, weil sie müde ___."
+        answers: [ist]
+      - id: verb3
+        type: fill-blank
+        tags: [weil word order]
+        prompt: "Er bleibt zu Hause, weil er arbeiten ___."
+        answers: [muss]
+      - id: verb4
+        type: fill-blank
+        tags: [weil word order]
+        prompt: "Ich rufe ihn nicht an, weil ich seine Nummer vergessen ___."
+        answers: [habe]
+        explanation: In the Perfekt the participle comes first, then the conjugated form of haben.
+      - id: verb5
+        type: fill-blank
+        tags: [weil word order]
+        prompt: "Wir sind zu spät, weil der Bus nicht gekommen ___."
+        answers: [ist]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [weil word order]
+        prompt: I am going home because I am tired.
+        answer: "Ich gehe nach Hause, weil ich müde bin."
+      - id: order2
+        type: word-order
+        tags: [weil word order]
+        prompt: He is not coming because he has to work.
+        answer: "Er kommt nicht, weil er arbeiten muss."
+      - id: order3
+        type: word-order
+        tags: [weil word order]
+        prompt: Because it is raining, we are staying at home.
+        answer: "Weil es regnet, bleiben wir zu Hause."
+      - id: order4
+        type: word-order
+        tags: [weil word order]
+        prompt: She is tired because she slept badly.
+        answer: "Sie ist müde, weil sie schlecht geschlafen hat."
+
+  - title: Join the sentences
+    instructions: Make one sentence with weil. The second sentence is the reason.
+    items:
+      - id: join1
+        type: translation
+        tags: [weil word order]
+        prompt: "Ich lerne Deutsch. Es ist wichtig."
+        answers:
+          - "Ich lerne Deutsch, weil es wichtig ist."
+      - id: join2
+        type: translation
+        tags: [weil word order]
+        prompt: "Er kommt nicht. Er hat keine Zeit."
+        answers:
+          - "Er kommt nicht, weil er keine Zeit hat."
+      - id: join3
+        type: translation
+        tags: [weil word order]
+        prompt: "Ich kaufe das Buch. Ich möchte es lesen."
+        answers:
+          - "Ich kaufe das Buch, weil ich es lesen möchte."
+        hint: The modal verb goes last, after the infinitive.
+      - id: join4
+        type: translation
+        tags: [weil word order]
+        prompt: "Sie ist glücklich. Sie hat die Prüfung bestanden."
+        answers:
+          - "Sie ist glücklich, weil sie die Prüfung bestanden hat."
+
+  - title: weil or denn?
+    items:
+      - id: wd1
+        type: multiple-choice
+        tags: [weil and denn]
+        prompt: "Ich bleibe zu Hause, ___ ich bin krank."
+        options: [denn, weil]
+        answer: denn
+        explanation: The verb bin is in second place, so this is a main clause, which needs denn.
+      - id: wd2
+        type: multiple-choice
+        tags: [weil and denn]
+        prompt: "Ich bleibe zu Hause, ___ ich krank bin."
+        options: [weil, denn]
+        answer: weil
+      - id: wd3
+        type: multiple-choice
+        tags: [weil and denn]
+        prompt: "___ ich kein Geld habe, kann ich nicht ins Kino gehen."
+        options: [Weil, Denn]
+        answer: Weil
+        explanation: denn cannot start a sentence.
+
+  - title: Which reason fits?
+    items:
+      - id: match1
+        type: matching
+        tags: [weil]
+        prompt: Match each sentence with the reason that makes sense.
+        pairs:
+          - { left: "Ich kaufe einen Mantel,", right: "weil es kalt ist." }
+          - { left: "Sie bestellt eine Pizza,", right: "weil sie Hunger hat." }
+          - { left: "Er liest das Buch,", right: "weil es interessant ist." }
+          - { left: "Wir nehmen ein Taxi,", right: "weil der Bus nicht kommt." }
+
+  - title: Listen
+    stimulus:
+      kind: audio
+      label: Gespräch
+      lines:
+        - speaker: Lukas
+          text: "Hallo Nina, kommst du heute Abend mit ins Kino?"
+        - speaker: Nina
+          text: "Nein, leider nicht. Ich muss zu Hause bleiben, weil meine Schwester mich besucht."
+        - speaker: Lukas
+          text: "Schade. Und morgen?"
+        - speaker: Nina
+          text: "Morgen kann ich auch nicht, weil ich bis neun Uhr arbeiten muss. Aber am Freitag habe ich Zeit."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening, weil]
+        prompt: Warum kann Nina heute nicht ins Kino gehen?
+        options:
+          - Weil ihre Schwester sie besucht.
+          - Weil sie arbeiten muss.
+          - Weil sie krank ist.
+        answer: Weil ihre Schwester sie besucht.
+      - id: listen2
+        type: true-false
+        tags: [listening, weil]
+        prompt: Nina hat am Freitag Zeit.
+        answer: true
+
+  - title: Say why
+    items:
+      - id: write1
+        type: writing
+        tags: [weil]
+        prompt: Why are you learning German? Answer in one sentence with weil.
+        mustInclude: [weil]
+        sample: "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte."
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, weil]
+        prompt: Answer each question with a full sentence using weil.
+        cards: [Warum lernen Sie Deutsch?, Warum wohnen Sie in dieser Stadt?, Warum mögen Sie Ihren Beruf?]
+        phrases:
+          - Ich lerne Deutsch, weil …
+          - Ich wohne hier, weil …
+          - Ich mag meinen Beruf, weil …
+        checklist:
+          - I answered all three questions with weil
+          - The conjugated verb was at the end of every weil clause
+          - With a modal verb, the infinitive came before the modal
+        sample: "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte. Ich wohne in dieser Stadt, weil meine Familie hier lebt. Ich mag meinen Beruf, weil er interessant ist und weil ich nette Kollegen habe."

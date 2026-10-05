@@ -1,0 +1,248 @@
+lesson: a1.22
+sets:
+  - title: Clothes and colours
+    items:
+      - id: cloth1
+        type: matching
+        tags: [clothes]
+        prompt: Match each word with its meaning.
+        pairs:
+          - { left: die Hose, right: trousers }
+          - { left: das Hemd, right: shirt }
+          - { left: der Mantel, right: coat }
+          - { left: das Kleid, right: dress }
+          - { left: der Rock, right: skirt }
+          - { left: die Schuhe, right: shoes }
+      - id: cloth2
+        type: matching
+        tags: [colours]
+        prompt: Match each colour with its meaning.
+        pairs:
+          - { left: rot, right: red }
+          - { left: gelb, right: yellow }
+          - { left: grün, right: green }
+          - { left: schwarz, right: black }
+          - { left: weiß, right: white }
+          - { left: grau, right: grey }
+      - id: cloth3
+        type: fill-blank
+        tags: [clothes, noun gender]
+        prompt: "___ Jacke"
+        answers: [die]
+      - id: cloth4
+        type: fill-blank
+        tags: [clothes, noun gender]
+        prompt: "___ Pullover"
+        answers: [der]
+      - id: cloth5
+        type: fill-blank
+        tags: [clothes, noun gender]
+        prompt: "___ Kleid"
+        answers: [das]
+      - id: cloth6
+        type: multiple-choice
+        tags: [clothes]
+        prompt: Die Hose ___ neu.
+        options: [ist, sind]
+        answer: ist
+        explanation: Hose is singular in German.
+
+  - title: gefällt or gefallen?
+    items:
+      - id: gef1
+        type: fill-blank
+        tags: [gefallen]
+        prompt: "Die Jacke ___ mir."
+        answers: [gefällt]
+      - id: gef2
+        type: fill-blank
+        tags: [gefallen]
+        prompt: "Die Schuhe ___ mir nicht."
+        answers: [gefallen]
+        explanation: Schuhe is plural, so the verb is plural.
+      - id: gef3
+        type: fill-blank
+        tags: [gefallen]
+        prompt: "___ dir das Kleid?"
+        answers: [Gefällt]
+      - id: gef4
+        type: multiple-choice
+        tags: [gefallen]
+        prompt: How do you say "I like the jumper"?
+        options:
+          - Der Pullover gefällt mir.
+          - Ich gefalle den Pullover.
+          - Der Pullover gefällt mich.
+        answer: Der Pullover gefällt mir.
+
+  - title: The dative pronouns
+    items:
+      - id: dat1
+        type: matching
+        tags: [dative pronouns]
+        prompt: Match each pronoun with its dative form.
+        pairs:
+          - { left: ich, right: mir }
+          - { left: du, right: dir }
+          - { left: er, right: ihm }
+          - { left: wir, right: uns }
+          - { left: Sie, right: Ihnen }
+      - id: dat2
+        type: fill-blank
+        tags: [dative pronouns]
+        prompt: "Das Kleid gefällt ___. (she)"
+        answers: [ihr]
+      - id: dat3
+        type: fill-blank
+        tags: [dative pronouns]
+        prompt: "Der Mantel gefällt ___ nicht. (he)"
+        answers: [ihm]
+      - id: dat4
+        type: fill-blank
+        tags: [dative pronouns]
+        prompt: "Können Sie ___ helfen? (I)"
+        answers: [mir]
+      - id: dat5
+        type: fill-blank
+        tags: [dative pronouns]
+        prompt: "Die Hose passt ___ nicht. (I)"
+        answers: [mir]
+      - id: dat6
+        type: fill-blank
+        tags: [dative pronouns]
+        prompt: "Das Kleid steht ___ gut. (you, informal)"
+        answers: [dir]
+
+  - title: welcher and dieser
+    items:
+      - id: wel1
+        type: fill-blank
+        tags: [welcher and dieser]
+        prompt: "___ Pullover gefällt dir? (welch-)"
+        answers: [Welcher]
+      - id: wel2
+        type: fill-blank
+        tags: [welcher and dieser]
+        prompt: "___ Jacke ist neu? (welch-)"
+        answers: [Welche]
+      - id: wel3
+        type: fill-blank
+        tags: [welcher and dieser]
+        prompt: "___ Hemd ist billig? (welch-)"
+        answers: [Welches]
+      - id: wel4
+        type: fill-blank
+        tags: [welcher and dieser]
+        prompt: "___ Schuhe sind schön. (dies-)"
+        answers: [Diese]
+      - id: wel5
+        type: multiple-choice
+        tags: [welcher and dieser, accusative]
+        prompt: ___ Mantel nehmen Sie?
+        options: [Welchen, Welcher, Welches]
+        answer: Welchen
+        explanation: "The coat is the object, and it is masculine: welchen."
+
+  - title: In the shop
+    stimulus:
+      kind: audio
+      label: Im Kaufhaus
+      lines:
+        - speaker: Verkäuferin
+          text: "Guten Tag. Kann ich Ihnen helfen?"
+        - speaker: Kunde
+          text: "Ja, bitte. Ich suche eine Jacke."
+        - speaker: Verkäuferin
+          text: "Welche Größe haben Sie?"
+        - speaker: Kunde
+          text: "Größe fünfzig. Die blaue hier gefällt mir. Kann ich sie anprobieren?"
+        - speaker: Verkäuferin
+          text: "Natürlich. Die Umkleidekabine ist dort hinten."
+        - speaker: Kunde
+          text: "Die Jacke ist leider zu klein. Haben Sie sie in Größe zweiundfünfzig?"
+        - speaker: Verkäuferin
+          text: "Ja, hier bitte. Sie kostet neunundsechzig Euro."
+    items:
+      - id: shop1
+        type: multiple-choice
+        tags: [listening, clothes]
+        prompt: Was sucht der Kunde?
+        options: [eine Jacke, eine Hose, einen Mantel]
+        answer: eine Jacke
+      - id: shop2
+        type: true-false
+        tags: [listening, clothes]
+        prompt: Die Jacke in Größe 50 passt gut.
+        answer: false
+        explanation: It is too small. He asks for size 52.
+      - id: shop3
+        type: multiple-choice
+        tags: [listening, prices]
+        prompt: Was kostet die Jacke?
+        options: ["69 €", "96 €", "59 €"]
+        answer: "69 €"
+
+  - title: Read the offer
+    stimulus:
+      kind: text
+      label: Anzeige
+      title: Modehaus Winter
+      text: |
+        Diese Woche im Angebot:
+        Pullover in Rot, Blau und Grau: 29 €
+        Jeans, alle Größen: 39 €
+        Schuhe: 20 Prozent billiger
+        Montag bis Samstag, 9 bis 19 Uhr
+    items:
+      - id: offer1
+        type: true-false
+        tags: [reading, clothes]
+        prompt: Es gibt Pullover in Schwarz im Angebot.
+        answer: false
+      - id: offer2
+        type: multiple-choice
+        tags: [reading, clothes]
+        prompt: Was kostet eine Jeans?
+        options: ["39 €", "29 €", "20 €"]
+        answer: "39 €"
+      - id: offer3
+        type: true-false
+        tags: [reading, clothes]
+        prompt: Am Sonntag ist das Geschäft geschlossen.
+        answer: true
+
+  - title: Say it in German
+    items:
+      - id: order1
+        type: word-order
+        tags: [clothes]
+        prompt: Can I try the jacket on?
+        answer: Kann ich die Jacke anprobieren?
+      - id: tr1
+        type: translation
+        tags: [gefallen]
+        prompt: I like the shoes.
+        answers:
+          - Die Schuhe gefallen mir.
+      - id: tr2
+        type: translation
+        tags: [clothes]
+        prompt: The trousers are too small.
+        answers:
+          - Die Hose ist zu klein.
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, clothes]
+        prompt: You are in a clothes shop. Say what you are looking for, give your size, ask to try it on, and say whether you like it.
+        cards: [suchen, Größe, anprobieren, gefallen]
+        phrases:
+          - Ich suche einen … / eine … / ein …
+          - Ich habe Größe …
+          - Kann ich … anprobieren?
+          - … gefällt mir (nicht). / … passt mir (nicht).
+        checklist:
+          - I said what I am looking for
+          - I gave a size
+          - I asked to try it on
+          - I used gefallen or passen with mir
+        sample: "Guten Tag. Ich suche einen Pullover. Ich habe Größe vierzig. Kann ich den Pullover anprobieren? Er gefällt mir, aber er passt mir nicht. Er ist zu klein."

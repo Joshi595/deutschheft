@@ -1,0 +1,17 @@
+---
+// One step of the "Step by step" section. Available in every lesson's MDX.
+// <Step n="1" title="The verb comes second"> … </Step>
+interface Props {
+  n: string | number;
+  title: string;
+}
+const { n, title } = Astro.props;
+---
+
+<section class="step">
+  <p class="flex items-baseline gap-3">
+    <span class="font-display flex h-8 w-8 flex-none items-center justify-center rounded-full bg-accent text-base font-semibold text-accent-ink">{n}</span>
+    <span class="font-display text-xl font-semibold leading-tight">{title}</span>
+  </p>
+  <div class="mt-3 grid gap-3 sm:pl-11"><slot /></div>
+</section>

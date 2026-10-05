@@ -1,0 +1,24 @@
+title: A2
+name: Elementary
+description: >-
+  Tell stories about the past, give reasons and opinions, describe people and things with the
+  right adjective endings, compare, be polite, and handle everyday situations from the restaurant
+  to the doctor.
+order: 2
+status: active
+exam: Goethe-Zertifikat A2
+units:
+  - title: Looking back
+    summary: The past in more depth, describing people, and your daily routine.
+  - title: Reasons and opinions
+    summary: Longer sentences with weil, dass, wenn and their relatives.
+  - title: Cases in use
+    summary: The dative, prepositions of place and direction, and expressions of time.
+  - title: Describing things
+    summary: Adjective endings in every case, comparing, and saying whose something is.
+  - title: Getting things done
+    summary: Politeness, verbs with prepositions, the future, and services.
+  - title: Life topics
+    summary: Housing, work, health and travel, and celebrations.
+  - title: Exam training
+    summary: The four parts of the Goethe-Zertifikat A2, one at a time, then a full mock exam.

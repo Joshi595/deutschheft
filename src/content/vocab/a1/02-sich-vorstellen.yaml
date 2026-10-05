@@ -1,0 +1,158 @@
+lesson: a1.02
+items:
+  - id: heissen
+    de: heißen
+    en: to be called
+    pos: verb
+    example: Ich heiße Maria Rossi.
+    exampleEn: My name is Maria Rossi.
+  - id: kommen
+    de: kommen
+    en: to come
+    pos: verb
+    example: Ich komme aus Italien.
+    exampleEn: I come from Italy.
+  - id: wohnen
+    de: wohnen
+    en: to live (somewhere)
+    pos: verb
+    example: Ich wohne in München.
+    exampleEn: I live in Munich.
+  - id: sein
+    de: sein
+    en: to be
+    pos: verb
+    example: Ich bin Maria.
+    exampleEn: I am Maria.
+  - id: sprechen
+    de: sprechen
+    en: to speak
+    pos: verb
+    example: Ich spreche Englisch.
+    exampleEn: I speak English.
+  - id: ich
+    de: ich
+    en: I
+    pos: other
+    example: Ich bin Tom.
+    exampleEn: I am Tom.
+  - id: du
+    de: du
+    en: you (informal, one person)
+    pos: other
+    example: Woher kommst du?
+    exampleEn: Where are you from?
+  - id: sie-formal
+    de: Sie
+    en: you (formal)
+    pos: other
+    example: Wie heißen Sie?
+    exampleEn: What is your name?
+  - id: wie
+    de: wie
+    en: how
+    pos: adverb
+    example: Wie heißt du?
+    exampleEn: What is your name?
+  - id: woher
+    de: woher
+    en: where from
+    pos: adverb
+    example: Woher kommen Sie?
+    exampleEn: Where do you come from?
+  - id: wo
+    de: wo
+    en: where
+    pos: adverb
+    example: Wo wohnst du?
+    exampleEn: Where do you live?
+  - id: wer
+    de: wer
+    en: who
+    pos: other
+    example: Wer ist das?
+    exampleEn: Who is that?
+  - id: aus
+    de: aus
+    en: from, out of
+    pos: preposition
+    example: Er kommt aus Polen.
+    exampleEn: He comes from Poland.
+  - id: in
+    de: in
+    en: in
+    pos: preposition
+    example: Sie wohnt in Berlin.
+    exampleEn: She lives in Berlin.
+  - id: name
+    de: Name
+    en: name
+    pos: noun
+    article: der
+    plural: Namen
+    example: Mein Name ist Weber.
+    exampleEn: My name is Weber.
+  - id: vorname
+    de: Vorname
+    en: first name
+    pos: noun
+    article: der
+    plural: Vornamen
+    example: Mein Vorname ist Maria.
+    exampleEn: My first name is Maria.
+  - id: familienname
+    de: Familienname
+    en: family name, surname
+    pos: noun
+    article: der
+    plural: Familiennamen
+    example: Mein Familienname ist Rossi.
+    exampleEn: My surname is Rossi.
+  - id: land
+    de: Land
+    en: country
+    pos: noun
+    article: das
+    plural: Länder
+    example: Deutschland ist ein Land in Europa.
+    exampleEn: Germany is a country in Europe.
+  - id: stadt
+    de: Stadt
+    en: town, city
+    pos: noun
+    article: die
+    plural: Städte
+    example: Köln ist eine Stadt in Deutschland.
+    exampleEn: Cologne is a city in Germany.
+  - id: sprache
+    de: Sprache
+    en: language
+    pos: noun
+    article: die
+    plural: Sprachen
+    example: Welche Sprachen sprechen Sie?
+    exampleEn: Which languages do you speak?
+  - id: deutschland
+    de: Deutschland
+    en: Germany
+    pos: other
+    example: Ich wohne in Deutschland.
+    exampleEn: I live in Germany.
+  - id: deutsch
+    de: Deutsch
+    en: German (language)
+    pos: other
+    example: Ich spreche ein bisschen Deutsch.
+    exampleEn: I speak a little German.
+  - id: ein-bisschen
+    de: ein bisschen
+    en: a little
+    pos: phrase
+    example: Ich spreche ein bisschen Deutsch.
+    exampleEn: I speak a little German.
+  - id: jetzt
+    de: jetzt
+    en: now
+    pos: adverb
+    example: Jetzt wohne ich in Hamburg.
+    exampleEn: Now I live in Hamburg.

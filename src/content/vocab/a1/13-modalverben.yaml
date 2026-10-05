@@ -1,0 +1,124 @@
+lesson: a1.13
+items:
+  - id: koennen
+    de: können (er kann)
+    en: can, to be able to
+    pos: verb
+    example: Ich kann gut schwimmen.
+    exampleEn: I can swim well.
+  - id: muessen
+    de: müssen (er muss)
+    en: must, to have to
+    pos: verb
+    example: Ich muss jetzt gehen.
+    exampleEn: I have to go now.
+  - id: wollen
+    de: wollen (er will)
+    en: to want to
+    pos: verb
+    example: Ich will Deutsch lernen.
+    exampleEn: I want to learn German.
+  - id: duerfen
+    de: dürfen (er darf)
+    en: may, to be allowed to
+    pos: verb
+    example: Darf ich hier parken?
+    exampleEn: May I park here?
+  - id: sollen
+    de: sollen (er soll)
+    en: to be supposed to
+    pos: verb
+    example: Ich soll viel Wasser trinken.
+    exampleEn: I am supposed to drink a lot of water.
+  - id: man
+    de: man
+    en: one, you, people (in general)
+    pos: other
+    example: Hier darf man nicht rauchen.
+    exampleEn: You are not allowed to smoke here.
+  - id: schwimmen
+    de: schwimmen
+    en: to swim
+    pos: verb
+    example: Kannst du schwimmen?
+    exampleEn: Can you swim?
+  - id: rauchen
+    de: rauchen
+    en: to smoke
+    pos: verb
+    example: Hier darf man nicht rauchen.
+    exampleEn: Smoking is not allowed here.
+  - id: parken
+    de: parken
+    en: to park
+    pos: verb
+    example: Wo kann ich parken?
+    exampleEn: Where can I park?
+  - id: kochen
+    de: kochen
+    en: to cook
+    pos: verb
+    example: Er kann sehr gut kochen.
+    exampleEn: He can cook very well.
+  - id: bezahlen
+    de: bezahlen
+    en: to pay
+    pos: verb
+    example: Ich muss noch bezahlen.
+    exampleEn: I still have to pay.
+  - id: aufmachen
+    de: aufmachen
+    en: to open
+    pos: verb
+    example: Soll ich das Fenster aufmachen?
+    exampleEn: Shall I open the window?
+  - id: zumachen
+    de: zumachen
+    en: to close
+    pos: verb
+    example: Kannst du bitte die Tür zumachen?
+    exampleEn: Can you close the door, please?
+  - id: erlaubt
+    de: erlaubt
+    en: allowed
+    pos: adjective
+    example: Parken ist hier erlaubt.
+    exampleEn: Parking is allowed here.
+  - id: verboten
+    de: verboten
+    en: forbidden
+    pos: adjective
+    example: Rauchen ist verboten.
+    exampleEn: Smoking is forbidden.
+  - id: leider
+    de: leider
+    en: unfortunately
+    pos: adverb
+    example: Ich kann leider nicht kommen.
+    exampleEn: Unfortunately I cannot come.
+  - id: natuerlich
+    de: natürlich
+    en: of course
+    pos: adverb
+    example: Kannst du mir helfen? Ja, natürlich.
+    exampleEn: Can you help me? Yes, of course.
+  - id: vielleicht
+    de: vielleicht
+    en: perhaps, maybe
+    pos: adverb
+    example: Vielleicht kann ich morgen kommen.
+    exampleEn: Maybe I can come tomorrow.
+  - id: gitarre
+    de: Gitarre
+    en: guitar
+    pos: noun
+    article: die
+    plural: Gitarren
+    example: Sie kann Gitarre spielen.
+    exampleEn: She can play the guitar.
+  - id: auto-fahren
+    de: Auto fahren
+    en: to drive (a car)
+    pos: phrase
+    example: Kannst du Auto fahren?
+    exampleEn: Can you drive?

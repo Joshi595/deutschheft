@@ -1,0 +1,237 @@
+lesson: a1.10
+sets:
+  - title: Which shop?
+    items:
+      - id: shop1
+        type: multiple-choice
+        tags: [shops]
+        prompt: Where do you buy Brötchen?
+        options: [in der Bäckerei, in der Apotheke, in der Metzgerei]
+        answer: in der Bäckerei
+      - id: shop2
+        type: multiple-choice
+        tags: [shops]
+        prompt: Where do you buy Medikamente?
+        options: [in der Apotheke, auf dem Markt, in der Bäckerei]
+        answer: in der Apotheke
+      - id: shop3
+        type: matching
+        tags: [shops]
+        prompt: Match each shop with what you buy there.
+        pairs:
+          - { left: die Bäckerei, right: Brot und Kuchen }
+          - { left: die Metzgerei, right: Fleisch und Wurst }
+          - { left: der Markt, right: Obst und Gemüse }
+          - { left: der Kiosk, right: Zeitungen }
+
+  - title: Quantities
+    items:
+      - id: qty1
+        type: matching
+        tags: [quantities]
+        prompt: Match each quantity with the food that fits.
+        pairs:
+          - { left: eine Flasche, right: Wasser }
+          - { left: ein Stück, right: Kuchen }
+          - { left: ein Kilo, right: Kartoffeln }
+          - { left: eine Tasse, right: Kaffee }
+          - { left: eine Packung, right: Reis }
+      - id: qty2
+        type: multiple-choice
+        tags: [quantities]
+        prompt: Which is correct?
+        options: [ein Kilo Äpfel, ein Kilo von Äpfel, ein Kilo der Äpfel]
+        answer: ein Kilo Äpfel
+        explanation: Quantities take no word for "of".
+      - id: qty3
+        type: multiple-choice
+        tags: [quantities]
+        prompt: Which is correct?
+        options: [zwei Kilo Tomaten, zwei Kilos Tomaten]
+        answer: zwei Kilo Tomaten
+        explanation: Units of measurement stay singular after a number.
+      - id: qty4
+        type: fill-blank
+        tags: [quantities, plural]
+        prompt: "Ich nehme zwei ___ Wasser. (Flasche)"
+        answers: [Flaschen]
+        explanation: Containers do form a plural.
+      - id: qty5
+        type: fill-blank
+        tags: [quantities, accusative]
+        prompt: "Ich hätte gern ___ Liter Milch. (ein)"
+        answers: [einen]
+        explanation: "der Liter is masculine and the object: einen."
+
+  - title: kostet or kosten?
+    items:
+      - id: cost1
+        type: fill-blank
+        tags: [kosten]
+        prompt: "Was ___ das Brot?"
+        answers: [kostet]
+      - id: cost2
+        type: fill-blank
+        tags: [kosten]
+        prompt: "Was ___ die Äpfel?"
+        answers: [kosten]
+      - id: cost3
+        type: fill-blank
+        tags: [kosten]
+        prompt: "Ein Kilo Tomaten ___ zwei Euro."
+        answers: [kostet]
+        hint: The subject is ein Kilo, which is singular.
+
+  - title: Put the conversation in order
+    items:
+      - id: talk1
+        type: cloze
+        tags: [shopping]
+        prompt: Complete the conversation with the words from the list.
+        text: "Guten Tag! Was darf es ___?\nIch ___ gern ein Kilo Äpfel.\nSonst noch ___?\nNein danke, das ist ___.\nDas ___ drei Euro."
+        gaps:
+          - [sein]
+          - [hätte]
+          - [etwas]
+          - [alles]
+          - [macht]
+        bank: [sein, hätte, etwas, alles, macht, kostet, habe]
+      - id: talk2
+        type: multiple-choice
+        tags: [shopping]
+        prompt: "The assistant asks: Sonst noch etwas? You want nothing more. You say:"
+        options:
+          - "Nein danke, das ist alles."
+          - "Ja, bitte schön."
+          - "Was kostet das?"
+        answer: "Nein danke, das ist alles."
+      - id: talk3
+        type: multiple-choice
+        tags: [shopping]
+        prompt: "What does Das macht zwölf Euro mean?"
+        options: [That comes to twelve euros., That makes twelve items., I have twelve euros.]
+        answer: That comes to twelve euros.
+
+  - title: At the market
+    stimulus:
+      kind: audio
+      label: Auf dem Markt
+      lines:
+        - speaker: Verkäufer
+          text: "Guten Morgen! Was darf es sein?"
+        - speaker: Kundin
+          text: "Guten Morgen. Ich hätte gern ein Kilo Tomaten und zwei Kilo Kartoffeln."
+        - speaker: Verkäufer
+          text: "Gern. Sonst noch etwas?"
+        - speaker: Kundin
+          text: "Was kosten die Äpfel?"
+        - speaker: Verkäufer
+          text: "Die Äpfel sind heute im Angebot. Ein Kilo kostet nur ein Euro neunzig."
+        - speaker: Kundin
+          text: "Dann nehme ich auch ein Kilo Äpfel. Das ist alles."
+        - speaker: Verkäufer
+          text: "Das macht zusammen sieben Euro dreißig."
+    items:
+      - id: market1
+        type: multiple-choice
+        tags: [listening, shopping]
+        prompt: Wie viele Kartoffeln kauft die Frau?
+        options: [zwei Kilo, ein Kilo, drei Kilo]
+        answer: zwei Kilo
+      - id: market2
+        type: multiple-choice
+        tags: [listening, prices]
+        prompt: Was kostet ein Kilo Äpfel?
+        options: ["1,90 €", "1,19 €", "9,10 €"]
+        answer: "1,90 €"
+      - id: market3
+        type: true-false
+        tags: [listening, shopping]
+        prompt: Die Frau kauft keine Äpfel.
+        answer: false
+      - id: market4
+        type: multiple-choice
+        tags: [listening, prices]
+        prompt: Was zahlt die Frau?
+        options: ["7,30 €", "7,13 €", "17,30 €"]
+        answer: "7,30 €"
+
+  - title: Read the signs
+    instructions: This is how part three of the reading exam works. Read each sign and decide.
+    items:
+      - id: sign1
+        type: true-false
+        tags: [reading, signs]
+        stimulus:
+          kind: text
+          label: Schild
+          title: Bäckerei Müller
+          text: |
+            Öffnungszeiten
+            Montag bis Freitag: 6 bis 18 Uhr
+            Samstag: 6 bis 13 Uhr
+            Sonntag geschlossen
+        prompt: Am Samstag um 15 Uhr können Sie hier Brot kaufen.
+        answer: false
+        explanation: On Saturday the bakery closes at 13 Uhr.
+      - id: sign2
+        type: true-false
+        tags: [reading, signs]
+        stimulus:
+          kind: text
+          label: Anzeige
+          title: Supermarkt Frisch
+          text: |
+            Nur heute im Angebot!
+            1 Kilo Bananen: 1,49 €
+            1 Liter Milch: 0,99 €
+        prompt: Ein Liter Milch kostet heute weniger als ein Euro.
+        answer: true
+      - id: sign3
+        type: multiple-choice
+        tags: [reading, signs]
+        stimulus:
+          kind: text
+          label: Schild
+          text: |
+            Apotheke am Markt
+            Heute geschlossen.
+            Nächste Apotheke: Bahnhofstraße 12
+        prompt: Sie brauchen Medikamente. Was machen Sie?
+        options:
+          - Ich gehe in die Bahnhofstraße.
+          - Ich warte hier.
+          - Ich gehe auf den Markt.
+        answer: Ich gehe in die Bahnhofstraße.
+
+  - title: Say it in German
+    items:
+      - id: order1
+        type: word-order
+        tags: [shopping]
+        prompt: I would like 200 grams of cheese.
+        answer: Ich hätte gern zweihundert Gramm Käse.
+      - id: tr1
+        type: translation
+        tags: [shopping]
+        prompt: What do the tomatoes cost?
+        answers: [Was kosten die Tomaten?]
+      - id: tr2
+        type: translation
+        tags: [shopping]
+        prompt: A bottle of water, please.
+        answers: ["Eine Flasche Wasser, bitte."]
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, shopping]
+        prompt: You are at the market. Ask for two things with quantities, ask a price, and finish the purchase.
+        cards: [Äpfel, Käse, Preis?, alles]
+        phrases:
+          - Ich hätte gern …
+          - Was kostet … / Was kosten …?
+          - Das ist alles.
+        checklist:
+          - I asked for two things and gave a quantity for each
+          - I asked what something costs
+          - I said that this is all, or asked for something else
+        sample: "Guten Tag. Ich hätte gern ein Kilo Äpfel und zweihundert Gramm Käse. Was kosten die Tomaten? Gut, danke. Das ist alles."

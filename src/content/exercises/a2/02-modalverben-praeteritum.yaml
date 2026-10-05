@@ -1,0 +1,195 @@
+lesson: a2.02
+sets:
+  - title: The forms
+    instructions: Put the modal verb into the Präteritum.
+    items:
+      - id: form1
+        type: fill-blank
+        tags: [modal past]
+        prompt: "Ich ___ gestern nicht kommen. (können)"
+        answers: [konnte]
+      - id: form2
+        type: fill-blank
+        tags: [modal past]
+        prompt: "Wir ___ lange warten. (müssen)"
+        answers: [mussten]
+      - id: form3
+        type: fill-blank
+        tags: [modal past]
+        prompt: "Was ___ du sagen? (wollen)"
+        answers: [wolltest]
+      - id: form4
+        type: fill-blank
+        tags: [modal past]
+        prompt: "Als Kind ___ ich nicht lange fernsehen. (dürfen)"
+        answers: [durfte]
+      - id: form5
+        type: fill-blank
+        tags: [modal past]
+        prompt: "Er ___ um neun Uhr da sein. (sollen)"
+        answers: [sollte]
+      - id: form6
+        type: fill-blank
+        tags: [modal past]
+        prompt: "___ ihr den Text verstehen? (können)"
+        answers: [Konntet]
+      - id: form7
+        type: fill-blank
+        tags: [modal past]
+        prompt: "Sie ___ nicht bezahlen. (müssen) [they]"
+        answers: [mussten]
+      - id: form8
+        type: matching
+        tags: [modal past]
+        prompt: Match each infinitive with its past form for ich.
+        pairs:
+          - { left: können, right: konnte }
+          - { left: müssen, right: musste }
+          - { left: dürfen, right: durfte }
+          - { left: wollen, right: wollte }
+          - { left: mögen, right: mochte }
+
+  - title: Umlaut or no umlaut?
+    items:
+      - id: uml1
+        type: multiple-choice
+        tags: [modal past]
+        prompt: Gestern ___ ich nicht schlafen.
+        options: [konnte, könnte, kannte]
+        answer: konnte
+        explanation: The past has no umlaut.
+      - id: uml2
+        type: multiple-choice
+        tags: [modal past]
+        prompt: Wir ___ gestern lange arbeiten.
+        options: [mussten, müssten, müssen]
+        answer: mussten
+      - id: uml3
+        type: multiple-choice
+        tags: [modal past]
+        prompt: "Heute möchte ich ins Kino gehen. Gestern ___ ich ins Kino gehen."
+        options: [wollte, möchte, mochtete]
+        answer: wollte
+        explanation: The past of möchte is wollte.
+
+  - title: Which verb fits?
+    items:
+      - id: fit1
+        type: multiple-choice
+        tags: [modal past, meaning]
+        prompt: "Ich ___ dich anrufen, aber ich hatte keine Zeit."
+        options: [wollte, durfte, konnte nicht]
+        answer: wollte
+      - id: fit2
+        type: multiple-choice
+        tags: [modal past, meaning]
+        prompt: Im Hotel ___ man nicht rauchen. Es war verboten.
+        options: [durfte, wollte, musste]
+        answer: durfte
+      - id: fit3
+        type: multiple-choice
+        tags: [modal past, meaning]
+        prompt: Der Bus ist nicht gekommen. Wir ___ ein Taxi nehmen.
+        options: [mussten, durften, sollten nicht]
+        answer: mussten
+      - id: fit4
+        type: multiple-choice
+        tags: [modal past, meaning]
+        prompt: Mit drei Jahren ___ er schon Rad fahren.
+        options: [konnte, musste, sollte]
+        answer: konnte
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [modal past, sentence bracket]
+        prompt: I had to work until eight o'clock.
+        answer: Ich musste bis acht Uhr arbeiten.
+      - id: order2
+        type: word-order
+        tags: [modal past, sentence bracket]
+        prompt: As a child I wanted to become a pilot.
+        answer: Als Kind wollte ich Pilot werden.
+      - id: order3
+        type: word-order
+        tags: [modal past, sentence bracket]
+        prompt: Were you able to understand the text?
+        answer: Konntest du den Text verstehen?
+      - id: order4
+        type: word-order
+        tags: [modal past, sentence bracket]
+        prompt: We were not allowed to smoke in the hotel.
+        answer: Wir durften im Hotel nicht rauchen.
+
+  - title: From present to past
+    instructions: Rewrite the sentence in the past.
+    items:
+      - id: past1
+        type: translation
+        tags: [modal past]
+        prompt: "Ich kann nicht kommen."
+        answers: [Ich konnte nicht kommen.]
+      - id: past2
+        type: translation
+        tags: [modal past]
+        prompt: "Wir müssen warten."
+        answers: [Wir mussten warten.]
+      - id: past3
+        type: translation
+        tags: [modal past]
+        prompt: "Sie will nach Hause gehen. [she]"
+        answers: [Sie wollte nach Hause gehen.]
+      - id: past4
+        type: translation
+        tags: [modal past]
+        prompt: "Darfst du allein in die Stadt gehen?"
+        answers: [Durftest du allein in die Stadt gehen?]
+
+  - title: Read and answer
+    stimulus:
+      kind: text
+      label: E-Mail
+      text: |
+        Hallo Jonas,
+        entschuldige, ich konnte gestern nicht zu deiner Party kommen. Ich wollte um sieben Uhr losfahren, aber mein Auto war kaputt. Dann wollte ich den Bus nehmen, aber der letzte Bus war schon weg.
+        Ich musste zu Hause bleiben und war sehr traurig. Wie war die Party? Können wir uns am Wochenende treffen?
+        Liebe Grüße
+        Emma
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading, modal past]
+        prompt: Emma war auf der Party.
+        answer: false
+      - id: read2
+        type: multiple-choice
+        tags: [reading, modal past]
+        prompt: Warum konnte Emma nicht mit dem Auto fahren?
+        options: [Das Auto war kaputt., Sie hatte keine Zeit., Der Bus war weg.]
+        answer: Das Auto war kaputt.
+      - id: read3
+        type: true-false
+        tags: [reading, modal past]
+        prompt: Emma ist mit dem Bus gefahren.
+        answer: false
+
+  - title: Write an excuse
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, modal past]
+        prompt: "You missed your German class yesterday. Write a short message to your teacher, Herr Lang."
+        points:
+          - Say that you could not come
+          - Say what you had to do, or what the problem was
+          - Ask what the homework is
+        minWords: 25
+        phrases:
+          - Sehr geehrter Herr Lang, / Lieber Herr Lang,
+          - ich konnte gestern leider nicht kommen.
+          - Ich musste … / Ich war …
+          - Was sind die Hausaufgaben?
+          - Mit freundlichen Grüßen / Viele Grüße
+        sample: "Lieber Herr Lang, ich konnte gestern leider nicht zum Kurs kommen. Meine Tochter war krank und ich musste mit ihr zum Arzt gehen. Was sind die Hausaufgaben? Viele Grüße, Maria Rossi"
