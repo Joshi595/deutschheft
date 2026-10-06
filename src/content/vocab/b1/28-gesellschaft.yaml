@@ -1,0 +1,126 @@
+lesson: b1.28
+items:
+  - id: nachbarschaft
+    de: Nachbarschaft
+    en: neighbourhood
+    pos: noun
+    article: die
+    example: In unserer Nachbarschaft wohnen viele Familien.
+    exampleEn: Many families live in our neighbourhood.
+  - id: ruecksicht
+    de: Rücksicht nehmen auf + A
+    en: to be considerate of
+    pos: phrase
+    example: Bitte nehmen Sie Rücksicht auf die Nachbarn.
+    exampleEn: Please be considerate of the neighbours.
+  - id: behoerde
+    de: Behörde
+    en: authority, office
+    pos: noun
+    article: die
+    plural: Behörden
+    example: Für den Antrag muss ich zur Behörde.
+    exampleEn: I have to go to the office for the application.
+  - id: antrag
+    de: Antrag
+    en: application (official)
+    pos: noun
+    article: der
+    plural: Anträge
+    example: Ich habe einen Antrag auf Elterngeld gestellt.
+    exampleEn: I have applied for parental allowance.
+  - id: beantragen
+    de: beantragen
+    en: to apply for (officially)
+    pos: verb
+    example: Sie hat einen neuen Pass beantragt.
+    exampleEn: She has applied for a new passport.
+  - id: frist
+    de: Frist
+    en: deadline
+    pos: noun
+    article: die
+    plural: Fristen
+    example: Die Frist endet am 30. Juni.
+    exampleEn: The deadline is 30 June.
+  - id: unterlagen
+    de: Unterlagen
+    en: documents
+    pos: phrase
+    example: Bitte bringen Sie alle Unterlagen mit.
+    exampleEn: Please bring all your documents.
+  - id: aufenthaltstitel
+    de: Aufenthaltstitel
+    en: residence permit
+    pos: noun
+    article: der
+    plural: Aufenthaltstitel
+    example: Mein Aufenthaltstitel muss verlängert werden.
+    exampleEn: My residence permit needs to be extended.
+  - id: integration
+    de: Integration
+    en: integration
+    pos: noun
+    article: die
+    example: Die Sprache ist wichtig für die Integration.
+    exampleEn: Language is important for integration.
+  - id: vielfalt
+    de: Vielfalt
+    en: diversity, variety
+    pos: noun
+    article: die
+    example: Die Vielfalt der Kulturen macht die Stadt interessant.
+    exampleEn: The diversity of cultures makes the city interesting.
+  - id: vorurteil
+    de: Vorurteil
+    en: prejudice
+    pos: noun
+    article: das
+    plural: Vorurteile
+    example: Wir müssen gegen Vorurteile kämpfen.
+    exampleEn: We must fight against prejudice.
+  - id: gleichberechtigung
+    de: Gleichberechtigung
+    en: equal rights, equality
+    pos: noun
+    article: die
+    example: Gleichberechtigung ist im Grundgesetz garantiert.
+    exampleEn: Equal rights are guaranteed in the constitution.
+  - id: wahl
+    de: Wahl
+    en: election; choice
+    pos: noun
+    article: die
+    plural: Wahlen
+    example: Die nächste Wahl ist im Herbst.
+    exampleEn: The next election is in the autumn.
+  - id: waehlen
+    de: wählen
+    en: to vote, to elect; to choose
+    pos: verb
+    example: Ab 18 darf man in Deutschland wählen.
+    exampleEn: In Germany you can vote from the age of 18.
+  - id: regierung
+    de: Regierung
+    en: government
+    pos: noun
+    article: die
+    plural: Regierungen
+    example: Die Regierung plant neue Gesetze.
+    exampleEn: The government is planning new laws.
+  - id: buerger
+    de: Bürger
+    en: citizen
+    pos: noun
+    article: der
+    plural: Bürger
+    example: Die Bürger können ihre Meinung sagen.
+    exampleEn: Citizens can express their opinions.
+  - id: pflicht
+    de: Pflicht
+    en: duty, obligation
+    pos: noun
+    article: die
+    plural: Pflichten
+    example: Jeder hat Rechte und Pflichten.
+    exampleEn: Everyone has rights and duties.

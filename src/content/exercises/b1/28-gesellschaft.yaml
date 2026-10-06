@@ -1,0 +1,162 @@
+lesson: b1.28
+sets:
+  - title: Words
+    items:
+      - id: w1
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: die Frist, right: the deadline }
+          - { left: die Unterlagen, right: the documents }
+          - { left: die Behörde, right: the authority }
+          - { left: das Vorurteil, right: the prejudice }
+          - { left: die Gleichberechtigung, right: equal rights }
+          - { left: die Pflicht, right: the duty }
+      - id: w2
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: die Wahl, right: the election }
+          - { left: die Regierung, right: the government }
+          - { left: die Partei, right: the party }
+          - { left: der Bürger, right: the citizen }
+          - { left: die Vielfalt, right: diversity }
+      - id: w3
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Ich habe einen neuen Pass ___. (applied for)"
+        answers: [beantragt]
+
+  - title: Grammar in context
+    items:
+      - id: g1
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Man muss Rücksicht ___ die Nachbarn nehmen."
+        options: [auf, zu, für]
+        answer: auf
+      - id: g2
+        type: multiple-choice
+        tags: [passive]
+        prompt: "Der Antrag muss innerhalb von vier Wochen gestellt ___."
+        options: [werden, worden, sein]
+        answer: werden
+      - id: g3
+        type: multiple-choice
+        tags: [passive]
+        prompt: "Alle vier Jahre ___ der Bundestag gewählt."
+        options: [wird, ist, hat]
+        answer: wird
+      - id: g4
+        type: multiple-choice
+        tags: [vocabulary]
+        prompt: "Which sentence is correct?"
+        options: ["Ich beantrage einen Aufenthaltstitel.", "Ich bewerbe einen Aufenthaltstitel.", "Ich kündige einen Aufenthaltstitel."]
+        answer: "Ich beantrage einen Aufenthaltstitel."
+      - id: g7
+        type: multiple-choice
+        tags: [wählen]
+        prompt: "Which sentence is correct?"
+        options: ["Ich wähle die Grünen.", "Ich wähle für die Grünen.", "Ich wähle an die Grünen."]
+        answer: "Ich wähle die Grünen."
+      - id: g8
+        type: translation
+        tags: [offices]
+        prompt: Please bring all documents.
+        answers:
+          - "Bitte bringen Sie alle Unterlagen mit."
+      - id: g9
+        type: translation
+        tags: [community]
+        prompt: In our street people help each other.
+        answers:
+          - "In unserer Straße hilft man sich gegenseitig."
+          - "In unserer Straße helfen sich die Leute gegenseitig."
+      - id: g5
+        type: multiple-choice
+        tags: [was]
+        prompt: "Immer mehr Väter nehmen Elternzeit, ___ ich sehr gut finde."
+        options: [was, das, die]
+        answer: was
+      - id: g6
+        type: word-order
+        tags: [passive]
+        prompt: My residence permit must be extended.
+        answer: "Mein Aufenthaltstitel muss verlängert werden."
+
+  - title: Simplify official language
+    items:
+      - id: off1
+        type: multiple-choice
+        tags: [official language]
+        prompt: "'Die Abgabe der Unterlagen erfolgt bis zum 30.6.' means …"
+        options: ["You must hand in the documents by 30 June.", "The documents will be sent to you on 30 June.", "The office is closed until 30 June."]
+        answer: "You must hand in the documents by 30 June."
+      - id: off2
+        type: multiple-choice
+        tags: [official language]
+        prompt: "'Bei Nichteinhaltung der Frist wird eine Gebühr erhoben.' means …"
+        options: ["If you miss the deadline, you have to pay a fee.", "The fee is paid back after the deadline.", "There is no fee."]
+        answer: "If you miss the deadline, you have to pay a fee."
+      - id: off3
+        type: true-false
+        tags: [official language]
+        prompt: "'Eine Verlängerung ist nur auf Antrag möglich' means the extension happens automatically."
+        answer: false
+
+  - title: A letter from the office
+    stimulus:
+      kind: text
+      label: Schreiben der Ausländerbehörde
+      text: "Sehr geehrte Frau Haddad, Ihr Aufenthaltstitel läuft am 31. August ab. Für die Verlängerung muss ein Antrag spätestens sechs Wochen vor Ablauf gestellt werden. Bitte vereinbaren Sie online einen Termin und bringen Sie folgende Unterlagen mit: Ihren Pass, ein aktuelles biometrisches Foto, Ihren Arbeitsvertrag und die letzten drei Gehaltsabrechnungen. Die Bearbeitung dauert in der Regel vier bis sechs Wochen. Mit freundlichen Grüßen, Ihre Ausländerbehörde"
+    items:
+      - id: read1
+        type: multiple-choice
+        tags: [reading]
+        prompt: Bis wann muss Frau Haddad den Antrag stellen?
+        options: ["spätestens sechs Wochen vor dem 31. August", "bis zum 31. August", "nach dem 31. August"]
+        answer: "spätestens sechs Wochen vor dem 31. August"
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: Frau Haddad kann ohne Termin zur Behörde gehen.
+        answer: false
+      - id: read3
+        type: multiple-choice
+        tags: [reading]
+        prompt: Welche Unterlage braucht sie NICHT?
+        options: [ihr Abiturzeugnis, ihren Pass, ihren Arbeitsvertrag]
+        answer: ihr Abiturzeugnis
+
+  - title: Your opinion
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [opinion]
+        prompt: Complete the forum post about integration.
+        bank: [Meinung, Schlüssel, Zwar, aber, Vorurteile, Rücksicht]
+        text: "Meiner ___ nach ist die Sprache der wichtigste ___ zur Integration. ___ ist es am Anfang schwer, ___ man findet schneller Freunde und Arbeit. Auch die Einheimischen sollten ___ abbauen und neue Nachbarn offen empfangen. Wenn alle ___ aufeinander nehmen, funktioniert das Zusammenleben gut."
+        gaps:
+          - [Meinung]
+          - [Schlüssel]
+          - [Zwar]
+          - [aber]
+          - [Vorurteile]
+          - [Rücksicht]
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, discussion]
+        prompt: "Discuss: 'Should everyone who lives in a country for five years be allowed to vote there?'"
+        cards: [dafür, dagegen, Integration, meine Meinung]
+        phrases:
+          - Dafür spricht, dass …
+          - Dagegen spricht, dass …
+          - Zwar …, aber …
+          - Ich bin der Meinung, dass …
+        checklist:
+          - I gave arguments for and against
+          - I used zwar … aber or einerseits … andererseits
+          - I gave a clear opinion with a reason
+        sample: "Dafür spricht, dass Menschen, die seit fünf Jahren hier leben, auch Steuern bezahlen und von politischen Entscheidungen betroffen sind. Wenn sie wählen dürften, würden sie sich vielleicht stärker integrieren. Dagegen spricht, dass man das System und die Sprache gut kennen sollte, bevor man wählt. Zwar ist die Staatsbürgerschaft ein klarer Weg, aber er dauert oft sehr lange. Ich bin der Meinung, dass man zumindest bei Kommunalwahlen mitbestimmen dürfen sollte."
