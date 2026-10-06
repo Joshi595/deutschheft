@@ -251,7 +251,7 @@ export function Matching({ item, response, onChange, locked, result }: WidgetPro
               {pair.left}
             </span>
             <select
-              className="field w-auto min-w-[12rem] flex-1"
+              className="field min-w-0 max-w-full flex-[1_1_12rem]"
               aria-label={`Match for ${pair.left}`}
               disabled={locked}
               value={locked ? pair.right : (response.selection[pair.left] ?? '')}
