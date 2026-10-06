@@ -1,0 +1,114 @@
+lesson: b1.14
+items:
+  - id: deutsche
+    de: Deutsche
+    en: German (person)
+    pos: noun
+    article: der
+    plural: Deutschen
+    example: Viele Deutsche fahren im Sommer nach Italien.
+    exampleEn: Many Germans go to Italy in the summer.
+  - id: angestellte
+    de: Angestellte
+    en: employee
+    pos: noun
+    article: der
+    plural: Angestellten
+    example: Die Firma hat 50 Angestellte.
+    exampleEn: The company has 50 employees.
+  - id: erwachsene
+    de: Erwachsene
+    en: adult
+    pos: noun
+    article: der
+    plural: Erwachsenen
+    example: Der Eintritt kostet für Erwachsene zehn Euro.
+    exampleEn: Admission costs ten euros for adults.
+  - id: jugendliche
+    de: Jugendliche
+    en: young person, teenager
+    pos: noun
+    article: der
+    plural: Jugendlichen
+    example: Das Jugendzentrum ist für Jugendliche ab 14.
+    exampleEn: The youth centre is for young people aged 14 and up.
+  - id: arbeitslose
+    de: Arbeitslose
+    en: unemployed person
+    pos: noun
+    article: der
+    plural: Arbeitslosen
+    example: Die Zahl der Arbeitslosen ist gesunken.
+    exampleEn: The number of unemployed people has fallen.
+  - id: etwas-neues
+    de: etwas Neues
+    en: something new
+    pos: phrase
+    example: Ich möchte mal etwas Neues ausprobieren.
+    exampleEn: I would like to try something new.
+  - id: nichts-besonderes
+    de: nichts Besonderes
+    en: nothing special
+    pos: phrase
+    example: Am Wochenende habe ich nichts Besonderes gemacht.
+    exampleEn: I did nothing special at the weekend.
+  - id: das-beste
+    de: das Beste
+    en: the best thing
+    pos: phrase
+    example: Das Beste am Job sind die Kollegen.
+    exampleEn: The best thing about the job is the colleagues.
+  - id: steigend
+    de: steigend
+    en: rising
+    pos: adjective
+    example: Die steigenden Mieten sind ein großes Problem.
+    exampleEn: Rising rents are a big problem.
+  - id: ausgefuellt
+    de: ausgefüllt
+    en: completed, filled in
+    pos: adjective
+    example: Schicken Sie das ausgefüllte Formular zurück.
+    exampleEn: Send back the completed form.
+  - id: kenntnisse
+    de: Kenntnisse
+    en: knowledge, skills
+    pos: phrase
+    example: Sie haben gute Englischkenntnisse.
+    exampleEn: You have good English.
+  - id: einige
+    de: einige
+    en: some, a few
+    pos: other
+    example: Einige neue Kollegen kommen aus Spanien.
+    exampleEn: Some new colleagues are from Spain.
+  - id: mehrere
+    de: mehrere
+    en: several
+    pos: other
+    example: Ich habe mehrere gute Angebote bekommen.
+    exampleEn: I have received several good offers.
+  - id: zufrieden
+    de: zufrieden
+    en: satisfied, content
+    pos: adjective
+    example: Die Kunden sind mit dem neuen Service zufrieden.
+    exampleEn: The customers are satisfied with the new service.
+  - id: wesentlich
+    de: wesentlich
+    en: essential, considerably
+    pos: adjective
+    example: Das ist der wesentliche Unterschied.
+    exampleEn: That is the essential difference.
+  - id: ausprobieren
+    de: ausprobieren
+    en: to try out
+    pos: verb
+    example: Wir probieren ein neues Rezept aus.
+    exampleEn: We are trying out a new recipe.
+  - id: geschlossen
+    de: geschlossen
+    en: closed
+    pos: adjective
+    example: Hinter der geschlossenen Tür war es still.
+    exampleEn: Behind the closed door it was quiet.

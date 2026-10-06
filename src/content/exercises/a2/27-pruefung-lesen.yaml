@@ -1,0 +1,143 @@
+lesson: a2.27
+sets:
+  - title: "Teil 1: a newspaper article"
+    instructions: Lesen Sie den Text. Wählen Sie die richtige Lösung a, b oder c.
+    stimulus:
+      kind: text
+      label: Stadtzeitung
+      text: |
+        Neues Leben im alten Bahnhof
+
+        Zehn Jahre lang war der alte Bahnhof in Lindau leer. Seit Mai gibt es dort jetzt ein Kulturzentrum. Im Erdgeschoss ist ein Café, das von Jugendlichen aus der Stadt geführt wird. Im ersten Stock gibt es Räume für Kurse: Malen, Fotografieren und Deutsch für Anfänger. Die Kurse sind für Schüler kostenlos, Erwachsene bezahlen fünf Euro pro Termin.
+
+        „Viele Leute haben gesagt, das funktioniert nicht", erzählt Projektleiterin Sabine Kurz. „Aber schon in den ersten zwei Monaten hatten wir über 3.000 Besucher." Im Herbst soll es auch Konzerte geben. Das Café ist von Dienstag bis Sonntag geöffnet.
+    items:
+      - id: r1-1
+        type: multiple-choice
+        prompt: Der alte Bahnhof …
+        options: ["war zehn Jahre lang leer.", "ist seit zehn Jahren ein Kulturzentrum.", "ist seit Mai geschlossen."]
+        answer: "war zehn Jahre lang leer."
+      - id: r1-2
+        type: multiple-choice
+        prompt: Das Café …
+        options: ["wird von Jugendlichen geführt.", "ist im ersten Stock.", "ist jeden Tag geöffnet."]
+        answer: "wird von Jugendlichen geführt."
+      - id: r1-3
+        type: multiple-choice
+        prompt: Die Kurse …
+        options: ["kosten für Schüler nichts.", "kosten für alle fünf Euro.", "sind nur für Erwachsene."]
+        answer: "kosten für Schüler nichts."
+      - id: r1-4
+        type: multiple-choice
+        prompt: Sabine Kurz sagt, dass …
+        options: ["das Zentrum viele Besucher hatte.", "das Projekt nicht funktioniert.", "es schon Konzerte gibt."]
+        answer: "das Zentrum viele Besucher hatte."
+        explanation: Concerts are planned for the autumn, so they are not there yet.
+
+  - title: "Teil 2: the store directory"
+    instructions: Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie a, b oder c.
+    stimulus:
+      kind: text
+      label: Kaufhaus Merkur – Wegweiser
+      text: |
+        3. Stock: Restaurant mit Terrasse · Toiletten · Kundenservice
+        2. Stock: Möbel · Lampen · Teppiche · Bettwäsche
+        1. Stock: Damen- und Herrenmode · Schuhe · Sportbekleidung
+        Erdgeschoss: Parfüm · Schmuck · Uhren · Taschen · Zeitschriften
+        Untergeschoss: Lebensmittel · Getränke · Haushaltswaren · Spielwaren
+    items:
+      - id: r2-1
+        type: multiple-choice
+        prompt: Sie möchten Ihrem Sohn ein Spiel zum Geburtstag schenken.
+        options: [Untergeschoss, Erdgeschoss, anderer Stock]
+        answer: Untergeschoss
+        shuffle: false
+      - id: r2-2
+        type: multiple-choice
+        prompt: Sie brauchen Laufschuhe.
+        options: [1. Stock, 2. Stock, anderer Stock]
+        answer: 1. Stock
+        shuffle: false
+      - id: r2-3
+        type: multiple-choice
+        prompt: Sie haben eine Jacke gekauft, aber sie ist kaputt. Sie möchten sie zurückgeben.
+        options: [1. Stock, 3. Stock, anderer Stock]
+        answer: 3. Stock
+        shuffle: false
+        explanation: Returns go to the Kundenservice on the third floor.
+      - id: r2-4
+        type: multiple-choice
+        prompt: Sie möchten einen Laptop kaufen.
+        options: [2. Stock, Erdgeschoss, anderer Stock]
+        answer: anderer Stock
+        shuffle: false
+        explanation: There are no electronics anywhere on the board.
+
+  - title: "Teil 3: an email"
+    instructions: Lesen Sie die E-Mail. Wählen Sie die richtige Lösung a, b oder c.
+    stimulus:
+      kind: text
+      label: E-Mail
+      text: |
+        Liebe Jana,
+
+        danke für deine Nachricht! Schön, dass du uns im Juli besuchen möchtest. Leider kann ich dich nicht am Flughafen abholen, weil ich an dem Tag bis 18 Uhr arbeiten muss. Aber mein Mann Paul hat frei, er holt dich ab.
+
+        Du kannst natürlich bei uns schlafen. Unser Gästezimmer ist klein, aber gemütlich. Am Wochenende möchten wir mit dir in die Berge fahren. Bring also bitte gute Schuhe und eine warme Jacke mit, oben ist es auch im Sommer kalt!
+
+        Ich freue mich sehr!
+        Deine Martina
+    items:
+      - id: r3-1
+        type: multiple-choice
+        prompt: Wer holt Jana vom Flughafen ab?
+        options: [Paul, Martina, niemand]
+        answer: Paul
+      - id: r3-2
+        type: multiple-choice
+        prompt: Wo schläft Jana?
+        options: ["im Gästezimmer", "im Hotel", "in den Bergen"]
+        answer: "im Gästezimmer"
+      - id: r3-3
+        type: multiple-choice
+        prompt: Was soll Jana mitbringen?
+        options: ["warme Kleidung und gute Schuhe", "ein Geschenk für Paul", "Sommerkleidung"]
+        answer: "warme Kleidung und gute Schuhe"
+
+  - title: "Teil 4: adverts"
+    instructions: Welche Anzeige passt? Für eine Person gibt es keine Anzeige. Wählen Sie dann X.
+    stimulus:
+      kind: text
+      label: Anzeigen
+      text: |
+        a) Gitarrenunterricht für Kinder und Erwachsene. Einzelstunden, auch am Wochenende. 25 € pro Stunde.
+
+        b) Tanzschule Rhythmus: Salsa-Kurs für Anfänger, dienstags 20 Uhr. Paare und Singles willkommen.
+
+        c) Fahrradwerkstatt Speiche: Reparaturen schnell und günstig. Mo–Fr 9–18 Uhr.
+
+        d) Verkaufe gebrauchtes Damenfahrrad, 3 Jahre alt, sehr guter Zustand, 120 €.
+
+        e) Kochkurs „Italien": Pasta selbst machen. Samstag, 15. Juni, 10–14 Uhr. 45 €.
+
+        f) Yoga im Park: jeden Sonntag 9 Uhr, kostenlos, bei Regen in der Turnhalle.
+    items:
+      - id: r4-1
+        type: multiple-choice
+        prompt: Elif möchte am Wochenende Sport machen, aber kein Geld bezahlen.
+        options: [a, b, c, d, e, f, X]
+        answer: f
+        shuffle: false
+      - id: r4-2
+        type: multiple-choice
+        prompt: Tom sucht ein billiges Fahrrad für sich.
+        options: [a, b, c, d, e, f, X]
+        answer: X
+        shuffle: false
+        explanation: The only bike for sale is a women's bike, and the workshop only repairs.
+      - id: r4-3
+        type: multiple-choice
+        prompt: Frau Weber möchte am Abend mit ihrem Mann einen Kurs machen.
+        options: [a, b, c, d, e, f, X]
+        answer: b
+        shuffle: false

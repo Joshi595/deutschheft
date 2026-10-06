@@ -1,0 +1,117 @@
+lesson: b1.16
+items:
+  - id: freiheit
+    de: Freiheit
+    en: freedom
+    pos: noun
+    article: die
+    example: Die Freiheit ist mir sehr wichtig.
+    exampleEn: Freedom is very important to me.
+  - id: freundlichkeit
+    de: Freundlichkeit
+    en: friendliness
+    pos: noun
+    article: die
+    example: Ich danke Ihnen für Ihre Freundlichkeit.
+    exampleEn: Thank you for your kindness.
+  - id: freundschaft
+    de: Freundschaft
+    en: friendship
+    pos: noun
+    article: die
+    plural: Freundschaften
+    example: Unsere Freundschaft ist sehr alt.
+    exampleEn: Our friendship goes back a long way.
+  - id: erklaerung
+    de: Erklärung
+    en: explanation
+    pos: noun
+    article: die
+    plural: Erklärungen
+    example: Danke für die gute Erklärung.
+    exampleEn: Thanks for the good explanation.
+  - id: kostenlos
+    de: kostenlos
+    en: free of charge
+    pos: adjective
+    example: Der Eintritt ist kostenlos.
+    exampleEn: Admission is free.
+  - id: erreichbar
+    de: erreichbar
+    en: reachable, available
+    pos: adjective
+    example: Ich bin morgen telefonisch erreichbar.
+    exampleEn: I can be reached by phone tomorrow.
+  - id: machbar
+    de: machbar
+    en: feasible, doable
+    pos: adjective
+    example: Das Projekt ist bis Freitag machbar.
+    exampleEn: The project can be done by Friday.
+  - id: unmoeglich
+    de: unmöglich
+    en: impossible
+    pos: adjective
+    example: Das ist leider unmöglich.
+    exampleEn: That is unfortunately impossible.
+  - id: sinnvoll
+    de: sinnvoll
+    en: sensible, meaningful
+    pos: adjective
+    example: Es ist sinnvoll, früh zu buchen.
+    exampleEn: It makes sense to book early.
+  - id: beruflich
+    de: beruflich
+    en: professional, for work
+    pos: adjective
+    example: Ich bin beruflich oft in Wien.
+    exampleEn: I am often in Vienna for work.
+  - id: beantworten
+    de: beantworten
+    en: to answer (something)
+    pos: verb
+    example: Bitte beantworten Sie meine Frage.
+    exampleEn: Please answer my question.
+  - id: entdecken
+    de: entdecken
+    en: to discover
+    pos: verb
+    example: Wir haben ein tolles Restaurant entdeckt.
+    exampleEn: We discovered a great restaurant.
+  - id: sich-verlaufen
+    de: sich verlaufen
+    en: to get lost (on foot)
+    pos: verb
+    example: Ich habe mich in der Altstadt verlaufen.
+    exampleEn: I got lost in the old town.
+  - id: arbeitszeit
+    de: Arbeitszeit
+    en: working hours
+    pos: noun
+    article: die
+    plural: Arbeitszeiten
+    example: Die Arbeitszeiten sind flexibel.
+    exampleEn: The working hours are flexible.
+  - id: wohnungssuche
+    de: Wohnungssuche
+    en: flat hunting
+    pos: noun
+    article: die
+    example: Die Wohnungssuche in München ist schwierig.
+    exampleEn: Finding a flat in Munich is difficult.
+  - id: gesellschaft
+    de: Gesellschaft
+    en: society; company
+    pos: noun
+    article: die
+    plural: Gesellschaften
+    example: Wir leben in einer digitalen Gesellschaft.
+    exampleEn: We live in a digital society.
+  - id: qualitaet
+    de: Qualität
+    en: quality
+    pos: noun
+    article: die
+    plural: Qualitäten
+    example: Die Qualität ist sehr gut.
+    exampleEn: The quality is very good.

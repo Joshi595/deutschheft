@@ -1,0 +1,112 @@
+lesson: b1.12
+items:
+  - id: bauen
+    de: bauen
+    en: to build
+    pos: verb
+    example: Die Brücke wurde 1890 gebaut.
+    exampleEn: The bridge was built in 1890.
+  - id: stehlen
+    de: stehlen
+    en: to steal
+    pos: verb
+    example: Mein Fahrrad ist gestohlen worden.
+    exampleEn: My bike has been stolen.
+  - id: zerstoeren
+    de: zerstören
+    en: to destroy
+    pos: verb
+    example: Die Stadt wurde im Krieg zerstört.
+    exampleEn: The town was destroyed in the war.
+  - id: herstellen
+    de: herstellen
+    en: to produce, to manufacture
+    pos: verb
+    example: Diese Autos werden in Bayern hergestellt.
+    exampleEn: These cars are made in Bavaria.
+  - id: abgeben
+    de: abgeben
+    en: to hand in
+    pos: verb
+    example: Die Hausarbeit muss bis Montag abgegeben werden.
+    exampleEn: The essay must be handed in by Monday.
+  - id: ausfuellen
+    de: ausfüllen
+    en: to fill in
+    pos: verb
+    example: Das Formular muss vollständig ausgefüllt werden.
+    exampleEn: The form must be filled in completely.
+  - id: erfinden-b1
+    de: erfinden
+    en: to invent
+    pos: verb
+    example: Das Telefon wurde im 19. Jahrhundert erfunden.
+    exampleEn: The telephone was invented in the 19th century.
+  - id: veroeffentlichen
+    de: veröffentlichen
+    en: to publish
+    pos: verb
+    example: Der Artikel wurde gestern veröffentlicht.
+    exampleEn: The article was published yesterday.
+  - id: schaelen
+    de: schälen
+    en: to peel
+    pos: verb
+    example: Zuerst werden die Äpfel geschält.
+    exampleEn: First the apples are peeled.
+  - id: verletzte
+    de: Verletzte
+    en: injured person
+    pos: noun
+    article: der
+    plural: Verletzten
+    example: Die Verletzten wurden ins Krankenhaus gebracht.
+    exampleEn: The injured were taken to hospital.
+  - id: erdbeben
+    de: Erdbeben
+    en: earthquake
+    pos: noun
+    article: das
+    plural: Erdbeben
+    example: Viele Häuser wurden durch das Erdbeben zerstört.
+    exampleEn: Many houses were destroyed by the earthquake.
+  - id: jahrhundert
+    de: Jahrhundert
+    en: century
+    pos: noun
+    article: das
+    plural: Jahrhunderte
+    example: Die Kirche stammt aus dem 12. Jahrhundert.
+    exampleEn: The church dates from the 12th century.
+  - id: gruenden
+    de: gründen
+    en: to found
+    pos: verb
+    example: Die Firma wurde 1950 gegründet.
+    exampleEn: The company was founded in 1950.
+  - id: renovieren
+    de: renovieren
+    en: to renovate
+    pos: verb
+    example: Das Bad wird gerade renoviert.
+    exampleEn: The bathroom is being renovated at the moment.
+  - id: liefern
+    de: liefern
+    en: to deliver
+    pos: verb
+    example: Die Möbel werden morgen geliefert.
+    exampleEn: The furniture is being delivered tomorrow.
+  - id: verbieten-b1
+    de: verboten
+    en: forbidden
+    pos: adjective
+    example: Hier darf nicht geraucht werden.
+    exampleEn: Smoking is not allowed here.
+  - id: vorgang
+    de: Vorgang
+    en: process
+    pos: noun
+    article: der
+    plural: Vorgänge
+    example: Der Vorgang wird im Text beschrieben.
+    exampleEn: The process is described in the text.

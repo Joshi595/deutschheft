@@ -1,0 +1,129 @@
+lesson: a2.23
+items:
+  - id: umziehen
+    de: umziehen
+    en: to move (house)
+    pos: verb
+    example: Wir sind letzten Monat umgezogen.
+    exampleEn: We moved last month.
+  - id: einziehen
+    de: einziehen
+    en: to move in
+    pos: verb
+    example: Wann zieht ihr in die neue Wohnung ein?
+    exampleEn: When are you moving into the new flat?
+  - id: ausziehen
+    de: ausziehen
+    en: to move out
+    pos: verb
+    example: Mit 19 bin ich bei meinen Eltern ausgezogen.
+    exampleEn: I moved out of my parents' place at 19.
+  - id: miete
+    de: Miete
+    en: rent
+    pos: noun
+    article: die
+    plural: Mieten
+    example: Die Miete ist in München sehr hoch.
+    exampleEn: The rent in Munich is very high.
+  - id: nebenkosten
+    de: Nebenkosten
+    en: service charges, bills
+    pos: phrase
+    example: Die Nebenkosten sind 150 Euro im Monat.
+    exampleEn: The service charges are 150 euros a month.
+  - id: kaution
+    de: Kaution
+    en: deposit
+    pos: noun
+    article: die
+    plural: Kautionen
+    example: Die Kaution bekommen Sie beim Auszug zurück.
+    exampleEn: You get the deposit back when you move out.
+  - id: vermieter
+    de: Vermieter
+    en: landlord
+    pos: noun
+    article: der
+    plural: Vermieter
+    example: Der Vermieter wohnt im Erdgeschoss.
+    exampleEn: The landlord lives on the ground floor.
+  - id: mietvertrag
+    de: Mietvertrag
+    en: tenancy agreement
+    pos: noun
+    article: der
+    plural: Mietverträge
+    example: Wir unterschreiben morgen den Mietvertrag.
+    exampleEn: We are signing the tenancy agreement tomorrow.
+  - id: besichtigen
+    de: besichtigen
+    en: to view, to visit
+    pos: verb
+    example: Kann ich die Wohnung am Montag besichtigen?
+    exampleEn: Can I view the flat on Monday?
+  - id: kuendigen
+    de: kündigen
+    en: to give notice
+    pos: verb
+    example: Ich habe meine Wohnung gekündigt.
+    exampleEn: I have given notice on my flat.
+  - id: anzeige
+    de: Anzeige
+    en: advert
+    pos: noun
+    article: die
+    plural: Anzeigen
+    example: Ich habe Ihre Anzeige im Internet gelesen.
+    exampleEn: I read your advert on the internet.
+  - id: erdgeschoss
+    de: Erdgeschoss
+    en: ground floor
+    pos: noun
+    article: das
+    plural: Erdgeschosse
+    example: Die Wohnung liegt im Erdgeschoss.
+    exampleEn: The flat is on the ground floor.
+  - id: wg
+    de: WG (Wohngemeinschaft)
+    en: flat share
+    pos: noun
+    article: die
+    plural: WGs
+    example: Ich wohne in einer WG mit drei Leuten.
+    exampleEn: I live in a flat share with three people.
+  - id: hausordnung
+    de: Hausordnung
+    en: house rules
+    pos: noun
+    article: die
+    plural: Hausordnungen
+    example: In der Hausordnung steht, dass man den Müll trennen muss.
+    exampleEn: The house rules say you have to separate the rubbish.
+  - id: muell
+    de: Müll
+    en: rubbish
+    pos: noun
+    article: der
+    example: Wer bringt heute den Müll raus?
+    exampleEn: Who is taking the rubbish out today?
+  - id: sich-anmelden
+    de: sich anmelden
+    en: to register
+    pos: verb
+    example: Ich muss mich beim Bürgeramt anmelden.
+    exampleEn: I have to register at the local office.
+  - id: haustier
+    de: Haustier
+    en: pet
+    pos: noun
+    article: das
+    plural: Haustiere
+    example: Sind Haustiere erlaubt?
+    exampleEn: Are pets allowed?
+  - id: erlaubt
+    de: erlaubt
+    en: allowed
+    pos: adjective
+    example: Rauchen ist hier nicht erlaubt.
+    exampleEn: Smoking is not allowed here.

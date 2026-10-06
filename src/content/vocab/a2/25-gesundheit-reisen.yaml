@@ -1,0 +1,130 @@
+lesson: a2.25
+items:
+  - id: termin
+    de: Termin
+    en: appointment
+    pos: noun
+    article: der
+    plural: Termine
+    example: Ich habe morgen einen Termin beim Arzt.
+    exampleEn: I have a doctor's appointment tomorrow.
+  - id: dringend
+    de: dringend
+    en: urgent
+    pos: adjective
+    example: Es ist dringend, ich habe starke Schmerzen.
+    exampleEn: It is urgent, I am in a lot of pain.
+  - id: fieber
+    de: Fieber
+    en: fever, temperature
+    pos: noun
+    article: das
+    example: Das Kind hat hohes Fieber.
+    exampleEn: The child has a high temperature.
+  - id: husten
+    de: Husten
+    en: cough
+    pos: noun
+    article: der
+    example: Ich habe seit einer Woche Husten.
+    exampleEn: I have had a cough for a week.
+  - id: wehtun
+    de: wehtun
+    en: to hurt
+    pos: verb
+    example: Mir tut der Bauch weh.
+    exampleEn: My stomach hurts.
+  - id: sich-verletzen
+    de: sich verletzen
+    en: to hurt oneself
+    pos: verb
+    example: Er hat sich beim Fußball verletzt.
+    exampleEn: He hurt himself playing football.
+  - id: rezept
+    de: Rezept
+    en: prescription; recipe
+    pos: noun
+    article: das
+    plural: Rezepte
+    example: Für dieses Medikament brauchen Sie ein Rezept.
+    exampleEn: You need a prescription for this medicine.
+  - id: tablette
+    de: Tablette
+    en: tablet, pill
+    pos: noun
+    article: die
+    plural: Tabletten
+    example: Nehmen Sie zweimal täglich eine Tablette.
+    exampleEn: Take one tablet twice a day.
+  - id: apotheke
+    de: Apotheke
+    en: pharmacy
+    pos: noun
+    article: die
+    plural: Apotheken
+    example: Die Apotheke ist bis 20 Uhr geöffnet.
+    exampleEn: The pharmacy is open until 8 pm.
+  - id: versichert
+    de: versichert
+    en: insured
+    pos: adjective
+    example: Wo sind Sie versichert?
+    exampleEn: Where are you insured?
+  - id: gute-besserung
+    de: Gute Besserung!
+    en: Get well soon!
+    pos: phrase
+    example: Du bist krank? Gute Besserung!
+    exampleEn: You are ill? Get well soon!
+  - id: buchen
+    de: buchen
+    en: to book
+    pos: verb
+    example: Wir haben ein Hotel am Meer gebucht.
+    exampleEn: We have booked a hotel by the sea.
+  - id: doppelzimmer
+    de: Doppelzimmer
+    en: double room
+    pos: noun
+    article: das
+    plural: Doppelzimmer
+    example: Ein Doppelzimmer kostet 95 Euro pro Nacht.
+    exampleEn: A double room costs 95 euros a night.
+  - id: gleis
+    de: Gleis
+    en: platform, track
+    pos: noun
+    article: das
+    plural: Gleise
+    example: Der Zug fährt von Gleis 4 ab.
+    exampleEn: The train leaves from platform 4.
+  - id: verspaetung
+    de: Verspätung
+    en: delay
+    pos: noun
+    article: die
+    plural: Verspätungen
+    example: Der Zug hat 15 Minuten Verspätung.
+    exampleEn: The train is 15 minutes late.
+  - id: ausfallen-zug
+    de: fällt aus
+    en: is cancelled
+    pos: phrase
+    example: Der Zug um 9 Uhr fällt heute aus.
+    exampleEn: The 9 o'clock train is cancelled today.
+  - id: anschluss
+    de: Anschluss
+    en: connection
+    pos: noun
+    article: der
+    plural: Anschlüsse
+    example: Ich habe meinen Anschluss verpasst.
+    exampleEn: I missed my connection.
+  - id: urlaub
+    de: Urlaub
+    en: holiday, vacation
+    pos: noun
+    article: der
+    plural: Urlaube
+    example: Wo wart ihr im Urlaub?
+    exampleEn: Where did you go on holiday?

@@ -1,0 +1,112 @@
+lesson: a2.17
+items:
+  - id: als
+    de: als
+    en: than
+    pos: conjunction
+    example: Berlin ist größer als München.
+    exampleEn: Berlin is bigger than Munich.
+  - id: so-wie
+    de: so … wie
+    en: as … as
+    pos: phrase
+    example: Ich bin so alt wie du.
+    exampleEn: I am as old as you.
+  - id: genauso
+    de: genauso
+    en: just as, exactly as
+    pos: adverb
+    example: Das Hotel ist genauso teuer wie letztes Jahr.
+    exampleEn: The hotel is just as expensive as last year.
+  - id: besser
+    de: besser
+    en: better
+    pos: adjective
+    example: Mir geht es heute besser.
+    exampleEn: I am feeling better today.
+  - id: am-besten
+    de: am besten
+    en: best
+    pos: phrase
+    example: Am besten fahren Sie mit der U-Bahn.
+    exampleEn: It is best to take the underground.
+  - id: mehr
+    de: mehr
+    en: more
+    pos: adverb
+    example: Ich möchte mehr Zeit für meine Familie.
+    exampleEn: I would like more time for my family.
+  - id: lieber
+    de: lieber
+    en: rather, preferably
+    pos: adverb
+    example: Ich trinke lieber Tee.
+    exampleEn: I prefer tea.
+  - id: am-liebsten
+    de: am liebsten
+    en: most of all, best
+    pos: phrase
+    example: Am liebsten esse ich Pizza.
+    exampleEn: Pizza is my favourite food.
+  - id: hoch
+    de: hoch
+    en: high, tall
+    pos: adjective
+    example: Die Zugspitze ist der höchste Berg Deutschlands.
+    exampleEn: The Zugspitze is the highest mountain in Germany.
+  - id: nah
+    de: nah
+    en: near, close
+    pos: adjective
+    example: Wo ist die nächste Haltestelle?
+    exampleEn: Where is the nearest stop?
+  - id: billig
+    de: billig
+    en: cheap
+    pos: adjective
+    example: Der Bus ist billiger als der Zug.
+    exampleEn: The bus is cheaper than the train.
+  - id: schnell
+    de: schnell
+    en: fast, quick
+    pos: adjective
+    example: Mit dem Flugzeug geht es am schnellsten.
+    exampleEn: The plane is the quickest.
+  - id: langsam
+    de: langsam
+    en: slow
+    pos: adjective
+    example: Der Bus ist langsamer als die S-Bahn.
+    exampleEn: The bus is slower than the suburban train.
+  - id: schwierig
+    de: schwierig
+    en: difficult
+    pos: adjective
+    example: Die Prüfung war schwieriger als gedacht.
+    exampleEn: The exam was harder than expected.
+  - id: einfach
+    de: einfach
+    en: easy, simple
+    pos: adjective
+    example: Das ist die einfachste Lösung.
+    exampleEn: That is the simplest solution.
+  - id: vergleichen
+    de: vergleichen
+    en: to compare
+    pos: verb
+    example: Wir vergleichen die Preise.
+    exampleEn: We compare the prices.
+  - id: unterschied
+    de: Unterschied
+    en: difference
+    pos: noun
+    article: der
+    plural: Unterschiede
+    example: Was ist der Unterschied?
+    exampleEn: What is the difference?
+  - id: arm
+    de: arm
+    en: poor
+    pos: adjective
+    example: Früher war die Region ärmer.
+    exampleEn: The region used to be poorer.

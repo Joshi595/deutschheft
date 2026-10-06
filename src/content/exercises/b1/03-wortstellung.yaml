@@ -1,0 +1,168 @@
+lesson: b1.03
+sets:
+  - title: Time before place
+    items:
+      - id: tekamolo1
+        type: multiple-choice
+        tags: [TeKaMoLo]
+        prompt: Choose the most natural sentence.
+        options:
+          - "Ich gehe heute Abend ins Kino."
+          - "Ich gehe ins Kino heute Abend."
+          - "Ich heute Abend gehe ins Kino."
+        answer: "Ich gehe heute Abend ins Kino."
+      - id: tekamolo2
+        type: word-order
+        tags: [TeKaMoLo]
+        prompt: Tomorrow I am going to Vienna by train.
+        answer: "Ich fahre morgen mit dem Zug nach Wien."
+      - id: tekamolo3
+        type: word-order
+        tags: [TeKaMoLo]
+        prompt: Yesterday she went home quickly because of the cold.
+        answer: "Sie ist gestern wegen der Kälte schnell nach Hause gegangen."
+      - id: tekamolo4
+        type: word-order
+        tags: [TeKaMoLo]
+        prompt: We are flying to Spain with friends in August.
+        answer: "Wir fliegen im August mit Freunden nach Spanien."
+
+  - title: Position 1
+    items:
+      - id: pos1
+        type: multiple-choice
+        tags: [position 1]
+        prompt: Choose the correct sentence.
+        options:
+          - "Morgen fahre ich nach Wien."
+          - "Morgen ich fahre nach Wien."
+          - "Morgen mit dem Zug fahre ich nach Wien."
+        answer: "Morgen fahre ich nach Wien."
+      - id: pos2
+        type: word-order
+        tags: [position 1]
+        prompt: "Unfortunately I had to wait a long time for the bus yesterday. (start with Gestern)"
+        answer: "Gestern musste ich leider lange auf den Bus warten."
+      - id: pos3
+        type: true-false
+        tags: [position 1]
+        prompt: "Only one element can stand before the conjugated verb in a main clause."
+        answer: true
+
+  - title: Pronouns and objects
+    items:
+      - id: obj1
+        type: multiple-choice
+        tags: [object order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich habe ihr gestern das Buch gegeben."
+          - "Ich habe gestern das Buch ihr gegeben."
+          - "Ich habe das Buch gestern ihr gegeben."
+        answer: "Ich habe ihr gestern das Buch gegeben."
+      - id: obj2
+        type: multiple-choice
+        tags: [object order]
+        prompt: "Ich habe ___ gestern gegeben. (it to her)"
+        options: [es ihr, ihr es]
+        answer: es ihr
+      - id: obj3
+        type: word-order
+        tags: [object order]
+        prompt: Can you explain it to me?
+        answer: "Kannst du es mir erklären?"
+
+  - title: Where does nicht go?
+    items:
+      - id: nicht1
+        type: multiple-choice
+        tags: [nicht]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich habe ihn gestern nicht gesehen."
+          - "Ich habe nicht ihn gestern gesehen."
+          - "Ich habe ihn gestern gesehen nicht."
+        answer: "Ich habe ihn gestern nicht gesehen."
+      - id: nicht2
+        type: multiple-choice
+        tags: [nicht]
+        prompt: Choose the correct sentence.
+        options:
+          - "Er fährt morgen nicht nach Wien."
+          - "Er fährt nicht morgen nach Wien."
+          - "Er fährt morgen nach Wien nicht."
+        answer: "Er fährt morgen nicht nach Wien."
+        explanation: "The second option is possible only with a correction: nicht morgen, sondern …"
+      - id: nicht3
+        type: word-order
+        tags: [nicht]
+        prompt: I do not know the man.
+        answer: "Ich kenne den Mann nicht."
+      - id: nicht4
+        type: word-order
+        tags: [nicht]
+        prompt: I could not wait for you.
+        answer: "Ich konnte nicht auf dich warten."
+
+  - title: aber or sondern?
+    items:
+      - id: sond1
+        type: multiple-choice
+        tags: [sondern]
+        prompt: "Ich fahre nicht morgen, ___ übermorgen."
+        options: [sondern, aber]
+        answer: sondern
+      - id: sond2
+        type: multiple-choice
+        tags: [sondern]
+        prompt: "Das Hotel war teuer, ___ sehr schön."
+        options: [aber, sondern]
+        answer: aber
+      - id: sond3
+        type: multiple-choice
+        tags: [sondern]
+        prompt: "Nicht ich habe das gesagt, ___ mein Chef."
+        options: [sondern, aber]
+        answer: sondern
+
+  - title: Correct the email
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [word order]
+        prompt: Choose the word that fills each gap.
+        bank: [nicht, weil, sondern, ihr, aber]
+        text: "Liebe Frau Kraus, ich kann heute leider ___ zum Kurs kommen, ___ mein Sohn krank ist. Ich komme auch ___ morgen, ___ erst am Donnerstag. Könnten Sie es bitte Frau Lehmann sagen? Ich habe ___ meine Nummer nicht gegeben."
+        gaps:
+          - [nicht]
+          - [weil]
+          - [nicht]
+          - [sondern]
+          - [ihr]
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [word order]
+        prompt: Today I went to work by bike because of the weather.
+        answers:
+          - "Heute bin ich wegen des Wetters mit dem Fahrrad zur Arbeit gefahren."
+          - "Ich bin heute wegen des Wetters mit dem Fahrrad zur Arbeit gefahren."
+
+  - title: Tell me about it
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, word order]
+        prompt: Describe how you got to work, school or the course today, with time, reason, manner and place in each sentence where possible.
+        cards: [Wann?, Warum?, Wie?, Wohin?]
+        phrases:
+          - Heute bin ich um … mit dem … zur Arbeit gefahren.
+          - Wegen … bin ich …
+          - Ich bin nicht …, sondern …
+        checklist:
+          - I put the time before the place
+          - I started at least one sentence with something other than the subject
+          - I used nicht and sondern correctly at least once
+        sample: "Heute bin ich um halb acht mit dem Fahrrad zur Arbeit gefahren. Normalerweise nehme ich den Bus, aber heute war das Wetter so schön. Wegen der Baustelle in der Bahnhofstraße bin ich durch den Park gefahren. Ich bin nicht zu spät gekommen, sondern sogar zehn Minuten zu früh."

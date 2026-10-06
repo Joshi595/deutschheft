@@ -1,0 +1,136 @@
+lesson: a2.24
+items:
+  - id: beruf
+    de: Beruf
+    en: job, profession
+    pos: noun
+    article: der
+    plural: Berufe
+    example: Was sind Sie von Beruf?
+    exampleEn: What do you do for a living?
+  - id: ausbildung
+    de: Ausbildung
+    en: apprenticeship, training
+    pos: noun
+    article: die
+    plural: Ausbildungen
+    example: Ich mache eine Ausbildung als Elektriker.
+    exampleEn: I am training as an electrician.
+  - id: studieren
+    de: studieren
+    en: to study (at university)
+    pos: verb
+    example: Sie studiert Medizin in Heidelberg.
+    exampleEn: She is studying medicine in Heidelberg.
+  - id: abitur
+    de: Abitur
+    en: school-leaving exam (university entrance)
+    pos: noun
+    article: das
+    example: Ich habe 2018 Abitur gemacht.
+    exampleEn: I finished school in 2018.
+  - id: firma
+    de: Firma
+    en: company
+    pos: noun
+    article: die
+    plural: Firmen
+    example: Er arbeitet bei einer kleinen Firma.
+    exampleEn: He works for a small company.
+  - id: teilzeit
+    de: Teilzeit
+    en: part-time
+    pos: noun
+    article: die
+    example: Ich arbeite Teilzeit.
+    exampleEn: I work part-time.
+  - id: schicht
+    de: Schicht
+    en: shift
+    pos: noun
+    article: die
+    plural: Schichten
+    example: Morgen habe ich Frühschicht.
+    exampleEn: I am on the early shift tomorrow.
+  - id: gehalt
+    de: Gehalt
+    en: salary
+    pos: noun
+    article: das
+    plural: Gehälter
+    example: Das Gehalt ist gut.
+    exampleEn: The salary is good.
+  - id: ueberstunden
+    de: Überstunden
+    en: overtime
+    pos: phrase
+    example: Diese Woche habe ich viele Überstunden gemacht.
+    exampleEn: I worked a lot of overtime this week.
+  - id: kollege
+    de: Kollege
+    en: colleague
+    pos: noun
+    article: der
+    plural: Kollegen
+    example: Meine Kollegen sind sehr nett.
+    exampleEn: My colleagues are very nice.
+  - id: bewerbung
+    de: Bewerbung
+    en: application
+    pos: noun
+    article: die
+    plural: Bewerbungen
+    example: Ich habe meine Bewerbung gestern geschickt.
+    exampleEn: I sent my application yesterday.
+  - id: sich-bewerben
+    de: sich bewerben um + A
+    en: to apply for
+    pos: verb
+    example: Ich bewerbe mich um die Stelle.
+    exampleEn: I am applying for the position.
+  - id: lebenslauf
+    de: Lebenslauf
+    en: CV
+    pos: noun
+    article: der
+    plural: Lebensläufe
+    example: Bitte schicken Sie uns Ihren Lebenslauf.
+    exampleEn: Please send us your CV.
+  - id: stelle
+    de: Stelle
+    en: job, position
+    pos: noun
+    article: die
+    plural: Stellen
+    example: Ich suche eine neue Stelle.
+    exampleEn: I am looking for a new job.
+  - id: erfahrung
+    de: Erfahrung
+    en: experience
+    pos: noun
+    article: die
+    plural: Erfahrungen
+    example: Haben Sie Erfahrung im Verkauf?
+    exampleEn: Do you have sales experience?
+  - id: krankmeldung
+    de: Krankmeldung
+    en: sick note
+    pos: noun
+    article: die
+    plural: Krankmeldungen
+    example: Ich bringe morgen die Krankmeldung.
+    exampleEn: I will bring the sick note tomorrow.
+  - id: besprechung
+    de: Besprechung
+    en: meeting
+    pos: noun
+    article: die
+    plural: Besprechungen
+    example: Frau Klein ist gerade in einer Besprechung.
+    exampleEn: Ms Klein is in a meeting right now.
+  - id: zurueckrufen
+    de: zurückrufen
+    en: to call back
+    pos: verb
+    example: Könnten Sie mich bitte zurückrufen?
+    exampleEn: Could you call me back, please?

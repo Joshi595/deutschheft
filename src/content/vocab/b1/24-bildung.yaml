@@ -1,0 +1,124 @@
+lesson: b1.24
+items:
+  - id: bildung
+    de: Bildung
+    en: education
+    pos: noun
+    article: die
+    example: Bildung ist der Schlüssel zum Erfolg.
+    exampleEn: Education is the key to success.
+  - id: abschluss
+    de: Abschluss
+    en: qualification, degree
+    pos: noun
+    article: der
+    plural: Abschlüsse
+    example: Welchen Abschluss haben Sie?
+    exampleEn: What qualification do you have?
+  - id: fach
+    de: Fach
+    en: subject
+    pos: noun
+    article: das
+    plural: Fächer
+    example: Mein Lieblingsfach war Geschichte.
+    exampleEn: My favourite subject was history.
+  - id: note
+    de: Note
+    en: mark, grade
+    pos: noun
+    article: die
+    plural: Noten
+    example: Ich habe in Mathe eine Zwei bekommen.
+    exampleEn: I got a 2 (good) in maths.
+  - id: semester
+    de: Semester
+    en: semester
+    pos: noun
+    article: das
+    plural: Semester
+    example: Sie studiert im dritten Semester.
+    exampleEn: She is in her third semester.
+  - id: vorlesung
+    de: Vorlesung
+    en: lecture
+    pos: noun
+    article: die
+    plural: Vorlesungen
+    example: Die Vorlesung beginnt um acht Uhr.
+    exampleEn: The lecture starts at eight.
+  - id: studiengebuehren
+    de: Studiengebühren
+    en: tuition fees
+    pos: phrase
+    example: In Deutschland gibt es kaum Studiengebühren.
+    exampleEn: There are hardly any tuition fees in Germany.
+  - id: stipendium
+    de: Stipendium
+    en: scholarship
+    pos: noun
+    article: das
+    plural: Stipendien
+    example: Er hat ein Stipendium bekommen.
+    exampleEn: He has got a scholarship.
+  - id: azubi
+    de: Azubi (Auszubildende)
+    en: apprentice
+    pos: noun
+    article: der
+    plural: Azubis
+    example: Die Firma sucht drei neue Azubis.
+    exampleEn: The company is looking for three new apprentices.
+  - id: berufsschule
+    de: Berufsschule
+    en: vocational school
+    pos: noun
+    article: die
+    plural: Berufsschulen
+    example: Zweimal pro Woche gehe ich in die Berufsschule.
+    exampleEn: Twice a week I go to vocational school.
+  - id: sich-weiterbilden
+    de: sich weiterbilden
+    en: to continue one's education
+    pos: verb
+    example: Ich möchte mich beruflich weiterbilden.
+    exampleEn: I would like to do further professional training.
+  - id: volkshochschule
+    de: Volkshochschule
+    en: adult education centre
+    pos: noun
+    article: die
+    plural: Volkshochschulen
+    example: Ich mache einen Kochkurs an der Volkshochschule.
+    exampleEn: I am doing a cooking course at the adult education centre.
+  - id: anerkennen
+    de: anerkennen
+    en: to recognise (officially)
+    pos: verb
+    example: Mein Abschluss wird hier nicht anerkannt.
+    exampleEn: My qualification is not recognised here.
+  - id: anerkennung
+    de: Anerkennung
+    en: recognition
+    pos: noun
+    article: die
+    example: Die Anerkennung dauert oft mehrere Monate.
+    exampleEn: Recognition often takes several months.
+  - id: sich-merken
+    de: sich etwas merken
+    en: to remember something
+    pos: verb
+    example: Ich kann mir Namen schlecht merken.
+    exampleEn: I am bad at remembering names.
+  - id: auswendig
+    de: auswendig lernen
+    en: to learn by heart
+    pos: phrase
+    example: Wir mussten das Gedicht auswendig lernen.
+    exampleEn: We had to learn the poem by heart.
+  - id: wiederholen
+    de: wiederholen
+    en: to revise, to repeat
+    pos: verb
+    example: Vor der Prüfung wiederhole ich alle Vokabeln.
+    exampleEn: Before the exam I revise all the vocabulary.

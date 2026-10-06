@@ -1,0 +1,645 @@
+level: b1
+title: Modelltest 1
+description: >-
+  A complete practice exam in the format of the Goethe-Zertifikat B1: reading, listening, writing
+  and speaking, with the real time limits. Each module is passed separately with 60 percent. Allow
+  about three hours if you sit all four modules in one go.
+passMark: 60
+scoring: per-module
+modules:
+  # ------------------------------------------------------------------ Lesen
+  - skill: reading
+    minutes: 65
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text und die Aufgaben. Sind die Aussagen richtig oder falsch?
+        stimulus:
+          kind: text
+          label: Blog
+          text: |
+            Mein erstes Jahr als Gärtnerin
+
+            Letzten Frühling habe ich einen kleinen Garten am Stadtrand gepachtet. Ehrlich gesagt hatte ich keine Ahnung von Pflanzen – in meiner alten Wohnung sind sogar die Kakteen gestorben. Aber nach zwei Jahren im Homeoffice wollte ich unbedingt mehr Zeit draußen verbringen.
+
+            Die ersten Wochen waren chaotisch. Ich habe Tomaten zu früh gepflanzt, und in einer kalten Nacht im Mai sind fast alle erfroren. Zum Glück hat mir mein Nachbar Herr Schulte geholfen. Er ist über achtzig und hat sein ganzes Leben im Garten verbracht. Von ihm habe ich gelernt, dass man in Deutschland bis Mitte Mai warten sollte.
+
+            Im Sommer konnte ich dann endlich ernten: Zucchini, Bohnen, Salat und Kräuter. Es war so viel, dass ich jede Woche Gemüse an meine Kollegen verschenkt habe. Nächstes Jahr möchte ich auch Kartoffeln probieren. Und mein größter Wunsch: Ich möchte Bienen halten, aber dafür muss ich zuerst einen Kurs machen.
+        items:
+          - id: l1-1
+            type: true-false
+            prompt: Die Autorin hatte schon viel Erfahrung mit Pflanzen.
+            answer: false
+          - id: l1-2
+            type: true-false
+            prompt: Sie wollte mehr Zeit im Freien verbringen.
+            answer: true
+          - id: l1-3
+            type: true-false
+            prompt: Die Tomaten sind wegen einer kalten Nacht kaputtgegangen.
+            answer: true
+          - id: l1-4
+            type: true-false
+            prompt: Herr Schulte ist ein junger Gärtner.
+            answer: false
+          - id: l1-5
+            type: true-false
+            prompt: Sie hat im Sommer mehr geerntet, als sie selbst essen konnte.
+            answer: true
+          - id: l1-6
+            type: true-false
+            prompt: Sie hält schon Bienen.
+            answer: false
+
+      - title: "Lesen, Teil 2 (Text 1)"
+        instructions: Lesen Sie den Text aus der Presse. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Bücher statt Bildschirm: Die Vier-Tage-Lesewoche
+
+            An der Gesamtschule Nord in Bremen gibt es seit Beginn des Schuljahres ein ungewöhnliches Projekt. Jeden Morgen lesen alle Schülerinnen und Schüler und auch alle Lehrkräfte zwanzig Minuten lang ein Buch ihrer Wahl – von Montag bis Donnerstag. Handys bleiben in dieser Zeit in der Tasche.
+
+            Die Idee kam von der Deutschlehrerin Petra Hahn. „Viele Jugendliche lesen nur noch kurze Texte auf dem Handy. Wir wollten zeigen, dass ein Buch spannender sein kann", sagt sie. Am Anfang waren einige Eltern skeptisch, weil sie Angst hatten, dass Unterrichtszeit verloren geht. Doch die ersten Ergebnisse sind positiv: Die Lehrkräfte berichten, dass die Klassen nach der Lesezeit ruhiger und konzentrierter sind.
+
+            Auch die Schulbibliothek profitiert. Sie hat ihre Öffnungszeiten verlängert und lädt jetzt einmal im Monat Autorinnen und Autoren zu Lesungen ein.
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: In dem Projekt lesen …
+            options: ["Schüler und Lehrer jeden Morgen zwanzig Minuten.", "nur die Schüler am Freitag.", "die Schüler Texte auf dem Handy."]
+            answer: "Schüler und Lehrer jeden Morgen zwanzig Minuten."
+          - id: l2-2
+            type: multiple-choice
+            prompt: Einige Eltern waren am Anfang skeptisch, weil …
+            options: ["sie Angst um die Unterrichtszeit hatten.", "Bücher zu teuer sind.", "die Kinder keine Bücher mögen."]
+            answer: "sie Angst um die Unterrichtszeit hatten."
+          - id: l2-3
+            type: multiple-choice
+            prompt: Die Schulbibliothek …
+            options: ["ist jetzt länger geöffnet.", "muss schließen.", "kauft keine neuen Bücher."]
+            answer: "ist jetzt länger geöffnet."
+
+      - title: "Lesen, Teil 2 (Text 2)"
+        instructions: Lesen Sie den Text aus der Presse. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Reparieren statt wegwerfen
+
+            Ein kaputter Toaster, ein Fahrrad mit platten Reifen, eine Hose mit Loch: Im Repair-Café in Graz bekommen alte Dinge ein zweites Leben. Jeden ersten Samstag im Monat treffen sich hier ehrenamtliche Helfer – Elektriker, Schneiderinnen, Fahrradmechaniker – und reparieren zusammen mit den Besuchern deren Sachen. Die Reparatur ist kostenlos, nur Ersatzteile muss man selbst bezahlen.
+
+            „Es geht nicht nur darum, Geld zu sparen", erklärt Organisator Markus Ebner. „Die Leute sollen lernen, Dinge selbst zu reparieren." Deshalb arbeiten die Helfer nie allein, sondern zeigen jeden Schritt. Etwa siebzig Prozent der Geräte können repariert werden. Für die anderen gibt es Tipps, wo man Ersatzteile findet.
+
+            Inzwischen gibt es in Österreich über hundert solcher Cafés. Ebner wünscht sich, dass Hersteller ihre Produkte wieder so bauen, dass man sie leichter reparieren kann.
+        items:
+          - id: l2-4
+            type: multiple-choice
+            prompt: Im Repair-Café …
+            options: ["muss man für die Reparatur nichts bezahlen.", "arbeiten nur bezahlte Fachleute.", "kann man neue Geräte kaufen."]
+            answer: "muss man für die Reparatur nichts bezahlen."
+          - id: l2-5
+            type: multiple-choice
+            prompt: Markus Ebner möchte vor allem, dass die Besucher …
+            options: ["lernen, selbst zu reparieren.", "neue Ersatzteile kaufen.", "jeden Monat kommen."]
+            answer: "lernen, selbst zu reparieren."
+          - id: l2-6
+            type: multiple-choice
+            prompt: Was wünscht sich Ebner von den Herstellern?
+            options: ["Produkte, die man leichter reparieren kann.", "günstigere Preise.", "mehr Repair-Cafés."]
+            answer: "Produkte, die man leichter reparieren kann."
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die Situationen und die Anzeigen. Welche Anzeige passt? Sie können jede Anzeige nur einmal wählen. Für eine Situation gibt es keine passende Anzeige. Wählen Sie dann 0.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Sprachtandem: Spanierin (28) sucht Deutsche/n zum Sprachaustausch, einmal pro Woche abends im Café.
+
+            b) Yoga für Schwangere – sanfte Übungen, kleine Gruppen, mittwochs 10 Uhr. Praxis Lindenhof.
+
+            c) Kochkurs „Schnell und gesund": Fünf Abende, für Berufstätige, die wenig Zeit haben. VHS Mitte.
+
+            d) Wanderverein „Bergfreunde": jeden Sonntag Touren in der Region, auch für Familien mit Kindern. Mitgliedschaft 20 € im Jahr.
+
+            e) Fahrradreparaturkurs für Frauen: Lernen Sie, Ihr Rad selbst zu reparieren. Samstag, 14–17 Uhr, kostenlos.
+
+            f) Nachhilfe in Mathe und Physik für Schüler der Klassen 5–10, von erfahrener Lehrerin, auch online.
+
+            g) Fotokurs für Anfänger: Wie mache ich mit dem Handy gute Bilder? Zwei Samstage, 40 €.
+
+            h) Tanzkurs für Paare: Walzer, Tango, Salsa. Freitags 20 Uhr, Tanzschule Weiß.
+
+            i) Laufgruppe für Wiedereinsteiger: Wir trainieren langsam für den ersten 5-km-Lauf. Dienstags 18:30 Uhr.
+
+            j) Computerhilfe für Senioren: Ehrenamtliche helfen bei Problemen mit Laptop und Smartphone. Jeden Donnerstag im Seniorenzentrum.
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Rosa möchte ihr Deutsch verbessern und dabei neue Leute kennenlernen.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: a
+            shuffle: false
+          - id: l3-2
+            type: multiple-choice
+            prompt: Herr Kowalski (74) hat ein neues Smartphone und versteht es nicht.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: j
+            shuffle: false
+          - id: l3-3
+            type: multiple-choice
+            prompt: Familie Meier möchte am Wochenende mit ihren Kindern in der Natur aktiv sein.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: d
+            shuffle: false
+          - id: l3-4
+            type: multiple-choice
+            prompt: Jonas arbeitet viel und möchte lernen, wie man schnell gesunde Gerichte kocht.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: c
+            shuffle: false
+          - id: l3-5
+            type: multiple-choice
+            prompt: Ayşe hat lange keinen Sport gemacht und möchte wieder mit dem Joggen anfangen.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: i
+            shuffle: false
+          - id: l3-6
+            type: multiple-choice
+            prompt: Tobias sucht einen Gitarrenlehrer für sich.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: "0"
+            shuffle: false
+            explanation: No advert offers guitar lessons.
+          - id: l3-7
+            type: multiple-choice
+            prompt: Die Tochter von Frau Ahmadi hat Probleme in Mathe und braucht Hilfe.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: f
+            shuffle: false
+
+      - title: "Lesen, Teil 4"
+        instructions: "Lesen Sie die Texte. Thema: Sollte es in allen Städten ein Tempolimit von 30 km/h geben? Ist die Person dafür? Wählen Sie ja oder nein."
+        items:
+          - id: l4-1
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Carla, 41, Köln
+              text: "Ich habe zwei kleine Kinder, die bald allein zur Schule gehen. Mit Tempo 30 hätte ich viel weniger Angst. Für mich gibt es da keine Diskussion."
+            prompt: Ist Carla für Tempo 30?
+            options: [ja, nein]
+            answer: ja
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Bernd, 58, Leipzig
+              text: "Vor Schulen und Kindergärten finde ich es richtig. Aber überall? Dann brauche ich für meinen Weg zur Arbeit noch länger. Das geht zu weit."
+            prompt: Ist Bernd für Tempo 30 in der ganzen Stadt?
+            options: [ja, nein]
+            answer: nein
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Ahmet, 23, Hamburg
+              text: "Ich fahre nur Fahrrad. Je langsamer die Autos sind, desto sicherer fühle ich mich. Außerdem wird es leiser. Eine gute Idee!"
+            prompt: Ist Ahmet für Tempo 30?
+            options: [ja, nein]
+            answer: ja
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Petra, 66, München
+              text: "Zwar ist es leiser, aber die Busse brauchen dann länger, und viele ältere Menschen sind auf den Bus angewiesen. Ich bin skeptisch."
+            prompt: Ist Petra für Tempo 30?
+            options: [ja, nein]
+            answer: nein
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Lukas, 35, Freiburg
+              text: "Bei uns gibt es seit zwei Jahren fast überall Tempo 30. Am Anfang haben sich viele beschwert, aber heute will niemand zurück. Es gibt weniger Unfälle."
+            prompt: Ist Lukas für Tempo 30?
+            options: [ja, nein]
+            answer: ja
+            shuffle: false
+          - id: l4-6
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Sandra, 47, Berlin
+              text: "Ich bin Taxifahrerin. Für mich bedeutet Tempo 30 weniger Fahrten pro Tag und damit weniger Geld. Die Politiker denken nicht an Leute wie mich."
+            prompt: Ist Sandra für Tempo 30?
+            options: [ja, nein]
+            answer: nein
+            shuffle: false
+          - id: l4-7
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Kenji, 29, Düsseldorf
+              text: "Ich war am Anfang dagegen, weil ich gern Auto fahre. Doch dann habe ich gelesen, wie viel weniger Unfälle es gibt. Inzwischen finde ich es sinnvoll."
+            prompt: Ist Kenji für Tempo 30?
+            options: [ja, nein]
+            answer: ja
+            shuffle: false
+
+      - title: "Lesen, Teil 5"
+        instructions: Lesen Sie die Aufgaben und den Text. Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Teilnahmebedingungen – Sprachkurse der Volkshochschule
+          text: |
+            Anmeldung: Die Anmeldung ist online oder persönlich im Servicebüro möglich. Sie ist verbindlich, sobald Sie eine Bestätigung per E-Mail erhalten haben.
+
+            Bezahlung: Die Kursgebühr wird zwei Wochen vor Kursbeginn von Ihrem Konto abgebucht. Studierende, Auszubildende und Arbeitslose erhalten gegen Nachweis 30 % Ermäßigung.
+
+            Rücktritt: Eine kostenlose Abmeldung ist bis zehn Tage vor Kursbeginn möglich. Danach wird die volle Gebühr berechnet, außer Sie nennen eine Ersatzperson.
+
+            Ausfall: Fällt ein Kurstermin wegen Krankheit der Kursleitung aus, wird er nachgeholt. Kurse mit weniger als acht Anmeldungen können abgesagt werden; die Gebühr wird dann vollständig erstattet.
+        items:
+          - id: l5-1
+            type: multiple-choice
+            prompt: Die Anmeldung ist sicher, wenn …
+            options: ["man eine Bestätigung per E-Mail bekommen hat.", "man im Büro bezahlt hat.", "der Kurs beginnt."]
+            answer: "man eine Bestätigung per E-Mail bekommen hat."
+          - id: l5-2
+            type: multiple-choice
+            prompt: Wer bekommt einen günstigeren Preis?
+            options: ["Studierende mit Nachweis", "alle, die online buchen", "Teilnehmer über 60"]
+            answer: "Studierende mit Nachweis"
+          - id: l5-3
+            type: multiple-choice
+            prompt: Sie melden sich fünf Tage vor Kursbeginn ab. Dann …
+            options: ["müssen Sie alles bezahlen, wenn niemand Ihren Platz nimmt.", "bekommen Sie das Geld zurück.", "zahlen Sie nur 30 Prozent."]
+            answer: "müssen Sie alles bezahlen, wenn niemand Ihren Platz nimmt."
+          - id: l5-4
+            type: multiple-choice
+            prompt: Was passiert, wenn sich nur sechs Personen anmelden?
+            options: ["Der Kurs kann ausfallen, und man bekommt das Geld zurück.", "Der Kurs wird teurer.", "Der Kurs wird nachgeholt."]
+            answer: "Der Kurs kann ausfallen, und man bekommt das Geld zurück."
+
+  # ------------------------------------------------------------------ Hören
+  - skill: listening
+    minutes: 40
+    points: 25
+    parts:
+      - title: "Hören, Teil 1 (Text 1)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Durchsage am Bahnhof
+          lines:
+            - text: "Achtung an Gleis 3. Der ICE 1027 nach München, planmäßige Abfahrt 10 Uhr 24, fährt heute mit umgekehrter Wagenreihung. Die Wagen der ersten Klasse halten im Abschnitt E. Wegen einer technischen Störung entfällt das Bordrestaurant. Wir bitten um Ihr Verständnis."
+        items:
+          - id: h1-1
+            type: true-false
+            prompt: Der Zug nach München fällt heute aus.
+            answer: false
+          - id: h1-2
+            type: multiple-choice
+            prompt: Was gibt es heute im Zug nicht?
+            options: ["das Restaurant", "die erste Klasse", "Gepäckwagen"]
+            answer: "das Restaurant"
+
+      - title: "Hören, Teil 1 (Text 2)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Nachricht auf dem Anrufbeantworter
+          lines:
+            - text: "Hallo Nina, hier ist Jakob. Du, wegen Samstag: Das Konzert ist leider ausverkauft, ich habe keine Karten mehr bekommen. Wollen wir stattdessen ins Kino gehen? Im Odeon läuft der neue Film von Fatih Akin. Die Vorstellung beginnt um acht. Sag mir bis morgen Bescheid, dann reserviere ich Plätze."
+        items:
+          - id: h1-3
+            type: true-false
+            prompt: Jakob hat Karten für das Konzert gekauft.
+            answer: false
+          - id: h1-4
+            type: multiple-choice
+            prompt: Was soll Nina tun?
+            options: ["Jakob bis morgen antworten", "Kinokarten kaufen", "um acht Uhr anrufen"]
+            answer: "Jakob bis morgen antworten"
+
+      - title: "Hören, Teil 1 (Text 3)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Verkehrsfunk
+          lines:
+            - text: "Und nun die Verkehrsmeldungen. Auf der A7 zwischen Kassel-Nord und Göttingen gibt es nach einem Unfall zehn Kilometer Stau. Die Polizei empfiehlt, über die Bundesstraße 3 auszuweichen. Auf der A2 bei Hannover ist die linke Spur wegen Bauarbeiten bis Freitag gesperrt."
+        items:
+          - id: h1-5
+            type: true-false
+            prompt: Auf der A7 gibt es einen langen Stau.
+            answer: true
+          - id: h1-6
+            type: multiple-choice
+            prompt: Was empfiehlt die Polizei?
+            options: ["die Bundesstraße 3 zu nehmen", "auf der A7 zu warten", "mit dem Zug zu fahren"]
+            answer: "die Bundesstraße 3 zu nehmen"
+
+      - title: "Hören, Teil 1 (Text 4)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Ansage im Kaufhaus
+          lines:
+            - text: "Liebe Kundinnen und Kunden, nur heute erhalten Sie in unserer Haushaltsabteilung im zweiten Stock zwanzig Prozent Rabatt auf alle Kaffeemaschinen. Außerdem gibt es im Erdgeschoss eine kostenlose Kaffeeprobe. Unser Haus ist heute bis 22 Uhr für Sie geöffnet."
+        items:
+          - id: h1-7
+            type: true-false
+            prompt: Die Kaffeemaschinen sind heute billiger.
+            answer: true
+          - id: h1-8
+            type: multiple-choice
+            prompt: Wo kann man Kaffee probieren?
+            options: ["im Erdgeschoss", "im zweiten Stock", "im Café im Untergeschoss"]
+            answer: "im Erdgeschoss"
+
+      - title: "Hören, Teil 1 (Text 5)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Nachricht von der Arztpraxis
+          lines:
+            - text: "Guten Tag, Herr Okonkwo, hier ist die Praxis Doktor Fischer. Ihre Blutwerte sind da, und es ist alles in Ordnung. Den Termin nächste Woche brauchen Sie deshalb nicht mehr. Bitte denken Sie aber daran, dass Ihre Impfung im Herbst aufgefrischt werden muss. Rufen Sie uns dafür im September an."
+        items:
+          - id: h1-9
+            type: true-false
+            prompt: Herr Okonkwo muss nächste Woche zum Arzt.
+            answer: false
+          - id: h1-10
+            type: multiple-choice
+            prompt: Wann soll Herr Okonkwo die Praxis anrufen?
+            options: ["im September", "nächste Woche", "morgen"]
+            answer: "im September"
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören einen Text einmal. Wählen Sie für jede Aufgabe die richtige Lösung a, b oder c.
+        stimulus:
+          kind: audio
+          label: Führung durch das Schokoladenmuseum
+          plays: 1
+          lines:
+            - speaker: Führerin
+              text: "Herzlich willkommen im Schokoladenmuseum! Mein Name ist Frau Berger, und ich begleite Sie heute etwa eine Stunde durch unser Haus. Bitte lassen Sie Ihre Taschen in den Schließfächern am Eingang, die sind kostenlos."
+            - speaker: Führerin
+              text: "Wir beginnen im ersten Stock mit der Geschichte des Kakaos. Sie werden sehen, dass die Menschen in Mittelamerika Kakao schon vor über dreitausend Jahren getrunken haben – allerdings nicht süß, sondern scharf, mit Chili."
+            - speaker: Führerin
+              text: "Danach gehen wir ins Erdgeschoss in unsere gläserne Fabrik. Dort können Sie zusehen, wie aus Kakaobohnen Schokolade wird. Fotografieren ist dort leider nicht erlaubt, weil wir die Rezepte schützen."
+            - speaker: Führerin
+              text: "Zum Schluss kommen wir zum Schokoladenbrunnen, wo Sie probieren dürfen. Und noch ein Hinweis: Im Museumsshop bekommen Sie mit Ihrer Eintrittskarte heute zehn Prozent Rabatt."
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Wie lange dauert die Führung?
+            options: ["etwa eine Stunde", "etwa zwei Stunden", "dreißig Minuten"]
+            answer: "etwa eine Stunde"
+          - id: h2-2
+            type: multiple-choice
+            prompt: Was sollen die Besucher mit ihren Taschen machen?
+            options: ["in ein Schließfach legen", "mitnehmen", "an der Kasse abgeben"]
+            answer: "in ein Schließfach legen"
+          - id: h2-3
+            type: multiple-choice
+            prompt: Wie haben die Menschen in Mittelamerika Kakao früher getrunken?
+            options: ["scharf, mit Chili", "mit viel Zucker", "mit Milch"]
+            answer: "scharf, mit Chili"
+          - id: h2-4
+            type: multiple-choice
+            prompt: In der gläsernen Fabrik darf man …
+            options: ["nicht fotografieren.", "Schokolade selbst machen.", "die Rezepte kaufen."]
+            answer: "nicht fotografieren."
+          - id: h2-5
+            type: multiple-choice
+            prompt: Was bekommt man heute im Museumsshop?
+            options: ["zehn Prozent Rabatt", "eine kostenlose Tafel Schokolade", "ein Rezeptbuch"]
+            answer: "zehn Prozent Rabatt"
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören ein Gespräch einmal. Sind die Aussagen richtig oder falsch?
+        stimulus:
+          kind: audio
+          label: Gespräch im Bus
+          plays: 1
+          lines:
+            - speaker: Lea
+              text: "Hey Daniel! Lange nicht gesehen. Wie geht's dir? Arbeitest du immer noch bei der Bank?"
+            - speaker: Daniel
+              text: "Hallo Lea! Nein, ich habe im Frühling gekündigt. Ich mache jetzt eine Ausbildung zum Tischler."
+            - speaker: Lea
+              text: "Echt? Das ist ja eine große Veränderung! Warum denn?"
+            - speaker: Daniel
+              text: "Ich habe zehn Jahre am Computer gesessen. Ich wollte endlich etwas mit den Händen machen. Am Anfang war es komisch, weil die anderen Azubis alle viel jünger sind. Aber jetzt verstehen wir uns super."
+            - speaker: Lea
+              text: "Und das Geld? Als Azubi verdienst du doch viel weniger."
+            - speaker: Daniel
+              text: "Stimmt, ich verdiene nur ein Drittel. Aber meine Frau arbeitet Vollzeit, und wir haben vorher gespart. Und du? Bist du noch an der Uni?"
+            - speaker: Lea
+              text: "Ja, noch ein Semester, dann bin ich fertig. Hör mal, wir haben im Sommer ein altes Haus gekauft. Vielleicht kannst du uns ja mal mit den Möbeln helfen?"
+            - speaker: Daniel
+              text: "Klar, gern! Aber erst, wenn ich ein bisschen mehr gelernt habe. Ruf mich im Herbst an."
+        items:
+          - id: h3-1
+            type: true-false
+            prompt: Daniel arbeitet noch bei der Bank.
+            answer: false
+          - id: h3-2
+            type: true-false
+            prompt: Daniel wollte lieber praktisch arbeiten.
+            answer: true
+          - id: h3-3
+            type: true-false
+            prompt: Daniel ist so alt wie die anderen Auszubildenden.
+            answer: false
+          - id: h3-4
+            type: true-false
+            prompt: Daniel versteht sich inzwischen gut mit den anderen Azubis.
+            answer: true
+          - id: h3-5
+            type: true-false
+            prompt: Daniel verdient jetzt mehr als früher.
+            answer: false
+          - id: h3-6
+            type: true-false
+            prompt: Lea ist mit dem Studium schon fertig.
+            answer: false
+          - id: h3-7
+            type: true-false
+            prompt: Daniel möchte Lea sofort mit den Möbeln helfen.
+            answer: false
+            explanation: Only in the autumn, after he has learned more.
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören eine Diskussion zweimal. Wer sagt was? Wählen Sie Moderator, Frau Lindner oder Herr Baumann.
+        stimulus:
+          kind: audio
+          label: "Radiodiskussion: Sollen Schulen Smartphones verbieten?"
+          lines:
+            - speaker: Moderator
+              text: "Guten Abend und willkommen zu 'Thema der Woche'. Viele Schulen diskutieren gerade, ob Smartphones im Unterricht und in den Pausen verboten werden sollen. Bei mir im Studio sind Frau Lindner, Lehrerin an einem Gymnasium, und Herr Baumann, Vater von drei Kindern und Elternvertreter. Frau Lindner, wie ist es an Ihrer Schule?"
+            - speaker: Frau Lindner
+              text: "Wir haben seit einem Jahr ein Handyverbot, auch in den Pausen. Am Anfang gab es viel Protest, aber jetzt spielen die Kinder wieder Fußball oder reden miteinander. Das finde ich wunderbar."
+            - speaker: Herr Baumann
+              text: "Ich verstehe das, aber ein komplettes Verbot geht mir zu weit. Meine Tochter fährt eine Stunde mit dem Bus zur Schule. Ich möchte sie erreichen können, wenn etwas passiert."
+            - speaker: Frau Lindner
+              text: "Das ist bei uns kein Problem. Die Handys bleiben im Schließfach, und vor und nach der Schule können die Kinder sie benutzen."
+            - speaker: Moderator
+              text: "Herr Baumann, was wäre denn Ihr Vorschlag?"
+            - speaker: Herr Baumann
+              text: "Ich finde, die Schulen sollten den Kindern zeigen, wie man das Handy sinnvoll nutzt. Ein Verbot lernt man nur zu umgehen. Medienkompetenz ist heute genauso wichtig wie Mathematik."
+            - speaker: Frau Lindner
+              text: "Da stimme ich Ihnen zu. Wir haben deshalb ein neues Fach, Medienbildung. Aber Lernen und ständige Nachrichten passen einfach nicht zusammen."
+            - speaker: Moderator
+              text: "Es scheint, dass Sie sich in einigen Punkten doch einig sind. Vielen Dank Ihnen beiden für das Gespräch."
+        items:
+          - id: h4-1
+            type: multiple-choice
+            prompt: An der Schule gibt es schon seit einem Jahr ein Handyverbot.
+            options: [Moderator, Frau Lindner, Herr Baumann]
+            answer: Frau Lindner
+            shuffle: false
+          - id: h4-2
+            type: multiple-choice
+            prompt: In den Pausen bewegen sich die Kinder jetzt mehr.
+            options: [Moderator, Frau Lindner, Herr Baumann]
+            answer: Frau Lindner
+            shuffle: false
+          - id: h4-3
+            type: multiple-choice
+            prompt: Eltern müssen ihre Kinder auf dem Schulweg erreichen können.
+            options: [Moderator, Frau Lindner, Herr Baumann]
+            answer: Herr Baumann
+            shuffle: false
+          - id: h4-4
+            type: multiple-choice
+            prompt: Die Schüler dürfen ihr Handy vor und nach dem Unterricht benutzen.
+            options: [Moderator, Frau Lindner, Herr Baumann]
+            answer: Frau Lindner
+            shuffle: false
+          - id: h4-5
+            type: multiple-choice
+            prompt: Was schlagen Sie stattdessen vor?
+            options: [Moderator, Frau Lindner, Herr Baumann]
+            answer: Moderator
+            shuffle: false
+          - id: h4-6
+            type: multiple-choice
+            prompt: Kinder sollten lernen, das Handy richtig zu benutzen.
+            options: [Moderator, Frau Lindner, Herr Baumann]
+            answer: Herr Baumann
+            shuffle: false
+          - id: h4-7
+            type: multiple-choice
+            prompt: Die Schule bietet jetzt ein Fach zum Thema Medien an.
+            options: [Moderator, Frau Lindner, Herr Baumann]
+            answer: Frau Lindner
+            shuffle: false
+          - id: h4-8
+            type: multiple-choice
+            prompt: Die beiden Gäste haben teilweise die gleiche Meinung.
+            options: [Moderator, Frau Lindner, Herr Baumann]
+            answer: Moderator
+            shuffle: false
+
+  # --------------------------------------------------------------- Schreiben
+  - skill: writing
+    minutes: 60
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine E-Mail (circa 80 Wörter). Schreiben Sie etwas zu allen drei Punkten. Zeit – circa 20 Minuten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie haben letzte Woche an einem Kochkurs teilgenommen. Ihr Freund Felix möchte auch einen Kurs machen. Schreiben Sie Felix eine E-Mail: Beschreiben Sie den Kurs. Begründen Sie, warum Ihnen der Kurs (nicht) gefallen hat. Machen Sie Felix einen Vorschlag."
+            points:
+              - den Kurs beschreiben
+              - Begründung
+              - Vorschlag für Felix
+            minWords: 70
+            sample: "Lieber Felix, wie geht es dir? Letzte Woche habe ich endlich den Kochkurs an der Volkshochschule gemacht, von dem ich dir erzählt habe. Wir waren zehn Leute und haben an drei Abenden thailändisch gekocht. Der Kurs hat mir sehr gut gefallen, weil der Koch alles langsam erklärt hat und wir am Ende zusammen gegessen haben. Ich habe auch nette Leute kennengelernt. Im Mai gibt es einen Kurs mit italienischer Küche. Wollen wir den zusammen machen? Liebe Grüße, Sami"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie Ihre Meinung (circa 80 Wörter). Zeit – circa 25 Minuten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie haben im Fernsehen eine Diskussionssendung zum Thema 'Sollte man in der Freizeit für die Arbeit erreichbar sein?' gesehen. Im Online-Gästebuch der Sendung schreibt Melanie: 'Ich lese abends und am Wochenende meine beruflichen E-Mails. Das gehört heute einfach dazu.' Schreiben Sie Ihre Meinung."
+            points:
+              - auf Melanies Aussage reagieren
+              - eigene Meinung mit Begründung
+              - Beispiel oder Erfahrung
+              - Schluss
+            minWords: 70
+            sample: "Melanie schreibt, dass sie auch in der Freizeit ihre beruflichen E-Mails liest. Ich sehe das anders. Meiner Meinung nach braucht jeder Mensch Zeit, in der er nicht an die Arbeit denkt, weil man sonst krank werden kann. Ich selbst habe früher auch am Wochenende E-Mails gelesen und war ständig gestresst. Seit ich mein Arbeitshandy abends ausschalte, schlafe ich besser. Zwar gibt es Berufe, in denen man erreichbar sein muss, aber dann sollte das extra bezahlt werden. Deshalb finde ich: Freizeit ist Freizeit."
+
+      - title: "Schreiben, Teil 3"
+        instructions: Schreiben Sie eine E-Mail (circa 40 Wörter). Zeit – circa 15 Minuten.
+        items:
+          - id: s3
+            type: writing-task
+            prompt: "Ihre Kursleiterin, Frau Petersen, hat Sie zu einem Treffen aller Kursteilnehmer am Freitagabend eingeladen. Sie können nicht kommen. Schreiben Sie Frau Petersen. Entschuldigen Sie sich höflich und berichten Sie, warum Sie nicht kommen können."
+            points:
+              - Entschuldigung
+              - Grund
+            minWords: 35
+            sample: "Liebe Frau Petersen, vielen Dank für Ihre Einladung zum Treffen am Freitagabend. Leider kann ich nicht kommen, da meine Eltern an diesem Wochenende aus der Türkei zu Besuch kommen und ich sie vom Flughafen abholen muss. Ich wünsche Ihnen allen einen schönen Abend. Viele Grüße, Emre Yılmaz"
+
+  # ---------------------------------------------------------------- Sprechen
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: gemeinsam etwas planen"
+        instructions: Sie möchten mit Ihrem Partner / Ihrer Partnerin einen Ausflug für Ihren Deutschkurs am Wochenende planen. Sprechen Sie über die Punkte unten, machen Sie Vorschläge und reagieren Sie auf die Vorschläge Ihres Partners / Ihrer Partnerin.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Planen Sie gemeinsam einen Kursausflug."
+            cards: [Wohin?, Wann treffen?, Wie hinkommen?, Essen und Trinken?, Wer organisiert was?]
+            checklist:
+              - I made suggestions for every point
+              - I reacted to my partner's suggestions, with reasons
+              - I disagreed politely at least once
+              - We reached a decision on each point
+            sample: "– Was hältst du davon, wenn wir an den See fahren? – Gute Idee, aber was machen wir, wenn es regnet? Vielleicht lieber ins Museum? – Hm, im Sommer ist der See schöner. Wir könnten das Museum als Alternative planen. – Einverstanden. Wann treffen wir uns? – Am Samstag um zehn am Bahnhof? – Lieber um elf, dann können alle ausschlafen. – Okay. Und wir fahren mit dem Regionalzug, mit dem Gruppenticket ist das billig. – Gut, und jeder bringt etwas für ein Picknick mit. Ich kümmere mich um die Tickets, und du schreibst allen eine Nachricht? – Klar, mache ich."
+
+      - title: "Sprechen, Teil 2: ein Thema präsentieren"
+        instructions: Sie sollen Ihren Zuhörern ein aktuelles Thema präsentieren. Folgen Sie den fünf Folien.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: 'Sollten Kinder schon im Kindergarten eine Fremdsprache lernen?'"
+            cards: [Thema und Struktur, meine persönlichen Erfahrungen, die Situation in meinem Heimatland, Vor- und Nachteile + meine Meinung, Abschluss und Dank]
+            checklist:
+              - I followed the five slides in order
+              - I gave a personal example
+              - I described the situation in my home country
+              - I gave pros, cons and my opinion with reasons
+              - I spoke for about three minutes, looking at my listeners
+            sample: "Ich möchte heute über das Thema 'Fremdsprachen im Kindergarten' sprechen. Zuerst erzähle ich von meinen Erfahrungen, dann von der Situation in meinem Heimatland, und danach spreche ich über Vor- und Nachteile. Ich selbst habe erst mit zwölf Englisch gelernt, und ich hatte immer einen starken Akzent. Mein Sohn dagegen geht in einen zweisprachigen Kindergarten und spricht schon ganz natürlich. In meinem Heimatland Vietnam lernen Kinder in den Städten oft schon früh Englisch, auf dem Land aber kaum. Ein Vorteil ist, dass kleine Kinder Sprachen ohne Angst und sehr schnell lernen. Ein Nachteil ist, dass manche Kinder überfordert sind, besonders wenn sie zu Hause schon eine andere Sprache sprechen. Meiner Meinung nach ist es sinnvoll, wenn es spielerisch bleibt. Zum Schluss möchte ich sagen, dass Sprachen Türen öffnen. Vielen Dank für Ihre Aufmerksamkeit."
+
+      - title: "Sprechen, Teil 3: über ein Thema sprechen"
+        instructions: Reagieren Sie auf die Präsentation Ihres Partners / Ihrer Partnerin (Rückmeldung und Frage). Beantworten Sie dann eine Frage zu Ihrer eigenen Präsentation.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Partner / Ihre Partnerin hat das Thema 'Ehrenamt – sollte jeder sich engagieren?' präsentiert. Geben Sie eine Rückmeldung und stellen Sie eine Frage. Beantworten Sie dann die Frage: 'Was würden Sie tun, wenn Ihr Kind im Kindergarten nicht mitmachen möchte?'"
+            cards: [Dank, Rückmeldung, Frage, Antwort auf die Frage]
+            checklist:
+              - I thanked my partner and said something specific I liked
+              - I asked a real question about the presentation
+              - I answered the question about my own presentation in full sentences
+            sample: "Vielen Dank für deine Präsentation. Besonders interessant fand ich dein Beispiel aus der Tafel, wo du jeden Samstag hilfst. Ich habe eine Frage: Wie viel Zeit kann man für ein Ehrenamt verlangen, wenn jemand Vollzeit arbeitet? … Zu Ihrer Frage: Wenn mein Kind nicht mitmachen möchte, würde ich es nicht zwingen. Ich würde mit den Erzieherinnen sprechen und zu Hause spielerisch üben, zum Beispiel mit Liedern."

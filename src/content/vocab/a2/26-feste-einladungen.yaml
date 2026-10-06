@@ -1,0 +1,117 @@
+lesson: a2.26
+items:
+  - id: fest
+    de: Fest
+    en: celebration, festival
+    pos: noun
+    article: das
+    plural: Feste
+    example: Weihnachten ist ein Familienfest.
+    exampleEn: Christmas is a family celebration.
+  - id: feiern
+    de: feiern
+    en: to celebrate
+    pos: verb
+    example: Wir feiern am Samstag meinen Geburtstag.
+    exampleEn: We are celebrating my birthday on Saturday.
+  - id: einladung
+    de: Einladung
+    en: invitation
+    pos: noun
+    article: die
+    plural: Einladungen
+    example: Danke für die Einladung!
+    exampleEn: Thank you for the invitation!
+  - id: einladen
+    de: einladen
+    en: to invite
+    pos: verb
+    example: Ich lade dich zum Essen ein.
+    exampleEn: I am inviting you for a meal.
+  - id: absagen
+    de: absagen
+    en: to cancel, to decline
+    pos: verb
+    example: Ich muss leider absagen.
+    exampleEn: Unfortunately I have to decline.
+  - id: zusagen
+    de: zusagen
+    en: to accept
+    pos: verb
+    example: Fünf Gäste haben schon zugesagt.
+    exampleEn: Five guests have already accepted.
+  - id: bescheid-sagen
+    de: Bescheid sagen
+    en: to let (someone) know
+    pos: phrase
+    example: Sag mir bitte bis Freitag Bescheid.
+    exampleEn: Please let me know by Friday.
+  - id: mitbringen
+    de: mitbringen
+    en: to bring (along)
+    pos: verb
+    example: Soll ich etwas mitbringen?
+    exampleEn: Shall I bring something?
+  - id: glueckwunsch
+    de: Glückwunsch
+    en: congratulations
+    pos: noun
+    article: der
+    plural: Glückwünsche
+    example: Herzlichen Glückwunsch zum Geburtstag!
+    exampleEn: Happy birthday!
+  - id: hochzeit
+    de: Hochzeit
+    en: wedding
+    pos: noun
+    article: die
+    plural: Hochzeiten
+    example: Die Hochzeit ist im Juni.
+    exampleEn: The wedding is in June.
+  - id: weihnachten
+    de: Weihnachten
+    en: Christmas
+    pos: noun
+    article: das
+    example: Frohe Weihnachten!
+    exampleEn: Merry Christmas!
+  - id: ostern
+    de: Ostern
+    en: Easter
+    pos: noun
+    article: das
+    example: Zu Ostern fahren wir zu meiner Oma.
+    exampleEn: At Easter we go to my grandma's.
+  - id: silvester
+    de: Silvester
+    en: New Year's Eve
+    pos: noun
+    article: das
+    example: Was machst du an Silvester?
+    exampleEn: What are you doing on New Year's Eve?
+  - id: guten-rutsch
+    de: Guten Rutsch!
+    en: Happy New Year! (before midnight)
+    pos: phrase
+    example: Tschüss und guten Rutsch!
+    exampleEn: Bye and happy New Year!
+  - id: gast
+    de: Gast
+    en: guest
+    pos: noun
+    article: der
+    plural: Gäste
+    example: Wie viele Gäste kommen?
+    exampleEn: How many guests are coming?
+  - id: schade
+    de: schade
+    en: a pity
+    pos: adjective
+    example: Schade, dass du nicht kommen kannst.
+    exampleEn: What a pity you cannot come.
+  - id: viel-spass
+    de: Viel Spaß!
+    en: Have fun!
+    pos: phrase
+    example: Viel Spaß auf der Party!
+    exampleEn: Have fun at the party!

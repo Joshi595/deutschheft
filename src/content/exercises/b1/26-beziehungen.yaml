@@ -1,0 +1,167 @@
+lesson: b1.26
+sets:
+  - title: Family words
+    items:
+      - id: f1
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: geschieden, right: divorced }
+          - { left: alleinerziehend, right: single parent }
+          - { left: die Geschwister, right: siblings }
+          - { left: die Schwiegereltern, right: parents-in-law }
+          - { left: der Lebensgefährte, right: partner (unmarried) }
+          - { left: die Patchworkfamilie, right: blended family }
+      - id: f2
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Er ist nicht verheiratet, er ist ___. (single)"
+        answers: [ledig]
+      - id: f3
+        type: multiple-choice
+        tags: [each other]
+        prompt: "Wir helfen ___. (each other)"
+        options: [einander, uns selbst, miteinander]
+        answer: einander
+      - id: f4
+        type: multiple-choice
+        tags: [each other]
+        prompt: "Am wichtigsten ist, dass man ___ redet."
+        options: [miteinander, einander, sich]
+        answer: miteinander
+      - id: f5
+        type: true-false
+        tags: [vocabulary]
+        prompt: "'Sie haben sich getrennt' means they got married."
+        answer: false
+
+  - title: Reflexive verbs
+    items:
+      - id: r1
+        type: multiple-choice
+        tags: [reflexive]
+        prompt: "Wir haben ___ auf einer Party kennengelernt."
+        options: [uns, euch, sich]
+        answer: uns
+      - id: r2
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Sie hat sich ___ ihren Nachbarn verliebt."
+        options: [in, mit, an]
+        answer: in
+      - id: r3
+        type: multiple-choice
+        tags: [reflexive]
+        prompt: "Meine Eltern haben ___ scheiden lassen."
+        options: [sich, ihnen, uns]
+        answer: sich
+      - id: r4
+        type: multiple-choice
+        tags: [vocabulary]
+        prompt: "First meeting: Wir haben uns 2018 ___."
+        options: [kennengelernt, getroffen, gesehen]
+        answer: kennengelernt
+      - id: r5
+        type: fill-blank
+        tags: [reflexive]
+        prompt: "Nach dem Streit haben wir ___ schnell versöhnt."
+        answers: [uns]
+      - id: r6
+        type: fill-blank
+        tags: [prepositions]
+        prompt: "Wir streiten uns oft ___ die Hausarbeit."
+        answers: [über]
+      - id: r7
+        type: word-order
+        tags: [reflexive]
+        prompt: I get on well with my brother.
+        answer: "Ich verstehe mich gut mit meinem Bruder."
+
+  - title: Tell the story
+    items:
+      - id: st1
+        type: word-order
+        tags: [story]
+        prompt: When I saw him for the first time, I fell in love.
+        answer: "Als ich ihn zum ersten Mal sah, habe ich mich verliebt."
+      - id: st2
+        type: translation
+        tags: [story]
+        prompt: We moved in together after a year.
+        answers:
+          - "Wir sind nach einem Jahr zusammengezogen."
+          - "Nach einem Jahr sind wir zusammengezogen."
+      - id: st3
+        type: translation
+        tags: [story]
+        prompt: Unfortunately we lost touch.
+        answers:
+          - "Leider haben wir den Kontakt verloren."
+
+  - title: A love story
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [story]
+        prompt: Complete the story.
+        bank: [kennengelernt, verliebt, zusammengezogen, geheiratet, streiten, Kompromiss]
+        text: "Lena und Omar haben sich im Deutschkurs ___. Omar hat sich sofort in Lena ___. Nach zwei Jahren sind sie ___, und letzten Sommer haben sie ___. Natürlich ___ sie sich manchmal, aber sie finden immer einen ___."
+        gaps:
+          - [kennengelernt]
+          - [verliebt]
+          - [zusammengezogen]
+          - [geheiratet]
+          - [streiten]
+          - [Kompromiss]
+
+  - title: Then and now
+    stimulus:
+      kind: audio
+      label: Drei Generationen
+      lines:
+        - speaker: Moderator
+          text: "Frau Keller, Sie sind 82 und leben mit Ihrer Tochter und Ihrer Enkelin zusammen. Wie war Familie früher?"
+        - speaker: Frau Keller
+          text: "Früher war alles strenger. Mein Vater hat entschieden, und wir Kinder mussten gehorchen. Scheidungen gab es fast nie."
+        - speaker: Enkelin
+          text: "Heute ist das ganz anders. Meine Eltern sind geschieden, und ich wohne gern hier bei Oma und Mama. Wir reden viel miteinander."
+        - speaker: Frau Keller
+          text: "Ja, und das finde ich schön. Wir helfen einander, und ich kümmere mich nachmittags um meine Urenkel."
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening]
+        prompt: Früher war die Erziehung lockerer als heute.
+        answer: false
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wer hat früher in Frau Kellers Familie entschieden?
+        options: [der Vater, die Mutter, die Kinder]
+        answer: der Vater
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was macht Frau Keller nachmittags?
+        options: ["Sie kümmert sich um ihre Urenkel.", "Sie arbeitet.", "Sie trifft Freundinnen."]
+        answer: "Sie kümmert sich um ihre Urenkel."
+
+  - title: Your view
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, discussion]
+        prompt: "Discuss: 'Has family life become better or worse than in your grandparents' time?'"
+        cards: [früher, heute, Vorteile, Nachteile, meine Familie]
+        phrases:
+          - Früher war …, heute ist …
+          - Ein Vorteil ist, dass …
+          - Andererseits …
+          - In meiner Familie …
+        checklist:
+          - I compared then and now
+          - I used comparatives (strenger, freier …)
+          - I gave an example from my own family
+          - I gave my own opinion at the end
+        sample: "Früher waren die Familien größer und die Erziehung war strenger als heute. Ein Vorteil war, dass die Großeltern oft im selben Haus wohnten und sich um die Kinder kümmerten. Heute sind die Familien freier, und Frauen können leichter arbeiten. Andererseits leben viele alte Menschen allein. In meiner Familie wohnen meine Großeltern in Ghana, deshalb telefonieren wir jeden Sonntag. Ich finde, dass das Familienleben heute in vielen Dingen besser ist, aber wir sollten mehr Zeit miteinander verbringen."

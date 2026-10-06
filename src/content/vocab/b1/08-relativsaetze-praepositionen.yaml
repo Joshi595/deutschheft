@@ -1,0 +1,107 @@
+lesson: b1.08
+items:
+  - id: aufwachsen
+    de: aufwachsen
+    en: to grow up
+    pos: verb
+    example: Die Stadt, in der ich aufgewachsen bin, ist klein.
+    exampleEn: The town I grew up in is small.
+  - id: kennenlernen
+    de: kennenlernen
+    en: to get to know, to meet (for the first time)
+    pos: verb
+    example: Das ist das Café, wo wir uns kennengelernt haben.
+    exampleEn: That is the café where we met.
+  - id: dankbar
+    de: dankbar
+    en: grateful
+    pos: adjective
+    example: Dafür bin ich dir sehr dankbar.
+    exampleEn: I am very grateful to you for that.
+  - id: ueberraschen
+    de: überraschen
+    en: to surprise
+    pos: verb
+    example: Er kam pünktlich, was mich überrascht hat.
+    exampleEn: He came on time, which surprised me.
+  - id: jederzeit
+    de: jederzeit
+    en: at any time
+    pos: adverb
+    example: Sie können mich jederzeit anrufen.
+    exampleEn: You can call me at any time.
+  - id: thema
+    de: Thema
+    en: topic, subject
+    pos: noun
+    article: das
+    plural: Themen
+    example: Über dieses Thema möchte ich nicht sprechen.
+    exampleEn: I do not want to talk about this subject.
+  - id: projekt
+    de: Projekt
+    en: project
+    pos: noun
+    article: das
+    plural: Projekte
+    example: Das Projekt, an dem ich arbeite, ist fast fertig.
+    exampleEn: The project I am working on is almost finished.
+  - id: mitarbeiter
+    de: Mitarbeiter
+    en: employee
+    pos: noun
+    article: der
+    plural: Mitarbeiter
+    example: Die Firma hat 200 Mitarbeiter.
+    exampleEn: The company has 200 employees.
+  - id: passieren
+    de: passieren
+    en: to happen
+    pos: verb
+    example: Was ist passiert?
+    exampleEn: What happened?
+  - id: je
+    de: je
+    en: ever
+    pos: adverb
+    example: Das ist das Beste, was ich je gegessen habe.
+    exampleEn: That is the best thing I have ever eaten.
+  - id: heimat
+    de: Heimat
+    en: home, homeland
+    pos: noun
+    article: die
+    example: Meine Heimat ist eine Insel, wo es immer warm ist.
+    exampleEn: My homeland is an island where it is always warm.
+  - id: wofuer-b1
+    de: wofür
+    en: for which
+    pos: other
+    example: Sie hat mir geholfen, wofür ich ihr danke.
+    exampleEn: She helped me, for which I thank her.
+  - id: sich-unterhalten
+    de: sich unterhalten (über)
+    en: to talk, to chat (about)
+    pos: verb
+    example: Der Mann, mit dem ich mich unterhalten habe, kommt aus Peru.
+    exampleEn: The man I was chatting with is from Peru.
+  - id: sich-verlassen
+    de: sich verlassen auf + A
+    en: to rely on
+    pos: verb
+    example: Sie ist eine Freundin, auf die ich mich verlassen kann.
+    exampleEn: She is a friend I can rely on.
+  - id: sprichwort
+    de: Sprichwort
+    en: proverb, saying
+    pos: noun
+    article: das
+    plural: Sprichwörter
+    example: Kennst du dieses Sprichwort?
+    exampleEn: Do you know this saying?
+  - id: angeben
+    de: angeben
+    en: to state; to show off
+    pos: verb
+    example: Bitte geben Sie die Adresse an, wo Sie wohnen.
+    exampleEn: Please state the address where you live.

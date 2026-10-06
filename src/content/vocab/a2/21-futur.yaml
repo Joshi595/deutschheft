@@ -1,0 +1,111 @@
+lesson: a2.21
+items:
+  - id: werden
+    de: werden
+    en: will (future); to become
+    pos: verb
+    example: Ich werde dich morgen anrufen.
+    exampleEn: I will call you tomorrow.
+  - id: zukunft
+    de: Zukunft
+    en: future
+    pos: noun
+    article: die
+    example: In Zukunft arbeite ich weniger.
+    exampleEn: In future I will work less.
+  - id: plan
+    de: Plan
+    en: plan
+    pos: noun
+    article: der
+    plural: Pläne
+    example: Hast du schon Pläne für den Sommer?
+    exampleEn: Do you have any plans for the summer yet?
+  - id: planen
+    de: planen
+    en: to plan
+    pos: verb
+    example: Wir planen eine Reise nach Italien.
+    exampleEn: We are planning a trip to Italy.
+  - id: vorhaben
+    de: vorhaben
+    en: to have planned, to intend
+    pos: verb
+    example: Was hast du am Wochenende vor?
+    exampleEn: What are you planning to do at the weekend?
+  - id: versprechen
+    de: versprechen
+    en: to promise
+    pos: verb
+    example: Ich verspreche dir, ich werde pünktlich sein.
+    exampleEn: I promise you, I will be on time.
+  - id: bestimmt
+    de: bestimmt
+    en: certainly, definitely
+    pos: adverb
+    example: Das wird bestimmt schön.
+    exampleEn: That will definitely be nice.
+  - id: wahrscheinlich
+    de: wahrscheinlich
+    en: probably
+    pos: adverb
+    example: Morgen regnet es wahrscheinlich.
+    exampleEn: It will probably rain tomorrow.
+  - id: irgendwann
+    de: irgendwann
+    en: some time, one day
+    pos: adverb
+    example: Irgendwann werde ich nach Japan reisen.
+    exampleEn: One day I will travel to Japan.
+  - id: puenktlich
+    de: pünktlich
+    en: on time
+    pos: adjective
+    example: Der Zug ist pünktlich.
+    exampleEn: The train is on time.
+  - id: wettervorhersage
+    de: Wettervorhersage
+    en: weather forecast
+    pos: noun
+    article: die
+    plural: Wettervorhersagen
+    example: Laut Wettervorhersage wird es sonnig.
+    exampleEn: According to the forecast it will be sunny.
+  - id: vorsatz
+    de: Vorsatz
+    en: resolution
+    pos: noun
+    article: der
+    plural: Vorsätze
+    example: Mein Vorsatz für das neue Jahr ist mehr Sport.
+    exampleEn: My new year's resolution is more sport.
+  - id: schaffen
+    de: schaffen
+    en: to manage, to make it
+    pos: verb
+    example: Du wirst die Prüfung schaffen.
+    exampleEn: You will pass the exam.
+  - id: aufhoeren
+    de: aufhören (mit)
+    en: to stop
+    pos: verb
+    example: Ich werde mit dem Rauchen aufhören.
+    exampleEn: I will stop smoking.
+  - id: dunkel-werden
+    de: dunkel werden
+    en: to get dark
+    pos: phrase
+    example: Im Winter wird es früh dunkel.
+    exampleEn: In winter it gets dark early.
+  - id: zurueckzahlen
+    de: zurückzahlen
+    en: to pay back
+    pos: verb
+    example: Ich zahle dir das Geld morgen zurück.
+    exampleEn: I will pay you the money back tomorrow.
+  - id: sonnig
+    de: sonnig
+    en: sunny
+    pos: adjective
+    example: Am Wochenende wird es sonnig und warm.
+    exampleEn: It will be sunny and warm at the weekend.

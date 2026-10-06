@@ -1,0 +1,106 @@
+lesson: b1.04
+items:
+  - id: wuerde
+    de: würde
+    en: would
+    pos: verb
+    example: Ich würde gern in Berlin wohnen.
+    exampleEn: I would like to live in Berlin.
+  - id: haette
+    de: hätte
+    en: would have; had (unreal)
+    pos: verb
+    example: Wenn ich Zeit hätte, käme ich mit.
+    exampleEn: If I had time, I would come along.
+  - id: waere
+    de: wäre
+    en: would be; were (unreal)
+    pos: verb
+    example: Das wäre wirklich schön.
+    exampleEn: That would be really nice.
+  - id: muesste
+    de: müsste
+    en: would have to
+    pos: verb
+    example: Eigentlich müsste ich heute noch arbeiten.
+    exampleEn: Actually I ought to work today.
+  - id: duerfte
+    de: dürfte
+    en: would be allowed to; is probably
+    pos: verb
+    example: Dürfte ich kurz Ihr Telefon benutzen?
+    exampleEn: Might I use your phone for a moment?
+  - id: wuesste
+    de: wüsste
+    en: would know
+    pos: verb
+    example: Wenn ich das nur wüsste!
+    exampleEn: If only I knew!
+  - id: kaeme
+    de: käme
+    en: would come
+    pos: verb
+    example: Wenn er Zeit hätte, käme er sicher.
+    exampleEn: If he had time, he would certainly come.
+  - id: ich-wuenschte
+    de: ich wünschte
+    en: I wish
+    pos: phrase
+    example: Ich wünschte, ich hätte mehr Zeit.
+    exampleEn: I wish I had more time.
+  - id: wenn-nur
+    de: Wenn … nur …!
+    en: If only …!
+    pos: phrase
+    example: Wenn es nur nicht so kalt wäre!
+    exampleEn: If only it were not so cold!
+  - id: bereuen
+    de: bereuen
+    en: to regret
+    pos: verb
+    example: Ich bereue nichts.
+    exampleEn: I do not regret anything.
+  - id: wunsch
+    de: Wunsch
+    en: wish
+    pos: noun
+    article: der
+    plural: Wünsche
+    example: Mein größter Wunsch ist eine Reise nach Japan.
+    exampleEn: My greatest wish is a trip to Japan.
+  - id: vorstellen
+    de: sich etwas vorstellen
+    en: to imagine something
+    pos: verb
+    example: Stell dir vor, wir hätten im Lotto gewonnen!
+    exampleEn: Imagine we had won the lottery!
+  - id: lotto
+    de: im Lotto gewinnen
+    en: to win the lottery
+    pos: phrase
+    example: Was würdest du machen, wenn du im Lotto gewinnen würdest?
+    exampleEn: What would you do if you won the lottery?
+  - id: eigentlich
+    de: eigentlich
+    en: actually, really
+    pos: adverb
+    example: Eigentlich hätte ich lieber Tee.
+    exampleEn: Actually I would rather have tea.
+  - id: an-deiner-stelle-b1
+    de: an deiner / Ihrer Stelle
+    en: if I were you
+    pos: phrase
+    example: An Ihrer Stelle würde ich das nicht unterschreiben.
+    exampleEn: If I were you I would not sign that.
+  - id: bestehen
+    de: bestehen
+    en: to pass (an exam)
+    pos: verb
+    example: Sie hat die Prüfung bestanden.
+    exampleEn: She passed the exam.
+  - id: schade-b1
+    de: Schade, dass …
+    en: It is a pity that …
+    pos: phrase
+    example: Schade, dass du nicht kommen konntest.
+    exampleEn: It is a pity you could not come.

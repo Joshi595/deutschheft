@@ -1,0 +1,148 @@
+lesson: b1.16
+sets:
+  - title: Which article?
+    items:
+      - id: art1
+        type: multiple-choice
+        tags: [gender]
+        prompt: "___ Erklärung"
+        options: [die, der, das]
+        answer: die
+      - id: art2
+        type: multiple-choice
+        tags: [gender]
+        prompt: "___ Freiheit"
+        options: [die, der, das]
+        answer: die
+      - id: art3
+        type: multiple-choice
+        tags: [gender]
+        prompt: "___ Haustür"
+        options: [die, das, der]
+        answer: die
+      - id: art4
+        type: multiple-choice
+        tags: [gender]
+        prompt: "___ Kühlschrank"
+        options: [der, die, das]
+        answer: der
+      - id: art5
+        type: multiple-choice
+        tags: [gender]
+        prompt: "___ Dokument"
+        options: [das, die, der]
+        answer: das
+      - id: art6
+        type: multiple-choice
+        tags: [gender]
+        prompt: "___ Lernen"
+        options: [das, die, der]
+        answer: das
+
+  - title: Make a noun
+    items:
+      - id: noun1
+        type: fill-blank
+        tags: [nouns]
+        prompt: "einladen → die ___"
+        answers: [Einladung]
+      - id: noun2
+        type: fill-blank
+        tags: [nouns]
+        prompt: "möglich → die ___"
+        answers: [Möglichkeit]
+      - id: noun3
+        type: fill-blank
+        tags: [nouns]
+        prompt: "krank → die ___"
+        answers: [Krankheit]
+      - id: noun4
+        type: fill-blank
+        tags: [nouns]
+        prompt: "der Freund → die ___ (relationship)"
+        answers: [Freundschaft]
+
+  - title: Make an adjective
+    items:
+      - id: adj1
+        type: matching
+        tags: [adjectives]
+        prompt: Match the adjective with its meaning.
+        pairs:
+          - { left: kostenlos, right: free of charge }
+          - { left: essbar, right: can be eaten }
+          - { left: arbeitslos, right: without work }
+          - { left: unmöglich, right: not possible }
+          - { left: sinnvoll, right: makes sense }
+      - id: adj2
+        type: fill-blank
+        tags: [un-]
+        prompt: "Der Kellner war nicht freundlich. Er war ___."
+        answers: [unfreundlich]
+      - id: adj3
+        type: fill-blank
+        tags: [adjectives]
+        prompt: "Ich bin ab 9 Uhr telefonisch ___. (can be reached)"
+        answers: [erreichbar]
+
+  - title: Compounds
+    items:
+      - id: comp1
+        type: fill-blank
+        tags: [compounds]
+        prompt: "die Arbeit + die Zeit → die ___"
+        answers: [Arbeitszeit]
+      - id: comp2
+        type: fill-blank
+        tags: [compounds]
+        prompt: "die Wohnung + die Suche → die ___"
+        answers: [Wohnungssuche]
+      - id: comp3
+        type: multiple-choice
+        tags: [compounds]
+        prompt: "What is a 'Kinderbetreuungskosten'?"
+        options: ["the costs of childcare", "children who look after costs", "a cost for children's books"]
+        answer: "the costs of childcare"
+      - id: comp4
+        type: true-false
+        tags: [compounds]
+        prompt: "In a compound noun, the first part decides the gender."
+        answer: false
+
+  - title: Prefixes
+    items:
+      - id: pre1
+        type: multiple-choice
+        tags: [prefixes]
+        prompt: "Bitte ___ Sie alle Fragen."
+        options: [beantworten, antworten, verantworten]
+        answer: beantworten
+      - id: pre2
+        type: multiple-choice
+        tags: [prefixes]
+        prompt: "In der fremden Stadt habe ich mich ___."
+        options: [verlaufen, gelaufen, entlaufen]
+        answer: verlaufen
+
+  - title: Read and guess
+    stimulus:
+      kind: text
+      label: Aus der Zeitung
+      text: "Die Stadtverwaltung hat ein neues Freizeitangebot für Jugendliche geplant. Ab Juni ist die Benutzung des Hallenbads für Schülerinnen und Schüler kostenlos. Außerdem wird die Öffnungszeit der Stadtbibliothek verlängert. Die Finanzierung ist allerdings noch unsicher."
+    items:
+      - id: read1
+        type: multiple-choice
+        tags: [reading]
+        prompt: "What is the 'Stadtverwaltung'?"
+        options: ["the town administration", "a city tour", "a town map"]
+        answer: "the town administration"
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: "Schüler müssen ab Juni im Hallenbad nichts bezahlen."
+        answer: true
+      - id: read3
+        type: true-false
+        tags: [reading]
+        prompt: "Das Geld für das Angebot ist schon sicher."
+        answer: false

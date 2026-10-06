@@ -7,10 +7,16 @@ Live site: https://joshi595.github.io/German/
 
 ## What is in it
 
-- **Lessons** with grammar explained in plain English, example sentences you can listen to, and a
-  vocabulary list. Currently A2 (10 lessons) and the start of B1.
-- **Exercises** of six kinds: multiple choice, fill in the gap, translation, word order, matching
-  and free writing. Typed answers get a second try, a hint, and then the solution with an explanation.
+- **A full course from A1 to B1**, aimed at the Goethe-Zertifikat exams: 29 chapters for A1, 30 for
+  A2 and 32 for B1, grouped into units. Every chapter is explained step by step in plain English,
+  with a comparison with English, typical mistakes, a summary table, examples you can listen to,
+  and a vocabulary list.
+- **Exam training** for each level: a chapter for each exam part (reading, listening, writing,
+  speaking), a checkpoint after every unit, and a full mock exam with the real time limits, scored
+  against the 60 % pass mark.
+- **Exercises** of eleven kinds, from multiple choice and gap texts to reading and listening tasks,
+  forms, and writing and speaking tasks with a checklist and a model answer. Typed answers get a
+  second try, a hint, and then the solution with an explanation.
 - **Review.** A lesson's vocabulary and every exercise you miss become cards that come back on a
   schedule (FSRS), so a few minutes a day keeps things from fading.
 - **Notebook.** Notes per lesson, your own saved words (which also become review cards), and a log
@@ -19,6 +25,10 @@ Live site: https://joshi595.github.io/German/
   miss on the first try.
 - **Works offline** once a page has been opened, and can be installed as an app.
 - **Optional AI explanations** with your own Groq API key. Grading never depends on it.
+
+Listening texts are read by your browser's German voice, not recorded by people. All content was
+written for this project and has not been reviewed by a teacher, so before booking an exam, do at
+least one official practice paper from the Goethe-Institut.
 
 Progress is stored in your browser only. Settings has a backup download and import for moving to
 another device.
@@ -39,12 +49,13 @@ npm run dev        # http://localhost:4321/German/
 | `npm run check` | Type check |
 | `npm run build` | Build the static site into `dist/`; fails if any content file is invalid |
 | `npm run preview` | Serve the built site |
-| `npm run new:lesson -- a2 11 perfekt "Title"` | Scaffold a new lesson |
+| `npm run new:lesson -- b1 33 konjunktiv-1 "Title"` | Scaffold a new chapter from the template |
 
 ## Adding lessons and levels
 
-Content lives in `src/content` as MDX and YAML files; no code changes are needed to add a lesson
-or a level. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Content lives in `src/content` as MDX and YAML files; no code changes are needed to add a chapter,
+a mock exam or a level. The tests enforce the chapter template, so a thin chapter fails the build.
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Deployment
 

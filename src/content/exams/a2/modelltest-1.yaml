@@ -1,0 +1,493 @@
+level: a2
+title: Modelltest 1
+description: >-
+  A complete practice exam in the format of the Goethe-Zertifikat A2: reading, listening, writing
+  and speaking, with the real time limits. Allow about 105 minutes and do it in one sitting.
+passMark: 60
+scoring: total
+modules:
+  # ------------------------------------------------------------------ Lesen
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Ein Garten auf dem Dach
+
+            Auf dem Dach eines Supermarkts in Bremen wachsen seit letztem Frühling Tomaten, Salat und Kräuter. Die Idee hatte der Student Lukas Brandt (24). „Das Dach war leer und grau. Ich habe gedacht: Hier kann man doch etwas Schönes machen."
+
+            Zuerst war der Chef des Supermarkts nicht begeistert. Er hatte Angst, dass das Dach zu schwer wird. Ein Ingenieur hat dann alles geprüft, und das Projekt konnte beginnen. Heute arbeiten etwa zwanzig Nachbarn regelmäßig im Garten mit, die meisten von ihnen sind Rentner und Familien mit Kindern.
+
+            Das Gemüse verkauft der Supermarkt im Erdgeschoss. Das Geld bekommt ein Kindergarten im Stadtteil. Im nächsten Jahr möchte Lukas Brandt auch Bienen auf das Dach bringen.
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: Der Garten auf dem Dach …
+            options: ["existiert seit letztem Frühling.", "ist schon viele Jahre alt.", "gehört einem Studenten."]
+            answer: "existiert seit letztem Frühling."
+          - id: l1-2
+            type: multiple-choice
+            prompt: Der Chef des Supermarkts …
+            options: ["hatte zuerst Bedenken.", "hatte die Idee für den Garten.", "ist Ingenieur."]
+            answer: "hatte zuerst Bedenken."
+          - id: l1-3
+            type: multiple-choice
+            prompt: Im Garten arbeiten …
+            options: ["vor allem Rentner und Familien.", "nur Studenten.", "Mitarbeiter des Supermarkts."]
+            answer: "vor allem Rentner und Familien."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Das Geld für das Gemüse …
+            options: ["bekommt ein Kindergarten.", "bekommt Lukas Brandt.", "ist für neue Bienen."]
+            answer: "bekommt ein Kindergarten."
+          - id: l1-5
+            type: multiple-choice
+            prompt: Nächstes Jahr …
+            options: ["sollen Bienen auf das Dach kommen.", "schließt der Garten.", "baut der Supermarkt ein neues Dach."]
+            answer: "sollen Bienen auf das Dach kommen."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind im Einkaufszentrum. Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Einkaufszentrum Rheinpark – Wegweiser
+          text: |
+            3. OG: Fitnessstudio · Kinderbetreuung („Kinderland") · Arztpraxis Dr. Yilmaz (Allgemeinmedizin)
+            2. OG: Elektronik · Handys · Computer · Reparaturservice · Fotoservice
+            1. OG: Mode für Damen, Herren und Kinder · Schuhe · Optiker
+            EG: Apotheke · Bäckerei · Café · Blumen · Information / Fundbüro
+            UG: Supermarkt · Getränkemarkt · Drogerie · Parkplätze
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Ihr Handy ist kaputt. Sie möchten es reparieren lassen.
+            options: [2. OG, EG, anderer Stock]
+            answer: 2. OG
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Sie haben Ihre Brille verloren und brauchen eine neue.
+            options: [1. OG, 3. OG, anderer Stock]
+            answer: 1. OG
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Sie haben im Café Ihren Schal vergessen und möchten fragen, ob jemand ihn gefunden hat.
+            options: [EG, UG, anderer Stock]
+            answer: EG
+            shuffle: false
+            explanation: The Fundbüro (lost property) is on the ground floor.
+          - id: l2-4
+            type: multiple-choice
+            prompt: Sie möchten zwei Stunden in Ruhe einkaufen. Ihre Tochter (5) soll so lange spielen.
+            options: [3. OG, 1. OG, anderer Stock]
+            answer: 3. OG
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie möchten ein Sofa kaufen.
+            options: [1. OG, 2. OG, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+            explanation: There is no furniture anywhere on the board.
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Liebe Maria,
+
+            wie geht es dir? Ich habe endlich eine neue Stelle! Seit dem 1. März arbeite ich in einem Hotel am Bodensee, an der Rezeption. Die Arbeit macht mir viel Spaß, weil ich viele Sprachen sprechen kann – vor allem Englisch und Italienisch. Nur die Arbeitszeiten sind nicht so toll: Oft habe ich Spätdienst bis 23 Uhr.
+
+            Eine Wohnung habe ich noch nicht. Im Moment wohne ich in einem kleinen Zimmer im Hotel. Das ist praktisch, aber nicht sehr gemütlich. Ich suche etwas in Konstanz, dort sind die Wohnungen aber sehr teuer.
+
+            Hast du im Mai Zeit? Dann kannst du mich besuchen! Du kannst bei mir im Hotel schlafen, das kostet für Familie und Freunde nur die Hälfte. Wir können zusammen mit dem Schiff in die Schweiz fahren.
+
+            Liebe Grüße
+            deine Claudia
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Claudia arbeitet …
+            options: ["seit März in einem Hotel.", "seit Mai in Konstanz.", "als Italienischlehrerin."]
+            answer: "seit März in einem Hotel."
+          - id: l3-2
+            type: multiple-choice
+            prompt: An ihrer Arbeit gefällt Claudia nicht, dass …
+            options: ["sie oft spät arbeiten muss.", "sie viele Sprachen sprechen muss.", "das Hotel so klein ist."]
+            answer: "sie oft spät arbeiten muss."
+          - id: l3-3
+            type: multiple-choice
+            prompt: Claudia wohnt im Moment …
+            options: ["in einem Zimmer im Hotel.", "in einer Wohnung in Konstanz.", "bei Freunden."]
+            answer: "in einem Zimmer im Hotel."
+          - id: l3-4
+            type: multiple-choice
+            prompt: Wenn Maria im Hotel schläft, …
+            options: ["bezahlt sie weniger.", "bezahlt sie nichts.", "muss sie im Mai reservieren."]
+            answer: "bezahlt sie weniger."
+          - id: l3-5
+            type: multiple-choice
+            prompt: Claudia möchte mit Maria …
+            options: ["einen Ausflug mit dem Schiff machen.", "eine Wohnung suchen.", "Italienisch lernen."]
+            answer: "einen Ausflug mit dem Schiff machen."
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Volkshochschule: „Erste Hilfe für Eltern" – was tun, wenn das Kind sich verletzt? Samstag, 9–16 Uhr, 35 €.
+
+            b) Schwimmkurse für Erwachsene, die nicht schwimmen können. Kleine Gruppen, Montag und Donnerstag 19 Uhr, Hallenbad Ost.
+
+            c) Gebrauchte Kinderbetten, Kinderwagen und Spielzeug. Flohmarkt in der Grundschule am Park, Sonntag 10–15 Uhr.
+
+            d) Computerkurs für Senioren: E-Mails schreiben, Fotos verschicken, im Internet einkaufen. Vormittags, 4 × 2 Stunden.
+
+            e) Hundeschule Pfote: Kurse für junge Hunde und ihre Besitzer. Am Wochenende.
+
+            f) Laufgruppe für Anfänger – wir laufen jeden Sonntagmorgen 5 km im Stadtpark. Kostenlos, ohne Anmeldung.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Frau Kovač bekommt bald ein Baby und hat nicht viel Geld für Möbel.
+            options: [a, b, c, d, e, f, X]
+            answer: c
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Herr Brenner (72) möchte lernen, wie er seinen Enkeln Fotos schicken kann.
+            options: [a, b, c, d, e, f, X]
+            answer: d
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Sandra möchte fit werden. Sie hat am Wochenende Zeit, aber kein Geld für einen Kurs.
+            options: [a, b, c, d, e, f, X]
+            answer: f
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Ahmed hat eine Katze und sucht jemanden, der sie im Urlaub füttert.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+            explanation: The dog school is not about cats and does not offer care.
+          - id: l4-5
+            type: multiple-choice
+            prompt: Tina und Ben haben zwei kleine Kinder und möchten wissen, was sie bei einem Unfall machen sollen.
+            options: [a, b, c, d, e, f, X]
+            answer: a
+            shuffle: false
+
+  # ------------------------------------------------------------------ Hören
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Hallo Herr Neumann, hier ist das Reisebüro Sonnenschein. Ihre Tickets für den Flug nach Lissabon sind da. Sie können sie ab morgen bei uns abholen. Wir sind von neun bis achtzehn Uhr da, am Samstag nur bis dreizehn Uhr."
+            prompt: Ab wann kann Herr Neumann die Tickets abholen?
+            options: [ab morgen, ab Samstag, ab heute]
+            answer: ab morgen
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Achtung, eine Information für alle Fahrgäste: Die U-Bahn-Linie 3 fährt wegen Bauarbeiten heute nur bis zum Marktplatz. Fahrgäste in Richtung Flughafen nehmen bitte ab Marktplatz den Bus Nummer zwölf."
+            prompt: Wie kommt man heute zum Flughafen?
+            options: ["ab Marktplatz mit dem Bus 12", "mit der U3 bis zum Flughafen", "mit dem Taxi ab Marktplatz"]
+            answer: "ab Marktplatz mit dem Bus 12"
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Hallo Sophie, hier ist Mama. Wir kommen am Sonntag doch nicht zum Mittagessen. Papa hat Rückenschmerzen und kann nicht so lange sitzen. Vielleicht kommt ihr nächstes Wochenende zu uns? Ruf mich an!"
+            prompt: Warum kommen die Eltern nicht?
+            options: ["Der Vater hat Rückenschmerzen.", "Die Mutter muss arbeiten.", "Sie haben schon einen Termin."]
+            answer: "Der Vater hat Rückenschmerzen."
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Und nun das Wetter für morgen: Am Vormittag gibt es noch Regen, aber ab Mittag scheint die Sonne. Die Temperaturen steigen auf zweiundzwanzig Grad. Am Abend kann es Gewitter geben."
+            prompt: Wie wird das Wetter morgen Nachmittag?
+            options: [sonnig, regnerisch, kalt]
+            answer: sonnig
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Hier ist die Mailbox von Kai Fischer. Ich bin bis zum fünfzehnten August im Urlaub. In dringenden Fällen rufen Sie bitte meine Kollegin Frau Ott an, Telefon null sechs neun, sieben acht, drei zwei."
+            prompt: Wen soll man in dringenden Fällen anrufen?
+            options: [Frau Ott, Herrn Fischer, den Chef]
+            answer: Frau Ott
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Was macht Leonie wann? Wählen Sie für jeden Tag die passende Aktivität. Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Leonies Ferienwoche
+          plays: 1
+          lines:
+            - speaker: Paul
+              text: "Leonie, du hast doch nächste Woche Urlaub. Was machst du denn?"
+            - speaker: Leonie
+              text: "Oh, viel! Am Montag gehe ich endlich zum Friseur, das wollte ich schon so lange."
+            - speaker: Paul
+              text: "Und dann?"
+            - speaker: Leonie
+              text: "Am Dienstag fahre ich mit meiner Schwester ins Schwimmbad, die Kinder wollen unbedingt rutschen. Am Mittwoch wollte ich eigentlich in die Stadt zum Einkaufen, aber da streicht mein Vermieter mein Bad. Da muss ich zu Hause bleiben."
+            - speaker: Paul
+              text: "Und am Donnerstag?"
+            - speaker: Leonie
+              text: "Da gehe ich ins Konzert, ich habe Karten von meinem Bruder bekommen. Und am Freitag kaufe ich dann endlich ein, Schuhe und eine Jacke. Am Wochenende möchte ich nur schlafen!"
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Montag
+            options: [Friseur, Schwimmbad, zu Hause bleiben, Konzert, Einkaufen, schlafen]
+            answer: Friseur
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Dienstag
+            options: [Friseur, Schwimmbad, zu Hause bleiben, Konzert, Einkaufen, schlafen]
+            answer: Schwimmbad
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Mittwoch
+            options: [Friseur, Schwimmbad, zu Hause bleiben, Konzert, Einkaufen, schlafen]
+            answer: zu Hause bleiben
+            shuffle: false
+            explanation: "She wanted to go shopping (eigentlich), but the landlord is painting her bathroom."
+          - id: h2-4
+            type: multiple-choice
+            prompt: Donnerstag
+            options: [Friseur, Schwimmbad, zu Hause bleiben, Konzert, Einkaufen, schlafen]
+            answer: Konzert
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Freitag
+            options: [Friseur, Schwimmbad, zu Hause bleiben, Konzert, Einkaufen, schlafen]
+            answer: Einkaufen
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Frau
+                  text: "Was essen wir heute Abend? Fisch?"
+                - speaker: Mann
+                  text: "Fisch hatten wir gestern. Wie wäre es mit Pizza?"
+                - speaker: Frau
+                  text: "Pizza ist mir zu schwer. Machen wir doch eine Gemüsesuppe."
+                - speaker: Mann
+                  text: "Na gut, Suppe."
+            prompt: Was essen sie heute Abend?
+            options: [Suppe, Pizza, Fisch]
+            answer: Suppe
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Entschuldigung, wo finde ich die Milch?"
+                - speaker: Verkäuferin
+                  text: "Die Milch steht ganz hinten, neben dem Käse. Aber die frische Milch ist leider ausverkauft, wir haben nur noch H-Milch."
+            prompt: Was ist das Problem?
+            options: ["Es gibt keine frische Milch mehr.", "Der Käse ist ausverkauft.", "Die Milch ist zu teuer."]
+            answer: "Es gibt keine frische Milch mehr."
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Wann fährt der nächste Zug nach Dresden?"
+                - speaker: Mann
+                  text: "Um vierzehn Uhr zehn, aber der ist sehr voll. Der um vierzehn Uhr vierzig ist schneller, er kommt sogar früher an."
+                - speaker: Frau
+                  text: "Dann nehme ich den."
+            prompt: Welchen Zug nimmt die Frau?
+            options: ["14:40 Uhr", "14:10 Uhr", "14:14 Uhr"]
+            answer: "14:40 Uhr"
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Was schenken wir Opa zum Geburtstag? Wieder eine Krawatte?"
+                - speaker: Frau
+                  text: "Er hat schon zwanzig Krawatten! Er liest doch so gern. Ein Buch über Italien vielleicht? Da war er als junger Mann."
+                - speaker: Mann
+                  text: "Gute Idee."
+            prompt: Was schenken sie dem Opa?
+            options: [ein Buch, eine Krawatte, eine Reise nach Italien]
+            answer: ein Buch
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Frau
+                  text: "Wie war dein Wochenende?"
+                - speaker: Mann
+                  text: "Ich wollte eigentlich Fahrrad fahren, aber dann hat es geregnet. Also habe ich die Küche gestrichen. Das war auch mal nötig."
+            prompt: Was hat der Mann am Wochenende gemacht?
+            options: ["Er hat die Küche gestrichen.", "Er ist Fahrrad gefahren.", "Er war krank."]
+            answer: "Er hat die Küche gestrichen."
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio Nord – Unsere Stadt
+          lines:
+            - speaker: Moderator
+              text: "Heute ist Frau Olga Petrenko bei uns. Frau Petrenko, Sie haben vor zwei Jahren ein Café eröffnet. Wie ist es dazu gekommen?"
+            - speaker: Frau Petrenko
+              text: "Ich bin vor acht Jahren aus der Ukraine nach Deutschland gekommen. Zuerst habe ich als Köchin in einem Hotel gearbeitet. Aber ich wollte immer etwas Eigenes haben."
+            - speaker: Moderator
+              text: "Und was gibt es in Ihrem Café?"
+            - speaker: Frau Petrenko
+              text: "Kuchen nach Rezepten von meiner Großmutter, und natürlich deutschen Käsekuchen. Den lieben meine Gäste am meisten."
+            - speaker: Moderator
+              text: "Ist es schwer, ein Café zu führen?"
+            - speaker: Frau Petrenko
+              text: "Ja, ich arbeite sehr viel, auch am Wochenende. Aber meine Tochter hilft mir jetzt samstags. Montags ist das Café geschlossen, da habe ich Zeit für meine Familie."
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Frau Petrenko hat das Café vor acht Jahren eröffnet.
+            answer: false
+          - id: h4-2
+            type: true-false
+            prompt: Sie hat früher in einem Hotel gekocht.
+            answer: true
+          - id: h4-3
+            type: true-false
+            prompt: Die Gäste mögen am liebsten den ukrainischen Kuchen.
+            answer: false
+          - id: h4-4
+            type: true-false
+            prompt: Ihre Tochter arbeitet am Samstag im Café.
+            answer: true
+          - id: h4-5
+            type: true-false
+            prompt: Das Café ist jeden Tag geöffnet.
+            answer: false
+
+  # --------------------------------------------------------------- Schreiben
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie sind mit Ihrer Freundin Julia um 15 Uhr im Café verabredet. Sie haben den Bus verpasst. Schreiben Sie Julia eine SMS: Entschuldigen Sie sich. Schreiben Sie, warum Sie später kommen. Schreiben Sie, wann Sie im Café sind."
+            points:
+              - Entschuldigung
+              - Grund
+              - wann Sie kommen
+            minWords: 20
+            sample: "Liebe Julia, es tut mir leid, ich komme zu spät. Ich habe den Bus verpasst, der nächste fährt erst in zwanzig Minuten. Ich bin um Viertel vor vier im Café. Bis gleich! Nina"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Ihr Kollege, Herr Schröder, hat Sie zu seinem Abschiedsfest eingeladen, weil er in eine andere Stadt zieht. Schreiben Sie Herrn Schröder eine E-Mail: Bedanken Sie sich für die Einladung. Sagen Sie, dass Sie kommen. Fragen Sie, ob Sie etwas mitbringen sollen."
+            points:
+              - Dank für die Einladung
+              - Sie kommen
+              - Frage, ob Sie etwas mitbringen sollen
+            minWords: 30
+            sample: "Lieber Herr Schröder, vielen Dank für die Einladung zu Ihrem Abschiedsfest. Ich komme sehr gern, auch wenn ich traurig bin, dass Sie nach München ziehen. Soll ich etwas mitbringen, vielleicht einen Kuchen oder Getränke? Viele Grüße, Aylin Demir"
+
+  # ---------------------------------------------------------------- Sprechen
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Geburtstag?, Wohnort?, Beruf?, Lieblingsessen?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Wann hast du Geburtstag? Ich habe im Oktober Geburtstag, am zwölften. Wo wohnst du? Ich wohne in Mannheim, in der Nähe vom Bahnhof. Was bist du von Beruf? Ich bin Elektriker und arbeite bei einer kleinen Firma. Was isst du am liebsten? Am liebsten esse ich Lasagne, meine Mutter kocht sie sehr gut."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Feste und Feiern. Erzählen Sie über Ihr Lieblingsfest."
+            cards: [Welches Fest?, Mit wem?, Was essen Sie?, Was machen Sie?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used a weil clause and a Perfekt sentence
+            sample: "Mein Lieblingsfest ist Silvester, weil das Jahr dann neu anfängt. Ich feiere meistens mit meinen Freunden, nicht mit meiner Familie. Wir kochen zusammen, oft Raclette, das dauert lange und ist sehr gemütlich. Um Mitternacht gehen wir auf die Straße und sehen das Feuerwerk. Letztes Jahr haben wir bis drei Uhr morgens getanzt."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten zusammen mit einer Freundin oder einem Freund für eine Kollegin, die heiratet, ein Geschenk kaufen. Finden Sie einen Termin am Samstag.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Samstag: 8–10 Uhr Joggen, 11 Uhr Friseur, 14–16 Uhr Fußball mit dem Sohn, ab 19 Uhr Kino. Ihre Partnerin hat um 9, um 12–13 und ab 17 Uhr keine Zeit. Planen Sie: Wann? Wo treffen? Was kaufen?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Treffpunkt, Geschenk]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a time, a place and a present
+            sample: "– Wann hast du am Samstag Zeit? Wie wäre es um neun? – Um neun kann ich leider nicht, da jogge ich. Und um elf bin ich beim Friseur. Hast du um zwölf Zeit? – Nein, von zwölf bis eins esse ich mit meinen Eltern. Aber um eins passt es. – Super, um eins habe ich auch Zeit. Treffen wir uns vor dem Kaufhaus? – Ja. Was kaufen wir denn? Vielleicht schöne Gläser? – Gute Idee, oder einen Gutschein für ein Restaurant."

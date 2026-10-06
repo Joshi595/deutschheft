@@ -1,0 +1,179 @@
+lesson: b1.04
+sets:
+  - title: The forms
+    items:
+      - id: form1
+        type: matching
+        tags: [forms]
+        prompt: Match the infinitive with its Konjunktiv II.
+        pairs:
+          - { left: haben, right: hätte }
+          - { left: sein, right: wäre }
+          - { left: können, right: könnte }
+          - { left: müssen, right: müsste }
+          - { left: wissen, right: wüsste }
+          - { left: kommen, right: käme }
+      - id: form2
+        type: fill-blank
+        tags: [forms]
+        prompt: "Wenn du Zeit ___, … (haben, du)"
+        answers: [hättest]
+      - id: form3
+        type: fill-blank
+        tags: [forms]
+        prompt: "Wenn wir reich ___, … (sein, wir)"
+        answers: [wären]
+      - id: form4
+        type: fill-blank
+        tags: [forms]
+        prompt: "Was ___ du an meiner Stelle machen? (werden)"
+        answers: [würdest]
+
+  - title: Unreal conditions
+    items:
+      - id: cond1
+        type: multiple-choice
+        tags: [conditions]
+        prompt: "Wenn ich mehr Geld ___, würde ich reisen."
+        options: [hätte, habe, würde haben]
+        answer: hätte
+      - id: cond2
+        type: multiple-choice
+        tags: [conditions]
+        prompt: "Wenn es nicht so weit wäre, ___ wir zu Fuß gehen."
+        options: [könnten, können, konnten]
+        answer: könnten
+      - id: cond3
+        type: true-false
+        tags: [conditions]
+        prompt: "'Wenn ich Zeit habe, komme ich' means that I definitely do not have time."
+        answer: false
+      - id: cond4
+        type: word-order
+        tags: [conditions]
+        prompt: If I had more time, I would learn the piano.
+        answer: "Wenn ich mehr Zeit hätte, würde ich Klavier lernen."
+      - id: cond5
+        type: translation
+        tags: [conditions]
+        prompt: I would help you if I could.
+        answers:
+          - "Ich würde dir helfen, wenn ich könnte."
+
+  - title: Wishes
+    items:
+      - id: wish1
+        type: multiple-choice
+        tags: [wishes]
+        prompt: "Wenn es ___ schon Sommer wäre!"
+        options: [nur, aber, auch]
+        answer: nur
+      - id: wish2
+        type: translation
+        tags: [wishes]
+        prompt: I wish I could sing better.
+        answers:
+          - "Ich wünschte, ich könnte besser singen."
+
+  - title: The past
+    items:
+      - id: past1
+        type: multiple-choice
+        tags: [past]
+        prompt: "Wenn ich mehr gelernt ___, hätte ich die Prüfung bestanden."
+        options: [hätte, habe, wäre]
+        answer: hätte
+      - id: past2
+        type: multiple-choice
+        tags: [past]
+        prompt: "Wenn du früher gekommen ___, hättest du ihn gesehen."
+        options: [wärst, hättest, bist]
+        answer: wärst
+      - id: past3
+        type: multiple-choice
+        tags: [regrets]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich hätte ihn anrufen sollen."
+          - "Ich hätte ihn sollen anrufen."
+          - "Ich sollte ihn angerufen hätte."
+        answer: "Ich hätte ihn anrufen sollen."
+      - id: past4
+        type: word-order
+        tags: [regrets]
+        prompt: You could have told me that!
+        answer: "Du hättest mir das sagen können!"
+      - id: past5
+        type: translation
+        tags: [past]
+        prompt: "If I had known that, I would have come. (wissen, kommen)"
+        answers:
+          - "Wenn ich das gewusst hätte, wäre ich gekommen."
+
+  - title: A dream
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [conditions]
+        prompt: Fill in the Konjunktiv II forms.
+        bank: [hätte, würde, wäre, könnte, würden]
+        text: "Wenn ich im Lotto gewinnen ___, ___ ich zuerst meine Stelle kündigen. Ich ___ ein kleines Haus am Meer kaufen. Dann ___ ich endlich Zeit für meine Familie. Wir ___ jeden Tag schwimmen gehen, und das Leben ___ wunderbar."
+        gaps:
+          - [würde]
+          - [würde]
+          - [würde, könnte]
+          - [hätte]
+          - [würden, könnten]
+          - [wäre]
+
+  - title: A missed chance
+    stimulus:
+      kind: audio
+      label: Am Telefon
+      lines:
+        - speaker: Sara
+          text: "Und? Hast du den Job bekommen?"
+        - speaker: Felix
+          text: "Nein. Ich war zu spät beim Vorstellungsgespräch, zwanzig Minuten. Ich hätte den früheren Zug nehmen sollen."
+        - speaker: Sara
+          text: "Oh nein! Du hättest doch anrufen können."
+        - speaker: Felix
+          text: "Mein Akku war leer. Wenn ich das Handy aufgeladen hätte, wäre alles anders gewesen. Na ja, nächstes Mal."
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening]
+        prompt: Felix hat den Job bekommen.
+        answer: false
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was hätte Felix tun sollen?
+        options: ["einen früheren Zug nehmen", "mit dem Auto fahren", "ein neues Handy kaufen"]
+        answer: "einen früheren Zug nehmen"
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Warum hat Felix nicht angerufen?
+        options: ["Sein Akku war leer.", "Er hatte keine Nummer.", "Er wollte nicht."]
+        answer: "Sein Akku war leer."
+
+  - title: What if?
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, Konjunktiv II]
+        prompt: "Write about how your life would be different if you had been born in another country, or if you could live anywhere."
+        points:
+          - Which country and why
+          - What would be different in your daily life
+          - What you would miss
+          - Something you regret or wish
+        minWords: 70
+        phrases:
+          - Wenn ich in … geboren wäre, …
+          - Ich würde wahrscheinlich …
+          - Ich hätte …
+          - Ich würde … vermissen.
+          - Ich wünschte, …
+        sample: "Wenn ich in Norwegen geboren wäre, würde ich wahrscheinlich viel Zeit in der Natur verbringen. Im Winter würde ich Ski fahren, und im Sommer wäre es lange hell. Ich hätte vielleicht ein kleines Haus an einem Fjord. Aber ich würde das Essen aus meiner Heimat vermissen und natürlich meine Familie. Manchmal wünschte ich, ich hätte als Kind mehr Sprachen gelernt. Dann wäre es heute leichter, in einem anderen Land zu leben."

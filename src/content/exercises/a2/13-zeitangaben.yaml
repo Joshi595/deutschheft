@@ -1,0 +1,202 @@
+lesson: a2.13
+sets:
+  - title: Which time word?
+    items:
+      - id: word1
+        type: multiple-choice
+        tags: [seit]
+        prompt: "Ich wohne ___ drei Jahren in Leipzig."
+        options: [seit, vor, für]
+        answer: seit
+      - id: word2
+        type: multiple-choice
+        tags: [vor]
+        prompt: "Ich bin ___ drei Jahren nach Leipzig gekommen."
+        options: [vor, seit, in]
+        answer: vor
+      - id: word3
+        type: multiple-choice
+        tags: [in]
+        prompt: "Der Zug kommt ___ zehn Minuten."
+        options: [in, vor, seit]
+        answer: in
+      - id: word4
+        type: multiple-choice
+        tags: [fuer]
+        prompt: "Wir fahren ___ zwei Wochen in die Berge."
+        options: [für, seit, vor]
+        answer: für
+      - id: word5
+        type: multiple-choice
+        tags: [ab]
+        prompt: "___ Montag habe ich einen neuen Job."
+        options: [Ab, Seit, Vor]
+        answer: Ab
+      - id: word6
+        type: multiple-choice
+        tags: [nach]
+        prompt: "___ dem Essen trinken wir einen Kaffee."
+        options: [Nach, Seit, Ab]
+        answer: Nach
+      - id: word7
+        type: fill-blank
+        tags: [von bis]
+        prompt: "Die Praxis ist von 8 ___ 12 Uhr geöffnet."
+        answers: [bis]
+
+  - title: The dative endings
+    items:
+      - id: dat1
+        type: fill-blank
+        tags: [dative plural]
+        prompt: "vor zwei ___ (Jahre)"
+        answers: [Jahren]
+      - id: dat2
+        type: fill-blank
+        tags: [dative articles]
+        prompt: "seit ___ Woche (eine)"
+        answers: [einer]
+      - id: dat3
+        type: fill-blank
+        tags: [dative articles]
+        prompt: "in ___ Monat (ein)"
+        answers: [einem]
+      - id: dat4
+        type: multiple-choice
+        tags: [accusative time]
+        prompt: "___ Monat war ich in Paris."
+        options: [Letzten, Letzte, Letztes]
+        answer: Letzten
+      - id: dat5
+        type: multiple-choice
+        tags: [accusative time]
+        prompt: "Ich gehe ___ Tag spazieren."
+        options: [jeden, jede, jedes]
+        answer: jeden
+
+  - title: seit or not?
+    items:
+      - id: tense1
+        type: true-false
+        tags: [seit]
+        prompt: "'Ich wohne seit 2020 hier' means that I still live here."
+        answer: true
+      - id: tense2
+        type: multiple-choice
+        tags: [seit]
+        prompt: Which sentence is correct?
+        options:
+          - "Ich arbeite seit einem Jahr bei Siemens."
+          - "Ich habe seit einem Jahr bei Siemens gearbeitet."
+          - "Ich arbeite für ein Jahr bei Siemens."
+        answer: "Ich arbeite seit einem Jahr bei Siemens."
+        explanation: Still true, so seit with the present.
+      - id: tense3
+        type: multiple-choice
+        tags: [duration]
+        prompt: "I lived in Rome for two years (I no longer live there)."
+        options:
+          - "Ich habe zwei Jahre in Rom gewohnt."
+          - "Ich wohne seit zwei Jahren in Rom."
+        answer: "Ich habe zwei Jahre in Rom gewohnt."
+
+  - title: A short life story
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [time prepositions]
+        prompt: Fill in the time words.
+        bank: [vor, Seit, Nach, Ab, bis, in]
+        text: "Ich bin ___ fünf Jahren nach Deutschland gekommen. ___ dem Sprachkurs habe ich eine Ausbildung gemacht. ___ zwei Jahren arbeite ich in einem Hotel. Meine Schicht geht von sieben ___ fünfzehn Uhr. ___ nächstem Monat bin ich Chef an der Rezeption, und ___ einem Jahr möchte ich die B1-Prüfung machen."
+        gaps:
+          - [vor]
+          - [Nach]
+          - [Seit]
+          - [bis]
+          - [Ab]
+          - [in]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [seit]
+        prompt: How long have you been learning German?
+        answer: "Seit wann lernst du Deutsch?"
+      - id: order2
+        type: word-order
+        tags: [vor]
+        prompt: The bus left five minutes ago.
+        answer: "Der Bus ist vor fünf Minuten abgefahren."
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [seit]
+        prompt: I have been living here for a year.
+        answers:
+          - "Ich wohne seit einem Jahr hier."
+          - "Ich wohne hier seit einem Jahr."
+      - id: tr2
+        type: translation
+        tags: [in]
+        prompt: I will be there in ten minutes.
+        answers:
+          - "Ich bin in zehn Minuten da."
+          - "In zehn Minuten bin ich da."
+
+  - title: On the phone
+    stimulus:
+      kind: audio
+      label: Ein Termin beim Friseur
+      lines:
+        - speaker: Friseurin
+          text: "Salon Haarmonie, guten Tag."
+        - speaker: Kunde
+          text: "Guten Tag, ich hätte gern einen Termin. Geht es diese Woche noch?"
+        - speaker: Friseurin
+          text: "Diese Woche sind wir leider voll. Ab nächsten Dienstag haben wir wieder Termine."
+        - speaker: Kunde
+          text: "Dienstag ist gut, aber erst nach der Arbeit. Ich arbeite bis siebzehn Uhr."
+        - speaker: Friseurin
+          text: "Wir haben dienstags bis neunzehn Uhr geöffnet. Um halb sechs?"
+        - speaker: Kunde
+          text: "Perfekt, danke!"
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening]
+        prompt: Der Kunde bekommt einen Termin in dieser Woche.
+        answer: false
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Bis wann arbeitet der Kunde?
+        options: ["bis 17 Uhr", "bis 19 Uhr", "bis halb sechs"]
+        answer: "bis 17 Uhr"
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wann ist der Termin?
+        options: ["Dienstag um 17:30 Uhr", "Dienstag um 19 Uhr", "Montag um 17 Uhr"]
+        answer: "Dienstag um 17:30 Uhr"
+
+  - title: About you
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, time]
+        prompt: Talk about your life in a few sentences, using at least four different time words.
+        cards: [seit, vor, nach, in / ab]
+        phrases:
+          - Ich wohne seit … in …
+          - Vor … Jahren habe ich …
+          - Nach der Schule / dem Studium habe ich …
+          - In einem Jahr / Ab … möchte ich …
+        checklist:
+          - I used seit with the present tense
+          - I used vor for the past and in for the future
+          - The dative endings were right (vor zwei Jahren, seit einem Monat)
+        sample: "Ich heiße Ana und wohne seit drei Jahren in Frankfurt. Vor fünf Jahren habe ich in Lissabon studiert. Nach dem Studium habe ich ein Jahr in London gearbeitet. Ab nächstem Monat mache ich einen Deutschkurs am Abend, und in einem Jahr möchte ich die B1-Prüfung machen."

@@ -1,0 +1,239 @@
+lesson: a2.10
+sets:
+  - title: The articles
+    instructions: Fill in the dative article.
+    items:
+      - id: art1
+        type: fill-blank
+        tags: [dative articles]
+        prompt: "Ich helfe ___ Mann. (der)"
+        answers: [dem]
+      - id: art2
+        type: fill-blank
+        tags: [dative articles]
+        prompt: "Ich spreche mit ___ Lehrerin. (die)"
+        answers: [der]
+      - id: art3
+        type: fill-blank
+        tags: [dative articles]
+        prompt: "Wir fahren mit ___ Auto. (unser)"
+        answers: [unserem]
+      - id: art4
+        type: fill-blank
+        tags: [dative articles]
+        prompt: "Sie wohnt bei ___ Freundin. (eine)"
+        answers: [einer]
+      - id: art5
+        type: fill-blank
+        tags: [dative plural]
+        prompt: "Ich spiele mit den ___. (Kinder)"
+        answers: [Kindern]
+      - id: art6
+        type: fill-blank
+        tags: [dative plural]
+        prompt: "Er wohnt bei seinen ___. (Eltern)"
+        answers: [Eltern]
+        explanation: Eltern already ends in -n, so nothing is added.
+
+  - title: The pronouns
+    items:
+      - id: pron1
+        type: matching
+        tags: [dative pronouns]
+        prompt: Match each subject pronoun with its dative form.
+        pairs:
+          - { left: ich, right: mir }
+          - { left: du, right: dir }
+          - { left: er, right: ihm }
+          - { left: sie (she), right: ihr }
+          - { left: wir, right: uns }
+          - { left: Sie, right: Ihnen }
+      - id: pron2
+        type: multiple-choice
+        tags: [dative pronouns]
+        prompt: "Kannst du ___ helfen? (me)"
+        options: [mir, mich, ich]
+        answer: mir
+      - id: pron3
+        type: multiple-choice
+        tags: [dative pronouns]
+        prompt: "Das Kleid gefällt ___. (her)"
+        options: [ihr, sie, ihm]
+        answer: ihr
+      - id: pron4
+        type: multiple-choice
+        tags: [dative pronouns]
+        prompt: "Wie geht es ___? (formal)"
+        options: [Ihnen, Sie, ihnen]
+        answer: Ihnen
+      - id: pron5
+        type: fill-blank
+        tags: [dative pronouns]
+        prompt: "Ich gebe ___ meine Nummer. (him)"
+        answers: [ihm]
+
+  - title: Dative or accusative?
+    items:
+      - id: case1
+        type: multiple-choice
+        tags: [dative verbs]
+        prompt: "Ich helfe ___."
+        options: [dir, dich]
+        answer: dir
+        explanation: helfen always takes the dative.
+      - id: case2
+        type: multiple-choice
+        tags: [dative verbs]
+        prompt: "Ich sehe ___."
+        options: [dich, dir]
+        answer: dich
+        explanation: sehen takes the accusative.
+      - id: case3
+        type: multiple-choice
+        tags: [dative verbs]
+        prompt: "Wem gehört ___ Tasche?"
+        options: [die, der]
+        answer: die
+        explanation: The bag is the subject here. The owner would be the dative.
+      - id: case4
+        type: multiple-choice
+        tags: [dative verbs]
+        prompt: "Ich danke ___ Arzt."
+        options: [dem, den]
+        answer: dem
+      - id: case5
+        type: true-false
+        tags: [dative verbs]
+        prompt: "In 'Ich schenke meiner Mutter Blumen', meiner Mutter is the dative."
+        answer: true
+
+  - title: Prepositions
+    items:
+      - id: prep1
+        type: multiple-choice
+        tags: [dative prepositions]
+        prompt: "Ich gehe heute ___ Arzt."
+        options: [zum, zur, nach]
+        answer: zum
+      - id: prep2
+        type: multiple-choice
+        tags: [dative prepositions]
+        prompt: "Nach der Schule gehe ich ___ meiner Freundin."
+        options: [zu, nach, bei]
+        answer: zu
+        explanation: To a person you go zu.
+      - id: prep3
+        type: fill-blank
+        tags: [dative prepositions]
+        prompt: "Ich lerne ___ einem Jahr Deutsch. (for one year)"
+        answers: [seit]
+      - id: prep4
+        type: fill-blank
+        tags: [dative prepositions]
+        prompt: "Er kommt gerade ___ Training. (von + dem)"
+        answers: [vom]
+      - id: prep5
+        type: cloze
+        tags: [dative prepositions, dative articles]
+        prompt: Fill in the gaps.
+        text: "Morgens fahre ich mit ___ Bus zur Arbeit. Mittags esse ich mit ___ Kollegen in der Kantine. Nach ___ Arbeit gehe ich ___ Supermarkt. Am Abend telefoniere ich mit ___ Schwester."
+        gaps:
+          - [dem]
+          - [den]
+          - [der]
+          - [zum]
+          - [meiner, der]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [object order]
+        prompt: I am giving the child a ball.
+        answer: "Ich gebe dem Kind einen Ball."
+      - id: order2
+        type: word-order
+        tags: [object order, dative pronouns]
+        prompt: Can you show me the photo?
+        answer: "Kannst du mir das Foto zeigen?"
+      - id: order3
+        type: word-order
+        tags: [dative verbs]
+        prompt: The flat does not please us.
+        answer: "Die Wohnung gefällt uns nicht."
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [dative verbs]
+        prompt: I like the film. (use gefallen)
+        answers:
+          - "Der Film gefällt mir."
+          - "Mir gefällt der Film."
+      - id: tr2
+        type: translation
+        tags: [dative phrases]
+        prompt: I am cold.
+        answers:
+          - "Mir ist kalt."
+      - id: tr3
+        type: translation
+        tags: [dative verbs]
+        prompt: The car belongs to my father.
+        answers:
+          - "Das Auto gehört meinem Vater."
+
+  - title: A birthday present
+    stimulus:
+      kind: audio
+      label: Ein Geschenk für Oma
+      lines:
+        - speaker: Lena
+          text: "Du, Paul, nächste Woche hat Oma Geburtstag. Was schenken wir ihr?"
+        - speaker: Paul
+          text: "Letztes Jahr haben wir ihr Blumen geschenkt. Vielleicht ein Buch?"
+        - speaker: Lena
+          text: "Sie liest nicht mehr so gern. Ihre Augen sind nicht mehr so gut."
+        - speaker: Paul
+          text: "Dann eine Reise! Wir fahren mit ihr an den Bodensee. Das gefällt ihr bestimmt."
+        - speaker: Lena
+          text: "Gute Idee. Ich frage Mama, ob ihr der Termin passt."
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening]
+        prompt: Letztes Jahr haben Lena und Paul der Oma ein Buch geschenkt.
+        answer: false
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was schenken sie der Oma dieses Jahr?
+        options: [eine Reise, ein Buch, Blumen]
+        answer: eine Reise
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Warum kein Buch?
+        options: ["Oma liest nicht mehr so gern.", "Oma hat schon viele Bücher.", "Bücher sind zu teuer."]
+        answer: "Oma liest nicht mehr so gern."
+
+  - title: Write it
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, dative]
+        prompt: "A friend has a birthday soon. Write a short message to another friend: what you want to give and why."
+        points:
+          - Whose birthday it is and when
+          - What you want to give him or her
+          - Why it is a good present
+          - Ask whether your friend wants to join in
+        minWords: 35
+        phrases:
+          - … hat am … Geburtstag.
+          - Ich möchte ihm / ihr … schenken.
+          - … gefällt ihm / ihr bestimmt, weil …
+          - Möchtest du mitmachen?
+        sample: "Hallo Sara, Tom hat am Samstag Geburtstag. Ich möchte ihm ein Kochbuch schenken. Er kocht sehr gern, und das Buch gefällt ihm bestimmt. Es kostet 30 Euro. Möchtest du mitmachen? Dann bezahlen wir jeder 15 Euro. Viele Grüße, Anna"

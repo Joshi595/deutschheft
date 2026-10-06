@@ -1,0 +1,110 @@
+lesson: b1.07
+items:
+  - id: dessen
+    de: dessen
+    en: whose (masculine, neuter)
+    pos: other
+    example: Der Mann, dessen Hund bellt, wohnt oben.
+    exampleEn: The man whose dog is barking lives upstairs.
+  - id: deren
+    de: deren
+    en: whose (feminine, plural)
+    pos: other
+    example: Die Frau, deren Auto hier steht, ist Ärztin.
+    exampleEn: The woman whose car is here is a doctor.
+  - id: denen
+    de: denen
+    en: (to) whom (dative plural)
+    pos: other
+    example: Das sind die Leute, denen ich geholfen habe.
+    exampleEn: Those are the people I helped.
+  - id: beschreiben
+    de: beschreiben
+    en: to describe
+    pos: verb
+    example: Können Sie den Mann beschreiben?
+    exampleEn: Can you describe the man?
+  - id: erwaehnen
+    de: erwähnen
+    en: to mention
+    pos: verb
+    example: Das Buch, das du erwähnt hast, habe ich gekauft.
+    exampleEn: I bought the book you mentioned.
+  - id: empfehlen-b1
+    de: empfehlen
+    en: to recommend
+    pos: verb
+    example: Das Restaurant, das du mir empfohlen hast, war toll.
+    exampleEn: The restaurant you recommended to me was great.
+  - id: gehoeren-b1
+    de: gehören (+ Dativ)
+    en: to belong to
+    pos: verb
+    example: Die Kollegin, der das Auto gehört, ist im Urlaub.
+    exampleEn: The colleague who owns the car is on holiday.
+  - id: spannend
+    de: spannend
+    en: exciting, gripping
+    pos: adjective
+    example: Der Krimi, den ich lese, ist sehr spannend.
+    exampleEn: The crime novel I am reading is very gripping.
+  - id: schaufenster
+    de: Schaufenster
+    en: shop window
+    pos: noun
+    article: das
+    plural: Schaufenster
+    example: Ich habe die Schuhe im Schaufenster gesehen.
+    exampleEn: I saw the shoes in the shop window.
+  - id: bekannte
+    de: Bekannte
+    en: acquaintance
+    pos: noun
+    article: der
+    plural: Bekannten
+    example: Ein Bekannter, der in Wien wohnt, hat mir geholfen.
+    exampleEn: An acquaintance who lives in Vienna helped me.
+  - id: vermieterin
+    de: Vermieterin
+    en: landlady
+    pos: noun
+    article: die
+    plural: Vermieterinnen
+    example: Die Vermieterin, mit der ich telefoniert habe, war nett.
+    exampleEn: The landlady I spoke to on the phone was nice.
+  - id: gebaeude
+    de: Gebäude
+    en: building
+    pos: noun
+    article: das
+    plural: Gebäude
+    example: Das Gebäude, in dem ich arbeite, ist sehr alt.
+    exampleEn: The building I work in is very old.
+  - id: verein
+    de: Verein
+    en: club, association
+    pos: noun
+    article: der
+    plural: Vereine
+    example: Der Verein, dem ich beigetreten bin, organisiert Wanderungen.
+    exampleEn: The club I joined organises hikes.
+  - id: erfinden
+    de: erfinden
+    en: to invent
+    pos: verb
+    example: Der Mann, der das Auto erfunden hat, hieß Benz.
+    exampleEn: The man who invented the car was called Benz.
+  - id: begegnen
+    de: begegnen (+ Dativ)
+    en: to meet, to come across
+    pos: verb
+    example: Die Frau, der ich im Park begegnet bin, war meine Lehrerin.
+    exampleEn: The woman I met in the park was my teacher.
+  - id: eigentuemer
+    de: Eigentümer
+    en: owner
+    pos: noun
+    article: der
+    plural: Eigentümer
+    example: Der Eigentümer, dessen Haus wir mieten, wohnt in Spanien.
+    exampleEn: The owner whose house we rent lives in Spain.

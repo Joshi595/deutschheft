@@ -1,0 +1,172 @@
+lesson: b1.05
+sets:
+  - title: Future or guess?
+    items:
+      - id: fg1
+        type: multiple-choice
+        tags: [werden wohl]
+        prompt: "'Er wird wohl noch im Büro sein.' What does it mean?"
+        options: ["He is probably still at the office.", "He will be at the office later.", "He is well and at the office."]
+        answer: "He is probably still at the office."
+      - id: fg2
+        type: multiple-choice
+        tags: [werden]
+        prompt: "'In zwanzig Jahren werden wir anders leben.' What is it?"
+        options: [a prediction about the future, a guess about now, a promise]
+        answer: a prediction about the future
+      - id: fg3
+        type: fill-blank
+        tags: [werden wohl]
+        prompt: "Sie antwortet nicht. Sie ___ wohl schon schlafen."
+        answers: [wird]
+      - id: fg4
+        type: word-order
+        tags: [werden wohl]
+        prompt: That will probably be the new colleague.
+        answer: "Das wird wohl der neue Kollege sein."
+
+  - title: How sure?
+    items:
+      - id: sure1
+        type: matching
+        tags: [certainty]
+        prompt: Match each word with how certain it is.
+        pairs:
+          - { left: auf jeden Fall, right: 100 % }
+          - { left: wahrscheinlich, right: about 80 % }
+          - { left: vielleicht, right: about 50 % }
+          - { left: kaum, right: about 20 % }
+          - { left: auf keinen Fall, right: 0 % }
+      - id: sure2
+        type: multiple-choice
+        tags: [certainty]
+        prompt: "You are almost sure he is coming, but not 100 %. Er kommt ___."
+        options: [wahrscheinlich, auf keinen Fall, kaum]
+        answer: wahrscheinlich
+      - id: sure3
+        type: multiple-choice
+        tags: [certainty]
+        prompt: "Das glaube ich ___. (I hardly think so.)"
+        options: [kaum, wohl, bestimmt]
+        answer: kaum
+      - id: sure4
+        type: true-false
+        tags: [certainty]
+        prompt: "'vielleicht' and 'möglicherweise' mean roughly the same."
+        answer: true
+
+  - title: Phrases with dass
+    items:
+      - id: dass1
+        type: multiple-choice
+        tags: [dass phrases]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich nehme an, dass die Preise steigen werden."
+          - "Ich nehme an, dass die Preise werden steigen."
+          - "Ich nehme an, die Preise steigen werden."
+        answer: "Ich nehme an, dass die Preise steigen werden."
+      - id: dass2
+        type: translation
+        tags: [dass phrases]
+        prompt: It may be that the train is late.
+        answers:
+          - "Es kann sein, dass der Zug Verspätung hat."
+          - "Es kann sein, dass der Zug zu spät kommt."
+      - id: dass3
+        type: word-order
+        tags: [dass phrases]
+        prompt: I am sure that she will pass the exam.
+        answer: "Ich bin sicher, dass sie die Prüfung bestehen wird."
+
+  - title: müsste, dürfte, könnte
+    items:
+      - id: mod1
+        type: multiple-choice
+        tags: [modal assumptions]
+        prompt: "It is seven o'clock and you expect her home any minute. Which sentence fits?"
+        options: ["Sie müsste gleich da sein.", "Sie musste gleich da sein."]
+        answer: "Sie müsste gleich da sein."
+      - id: mod2
+        type: multiple-choice
+        tags: [modal assumptions]
+        prompt: "Das ___ ein Problem werden. (might)"
+        options: [könnte, konnte]
+        answer: könnte
+      - id: mod4
+        type: translation
+        tags: [modal assumptions]
+        prompt: "The parcel should arrive tomorrow. (I expect – use müsste)"
+        answers:
+          - "Das Paket müsste morgen ankommen."
+      - id: mod3
+        type: fill-blank
+        tags: [modal assumptions]
+        prompt: "Das ___ etwa fünfzig Euro kosten. (is probably – dürfen)"
+        answers: [dürfte]
+
+  - title: The future of work
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [certainty, werden]
+        prompt: Fill in the gaps.
+        bank: [werden, wahrscheinlich, kaum, sicher, könnte]
+        text: "Ich bin ___, dass sich die Arbeitswelt stark verändern wird. In zehn Jahren ___ viele Menschen ___ mehr von zu Hause arbeiten. Dass Roboter alle Jobs übernehmen, glaube ich aber ___. Für ältere Menschen ___ das allerdings schwierig werden."
+        gaps:
+          - [sicher]
+          - [werden]
+          - [wahrscheinlich]
+          - [kaum]
+          - [könnte]
+
+  - title: Where is Tom?
+    stimulus:
+      kind: audio
+      label: Wo ist Tom?
+      lines:
+        - speaker: Lisa
+          text: "Tom ist immer noch nicht da. Der Film fängt in zehn Minuten an."
+        - speaker: Ben
+          text: "Er wird wohl wieder im Stau stehen. Freitags ist es auf der Autobahn immer schlimm."
+        - speaker: Lisa
+          text: "Oder er hat es vergessen. Das kann auch sein."
+        - speaker: Ben
+          text: "Nein, auf keinen Fall. Er hat mir heute Mittag noch geschrieben. Er müsste gleich hier sein."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was vermutet Ben zuerst?
+        options: ["Tom steht im Stau.", "Tom hat es vergessen.", "Tom ist krank."]
+        answer: "Tom steht im Stau."
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Ben glaubt, dass Tom das Kino vergessen hat.
+        answer: false
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wann beginnt der Film?
+        options: ["in zehn Minuten", "in einer Stunde", "um zwölf"]
+        answer: "in zehn Minuten"
+
+  - title: Your view of the future
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, future]
+        prompt: "How will people live in 2050? Give your view on three areas and show how sure you are."
+        cards: [Wohnen, Verkehr, Arbeit]
+        phrases:
+          - Ich bin sicher, dass …
+          - Wahrscheinlich werden wir …
+          - Es kann sein, dass …, aber …
+          - Das glaube ich kaum, weil …
+        checklist:
+          - I talked about all three areas
+          - I used at least three different certainty words
+          - I used werden + infinitive for the future
+          - I gave at least one reason with weil
+        sample: "Ich bin sicher, dass im Jahr 2050 mehr Menschen in Städten wohnen werden. Die Wohnungen werden wahrscheinlich kleiner, weil es weniger Platz gibt. Im Verkehr wird es vermutlich kaum noch Benzinautos geben. Es kann sein, dass Autos ohne Fahrer fahren, aber das glaube ich erst, wenn ich es sehe. Bei der Arbeit werden Computer vielleicht viele einfache Aufgaben übernehmen."

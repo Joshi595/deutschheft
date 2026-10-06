@@ -1,0 +1,186 @@
+lesson: b1.01
+sets:
+  - title: Regular verbs
+    instructions: Write the Präteritum form.
+    items:
+      - id: reg1
+        type: fill-blank
+        tags: [regular]
+        prompt: "ich (machen): ich ___"
+        answers: [machte]
+      - id: reg2
+        type: fill-blank
+        tags: [regular]
+        prompt: "wir (wohnen): wir ___"
+        answers: [wohnten]
+      - id: reg3
+        type: fill-blank
+        tags: [regular]
+        prompt: "er (arbeiten): er ___"
+        answers: [arbeitete]
+      - id: reg4
+        type: fill-blank
+        tags: [regular]
+        prompt: "du (warten): du ___"
+        answers: [wartetest]
+
+  - title: Irregular verbs
+    items:
+      - id: irr1
+        type: matching
+        tags: [irregular]
+        prompt: Match the infinitive with its Präteritum.
+        pairs:
+          - { left: gehen, right: ging }
+          - { left: kommen, right: kam }
+          - { left: sehen, right: sah }
+          - { left: nehmen, right: nahm }
+          - { left: finden, right: fand }
+          - { left: schreiben, right: schrieb }
+      - id: irr2
+        type: matching
+        tags: [irregular]
+        prompt: Match the infinitive with its Präteritum.
+        pairs:
+          - { left: fahren, right: fuhr }
+          - { left: stehen, right: stand }
+          - { left: sitzen, right: saß }
+          - { left: essen, right: aß }
+          - { left: beginnen, right: begann }
+          - { left: treffen, right: traf }
+      - id: irr3
+        type: fill-blank
+        tags: [irregular]
+        prompt: "Gestern ___ ich meinen alten Lehrer. (treffen)"
+        answers: [traf]
+      - id: irr4
+        type: fill-blank
+        tags: [irregular]
+        prompt: "Wir ___ bis Mitternacht. (bleiben)"
+        answers: [blieben]
+      - id: irr5
+        type: fill-blank
+        tags: [irregular]
+        prompt: "Du ___ immer so schnell. (sprechen)"
+        answers: [sprachst]
+      - id: irr6
+        type: multiple-choice
+        tags: [irregular]
+        prompt: "Er ___ nach Hause."
+        options: [ging, gingte, gang]
+        answer: ging
+
+  - title: Mixed verbs
+    items:
+      - id: mix1
+        type: multiple-choice
+        tags: [mixed]
+        prompt: "Ich ___, du bist schon weg."
+        options: [dachte, denkte, dankte]
+        answer: dachte
+      - id: mix2
+        type: fill-blank
+        tags: [mixed]
+        prompt: "Das ___ ich nicht. (wissen)"
+        answers: [wusste]
+      - id: mix3
+        type: fill-blank
+        tags: [mixed]
+        prompt: "Der Kellner ___ uns die Speisekarte. (bringen)"
+        answers: [brachte]
+      - id: mix4
+        type: fill-blank
+        tags: [mixed]
+        prompt: "Damals ___ sie niemanden in der Stadt. (kennen)"
+        answers: [kannte]
+
+  - title: Separable verbs
+    items:
+      - id: sep1
+        type: word-order
+        tags: [separable]
+        prompt: The train arrived on time.
+        answer: "Der Zug kam pünktlich an."
+      - id: sep2
+        type: word-order
+        tags: [separable]
+        prompt: She got up at six.
+        answer: "Sie stand um sechs Uhr auf."
+
+  - title: Perfekt or Präteritum?
+    items:
+      - id: style1
+        type: multiple-choice
+        tags: [style]
+        prompt: "Which sentence sounds most natural in a chat with a friend?"
+        options: ["Gestern habe ich einen tollen Film gesehen.", "Gestern sah ich einen tollen Film."]
+        answer: "Gestern habe ich einen tollen Film gesehen."
+      - id: style2
+        type: true-false
+        tags: [style]
+        prompt: "In speech, Germans normally say 'Ich war müde' rather than 'Ich bin müde gewesen'."
+        answer: true
+      - id: style3
+        type: multiple-choice
+        tags: [style]
+        prompt: Which text type is normally written in the Präteritum?
+        options: [a newspaper report, a WhatsApp message, a phone call]
+        answer: a newspaper report
+
+  - title: A newspaper report
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [irregular, regular]
+        prompt: Put the verbs into the Präteritum.
+        text: "Am Montagabend ___ (geben) es in der Bahnhofstraße einen Unfall. Ein Radfahrer ___ (fahren) bei Rot über die Ampel. Ein Auto ___ (bremsen) noch, aber es ___ (sein) zu spät. Der Radfahrer ___ (fallen) auf die Straße. Ein Krankenwagen ___ (bringen) ihn ins Krankenhaus."
+        gaps:
+          - [gab]
+          - [fuhr]
+          - [bremste]
+          - [war]
+          - [fiel]
+          - [brachte]
+
+  - title: An old story
+    stimulus:
+      kind: text
+      label: Ein Märchen
+      text: "Es war einmal ein armer Schuster. Er arbeitete jeden Tag von früh bis spät, aber er hatte nie genug Geld. Eines Abends schnitt er das letzte Leder zu und ging müde ins Bett. Am nächsten Morgen fand er auf seinem Tisch ein Paar wunderschöne Schuhe. Er wusste nicht, wer sie gemacht hatte. Ein reicher Mann kam in den Laden, sah die Schuhe und kaufte sie für viel Geld."
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading]
+        prompt: Der Schuster hatte viel Geld.
+        answer: false
+      - id: read2
+        type: multiple-choice
+        tags: [reading]
+        prompt: Was fand der Schuster am Morgen?
+        options: ["fertige Schuhe", "Geld", "einen Brief"]
+        answer: "fertige Schuhe"
+      - id: read3
+        type: multiple-choice
+        tags: [reading]
+        prompt: "Which infinitive belongs to 'schnitt … zu'?"
+        options: [zuschneiden, zuschnitten, schneiden zu]
+        answer: zuschneiden
+
+  - title: Write a story
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, Präteritum]
+        prompt: "Write the beginning of a short story in the Präteritum. Start with: 'Es war ein kalter Abend im November.'"
+        points:
+          - Where the story takes place and who is there
+          - What the person did
+          - Something unexpected that happened (plötzlich …)
+          - How the person reacted
+        minWords: 60
+        phrases:
+          - Es war ein kalter Abend im November.
+          - … saß / stand / ging …
+          - Plötzlich …
+          - Er / Sie dachte, …
+        sample: "Es war ein kalter Abend im November. Anna saß allein in ihrer Küche und trank einen Tee. Draußen regnete es stark. Sie las ein Buch, aber sie konnte sich nicht konzentrieren. Plötzlich klingelte es an der Tür. Sie wusste nicht, wer so spät noch kam. Langsam ging sie zur Tür und öffnete sie. Vor ihr stand ein kleiner Junge mit einem nassen Hund."

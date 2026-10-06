@@ -1,0 +1,168 @@
+lesson: b1.22
+sets:
+  - title: Online verbs
+    items:
+      - id: v1
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: herunterladen, right: to download }
+          - { left: hochladen, right: to upload }
+          - { left: teilen, right: to share }
+          - { left: löschen, right: to delete }
+          - { left: speichern, right: to save }
+          - { left: überprüfen, right: to check }
+      - id: v2
+        type: fill-blank
+        tags: [Perfekt]
+        prompt: "Ich habe die App ___. (herunterladen)"
+        answers: [heruntergeladen]
+      - id: v3
+        type: fill-blank
+        tags: [Perfekt]
+        prompt: "Sie hat ein Foto ___. (posten)"
+        answers: [gepostet]
+      - id: v4
+        type: fill-blank
+        tags: [Perfekt]
+        prompt: "Ich habe mich noch nicht ___. (anmelden)"
+        answers: [angemeldet]
+      - id: v5
+        type: fill-blank
+        tags: [Perfekt]
+        prompt: "Hast du das schon ___? (googeln)"
+        answers: [gegoogelt]
+
+  - title: Habits
+    items:
+      - id: h1
+        type: multiple-choice
+        tags: [habits]
+        prompt: "Ich verbringe zu viel Zeit ___ Handy."
+        options: [am, mit dem, im]
+        answer: am
+      - id: h2
+        type: multiple-choice
+        tags: [habits]
+        prompt: "Ich informiere mich ___ die Nachrichten im Internet."
+        options: [über, für, auf]
+        answer: über
+      - id: h3
+        type: word-order
+        tags: [habits]
+        prompt: In the evening I like watching series.
+        answer: "Abends schaue ich gern Serien."
+
+  - title: Surveys
+    items:
+      - id: s1
+        type: multiple-choice
+        tags: [surveys]
+        prompt: Choose the correct sentence.
+        options:
+          - "Laut einer Umfrage nutzen 90 Prozent das Internet täglich."
+          - "Laut einer Umfrage 90 Prozent nutzen das Internet täglich."
+          - "Laut einer Umfrage nutzen das Internet täglich 90 Prozent die."
+        answer: "Laut einer Umfrage nutzen 90 Prozent das Internet täglich."
+      - id: s2
+        type: fill-blank
+        tags: [surveys]
+        prompt: "60 Prozent der ___ sind zufrieden. (people asked)"
+        answers: [Befragten]
+      - id: s3
+        type: translation
+        tags: [surveys]
+        prompt: A study found that young people sleep too little.
+        answers:
+          - "Eine Studie hat ergeben, dass Jugendliche zu wenig schlafen."
+          - "Eine Studie hat ergeben, dass junge Leute zu wenig schlafen."
+      - id: s4
+        type: multiple-choice
+        tags: [surveys]
+        prompt: "'Die Mehrheit' means …"
+        options: [the majority, the minority, the average]
+        answer: the majority
+
+  - title: Reliable or not?
+    items:
+      - id: r1
+        type: true-false
+        tags: [media literacy]
+        prompt: "'Bevor ich etwas teile, überprüfe ich die Quelle' means you check the source before sharing."
+        answer: true
+      - id: r2
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Auf Informationen aus dem Internet kann man sich nicht immer ___."
+        options: [verlassen, vertrauen, glauben]
+        answer: verlassen
+      - id: r3
+        type: multiple-choice
+        tags: [vocabulary]
+        prompt: "'seriös' means …"
+        options: [reliable, serious illness, secret]
+        answer: reliable
+
+  - title: Social media
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [opinion]
+        prompt: Complete the text.
+        bank: [Einerseits, andererseits, abhängig, Datenschutz, teilen, Laut]
+        text: "___ einer Studie verbringen Jugendliche täglich vier Stunden in sozialen Netzwerken. ___ können sie dort Kontakt mit Freunden halten und Ideen ___, ___ werden viele von ihrem Handy ___. Auch der ___ ist ein Problem, denn viele Apps sammeln persönliche Daten."
+        gaps:
+          - [Laut]
+          - [Einerseits]
+          - [teilen]
+          - [andererseits]
+          - [abhängig]
+          - [Datenschutz]
+
+  - title: A radio report
+    stimulus:
+      kind: audio
+      label: Radio-Bericht
+      lines:
+        - speaker: Reporterin
+          text: "Wie informieren sich junge Menschen heute? Eine neue Studie hat ergeben, dass nur noch zehn Prozent der Jugendlichen eine gedruckte Zeitung lesen. Die Mehrheit, nämlich siebzig Prozent, informiert sich über soziale Netzwerke. Experten sehen das kritisch, denn dort verbreiten sich Falschmeldungen besonders schnell. Sie empfehlen, in der Schule mehr über Medien zu lernen."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wie viele Jugendliche lesen eine gedruckte Zeitung?
+        options: ["10 Prozent", "70 Prozent", "die Mehrheit"]
+        answer: "10 Prozent"
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Die meisten Jugendlichen informieren sich über soziale Netzwerke.
+        answer: true
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was empfehlen die Experten?
+        options: ["mehr Medienunterricht in der Schule", "Handys verbieten", "mehr Zeitungen kaufen"]
+        answer: "mehr Medienunterricht in der Schule"
+
+  - title: Present it
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, presentation]
+        prompt: "Give a short presentation: 'Mein Leben ohne Internet – wäre das möglich?'"
+        cards: [meine Mediennutzung, Vorteile des Internets, Nachteile, Leben ohne Internet?, meine Meinung]
+        phrases:
+          - Ich möchte über das Thema … sprechen.
+          - Ich nutze das Internet vor allem, um …
+          - Einerseits …, andererseits …
+          - Ohne Internet würde ich …
+          - Zum Schluss möchte ich sagen, dass …
+        checklist:
+          - I introduced the topic and gave a structure
+          - I described my own media habits
+          - I gave pros and cons
+          - I used the Konjunktiv II for the imagined situation
+          - I ended with a clear conclusion
+        sample: "Ich möchte heute über das Thema 'Leben ohne Internet' sprechen. Ich nutze das Internet jeden Tag, vor allem, um mit meiner Familie in Brasilien zu telefonieren und um Nachrichten zu lesen. Einerseits macht das Internet das Leben viel leichter, andererseits verbringe ich zu viel Zeit am Handy. Ohne Internet hätte ich mehr Zeit für Bücher und Sport, aber ich würde meine Familie sehr vermissen. Zum Schluss möchte ich sagen, dass ein Leben ganz ohne Internet für mich nicht möglich wäre, aber ein Tag pro Woche offline wäre eine gute Idee."

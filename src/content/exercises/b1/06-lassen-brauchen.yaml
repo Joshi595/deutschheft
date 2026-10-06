@@ -1,0 +1,154 @@
+lesson: b1.06
+sets:
+  - title: Which meaning?
+    items:
+      - id: mean1
+        type: matching
+        tags: [lassen meanings]
+        prompt: Match each sentence with its meaning.
+        pairs:
+          - { left: Ich lasse mein Auto reparieren., right: have something done }
+          - { left: Lass mich ausreden!, right: let / allow }
+          - { left: Ich lasse das Handy zu Hause., right: leave }
+          - { left: Lass uns gehen!, right: "let's" }
+      - id: mean2
+        type: true-false
+        tags: [lassen meanings]
+        prompt: "'Ich lasse mir die Haare schneiden' means that I cut my own hair."
+        answer: false
+
+  - title: Forms of lassen
+    items:
+      - id: form1
+        type: fill-blank
+        tags: [lassen forms]
+        prompt: "Er ___ sein Fahrrad reparieren. (lassen, er)"
+        answers: [lässt]
+      - id: form2
+        type: fill-blank
+        tags: [lassen forms]
+        prompt: "Du ___ mich nie ausreden! (lassen, du)"
+        answers: [lässt]
+      - id: form3
+        type: fill-blank
+        tags: [lassen forms]
+        prompt: "Der Lehrer ___ uns früher gehen. (Präteritum)"
+        answers: [ließ]
+      - id: form4
+        type: fill-blank
+        tags: [lassen forms]
+        prompt: "___ uns ins Kino gehen! (to one friend)"
+        answers: [Lass]
+
+  - title: Do it or have it done?
+    items:
+      - id: done1
+        type: multiple-choice
+        tags: [have done]
+        prompt: "You take your car to the garage. What do you say?"
+        options: ["Ich lasse mein Auto reparieren.", "Ich repariere mein Auto.", "Ich lasse mein Auto zu reparieren."]
+        answer: "Ich lasse mein Auto reparieren."
+      - id: done2
+        type: word-order
+        tags: [have done]
+        prompt: We are having the flat painted.
+        answer: "Wir lassen die Wohnung streichen."
+      - id: done3
+        type: word-order
+        tags: [have done]
+        prompt: I am having my hair cut tomorrow.
+        answer: "Ich lasse mir morgen die Haare schneiden."
+
+  - title: The Perfekt
+    items:
+      - id: perf1
+        type: multiple-choice
+        tags: [Perfekt]
+        prompt: "Ich habe mein Auto reparieren ___."
+        options: [lassen, gelassen]
+        answer: lassen
+      - id: perf2
+        type: multiple-choice
+        tags: [Perfekt]
+        prompt: "Ich habe meinen Schirm im Zug ___."
+        options: [gelassen, lassen]
+        answer: gelassen
+      - id: perf3
+        type: word-order
+        tags: [Perfekt]
+        prompt: I have had my hair cut.
+        answer: "Ich habe mir die Haare schneiden lassen."
+      - id: perf4
+        type: translation
+        tags: [Perfekt]
+        prompt: "I left my glasses in the café. (liegen lassen)"
+        answers:
+          - "Ich habe meine Brille im Café liegen lassen."
+
+  - title: brauchen … zu
+    items:
+      - id: br1
+        type: multiple-choice
+        tags: [brauchen zu]
+        prompt: Which sentence is correct in careful German?
+        options: ["Du brauchst nicht zu kommen.", "Du brauchst zu kommen.", "Du brauchst nicht um kommen."]
+        answer: "Du brauchst nicht zu kommen."
+      - id: br2
+        type: multiple-choice
+        tags: [brauchen zu]
+        prompt: "'Sie brauchen keinen Termin zu machen.' What does it mean?"
+        options: ["You do not need an appointment.", "You must not make an appointment.", "You need an appointment."]
+        answer: "You do not need an appointment."
+      - id: br3
+        type: fill-blank
+        tags: [brauchen zu]
+        prompt: "Du brauchst mich nur ___. (anrufen, with zu)"
+        answers: [anzurufen]
+      - id: br4
+        type: translation
+        tags: [brauchen zu]
+        prompt: "You do not need to pick me up. (use brauchen, du)"
+        answers:
+          - "Du brauchst mich nicht abzuholen."
+
+  - title: Moving in
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [lassen]
+        prompt: Fill in the gaps.
+        bank: [lassen, lässt, gelassen, brauchst, Lass, zu]
+        text: "– Wir ___ die Küche neu machen, sie ist sehr alt. – Und das Bad? – Das ___ mein Vater streichen. – Soll ich am Samstag helfen? – Nein, du ___ nicht ___ kommen. Aber ___ uns danach zusammen essen gehen! – Gern. Oh, ich habe meine Jacke bei euch ___."
+        gaps:
+          - [lassen]
+          - [lässt]
+          - [brauchst]
+          - [zu]
+          - [Lass]
+          - [gelassen]
+
+  - title: At the hairdresser's
+    stimulus:
+      kind: audio
+      label: Beim Friseur
+      lines:
+        - speaker: Friseurin
+          text: "Guten Tag! Was darf es sein?"
+        - speaker: Kundin
+          text: "Ich möchte mir die Haare schneiden lassen, nur fünf Zentimeter. Färben möchte ich sie diesmal nicht."
+        - speaker: Friseurin
+          text: "Gern. Möchten Sie sie auch waschen lassen?"
+        - speaker: Kundin
+          text: "Nein, danke, das brauchen Sie nicht zu machen. Ich habe sie heute Morgen gewaschen."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was lässt die Kundin machen?
+        options: ["Haare schneiden", "Haare färben", "Haare waschen"]
+        answer: "Haare schneiden"
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Die Friseurin soll die Haare waschen.
+        answer: false

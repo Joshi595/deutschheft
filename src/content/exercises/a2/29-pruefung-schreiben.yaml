@@ -1,0 +1,98 @@
+lesson: a2.29
+sets:
+  - title: du or Sie?
+    items:
+      - id: form1
+        type: multiple-choice
+        tags: [register]
+        prompt: "You write to your course teacher, Frau Roth. Which opening fits?"
+        options: ["Liebe Frau Roth,", "Hallo Roth,", "Liebe Roth,"]
+        answer: "Liebe Frau Roth,"
+      - id: form2
+        type: multiple-choice
+        tags: [register]
+        prompt: "Liebe Frau Roth, könnten ___ mir bitte die Hausaufgaben schicken?"
+        options: [Sie, du, ihr]
+        answer: Sie
+      - id: form3
+        type: multiple-choice
+        tags: [register]
+        prompt: "Which closing fits an email to an office you do not know?"
+        options: ["Mit freundlichen Grüßen", "Bis bald!", "Hab dich lieb"]
+        answer: "Mit freundlichen Grüßen"
+      - id: form4
+        type: true-false
+        tags: [register]
+        prompt: "In a message to a friend you can leave out the greeting and your name."
+        answer: false
+
+  - title: Which point is missing?
+    items:
+      - id: miss1
+        type: multiple-choice
+        tags: [content points]
+        prompt: "Task: Write to your friend Ana: thank her for the invitation, say you are coming, ask what you should bring. Text: 'Liebe Ana, danke für die Einladung! Ich komme sehr gern. Bis Samstag! Tom'. Which point is missing?"
+        options: ["what to bring", "the thanks", "that he is coming"]
+        answer: "what to bring"
+      - id: miss2
+        type: multiple-choice
+        tags: [content points]
+        prompt: "Task: Write to your landlord: the heating is broken, since when, ask when someone can come. Text: 'Sehr geehrter Herr Weiß, seit Montag funktioniert die Heizung in meiner Wohnung nicht. Mit freundlichen Grüßen, Lea Braun'. Which point is missing?"
+        options: ["when someone can come", "what is broken", "since when"]
+        answer: "when someone can come"
+
+  - title: Teil 1 – a text message
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, exam]
+        prompt: "Sie sind krank und können heute nicht mit Ihrer Freundin Nora ins Kino gehen. Schreiben Sie Nora eine SMS: Entschuldigen Sie sich. Schreiben Sie, warum Sie nicht kommen können. Machen Sie einen neuen Vorschlag."
+        points:
+          - Entschuldigung
+          - Grund
+          - neuer Vorschlag
+        minWords: 20
+        phrases:
+          - Liebe Nora, es tut mir leid, …
+          - Ich bin krank / Ich habe Fieber, deshalb …
+          - Können wir … am … gehen?
+        sample: "Liebe Nora, es tut mir sehr leid, aber ich kann heute nicht ins Kino kommen. Ich habe Fieber und bleibe im Bett. Können wir nächsten Samstag gehen? Liebe Grüße, Eva"
+      - id: write2
+        type: writing-task
+        tags: [writing, exam]
+        prompt: "Ihr Freund Jonas hat nächste Woche Geburtstag und macht eine Party. Sie kommen gern. Schreiben Sie Jonas eine SMS: Bedanken Sie sich. Sagen Sie, dass Sie kommen. Fragen Sie, was Sie mitbringen sollen."
+        points:
+          - Dank für die Einladung
+          - Sie kommen
+          - Was mitbringen?
+        minWords: 20
+        sample: "Hallo Jonas, danke für die Einladung zu deiner Party! Ich komme sehr gern. Soll ich etwas mitbringen, zum Beispiel einen Salat oder Getränke? Bis Samstag! Viele Grüße, Leo"
+
+  - title: Teil 2 – an email with Sie
+    items:
+      - id: write3
+        type: writing-task
+        tags: [writing, exam, formal]
+        prompt: "Ihre Kursleiterin, Frau Schäfer, macht am Freitag einen Ausflug mit dem Kurs ins Museum. Sie können nicht mitkommen. Schreiben Sie Frau Schäfer eine E-Mail: Bedanken Sie sich für die Einladung. Schreiben Sie, warum Sie nicht kommen können. Fragen Sie nach einem anderen Termin."
+        points:
+          - Dank
+          - Grund, warum Sie nicht kommen
+          - Frage nach einem anderen Termin
+        minWords: 30
+        phrases:
+          - Liebe Frau Schäfer,
+          - vielen Dank für die Einladung zum …
+          - Leider kann ich nicht mitkommen, weil …
+          - Gibt es vielleicht noch einen anderen Termin?
+          - Viele Grüße
+        sample: "Liebe Frau Schäfer, vielen Dank für die Einladung zum Museumsausflug. Leider kann ich am Freitag nicht mitkommen, weil ich bis 17 Uhr arbeiten muss. Gibt es vielleicht noch einen anderen Termin, zum Beispiel am Samstag? Ich würde sehr gern mitkommen. Viele Grüße, Ivana Horvat"
+      - id: write4
+        type: writing-task
+        tags: [writing, exam, formal]
+        prompt: "Sie möchten bei Ihrer Nachbarin, Frau Lang, ein Paket für Sie annehmen lassen, weil Sie morgen nicht zu Hause sind. Schreiben Sie ihr eine Nachricht: Bitten Sie sie um Hilfe. Erklären Sie, warum Sie nicht da sind. Schreiben Sie, wann Sie das Paket abholen."
+        points:
+          - Bitte um Hilfe
+          - Grund
+          - Wann Sie das Paket abholen
+        minWords: 30
+        sample: "Liebe Frau Lang, ich habe eine Bitte: Könnten Sie morgen ein Paket für mich annehmen? Ich bin den ganzen Tag nicht zu Hause, denn ich habe eine Prüfung in Köln. Ich hole das Paket am Abend um acht Uhr bei Ihnen ab. Vielen Dank! Viele Grüße, Daniel Weber"

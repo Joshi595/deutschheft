@@ -1,0 +1,112 @@
+lesson: a2.14
+items:
+  - id: neu
+    de: neu
+    en: new
+    pos: adjective
+    example: Das ist ein neues Handy.
+    exampleEn: That is a new phone.
+  - id: alt
+    de: alt
+    en: old
+    pos: adjective
+    example: Der alte Schrank ist sehr schön.
+    exampleEn: The old wardrobe is very nice.
+  - id: gross
+    de: groß
+    en: big, tall
+    pos: adjective
+    example: Wir haben einen großen Garten.
+    exampleEn: We have a big garden.
+  - id: klein
+    de: klein
+    en: small
+    pos: adjective
+    example: Die kleine Küche ist praktisch.
+    exampleEn: The small kitchen is practical.
+  - id: teuer
+    de: teuer
+    en: expensive
+    pos: adjective
+    example: Das ist ein teures Restaurant.
+    exampleEn: That is an expensive restaurant.
+  - id: guenstig
+    de: günstig
+    en: good value, cheap
+    pos: adjective
+    example: Hier gibt es günstige Wohnungen.
+    exampleEn: There are affordable flats here.
+  - id: hell
+    de: hell
+    en: light, bright
+    pos: adjective
+    example: Das Zimmer ist hell und ruhig.
+    exampleEn: The room is light and quiet.
+  - id: dunkel
+    de: dunkel
+    en: dark
+    pos: adjective
+    example: Das ist ein dunkler Raum.
+    exampleEn: That is a dark room.
+  - id: ruhig
+    de: ruhig
+    en: quiet, calm
+    pos: adjective
+    example: Wir suchen eine ruhige Wohnung.
+    exampleEn: We are looking for a quiet flat.
+  - id: laut
+    de: laut
+    en: loud, noisy
+    pos: adjective
+    example: Die Straße ist sehr laut.
+    exampleEn: The street is very noisy.
+  - id: modern
+    de: modern
+    en: modern
+    pos: adjective
+    example: Das ist ein modernes Gebäude.
+    exampleEn: That is a modern building.
+  - id: bequem
+    de: bequem
+    en: comfortable
+    pos: adjective
+    example: Das neue Sofa ist sehr bequem.
+    exampleEn: The new sofa is very comfortable.
+  - id: frisch
+    de: frisch
+    en: fresh
+    pos: adjective
+    example: Frisches Brot schmeckt am besten.
+    exampleEn: Fresh bread tastes best.
+  - id: kaputt
+    de: kaputt
+    en: broken
+    pos: adjective
+    example: Die Waschmaschine ist kaputt.
+    exampleEn: The washing machine is broken.
+  - id: schmutzig
+    de: schmutzig
+    en: dirty
+    pos: adjective
+    example: Die Fenster sind schmutzig.
+    exampleEn: The windows are dirty.
+  - id: sauber
+    de: sauber
+    en: clean
+    pos: adjective
+    example: Das Hotelzimmer war sehr sauber.
+    exampleEn: The hotel room was very clean.
+  - id: praktisch
+    de: praktisch
+    en: practical
+    pos: adjective
+    example: Das ist eine praktische Tasche.
+    exampleEn: That is a practical bag.
+  - id: wohnung
+    de: Wohnung
+    en: flat, apartment
+    pos: noun
+    article: die
+    plural: Wohnungen
+    example: Die neue Wohnung hat einen Balkon.
+    exampleEn: The new flat has a balcony.

@@ -1,0 +1,123 @@
+lesson: b1.25
+items:
+  - id: girokonto
+    de: Girokonto
+    en: current account
+    pos: noun
+    article: das
+    plural: Girokonten
+    example: Für das Girokonto zahle ich keine Gebühren.
+    exampleEn: I pay no fees for my current account.
+  - id: gebuehr
+    de: Gebühr
+    en: fee, charge
+    pos: noun
+    article: die
+    plural: Gebühren
+    example: Die Gebühr beträgt fünf Euro im Monat.
+    exampleEn: The fee is five euros a month.
+  - id: zinsen
+    de: Zinsen
+    en: interest
+    pos: phrase
+    example: Auf dem Sparkonto bekommt man kaum Zinsen.
+    exampleEn: You hardly get any interest on the savings account.
+  - id: kredit
+    de: Kredit
+    en: loan
+    pos: noun
+    article: der
+    plural: Kredite
+    example: Für die Wohnung haben wir einen Kredit aufgenommen.
+    exampleEn: We took out a loan for the flat.
+  - id: schulden
+    de: Schulden
+    en: debts
+    pos: phrase
+    example: Er hat viele Schulden.
+    exampleEn: He has a lot of debts.
+  - id: vertrag
+    de: Vertrag
+    en: contract
+    pos: noun
+    article: der
+    plural: Verträge
+    example: Ich habe einen neuen Handyvertrag abgeschlossen.
+    exampleEn: I have signed a new phone contract.
+  - id: kuendigung
+    de: Kündigung
+    en: cancellation, notice
+    pos: noun
+    article: die
+    plural: Kündigungen
+    example: Die Kündigung muss schriftlich sein.
+    exampleEn: The cancellation must be in writing.
+  - id: laufzeit
+    de: Laufzeit
+    en: term (of a contract)
+    pos: noun
+    article: die
+    plural: Laufzeiten
+    example: Der Vertrag hat eine Laufzeit von einem Jahr.
+    exampleEn: The contract has a term of one year.
+  - id: bestellung
+    de: Bestellung
+    en: order
+    pos: noun
+    article: die
+    plural: Bestellungen
+    example: Meine Bestellung ist noch nicht angekommen.
+    exampleEn: My order has not arrived yet.
+  - id: erstatten
+    de: erstatten
+    en: to refund
+    pos: verb
+    example: Bitte erstatten Sie mir den Kaufpreis.
+    exampleEn: Please refund the purchase price.
+  - id: reklamation
+    de: Reklamation
+    en: complaint (about a product)
+    pos: noun
+    article: die
+    plural: Reklamationen
+    example: Ich möchte eine Reklamation machen.
+    exampleEn: I would like to make a complaint.
+  - id: feststellen
+    de: feststellen
+    en: to discover, to notice
+    pos: verb
+    example: Leider musste ich feststellen, dass das Gerät kaputt ist.
+    exampleEn: Unfortunately I found that the device is broken.
+  - id: werbung
+    de: Werbung
+    en: advertising
+    pos: noun
+    article: die
+    example: Im Fernsehen gibt es zu viel Werbung.
+    exampleEn: There is too much advertising on television.
+  - id: marke
+    de: Marke
+    en: brand
+    pos: noun
+    article: die
+    plural: Marken
+    example: Teure Marken sind nicht immer besser.
+    exampleEn: Expensive brands are not always better.
+  - id: sich-leisten
+    de: sich etwas leisten
+    en: to afford something
+    pos: verb
+    example: Das kann ich mir nicht leisten.
+    exampleEn: I cannot afford that.
+  - id: gebraucht
+    de: gebraucht
+    en: used, second-hand
+    pos: adjective
+    example: Ich habe ein gebrauchtes Fahrrad gekauft.
+    exampleEn: I bought a second-hand bike.
+  - id: im-angebot
+    de: im Angebot
+    en: on special offer
+    pos: phrase
+    example: Die Jacke war im Angebot.
+    exampleEn: The jacket was on special offer.

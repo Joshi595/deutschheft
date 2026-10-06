@@ -1,0 +1,95 @@
+lesson: b1.31
+sets:
+  - title: Which task?
+    items:
+      - id: task1
+        type: multiple-choice
+        tags: [register]
+        prompt: "Which opening fits Teil 3 (formal message)?"
+        options: ["Sehr geehrte Frau Neumann,", "Hallo Frau Neumann!", "Liebe Anna,"]
+        answer: "Sehr geehrte Frau Neumann,"
+      - id: task2
+        type: multiple-choice
+        tags: [structure]
+        prompt: "A good first sentence for the opinion post (Teil 2) is …"
+        options: ["Paul meint, dass Kinder kein Smartphone haben sollten. Ich sehe das anders.", "Liebe Grüße, Maria", "Sehr geehrte Damen und Herren,"]
+        answer: "Paul meint, dass Kinder kein Smartphone haben sollten. Ich sehe das anders."
+      - id: task3
+        type: true-false
+        tags: [length]
+        prompt: "The formal message in Teil 3 should be about 80 words."
+        answer: false
+        explanation: About 40 words.
+
+  - title: "Teil 1: informal email"
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, informal, exam]
+        prompt: "Sie haben letzte Woche eine neue Wohnung bezogen. Schreiben Sie Ihrer Freundin Clara: Beschreiben Sie die Wohnung. Begründen Sie, warum Sie umgezogen sind. Machen Sie einen Vorschlag für ein Treffen."
+        points:
+          - die Wohnung beschreiben
+          - Grund für den Umzug
+          - Vorschlag für ein Treffen
+        minWords: 70
+        phrases:
+          - Liebe Clara, wie geht es dir?
+          - Stell dir vor, ich bin umgezogen!
+          - Die Wohnung ist … und hat …
+          - Ich bin umgezogen, weil …
+          - Hast du Lust, mich am … zu besuchen?
+          - Liebe Grüße
+        sample: "Liebe Clara, wie geht es dir? Stell dir vor, ich bin letzte Woche endlich umgezogen! Die neue Wohnung ist hell und ruhig und hat zwei Zimmer und einen kleinen Balkon, auf dem ich morgens frühstücke. Ich bin umgezogen, weil meine alte Wohnung zu weit von meiner Arbeit entfernt war. Jetzt brauche ich nur zehn Minuten mit dem Fahrrad. Hast du Lust, mich nächsten Samstag zu besuchen? Dann koche ich etwas für uns. Ich freue mich auf deine Antwort! Liebe Grüße, Mira"
+
+  - title: "Teil 2: opinion post"
+    items:
+      - id: write2
+        type: writing-task
+        tags: [writing, opinion, exam]
+        prompt: "Im Online-Gästebuch einer Radiosendung zum Thema 'Leben in der Großstadt' schreibt Sebastian: 'Ich würde nie in einer Großstadt wohnen. Zu laut, zu teuer, zu stressig.' Schreiben Sie Ihre Meinung."
+        points:
+          - auf Sebastians Aussage reagieren
+          - eigene Meinung mit Grund
+          - Beispiel oder eigene Erfahrung
+          - Gegenargument und Schluss
+        minWords: 70
+        phrases:
+          - Sebastian schreibt, dass … Ich sehe das …
+          - Meiner Meinung nach …, weil …
+          - Ich selbst …
+          - Zwar …, aber …
+          - Deshalb finde ich …
+        sample: "Sebastian schreibt, dass er nie in einer Großstadt wohnen würde. Ich sehe das ein bisschen anders. Meiner Meinung nach hat das Leben in der Stadt viele Vorteile, weil man alles in der Nähe hat: Arbeit, Kultur, Ärzte und Geschäfte. Ich selbst wohne seit drei Jahren in Hamburg und brauche kein Auto. Zwar sind die Mieten sehr hoch und es ist oft laut, aber dafür wird es nie langweilig. Deshalb finde ich, dass die Großstadt besonders für junge Leute die richtige Wahl ist."
+
+  - title: "Teil 3: formal message"
+    items:
+      - id: write3
+        type: writing-task
+        tags: [writing, formal, exam]
+        prompt: "Sie haben am Montag einen Termin bei Ihrem Vermieter, Herrn Lorenz, zur Wohnungsübergabe. Sie können nicht kommen. Schreiben Sie Herrn Lorenz: Entschuldigen Sie sich, nennen Sie den Grund und schlagen Sie einen neuen Termin vor."
+        points:
+          - Entschuldigung
+          - Grund
+          - neuer Terminvorschlag
+        minWords: 35
+        phrases:
+          - Sehr geehrter Herr Lorenz,
+          - leider kann ich am Montag nicht kommen, da …
+          - Wäre es möglich, …?
+          - Mit freundlichen Grüßen
+        sample: "Sehr geehrter Herr Lorenz, leider kann ich den Termin am Montag nicht wahrnehmen, da ich kurzfristig eine Dienstreise nach München machen muss. Es tut mir sehr leid. Wäre es möglich, die Wohnungsübergabe auf Mittwoch um 17 Uhr zu verschieben? Mit freundlichen Grüßen, Jonas Weber"
+
+  - title: Check the text
+    items:
+      - id: check1
+        type: multiple-choice
+        tags: [checking]
+        prompt: "'Sehr geehrter Herr Lorenz, kannst du mir bitte antworten? Liebe Grüße' – what is wrong?"
+        options: ["du and the closing do not fit the formal opening", "nothing", "the opening is too informal"]
+        answer: "du and the closing do not fit the formal opening"
+      - id: check2
+        type: multiple-choice
+        tags: [checking]
+        prompt: "'Ich bin umgezogen, weil die alte Wohnung war zu klein.' – what is wrong?"
+        options: ["The verb must go to the end after weil.", "weil must be denn.", "nothing"]
+        answer: "The verb must go to the end after weil."

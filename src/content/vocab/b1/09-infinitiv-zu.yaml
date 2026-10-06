@@ -1,0 +1,106 @@
+lesson: b1.09
+items:
+  - id: versuchen
+    de: versuchen
+    en: to try
+    pos: verb
+    example: Ich versuche, jeden Tag zu lernen.
+    exampleEn: I try to study every day.
+  - id: vergessen-b1
+    de: vergessen
+    en: to forget
+    pos: verb
+    example: Vergiss nicht, die Tür abzuschließen!
+    exampleEn: Do not forget to lock the door!
+  - id: vorhaben-b1
+    de: vorhaben
+    en: to plan, to intend
+    pos: verb
+    example: Wir haben vor, im Sommer zu heiraten.
+    exampleEn: We are planning to get married in the summer.
+  - id: hoffen
+    de: hoffen
+    en: to hope
+    pos: verb
+    example: Ich hoffe, dich bald wiederzusehen.
+    exampleEn: I hope to see you again soon.
+  - id: verbieten
+    de: verbieten
+    en: to forbid
+    pos: verb
+    example: Es ist verboten, hier zu parken.
+    exampleEn: It is forbidden to park here.
+  - id: um-zu
+    de: um … zu
+    en: in order to
+    pos: conjunction
+    example: Ich spare, um ein Auto zu kaufen.
+    exampleEn: I am saving to buy a car.
+  - id: damit
+    de: damit
+    en: so that
+    pos: conjunction
+    example: Ich erkläre es noch einmal, damit alle es verstehen.
+    exampleEn: I will explain it again so that everyone understands.
+  - id: ohne-zu
+    de: ohne … zu
+    en: without (…-ing)
+    pos: conjunction
+    example: Er ist gegangen, ohne etwas zu sagen.
+    exampleEn: He left without saying anything.
+  - id: statt-zu
+    de: statt … zu
+    en: instead of (…-ing)
+    pos: conjunction
+    example: Statt zu arbeiten, spielt er am Handy.
+    exampleEn: Instead of working, he plays on his phone.
+  - id: wozu
+    de: wozu?
+    en: what for?
+    pos: adverb
+    example: Wozu brauchst du so viel Geld?
+    exampleEn: What do you need so much money for?
+  - id: sparen
+    de: sparen
+    en: to save (money)
+    pos: verb
+    example: Wir sparen für eine Reise.
+    exampleEn: We are saving for a trip.
+  - id: moeglichkeit
+    de: Möglichkeit
+    en: possibility, chance
+    pos: noun
+    article: die
+    plural: Möglichkeiten
+    example: Ich hatte nie die Möglichkeit, zu studieren.
+    exampleEn: I never had the chance to study.
+  - id: unterschreiben
+    de: unterschreiben
+    en: to sign
+    pos: verb
+    example: Unterschreiben Sie bitte hier.
+    exampleEn: Please sign here.
+  - id: sport-treiben
+    de: Sport treiben
+    en: to do sport
+    pos: phrase
+    example: Es ist gesund, regelmäßig Sport zu treiben.
+    exampleEn: It is healthy to do sport regularly.
+  - id: abschliessen
+    de: abschließen
+    en: to lock; to complete
+    pos: verb
+    example: Hast du daran gedacht, die Tür abzuschließen?
+    exampleEn: Did you remember to lock the door?
+  - id: sich-entschliessen
+    de: sich entschließen
+    en: to decide
+    pos: verb
+    example: Sie hat sich entschlossen, nach Kanada zu ziehen.
+    exampleEn: She has decided to move to Canada.
+  - id: es-lohnt-sich
+    de: es lohnt sich
+    en: it is worth it
+    pos: phrase
+    example: Es lohnt sich, früh zu buchen.
+    exampleEn: It is worth booking early.

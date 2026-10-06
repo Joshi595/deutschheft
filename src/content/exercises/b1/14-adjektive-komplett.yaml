@@ -1,0 +1,141 @@
+lesson: b1.14
+sets:
+  - title: All cases
+    instructions: Write the adjective with its ending.
+    items:
+      - id: all1
+        type: fill-blank
+        tags: [endings]
+        prompt: "Wir haben den ___ Schrank verkauft. (alt)"
+        answers: [alten]
+      - id: all2
+        type: fill-blank
+        tags: [endings]
+        prompt: "Ich wohne in einem ___ Haus. (alt)"
+        answers: [alten]
+      - id: all3
+        type: fill-blank
+        tags: [endings]
+        prompt: "Das ist ein ___ Punkt. (wichtig)"
+        answers: [wichtiger]
+      - id: all4
+        type: fill-blank
+        tags: [endings]
+        prompt: "Die Mieter des ___ Hauses sind zufrieden. (neu)"
+        answers: [neuen]
+      - id: all5
+        type: fill-blank
+        tags: [endings]
+        prompt: "Wir suchen Mitarbeiter mit ___ Deutschkenntnissen. (gut)"
+        answers: [guten]
+      - id: all6
+        type: fill-blank
+        tags: [endings]
+        prompt: "Ich trinke gern ___ Wein. (rot)"
+        answers: [roten]
+      - id: all7
+        type: multiple-choice
+        tags: [endings]
+        prompt: "___ Leute ziehen in die Stadt."
+        options: [Viele junge, Viele jungen, Viele junger]
+        answer: Viele junge
+      - id: all8
+        type: multiple-choice
+        tags: [endings]
+        prompt: "___ Leute ziehen in die Stadt."
+        options: [Alle jungen, Alle junge, Alle junger]
+        answer: Alle jungen
+
+  - title: Adjectives as nouns
+    items:
+      - id: nom1
+        type: multiple-choice
+        tags: [nominalised]
+        prompt: "Mein Nachbar ist ein ___."
+        options: [Deutscher, Deutsche, Deutschen]
+        answer: Deutscher
+      - id: nom2
+        type: multiple-choice
+        tags: [nominalised]
+        prompt: "Ich habe mit dem ___ gesprochen."
+        options: [Angestellten, Angestellte, Angestellter]
+        answer: Angestellten
+      - id: nom3
+        type: multiple-choice
+        tags: [nominalised]
+        prompt: "Gibt es etwas ___?"
+        options: [Neues, neues, Neue]
+        answer: Neues
+      - id: nom4
+        type: fill-blank
+        tags: [nominalised]
+        prompt: "Heute ist nichts ___ passiert. (besonders)"
+        answers: [Besonderes]
+      - id: nom5
+        type: fill-blank
+        tags: [nominalised]
+        prompt: "Das ___ am Urlaub war das Essen. (best-)"
+        answers: [Beste]
+      - id: nom6
+        type: fill-blank
+        tags: [nominalised]
+        prompt: "Der Eintritt ist für ___ frei. (jugendlich, plural, no article)"
+        answers: [Jugendliche]
+
+  - title: Participles
+    items:
+      - id: part1
+        type: multiple-choice
+        tags: [participles]
+        prompt: "Wegen der ___ Preise kaufen viele weniger. (rising)"
+        options: [steigenden, gestiegene, steigende]
+        answer: steigenden
+      - id: part2
+        type: multiple-choice
+        tags: [participles]
+        prompt: "Das ___ Auto steht vor der Tür. (repaired)"
+        options: [reparierte, reparierende, repariertes]
+        answer: reparierte
+      - id: part3
+        type: fill-blank
+        tags: [participles]
+        prompt: "Bitte schicken Sie uns das ___ Formular. (ausgefüllt)"
+        answers: [ausgefüllte]
+      - id: part4
+        type: translation
+        tags: [participles]
+        prompt: the laughing child
+        answers:
+          - "das lachende Kind"
+
+  - title: A job advert
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [endings]
+        prompt: Fill in the endings.
+        text: "Wir suchen ab sofort einen freundlich___ Verkäufer (m/w/d) für unser neu___ Geschäft in der Innenstadt. Sie haben gut___ Englischkenntnisse und Erfahrung mit schwierig___ Kunden. Wir bieten Ihnen ein jung___ Team und ein fair___ Gehalt."
+        gaps:
+          - [en]
+          - [es]
+          - [e]
+          - [en]
+          - [es]
+          - [es]
+
+  - title: Describe someone
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, adjectives]
+        prompt: Describe a person you admire, with as many adjectives before nouns as you can, in different cases.
+        cards: [Aussehen, Charakter, Beruf, Was hat er / sie gemacht?]
+        phrases:
+          - Er / Sie ist ein … Mensch mit … Haaren.
+          - Sie hat einen … Charakter.
+          - Das Beste an ihm / ihr ist …
+        checklist:
+          - I used at least five adjectives before nouns
+          - I used them in at least three different cases
+          - I used one adjective as a noun (das Beste, etwas Besonderes)
+        sample: "Ich bewundere meine Tante Sofia. Sie ist eine kleine Frau mit kurzen grauen Haaren und einem lauten Lachen. Sie hat einen starken Charakter und ein großes Herz. Als junge Krankenschwester hat sie in einem armen Land gearbeitet. Das Beste an ihr ist, dass sie immer etwas Positives sieht."

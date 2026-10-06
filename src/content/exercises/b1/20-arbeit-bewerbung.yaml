@@ -1,0 +1,180 @@
+lesson: b1.20
+sets:
+  - title: Job advert words
+    items:
+      - id: ad1
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: Berufserfahrung, right: work experience }
+          - { left: unbefristeter Vertrag, right: permanent contract }
+          - { left: zuverlässig, right: reliable }
+          - { left: Vorstellungsgespräch, right: job interview }
+          - { left: Anschreiben, right: cover letter }
+          - { left: Einarbeitung, right: induction }
+      - id: ad2
+        type: multiple-choice
+        tags: [vocabulary]
+        prompt: "What does '(m/w/d)' in a job advert mean?"
+        options: ["any gender", "Monday to Wednesday", "with a German degree"]
+        answer: "any gender"
+      - id: ad3
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Ich bin ___ und arbeite gern mit anderen zusammen. (good at teamwork)"
+        answers: [teamfähig]
+
+  - title: The letter
+    items:
+      - id: let1
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Ich bewerbe mich ___ die Stelle als Verkäuferin."
+        options: [um, für, an]
+        answer: um
+      - id: let2
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Ich bin ___ die Betreuung der Kunden verantwortlich."
+        options: [für, um, über]
+        answer: für
+      - id: let3
+        type: multiple-choice
+        tags: [polite]
+        prompt: "Über eine Einladung zu einem Vorstellungsgespräch ___ ich mich sehr freuen."
+        options: [würde, werde, wurde]
+        answer: würde
+      - id: let4
+        type: word-order
+        tags: [letter]
+        prompt: I have been working as a cook for five years.
+        answer: "Ich arbeite seit fünf Jahren als Koch."
+
+  - title: The CV
+    items:
+      - id: cv1
+        type: multiple-choice
+        tags: [CV]
+        prompt: "Under which heading do you write 'Deutsch (B1), Englisch (fließend)'?"
+        options: [Sprachkenntnisse, Berufserfahrung, Persönliche Daten]
+        answer: Sprachkenntnisse
+      - id: cv2
+        type: multiple-choice
+        tags: [CV]
+        prompt: "In a German CV, which job usually comes first?"
+        options: ["the newest", "the oldest", "the best paid"]
+        answer: "the newest"
+      - id: cv3
+        type: multiple-choice
+        tags: [CV]
+        prompt: "What are 'Zeugnisse'?"
+        options: ["certificates and references", "photos", "hobbies"]
+        answer: "certificates and references"
+
+  - title: The interview
+    items:
+      - id: int1
+        type: matching
+        tags: [interview]
+        prompt: Match the question with a good answer.
+        pairs:
+          - { left: Was sind Ihre Stärken?, right: Ich bin zuverlässig und flexibel. }
+          - { left: Warum möchten Sie bei uns arbeiten?, right: Ihre Firma ist bekannt für gute Produkte. }
+          - { left: Wo sehen Sie sich in fünf Jahren?, right: Ich würde gern ein Team leiten. }
+          - { left: Haben Sie noch Fragen?, right: Wie sieht die Einarbeitung aus? }
+      - id: int2
+        type: translation
+        tags: [interview]
+        prompt: Could you tell me what the induction looks like?
+        answers:
+          - "Könnten Sie mir sagen, wie die Einarbeitung aussieht?"
+      - id: int3
+        type: translation
+        tags: [interview]
+        prompt: Is there a possibility of further training?
+        answers:
+          - "Gibt es die Möglichkeit, Weiterbildungen zu machen?"
+          - "Gibt es die Möglichkeit einer Weiterbildung?"
+      - id: int4
+        type: true-false
+        tags: [interview]
+        prompt: "In a German interview it is a good idea to ask your own questions at the end."
+        answer: true
+
+  - title: A cover letter
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [letter]
+        prompt: Complete the cover letter.
+        bank: [geehrte, bewerbe, Erfahrung, verantwortlich, zuverlässig, würde, freundlichen]
+        text: "Sehr ___ Frau Lorenz, mit großem Interesse habe ich Ihre Anzeige gelesen und ___ mich um die Stelle als Bürokauffrau. Ich habe drei Jahre ___ in der Verwaltung. Zurzeit bin ich für die Buchhaltung ___. Ich bin ___ und arbeite gern im Team. Über eine Einladung zu einem Vorstellungsgespräch ___ ich mich sehr freuen. Mit ___ Grüßen, Elena Sánchez"
+        gaps:
+          - [geehrte]
+          - [bewerbe]
+          - [Erfahrung]
+          - [verantwortlich]
+          - [zuverlässig]
+          - [würde]
+          - [freundlichen]
+
+  - title: An advert
+    stimulus:
+      kind: text
+      label: Stellenanzeige
+      text: "Das Hotel Seeblick am Chiemsee sucht ab 1. April eine Rezeptionistin / einen Rezeptionisten (m/w/d) in Vollzeit. Ihre Aufgaben: Check-in und Check-out der Gäste, Beantwortung von Anfragen per Telefon und E-Mail, Reservierungen. Ihr Profil: abgeschlossene Ausbildung im Hotelbereich, gute Deutsch- und Englischkenntnisse, Bereitschaft zur Arbeit am Wochenende. Wir bieten: einen unbefristeten Vertrag, Unterkunft im Personalhaus, kostenloses Essen im Dienst. Bitte senden Sie Ihre Bewerbung an personal@seeblick.de."
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading]
+        prompt: Die Stelle ist eine Teilzeitstelle.
+        answer: false
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: Man muss auch am Wochenende arbeiten.
+        answer: true
+      - id: read3
+        type: multiple-choice
+        tags: [reading]
+        prompt: Was bietet das Hotel?
+        options: ["einen unbefristeten Vertrag und eine Unterkunft", "ein hohes Gehalt und ein Auto", "freie Wochenenden"]
+        answer: "einen unbefristeten Vertrag und eine Unterkunft"
+
+  - title: Apply
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, formal]
+        prompt: "Write a short application email for the hotel job above (or a job of your choice)."
+        points:
+          - Which job and where you read the advert
+          - Your experience and training
+          - Why you are suitable
+          - A polite closing asking for an interview
+        minWords: 80
+        phrases:
+          - Sehr geehrte Damen und Herren,
+          - mit großem Interesse habe ich Ihre Anzeige gelesen …
+          - Ich habe … Jahre Erfahrung als …
+          - Zu meinen Stärken gehört …
+          - Über eine Einladung … würde ich mich freuen.
+          - Mit freundlichen Grüßen
+        sample: "Sehr geehrte Damen und Herren, mit großem Interesse habe ich Ihre Anzeige im Internet gelesen und bewerbe mich hiermit um die Stelle an der Rezeption. Ich habe eine Ausbildung zur Hotelfachfrau gemacht und arbeite seit drei Jahren in einem Hotel in Salzburg, wo ich für den Check-in und die Reservierungen verantwortlich bin. Ich spreche Deutsch, Englisch und Spanisch. Zu meinen Stärken gehört, dass ich freundlich und zuverlässig bin. Die Arbeit am Wochenende ist für mich kein Problem. Über eine Einladung zu einem Vorstellungsgespräch würde ich mich sehr freuen. Mit freundlichen Grüßen, María López"
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, interview]
+        prompt: "Answer the interview questions on the cards as if you were applying for your dream job."
+        cards: [Erzählen Sie etwas über sich., Was sind Ihre Stärken und Schwächen?, Warum möchten Sie diese Stelle?, Wo sehen Sie sich in fünf Jahren?]
+        phrases:
+          - Ich heiße … und arbeite zurzeit als …
+          - Zu meinen Stärken gehört, dass …
+          - Eine Schwäche von mir ist …, aber …
+          - In fünf Jahren würde ich gern …
+        checklist:
+          - I answered all four questions
+          - I used formal language (Sie)
+          - I gave at least one example for a strength
+          - I used the Konjunktiv II for my plans
+        sample: "Ich heiße Daniel, bin 31 Jahre alt und arbeite zurzeit als Grafiker in einer kleinen Agentur. Zu meinen Stärken gehört, dass ich kreativ und genau bin. Zum Beispiel habe ich letztes Jahr ein ganzes Logo-Projekt allein geleitet. Eine Schwäche von mir ist, dass ich manchmal zu lange an Details arbeite, aber ich lerne, Prioritäten zu setzen. Ich möchte diese Stelle, weil Ihre Firma für ihr Design bekannt ist. In fünf Jahren würde ich gern ein kleines Team leiten."

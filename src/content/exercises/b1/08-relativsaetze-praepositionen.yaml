@@ -1,0 +1,178 @@
+lesson: b1.08
+sets:
+  - title: Preposition + pronoun
+    items:
+      - id: prep1
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Das ist der Kollege, ___ ich das Projekt mache."
+        options: [mit dem, mit den, den mit]
+        answer: mit dem
+      - id: prep2
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Die Stadt, ___ ich aufgewachsen bin, ist klein."
+        options: [in der, in die, die in]
+        answer: in der
+      - id: prep3
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Die Firma, ___ ich arbeite, hat 200 Mitarbeiter."
+        options: [für die, für der, bei die]
+        answer: für die
+      - id: prep4
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Die Freunde, ___ ich warte, kommen immer zu spät."
+        options: [auf die, auf denen, für die]
+        answer: auf die
+      - id: prep5
+        type: fill-blank
+        tags: [prepositions]
+        prompt: "Das ist das Thema, über ___ wir gesprochen haben."
+        answers: [das]
+      - id: prep6
+        type: fill-blank
+        tags: [prepositions]
+        prompt: "Sie ist eine Freundin, auf ___ ich mich verlassen kann."
+        answers: [die]
+      - id: prep7
+        type: fill-blank
+        tags: [prepositions]
+        prompt: "Der Mann, von ___ ich das Fahrrad gekauft habe, wohnt nebenan."
+        answers: [dem]
+
+  - title: wo, was or a pronoun?
+    items:
+      - id: ww1
+        type: multiple-choice
+        tags: [was]
+        prompt: "Das ist alles, ___ ich weiß."
+        options: [was, das, wo]
+        answer: was
+      - id: ww2
+        type: multiple-choice
+        tags: [wo]
+        prompt: "Ich fahre nach Hamburg, ___ meine Schwester wohnt."
+        options: [wo, in der, was]
+        answer: wo
+      - id: ww3
+        type: multiple-choice
+        tags: [was]
+        prompt: "Der Zug war pünktlich, ___ nicht oft passiert."
+        options: [was, der, das]
+        answer: was
+      - id: ww4
+        type: multiple-choice
+        tags: [was]
+        prompt: "Es gibt nichts, ___ ich lieber mache."
+        options: [was, das, wo]
+        answer: was
+      - id: ww5
+        type: multiple-choice
+        tags: [was]
+        prompt: "Das ist das Beste, ___ ich je gegessen habe."
+        options: [was, das, den]
+        answer: was
+      - id: ww6
+        type: multiple-choice
+        tags: [wo(r) + preposition]
+        prompt: "Er hat mir geholfen, ___ ich ihm dankbar bin."
+        options: [wofür, was, für den]
+        answer: wofür
+      - id: ww7
+        type: multiple-choice
+        tags: [wer]
+        prompt: "___ Fragen hat, kann mich jederzeit anrufen."
+        options: [Wer, Der, Was]
+        answer: Wer
+
+  - title: Join the sentences
+    items:
+      - id: join1
+        type: translation
+        tags: [prepositions]
+        prompt: "Das ist mein Freund. Ich reise oft mit ihm."
+        answers:
+          - "Das ist mein Freund, mit dem ich oft reise."
+      - id: join2
+        type: translation
+        tags: [prepositions]
+        prompt: "Der Urlaub beginnt morgen. Ich freue mich schon lange auf den Urlaub."
+        answers:
+          - "Der Urlaub, auf den ich mich schon lange freue, beginnt morgen."
+      - id: join3
+        type: word-order
+        tags: [wo]
+        prompt: That is the café where we met.
+        answer: "Das ist das Café, wo wir uns kennengelernt haben."
+      - id: join4
+        type: word-order
+        tags: [was]
+        prompt: What you said is not true.
+        answer: "Das, was du gesagt hast, stimmt nicht."
+
+  - title: My town
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [mixed]
+        prompt: Fill in the gaps.
+        bank: [wo, was, in der, mit dem, auf den, über die]
+        text: "Ich komme aus Linz, ___ ich auch studiert habe. Die Straße, ___ ich gewohnt habe, lag direkt an der Donau. Mein bester Freund, ___ ich jeden Tag Fußball gespielt habe, wohnt immer noch dort. Das Fest, ___ ich mich jedes Jahr am meisten freue, ist das Stadtfest im Sommer. Und das ist alles, ___ ich über meine Heimat erzählen kann – außer den Leuten, ___ ich ein ganzes Buch schreiben könnte."
+        gaps:
+          - [wo]
+          - [in der]
+          - [mit dem]
+          - [auf den]
+          - [was]
+          - [über die]
+
+  - title: A friend to rely on
+    stimulus:
+      kind: audio
+      label: Beste Freundinnen
+      lines:
+        - speaker: Moderator
+          text: "Frau Berg, Sie haben ein Buch über Freundschaft geschrieben. Was ist für Sie eine gute Freundin?"
+        - speaker: Frau Berg
+          text: "Eine Freundin ist jemand, auf den man sich verlassen kann. Jemand, mit dem man lachen, aber auch weinen kann."
+        - speaker: Moderator
+          text: "Und Ihre beste Freundin?"
+        - speaker: Frau Berg
+          text: "Die habe ich in Lissabon kennengelernt, wo ich zwei Jahre gearbeitet habe. Das Café, in dem wir uns zum ersten Mal getroffen haben, gibt es heute noch."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was ist für Frau Berg eine gute Freundin?
+        options: ["jemand, auf den man sich verlassen kann", "jemand, der immer lacht", "jemand, der in der Nähe wohnt"]
+        answer: "jemand, auf den man sich verlassen kann"
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Frau Berg hat ihre beste Freundin in Lissabon kennengelernt.
+        answer: true
+      - id: listen3
+        type: true-false
+        tags: [listening]
+        prompt: Das Café, in dem sie sich getroffen haben, ist heute geschlossen.
+        answer: false
+
+  - title: Your favourite place
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, relative clauses]
+        prompt: Talk about a place that is important to you. Use relative clauses with prepositions, wo and was.
+        cards: [Wo ist der Ort?, Mit wem warst du dort?, Was hast du dort erlebt?, Warum ist er wichtig?]
+        phrases:
+          - Der Ort, über den ich sprechen möchte, ist …
+          - Das ist ein Ort, wo …
+          - Die Person, mit der ich dort war, …
+          - Das Schönste, was ich dort erlebt habe, …
+        checklist:
+          - I used at least two relative clauses with a preposition
+          - I used wo for a place
+          - I used was after das or alles
+        sample: "Der Ort, über den ich sprechen möchte, ist ein kleiner See in den Bergen, wo meine Familie jeden Sommer Urlaub gemacht hat. Die Person, mit der ich dort am meisten Zeit verbracht habe, ist mein Opa. Das Schönste, was ich dort erlebt habe, war ein Gewitter in der Nacht, das wir vom Fenster aus beobachtet haben. Es ist ein Ort, an den ich oft denke."

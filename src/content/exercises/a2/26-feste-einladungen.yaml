@@ -1,0 +1,181 @@
+lesson: a2.26
+sets:
+  - title: The right greeting
+    items:
+      - id: greet1
+        type: matching
+        tags: [greetings]
+        prompt: Match each occasion with its greeting.
+        pairs:
+          - { left: Weihnachten, right: Frohe Weihnachten! }
+          - { left: 31. Dezember, right: Guten Rutsch! }
+          - { left: der Geburtstag, right: Alles Gute zum Geburtstag! }
+          - { left: Ostern, right: Frohe Ostern! }
+          - { left: die Hochzeit, right: Herzlichen Glückwunsch zur Hochzeit! }
+      - id: greet2
+        type: true-false
+        tags: [greetings]
+        prompt: "'Frohen Geburtstag!' is the normal birthday greeting in German."
+        answer: false
+
+  - title: Congratulating
+    items:
+      - id: cong1
+        type: multiple-choice
+        tags: [gratulieren]
+        prompt: "Ich gratuliere ___ zum Geburtstag!"
+        options: [dir, dich, du]
+        answer: dir
+      - id: cong2
+        type: multiple-choice
+        tags: [gratulieren]
+        prompt: "Herzlichen Glückwunsch ___ Hochzeit!"
+        options: [zur, zum, für]
+        answer: zur
+      - id: cong3
+        type: multiple-choice
+        tags: [gratulieren]
+        prompt: "Herzlichen Glückwunsch ___ neuen Job!"
+        options: [zum, zur, für]
+        answer: zum
+      - id: cong4
+        type: fill-blank
+        tags: [presents]
+        prompt: "Was schenkst du ___ Mutter zum Geburtstag? (deine, dative)"
+        answers: [deiner]
+
+  - title: Invitations
+    items:
+      - id: inv1
+        type: fill-blank
+        tags: [separable verbs]
+        prompt: "Ich lade dich zu meiner Party ___."
+        answers: [ein]
+      - id: inv2
+        type: multiple-choice
+        tags: [replies]
+        prompt: "Which reply accepts the invitation?"
+        options: ["Ich komme gern!", "Schade, ich kann leider nicht.", "Vielleicht ein anderes Mal."]
+        answer: "Ich komme gern!"
+      - id: inv3
+        type: multiple-choice
+        tags: [word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Leider kann ich nicht kommen."
+          - "Leider ich kann nicht kommen."
+          - "Ich leider kann nicht kommen."
+        answer: "Leider kann ich nicht kommen."
+      - id: inv4
+        type: multiple-choice
+        tags: [du Sie]
+        prompt: "Liebe Frau Klein, ___ Sie am Freitag Zeit?"
+        options: [haben, hast, habt]
+        answer: haben
+      - id: inv6
+        type: multiple-choice
+        tags: [replies]
+        prompt: "A polite refusal should contain thanks, a reason and …"
+        options: ["a good wish", "a present", "a new date for the party"]
+        answer: "a good wish"
+      - id: inv5
+        type: translation
+        tags: [replies]
+        prompt: Shall I bring something?
+        answers:
+          - "Soll ich etwas mitbringen?"
+
+  - title: A refusal
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [replies]
+        prompt: Complete Tom's reply to Anna.
+        bank: [Einladung, leider, weil, Schade, Spaß, Grüße]
+        text: "Liebe Anna, vielen Dank für die ___! Ich kann ___ nicht kommen, ___ ich am Samstag arbeiten muss. ___! Vielleicht können wir nächste Woche zusammen essen gehen? Ich wünsche dir viel ___ bei der Party! Viele ___, Tom"
+        gaps:
+          - [Einladung]
+          - [leider]
+          - [weil]
+          - [Schade]
+          - [Spaß]
+          - [Grüße]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [invitations]
+        prompt: Please let me know by Friday.
+        answer: "Sag mir bitte bis Freitag Bescheid."
+      - id: order2
+        type: word-order
+        tags: [replies]
+        prompt: Thank you for the invitation, I would love to come.
+        answer: "Danke für die Einladung, ich komme gern."
+
+  - title: A message on the phone
+    stimulus:
+      kind: audio
+      label: Mailbox-Nachricht
+      lines:
+        - speaker: Katrin
+          text: "Hallo Jonas, hier ist Katrin. Du, ich habe am Freitag meine Prüfung bestanden! Das möchte ich feiern. Am Samstag um acht mache ich eine kleine Party bei mir im Garten. Kannst du kommen? Und kannst du vielleicht deine Gitarre mitbringen? Ruf mich bitte bis Donnerstag zurück. Tschüss!"
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was feiert Katrin?
+        options: ["ihre bestandene Prüfung", "ihren Geburtstag", "ihren neuen Job"]
+        answer: "ihre bestandene Prüfung"
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was soll Jonas mitbringen?
+        options: [seine Gitarre, einen Salat, Getränke]
+        answer: seine Gitarre
+      - id: listen3
+        type: true-false
+        tags: [listening]
+        prompt: Jonas soll bis Freitag zurückrufen.
+        answer: false
+
+  - title: Write an invitation
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, invitations]
+        prompt: "You are having a party to celebrate your new flat. Write a message to your friend Sara."
+        points:
+          - Why you are having a party
+          - When and where it is
+          - Ask whether Sara can come
+          - Ask her to bring something
+        minWords: 30
+        phrases:
+          - Liebe Sara,
+          - Ich bin umgezogen und möchte das feiern.
+          - Die Party ist am … um … in meiner neuen Wohnung, …
+          - Hast du Zeit und Lust?
+          - Kannst du … mitbringen?
+          - Viele Grüße
+        sample: "Liebe Sara, ich bin endlich umgezogen und möchte das feiern! Die Party ist am Samstag, 14. Juni, um 19 Uhr in meiner neuen Wohnung in der Lindenstraße 8. Hast du Zeit und Lust? Kannst du vielleicht einen Salat mitbringen? Sag mir bitte bis Mittwoch Bescheid. Viele Grüße, Lea"
+      - id: write2
+        type: writing-task
+        tags: [writing, replies, formal]
+        prompt: "Your colleague Herr Wagner has invited you to his 50th birthday on Friday evening. You cannot come. Write to him."
+        points:
+          - Thank him for the invitation
+          - Say that you cannot come and why
+          - Congratulate him
+          - Suggest something for another time
+        minWords: 30
+        phrases:
+          - Lieber Herr Wagner,
+          - vielen Dank für Ihre Einladung.
+          - Leider kann ich nicht kommen, weil …
+          - Herzlichen Glückwunsch zum Geburtstag!
+          - Vielleicht können wir …
+          - Viele Grüße
+        sample: "Lieber Herr Wagner, vielen Dank für Ihre Einladung zu Ihrem Geburtstag. Leider kann ich am Freitag nicht kommen, weil meine Schwester heiratet. Ich wünsche Ihnen alles Gute zum 50. Geburtstag und eine schöne Feier! Vielleicht können wir nächste Woche zusammen einen Kaffee trinken? Viele Grüße, Ana Silva"

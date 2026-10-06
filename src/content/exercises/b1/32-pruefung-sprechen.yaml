@@ -1,0 +1,92 @@
+lesson: b1.32
+sets:
+  - title: Phrases
+    items:
+      - id: ph1
+        type: multiple-choice
+        tags: [planning]
+        prompt: "In Teil 1, which phrase makes a suggestion?"
+        options: ["Was hältst du davon, wenn wir …?", "Vielen Dank für Ihre Aufmerksamkeit.", "Besonders interessant fand ich …"]
+        answer: "Was hältst du davon, wenn wir …?"
+      - id: ph2
+        type: multiple-choice
+        tags: [presentation]
+        prompt: "Which phrase ends a presentation?"
+        options: ["Vielen Dank für Ihre Aufmerksamkeit.", "Ich möchte heute über das Thema … sprechen.", "In meinem Heimatland …"]
+        answer: "Vielen Dank für Ihre Aufmerksamkeit."
+      - id: ph3
+        type: multiple-choice
+        tags: [feedback]
+        prompt: "Which phrase gives feedback in Teil 3?"
+        options: ["Mir hat gut gefallen, dass …", "Wir könnten …", "Zuerst … dann …"]
+        answer: "Mir hat gut gefallen, dass …"
+      - id: ph4
+        type: matching
+        tags: [presentation]
+        prompt: Match each slide with its content.
+        pairs:
+          - { left: Folie 1, right: das Thema und die Struktur }
+          - { left: Folie 2, right: eigene Erfahrungen }
+          - { left: Folie 3, right: die Situation im Heimatland }
+          - { left: Folie 4, right: Vor- und Nachteile und Meinung }
+          - { left: Folie 5, right: Schluss und Dank }
+
+  - title: "Teil 1: plan together"
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, exam, planning]
+        prompt: "Your colleague Anna is leaving the company. Plan a small farewell party with your partner. Discuss: when and where? food and drinks? a present? who does what? Play both sides."
+        cards: [Wann? Wo?, Essen und Getränke, Geschenk, Wer macht was?]
+        phrases:
+          - Was hältst du davon, wenn wir …?
+          - Wir könnten …
+          - Lieber …, weil …
+          - Ich kümmere mich um …, und du …?
+          - "Also, dann machen wir es so: …"
+        checklist:
+          - I made suggestions for all four points
+          - I disagreed at least once with a reason
+          - We decided who does what
+          - I summed up the plan at the end
+        sample: "– Was hältst du davon, wenn wir am Freitagnachmittag im Konferenzraum feiern? – Gute Idee, aber lieber in der Kantine, weil dort mehr Platz ist. – Einverstanden. Und das Essen? Wir könnten Pizza bestellen. – Ich weiß nicht, vielleicht bringt lieber jeder etwas mit, das ist persönlicher. – Okay. Als Geschenk könnten wir ihr einen Gutschein für ein Restaurant kaufen. – Super. Ich kümmere mich um den Gutschein, und du schreibst die Einladung? – Gern. Also, dann machen wir es so: Freitag, 15 Uhr, in der Kantine, jeder bringt etwas mit."
+
+  - title: "Teil 2: present"
+    items:
+      - id: speak2
+        type: speaking-task
+        tags: [speaking, exam, presentation]
+        prompt: "Present the topic 'Online einkaufen – ja oder nein?' following the five slides."
+        cards: [Thema und Struktur, meine Erfahrungen, Situation in meinem Heimatland, Vor- und Nachteile + Meinung, Abschluss und Dank]
+        phrases:
+          - Ich möchte heute über das Thema … sprechen. Zuerst …
+          - Ich selbst kaufe …
+          - In meinem Heimatland …
+          - Ein Vorteil ist …, ein Nachteil ist … Meiner Meinung nach …
+          - Zum Schluss möchte ich sagen, dass … Vielen Dank für Ihre Aufmerksamkeit.
+        checklist:
+          - I followed all five slides in order
+          - I gave a personal example
+          - I talked about my home country
+          - I gave pros, cons and my opinion with a reason
+          - I spoke for about three minutes without reading
+        sample: "Ich möchte heute über das Thema 'Online einkaufen' sprechen. Zuerst erzähle ich von meinen Erfahrungen, dann von der Situation in meinem Heimatland, und danach spreche ich über Vor- und Nachteile. Ich selbst kaufe fast alle Bücher und Elektronik online, aber Kleidung kaufe ich lieber im Geschäft, weil ich sie anprobieren möchte. In meinem Heimatland Kolumbien wird Online-Shopping auch immer beliebter, besonders in den großen Städten. Ein Vorteil ist, dass man Zeit spart und Preise vergleichen kann. Ein Nachteil ist, dass viele kleine Geschäfte schließen müssen und es viel Verpackungsmüll gibt. Meiner Meinung nach sollte man online einkaufen, aber auch die Geschäfte in der Nachbarschaft unterstützen. Zum Schluss möchte ich sagen, dass beide Möglichkeiten ihren Platz haben. Vielen Dank für Ihre Aufmerksamkeit."
+
+  - title: "Teil 3: react"
+    items:
+      - id: speak3
+        type: speaking-task
+        tags: [speaking, exam, feedback]
+        prompt: "Your partner has just presented 'Sport im Alltag'. Give feedback and ask a question. Then answer this question about your own presentation: 'Kaufst du auch Lebensmittel online?'"
+        cards: [Dank, Feedback, Frage, Antwort]
+        phrases:
+          - Vielen Dank für deine Präsentation.
+          - Besonders interessant fand ich, dass …
+          - "Ich habe eine Frage: …?"
+          - Gute Frage. Ich denke, …
+        checklist:
+          - I thanked my partner
+          - I said something specific I liked
+          - I asked a real question
+          - I answered the question about my presentation in full sentences
+        sample: "Vielen Dank für deine Präsentation. Besonders interessant fand ich, dass du jeden Tag mit dem Fahrrad zur Arbeit fährst, auch im Winter. Ich habe eine Frage: Was machst du, wenn es sehr stark regnet? … Zu deiner Frage: Nein, Lebensmittel kaufe ich nicht online. Ich möchte Obst und Gemüse lieber selbst sehen, und der Supermarkt ist direkt neben meiner Wohnung."

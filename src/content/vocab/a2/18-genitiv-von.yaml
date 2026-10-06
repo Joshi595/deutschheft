@@ -1,0 +1,120 @@
+lesson: a2.18
+items:
+  - id: wessen
+    de: wessen?
+    en: whose?
+    pos: other
+    example: Wessen Jacke ist das?
+    exampleEn: Whose jacket is this?
+  - id: von-wem
+    de: Von wem …?
+    en: From whom …? / By whom …?
+    pos: phrase
+    example: Von wem ist der Brief?
+    exampleEn: Who is the letter from?
+  - id: wegen
+    de: wegen
+    en: because of
+    pos: preposition
+    example: Wegen des Regens bleiben wir zu Hause.
+    exampleEn: We are staying at home because of the rain.
+  - id: waehrend
+    de: während
+    en: during
+    pos: preposition
+    example: Während der Arbeit trinke ich viel Kaffee.
+    exampleEn: I drink a lot of coffee during work.
+  - id: ende
+    de: Ende
+    en: end
+    pos: noun
+    article: das
+    plural: Enden
+    example: Ende des Monats habe ich kein Geld mehr.
+    exampleEn: At the end of the month I have no money left.
+  - id: anfang
+    de: Anfang
+    en: beginning
+    pos: noun
+    article: der
+    plural: Anfänge
+    example: Anfang des Jahres ziehe ich um.
+    exampleEn: I am moving at the beginning of the year.
+  - id: haelfte
+    de: Hälfte
+    en: half
+    pos: noun
+    article: die
+    plural: Hälften
+    example: Die Hälfte der Studenten kommt aus dem Ausland.
+    exampleEn: Half of the students come from abroad.
+  - id: besitzer
+    de: Besitzer
+    en: owner
+    pos: noun
+    article: der
+    plural: Besitzer
+    example: Der Besitzer des Hauses wohnt in Spanien.
+    exampleEn: The owner of the house lives in Spain.
+  - id: meins
+    de: meiner, meine, meins
+    en: mine
+    pos: other
+    example: Das Handy ist nicht meins.
+    exampleEn: The phone is not mine.
+  - id: deins
+    de: deiner, deine, deins
+    en: yours
+    pos: other
+    example: Ist das deiner? – Ja, das ist meiner.
+    exampleEn: Is that yours? – Yes, it is mine.
+  - id: unser
+    de: unser
+    en: our
+    pos: other
+    example: Unsere Wohnung ist im Erdgeschoss.
+    exampleEn: Our flat is on the ground floor.
+  - id: euer
+    de: euer
+    en: your (plural)
+    pos: other
+    example: Wo ist eure Wohnung?
+    exampleEn: Where is your flat?
+  - id: chefin
+    de: Chefin
+    en: boss (woman)
+    pos: noun
+    article: die
+    plural: Chefinnen
+    example: Das Büro der Chefin ist oben.
+    exampleEn: The boss's office is upstairs.
+  - id: verwandte
+    de: Verwandte
+    en: relative
+    pos: noun
+    article: der
+    plural: Verwandten
+    example: Ich besuche Verwandte in Polen.
+    exampleEn: I am visiting relatives in Poland.
+  - id: schwiegermutter
+    de: Schwiegermutter
+    en: mother-in-law
+    pos: noun
+    article: die
+    plural: Schwiegermütter
+    example: Das ist das Haus meiner Schwiegermutter.
+    exampleEn: That is my mother-in-law's house.
+  - id: enkel
+    de: Enkel
+    en: grandson, grandchild
+    pos: noun
+    article: der
+    plural: Enkel
+    example: Die Enkel meiner Nachbarin sind sehr laut.
+    exampleEn: My neighbour's grandchildren are very loud.
+  - id: ausfallen
+    de: ausfallen
+    en: to be cancelled
+    pos: verb
+    example: Der Kurs fällt wegen Krankheit aus.
+    exampleEn: The course is cancelled because of illness.

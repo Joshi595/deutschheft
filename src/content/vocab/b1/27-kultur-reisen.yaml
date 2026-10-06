@@ -1,0 +1,126 @@
+lesson: b1.27
+items:
+  - id: mitglied
+    de: Mitglied
+    en: member
+    pos: noun
+    article: das
+    plural: Mitglieder
+    example: Ich bin Mitglied in einem Chor.
+    exampleEn: I am a member of a choir.
+  - id: ehrenamtlich
+    de: ehrenamtlich
+    en: voluntary, unpaid
+    pos: adjective
+    example: Sie arbeitet ehrenamtlich im Tierheim.
+    exampleEn: She volunteers at the animal shelter.
+  - id: sich-engagieren
+    de: sich engagieren
+    en: to get involved
+    pos: verb
+    example: Er engagiert sich für den Umweltschutz.
+    exampleEn: He is active in environmental protection.
+  - id: ausstellung
+    de: Ausstellung
+    en: exhibition
+    pos: noun
+    article: die
+    plural: Ausstellungen
+    example: Die Ausstellung ist bis Juni geöffnet.
+    exampleEn: The exhibition is open until June.
+  - id: auffuehrung
+    de: Aufführung
+    en: performance
+    pos: noun
+    article: die
+    plural: Aufführungen
+    example: Die Aufführung beginnt um 20 Uhr.
+    exampleEn: The performance starts at 8 pm.
+  - id: handlung
+    de: Handlung
+    en: plot
+    pos: noun
+    article: die
+    plural: Handlungen
+    example: Die Handlung des Films ist sehr spannend.
+    exampleEn: The plot of the film is very exciting.
+  - id: handeln-von
+    de: handeln von + D
+    en: to be about
+    pos: verb
+    example: Das Buch handelt von einer Reise nach Indien.
+    exampleEn: The book is about a journey to India.
+  - id: sich-lohnen
+    de: sich lohnen
+    en: to be worth it
+    pos: verb
+    example: Der Besuch lohnt sich.
+    exampleEn: The visit is worth it.
+  - id: beeindruckend
+    de: beeindruckend
+    en: impressive
+    pos: adjective
+    example: Die Aussicht war beeindruckend.
+    exampleEn: The view was impressive.
+  - id: unterkunft
+    de: Unterkunft
+    en: accommodation
+    pos: noun
+    article: die
+    plural: Unterkünfte
+    example: Wir suchen eine günstige Unterkunft.
+    exampleEn: We are looking for cheap accommodation.
+  - id: sehenswuerdigkeit
+    de: Sehenswürdigkeit
+    en: sight, place of interest
+    pos: noun
+    article: die
+    plural: Sehenswürdigkeiten
+    example: Die wichtigsten Sehenswürdigkeiten liegen im Zentrum.
+    exampleEn: The main sights are in the centre.
+  - id: reisefuehrer
+    de: Reiseführer
+    en: guidebook; tour guide
+    pos: noun
+    article: der
+    plural: Reiseführer
+    example: Im Reiseführer steht, dass das Museum montags zu ist.
+    exampleEn: The guidebook says the museum is closed on Mondays.
+  - id: brauch
+    de: Brauch
+    en: custom
+    pos: noun
+    article: der
+    plural: Bräuche
+    example: Das ist ein alter Brauch aus Bayern.
+    exampleEn: That is an old Bavarian custom.
+  - id: tradition
+    de: Tradition
+    en: tradition
+    pos: noun
+    article: die
+    plural: Traditionen
+    example: Bei uns hat das Fest eine lange Tradition.
+    exampleEn: The festival has a long tradition in our country.
+  - id: sich-verkleiden
+    de: sich verkleiden
+    en: to dress up
+    pos: verb
+    example: Zum Karneval verkleide ich mich als Pirat.
+    exampleEn: For carnival I am dressing up as a pirate.
+  - id: feuerwerk
+    de: Feuerwerk
+    en: fireworks
+    pos: noun
+    article: das
+    plural: Feuerwerke
+    example: Um Mitternacht gibt es ein Feuerwerk.
+    exampleEn: There are fireworks at midnight.
+  - id: ferienwohnung
+    de: Ferienwohnung
+    en: holiday flat
+    pos: noun
+    article: die
+    plural: Ferienwohnungen
+    example: Wir haben eine Ferienwohnung am See gemietet.
+    exampleEn: We rented a holiday flat by the lake.

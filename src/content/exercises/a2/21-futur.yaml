@@ -1,0 +1,174 @@
+lesson: a2.21
+sets:
+  - title: The forms of werden
+    items:
+      - id: form1
+        type: fill-blank
+        tags: [werden forms]
+        prompt: "Ich ___ dich morgen anrufen."
+        answers: [werde]
+      - id: form2
+        type: fill-blank
+        tags: [werden forms]
+        prompt: "Du ___ die Prüfung bestimmt schaffen."
+        answers: [wirst]
+      - id: form3
+        type: fill-blank
+        tags: [werden forms]
+        prompt: "Morgen ___ es regnen."
+        answers: [wird]
+      - id: form4
+        type: fill-blank
+        tags: [werden forms]
+        prompt: "Wir ___ nächstes Jahr umziehen."
+        answers: [werden]
+      - id: form5
+        type: fill-blank
+        tags: [werden forms]
+        prompt: "Was ___ ihr in den Ferien machen?"
+        answers: [werdet]
+
+  - title: Word order
+    items:
+      - id: wo1
+        type: multiple-choice
+        tags: [word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich werde morgen früher kommen."
+          - "Ich werde kommen morgen früher."
+          - "Ich kommen werde morgen früher."
+        answer: "Ich werde morgen früher kommen."
+      - id: wo2
+        type: multiple-choice
+        tags: [word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Ich glaube, dass es morgen regnen wird."
+          - "Ich glaube, dass es morgen wird regnen."
+          - "Ich glaube, dass es wird morgen regnen."
+        answer: "Ich glaube, dass es morgen regnen wird."
+      - id: wo3
+        type: word-order
+        tags: [word order]
+        prompt: Next year I will do more sport.
+        answer: "Nächstes Jahr werde ich mehr Sport machen."
+      - id: wo4
+        type: word-order
+        tags: [word order]
+        prompt: Will you help me?
+        answer: "Wirst du mir helfen?"
+
+  - title: will or werde?
+    items:
+      - id: ff1
+        type: multiple-choice
+        tags: [false friends]
+        prompt: "I want to become a doctor."
+        options: ["Ich will Arzt werden.", "Ich werde Arzt wollen.", "Ich werde Arzt."]
+        answer: "Ich will Arzt werden."
+      - id: ff2
+        type: multiple-choice
+        tags: [false friends]
+        prompt: "I will help you, I promise."
+        options: ["Ich werde dir helfen, versprochen.", "Ich will dir helfen, versprochen."]
+        answer: "Ich werde dir helfen, versprochen."
+      - id: ff3
+        type: true-false
+        tags: [false friends]
+        prompt: "'Ich will nach Hause' means 'I will go home'."
+        answer: false
+        explanation: It means 'I want to go home'.
+
+  - title: Future or to become?
+    items:
+      - id: become1
+        type: multiple-choice
+        tags: [werden become]
+        prompt: "What does 'Es wird kalt.' mean?"
+        options: ["It is getting cold.", "It will be cold one day.", "It was cold."]
+        answer: "It is getting cold."
+      - id: become2
+        type: multiple-choice
+        tags: [werden become]
+        prompt: "Sie ___ Lehrerin geworden."
+        options: [ist, hat, wird]
+        answer: ist
+      - id: become3
+        type: fill-blank
+        tags: [werden become]
+        prompt: "Er ___ im Mai dreißig. (turns)"
+        answers: [wird]
+
+  - title: Present or werden?
+    items:
+      - id: tense1
+        type: true-false
+        tags: [present for future]
+        prompt: "'Morgen fahre ich nach Berlin.' is a normal way to talk about a plan for tomorrow."
+        answer: true
+      - id: tense2
+        type: translation
+        tags: [present for future]
+        prompt: "What are you doing at the weekend? (use the present)"
+        answers:
+          - "Was machst du am Wochenende?"
+
+  - title: Resolutions
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [werden forms]
+        prompt: Lisa's new year's resolutions. Fill in werden in the right form, or the infinitive.
+        text: "Im neuen Jahr ___ ich gesünder leben. Ich werde jeden Morgen Obst ___ (essen) und nicht mehr so viel Kaffee trinken. Mein Freund und ich ___ zusammen joggen. Und du? ___ du auch etwas ändern?"
+        gaps:
+          - [werde]
+          - [essen]
+          - [werden]
+          - [Wirst]
+
+  - title: The weather forecast
+    stimulus:
+      kind: audio
+      label: Wetterbericht
+      lines:
+        - speaker: Sprecherin
+          text: "Und nun das Wetter für morgen, Samstag. Im Norden wird es bewölkt, und am Nachmittag wird es regnen. Im Süden bleibt es sonnig und warm, bis zu fünfundzwanzig Grad. Am Sonntag wird es dann überall kühler, mit Temperaturen um achtzehn Grad."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wie wird das Wetter am Samstag im Süden?
+        options: [sonnig und warm, bewölkt mit Regen, kühl]
+        answer: sonnig und warm
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Im Norden regnet es am Samstagvormittag.
+        answer: false
+        explanation: Es regnet am Nachmittag.
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wie warm wird es am Sonntag?
+        options: ["um 18 Grad", "bis 25 Grad", "um 8 Grad"]
+        answer: "um 18 Grad"
+
+  - title: Your plans
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, future]
+        prompt: Write to a friend about your plans for the next year.
+        points:
+          - One plan that is already fixed (present tense)
+          - A resolution (werden)
+          - Something you would like to become or learn
+          - Ask about your friend's plans
+        minWords: 40
+        phrases:
+          - Im Sommer fahre ich …
+          - Ich werde mehr / weniger …
+          - Ich möchte … werden / lernen.
+          - Und was hast du vor?
+        sample: "Liebe Eva, im Sommer fahre ich mit meiner Schwester nach Kroatien. Darauf freue ich mich schon sehr! Außerdem werde ich nächstes Jahr mehr Sport machen und weniger am Handy sein. Ich möchte auch endlich gut Deutsch sprechen, deshalb werde ich die B1-Prüfung machen. Und du? Was hast du vor? Liebe Grüße, Ana"

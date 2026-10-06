@@ -1,0 +1,100 @@
+lesson: b1.18
+items:
+  - id: mal
+    de: mal (Partikel)
+    en: just (softens a request)
+    pos: other
+    example: Kannst du mal kurz kommen?
+    exampleEn: Can you come here a second?
+  - id: doch-partikel
+    de: doch (Partikel)
+    en: why don't you; surely
+    pos: other
+    example: Komm doch morgen vorbei!
+    exampleEn: Why don't you drop by tomorrow!
+  - id: ja-partikel
+    de: ja (Partikel)
+    en: really; as you know
+    pos: other
+    example: Das ist ja eine Überraschung!
+    exampleEn: What a surprise!
+  - id: denn-partikel
+    de: denn (in Fragen)
+    en: then, so (in questions)
+    pos: other
+    example: Was ist denn passiert?
+    exampleEn: So what happened?
+  - id: halt
+    de: halt
+    en: just (resigned)
+    pos: other
+    example: Das ist halt so.
+    exampleEn: That's just how it is.
+  - id: eben-partikel
+    de: eben (Partikel)
+    en: just (that's how it is)
+    pos: other
+    example: Dann müssen wir eben warten.
+    exampleEn: Then we will just have to wait.
+  - id: schon-partikel
+    de: schon (Partikel)
+    en: don't worry; true enough
+    pos: other
+    example: Das schaffst du schon!
+    exampleEn: You will manage it, don't worry!
+  - id: eigentlich-b1
+    de: eigentlich
+    en: actually; by the way
+    pos: adverb
+    example: Woher kommst du eigentlich?
+    exampleEn: Where are you from, by the way?
+  - id: vorbeikommen
+    de: vorbeikommen
+    en: to drop by
+    pos: verb
+    example: Komm doch heute Abend vorbei!
+    exampleEn: Drop by this evening!
+  - id: was-ist-los
+    de: Was ist los?
+    en: What is the matter?
+    pos: phrase
+    example: Was ist denn los mit dir?
+    exampleEn: What is the matter with you?
+  - id: keine-sorge
+    de: Keine Sorge!
+    en: Don't worry!
+    pos: phrase
+    example: Keine Sorge, das wird schon!
+    exampleEn: Don't worry, it'll be fine!
+  - id: ueberraschung
+    de: Überraschung
+    en: surprise
+    pos: noun
+    article: die
+    plural: Überraschungen
+    example: Was für eine Überraschung!
+    exampleEn: What a surprise!
+  - id: sich-setzen-b1
+    de: Setz dich!
+    en: Sit down!
+    pos: phrase
+    example: Setz dich doch!
+    exampleEn: Do sit down!
+  - id: kurz
+    de: kurz
+    en: briefly, for a moment
+    pos: adverb
+    example: Kann ich dich mal kurz stören?
+    exampleEn: Can I disturb you for a moment?
+  - id: stoeren
+    de: stören
+    en: to disturb
+    pos: verb
+    example: Entschuldigung, dass ich störe.
+    exampleEn: Sorry to disturb you.
+  - id: na-ja
+    de: na ja
+    en: well
+    pos: phrase
+    example: Na ja, das ist halt so.
+    exampleEn: Well, that's just how it is.

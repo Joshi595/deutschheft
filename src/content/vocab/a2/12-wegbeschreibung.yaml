@@ -1,0 +1,124 @@
+lesson: a2.12
+items:
+  - id: geradeaus
+    de: geradeaus
+    en: straight on
+    pos: adverb
+    example: Gehen Sie immer geradeaus.
+    exampleEn: Keep going straight on.
+  - id: abbiegen
+    de: abbiegen
+    en: to turn (off)
+    pos: verb
+    example: An der Kreuzung biegen Sie rechts ab.
+    exampleEn: Turn right at the crossroads.
+  - id: ampel
+    de: Ampel
+    en: traffic lights
+    pos: noun
+    article: die
+    plural: Ampeln
+    example: An der Ampel gehen Sie links.
+    exampleEn: Go left at the traffic lights.
+  - id: kreuzung
+    de: Kreuzung
+    en: crossroads, junction
+    pos: noun
+    article: die
+    plural: Kreuzungen
+    example: Gehen Sie über die Kreuzung.
+    exampleEn: Go across the junction.
+  - id: bruecke
+    de: Brücke
+    en: bridge
+    pos: noun
+    article: die
+    plural: Brücken
+    example: Das Museum ist direkt hinter der Brücke.
+    exampleEn: The museum is just past the bridge.
+  - id: entlang
+    de: entlang
+    en: along
+    pos: preposition
+    example: Gehen Sie den Fluss entlang.
+    exampleEn: Walk along the river.
+  - id: durch
+    de: durch
+    en: through
+    pos: preposition
+    example: Wir gehen durch den Park.
+    exampleEn: We walk through the park.
+  - id: vorbei
+    de: an … vorbei
+    en: past
+    pos: preposition
+    example: Sie gehen an der Kirche vorbei.
+    exampleEn: You walk past the church.
+  - id: seite
+    de: Seite
+    en: side
+    pos: noun
+    article: die
+    plural: Seiten
+    example: Die Bank ist auf der linken Seite.
+    exampleEn: The bank is on the left-hand side.
+  - id: haltestelle
+    de: Haltestelle
+    en: (bus, tram) stop
+    pos: noun
+    article: die
+    plural: Haltestellen
+    example: Die Haltestelle ist gleich um die Ecke.
+    exampleEn: The stop is just round the corner.
+  - id: umsteigen
+    de: umsteigen
+    en: to change (trains, buses)
+    pos: verb
+    example: Sie müssen in Köln umsteigen.
+    exampleEn: You have to change in Cologne.
+  - id: aussteigen
+    de: aussteigen
+    en: to get off, to get out
+    pos: verb
+    example: Wo muss ich aussteigen?
+    exampleEn: Where do I have to get off?
+  - id: einsteigen
+    de: einsteigen
+    en: to get on, to get in
+    pos: verb
+    example: Bitte schnell einsteigen!
+    exampleEn: Please get on quickly.
+  - id: richtung
+    de: Richtung
+    en: direction
+    pos: noun
+    article: die
+    plural: Richtungen
+    example: Nehmen Sie die U2 Richtung Stadtmitte.
+    exampleEn: Take the U2 towards the city centre.
+  - id: zu-fuss
+    de: zu Fuß
+    en: on foot
+    pos: phrase
+    example: Das sind nur fünf Minuten zu Fuß.
+    exampleEn: It is only five minutes on foot.
+  - id: weit
+    de: weit
+    en: far
+    pos: adjective
+    example: Ist es weit bis zum Bahnhof?
+    exampleEn: Is it far to the station?
+  - id: rathaus
+    de: Rathaus
+    en: town hall
+    pos: noun
+    article: das
+    plural: Rathäuser
+    example: Das Rathaus ist am Marktplatz.
+    exampleEn: The town hall is on the market square.
+  - id: zuerst
+    de: zuerst
+    en: first
+    pos: adverb
+    example: Zuerst gehen Sie geradeaus.
+    exampleEn: First you go straight on.

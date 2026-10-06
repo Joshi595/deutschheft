@@ -1,0 +1,151 @@
+lesson: b1.21
+sets:
+  - title: Words
+    items:
+      - id: w1
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: der Klimawandel, right: climate change }
+          - { left: nachhaltig, right: sustainable }
+          - { left: verschwenden, right: to waste }
+          - { left: vermeiden, right: to avoid }
+          - { left: das Pfand, right: the deposit }
+          - { left: erneuerbar, right: renewable }
+      - id: w2
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Das Fahrrad ist sehr ___. (environmentally friendly)"
+        answers: [umweltfreundlich]
+      - id: w3
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Ich nutze meistens öffentliche ___. (public transport)"
+        answers: [Verkehrsmittel]
+
+  - title: Which bin?
+    items:
+      - id: bin1
+        type: multiple-choice
+        tags: [rubbish]
+        prompt: "Eine alte Zeitung"
+        options: [Papiertonne, Gelber Sack, Biotonne]
+        answer: Papiertonne
+      - id: bin2
+        type: multiple-choice
+        tags: [rubbish]
+        prompt: "Eine leere Joghurtverpackung aus Plastik"
+        options: [Gelber Sack, Papiertonne, Biotonne]
+        answer: Gelber Sack
+      - id: bin3
+        type: multiple-choice
+        tags: [rubbish]
+        prompt: "Kartoffelschalen"
+        options: [Biotonne, Restmüll, Gelber Sack]
+        answer: Biotonne
+      - id: bin4
+        type: true-false
+        tags: [rubbish]
+        prompt: "Bottles with a deposit go into the yellow bag."
+        answer: false
+
+  - title: Advice and proposals
+    items:
+      - id: adv1
+        type: multiple-choice
+        tags: [grammar]
+        prompt: "Man sollte weniger Auto ___."
+        options: [fahren, zu fahren, fährt]
+        answer: fahren
+      - id: adv2
+        type: multiple-choice
+        tags: [grammar]
+        prompt: "Es ist wichtig, Energie ___."
+        options: [zu sparen, sparen, spart]
+        answer: zu sparen
+      - id: adv3
+        type: multiple-choice
+        tags: [grammar]
+        prompt: "Die Städte sollten Radwege bauen, ___ mehr Menschen Fahrrad fahren."
+        options: [damit, um, dass zu]
+        answer: damit
+      - id: adv4
+        type: word-order
+        tags: [grammar]
+        prompt: One should eat less meat to protect the environment.
+        answer: "Man sollte weniger Fleisch essen, um die Umwelt zu schonen."
+      - id: adv5
+        type: word-order
+        tags: [passive]
+        prompt: In Germany the rubbish is separated.
+        answer: "In Deutschland wird der Müll getrennt."
+
+  - title: Statistics
+    items:
+      - id: st1
+        type: multiple-choice
+        tags: [statistics]
+        prompt: "Die Zahl ist ___ 20 Prozent gestiegen. (by)"
+        options: [um, auf, mit]
+        answer: um
+      - id: st2
+        type: multiple-choice
+        tags: [statistics]
+        prompt: "Der Anteil ist von 40 ___ 60 Prozent gestiegen. (to)"
+        options: [auf, um, zu]
+        answer: auf
+      - id: st3
+        type: fill-blank
+        tags: [statistics]
+        prompt: "50 Prozent = die ___"
+        answers: [Hälfte]
+      - id: st4
+        type: translation
+        tags: [cause]
+        prompt: "That is due to the traffic. (liegen an)"
+        answers:
+          - "Das liegt am Verkehr."
+          - "Das liegt an dem Verkehr."
+
+  - title: A short article
+    stimulus:
+      kind: text
+      label: Zeitungsartikel
+      text: "Immer mehr Deutsche verzichten im Alltag auf Plastik. Laut einer Umfrage kauft fast die Hälfte der Befragten Obst und Gemüse ohne Verpackung. Im Vergleich zu 2015 ist dieser Anteil um 20 Prozent gestiegen. Viele Supermärkte bieten deshalb Stofftaschen und Mehrwegboxen an. Kritiker sagen allerdings, dass das nicht reicht: Der Verpackungsmüll pro Kopf ist in Deutschland immer noch einer der höchsten in Europa."
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading]
+        prompt: Fast 50 Prozent kaufen Obst und Gemüse ohne Verpackung.
+        answer: true
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: Seit 2015 ist der Anteil gesunken.
+        answer: false
+      - id: read3
+        type: multiple-choice
+        tags: [reading]
+        prompt: Was sagen die Kritiker?
+        options: ["Es gibt in Deutschland immer noch sehr viel Verpackungsmüll.", "Stofftaschen sind zu teuer.", "Die Umfrage ist falsch."]
+        answer: "Es gibt in Deutschland immer noch sehr viel Verpackungsmüll."
+
+  - title: Your opinion
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, opinion]
+        prompt: "Forum topic: 'Should single-use plastic bags and cups be banned completely?' Write your opinion."
+        points:
+          - Your opinion
+          - Reasons, with an example
+          - An argument on the other side
+          - What you personally do
+        minWords: 80
+        phrases:
+          - Meiner Meinung nach sollte man …
+          - Der Grund dafür ist, dass …
+          - Dagegen spricht, dass …
+          - Ich selbst versuche, …
+        sample: "Meiner Meinung nach sollte man Plastiktüten und Einwegbecher ganz verbieten. Der Grund dafür ist, dass jedes Jahr Millionen Tonnen Plastik im Meer landen. Zum Beispiel findet man heute Plastik sogar im Fisch, den wir essen. Dagegen spricht, dass manche Alternativen teurer sind und auch Energie brauchen. Trotzdem denke ich, dass wir uns schnell daran gewöhnen würden. Ich selbst versuche, immer eine Stofftasche und einen eigenen Becher dabeizuhaben. Das ist nicht schwer und spart viel Müll. Wenn alle das machen würden, gäbe es viel weniger Plastik."

@@ -1,0 +1,113 @@
+lesson: b1.21
+items:
+  - id: umwelt
+    de: Umwelt
+    en: environment
+    pos: noun
+    article: die
+    example: Wir müssen die Umwelt schützen.
+    exampleEn: We must protect the environment.
+  - id: klimawandel
+    de: Klimawandel
+    en: climate change
+    pos: noun
+    article: der
+    example: Der Klimawandel ist ein globales Problem.
+    exampleEn: Climate change is a global problem.
+  - id: umweltschutz
+    de: Umweltschutz
+    en: environmental protection
+    pos: noun
+    article: der
+    example: Umweltschutz beginnt zu Hause.
+    exampleEn: Environmental protection begins at home.
+  - id: nachhaltig
+    de: nachhaltig
+    en: sustainable
+    pos: adjective
+    example: Wir wollen nachhaltiger leben.
+    exampleEn: We want to live more sustainably.
+  - id: umweltfreundlich
+    de: umweltfreundlich
+    en: environmentally friendly
+    pos: adjective
+    example: Das Fahrrad ist umweltfreundlich.
+    exampleEn: The bicycle is environmentally friendly.
+  - id: vermeiden
+    de: vermeiden
+    en: to avoid
+    pos: verb
+    example: Ich versuche, Plastik zu vermeiden.
+    exampleEn: I try to avoid plastic.
+  - id: verschwenden
+    de: verschwenden
+    en: to waste
+    pos: verb
+    example: Wir verschwenden zu viele Lebensmittel.
+    exampleEn: We waste too much food.
+  - id: trennen
+    de: trennen
+    en: to separate
+    pos: verb
+    example: In Deutschland wird der Müll getrennt.
+    exampleEn: In Germany rubbish is separated.
+  - id: pfand
+    de: Pfand
+    en: deposit (on bottles)
+    pos: noun
+    article: das
+    example: Auf der Flasche sind 25 Cent Pfand.
+    exampleEn: There is a 25-cent deposit on the bottle.
+  - id: energie
+    de: Energie
+    en: energy
+    pos: noun
+    article: die
+    plural: Energien
+    example: Erneuerbare Energien werden immer wichtiger.
+    exampleEn: Renewable energies are becoming more and more important.
+  - id: erneuerbar
+    de: erneuerbar
+    en: renewable
+    pos: adjective
+    example: Wind und Sonne sind erneuerbare Energien.
+    exampleEn: Wind and sun are renewable energies.
+  - id: verkehrsmittel
+    de: öffentliche Verkehrsmittel
+    en: public transport
+    pos: phrase
+    example: Ich nutze meistens öffentliche Verkehrsmittel.
+    exampleEn: I mostly use public transport.
+  - id: schuetzen
+    de: schützen
+    en: to protect
+    pos: verb
+    example: Wälder schützen das Klima.
+    exampleEn: Forests protect the climate.
+  - id: verschmutzung
+    de: Verschmutzung
+    en: pollution
+    pos: noun
+    article: die
+    example: Die Verschmutzung der Meere ist ein großes Problem.
+    exampleEn: The pollution of the oceans is a big problem.
+  - id: liegen-an
+    de: liegen an + D
+    en: to be due to
+    pos: verb
+    example: Das liegt am Wetter.
+    exampleEn: That is due to the weather.
+  - id: anteil
+    de: Anteil
+    en: share, proportion
+    pos: noun
+    article: der
+    plural: Anteile
+    example: Der Anteil von Solarstrom wächst.
+    exampleEn: The share of solar power is growing.
+  - id: wegwerfen
+    de: wegwerfen
+    en: to throw away
+    pos: verb
+    example: Man sollte nicht so viel wegwerfen.
+    exampleEn: You should not throw so much away.

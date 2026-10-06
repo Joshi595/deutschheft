@@ -1,0 +1,115 @@
+lesson: b1.22
+items:
+  - id: herunterladen
+    de: herunterladen
+    en: to download
+    pos: verb
+    example: Ich habe die App heruntergeladen.
+    exampleEn: I have downloaded the app.
+  - id: hochladen
+    de: hochladen
+    en: to upload
+    pos: verb
+    example: Er hat das Video hochgeladen.
+    exampleEn: He uploaded the video.
+  - id: teilen
+    de: teilen
+    en: to share
+    pos: verb
+    example: Sie teilt viele Fotos online.
+    exampleEn: She shares a lot of photos online.
+  - id: loeschen
+    de: löschen
+    en: to delete
+    pos: verb
+    example: Ich habe den Kommentar gelöscht.
+    exampleEn: I deleted the comment.
+  - id: speichern
+    de: speichern
+    en: to save
+    pos: verb
+    example: Vergiss nicht, die Datei zu speichern.
+    exampleEn: Do not forget to save the file.
+  - id: sich-informieren
+    de: sich informieren über + A
+    en: to find out about, to get information
+    pos: verb
+    example: Ich informiere mich im Internet über die Nachrichten.
+    exampleEn: I get my news on the internet.
+  - id: soziale-netzwerke
+    de: soziale Netzwerke
+    en: social networks
+    pos: phrase
+    example: Viele Jugendliche nutzen soziale Netzwerke.
+    exampleEn: Many young people use social networks.
+  - id: nachrichten
+    de: Nachrichten
+    en: news
+    pos: phrase
+    example: Hast du heute die Nachrichten gesehen?
+    exampleEn: Did you see the news today?
+  - id: quelle
+    de: Quelle
+    en: source
+    pos: noun
+    article: die
+    plural: Quellen
+    example: Die Quelle ist nicht seriös.
+    exampleEn: The source is not reliable.
+  - id: ueberpruefen
+    de: überprüfen
+    en: to check
+    pos: verb
+    example: Man sollte Informationen immer überprüfen.
+    exampleEn: You should always check information.
+  - id: datenschutz
+    de: Datenschutz
+    en: data protection
+    pos: noun
+    article: der
+    example: Der Datenschutz ist in Deutschland sehr wichtig.
+    exampleEn: Data protection is very important in Germany.
+  - id: passwort
+    de: Passwort
+    en: password
+    pos: noun
+    article: das
+    plural: Passwörter
+    example: Ich habe mein Passwort vergessen.
+    exampleEn: I have forgotten my password.
+  - id: umfrage
+    de: Umfrage
+    en: survey
+    pos: noun
+    article: die
+    plural: Umfragen
+    example: Laut einer Umfrage lesen junge Leute weniger Zeitung.
+    exampleEn: According to a survey young people read fewer newspapers.
+  - id: befragte
+    de: Befragte
+    en: respondent, person asked
+    pos: noun
+    article: der
+    plural: Befragten
+    example: 60 Prozent der Befragten sind zufrieden.
+    exampleEn: 60 percent of those asked are satisfied.
+  - id: laut
+    de: laut + Dativ
+    en: according to
+    pos: preposition
+    example: Laut Wetterbericht regnet es morgen.
+    exampleEn: According to the weather forecast it will rain tomorrow.
+  - id: mehrheit
+    de: Mehrheit
+    en: majority
+    pos: noun
+    article: die
+    plural: Mehrheiten
+    example: Die Mehrheit ist dagegen.
+    exampleEn: The majority is against it.
+  - id: abhaengig
+    de: abhängig von + D
+    en: dependent on
+    pos: adjective
+    example: Viele sind abhängig von ihrem Handy.
+    exampleEn: Many are dependent on their phones.

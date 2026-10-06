@@ -1,0 +1,169 @@
+lesson: b1.19
+sets:
+  - title: Which level?
+    items:
+      - id: lvl1
+        type: multiple-choice
+        tags: [register]
+        prompt: "An email to a company you do not know starts with …"
+        options: ["Sehr geehrte Damen und Herren,", "Hallo zusammen,", "Liebe Firma,"]
+        answer: "Sehr geehrte Damen und Herren,"
+      - id: lvl2
+        type: multiple-choice
+        tags: [register]
+        prompt: "A friendly email to your teacher, Frau Brandt, starts with …"
+        options: ["Liebe Frau Brandt,", "Hi Brandt,", "Liebe Brandt,"]
+        answer: "Liebe Frau Brandt,"
+      - id: lvl3
+        type: multiple-choice
+        tags: [register]
+        prompt: "The standard formal closing is …"
+        options: ["Mit freundlichen Grüßen", "LG", "Bis bald!"]
+        answer: "Mit freundlichen Grüßen"
+      - id: lvl4
+        type: multiple-choice
+        tags: [register]
+        prompt: "Which word is colloquial?"
+        options: [kriegen, erhalten, bekommen]
+        answer: kriegen
+      - id: lvl5
+        type: true-false
+        tags: [register]
+        prompt: "After 'Sehr geehrte Damen und Herren,' the next word normally starts with a capital letter."
+        answer: false
+
+  - title: Colloquial to neutral
+    items:
+      - id: col1
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the colloquial word with the neutral one.
+        pairs:
+          - { left: kriegen, right: bekommen }
+          - { left: gucken, right: sehen }
+          - { left: Kumpel, right: Freund }
+          - { left: Kohle, right: Geld }
+          - { left: quatschen, right: sich unterhalten }
+      - id: col3
+        type: multiple-choice
+        tags: [spoken written]
+        prompt: "Which is the written, formal version of 'wegen dem Umzug'?"
+        options: ["wegen des Umzugs", "wegen der Umzug", "wegen Umzug von mir"]
+        answer: "wegen des Umzugs"
+      - id: col4
+        type: multiple-choice
+        tags: [spoken written]
+        prompt: "'Ich hab's dir doch gesagt!' is typical of …"
+        options: [spoken German, a formal letter, a newspaper report]
+        answer: spoken German
+      - id: col5
+        type: fill-blank
+        tags: [du Sie]
+        prompt: "Mein Chef hat mir das Du ___. (offered)"
+        answers: [angeboten]
+      - id: col2
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Haben Sie meine Bewerbung ___? (received – formal)"
+        answers: [erhalten, bekommen]
+
+  - title: Make it formal
+    instructions: Rewrite the informal request formally with Sie and Konjunktiv II.
+    items:
+      - id: f1
+        type: translation
+        tags: [requests]
+        prompt: "Kannst du mir helfen? →"
+        answers:
+          - "Könnten Sie mir bitte helfen?"
+          - "Könnten Sie mir helfen?"
+      - id: f2
+        type: translation
+        tags: [requests]
+        prompt: "Schick mir die Infos! →"
+        answers:
+          - "Könnten Sie mir bitte die Informationen schicken?"
+          - "Könnten Sie mir die Informationen schicken?"
+      - id: f3
+        type: translation
+        tags: [requests]
+        prompt: "Können wir den Termin verschieben? → Wäre es möglich, …"
+        answers:
+          - "Wäre es möglich, den Termin zu verschieben?"
+      - id: f4
+        type: word-order
+        tags: [requests]
+        prompt: I would be grateful if you could call me back.
+        answer: "Ich wäre Ihnen dankbar, wenn Sie mich zurückrufen könnten."
+
+  - title: Spot the mistake
+    items:
+      - id: spot1
+        type: multiple-choice
+        tags: [consistency]
+        prompt: "'Sehr geehrter Herr Wolf, kannst du mir bitte Bescheid sagen? Mit freundlichen Grüßen, Lea Kraus' What is wrong?"
+        options: ["du does not fit the formal opening", "the closing is too informal", "nothing"]
+        answer: "du does not fit the formal opening"
+      - id: spot2
+        type: multiple-choice
+        tags: [consistency]
+        prompt: "'Hallo Tom, ich wäre Ihnen sehr dankbar, wenn Sie mir das Buch zurückgeben könnten. LG Ana' What is wrong?"
+        options: ["Sie does not fit a message to a friend", "LG is too formal", "nothing"]
+        answer: "Sie does not fit a message to a friend"
+      - id: spot3
+        type: multiple-choice
+        tags: [du Sie]
+        prompt: "Who normally offers to switch from Sie to du?"
+        options: ["the older or more senior person", "the younger person", "whoever speaks first"]
+        answer: "the older or more senior person"
+
+  - title: A formal email
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [formal email]
+        prompt: Complete the formal email.
+        bank: [geehrte, leider, da, Wäre, Rückmeldung, freundlichen]
+        text: "Sehr ___ Frau Weber, ___ kann ich den Termin am Montag nicht wahrnehmen, ___ ich krank bin. ___ es möglich, den Termin auf Donnerstag zu verschieben? Ich bitte um eine kurze ___. Mit ___ Grüßen, Ana Costa"
+        gaps:
+          - [geehrte]
+          - [leider]
+          - [da]
+          - [Wäre]
+          - [Rückmeldung]
+          - [freundlichen]
+
+  - title: Write two messages
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, informal]
+        prompt: "You cannot come to your friend Max's birthday dinner on Saturday. Write to Max."
+        points:
+          - Thank him and say you cannot come
+          - Give the reason
+          - Suggest meeting another time
+        minWords: 40
+        phrases:
+          - Hallo Max,
+          - danke für die Einladung, aber …
+          - Ich muss leider …
+          - Wollen wir uns nächste Woche …?
+          - Liebe Grüße
+        sample: "Hallo Max, danke für die Einladung! Leider kann ich am Samstag nicht kommen, weil meine Eltern zu Besuch sind. Das ist echt schade! Wollen wir uns nächste Woche auf einen Kaffee treffen? Dann bringe ich dein Geschenk mit. Ich wünsch dir einen tollen Abend! Liebe Grüße, Ben"
+      - id: write2
+        type: writing-task
+        tags: [writing, formal]
+        prompt: "You cannot attend a job interview at the company Nordtech on Monday. Write to Frau Schulz in the HR department."
+        points:
+          - Thank her for the invitation
+          - Explain politely why you cannot come
+          - Ask for a new date
+        minWords: 40
+        phrases:
+          - Sehr geehrte Frau Schulz,
+          - vielen Dank für die Einladung zum Vorstellungsgespräch.
+          - Leider kann ich den Termin nicht wahrnehmen, da …
+          - Wäre es möglich, …?
+          - Mit freundlichen Grüßen
+        sample: "Sehr geehrte Frau Schulz, vielen Dank für die Einladung zum Vorstellungsgespräch am Montag. Leider kann ich den Termin nicht wahrnehmen, da ich an diesem Tag eine wichtige Prüfung habe. Wäre es möglich, einen anderen Termin zu vereinbaren? Ich bin ab Dienstag jederzeit verfügbar. Mit freundlichen Grüßen, Ben Hoffmann"

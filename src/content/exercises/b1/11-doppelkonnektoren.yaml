@@ -1,0 +1,171 @@
+lesson: b1.11
+sets:
+  - title: Complete the pair
+    items:
+      - id: pair1
+        type: matching
+        tags: [pairs]
+        prompt: Match the first part with the second.
+        pairs:
+          - { left: sowohl, right: als auch }
+          - { left: nicht nur, right: sondern auch }
+          - { left: entweder, right: oder }
+          - { left: weder, right: noch }
+          - { left: zwar, right: aber }
+          - { left: je, right: desto }
+      - id: pair2
+        type: fill-blank
+        tags: [sowohl als auch]
+        prompt: "Ich spreche sowohl Englisch ___ Spanisch."
+        answers: [als auch]
+      - id: pair3
+        type: fill-blank
+        tags: [weder noch]
+        prompt: "Ich habe weder Zeit ___ Geld."
+        answers: [noch]
+      - id: pair4
+        type: fill-blank
+        tags: [nicht nur sondern auch]
+        prompt: "Sie spricht nicht nur Deutsch, ___ Chinesisch."
+        answers: [sondern auch]
+
+  - title: Which pair fits?
+    items:
+      - id: fit1
+        type: multiple-choice
+        tags: [meaning]
+        prompt: "You can only choose one: train or car. Wir fahren ___ mit dem Zug ___ mit dem Auto."
+        options: ["entweder … oder", "sowohl … als auch", "weder … noch"]
+        answer: "entweder … oder"
+      - id: fit2
+        type: multiple-choice
+        tags: [meaning]
+        prompt: "He drinks no coffee and no tea. Er trinkt ___ Kaffee ___ Tee."
+        options: ["weder … noch", "entweder … oder", "zwar … aber"]
+        answer: "weder … noch"
+      - id: fit3
+        type: multiple-choice
+        tags: [meaning]
+        prompt: "The car is old (true), but it runs well. Das Auto ist ___ alt, ___ es fährt noch gut."
+        options: ["zwar … aber", "sowohl … als auch", "je … desto"]
+        answer: "zwar … aber"
+      - id: fit5
+        type: multiple-choice
+        tags: [nicht nur sondern auch]
+        prompt: "Er spricht nicht nur Deutsch, ___ Chinesisch."
+        options: [sondern auch, aber auch, und auch]
+        answer: sondern auch
+      - id: fit6
+        type: multiple-choice
+        tags: [sowohl als auch]
+        prompt: "Sowohl mein Bruder als auch meine Schwester ___ in Köln."
+        options: [wohnen, wohnt]
+        answer: wohnen
+        explanation: Two subjects together take a plural verb.
+      - id: fit4
+        type: true-false
+        tags: [weder noch]
+        prompt: "In 'weder … noch' you also need nicht or kein."
+        answer: false
+
+  - title: je … desto
+    items:
+      - id: je1
+        type: multiple-choice
+        tags: [je desto]
+        prompt: Choose the correct sentence.
+        options:
+          - "Je mehr ich lerne, desto besser verstehe ich."
+          - "Je mehr ich lerne, desto ich verstehe besser."
+          - "Je ich lerne mehr, desto besser verstehe ich."
+        answer: "Je mehr ich lerne, desto besser verstehe ich."
+      - id: je2
+        type: word-order
+        tags: [je desto]
+        prompt: The earlier we set off, the less traffic there is.
+        answer: "Je früher wir losfahren, desto weniger Verkehr gibt es."
+      - id: je3
+        type: word-order
+        tags: [je desto]
+        prompt: The older he gets, the calmer he becomes.
+        answer: "Je älter er wird, umso ruhiger wird er."
+      - id: je4
+        type: translation
+        tags: [je desto]
+        prompt: "The more often you practise, the easier it gets. (du)"
+        answers:
+          - "Je öfter du übst, desto leichter wird es."
+          - "Je öfter du übst, umso leichter wird es."
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [nicht nur sondern auch]
+        prompt: The hotel was not only expensive but also dirty.
+        answers:
+          - "Das Hotel war nicht nur teuer, sondern auch schmutzig."
+      - id: tr2
+        type: translation
+        tags: [zwar aber]
+        prompt: The city is loud, admittedly, but very lively.
+        answers:
+          - "Die Stadt ist zwar laut, aber sehr lebendig."
+      - id: tr3
+        type: word-order
+        tags: [sowohl als auch]
+        prompt: Both my brother and my sister live in Cologne.
+        answer: "Sowohl mein Bruder als auch meine Schwester wohnen in Köln."
+
+  - title: City or country?
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [mixed]
+        prompt: Fill in the gaps.
+        bank: [zwar, aber, sowohl, als auch, weder, noch, Je, desto]
+        text: "Das Leben in der Stadt hat ___ Vorteile ___ Nachteile. Die Mieten sind ___ hoch, ___ man findet leichter Arbeit. Auf dem Land gibt es oft ___ Kinos ___ Theater. ___ länger ich in der Stadt wohne, ___ mehr vermisse ich aber die Ruhe."
+        gaps:
+          - [sowohl]
+          - [als auch]
+          - [zwar]
+          - [aber]
+          - [weder]
+          - [noch]
+          - [Je]
+          - [desto]
+
+  - title: Weigh it up
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, opinion]
+        prompt: "Is it better to work from home or in the office? Give your opinion with at least four two-part connectors."
+        points:
+          - Advantages of working from home
+          - Disadvantages of working from home
+          - A comparison with the office (zwar … aber)
+          - Your conclusion (je … desto or entweder … oder)
+        minWords: 60
+        phrases:
+          - Die Arbeit zu Hause hat sowohl … als auch …
+          - Man spart nicht nur …, sondern auch …
+          - Zwar …, aber …
+          - Je …, desto …
+        sample: "Die Arbeit im Homeoffice hat sowohl Vorteile als auch Nachteile. Man spart nicht nur Zeit, sondern auch Geld für den Weg. Zwar ist es zu Hause ruhiger, aber man sieht die Kollegen kaum. Manche Leute haben weder einen Schreibtisch noch ein eigenes Zimmer. Ich finde: Je mehr Kontakt ein Job braucht, desto wichtiger ist das Büro. Am besten arbeitet man entweder zwei oder drei Tage zu Hause."
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, opinion]
+        prompt: "Should children have a smartphone from the age of ten? Give your opinion and weigh it up."
+        cards: [Vorteile, Nachteile, Sicherheit, Schule]
+        phrases:
+          - Zwar …, aber …
+          - Ein Handy ist nicht nur …, sondern auch …
+          - Je jünger die Kinder sind, desto …
+          - Entweder … oder …
+        checklist:
+          - I gave arguments on both sides
+          - I used at least three two-part connectors
+          - The word order after desto was correct
+          - I gave a clear opinion at the end
+        sample: "Zwar ist ein Handy praktisch, wenn Eltern ihre Kinder erreichen wollen, aber es bringt auch Probleme. Kinder verbringen nicht nur viel Zeit am Bildschirm, sondern sehen auch Dinge, die nicht für sie sind. Je jünger die Kinder sind, desto mehr Regeln braucht man. Ich finde: Entweder ein einfaches Handy ohne Internet oder ein Smartphone erst ab zwölf."

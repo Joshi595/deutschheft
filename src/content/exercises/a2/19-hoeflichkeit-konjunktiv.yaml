@@ -1,0 +1,188 @@
+lesson: a2.19
+sets:
+  - title: The forms
+    items:
+      - id: form1
+        type: matching
+        tags: [Konjunktiv II forms]
+        prompt: Match the normal verb with its polite form.
+        pairs:
+          - { left: können, right: könnte }
+          - { left: werden, right: würde }
+          - { left: haben, right: hätte }
+          - { left: sein, right: wäre }
+          - { left: sollen, right: sollte }
+      - id: form2
+        type: fill-blank
+        tags: [Konjunktiv II forms]
+        prompt: "___ du mir bitte helfen? (können)"
+        answers: [Könntest]
+      - id: form3
+        type: fill-blank
+        tags: [Konjunktiv II forms]
+        prompt: "Du ___ mehr schlafen. (sollen)"
+        answers: [solltest]
+      - id: form4
+        type: fill-blank
+        tags: [Konjunktiv II forms]
+        prompt: "Wir ___ gern ein Doppelzimmer. (haben)"
+        answers: [hätten]
+      - id: form5
+        type: fill-blank
+        tags: [Konjunktiv II forms]
+        prompt: "Das ___ toll! (sein)"
+        answers: [wäre]
+
+  - title: Polite or past?
+    items:
+      - id: umlaut1
+        type: multiple-choice
+        tags: [Konjunktiv II forms]
+        prompt: "___ Sie mir bitte den Weg zeigen? (polite request)"
+        options: [Könnten, Konnten]
+        answer: Könnten
+      - id: umlaut2
+        type: multiple-choice
+        tags: [Konjunktiv II forms]
+        prompt: "Gestern ___ wir nicht kommen."
+        options: [konnten, könnten]
+        answer: konnten
+        explanation: This is the past, so no umlaut.
+      - id: umlaut3
+        type: true-false
+        tags: [Konjunktiv II forms]
+        prompt: "'Ich würde gern einen Kaffee.' is a complete, correct sentence."
+        answer: false
+
+  - title: What fits?
+    items:
+      - id: fit1
+        type: multiple-choice
+        tags: [requests]
+        prompt: "In a café: ___ einen Tee, bitte."
+        options: [Ich hätte gern, Ich sollte, Ich wäre]
+        answer: Ich hätte gern
+      - id: fit2
+        type: multiple-choice
+        tags: [advice]
+        prompt: "Your friend has a headache. You say: Du ___ eine Tablette nehmen."
+        options: [solltest, hättest, wärst]
+        answer: solltest
+      - id: fit3
+        type: multiple-choice
+        tags: [suggestions]
+        prompt: "Wie wäre es ___ einem Ausflug?"
+        options: [mit, für, zu]
+        answer: mit
+      - id: fit4
+        type: multiple-choice
+        tags: [wishes]
+        prompt: "Ich ___ jetzt gern im Urlaub."
+        options: [wäre, hätte, würde]
+        answer: wäre
+
+  - title: Make it polite
+    instructions: Rewrite the order as a polite request with Könnten Sie or Könntest du.
+    items:
+      - id: pol1
+        type: translation
+        tags: [requests]
+        prompt: "Helfen Sie mir! → Könnten Sie …"
+        answers:
+          - "Könnten Sie mir helfen?"
+          - "Könnten Sie mir bitte helfen?"
+      - id: pol2
+        type: translation
+        tags: [requests]
+        prompt: "Ruf mich an! → Könntest du …"
+        answers:
+          - "Könntest du mich anrufen?"
+          - "Könntest du mich bitte anrufen?"
+      - id: pol3
+        type: translation
+        tags: [requests]
+        prompt: "Sprechen Sie langsamer! → Würden Sie …"
+        answers:
+          - "Würden Sie langsamer sprechen?"
+          - "Würden Sie bitte langsamer sprechen?"
+
+  - title: Planning a weekend
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [suggestions]
+        prompt: Fill in the gaps.
+        bank: [könnten, wäre, Hättest, würde, solltest]
+        text: "– ___ du Lust, am Samstag etwas zu machen? – Gern! Wir ___ wandern gehen. – Hm, ich ___ lieber ins Museum gehen. – Wie ___ es mit beidem? Morgens Museum, nachmittags Park. – Gute Idee. Aber du ___ Tickets online kaufen, sonst wird es teuer."
+        gaps:
+          - [Hättest]
+          - [könnten]
+          - [würde]
+          - [wäre]
+          - [solltest]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [advice]
+        prompt: You should go to the doctor.
+        answer: "Du solltest zum Arzt gehen."
+      - id: order2
+        type: word-order
+        tags: [advice]
+        prompt: If I were you I would take the job.
+        answer: "An deiner Stelle würde ich den Job nehmen."
+
+  - title: At the hotel reception
+    stimulus:
+      kind: audio
+      label: An der Rezeption
+      lines:
+        - speaker: Gast
+          text: "Guten Abend. Wir hätten gern ein Doppelzimmer für zwei Nächte."
+        - speaker: Rezeptionist
+          text: "Gern. Möchten Sie ein Zimmer mit Balkon? Das wäre zehn Euro mehr pro Nacht."
+        - speaker: Gast
+          text: "Nein, danke, ein normales Zimmer ist gut. Könnten Sie uns noch ein Restaurant empfehlen?"
+        - speaker: Rezeptionist
+          text: "Sie sollten das Restaurant am Marktplatz probieren. Aber Sie sollten vorher reservieren, es ist immer voll."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was möchten die Gäste?
+        options: ["ein Doppelzimmer für zwei Nächte", "ein Einzelzimmer für zwei Nächte", "ein Zimmer mit Balkon"]
+        answer: "ein Doppelzimmer für zwei Nächte"
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Die Gäste nehmen das Zimmer mit Balkon.
+        answer: false
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was rät der Rezeptionist?
+        options: ["vorher reservieren", "früh essen", "mit dem Taxi fahren"]
+        answer: "vorher reservieren"
+
+  - title: Give advice
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, advice]
+        prompt: "A friend writes: 'I want to learn German faster, but I have little time. What should I do?' Answer with advice."
+        points:
+          - Show that you understand the problem
+          - Give at least two pieces of advice with solltest
+          - Make one suggestion with wir könnten
+          - Wish your friend good luck
+        minWords: 40
+        phrases:
+          - Ich verstehe dein Problem.
+          - Du solltest …
+          - An deiner Stelle würde ich …
+          - Wir könnten zusammen …
+          - Viel Erfolg!
+        sample: "Liebe Sara, ich verstehe dein Problem, ich habe auch wenig Zeit. Du solltest jeden Tag zehn Minuten Vokabeln lernen, zum Beispiel im Bus. Außerdem solltest du deutsche Podcasts hören. An deiner Stelle würde ich auch deutsche Serien sehen. Wir könnten uns einmal pro Woche treffen und nur Deutsch sprechen. Viel Erfolg! Deine Mia"

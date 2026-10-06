@@ -1,0 +1,110 @@
+lesson: b1.01
+items:
+  - id: ging
+    de: gehen – ging – ist gegangen
+    en: to go
+    pos: verb
+    example: Er ging früh nach Hause.
+    exampleEn: He went home early.
+  - id: kam
+    de: kommen – kam – ist gekommen
+    en: to come
+    pos: verb
+    example: Der Brief kam einen Tag zu spät.
+    exampleEn: The letter came a day too late.
+  - id: sah
+    de: sehen – sah – hat gesehen
+    en: to see
+    pos: verb
+    example: Sie sah ihn sofort.
+    exampleEn: She saw him straight away.
+  - id: fand
+    de: finden – fand – hat gefunden
+    en: to find
+    pos: verb
+    example: Er fand den Schlüssel unter dem Sofa.
+    exampleEn: He found the key under the sofa.
+  - id: nahm
+    de: nehmen – nahm – hat genommen
+    en: to take
+    pos: verb
+    example: Sie nahm den letzten Bus.
+    exampleEn: She took the last bus.
+  - id: schrieb
+    de: schreiben – schrieb – hat geschrieben
+    en: to write
+    pos: verb
+    example: Goethe schrieb den Faust.
+    exampleEn: Goethe wrote Faust.
+  - id: stand
+    de: stehen – stand – hat gestanden
+    en: to stand
+    pos: verb
+    example: Vor dem Haus stand ein altes Auto.
+    exampleEn: An old car stood in front of the house.
+  - id: lief
+    de: laufen – lief – ist gelaufen
+    en: to run, to walk
+    pos: verb
+    example: Das Kind lief zu seiner Mutter.
+    exampleEn: The child ran to its mother.
+  - id: dachte
+    de: denken – dachte – hat gedacht
+    en: to think
+    pos: verb
+    example: Ich dachte, du kommst nicht.
+    exampleEn: I thought you were not coming.
+  - id: brachte
+    de: bringen – brachte – hat gebracht
+    en: to bring
+    pos: verb
+    example: Der Kellner brachte die Rechnung.
+    exampleEn: The waiter brought the bill.
+  - id: wusste
+    de: wissen – wusste – hat gewusst
+    en: to know (a fact)
+    pos: verb
+    example: Das wusste ich nicht.
+    exampleEn: I did not know that.
+  - id: kannte
+    de: kennen – kannte – hat gekannt
+    en: to know (a person, a place)
+    pos: verb
+    example: Damals kannte ich niemanden in der Stadt.
+    exampleEn: Back then I did not know anyone in the town.
+  - id: fiel
+    de: fallen – fiel – ist gefallen
+    en: to fall
+    pos: verb
+    example: 1989 fiel die Mauer.
+    exampleEn: In 1989 the Wall fell.
+  - id: verliess
+    de: verlassen – verließ – hat verlassen
+    en: to leave (a place, a person)
+    pos: verb
+    example: Er verließ das Haus ohne Jacke.
+    exampleEn: He left the house without a jacket.
+  - id: hielt
+    de: halten – hielt – hat gehalten
+    en: to hold; to stop
+    pos: verb
+    example: Der Bus hielt direkt vor der Schule.
+    exampleEn: The bus stopped right outside the school.
+  - id: es-war-einmal
+    de: Es war einmal …
+    en: Once upon a time …
+    pos: phrase
+    example: Es war einmal ein armer Müller.
+    exampleEn: Once upon a time there was a poor miller.
+  - id: ploetzlich
+    de: plötzlich
+    en: suddenly
+    pos: adverb
+    example: Plötzlich ging das Licht aus.
+    exampleEn: Suddenly the light went out.
+  - id: damals-b1
+    de: damals
+    en: at that time, back then
+    pos: adverb
+    example: Damals gab es noch keine Handys.
+    exampleEn: Back then there were no mobile phones.

@@ -1,0 +1,111 @@
+lesson: b1.19
+items:
+  - id: duzen
+    de: duzen
+    en: to say du (to someone)
+    pos: verb
+    example: Wollen wir uns duzen?
+    exampleEn: Shall we use du?
+  - id: siezen
+    de: siezen
+    en: to say Sie (to someone)
+    pos: verb
+    example: Meinen Chef sieze ich.
+    exampleEn: I call my boss Sie.
+  - id: erhalten
+    de: erhalten
+    en: to receive
+    pos: verb
+    example: Ich habe Ihre E-Mail erhalten.
+    exampleEn: I have received your email.
+  - id: kriegen
+    de: kriegen (umgangssprachlich)
+    en: to get (colloquial)
+    pos: verb
+    example: Ich hab deine Nachricht gekriegt.
+    exampleEn: I got your message.
+  - id: gucken
+    de: gucken (umgangssprachlich)
+    en: to look (colloquial)
+    pos: verb
+    example: Guck mal!
+    exampleEn: Look!
+  - id: rueckmeldung
+    de: Rückmeldung
+    en: reply, feedback
+    pos: noun
+    article: die
+    plural: Rückmeldungen
+    example: Ich bitte um eine kurze Rückmeldung.
+    exampleEn: I would appreciate a short reply.
+  - id: wahrnehmen
+    de: einen Termin wahrnehmen
+    en: to keep an appointment
+    pos: phrase
+    example: Ich kann den Termin leider nicht wahrnehmen.
+    exampleEn: Unfortunately I cannot keep the appointment.
+  - id: verschieben
+    de: verschieben
+    en: to postpone
+    pos: verb
+    example: Können wir das Treffen verschieben?
+    exampleEn: Can we postpone the meeting?
+  - id: sehr-geehrte
+    de: Sehr geehrte Damen und Herren,
+    en: Dear Sir or Madam,
+    pos: phrase
+    example: Sehr geehrte Damen und Herren, ich schreibe Ihnen wegen …
+    exampleEn: Dear Sir or Madam, I am writing to you about …
+  - id: mit-freundlichen-gruessen
+    de: Mit freundlichen Grüßen
+    en: Yours sincerely
+    pos: phrase
+    example: Mit freundlichen Grüßen, Ihre Anna Weber
+    exampleEn: Yours sincerely, Anna Weber
+  - id: dankbar-wenn
+    de: Ich wäre Ihnen dankbar, wenn …
+    en: I would be grateful if …
+    pos: phrase
+    example: Ich wäre Ihnen dankbar, wenn Sie mich zurückrufen könnten.
+    exampleEn: I would be grateful if you could call me back.
+  - id: umgangssprachlich
+    de: umgangssprachlich
+    en: colloquial
+    pos: adjective
+    example: Das Wort ist sehr umgangssprachlich.
+    exampleEn: That word is very colloquial.
+  - id: hoeflichkeit
+    de: Höflichkeit
+    en: politeness
+    pos: noun
+    article: die
+    example: Höflichkeit ist in Bewerbungen sehr wichtig.
+    exampleEn: Politeness is very important in applications.
+  - id: anrede
+    de: Anrede
+    en: form of address, greeting
+    pos: noun
+    article: die
+    plural: Anreden
+    example: Die Anrede passt nicht zum Text.
+    exampleEn: The greeting does not fit the text.
+  - id: kumpel
+    de: Kumpel
+    en: mate, buddy
+    pos: noun
+    article: der
+    plural: Kumpel
+    example: Ich gehe mit meinen Kumpels ins Stadion.
+    exampleEn: I am going to the stadium with my mates.
+  - id: sich-unterhalten-b1
+    de: quatschen (umgangssprachlich)
+    en: to chat (colloquial)
+    pos: verb
+    example: Wir haben stundenlang gequatscht.
+    exampleEn: We chatted for hours.
+  - id: anbieten
+    de: das Du anbieten
+    en: to offer to use du
+    pos: phrase
+    example: Mein Chef hat mir das Du angeboten.
+    exampleEn: My boss offered that we say du.

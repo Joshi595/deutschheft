@@ -1,0 +1,145 @@
+lesson: b1.18
+sets:
+  - title: Which particle?
+    items:
+      - id: p1
+        type: multiple-choice
+        tags: [particles]
+        prompt: "A friendly invitation: Komm ___ mit!"
+        options: [doch, denn, halt]
+        answer: doch
+      - id: p2
+        type: multiple-choice
+        tags: [particles]
+        prompt: "A natural question: Was machst du ___ hier?"
+        options: [denn, mal, eben]
+        answer: denn
+      - id: p3
+        type: multiple-choice
+        tags: [particles]
+        prompt: "Surprise: Das ist ___ toll!"
+        options: [ja, denn, mal]
+        answer: ja
+      - id: p4
+        type: multiple-choice
+        tags: [particles]
+        prompt: "Resignation: Das ist ___ so."
+        options: [halt, mal, denn]
+        answer: halt
+      - id: p5
+        type: multiple-choice
+        tags: [particles]
+        prompt: "Reassurance: Keine Sorge, das schaffst du ___!"
+        options: [schon, denn, mal]
+        answer: schon
+      - id: p6
+        type: multiple-choice
+        tags: [particles]
+        prompt: "A soft request: Kannst du ___ das Fenster aufmachen?"
+        options: [mal, ja, eben]
+        answer: mal
+      - id: p7
+        type: multiple-choice
+        tags: [particles]
+        prompt: "By the way: Wie alt bist du ___?"
+        options: [eigentlich, halt, schon]
+        answer: eigentlich
+
+  - title: What does the speaker feel?
+    items:
+      - id: f1
+        type: multiple-choice
+        tags: [tone]
+        prompt: "'Das habe ich dir doch gesagt!'"
+        options: [a little annoyed, very happy, unsure]
+        answer: a little annoyed
+      - id: f2
+        type: multiple-choice
+        tags: [tone]
+        prompt: "'Du bist ja schon da!'"
+        options: [surprised, angry, sad]
+        answer: surprised
+      - id: f3
+        type: multiple-choice
+        tags: [tone]
+        prompt: "'Dann nehmen wir halt den nächsten Zug.'"
+        options: [resigned, excited, worried]
+        answer: resigned
+      - id: f4
+        type: true-false
+        tags: [tone]
+        prompt: "Modal particles change the facts of a sentence."
+        answer: false
+
+  - title: Position
+    items:
+      - id: pos1
+        type: multiple-choice
+        tags: [position]
+        prompt: Choose the correct sentence.
+        options: ["Ruf mich doch mal an!", "Doch ruf mich mal an!", "Ruf doch mal mich an!"]
+        answer: "Ruf mich doch mal an!"
+      - id: pos2
+        type: word-order
+        tags: [position]
+        prompt: Why don't you sit down!
+        answer: "Setz dich doch!"
+      - id: pos3
+        type: word-order
+        tags: [position]
+        prompt: So what happened?
+        answer: "Was ist denn passiert?"
+      - id: pos4
+        type: word-order
+        tags: [position]
+        prompt: Can you just help me?
+        answer: "Kannst du mir mal helfen?"
+
+  - title: Make it friendlier
+    instructions: Add the particle in brackets in the right place.
+    items:
+      - id: fr1
+        type: translation
+        tags: [softening]
+        prompt: "Gib mir das Salz. (mal)"
+        answers:
+          - "Gib mir mal das Salz."
+      - id: fr2
+        type: translation
+        tags: [softening]
+        prompt: "Besuch uns am Wochenende! (doch)"
+        answers:
+          - "Besuch uns doch am Wochenende!"
+      - id: fr3
+        type: translation
+        tags: [softening]
+        prompt: "Wie heißt du? (eigentlich)"
+        answers:
+          - "Wie heißt du eigentlich?"
+
+  - title: A phone call
+    stimulus:
+      kind: audio
+      label: Am Telefon
+      lines:
+        - speaker: Mia
+          text: "Hallo Jan! Was ist denn los? Du klingst so müde."
+        - speaker: Jan
+          text: "Ach, mein Zug ist ausgefallen, und der nächste kommt erst in einer Stunde."
+        - speaker: Mia
+          text: "Oh nein! Na ja, das ist halt die Bahn. Komm doch einfach zu mir, ich wohne ja direkt am Bahnhof."
+        - speaker: Jan
+          text: "Echt? Das ist ja super! Dann bis gleich!"
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Warum ist Jan müde?
+        options: ["Sein Zug ist ausgefallen.", "Er hat schlecht geschlafen.", "Er hat zu viel gearbeitet."]
+        answer: "Sein Zug ist ausgefallen."
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was schlägt Mia vor?
+        options: ["Jan soll zu ihr kommen.", "Jan soll ein Taxi nehmen.", "Jan soll nach Hause gehen."]
+        answer: "Jan soll zu ihr kommen."

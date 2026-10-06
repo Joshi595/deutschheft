@@ -1,0 +1,116 @@
+lesson: b1.23
+items:
+  - id: sich-ernaehren
+    de: sich ernähren
+    en: to eat, to feed oneself
+    pos: verb
+    example: Ich ernähre mich vegetarisch.
+    exampleEn: I eat a vegetarian diet.
+  - id: ernaehrung
+    de: Ernährung
+    en: diet, nutrition
+    pos: noun
+    article: die
+    example: Eine gesunde Ernährung ist wichtig.
+    exampleEn: A healthy diet is important.
+  - id: verzichten
+    de: verzichten auf + A
+    en: to do without, to give up
+    pos: verb
+    example: Im Januar verzichte ich auf Alkohol.
+    exampleEn: In January I give up alcohol.
+  - id: sich-bewegen
+    de: sich bewegen
+    en: to move, to exercise
+    pos: verb
+    example: Man sollte sich jeden Tag bewegen.
+    exampleEn: You should get some exercise every day.
+  - id: stress-abbauen
+    de: Stress abbauen
+    en: to reduce stress
+    pos: phrase
+    example: Yoga hilft mir, Stress abzubauen.
+    exampleEn: Yoga helps me reduce stress.
+  - id: sich-entspannen
+    de: sich entspannen
+    en: to relax
+    pos: verb
+    example: Am Wochenende entspanne ich mich im Garten.
+    exampleEn: At the weekend I relax in the garden.
+  - id: abnehmen
+    de: abnehmen
+    en: to lose weight
+    pos: verb
+    example: Sie hat drei Kilo abgenommen.
+    exampleEn: She has lost three kilos.
+  - id: zunehmen
+    de: zunehmen
+    en: to put on weight
+    pos: verb
+    example: Im Winter nehme ich immer zu.
+    exampleEn: I always put on weight in winter.
+  - id: vegetarisch
+    de: vegetarisch
+    en: vegetarian
+    pos: adjective
+    example: Gibt es auch ein vegetarisches Gericht?
+    exampleEn: Is there a vegetarian dish as well?
+  - id: schlapp
+    de: schlapp
+    en: weak, worn out
+    pos: adjective
+    example: Ich fühle mich heute ganz schlapp.
+    exampleEn: I feel completely worn out today.
+  - id: schwindelig
+    de: schwindelig
+    en: dizzy
+    pos: adjective
+    example: Mir ist schwindelig.
+    exampleEn: I feel dizzy.
+  - id: krankenkasse
+    de: Krankenkasse
+    en: health insurance company
+    pos: noun
+    article: die
+    plural: Krankenkassen
+    example: Bei welcher Krankenkasse sind Sie?
+    exampleEn: Which health insurance company are you with?
+  - id: hausarzt
+    de: Hausarzt
+    en: GP, family doctor
+    pos: noun
+    article: der
+    plural: Hausärzte
+    example: Ich gehe zuerst zu meiner Hausärztin.
+    exampleEn: I am going to my GP first.
+  - id: facharzt
+    de: Facharzt
+    en: specialist
+    pos: noun
+    article: der
+    plural: Fachärzte
+    example: Für einen Facharzt wartet man oft lange.
+    exampleEn: You often wait a long time for a specialist.
+  - id: ueberweisung-arzt
+    de: Überweisung
+    en: referral; bank transfer
+    pos: noun
+    article: die
+    plural: Überweisungen
+    example: Ich brauche eine Überweisung zum Hautarzt.
+    exampleEn: I need a referral to the dermatologist.
+  - id: krankschreibung
+    de: Krankschreibung
+    en: sick note
+    pos: noun
+    article: die
+    plural: Krankschreibungen
+    example: Der Arzt hat mir eine Krankschreibung für drei Tage gegeben.
+    exampleEn: The doctor gave me a sick note for three days.
+  - id: notaufnahme
+    de: Notaufnahme
+    en: A&E, emergency department
+    pos: noun
+    article: die
+    example: Er musste in die Notaufnahme.
+    exampleEn: He had to go to A&E.
