@@ -1,0 +1,188 @@
+lesson: a2.18
+sets:
+  - title: Names
+    items:
+      - id: name1
+        type: multiple-choice
+        tags: [names]
+        prompt: "Das ist ___ Fahrrad."
+        options: [Toms, Tom's, von Toms]
+        answer: Toms
+      - id: name2
+        type: fill-blank
+        tags: [names]
+        prompt: "___ Schwester wohnt in Wien. (Peter)"
+        answers: [Peters]
+      - id: name3
+        type: true-false
+        tags: [names]
+        prompt: "German writes an apostrophe in 'Annas Auto'."
+        answer: false
+
+  - title: von + dative
+    items:
+      - id: von1
+        type: fill-blank
+        tags: [von]
+        prompt: "Das ist das Auto von ___ Bruder. (mein)"
+        answers: [meinem]
+      - id: von2
+        type: fill-blank
+        tags: [von]
+        prompt: "Die Wohnung von ___ Freundin ist groß. (meine)"
+        answers: [meiner]
+      - id: von3
+        type: fill-blank
+        tags: [von]
+        prompt: "Das ist das Zimmer von den ___. (Kinder)"
+        answers: [Kindern]
+      - id: von4
+        type: translation
+        tags: [von]
+        prompt: "That is my sister's bike. (use von)"
+        answers:
+          - "Das ist das Fahrrad von meiner Schwester."
+
+  - title: The genitive
+    items:
+      - id: gen1
+        type: multiple-choice
+        tags: [genitive]
+        prompt: "das Auto ___ Lehrers"
+        options: [des, der, dem]
+        answer: des
+      - id: gen2
+        type: multiple-choice
+        tags: [genitive]
+        prompt: "das Büro ___ Chefin"
+        options: [der, des, die]
+        answer: der
+      - id: gen3
+        type: multiple-choice
+        tags: [genitive]
+        prompt: "Ende des ___"
+        options: [Monats, Monat, Monaten]
+        answer: Monats
+      - id: gen4
+        type: multiple-choice
+        tags: [genitive]
+        prompt: "die Spielsachen ___ Kinder"
+        options: [der, des, den]
+        answer: der
+      - id: gen5
+        type: fill-blank
+        tags: [genitive]
+        prompt: "Das ist das Haus ___ Eltern. (mein-, genitive)"
+        answers: [meiner]
+      - id: gen6
+        type: matching
+        tags: [genitive phrases]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: Ende des Monats, right: at the end of the month }
+          - { left: wegen des Wetters, right: because of the weather }
+          - { left: während der Arbeit, right: during work }
+          - { left: die Hälfte der Zeit, right: half the time }
+
+  - title: Mine and yours
+    items:
+      - id: poss1
+        type: multiple-choice
+        tags: [possessive pronouns]
+        prompt: "Ist das dein Handy? – Ja, das ist ___."
+        options: [meins, meiner, meine]
+        answer: meins
+      - id: poss2
+        type: multiple-choice
+        tags: [possessive pronouns]
+        prompt: "Ist das dein Schlüssel? – Ja, das ist ___."
+        options: [meiner, meins, meine]
+        answer: meiner
+      - id: poss3
+        type: multiple-choice
+        tags: [possessive pronouns]
+        prompt: "Sind das deine Schuhe? – Nein, das sind nicht ___."
+        options: [meine, meins, meiner]
+        answer: meine
+      - id: poss4
+        type: fill-blank
+        tags: [possessive pronouns]
+        prompt: "Das ist nicht mein Handy, das ist ___. (his)"
+        answers: [seins]
+
+  - title: Whose is it?
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [possession]
+        prompt: Complete the conversation after the party.
+        text: "– Wem gehört die Jacke hier? – Das ist ___ Jacke. (Lisa) – Und der Schal? – Der ist ___, ich hole ihn gleich. (mine) – Und das Handy? – Das ist das Handy von ___ Bruder. (mein)"
+        gaps:
+          - [Lisas]
+          - [meiner]
+          - [meinem]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [genitive phrases]
+        prompt: The concert is cancelled because of the weather.
+        answer: "Das Konzert fällt wegen des Wetters aus."
+      - id: order2
+        type: word-order
+        tags: [genitive]
+        prompt: The owner of the house lives in Spain.
+        answer: "Der Besitzer des Hauses wohnt in Spanien."
+
+  - title: A family photo
+    stimulus:
+      kind: audio
+      label: Das Familienfoto
+      lines:
+        - speaker: Ali
+          text: "Wer ist das auf dem Foto?"
+        - speaker: Jana
+          text: "Das ist meine Familie bei der Hochzeit von meinem Bruder. Der Mann links ist mein Vater, und die Frau neben ihm ist die Schwester meiner Mutter."
+        - speaker: Ali
+          text: "Und das Kind?"
+        - speaker: Jana
+          text: "Das ist Emil, der Sohn meiner Cousine. Und der Hund gehört meinen Eltern."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wessen Hochzeit war das?
+        options: ["die Hochzeit von Janas Bruder", "die Hochzeit von Janas Cousine", "Janas Hochzeit"]
+        answer: "die Hochzeit von Janas Bruder"
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wer steht neben dem Vater?
+        options: ["Janas Tante", "Janas Mutter", "Janas Cousine"]
+        answer: "Janas Tante"
+        explanation: The sister of her mother is her aunt.
+      - id: listen3
+        type: true-false
+        tags: [listening]
+        prompt: Der Hund gehört Jana.
+        answer: false
+
+  - title: Your family
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, possession]
+        prompt: Show someone a photo (real or imagined) of your family or friends and explain who everyone is.
+        cards: [Eltern, Geschwister, Verwandte, Freunde, Haustier]
+        phrases:
+          - Das ist mein … / meine …
+          - Das ist der Mann / die Frau von meinem / meiner …
+          - Der Hund gehört …
+          - Das Haus meiner Eltern …
+        checklist:
+          - I named at least four people
+          - I used von + dative at least twice
+          - I used a name with -s at least once
+        sample: "Das ist ein Foto von meiner Familie. Links ist mein Vater, rechts ist meine Mutter. Das Kind ist Sofias Sohn – Sofia ist meine Schwester. Der Mann hinter ihr ist der Freund von meiner Cousine. Und der Hund heißt Bruno, er gehört meinen Eltern. Das Foto haben wir im Garten meiner Großeltern gemacht."
