@@ -1,0 +1,113 @@
+lesson: b1.26
+items:
+  - id: beziehung
+    de: Beziehung
+    en: relationship
+    pos: noun
+    article: die
+    plural: Beziehungen
+    example: Sie hat eine gute Beziehung zu ihren Eltern.
+    exampleEn: She has a good relationship with her parents.
+  - id: sich-verlieben
+    de: sich verlieben in + A
+    en: to fall in love with
+    pos: verb
+    example: Er hat sich in seine Kollegin verliebt.
+    exampleEn: He fell in love with his colleague.
+  - id: sich-streiten
+    de: sich streiten
+    en: to argue
+    pos: verb
+    example: Die Kinder streiten sich ständig.
+    exampleEn: The children argue all the time.
+  - id: sich-versoehnen
+    de: sich versöhnen
+    en: to make up, to be reconciled
+    pos: verb
+    example: Nach dem Streit haben wir uns versöhnt.
+    exampleEn: After the argument we made up.
+  - id: sich-trennen
+    de: sich trennen
+    en: to separate, to split up
+    pos: verb
+    example: Sie haben sich nach fünf Jahren getrennt.
+    exampleEn: They split up after five years.
+  - id: sich-scheiden-lassen
+    de: sich scheiden lassen
+    en: to get divorced
+    pos: verb
+    example: Meine Eltern haben sich scheiden lassen.
+    exampleEn: My parents got divorced.
+  - id: geschieden
+    de: geschieden
+    en: divorced
+    pos: adjective
+    example: Er ist seit zwei Jahren geschieden.
+    exampleEn: He has been divorced for two years.
+  - id: alleinerziehend
+    de: alleinerziehend
+    en: single (parent)
+    pos: adjective
+    example: Sie ist alleinerziehende Mutter.
+    exampleEn: She is a single mother.
+  - id: lebensgefaehrte
+    de: Lebensgefährte
+    en: partner (unmarried)
+    pos: noun
+    article: der
+    plural: Lebensgefährten
+    example: Das ist mein Lebensgefährte Paul.
+    exampleEn: This is my partner Paul.
+  - id: geschwister
+    de: Geschwister
+    en: siblings
+    pos: phrase
+    example: Hast du Geschwister?
+    exampleEn: Do you have any brothers or sisters?
+  - id: schwiegereltern
+    de: Schwiegereltern
+    en: parents-in-law
+    pos: phrase
+    example: Am Sonntag besuchen wir meine Schwiegereltern.
+    exampleEn: On Sunday we are visiting my parents-in-law.
+  - id: zusammenziehen
+    de: zusammenziehen
+    en: to move in together
+    pos: verb
+    example: Wir sind nach einem Jahr zusammengezogen.
+    exampleEn: We moved in together after a year.
+  - id: sich-verstehen
+    de: sich gut verstehen (mit)
+    en: to get on well (with)
+    pos: verb
+    example: Ich verstehe mich gut mit meinem Bruder.
+    exampleEn: I get on well with my brother.
+  - id: kompromiss
+    de: Kompromiss
+    en: compromise
+    pos: noun
+    article: der
+    plural: Kompromisse
+    example: Wir haben einen Kompromiss gefunden.
+    exampleEn: We found a compromise.
+  - id: erziehung
+    de: Erziehung
+    en: upbringing
+    pos: noun
+    article: die
+    example: Die Erziehung war früher strenger.
+    exampleEn: Upbringing used to be stricter.
+  - id: generation
+    de: Generation
+    en: generation
+    pos: noun
+    article: die
+    plural: Generationen
+    example: In unserem Haus leben drei Generationen.
+    exampleEn: Three generations live in our house.
+  - id: einander
+    de: einander
+    en: each other
+    pos: other
+    example: Wir helfen einander.
+    exampleEn: We help each other.
