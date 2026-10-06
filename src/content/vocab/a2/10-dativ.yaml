@@ -1,0 +1,114 @@
+lesson: a2.10
+items:
+  - id: helfen
+    de: helfen
+    en: to help
+    pos: verb
+    example: Kannst du mir helfen?
+    exampleEn: Can you help me?
+  - id: gefallen
+    de: gefallen
+    en: to please (I like it = es gefällt mir)
+    pos: verb
+    example: Der Film hat mir gut gefallen.
+    exampleEn: I liked the film a lot.
+  - id: gehoeren
+    de: gehören
+    en: to belong to
+    pos: verb
+    example: Das Fahrrad gehört meiner Schwester.
+    exampleEn: The bike belongs to my sister.
+  - id: gratulieren
+    de: gratulieren
+    en: to congratulate
+    pos: verb
+    example: Wir gratulieren dir zum Geburtstag.
+    exampleEn: Happy birthday from us.
+  - id: danken
+    de: danken
+    en: to thank
+    pos: verb
+    example: Ich danke Ihnen für Ihre Hilfe.
+    exampleEn: Thank you for your help.
+  - id: schenken
+    de: schenken
+    en: to give (as a present)
+    pos: verb
+    example: Was schenkst du deiner Mutter?
+    exampleEn: What are you giving your mother?
+  - id: zeigen
+    de: zeigen
+    en: to show
+    pos: verb
+    example: Zeig mir bitte deine Wohnung.
+    exampleEn: Please show me your flat.
+  - id: erklaeren
+    de: erklären
+    en: to explain
+    pos: verb
+    example: Können Sie mir das erklären?
+    exampleEn: Can you explain that to me?
+  - id: leihen
+    de: leihen
+    en: to lend
+    pos: verb
+    example: Ich leihe dir mein Buch.
+    exampleEn: I will lend you my book.
+  - id: schmecken
+    de: schmecken
+    en: to taste (good)
+    pos: verb
+    example: Schmeckt dir der Kuchen?
+    exampleEn: Do you like the cake?
+  - id: passen
+    de: passen
+    en: to fit, to suit
+    pos: verb
+    example: Passt dir Montag um zehn?
+    exampleEn: Does Monday at ten suit you?
+  - id: fehlen
+    de: fehlen
+    en: to be missing; to be missed
+    pos: verb
+    example: Meine Familie fehlt mir.
+    exampleEn: I miss my family.
+  - id: wem
+    de: wem?
+    en: to whom?
+    pos: other
+    example: Wem gehört die Tasche?
+    exampleEn: Whose bag is this?
+  - id: gegenueber
+    de: gegenüber
+    en: opposite
+    pos: preposition
+    example: Die Apotheke ist gegenüber dem Bahnhof.
+    exampleEn: The pharmacy is opposite the station.
+  - id: geschenk
+    de: Geschenk
+    en: present, gift
+    pos: noun
+    article: das
+    plural: Geschenke
+    example: Das Geschenk ist von meiner Oma.
+    exampleEn: The present is from my grandmother.
+  - id: es-tut-mir-leid
+    de: Es tut mir leid.
+    en: I am sorry.
+    pos: phrase
+    example: Es tut mir leid, ich habe keine Zeit.
+    exampleEn: I am sorry, I do not have time.
+  - id: mir-ist-kalt
+    de: Mir ist kalt.
+    en: I am cold.
+    pos: phrase
+    example: Mach bitte das Fenster zu, mir ist kalt.
+    exampleEn: Please close the window, I am cold.
+  - id: nachbar
+    de: Nachbar
+    en: neighbour
+    pos: noun
+    article: der
+    plural: Nachbarn
+    example: Ich helfe meinem Nachbarn im Garten.
+    exampleEn: I am helping my neighbour in the garden.
