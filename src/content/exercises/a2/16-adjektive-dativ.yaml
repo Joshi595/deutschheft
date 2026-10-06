@@ -1,0 +1,185 @@
+lesson: a2.16
+sets:
+  - title: After a dative article
+    instructions: Write the adjective with its ending.
+    items:
+      - id: dat1
+        type: fill-blank
+        tags: [dative endings]
+        prompt: "Ich wohne in einer ___ Stadt. (klein)"
+        answers: [kleinen]
+      - id: dat2
+        type: fill-blank
+        tags: [dative endings]
+        prompt: "Er fährt mit dem ___ Auto. (neu)"
+        answers: [neuen]
+      - id: dat3
+        type: fill-blank
+        tags: [dative endings]
+        prompt: "Wir sprechen mit unseren ___ Nachbarn. (alt)"
+        answers: [alten]
+      - id: dat4
+        type: fill-blank
+        tags: [dative endings]
+        prompt: "Das Bild hängt an der ___ Wand. (weiß)"
+        answers: [weißen]
+      - id: dat5
+        type: fill-blank
+        tags: [dative endings]
+        prompt: "Nach einem ___ Tag bin ich müde. (lang)"
+        answers: [langen]
+      - id: dat6
+        type: multiple-choice
+        tags: [dative endings]
+        prompt: "Ich helfe meinem ___ Bruder."
+        options: [kleinen, kleinem, kleiner]
+        answer: kleinen
+
+  - title: No article
+    items:
+      - id: none1
+        type: multiple-choice
+        tags: [no article endings]
+        prompt: "Ein Haus mit ___ Garten."
+        options: [großem, großen, großer]
+        answer: großem
+      - id: none2
+        type: multiple-choice
+        tags: [no article endings]
+        prompt: "Tee mit ___ Milch."
+        options: [warmer, warmen, warmem]
+        answer: warmer
+      - id: none3
+        type: fill-blank
+        tags: [no article endings]
+        prompt: "Zimmer mit ___ Bad. (eigen)"
+        answers: [eigenem]
+      - id: none4
+        type: fill-blank
+        tags: [no article endings]
+        prompt: "Ich wohne mit ___ Leuten zusammen. (nett)"
+        answers: [netten]
+
+  - title: Which case?
+    items:
+      - id: mix1
+        type: multiple-choice
+        tags: [all cases]
+        prompt: "___ Kollegin heißt Sara."
+        options: [Die neue, Der neuen, Die neuen]
+        answer: Die neue
+      - id: mix2
+        type: multiple-choice
+        tags: [all cases]
+        prompt: "Kennst du ___ Kollegen?"
+        options: [den neuen, der neue, dem neuen]
+        answer: den neuen
+      - id: mix3
+        type: multiple-choice
+        tags: [all cases]
+        prompt: "Ich gehe mit ___ Kollegen essen."
+        options: [dem neuen, den neuen, der neue]
+        answer: dem neuen
+      - id: mix4
+        type: multiple-choice
+        tags: [all cases]
+        prompt: "Wir haben ___ Wohnung gefunden."
+        options: [eine schöne, einer schönen, ein schönes]
+        answer: eine schöne
+      - id: mix5
+        type: multiple-choice
+        tags: [all cases]
+        prompt: "Wir wohnen in ___ Wohnung."
+        options: [einer schönen, eine schöne, einem schönen]
+        answer: einer schönen
+      - id: mix6
+        type: true-false
+        tags: [all cases]
+        prompt: "After dem, der and den in the dative, the adjective always ends in -en."
+        answer: true
+
+  - title: A postcard
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [all cases]
+        prompt: Complete the postcard with the right endings.
+        text: "Liebe Oma, wir sind jetzt in einem klein___ Dorf am Meer. Wir wohnen in einer hübsch___ Ferienwohnung mit groß___ Balkon. Jeden Tag gehen wir an den lang___ Strand. Gestern haben wir mit einem nett___ Fischer gesprochen und frisch___ Fisch gekauft. Viele Grüße!"
+        gaps:
+          - [en]
+          - [en]
+          - [em]
+          - [en]
+          - [en]
+          - [en]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [dative endings]
+        prompt: I live in a small town.
+        answer: "Ich wohne in einer kleinen Stadt."
+      - id: order2
+        type: word-order
+        tags: [no article endings]
+        prompt: I like cooking with fresh vegetables.
+        answer: "Ich koche gern mit frischem Gemüse."
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [dative endings]
+        prompt: She lives in a pretty house.
+        answers:
+          - "Sie wohnt in einem hübschen Haus."
+      - id: tr2
+        type: translation
+        tags: [dative endings]
+        prompt: I am talking to a friendly man.
+        answers:
+          - "Ich spreche mit einem freundlichen Mann."
+
+  - title: A room to rent
+    stimulus:
+      kind: text
+      label: Anzeige
+      text: "Helles Zimmer in einer netten WG zu vermieten! Wir sind drei Studenten (22–25 Jahre) und suchen ab 1. Mai eine neue Mitbewohnerin oder einen neuen Mitbewohner. Das Zimmer ist 16 m² groß und hat einen kleinen Balkon. Die Wohnung liegt in einer ruhigen Straße, nur fünf Minuten von der Uni. Wir haben eine große Küche mit neuem Herd und ein Bad mit Dusche. Miete: 420 Euro mit Nebenkosten. Kein Rauchen! Bitte schreib uns eine kurze Mail."
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading]
+        prompt: Das Zimmer hat einen eigenen Balkon.
+        answer: true
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: Die Wohnung ist an einer lauten Straße.
+        answer: false
+      - id: read3
+        type: multiple-choice
+        tags: [reading]
+        prompt: Was kostet das Zimmer?
+        options: ["420 Euro mit Nebenkosten", "420 Euro ohne Nebenkosten", "16 Euro pro m²"]
+        answer: "420 Euro mit Nebenkosten"
+
+  - title: Answer the advert
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, adjective endings]
+        prompt: Write a short email to the flat share above. Introduce yourself and say why you want the room.
+        points:
+          - Who you are (age, job or studies)
+          - Why you are looking for a room
+          - What kind of person you are
+          - A question about the room or a time to visit
+        minWords: 40
+        phrases:
+          - Ich habe eure Anzeige gelesen.
+          - Ich bin … Jahre alt und studiere / arbeite …
+          - Ich suche ein Zimmer, weil …
+          - Kann ich das Zimmer am … ansehen?
+        sample: "Hallo zusammen, ich habe eure Anzeige gelesen und interessiere mich für das helle Zimmer. Ich heiße Tom, bin 23 Jahre alt und studiere Informatik. Im Moment wohne ich bei meinen Eltern in einem kleinen Dorf, aber der Weg zur Uni ist sehr lang. Ich bin ruhig und koche gern. Kann ich das Zimmer am Samstag ansehen? Viele Grüße, Tom"

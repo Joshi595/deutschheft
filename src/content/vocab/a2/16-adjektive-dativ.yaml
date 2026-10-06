@@ -1,0 +1,115 @@
+lesson: a2.16
+items:
+  - id: jung
+    de: jung
+    en: young
+    pos: adjective
+    example: Die junge Frau spricht vier Sprachen.
+    exampleEn: The young woman speaks four languages.
+  - id: nett
+    de: nett
+    en: nice, kind
+    pos: adjective
+    example: Ich wohne mit netten Leuten zusammen.
+    exampleEn: I live with nice people.
+  - id: eigen
+    de: eigen
+    en: own
+    pos: adjective
+    example: Ein Zimmer mit eigenem Bad.
+    exampleEn: A room with its own bathroom.
+  - id: schwer
+    de: schwer
+    en: heavy; difficult
+    pos: adjective
+    example: Er hilft mir mit dem schweren Koffer.
+    exampleEn: He helps me with the heavy suitcase.
+  - id: leicht
+    de: leicht
+    en: light; easy
+    pos: adjective
+    example: Das war eine leichte Aufgabe.
+    exampleEn: That was an easy task.
+  - id: lang
+    de: lang
+    en: long
+    pos: adjective
+    example: Nach einem langen Tag bin ich müde.
+    exampleEn: After a long day I am tired.
+  - id: kurz
+    de: kurz
+    en: short
+    pos: adjective
+    example: Wir machen eine kurze Pause.
+    exampleEn: We are taking a short break.
+  - id: wichtig
+    de: wichtig
+    en: important
+    pos: adjective
+    example: Ich habe einen wichtigen Termin.
+    exampleEn: I have an important appointment.
+  - id: gemuese
+    de: Gemüse
+    en: vegetables
+    pos: noun
+    article: das
+    example: Ich koche mit frischem Gemüse.
+    exampleEn: I cook with fresh vegetables.
+  - id: leute
+    de: die Leute
+    en: people (plural only)
+    pos: phrase
+    example: Auf der Party waren viele nette Leute.
+    exampleEn: There were lots of nice people at the party.
+  - id: stadt
+    de: Stadt
+    en: town, city
+    pos: noun
+    article: die
+    plural: Städte
+    example: Sie wohnt in einer kleinen Stadt.
+    exampleEn: She lives in a small town.
+  - id: dorf
+    de: Dorf
+    en: village
+    pos: noun
+    article: das
+    plural: Dörfer
+    example: Meine Eltern wohnen in einem ruhigen Dorf.
+    exampleEn: My parents live in a quiet village.
+  - id: balkon
+    de: Balkon
+    en: balcony
+    pos: noun
+    article: der
+    plural: Balkone
+    example: Eine Wohnung mit großem Balkon.
+    exampleEn: A flat with a big balcony.
+  - id: koffer
+    de: Koffer
+    en: suitcase
+    pos: noun
+    article: der
+    plural: Koffer
+    example: Ich reise mit einem kleinen Koffer.
+    exampleEn: I travel with a small suitcase.
+  - id: hausaufgabe
+    de: Hausaufgabe
+    en: homework
+    pos: noun
+    article: die
+    plural: Hausaufgaben
+    example: Ich helfe meiner Schwester bei den Hausaufgaben.
+    exampleEn: I help my sister with her homework.
+  - id: freundlich
+    de: freundlich
+    en: friendly
+    pos: adjective
+    example: Wir haben mit einem freundlichen Mann gesprochen.
+    exampleEn: We spoke to a friendly man.
+  - id: huebsch
+    de: hübsch
+    en: pretty
+    pos: adjective
+    example: Sie wohnt in einem hübschen Haus.
+    exampleEn: She lives in a pretty house.
