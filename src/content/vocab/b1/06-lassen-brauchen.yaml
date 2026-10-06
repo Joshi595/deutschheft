@@ -1,0 +1,110 @@
+lesson: b1.06
+items:
+  - id: lassen
+    de: lassen – ließ – hat gelassen
+    en: to let; to leave; to have (something done)
+    pos: verb
+    example: Ich lasse mein Auto reparieren.
+    exampleEn: I am having my car repaired.
+  - id: verlassen-b1
+    de: verlassen
+    en: to leave (a place, a person)
+    pos: verb
+    example: Sie verlässt das Büro um fünf.
+    exampleEn: She leaves the office at five.
+  - id: reparieren
+    de: reparieren
+    en: to repair
+    pos: verb
+    example: Wo kann ich mein Handy reparieren lassen?
+    exampleEn: Where can I get my phone repaired?
+  - id: streichen
+    de: streichen
+    en: to paint (walls)
+    pos: verb
+    example: Wir lassen das Wohnzimmer streichen.
+    exampleEn: We are having the living room painted.
+  - id: schneiden
+    de: schneiden
+    en: to cut
+    pos: verb
+    example: Ich lasse mir die Haare schneiden.
+    exampleEn: I am having my hair cut.
+  - id: faerben
+    de: färben
+    en: to dye, to colour
+    pos: verb
+    example: Sie lässt sich die Haare blond färben.
+    exampleEn: She is having her hair dyed blonde.
+  - id: in-ruhe-lassen
+    de: in Ruhe lassen
+    en: to leave alone
+    pos: phrase
+    example: Lass mich bitte in Ruhe!
+    exampleEn: Please leave me alone!
+  - id: ausreden
+    de: ausreden
+    en: to finish speaking
+    pos: verb
+    example: Lass mich doch ausreden!
+    exampleEn: Let me finish!
+  - id: lass-uns
+    de: Lass uns …!
+    en: Let's …!
+    pos: phrase
+    example: Lass uns morgen schwimmen gehen!
+    exampleEn: Let's go swimming tomorrow!
+  - id: brauchen-zu
+    de: nicht brauchen … zu
+    en: not need to
+    pos: phrase
+    example: Du brauchst nicht zu warten.
+    exampleEn: You do not need to wait.
+  - id: werkstatt
+    de: Werkstatt
+    en: garage, workshop
+    pos: noun
+    article: die
+    plural: Werkstätten
+    example: Das Auto ist in der Werkstatt.
+    exampleEn: The car is at the garage.
+  - id: friseur
+    de: Friseur
+    en: hairdresser
+    pos: noun
+    article: der
+    plural: Friseure
+    example: Ich gehe morgen zum Friseur.
+    exampleEn: I am going to the hairdresser's tomorrow.
+  - id: erlauben
+    de: erlauben
+    en: to allow
+    pos: verb
+    example: Das ist hier nicht erlaubt.
+    exampleEn: That is not allowed here.
+  - id: reinigung
+    de: Reinigung
+    en: dry cleaner's
+    pos: noun
+    article: die
+    plural: Reinigungen
+    example: Ich bringe den Anzug in die Reinigung.
+    exampleEn: I am taking the suit to the dry cleaner's.
+  - id: abholen-b1
+    de: abholen
+    en: to pick up, to collect
+    pos: verb
+    example: Du brauchst mich nicht abzuholen.
+    exampleEn: You do not need to pick me up.
+  - id: liegen-lassen
+    de: liegen lassen
+    en: to leave behind (by mistake)
+    pos: verb
+    example: Ich habe meine Brille im Café liegen lassen.
+    exampleEn: I left my glasses in the café.
+  - id: offen
+    de: offen
+    en: open
+    pos: adjective
+    example: Lass das Fenster bitte offen.
+    exampleEn: Please leave the window open.
