@@ -1,0 +1,114 @@
+lesson: b1.10
+items:
+  - id: obwohl
+    de: obwohl
+    en: although
+    pos: conjunction
+    example: Obwohl ich müde bin, gehe ich noch joggen.
+    exampleEn: Although I am tired, I am still going jogging.
+  - id: trotz
+    de: trotz + Genitiv
+    en: despite, in spite of
+    pos: preposition
+    example: Trotz des schlechten Wetters war es ein schöner Tag.
+    exampleEn: Despite the bad weather it was a nice day.
+  - id: trotzdem-b1
+    de: trotzdem
+    en: nevertheless, anyway
+    pos: adverb
+    example: Es war teuer. Trotzdem habe ich es gekauft.
+    exampleEn: It was expensive. I bought it anyway.
+  - id: da-kausal
+    de: da
+    en: since, as (reason)
+    pos: conjunction
+    example: Da es spät war, nahmen wir ein Taxi.
+    exampleEn: As it was late, we took a taxi.
+  - id: sodass
+    de: sodass
+    en: so that (result)
+    pos: conjunction
+    example: Es hat geschneit, sodass die Schule geschlossen blieb.
+    exampleEn: It snowed, so the school stayed closed.
+  - id: so-dass
+    de: so … dass
+    en: so … that
+    pos: phrase
+    example: Ich war so müde, dass ich sofort eingeschlafen bin.
+    exampleEn: I was so tired that I fell asleep straight away.
+  - id: daher
+    de: daher
+    en: therefore, that is why
+    pos: adverb
+    example: Der Zug fiel aus. Daher kam ich zu spät.
+    exampleEn: The train was cancelled. That is why I was late.
+  - id: streik
+    de: Streik
+    en: strike
+    pos: noun
+    article: der
+    plural: Streiks
+    example: Wegen des Streiks fahren keine Busse.
+    exampleEn: Because of the strike no buses are running.
+  - id: ausgebucht
+    de: ausgebucht
+    en: fully booked
+    pos: adjective
+    example: Das Hotel ist leider ausgebucht.
+    exampleEn: Unfortunately the hotel is fully booked.
+  - id: verschlafen
+    de: verschlafen
+    en: to oversleep
+    pos: verb
+    example: Ich habe heute Morgen verschlafen.
+    exampleEn: I overslept this morning.
+  - id: verpassen
+    de: verpassen
+    en: to miss (a train, a chance)
+    pos: verb
+    example: Er hat den letzten Bus verpasst.
+    exampleEn: He missed the last bus.
+  - id: einschlafen
+    de: einschlafen
+    en: to fall asleep
+    pos: verb
+    example: Das Baby ist endlich eingeschlafen.
+    exampleEn: The baby has finally fallen asleep.
+  - id: krankheit
+    de: Krankheit
+    en: illness
+    pos: noun
+    article: die
+    plural: Krankheiten
+    example: Trotz seiner Krankheit arbeitet er weiter.
+    exampleEn: Despite his illness he carries on working.
+  - id: hoch-preis
+    de: Preis
+    en: price; prize
+    pos: noun
+    article: der
+    plural: Preise
+    example: Trotz des hohen Preises ist das Hotel immer voll.
+    exampleEn: Despite the high price the hotel is always full.
+  - id: folge
+    de: Folge
+    en: consequence; episode
+    pos: noun
+    article: die
+    plural: Folgen
+    example: Das hatte schlimme Folgen.
+    exampleEn: That had bad consequences.
+  - id: ursache
+    de: Ursache
+    en: cause
+    pos: noun
+    article: die
+    plural: Ursachen
+    example: Die Ursache des Unfalls ist noch unklar.
+    exampleEn: The cause of the accident is still unclear.
+  - id: ausfallen-b1
+    de: ausfallen
+    en: to be cancelled
+    pos: verb
+    example: Das Spiel musste ausfallen.
+    exampleEn: The match had to be cancelled.

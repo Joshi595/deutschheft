@@ -1,0 +1,157 @@
+lesson: b1.10
+sets:
+  - title: obwohl, trotzdem or trotz?
+    items:
+      - id: con1
+        type: multiple-choice
+        tags: [contrast]
+        prompt: "___ es regnet, gehen wir spazieren."
+        options: [Obwohl, Trotzdem, Trotz]
+        answer: Obwohl
+      - id: con2
+        type: multiple-choice
+        tags: [contrast]
+        prompt: "Es regnet. ___ gehen wir spazieren."
+        options: [Trotzdem, Obwohl, Trotz]
+        answer: Trotzdem
+      - id: con3
+        type: multiple-choice
+        tags: [contrast]
+        prompt: "___ des Regens gehen wir spazieren."
+        options: [Trotz, Obwohl, Trotzdem]
+        answer: Trotz
+      - id: con4
+        type: multiple-choice
+        tags: [contrast]
+        prompt: "Er kam zur Arbeit, …"
+        options: ["obwohl er krank war.", "obwohl war er krank.", "obwohl er war krank."]
+        answer: "obwohl er krank war."
+      - id: con5
+        type: word-order
+        tags: [contrast]
+        prompt: Although she has little time, she always helps me.
+        answer: "Obwohl sie wenig Zeit hat, hilft sie mir immer."
+
+  - title: Reasons
+    items:
+      - id: rea1
+        type: multiple-choice
+        tags: [reason]
+        prompt: "Warum kommst du nicht? – ___ ich krank bin."
+        options: [Weil, Da, Deshalb]
+        answer: Weil
+      - id: rea2
+        type: multiple-choice
+        tags: [reason]
+        prompt: "___ des Streiks fahren heute keine Züge."
+        options: [Wegen, Weil, Da]
+        answer: Wegen
+      - id: rea3
+        type: multiple-choice
+        tags: [reason]
+        prompt: "___ der Kurs ausgebucht ist, können wir Sie leider nicht anmelden."
+        options: [Da, Deshalb, Wegen]
+        answer: Da
+      - id: rea4
+        type: matching
+        tags: [connector groups]
+        prompt: Match each word with its word order.
+        pairs:
+          - { left: obwohl, right: verb at the end }
+          - { left: trotzdem, right: verb straight after it }
+          - { left: trotz, right: followed by a noun }
+          - { left: denn, right: normal word order after it }
+
+  - title: Results
+    items:
+      - id: res1
+        type: multiple-choice
+        tags: [result]
+        prompt: "Es hat stark geregnet, ___ das Spiel ausfallen musste."
+        options: [sodass, obwohl, damit]
+        answer: sodass
+      - id: res2
+        type: fill-blank
+        tags: [result]
+        prompt: "Ich war so müde, ___ ich sofort eingeschlafen bin."
+        answers: [dass]
+      - id: res3
+        type: word-order
+        tags: [result]
+        prompt: He overslept, so he missed the train.
+        answer: "Er hat verschlafen, sodass er den Zug verpasst hat."
+      - id: res4
+        type: true-false
+        tags: [result]
+        prompt: "sodass introduces the result, not the reason."
+        answer: true
+      - id: res5
+        type: translation
+        tags: [result]
+        prompt: "The music was so loud that I could not sleep."
+        answers:
+          - "Die Musik war so laut, dass ich nicht schlafen konnte."
+
+  - title: Say it another way
+    instructions: Rewrite the sentence with the word in brackets.
+    items:
+      - id: rw1
+        type: translation
+        tags: [rephrasing]
+        prompt: "Das Hotel war teuer. Trotzdem haben wir es gebucht. (obwohl)"
+        answers:
+          - "Obwohl das Hotel teuer war, haben wir es gebucht."
+          - "Wir haben das Hotel gebucht, obwohl es teuer war."
+      - id: rw2
+        type: translation
+        tags: [rephrasing]
+        prompt: "Ich war krank. Deshalb bin ich zu Hause geblieben. (da)"
+        answers:
+          - "Da ich krank war, bin ich zu Hause geblieben."
+      - id: rw3
+        type: translation
+        tags: [rephrasing]
+        prompt: "Obwohl das Wetter schlecht war, war es ein schöner Tag. (trotz)"
+        answers:
+          - "Trotz des schlechten Wetters war es ein schöner Tag."
+      - id: rw4
+        type: translation
+        tags: [rephrasing]
+        prompt: "Weil es einen Streik gibt, fahren keine Busse. (wegen)"
+        answers:
+          - "Wegen des Streiks fahren keine Busse."
+
+  - title: A bad day
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [mixed]
+        prompt: Fill in the gaps.
+        bank: [Obwohl, sodass, Trotzdem, Da, wegen, so]
+        text: "Gestern war ein schlimmer Tag. ___ ich den Wecker gestellt hatte, habe ich verschlafen. Ich bin ___ schnell gelaufen, dass ich fast gefallen bin. Der Bus kam ___ eines Unfalls zu spät, ___ ich die Besprechung verpasst habe. ___ mein Chef sehr nett ist, war er nicht böse. ___ war ich den ganzen Tag schlecht gelaunt."
+        gaps:
+          - [Obwohl]
+          - [so]
+          - [wegen]
+          - [sodass]
+          - [Da]
+          - [Trotzdem]
+
+  - title: Write about a decision
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, connectors]
+        prompt: "Write about a decision you made although there were good reasons against it."
+        points:
+          - What the decision was
+          - The reasons against it (obwohl, trotz)
+          - Why you did it anyway (weil, da)
+          - What the result was (sodass, deshalb)
+        minWords: 60
+        phrases:
+          - Obwohl …, habe ich …
+          - Trotz … habe ich mich entschieden, …
+          - Da …, …
+          - …, sodass …
+        sample: "Vor zwei Jahren habe ich meinen sicheren Job gekündigt, obwohl alle mir davon abgeraten haben. Trotz des guten Gehalts war ich dort nicht glücklich. Da ich schon immer mit Kindern arbeiten wollte, habe ich eine Ausbildung zur Erzieherin angefangen. Am Anfang hatte ich wenig Geld, sodass ich in eine kleinere Wohnung ziehen musste. Trotzdem bereue ich die Entscheidung nicht, denn heute macht mir meine Arbeit jeden Tag Spaß."
