@@ -1,0 +1,173 @@
+lesson: b1.12
+sets:
+  - title: Present passive
+    items:
+      - id: pres1
+        type: fill-blank
+        tags: [present]
+        prompt: "Hier ___ Deutsch gesprochen."
+        answers: [wird]
+      - id: pres2
+        type: fill-blank
+        tags: [present]
+        prompt: "Die Briefe ___ jeden Morgen gebracht."
+        answers: [werden]
+      - id: pres3
+        type: fill-blank
+        tags: [present]
+        prompt: "Das Bad wird gerade ___. (renovieren)"
+        answers: [renoviert]
+      - id: pres4
+        type: multiple-choice
+        tags: [present]
+        prompt: "Ich ___ oft nach meinem Akzent gefragt."
+        options: [werde, wird, bin]
+        answer: werde
+
+  - title: Past and Perfekt
+    items:
+      - id: past1
+        type: fill-blank
+        tags: [past]
+        prompt: "Das Haus ___ 1910 gebaut."
+        answers: [wurde]
+      - id: past2
+        type: fill-blank
+        tags: [past]
+        prompt: "Die Verletzten ___ ins Krankenhaus gebracht."
+        answers: [wurden]
+      - id: past3
+        type: multiple-choice
+        tags: [Perfekt]
+        prompt: "Mein Fahrrad ist gestohlen ___."
+        options: [worden, geworden, werden]
+        answer: worden
+      - id: past4
+        type: multiple-choice
+        tags: [Perfekt]
+        prompt: "Die Rechnung ___ schon bezahlt worden."
+        options: [ist, hat, wird]
+        answer: ist
+
+  - title: With modal verbs
+    items:
+      - id: mod1
+        type: multiple-choice
+        tags: [modal]
+        prompt: Choose the correct sentence.
+        options:
+          - "Das Formular muss bis Freitag abgegeben werden."
+          - "Das Formular muss bis Freitag werden abgegeben."
+          - "Das Formular wird bis Freitag abgegeben müssen."
+        answer: "Das Formular muss bis Freitag abgegeben werden."
+      - id: mod2
+        type: word-order
+        tags: [modal]
+        prompt: Unfortunately it cannot be repaired.
+        answer: "Das kann leider nicht repariert werden."
+      - id: mod3
+        type: word-order
+        tags: [modal]
+        prompt: Smoking is not allowed here.
+        answer: "Hier darf nicht geraucht werden."
+
+  - title: Active to passive
+    instructions: Rewrite the sentence in the passive. Leave out the doer unless it is a name.
+    items:
+      - id: ap1
+        type: translation
+        tags: [transform]
+        prompt: "Man repariert das Auto. → Das Auto …"
+        answers:
+          - "Das Auto wird repariert."
+      - id: ap2
+        type: translation
+        tags: [transform]
+        prompt: "Man baute die Brücke 1890. → Die Brücke …"
+        answers:
+          - "Die Brücke wurde 1890 gebaut."
+      - id: ap3
+        type: translation
+        tags: [transform]
+        prompt: "Picasso hat das Bild gemalt. → Das Bild … (Präteritum)"
+        answers:
+          - "Das Bild wurde von Picasso gemalt."
+      - id: ap4
+        type: translation
+        tags: [transform]
+        prompt: "Man muss die Rechnung bis Montag bezahlen. → Die Rechnung …"
+        answers:
+          - "Die Rechnung muss bis Montag bezahlt werden."
+
+  - title: State or action?
+    items:
+      - id: sa1
+        type: multiple-choice
+        tags: [state passive]
+        prompt: "It is 8 pm. The shop is shut. Das Geschäft ___ geschlossen."
+        options: [ist, wird]
+        answer: ist
+      - id: sa2
+        type: multiple-choice
+        tags: [state passive]
+        prompt: "Every evening at 8 pm the shop is shut (by someone). Das Geschäft ___ um 20 Uhr geschlossen."
+        options: [wird, ist]
+        answer: wird
+
+  - title: A recipe
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [process]
+        prompt: Complete the recipe with passive forms.
+        bank: [werden, wird, geschält, geschnitten, gekocht, serviert]
+        text: "Zuerst ___ die Kartoffeln ___. Dann werden sie in Stücke ___ und zwanzig Minuten ___. Danach ___ Butter und Milch dazugegeben. Zum Schluss wird der Kartoffelbrei heiß ___."
+        gaps:
+          - [werden]
+          - [geschält]
+          - [geschnitten]
+          - [gekocht]
+          - [werden]
+          - [serviert]
+
+  - title: City history
+    stimulus:
+      kind: text
+      label: Stadtführer
+      text: "Die Stadt wurde im Jahr 1120 von Kaufleuten gegründet. Im Mittelalter wurde eine große Stadtmauer gebaut, von der heute noch Teile zu sehen sind. Im Zweiten Weltkrieg wurde die Altstadt fast vollständig zerstört. Nach dem Krieg wurden die wichtigsten Gebäude wieder aufgebaut. Heute wird die Stadt jedes Jahr von über einer Million Touristen besucht."
+    items:
+      - id: read1
+        type: multiple-choice
+        tags: [reading]
+        prompt: Von wem wurde die Stadt gegründet?
+        options: [von Kaufleuten, von einem König, von Touristen]
+        answer: von Kaufleuten
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: Von der Stadtmauer ist heute nichts mehr zu sehen.
+        answer: false
+      - id: read3
+        type: true-false
+        tags: [reading]
+        prompt: Nach dem Krieg wurden wichtige Gebäude wieder aufgebaut.
+        answer: true
+
+  - title: Describe a process
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, passive]
+        prompt: "Describe how a dish from your country is made, or how a typical process works at your job, using the passive."
+        points:
+          - What it is
+          - The first steps (zuerst, dann)
+          - The next steps (danach)
+          - How it is finished or served (zum Schluss)
+        minWords: 60
+        phrases:
+          - Zuerst wird / werden …
+          - Dann wird … geschnitten / gekocht / gemischt.
+          - Danach …
+          - Zum Schluss wird … serviert.
+        sample: "Ich beschreibe, wie in meiner Familie Pfannkuchen gemacht werden. Zuerst werden Mehl, Eier und Milch in eine Schüssel gegeben. Dann wird alles gut gemischt, und eine Prise Salz wird dazugegeben. Danach wird eine Pfanne mit etwas Butter heiß gemacht. Der Teig wird in die Pfanne gegossen und auf beiden Seiten gebacken. Zum Schluss werden die Pfannkuchen mit Zucker und Zitrone serviert."
