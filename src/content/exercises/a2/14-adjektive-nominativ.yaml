@@ -1,0 +1,205 @@
+lesson: a2.14
+sets:
+  - title: Ending or no ending?
+    items:
+      - id: pos1
+        type: multiple-choice
+        tags: [adjective endings]
+        prompt: "Die Wohnung ist ___."
+        options: [klein, kleine, kleiner]
+        answer: klein
+        explanation: After sein the adjective has no ending.
+      - id: pos2
+        type: multiple-choice
+        tags: [adjective endings]
+        prompt: "Das ist eine ___ Wohnung."
+        options: [kleine, klein, kleiner]
+        answer: kleine
+      - id: pos3
+        type: true-false
+        tags: [adjective endings]
+        prompt: "'Der Kaffee ist heißer' is the normal way to say 'The coffee is hot'."
+        answer: false
+
+  - title: After der, die, das
+    instructions: Fill in the ending (or write the whole adjective).
+    items:
+      - id: def1
+        type: fill-blank
+        tags: [definite article endings]
+        prompt: "Der ___ Kollege heißt Ben. (neu)"
+        answers: [neue]
+      - id: def2
+        type: fill-blank
+        tags: [definite article endings]
+        prompt: "Die ___ Küche ist sehr praktisch. (klein)"
+        answers: [kleine]
+      - id: def3
+        type: fill-blank
+        tags: [definite article endings]
+        prompt: "Das ___ Sofa ist bequem. (alt)"
+        answers: [alte]
+      - id: def4
+        type: fill-blank
+        tags: [definite article endings]
+        prompt: "Die ___ Fenster sind schmutzig. (groß, plural)"
+        answers: [großen]
+      - id: def5
+        type: fill-blank
+        tags: [definite article endings]
+        prompt: "Dieser ___ Pullover gefällt mir. (rot)"
+        answers: [rote]
+
+  - title: After ein, kein, mein
+    items:
+      - id: indef1
+        type: multiple-choice
+        tags: [indefinite article endings]
+        prompt: "Das ist ein ___ Film."
+        options: [guter, gute, gutes]
+        answer: guter
+      - id: indef2
+        type: multiple-choice
+        tags: [indefinite article endings]
+        prompt: "Das ist ein ___ Problem."
+        options: [großes, großer, große]
+        answer: großes
+      - id: indef3
+        type: multiple-choice
+        tags: [indefinite article endings]
+        prompt: "Hier ist eine ___ Wohnung."
+        options: [schöne, schöner, schönes]
+        answer: schöne
+      - id: indef4
+        type: fill-blank
+        tags: [indefinite article endings]
+        prompt: "Meine ___ Nachbarn sind sehr nett. (neu)"
+        answers: [neuen]
+      - id: indef5
+        type: fill-blank
+        tags: [indefinite article endings]
+        prompt: "Das ist kein ___ Auto. (teuer)"
+        answers: [teures]
+        explanation: teuer drops its second e before an ending.
+      - id: indef6
+        type: fill-blank
+        tags: [indefinite article endings]
+        prompt: "Das ist mein ___ Freund Tom. (best-)"
+        answers: [bester]
+
+  - title: No article
+    items:
+      - id: none1
+        type: multiple-choice
+        tags: [no article endings]
+        prompt: "___ Kaffee ist der beste Kaffee."
+        options: [Frischer, Frische, Frisches]
+        answer: Frischer
+      - id: none2
+        type: multiple-choice
+        tags: [no article endings]
+        prompt: "___ Wasser ist gesund."
+        options: [Kaltes, Kalter, Kalte]
+        answer: Kaltes
+      - id: none3
+        type: fill-blank
+        tags: [no article endings]
+        prompt: "___ Milch, bitte! (frisch)"
+        answers: [Frische]
+
+  - title: A flat advert
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [adjective endings]
+        prompt: Complete the advert with the right endings.
+        text: "Schön___ 3-Zimmer-Wohnung im Zentrum! Die Wohnung hat eine groß___ Küche und ein hell___ Bad. Das Wohnzimmer ist ruhig und hat einen Balkon. Ein klein___ Keller ist auch dabei. Die neu___ Fenster sind sehr gut. Günstig___ Miete: 750 Euro."
+        gaps:
+          - [e]
+          - [e]
+          - [es]
+          - [er]
+          - [en]
+          - [e]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [adjective endings]
+        prompt: That is a very good idea.
+        answer: "Das ist eine sehr gute Idee."
+      - id: order2
+        type: word-order
+        tags: [adjective endings]
+        prompt: The new neighbours are very friendly.
+        answer: "Die neuen Nachbarn sind sehr freundlich."
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [adjective endings]
+        prompt: That is a big problem.
+        answers:
+          - "Das ist ein großes Problem."
+      - id: tr2
+        type: translation
+        tags: [adjective endings]
+        prompt: The old flat was dark.
+        answers:
+          - "Die alte Wohnung war dunkel."
+
+  - title: Looking at a flat
+    stimulus:
+      kind: audio
+      label: Wohnungsbesichtigung
+      lines:
+        - speaker: Vermieterin
+          text: "So, hier ist das Wohnzimmer. Es ist hell und ruhig, denn die Fenster gehen zum Hof."
+        - speaker: Mieter
+          text: "Schön. Und das ist die Küche?"
+        - speaker: Vermieterin
+          text: "Ja. Die Küche ist nicht groß, aber der Herd und der Kühlschrank sind ganz neu."
+        - speaker: Mieter
+          text: "Gibt es auch einen Keller?"
+        - speaker: Vermieterin
+          text: "Ja, ein kleiner Keller ist dabei. Und die Miete ist 680 Euro warm."
+    items:
+      - id: listen1
+        type: true-false
+        tags: [listening]
+        prompt: Das Wohnzimmer ist laut.
+        answer: false
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was ist neu in der Küche?
+        options: ["der Herd und der Kühlschrank", "die Fenster", "der Tisch"]
+        answer: "der Herd und der Kühlschrank"
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wie ist der Keller?
+        options: [klein, groß, neu]
+        answer: klein
+
+  - title: Describe it
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, adjective endings]
+        prompt: Describe your flat or your room in a message to a friend who wants to visit.
+        points:
+          - How big it is and how many rooms it has
+          - What the rooms are like (at least three adjectives before nouns)
+          - Something you like
+          - Something that is not so good
+        minWords: 40
+        phrases:
+          - Ich habe eine … Wohnung / ein … Zimmer.
+          - Es gibt einen … / eine … / ein …
+          - Das … gefällt mir sehr.
+          - Leider ist … / Der Nachteil ist …
+        sample: "Hallo Mia, meine neue Wohnung ist nicht groß, aber sehr schön. Sie hat zwei Zimmer, eine kleine Küche und ein helles Bad. Das Wohnzimmer hat einen großen Balkon, und der Balkon gefällt mir sehr. Leider ist die Straße ziemlich laut. Komm bald vorbei! Viele Grüße, Lena"
