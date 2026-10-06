@@ -1,0 +1,106 @@
+lesson: a2.13
+items:
+  - id: seit
+    de: seit
+    en: since, for (still going on)
+    pos: preposition
+    example: Ich lerne seit einem Jahr Deutsch.
+    exampleEn: I have been learning German for a year.
+  - id: vor
+    de: vor
+    en: ago; before
+    pos: preposition
+    example: Ich bin vor drei Jahren umgezogen.
+    exampleEn: I moved three years ago.
+  - id: ab
+    de: ab
+    en: from … on
+    pos: preposition
+    example: Ab Montag arbeite ich wieder.
+    exampleEn: From Monday I am working again.
+  - id: bis
+    de: bis
+    en: until, by
+    pos: preposition
+    example: Bis morgen!
+    exampleEn: See you tomorrow!
+  - id: fuer
+    de: für
+    en: for (a planned period)
+    pos: preposition
+    example: Wir fahren für eine Woche weg.
+    exampleEn: We are going away for a week.
+  - id: seit-wann
+    de: Seit wann …?
+    en: How long … / Since when …?
+    pos: phrase
+    example: Seit wann wohnst du hier?
+    exampleEn: How long have you been living here?
+  - id: wie-lange
+    de: Wie lange …?
+    en: How long …?
+    pos: phrase
+    example: Wie lange dauert der Film?
+    exampleEn: How long is the film?
+  - id: letzte
+    de: letzte
+    en: last
+    pos: adjective
+    example: Letzte Woche war ich krank.
+    exampleEn: I was ill last week.
+  - id: naechste
+    de: nächste
+    en: next
+    pos: adjective
+    example: Nächstes Jahr fahren wir nach Italien.
+    exampleEn: We are going to Italy next year.
+  - id: jeden
+    de: jeden Tag
+    en: every day
+    pos: phrase
+    example: Ich fahre jeden Tag mit dem Rad.
+    exampleEn: I cycle every day.
+  - id: ganze
+    de: den ganzen Tag
+    en: all day
+    pos: phrase
+    example: Es hat den ganzen Tag geregnet.
+    exampleEn: It rained all day.
+  - id: damals
+    de: damals
+    en: back then, at that time
+    pos: adverb
+    example: Damals war ich noch Student.
+    exampleEn: I was still a student back then.
+  - id: bald
+    de: bald
+    en: soon
+    pos: adverb
+    example: Bis bald!
+    exampleEn: See you soon!
+  - id: inzwischen
+    de: inzwischen
+    en: meanwhile, by now
+    pos: adverb
+    example: Inzwischen spreche ich gut Deutsch.
+    exampleEn: By now I speak German well.
+  - id: frueher
+    de: früher
+    en: in the past, earlier
+    pos: adverb
+    example: Früher habe ich in Hamburg gewohnt.
+    exampleEn: I used to live in Hamburg.
+  - id: spaeter
+    de: später
+    en: later
+    pos: adverb
+    example: Ich rufe dich später an.
+    exampleEn: I will call you later.
+  - id: monat
+    de: Monat
+    en: month
+    pos: noun
+    article: der
+    plural: Monate
+    example: Der Kurs dauert drei Monate.
+    exampleEn: The course lasts three months.
