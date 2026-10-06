@@ -1,0 +1,159 @@
+lesson: b1.09
+sets:
+  - title: zu or no zu?
+    items:
+      - id: zu1
+        type: multiple-choice
+        tags: [zu]
+        prompt: "Ich versuche, pünktlich ___."
+        options: [zu sein, sein, zu bin]
+        answer: zu sein
+      - id: zu2
+        type: multiple-choice
+        tags: [zu]
+        prompt: "Ich kann gut ___."
+        options: [schwimmen, zu schwimmen]
+        answer: schwimmen
+      - id: zu3
+        type: multiple-choice
+        tags: [zu]
+        prompt: "Es fängt an ___."
+        options: [zu regnen, regnen]
+        answer: zu regnen
+      - id: zu4
+        type: true-false
+        tags: [zu]
+        prompt: "Modal verbs like können and müssen are followed by zu."
+        answer: false
+
+  - title: Where does zu go?
+    items:
+      - id: pos1
+        type: fill-blank
+        tags: [separable verbs]
+        prompt: "Ich habe vergessen, dich ___. (anrufen)"
+        answers: [anzurufen]
+      - id: pos2
+        type: fill-blank
+        tags: [separable verbs]
+        prompt: "Es ist nicht leicht, früh ___. (aufstehen)"
+        answers: [aufzustehen]
+      - id: pos3
+        type: fill-blank
+        tags: [separable verbs]
+        prompt: "Ich freue mich, Sie ___. (kennenlernen)"
+        answers: [kennenzulernen]
+      - id: pos4
+        type: fill-blank
+        tags: [inseparable verbs]
+        prompt: "Es ist schwer, ihn ___. (verstehen)"
+        answers: [zu verstehen]
+
+  - title: um … zu or damit?
+    items:
+      - id: ud1
+        type: multiple-choice
+        tags: [um zu damit]
+        prompt: "Ich lerne Deutsch, ___ in Deutschland zu arbeiten."
+        options: [um, damit, für]
+        answer: um
+      - id: ud2
+        type: multiple-choice
+        tags: [um zu damit]
+        prompt: "Ich spreche langsam, ___ du mich verstehst."
+        options: [damit, um, dass zu]
+        answer: damit
+      - id: ud3
+        type: multiple-choice
+        tags: [um zu damit]
+        prompt: "Wir kaufen ein größeres Auto, ___ die Kinder mehr Platz haben."
+        options: [damit, um]
+        answer: damit
+      - id: ud4
+        type: multiple-choice
+        tags: [um zu damit]
+        prompt: "Er fährt nach Berlin, ___ seine Freundin zu besuchen."
+        options: [um, damit]
+        answer: um
+      - id: ud5
+        type: translation
+        tags: [um zu]
+        prompt: "I do sport every day to stay healthy. (um … zu)"
+        answers:
+          - "Ich mache jeden Tag Sport, um gesund zu bleiben."
+          - "Um gesund zu bleiben, mache ich jeden Tag Sport."
+      - id: ud6
+        type: translation
+        tags: [damit]
+        prompt: "I am saving so that my son can study. (damit)"
+        answers:
+          - "Ich spare, damit mein Sohn studieren kann."
+
+  - title: ohne … zu, statt … zu
+    items:
+      - id: os1
+        type: word-order
+        tags: [ohne zu]
+        prompt: He left without saying goodbye.
+        answer: "Er ging, ohne Tschüss zu sagen."
+      - id: os2
+        type: word-order
+        tags: [statt zu]
+        prompt: Instead of driving, I take the bike.
+        answer: "Statt mit dem Auto zu fahren, nehme ich das Fahrrad."
+      - id: os3
+        type: multiple-choice
+        tags: [ohne zu]
+        prompt: "Sie hat das Formular unterschrieben, ___ es zu lesen."
+        options: [ohne, statt, um]
+        answer: ohne
+
+  - title: Expressions
+    items:
+      - id: ex1
+        type: translation
+        tags: [expressions]
+        prompt: It is important to sleep enough.
+        answers:
+          - "Es ist wichtig, genug zu schlafen."
+      - id: ex2
+        type: translation
+        tags: [expressions]
+        prompt: Do you feel like going to the cinema?
+        answers:
+          - "Hast du Lust, ins Kino zu gehen?"
+
+  - title: Why I learn German
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [mixed]
+        prompt: Fill in the gaps.
+        bank: [um, damit, zu, ohne, Statt, anzurufen]
+        text: "Ich lerne Deutsch, ___ später in Wien zu studieren. Ich versuche, jeden Tag eine Stunde ___ lernen. ___ abends fernzusehen, höre ich deutsche Podcasts. Meine Freundin spricht mit mir nur Deutsch, ___ ich schneller lerne. Manchmal vergesse ich, meine Familie ___, aber ich bin nie einen Tag ins Bett gegangen, ___ ein paar Wörter zu wiederholen."
+        gaps:
+          - [um]
+          - [zu]
+          - [Statt]
+          - [damit]
+          - [anzurufen]
+          - [ohne]
+
+  - title: Write about your goals
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, purpose]
+        prompt: "Write about your plans for the next year and why you have them. Use um … zu, damit and at least one other infinitive clause."
+        points:
+          - What you plan to do
+          - Why (um … zu)
+          - Something you do so that someone else benefits (damit)
+          - Something you have decided to stop or start
+        minWords: 60
+        phrases:
+          - Ich habe vor, …
+          - …, um … zu …
+          - …, damit …
+          - Ich habe beschlossen, … aufzuhören / anzufangen.
+        sample: "Nächstes Jahr habe ich vor, die B1-Prüfung zu machen. Ich lerne jeden Abend, um mich gut vorzubereiten. Außerdem möchte ich eine größere Wohnung finden, damit meine Eltern uns besuchen und bei uns schlafen können. Ich habe auch beschlossen, mit dem Rauchen aufzuhören. Es ist nicht leicht, aber es lohnt sich, gesund zu leben. Statt Zigaretten zu kaufen, spare ich das Geld für eine Reise nach Italien."
