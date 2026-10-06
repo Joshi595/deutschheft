@@ -1,7 +1,24 @@
 title: B1
 name: Intermediate
 description: >-
-  Talk about wishes, plans and things that are not real, tell stories in the past, and connect
-  ideas with longer sentences.
+  Tell stories in the past, talk about what is not real, build long sentences with relative
+  clauses and connectors, use the passive and formal German, and discuss everyday topics from
+  work to the environment with your own opinion.
 order: 3
 status: active
+exam: Goethe-Zertifikat B1
+units:
+  - title: Telling stories
+    summary: The simple past, the past perfect, time clauses, and word order in long sentences.
+  - title: Unreal and uncertain
+    summary: Wishes, regrets and unreal conditions, assumptions about the future, and lassen.
+  - title: Longer sentences
+    summary: Relative clauses, infinitive clauses, purpose, contrast and two-part connectors.
+  - title: Formal German
+    summary: The passive, the genitive, the full adjective system, prepositional verbs and word building.
+  - title: Sounding natural
+    summary: Giving and weighing opinions, the small words that colour speech, and choosing the register.
+  - title: Topics
+    summary: Work, environment, media, health, education, money, relationships, culture and society.
+  - title: Exam training
+    summary: The four modules of the Goethe-Zertifikat B1, one at a time, then a full mock exam.
