@@ -1,0 +1,124 @@
+lesson: a2.11
+items:
+  - id: stellen
+    de: stellen
+    en: to put (upright)
+    pos: verb
+    example: Stell die Flasche in den Kühlschrank.
+    exampleEn: Put the bottle in the fridge.
+  - id: legen
+    de: legen
+    en: to put (flat), to lay
+    pos: verb
+    example: Ich lege den Schlüssel auf den Tisch.
+    exampleEn: I put the key on the table.
+  - id: sich-setzen
+    de: sich setzen
+    en: to sit down
+    pos: verb
+    example: Setzen Sie sich bitte.
+    exampleEn: Please sit down.
+  - id: haengen
+    de: hängen
+    en: to hang
+    pos: verb
+    example: Das Bild hängt an der Wand.
+    exampleEn: The picture is hanging on the wall.
+  - id: hinter
+    de: hinter
+    en: behind
+    pos: preposition
+    example: Der Garten ist hinter dem Haus.
+    exampleEn: The garden is behind the house.
+  - id: neben
+    de: neben
+    en: next to
+    pos: preposition
+    example: Die Bank ist neben der Post.
+    exampleEn: The bank is next to the post office.
+  - id: zwischen
+    de: zwischen
+    en: between
+    pos: preposition
+    example: Das Sofa steht zwischen den Fenstern.
+    exampleEn: The sofa is between the windows.
+  - id: ueber
+    de: über
+    en: over, above
+    pos: preposition
+    example: Die Lampe hängt über dem Tisch.
+    exampleEn: The lamp hangs above the table.
+  - id: unter
+    de: unter
+    en: under
+    pos: preposition
+    example: Die Katze liegt unter dem Bett.
+    exampleEn: The cat is lying under the bed.
+  - id: wohin
+    de: wohin?
+    en: where to?
+    pos: adverb
+    example: Wohin fährst du im Urlaub?
+    exampleEn: Where are you going on holiday?
+  - id: wand
+    de: Wand
+    en: wall
+    pos: noun
+    article: die
+    plural: Wände
+    example: An der Wand hängt ein Foto.
+    exampleEn: There is a photo on the wall.
+  - id: regal
+    de: Regal
+    en: shelf, bookcase
+    pos: noun
+    article: das
+    plural: Regale
+    example: Die Bücher stehen im Regal.
+    exampleEn: The books are on the shelf.
+  - id: schreibtisch
+    de: Schreibtisch
+    en: desk
+    pos: noun
+    article: der
+    plural: Schreibtische
+    example: Der Laptop liegt auf dem Schreibtisch.
+    exampleEn: The laptop is on the desk.
+  - id: schublade
+    de: Schublade
+    en: drawer
+    pos: noun
+    article: die
+    plural: Schubladen
+    example: Die Löffel sind in der Schublade.
+    exampleEn: The spoons are in the drawer.
+  - id: kuehlschrank
+    de: Kühlschrank
+    en: fridge
+    pos: noun
+    article: der
+    plural: Kühlschränke
+    example: Ist noch Milch im Kühlschrank?
+    exampleEn: Is there any milk left in the fridge?
+  - id: decke
+    de: Decke
+    en: ceiling; blanket
+    pos: noun
+    article: die
+    plural: Decken
+    example: Die Lampe hängt an der Decke.
+    exampleEn: The lamp hangs from the ceiling.
+  - id: aufraeumen
+    de: aufräumen
+    en: to tidy up
+    pos: verb
+    example: Ich muss mein Zimmer aufräumen.
+    exampleEn: I have to tidy my room.
+  - id: ecke
+    de: Ecke
+    en: corner
+    pos: noun
+    article: die
+    plural: Ecken
+    example: In der Ecke steht eine Pflanze.
+    exampleEn: There is a plant in the corner.
