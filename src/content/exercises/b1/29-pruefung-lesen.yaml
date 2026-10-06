@@ -1,0 +1,92 @@
+lesson: b1.29
+sets:
+  - title: "Teil 1: a blog"
+    instructions: Lesen Sie den Text. Sind die Aussagen richtig oder falsch?
+    stimulus:
+      kind: text
+      label: Blog
+      text: |
+        Mein Jahr ohne Auto
+
+        Vor einem Jahr habe ich mein Auto verkauft. Meine Freunde haben gelacht: „Das schaffst du nie, du wohnst doch auf dem Land!" Am Anfang war es auch schwer. Der Bus fährt nur jede Stunde, und am Wochenende noch seltener. Aber dann habe ich mir ein E-Bike gekauft, und plötzlich war alles einfacher. Zur Arbeit sind es zwölf Kilometer, die ich jetzt in vierzig Minuten fahre – im Auto waren es zwanzig.
+
+        Für den Großeinkauf leihe ich mir einmal im Monat das Auto meiner Nachbarin. Dafür gieße ich ihre Blumen, wenn sie im Urlaub ist. Am meisten überrascht hat mich, wie viel Geld ich spare: über 300 Euro im Monat.
+    items:
+      - id: t1-1
+        type: true-false
+        prompt: Die Freunde glaubten, dass sie ohne Auto gut leben kann.
+        answer: false
+      - id: t1-2
+        type: true-false
+        prompt: Am Wochenende fährt der Bus öfter.
+        answer: false
+      - id: t1-3
+        type: true-false
+        prompt: Mit dem E-Bike braucht sie länger zur Arbeit als mit dem Auto.
+        answer: true
+      - id: t1-4
+        type: true-false
+        prompt: Sie spart jeden Monat mehr als 300 Euro.
+        answer: true
+
+  - title: "Teil 4: for or against?"
+    instructions: "Thema: Sollte man in Innenstädten Autos verbieten? Ist die Person dafür?"
+    items:
+      - id: t4-1
+        type: multiple-choice
+        stimulus:
+          kind: text
+          label: Jana, 34
+          text: "Zwar wäre die Luft besser, aber viele ältere Menschen können nicht so weit laufen. Ein Verbot ist für mich keine Lösung."
+        prompt: Ist Jana für ein Autoverbot?
+        options: [ja, nein]
+        answer: nein
+        shuffle: false
+      - id: t4-2
+        type: multiple-choice
+        stimulus:
+          kind: text
+          label: Mehmet, 52
+          text: "Ich habe ein Geschäft in der Fußgängerzone, und seit dort keine Autos mehr fahren, kommen sogar mehr Kunden. Ich kann es nur empfehlen."
+        prompt: Ist Mehmet für ein Autoverbot?
+        options: [ja, nein]
+        answer: ja
+        shuffle: false
+      - id: t4-3
+        type: multiple-choice
+        stimulus:
+          kind: text
+          label: Lisa, 19
+          text: "Am Anfang war ich skeptisch, weil ich mit dem Auto zur Uni fahre. Trotzdem finde ich: Die Städte gehören den Menschen, nicht den Autos."
+        prompt: Ist Lisa für ein Autoverbot?
+        options: [ja, nein]
+        answer: ja
+        shuffle: false
+
+  - title: "Teil 5: rules"
+    instructions: Lesen Sie die Regeln. Wählen Sie die richtige Lösung.
+    stimulus:
+      kind: text
+      label: Benutzungsordnung der Stadtbibliothek
+      text: |
+        1. Bücher können für vier Wochen ausgeliehen werden. Eine Verlängerung ist zweimal möglich, wenn das Buch nicht reserviert ist.
+        2. DVDs werden nur für eine Woche ausgeliehen und können nicht verlängert werden.
+        3. Für verspätete Rückgaben wird eine Gebühr von 0,50 € pro Tag und Medium erhoben.
+        4. Essen und Trinken sind in den Lesesälen nicht gestattet. Wasser in geschlossenen Flaschen ist erlaubt.
+    items:
+      - id: t5-1
+        type: multiple-choice
+        prompt: Ein Buch …
+        options: ["kann man insgesamt bis zu zwölf Wochen behalten.", "muss man nach vier Wochen immer zurückbringen.", "kann man unbegrenzt verlängern."]
+        answer: "kann man insgesamt bis zu zwölf Wochen behalten."
+        explanation: Four weeks plus two extensions of four weeks.
+      - id: t5-2
+        type: multiple-choice
+        prompt: Im Lesesaal darf man …
+        options: ["Wasser aus einer geschlossenen Flasche trinken.", "einen Kaffee trinken.", "ein Sandwich essen."]
+        answer: "Wasser aus einer geschlossenen Flasche trinken."
+      - id: t5-3
+        type: multiple-choice
+        prompt: Wenn man zwei DVDs drei Tage zu spät zurückbringt, …
+        options: ["zahlt man 3 Euro.", "zahlt man 1,50 Euro.", "zahlt man nichts."]
+        answer: "zahlt man 3 Euro."
