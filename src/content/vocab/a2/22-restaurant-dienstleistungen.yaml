@@ -1,0 +1,129 @@
+lesson: a2.22
+items:
+  - id: reservieren
+    de: reservieren
+    en: to book, to reserve
+    pos: verb
+    example: Ich möchte einen Tisch für vier reservieren.
+    exampleEn: I would like to book a table for four.
+  - id: speisekarte
+    de: Speisekarte
+    en: menu
+    pos: noun
+    article: die
+    plural: Speisekarten
+    example: Könnten wir bitte die Speisekarte haben?
+    exampleEn: Could we have the menu, please?
+  - id: empfehlen
+    de: empfehlen
+    en: to recommend
+    pos: verb
+    example: Was können Sie heute empfehlen?
+    exampleEn: What can you recommend today?
+  - id: hauptgericht
+    de: Hauptgericht
+    en: main course
+    pos: noun
+    article: das
+    plural: Hauptgerichte
+    example: Als Hauptgericht nehme ich den Fisch.
+    exampleEn: For my main course I will have the fish.
+  - id: nachtisch
+    de: Nachtisch
+    en: dessert
+    pos: noun
+    article: der
+    plural: Nachtische
+    example: Zum Nachtisch gibt es Eis.
+    exampleEn: There is ice cream for dessert.
+  - id: rechnung
+    de: Rechnung
+    en: bill, invoice
+    pos: noun
+    article: die
+    plural: Rechnungen
+    example: Die Rechnung, bitte!
+    exampleEn: The bill, please!
+  - id: getrennt
+    de: getrennt
+    en: separately
+    pos: adverb
+    example: Zahlen Sie zusammen oder getrennt?
+    exampleEn: Are you paying together or separately?
+  - id: trinkgeld
+    de: Trinkgeld
+    en: tip
+    pos: noun
+    article: das
+    example: Wie viel Trinkgeld gibt man in Deutschland?
+    exampleEn: How much do you tip in Germany?
+  - id: stimmen
+    de: stimmen
+    en: to be correct
+    pos: verb
+    example: Die Rechnung stimmt nicht.
+    exampleEn: The bill is not right.
+  - id: konto
+    de: Konto
+    en: (bank) account
+    pos: noun
+    article: das
+    plural: Konten
+    example: Ich möchte ein Konto eröffnen.
+    exampleEn: I would like to open an account.
+  - id: abheben
+    de: abheben
+    en: to withdraw (money)
+    pos: verb
+    example: Ich muss noch Geld abheben.
+    exampleEn: I still have to withdraw some money.
+  - id: ueberweisen
+    de: überweisen
+    en: to transfer (money)
+    pos: verb
+    example: Ich überweise Ihnen das Geld morgen.
+    exampleEn: I will transfer the money to you tomorrow.
+  - id: sperren
+    de: sperren
+    en: to block
+    pos: verb
+    example: Bitte sperren Sie meine Karte.
+    exampleEn: Please block my card.
+  - id: paket
+    de: Paket
+    en: parcel
+    pos: noun
+    article: das
+    plural: Pakete
+    example: Ich möchte ein Paket abholen.
+    exampleEn: I would like to collect a parcel.
+  - id: briefmarke
+    de: Briefmarke
+    en: stamp
+    pos: noun
+    article: die
+    plural: Briefmarken
+    example: Ich brauche drei Briefmarken für Postkarten.
+    exampleEn: I need three stamps for postcards.
+  - id: kassenbon
+    de: Kassenbon
+    en: receipt
+    pos: noun
+    article: der
+    plural: Kassenbons
+    example: Haben Sie den Kassenbon noch?
+    exampleEn: Do you still have the receipt?
+  - id: zurueckbekommen
+    de: zurückbekommen
+    en: to get back
+    pos: verb
+    example: Kann ich mein Geld zurückbekommen?
+    exampleEn: Can I get my money back?
+  - id: beschwerde
+    de: Beschwerde
+    en: complaint
+    pos: noun
+    article: die
+    plural: Beschwerden
+    example: Ich habe eine Beschwerde.
+    exampleEn: I have a complaint.

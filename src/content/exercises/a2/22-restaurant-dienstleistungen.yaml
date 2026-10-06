@@ -1,0 +1,178 @@
+lesson: a2.22
+sets:
+  - title: Words
+    items:
+      - id: word1
+        type: matching
+        tags: [services vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: die Rechnung, right: the bill }
+          - { left: das Konto, right: the account }
+          - { left: die Briefmarke, right: the stamp }
+          - { left: der Kassenbon, right: the receipt }
+          - { left: das Trinkgeld, right: the tip }
+          - { left: die Speisekarte, right: the menu }
+      - id: word2
+        type: matching
+        tags: [services vocabulary]
+        prompt: Match the verb with the English.
+        pairs:
+          - { left: abheben, right: to withdraw }
+          - { left: überweisen, right: to transfer }
+          - { left: sperren, right: to block }
+          - { left: umtauschen, right: to exchange }
+          - { left: abholen, right: to collect }
+
+  - title: In the restaurant
+    items:
+      - id: rest1
+        type: multiple-choice
+        tags: [restaurant]
+        prompt: "The waiter asks: Zusammen oder getrennt? What does he want to know?"
+        options: ["whether you pay together or separately", "whether you want to sit together", "whether you want one dish or two"]
+        answer: "whether you pay together or separately"
+      - id: rest2
+        type: multiple-choice
+        tags: [restaurant]
+        prompt: "You give 20 euros for a bill of 18.40 and want no change. You say:"
+        options: ["Stimmt so.", "Das stimmt nicht.", "Zahlen, bitte."]
+        answer: "Stimmt so."
+      - id: rest3
+        type: fill-blank
+        tags: [restaurant]
+        prompt: "Was können Sie ___? (recommend)"
+        answers: [empfehlen]
+      - id: rest4
+        type: fill-blank
+        tags: [restaurant]
+        prompt: "Als ___ hätte ich gern das Schnitzel. (main course)"
+        answers: [Hauptgericht]
+      - id: rest5
+        type: true-false
+        tags: [restaurant]
+        prompt: In Germany, 'Wasser' in a restaurant always means still water.
+        answer: false
+
+  - title: Where are you?
+    items:
+      - id: where1
+        type: multiple-choice
+        tags: [services]
+        prompt: "Ich möchte ein Konto eröffnen."
+        options: [in der Bank, in der Post, im Restaurant]
+        answer: in der Bank
+      - id: where2
+        type: multiple-choice
+        tags: [services]
+        prompt: "Ich möchte das Paket per Einschreiben schicken."
+        options: [in der Post, in der Bank, im Kaufhaus]
+        answer: in der Post
+      - id: where3
+        type: multiple-choice
+        tags: [services]
+        prompt: "Haben Sie den Kassenbon noch?"
+        options: [im Geschäft, in der Bank, beim Arzt]
+        answer: im Geschäft
+
+  - title: Complaints
+    items:
+      - id: comp1
+        type: cloze
+        tags: [complaints]
+        prompt: Complete the complaint.
+        bank: [Entschuldigung, bestellt, kalt, zurücknehmen, warten]
+        text: "___, wir ___ schon seit vierzig Minuten. Und ich habe das Steak ___, aber Fisch bekommen. Außerdem ist die Suppe ___. Könnten Sie sie bitte ___?"
+        gaps:
+          - [Entschuldigung]
+          - [warten]
+          - [bestellt]
+          - [kalt]
+          - [zurücknehmen]
+      - id: comp2
+        type: translation
+        tags: [complaints]
+        prompt: The bill is not right.
+        answers:
+          - "Die Rechnung stimmt nicht."
+      - id: comp3
+        type: translation
+        tags: [complaints]
+        prompt: I would like to exchange this.
+        answers:
+          - "Ich möchte das umtauschen."
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [restaurant]
+        prompt: I would like to book a table for two people.
+        answer: "Ich möchte einen Tisch für zwei Personen reservieren."
+      - id: order2
+        type: word-order
+        tags: [bank]
+        prompt: Could you block my card, please?
+        answer: "Könnten Sie bitte meine Karte sperren?"
+      - id: order3
+        type: word-order
+        tags: [post office]
+        prompt: How long does it take to Poland?
+        answer: "Wie lange dauert das nach Polen?"
+
+  - title: At the post office
+    stimulus:
+      kind: audio
+      label: In der Post
+      lines:
+        - speaker: Kunde
+          text: "Guten Tag, ich möchte dieses Paket nach Italien schicken."
+        - speaker: Mitarbeiterin
+          text: "Gern. Das Paket wiegt drei Kilo. Das kostet siebzehn Euro neunundvierzig."
+        - speaker: Kunde
+          text: "Und wie lange dauert das?"
+        - speaker: Mitarbeiterin
+          text: "Ungefähr vier bis sechs Werktage. Mit Express sind es zwei Tage, aber das kostet dreißig Euro mehr."
+        - speaker: Kunde
+          text: "Nein, normal reicht. Kann ich mit Karte zahlen?"
+        - speaker: Mitarbeiterin
+          text: "Ja, natürlich."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wohin schickt der Mann das Paket?
+        options: [nach Italien, nach Polen, nach Spanien]
+        answer: nach Italien
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wie lange dauert der normale Versand?
+        options: ["vier bis sechs Werktage", "zwei Tage", "drei Tage"]
+        answer: "vier bis sechs Werktage"
+      - id: listen3
+        type: true-false
+        tags: [listening]
+        prompt: Der Mann schickt das Paket mit Express.
+        answer: false
+
+  - title: Something is wrong
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, complaints]
+        prompt: You bought headphones last week and they do not work. Go back to the shop and explain the problem.
+        cards: [Was?, Wann gekauft?, Problem, Umtausch oder Geld zurück?]
+        phrases:
+          - Guten Tag, ich habe ein Problem.
+          - Ich habe letzte Woche … gekauft.
+          - … funktioniert nicht / ist kaputt.
+          - Ich möchte … umtauschen. / Kann ich mein Geld zurückbekommen?
+          - Hier ist der Kassenbon.
+        checklist:
+          - I greeted the shop assistant
+          - I said what I bought and when (Perfekt)
+          - I explained the problem clearly
+          - I said what I wanted (exchange or refund)
+        sample: "Guten Tag, ich habe ein Problem. Ich habe letzte Woche diese Kopfhörer bei Ihnen gekauft, aber der linke Kopfhörer funktioniert nicht. Ich möchte sie gern umtauschen. Wenn Sie keine neuen haben, möchte ich mein Geld zurückbekommen. Hier ist der Kassenbon."
