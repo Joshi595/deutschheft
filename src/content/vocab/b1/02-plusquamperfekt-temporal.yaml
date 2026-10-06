@@ -1,0 +1,109 @@
+lesson: b1.02
+items:
+  - id: nachdem
+    de: nachdem
+    en: after (conjunction)
+    pos: conjunction
+    example: Nachdem er gegessen hatte, ging er spazieren.
+    exampleEn: After he had eaten, he went for a walk.
+  - id: bevor
+    de: bevor
+    en: before (conjunction)
+    pos: conjunction
+    example: Bevor ich schlafe, lese ich noch.
+    exampleEn: Before I go to sleep, I read.
+  - id: als-temporal
+    de: als
+    en: when (one time in the past)
+    pos: conjunction
+    example: Als ich klein war, hatte ich einen Hund.
+    exampleEn: When I was little, I had a dog.
+  - id: waehrend-konj
+    de: während
+    en: while
+    pos: conjunction
+    example: Während ich koche, hört sie Musik.
+    exampleEn: While I cook, she listens to music.
+  - id: seitdem
+    de: seitdem
+    en: since (then)
+    pos: conjunction
+    example: Seitdem er Sport macht, schläft er besser.
+    exampleEn: Since he has been doing sport, he sleeps better.
+  - id: bis-konj
+    de: bis
+    en: until
+    pos: conjunction
+    example: Ich warte, bis du kommst.
+    exampleEn: I will wait until you come.
+  - id: sobald
+    de: sobald
+    en: as soon as
+    pos: conjunction
+    example: Sobald ich zu Hause bin, rufe ich dich an.
+    exampleEn: As soon as I am home, I will call you.
+  - id: schon-b1
+    de: schon
+    en: already
+    pos: adverb
+    example: Der Film hatte schon angefangen.
+    exampleEn: The film had already started.
+  - id: kurz-danach
+    de: kurz danach
+    en: shortly afterwards
+    pos: phrase
+    example: Kurz danach fing es an zu regnen.
+    exampleEn: Shortly afterwards it started to rain.
+  - id: zuvor
+    de: zuvor
+    en: before, previously
+    pos: adverb
+    example: Zuvor hatte sie in Wien gelebt.
+    exampleEn: Before that she had lived in Vienna.
+  - id: abfahren-b1
+    de: abfahren
+    en: to depart
+    pos: verb
+    example: Der Zug war schon abgefahren.
+    exampleEn: The train had already left.
+  - id: beenden
+    de: beenden
+    en: to finish, to end
+    pos: verb
+    example: Sie hat ihr Studium letztes Jahr beendet.
+    exampleEn: She finished her studies last year.
+  - id: kindheit
+    de: Kindheit
+    en: childhood
+    pos: noun
+    article: die
+    example: In meiner Kindheit lebten wir auf dem Land.
+    exampleEn: In my childhood we lived in the country.
+  - id: erinnerung
+    de: Erinnerung
+    en: memory
+    pos: noun
+    article: die
+    plural: Erinnerungen
+    example: Ich habe schöne Erinnerungen an diese Zeit.
+    exampleEn: I have lovely memories of that time.
+  - id: ereignis
+    de: Ereignis
+    en: event
+    pos: noun
+    article: das
+    plural: Ereignisse
+    example: Das war ein wichtiges Ereignis in meinem Leben.
+    exampleEn: That was an important event in my life.
+  - id: losfahren
+    de: losfahren
+    en: to set off (by vehicle)
+    pos: verb
+    example: Wir fahren um sieben los.
+    exampleEn: We are setting off at seven.
+  - id: inzwischen-b1
+    de: mittlerweile
+    en: meanwhile, by now
+    pos: adverb
+    example: Mittlerweile wohne ich seit zehn Jahren hier.
+    exampleEn: By now I have been living here for ten years.
