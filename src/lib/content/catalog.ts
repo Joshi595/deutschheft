@@ -156,7 +156,7 @@ async function build(): Promise<Catalog> {
 
       const quizzes = examEntries
         .filter((exam) => exam.data.level === entry.id)
-        .sort((a, b) => a.id.localeCompare(b.id))
+        .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
         .map((exam) => buildExam(exam, href));
 
       const exams: ExamLink[] = quizzes.map((quiz) => ({
