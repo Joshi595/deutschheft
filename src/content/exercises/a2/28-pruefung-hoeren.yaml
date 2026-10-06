@@ -1,0 +1,143 @@
+lesson: a2.28
+sets:
+  - title: "Teil 1: messages and announcements"
+    instructions: Sie hören fünf kurze Texte. Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+    items:
+      - id: h1-1
+        type: multiple-choice
+        stimulus:
+          kind: audio
+          label: Anrufbeantworter
+          lines:
+            - text: "Hallo Frau Becker, hier ist die Praxis Doktor Lenz. Ihr Termin am Donnerstag um neun Uhr geht leider nicht, Doktor Lenz ist krank. Können Sie am Freitag um halb elf kommen? Bitte rufen Sie uns zurück."
+        prompt: Wann soll Frau Becker kommen?
+        options: ["am Freitag um 10:30 Uhr", "am Donnerstag um 9 Uhr", "am Freitag um 9:30 Uhr"]
+        answer: "am Freitag um 10:30 Uhr"
+      - id: h1-2
+        type: multiple-choice
+        stimulus:
+          kind: audio
+          label: Im Kaufhaus
+          lines:
+            - text: "Liebe Kundinnen und Kunden, nur heute: alle Wintermäntel dreißig Prozent billiger! Sie finden die Angebote im ersten Stock, direkt neben den Schuhen."
+        prompt: Wo sind die Angebote?
+        options: ["im ersten Stock", "im Erdgeschoss", "in der Schuhabteilung im zweiten Stock"]
+        answer: "im ersten Stock"
+      - id: h1-3
+        type: multiple-choice
+        stimulus:
+          kind: audio
+          label: Nachricht von Ben
+          lines:
+            - text: "Hi Lisa, hier ist Ben. Wir wollten uns ja um sieben vor dem Kino treffen. Ich schaffe das aber nicht, ich muss noch arbeiten. Lieber um halb acht? Der Film fängt erst um acht an."
+        prompt: Wann möchte Ben sich treffen?
+        options: ["um 19:30 Uhr", "um 19 Uhr", "um 20 Uhr"]
+        answer: "um 19:30 Uhr"
+
+  - title: "Teil 2: a conversation (once)"
+    instructions: "Was macht Kemal an welchem Tag? Sie hören den Text einmal."
+    stimulus:
+      kind: audio
+      label: Kemals Woche
+      plays: 1
+      lines:
+        - speaker: Anna
+          text: "Kemal, hast du diese Woche mal Zeit für einen Kaffee?"
+        - speaker: Kemal
+          text: "Puh, die Woche ist voll. Am Montag spiele ich Fußball, wie immer."
+        - speaker: Anna
+          text: "Und Dienstag?"
+        - speaker: Kemal
+          text: "Dienstag habe ich meinen Deutschkurs. Am Mittwoch muss ich zum Zahnarzt, leider. Aber Donnerstag habe ich frei! Ach nein, da hilft mir mein Bruder beim Umzug."
+        - speaker: Anna
+          text: "Und Freitag?"
+        - speaker: Kemal
+          text: "Freitag geht. Treffen wir uns im Café am Markt?"
+    items:
+      - id: h2-1
+        type: multiple-choice
+        prompt: Montag
+        options: [Fußball, Deutschkurs, Zahnarzt, Umzug, Café]
+        answer: Fußball
+        shuffle: false
+      - id: h2-2
+        type: multiple-choice
+        prompt: Mittwoch
+        options: [Fußball, Deutschkurs, Zahnarzt, Umzug, Café]
+        answer: Zahnarzt
+        shuffle: false
+      - id: h2-3
+        type: multiple-choice
+        prompt: Donnerstag
+        options: [Fußball, Deutschkurs, Zahnarzt, Umzug, Café]
+        answer: Umzug
+        shuffle: false
+        explanation: "He first says he is free, then corrects himself: Ach nein."
+
+  - title: "Teil 3: short dialogues"
+    instructions: Sie hören fünf kurze Gespräche. Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+    items:
+      - id: h3-1
+        type: multiple-choice
+        stimulus:
+          kind: audio
+          label: Gespräch 1
+          lines:
+            - speaker: Frau
+              text: "Was möchtest du zum Geburtstag haben? Ein Buch?"
+            - speaker: Mann
+              text: "Bücher habe ich genug. Eine neue Uhr wäre schön, meine ist kaputt."
+            - speaker: Frau
+              text: "Gut, dann bekommst du eine Uhr."
+        prompt: Was bekommt der Mann zum Geburtstag?
+        options: [eine Uhr, ein Buch, eine Tasche]
+        answer: eine Uhr
+      - id: h3-2
+        type: multiple-choice
+        stimulus:
+          kind: audio
+          label: Gespräch 2
+          lines:
+            - speaker: Mann
+              text: "Wie bist du heute zur Arbeit gekommen? Dein Auto ist doch in der Werkstatt."
+            - speaker: Frau
+              text: "Ich wollte mit dem Fahrrad fahren, aber es hat so geregnet. Dann habe ich den Bus genommen."
+        prompt: Wie ist die Frau zur Arbeit gekommen?
+        options: [mit dem Bus, mit dem Fahrrad, mit dem Auto]
+        answer: mit dem Bus
+
+  - title: "Teil 4: a radio interview"
+    instructions: Sie hören ein Interview. Richtig oder falsch? Sie hören den Text zweimal.
+    stimulus:
+      kind: audio
+      label: Radio Mitte – Menschen in der Stadt
+      lines:
+        - speaker: Moderatorin
+          text: "Herr Schulz, Sie sind Busfahrer in unserer Stadt. Wie lange machen Sie das schon?"
+        - speaker: Herr Schulz
+          text: "Seit fünfzehn Jahren. Vorher war ich Lkw-Fahrer, aber da war ich immer weg von meiner Familie."
+        - speaker: Moderatorin
+          text: "Was gefällt Ihnen an der Arbeit?"
+        - speaker: Herr Schulz
+          text: "Die Menschen. Viele Fahrgäste kenne ich schon lange, wir sagen jeden Morgen Hallo. Nicht so schön ist die Frühschicht. Da muss ich um vier Uhr aufstehen."
+        - speaker: Moderatorin
+          text: "Und was machen Sie in Ihrer Freizeit?"
+        - speaker: Herr Schulz
+          text: "Ich fahre gern Fahrrad! Das Auto steht am Wochenende in der Garage."
+    items:
+      - id: h4-1
+        type: true-false
+        prompt: Herr Schulz ist seit fünfzehn Jahren Busfahrer.
+        answer: true
+      - id: h4-2
+        type: true-false
+        prompt: Als Lkw-Fahrer war er oft zu Hause.
+        answer: false
+      - id: h4-3
+        type: true-false
+        prompt: Ihm gefällt die Frühschicht sehr.
+        answer: false
+      - id: h4-4
+        type: true-false
+        prompt: Am Wochenende fährt er gern Auto.
+        answer: false
