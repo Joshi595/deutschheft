@@ -1,0 +1,100 @@
+lesson: b1.03
+items:
+  - id: sondern
+    de: sondern
+    en: but (rather)
+    pos: conjunction
+    example: Nicht heute, sondern morgen.
+    exampleEn: Not today but tomorrow.
+  - id: wegen-b1
+    de: wegen
+    en: because of
+    pos: preposition
+    example: Wegen des Streiks fahren keine Züge.
+    exampleEn: Because of the strike no trains are running.
+  - id: uebermorgen
+    de: übermorgen
+    en: the day after tomorrow
+    pos: adverb
+    example: Übermorgen habe ich frei.
+    exampleEn: I am off the day after tomorrow.
+  - id: vorgestern
+    de: vorgestern
+    en: the day before yesterday
+    pos: adverb
+    example: Vorgestern war ich beim Arzt.
+    exampleEn: The day before yesterday I was at the doctor's.
+  - id: absichtlich
+    de: absichtlich
+    en: on purpose
+    pos: adverb
+    example: Das habe ich nicht absichtlich gemacht.
+    exampleEn: I did not do that on purpose.
+  - id: zufaellig
+    de: zufällig
+    en: by chance
+    pos: adverb
+    example: Ich habe ihn zufällig im Supermarkt getroffen.
+    exampleEn: I met him by chance in the supermarket.
+  - id: gemeinsam
+    de: gemeinsam
+    en: together
+    pos: adverb
+    example: Wir haben das Projekt gemeinsam geplant.
+    exampleEn: We planned the project together.
+  - id: eilig
+    de: es eilig haben
+    en: to be in a hurry
+    pos: phrase
+    example: Ich habe es heute sehr eilig.
+    exampleEn: I am in a big hurry today.
+  - id: unterwegs
+    de: unterwegs
+    en: on the way, out and about
+    pos: adverb
+    example: Ich bin gerade unterwegs.
+    exampleEn: I am out at the moment.
+  - id: betonen
+    de: betonen
+    en: to emphasise, to stress
+    pos: verb
+    example: Er betonte, dass es nicht seine Schuld war.
+    exampleEn: He stressed that it was not his fault.
+  - id: grund
+    de: Grund
+    en: reason
+    pos: noun
+    article: der
+    plural: Gründe
+    example: Aus welchem Grund hast du abgesagt?
+    exampleEn: For what reason did you cancel?
+  - id: aus-diesem-grund
+    de: aus diesem Grund
+    en: for this reason
+    pos: phrase
+    example: Aus diesem Grund bleibe ich zu Hause.
+    exampleEn: For this reason I am staying at home.
+  - id: auf-diese-weise
+    de: auf diese Weise
+    en: in this way
+    pos: phrase
+    example: Auf diese Weise spart man viel Zeit.
+    exampleEn: In this way you save a lot of time.
+  - id: dorthin
+    de: dorthin
+    en: (to) there
+    pos: adverb
+    example: Wie komme ich am schnellsten dorthin?
+    exampleEn: What is the quickest way to get there?
+  - id: rechtzeitig
+    de: rechtzeitig
+    en: in time
+    pos: adverb
+    example: Wir sind rechtzeitig angekommen.
+    exampleEn: We arrived in time.
+  - id: ausnahmsweise
+    de: ausnahmsweise
+    en: as an exception
+    pos: adverb
+    example: Heute komme ich ausnahmsweise mit dem Auto.
+    exampleEn: Today I am coming by car for once.
