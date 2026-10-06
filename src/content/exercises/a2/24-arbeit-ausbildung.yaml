@@ -1,0 +1,196 @@
+lesson: a2.24
+sets:
+  - title: als, bei or seit?
+    items:
+      - id: abs1
+        type: multiple-choice
+        tags: [work phrases]
+        prompt: "Ich arbeite ___ Krankenpflegerin."
+        options: [als, bei, wie]
+        answer: als
+      - id: abs2
+        type: multiple-choice
+        tags: [work phrases]
+        prompt: "Ich arbeite ___ einer Bank."
+        options: [bei, für, als]
+        answer: bei
+      - id: abs3
+        type: multiple-choice
+        tags: [work phrases]
+        prompt: "Ich arbeite ___ zwei Jahren dort."
+        options: [seit, vor, für]
+        answer: seit
+      - id: abs4
+        type: multiple-choice
+        tags: [work phrases]
+        prompt: Choose the correct sentence.
+        options: ["Ich bin Lehrer.", "Ich bin ein Lehrer.", "Ich bin als Lehrer."]
+        answer: "Ich bin Lehrer."
+
+  - title: Work words
+    items:
+      - id: word1
+        type: matching
+        tags: [work vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: Teilzeit, right: part-time }
+          - { left: die Schicht, right: the shift }
+          - { left: das Gehalt, right: the salary }
+          - { left: der Lebenslauf, right: the CV }
+          - { left: die Bewerbung, right: the application }
+          - { left: die Stelle, right: the job, the position }
+      - id: word2
+        type: fill-blank
+        tags: [work vocabulary]
+        prompt: "Diese Woche habe ich viele ___ gemacht. (overtime)"
+        answers: [Überstunden]
+      - id: word3
+        type: fill-blank
+        tags: [work vocabulary]
+        prompt: "Ich bewerbe mich ___ die Stelle als Verkäuferin."
+        answers: [um]
+
+  - title: School and training
+    items:
+      - id: school1
+        type: multiple-choice
+        tags: [school system]
+        prompt: Which school leads to the Abitur?
+        options: [das Gymnasium, die Grundschule, die Hauptschule]
+        answer: das Gymnasium
+      - id: school2
+        type: true-false
+        tags: [school system]
+        prompt: An Ausbildung combines work at a company with lessons at a Berufsschule.
+        answer: true
+      - id: school3
+        type: multiple-choice
+        tags: [school system]
+        prompt: "Mein Sohn ___ in die dritte Klasse."
+        options: [geht, studiert, lernt]
+        answer: geht
+      - id: school4
+        type: multiple-choice
+        tags: [school system]
+        prompt: "Sie ___ Jura an der Universität Köln."
+        options: [studiert, lernt, geht]
+        answer: studiert
+
+  - title: Your career
+    items:
+      - id: career1
+        type: cloze
+        tags: [career, tenses]
+        prompt: Complete the career story.
+        bank: [habe, war, arbeite, gemacht, studiert, Seit]
+        text: "Nach der Schule ___ ich eine Ausbildung als Hotelfachfrau ___. Dann ___ ich drei Jahre in einem Hotel in Salzburg. Später habe ich Tourismus ___. ___ 2021 ___ ich bei einem Reisebüro in Berlin."
+        gaps:
+          - [habe]
+          - [gemacht]
+          - [war]
+          - [studiert]
+          - [Seit]
+          - [arbeite]
+
+  - title: At work
+    items:
+      - id: work1
+        type: translation
+        tags: [at work]
+        prompt: I am ill and cannot come today.
+        answers:
+          - "Ich bin krank und kann heute nicht kommen."
+      - id: work2
+        type: translation
+        tags: [at work]
+        prompt: Can I leave a message?
+        answers:
+          - "Kann ich eine Nachricht hinterlassen?"
+      - id: work3
+        type: word-order
+        tags: [at work]
+        prompt: Could you call me back, please?
+        answer: "Könnten Sie mich bitte zurückrufen?"
+      - id: work4
+        type: word-order
+        tags: [work phrases]
+        prompt: I have been working as a cook for two years.
+        answer: "Ich arbeite seit zwei Jahren als Koch."
+
+  - title: A job advert
+    stimulus:
+      kind: text
+      label: Stellenanzeige
+      text: "Café Sonnenschein sucht ab 1. Oktober eine Servicekraft (m/w/d) in Teilzeit, 20 Stunden pro Woche, auch am Wochenende. Sie haben Erfahrung in der Gastronomie, sind freundlich und sprechen gut Deutsch. Englisch ist ein Plus. Wir bieten ein nettes Team, gutes Trinkgeld und kostenloses Essen. Schicken Sie Ihre Bewerbung mit Lebenslauf per E-Mail an jobs@cafe-sonnenschein.de."
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading]
+        prompt: Die Stelle ist eine Vollzeitstelle.
+        answer: false
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: Man muss auch am Wochenende arbeiten.
+        answer: true
+      - id: read3
+        type: multiple-choice
+        tags: [reading]
+        prompt: Was muss man schicken?
+        options: ["Bewerbung und Lebenslauf", "nur ein Foto", "nur den Lebenslauf per Post"]
+        answer: "Bewerbung und Lebenslauf"
+
+  - title: A call to work
+    stimulus:
+      kind: audio
+      label: Am Telefon
+      lines:
+        - speaker: Sekretärin
+          text: "Firma Berger, Schmidt am Apparat."
+        - speaker: Herr Okafor
+          text: "Guten Morgen, hier ist David Okafor. Ich bin leider krank und kann heute und morgen nicht kommen."
+        - speaker: Sekretärin
+          text: "Oh, gute Besserung! Waren Sie schon beim Arzt?"
+        - speaker: Herr Okafor
+          text: "Ich habe um zehn einen Termin. Ich schicke die Krankmeldung dann per E-Mail. Könnten Sie bitte Frau Berger Bescheid sagen? Ich hatte heute um drei eine Besprechung mit ihr."
+        - speaker: Sekretärin
+          text: "Natürlich, ich sage es ihr."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wie lange kann Herr Okafor nicht arbeiten?
+        options: ["heute und morgen", "nur heute", "eine Woche"]
+        answer: "heute und morgen"
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Herr Okafor war schon beim Arzt.
+        answer: false
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was soll die Sekretärin machen?
+        options: ["Frau Berger informieren", "einen Arzttermin machen", "die Krankmeldung schicken"]
+        answer: "Frau Berger informieren"
+
+  - title: About you
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, work]
+        prompt: Talk about your work or studies, as in part 2 of the A2 speaking exam.
+        cards: [Beruf / Studium, Wo? Seit wann?, Arbeitszeiten, Was gefällt dir?, Pläne]
+        phrases:
+          - Ich bin … / Ich arbeite als … bei …
+          - Ich arbeite seit … dort.
+          - Ich arbeite Vollzeit / Teilzeit, von … bis …
+          - Mir gefällt …, aber …
+          - In Zukunft möchte ich …
+        checklist:
+          - I said what I do and where
+          - I used seit with the present
+          - I talked about my working hours
+          - I said what I like and what I plan
+        sample: "Ich bin Krankenpflegerin und arbeite seit vier Jahren in einem Krankenhaus in Köln. Ich arbeite Vollzeit, oft in Schichten, manchmal auch nachts. Mir gefällt die Arbeit mit den Patienten, und meine Kolleginnen sind sehr nett. Aber die Nachtschichten sind anstrengend. In Zukunft möchte ich eine Weiterbildung machen."
