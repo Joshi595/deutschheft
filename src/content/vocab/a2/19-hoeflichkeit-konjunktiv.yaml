@@ -1,0 +1,110 @@
+lesson: a2.19
+items:
+  - id: koennte
+    de: könnte
+    en: could (polite)
+    pos: verb
+    example: Könnten Sie mir bitte helfen?
+    exampleEn: Could you help me, please?
+  - id: wuerde
+    de: würde
+    en: would
+    pos: verb
+    example: Würden Sie bitte langsamer sprechen?
+    exampleEn: Would you speak more slowly, please?
+  - id: haette-gern
+    de: ich hätte gern
+    en: I would like (a thing)
+    pos: phrase
+    example: Ich hätte gern zwei Brötchen.
+    exampleEn: I would like two bread rolls.
+  - id: waere
+    de: wäre
+    en: would be
+    pos: verb
+    example: Das wäre super!
+    exampleEn: That would be great!
+  - id: sollte
+    de: sollte
+    en: should
+    pos: verb
+    example: Du solltest früher ins Bett gehen.
+    exampleEn: You should go to bed earlier.
+  - id: an-deiner-stelle
+    de: an deiner Stelle
+    en: if I were you
+    pos: phrase
+    example: An deiner Stelle würde ich den Job nehmen.
+    exampleEn: If I were you I would take the job.
+  - id: wie-waere-es-mit
+    de: Wie wäre es mit …?
+    en: How about …?
+    pos: phrase
+    example: Wie wäre es mit einem Spaziergang?
+    exampleEn: How about a walk?
+  - id: lust-haben
+    de: Lust haben
+    en: to feel like (doing something)
+    pos: phrase
+    example: Hättest du Lust, ins Kino zu gehen?
+    exampleEn: Would you like to go to the cinema?
+  - id: rat
+    de: Rat
+    en: advice
+    pos: noun
+    article: der
+    plural: Ratschläge
+    example: Kannst du mir einen Rat geben?
+    exampleEn: Can you give me some advice?
+  - id: vorschlag
+    de: Vorschlag
+    en: suggestion
+    pos: noun
+    article: der
+    plural: Vorschläge
+    example: Ich habe einen Vorschlag.
+    exampleEn: I have a suggestion.
+  - id: vorschlagen
+    de: vorschlagen
+    en: to suggest
+    pos: verb
+    example: Was schlägst du vor?
+    exampleEn: What do you suggest?
+  - id: bitten
+    de: bitten (um)
+    en: to ask (for)
+    pos: verb
+    example: Darf ich Sie um etwas bitten?
+    exampleEn: May I ask you for something?
+  - id: hoeflich
+    de: höflich
+    en: polite
+    pos: adjective
+    example: Der Kellner war sehr höflich.
+    exampleEn: The waiter was very polite.
+  - id: schliessen
+    de: schließen
+    en: to close
+    pos: verb
+    example: Würden Sie bitte die Tür schließen?
+    exampleEn: Would you close the door, please?
+  - id: freundlich-sein
+    de: so freundlich sein
+    en: to be so kind
+    pos: phrase
+    example: Wären Sie so freundlich, mir zu helfen?
+    exampleEn: Would you be so kind as to help me?
+  - id: traum
+    de: Traum
+    en: dream
+    pos: noun
+    article: der
+    plural: Träume
+    example: Mein Traum wäre ein Haus am Meer.
+    exampleEn: My dream would be a house by the sea.
+  - id: gesund
+    de: gesund
+    en: healthy
+    pos: adjective
+    example: Du solltest gesünder essen.
+    exampleEn: You should eat more healthily.
