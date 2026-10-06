@@ -1,0 +1,153 @@
+lesson: b1.15
+sets:
+  - title: Verbs
+    items:
+      - id: v1
+        type: multiple-choice
+        tags: [verbs]
+        prompt: "Ich habe mich ___ das Wetter gewöhnt."
+        options: [an, zu, auf]
+        answer: an
+      - id: v2
+        type: multiple-choice
+        tags: [verbs]
+        prompt: "Das hängt ___ Wetter ab."
+        options: [vom, auf das, am]
+        answer: vom
+      - id: v3
+        type: multiple-choice
+        tags: [verbs]
+        prompt: "Die Nachbarn beschweren sich ___ den Lärm."
+        options: [über, von, für]
+        answer: über
+      - id: v4
+        type: multiple-choice
+        tags: [verbs]
+        prompt: "Die Prüfung besteht ___ vier Teilen."
+        options: [aus, von, mit]
+        answer: aus
+      - id: v5
+        type: matching
+        tags: [verbs]
+        prompt: Match the verb with its preposition.
+        pairs:
+          - { left: sich bewerben, right: um }
+          - { left: sich beschäftigen, right: mit }
+          - { left: sich konzentrieren, right: auf }
+          - { left: sich erkundigen, right: nach }
+          - { left: sich entschuldigen (bei jemandem), right: bei }
+
+  - title: Adjectives and nouns
+    items:
+      - id: an1
+        type: multiple-choice
+        tags: [adjectives]
+        prompt: "Ich bin stolz ___ dich."
+        options: [auf, von, über]
+        answer: auf
+      - id: an2
+        type: multiple-choice
+        tags: [adjectives]
+        prompt: "Sind Sie zufrieden ___ dem Service?"
+        options: [mit, über, von]
+        answer: mit
+      - id: an3
+        type: multiple-choice
+        tags: [nouns]
+        prompt: "Ich habe Angst ___ der Prüfung."
+        options: [vor, von, für]
+        answer: vor
+      - id: an4
+        type: fill-blank
+        tags: [adjectives]
+        prompt: "Die Stadt ist bekannt ___ ihr Bier."
+        answers: [für]
+      - id: an5
+        type: fill-blank
+        tags: [nouns]
+        prompt: "Haben Sie Erfahrung ___ Kindern?"
+        answers: [mit]
+      - id: an6
+        type: fill-blank
+        tags: [adjectives]
+        prompt: "Ich bin gespannt ___ den Film."
+        answers: [auf]
+
+  - title: Pointing forward
+    items:
+      - id: fw1
+        type: multiple-choice
+        tags: [da-words]
+        prompt: "Ich freue mich ___, dass du kommst."
+        options: [darauf, auf, worauf]
+        answer: darauf
+      - id: fw2
+        type: multiple-choice
+        tags: [da-words]
+        prompt: "Es hängt ___ ab, ob ich Zeit habe."
+        options: [davon, vom, wovon]
+        answer: davon
+      - id: fw3
+        type: fill-blank
+        tags: [da-words]
+        prompt: "Er hat sich ___ beschwert, dass die Musik laut war."
+        answers: [darüber]
+      - id: fw4
+        type: word-order
+        tags: [da-words]
+        prompt: I have got used to getting up early.
+        answer: "Ich habe mich daran gewöhnt, früh aufzustehen."
+
+  - title: Ask the question
+    items:
+      - id: q1
+        type: multiple-choice
+        tags: [wo-words]
+        prompt: "___ bist du so stolz? – Auf meinen Abschluss."
+        options: [Worauf, Auf wen, Wofür]
+        answer: Worauf
+      - id: q2
+        type: multiple-choice
+        tags: [wo-words]
+        prompt: "___ bist du böse? – Auf meinen Bruder."
+        options: [Auf wen, Worauf, Wem]
+        answer: Auf wen
+      - id: q3
+        type: fill-blank
+        tags: [wo-words]
+        prompt: "___ beschäftigst du dich gerade? – Mit einem Projekt."
+        answers: [Womit]
+
+  - title: A complaint
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [mixed]
+        prompt: Fill in the gaps.
+        bank: [über, darüber, mit, für, auf, bei]
+        text: "Sehr geehrte Damen und Herren, ich möchte mich ___ Ihren Service beschweren. Ich war bisher immer sehr zufrieden ___ Ihrer Firma, aber diesmal habe ich drei Wochen ___ mein Paket gewartet. Ich habe mich auch ___ geärgert, dass niemand am Telefon war. Ich erwarte, dass Sie sich ___ mir ___ die Verspätung entschuldigen."
+        gaps:
+          - [über]
+          - [mit]
+          - [auf]
+          - [darüber]
+          - [bei]
+          - [für]
+
+  - title: About yourself
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking]
+        prompt: Answer these questions about yourself in full sentences.
+        cards: [Worauf bist du stolz?, Woran hast du dich in Deutschland / in deinem Leben gewöhnen müssen?, Womit beschäftigst du dich in deiner Freizeit?, Wovor hast du Angst?]
+        phrases:
+          - Ich bin stolz darauf, dass …
+          - Ich musste mich daran gewöhnen, …
+          - In meiner Freizeit beschäftige ich mich mit …
+          - Ich habe Angst vor …
+        checklist:
+          - I used the right preposition with each verb or adjective
+          - I used at least one da-word pointing to a dass clause or a zu clause
+          - I answered all four questions
+        sample: "Ich bin stolz darauf, dass ich in nur zwei Jahren so gut Deutsch gelernt habe. Ich musste mich daran gewöhnen, dass die Geschäfte am Sonntag geschlossen sind. In meiner Freizeit beschäftige ich mich mit Fotografie. Und ich habe ein bisschen Angst vor der B1-Prüfung, aber ich bin gespannt auf das Ergebnis."

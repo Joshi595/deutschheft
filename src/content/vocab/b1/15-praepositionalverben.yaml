@@ -1,0 +1,108 @@
+lesson: b1.15
+items:
+  - id: sich-beschaeftigen
+    de: sich beschäftigen mit + D
+    en: to deal with, to be occupied with
+    pos: verb
+    example: Ich beschäftige mich gerade mit Fotografie.
+    exampleEn: I am getting into photography at the moment.
+  - id: sich-beschweren
+    de: sich beschweren über + A
+    en: to complain about
+    pos: verb
+    example: Die Nachbarn haben sich über den Lärm beschwert.
+    exampleEn: The neighbours complained about the noise.
+  - id: sich-gewoehnen
+    de: sich gewöhnen an + A
+    en: to get used to
+    pos: verb
+    example: Ich habe mich an das kalte Wetter gewöhnt.
+    exampleEn: I have got used to the cold weather.
+  - id: sich-konzentrieren
+    de: sich konzentrieren auf + A
+    en: to concentrate on
+    pos: verb
+    example: Ich kann mich nicht auf die Arbeit konzentrieren.
+    exampleEn: I cannot concentrate on my work.
+  - id: abhaengen
+    de: abhängen von + D
+    en: to depend on
+    pos: verb
+    example: Das hängt vom Preis ab.
+    exampleEn: That depends on the price.
+  - id: bestehen-aus
+    de: bestehen aus + D
+    en: to consist of
+    pos: verb
+    example: Die Prüfung besteht aus vier Teilen.
+    exampleEn: The exam consists of four parts.
+  - id: sich-entschuldigen
+    de: sich entschuldigen bei + D / für + A
+    en: to apologise to / for
+    pos: verb
+    example: Ich möchte mich bei Ihnen für die Verspätung entschuldigen.
+    exampleEn: I would like to apologise to you for the delay.
+  - id: sich-erkundigen
+    de: sich erkundigen nach + D
+    en: to enquire about
+    pos: verb
+    example: Ich möchte mich nach den Kursen erkundigen.
+    exampleEn: I would like to enquire about the courses.
+  - id: stolz-auf
+    de: stolz auf + A
+    en: proud of
+    pos: adjective
+    example: Wir sind sehr stolz auf unsere Tochter.
+    exampleEn: We are very proud of our daughter.
+  - id: zufrieden-mit
+    de: zufrieden mit + D
+    en: satisfied with
+    pos: adjective
+    example: Ich bin mit meiner Wohnung zufrieden.
+    exampleEn: I am satisfied with my flat.
+  - id: gespannt-auf
+    de: gespannt auf + A
+    en: curious about, eager for
+    pos: adjective
+    example: Ich bin gespannt auf deine Antwort.
+    exampleEn: I am eager to hear your answer.
+  - id: verantwortlich
+    de: verantwortlich für + A
+    en: responsible for
+    pos: adjective
+    example: Wer ist für die Planung verantwortlich?
+    exampleEn: Who is responsible for the planning?
+  - id: bekannt-fuer
+    de: bekannt für + A
+    en: known for
+    pos: adjective
+    example: Die Region ist bekannt für ihren Wein.
+    exampleEn: The region is known for its wine.
+  - id: interesse
+    de: Interesse an + D
+    en: interest in
+    pos: noun
+    article: das
+    plural: Interessen
+    example: Haben Sie Interesse an einem Praktikum?
+    exampleEn: Are you interested in an internship?
+  - id: erfahrung-mit
+    de: Erfahrung mit + D
+    en: experience with
+    pos: noun
+    article: die
+    plural: Erfahrungen
+    example: Ich habe viel Erfahrung mit Kindern.
+    exampleEn: I have a lot of experience with children.
+  - id: sich-sorgen
+    de: sich Sorgen machen um + A
+    en: to worry about
+    pos: phrase
+    example: Mach dir keine Sorgen um mich.
+    exampleEn: Do not worry about me.
+  - id: womit
+    de: womit?
+    en: with what?
+    pos: other
+    example: Womit fährst du zur Arbeit?
+    exampleEn: How do you get to work?
