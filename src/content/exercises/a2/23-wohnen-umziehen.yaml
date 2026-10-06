@@ -1,0 +1,168 @@
+lesson: a2.23
+sets:
+  - title: Advert language
+    items:
+      - id: ad1
+        type: matching
+        tags: [adverts]
+        prompt: Match the abbreviation with its meaning.
+        pairs:
+          - { left: KM, right: rent without bills }
+          - { left: NK, right: service charges }
+          - { left: EG, right: ground floor }
+          - { left: EBK, right: fitted kitchen }
+          - { left: WG, right: flat share }
+      - id: ad2
+        type: multiple-choice
+        tags: [adverts]
+        prompt: "Kaltmiete 700 Euro, Nebenkosten 150 Euro. How much is the Warmmiete?"
+        options: ["850 Euro", "700 Euro", "550 Euro"]
+        answer: "850 Euro"
+      - id: ad3
+        type: true-false
+        tags: [adverts]
+        prompt: A German '3-Zimmer-Wohnung' usually has three bedrooms.
+        answer: false
+        explanation: It has three rooms besides kitchen and bathroom, often a living room and two bedrooms.
+
+  - title: Moving verbs
+    items:
+      - id: move1
+        type: multiple-choice
+        tags: [moving verbs]
+        prompt: "Wir ___ letztes Jahr nach Hamburg umgezogen."
+        options: [sind, haben]
+        answer: sind
+      - id: move2
+        type: multiple-choice
+        tags: [moving verbs]
+        prompt: "Mit 18 bin ich bei meinen Eltern ___."
+        options: [ausgezogen, eingezogen, umgezogen]
+        answer: ausgezogen
+      - id: move3
+        type: fill-blank
+        tags: [moving verbs]
+        prompt: "Am Samstag ziehen wir in die neue Wohnung ___."
+        answers: [ein]
+      - id: move4
+        type: multiple-choice
+        tags: [moving verbs, two-way prepositions]
+        prompt: "Wir ziehen ___ neue Wohnung ein."
+        options: [in die, in der]
+        answer: in die
+      - id: move5
+        type: fill-blank
+        tags: [contract]
+        prompt: "Ich habe meine alte Wohnung ___. Die Frist ist drei Monate. (given notice)"
+        answers: [gekündigt]
+      - id: move6
+        type: multiple-choice
+        tags: [contract]
+        prompt: "Die ___ ist Geld, das der Vermieter zurückgibt, wenn man auszieht."
+        options: [Kaution, Miete, Nebenkosten]
+        answer: Kaution
+
+  - title: Asking about a flat
+    items:
+      - id: ask1
+        type: multiple-choice
+        tags: [questions]
+        prompt: "You want to know how much the deposit is."
+        options: ["Wie hoch ist die Kaution?", "Wie hoch ist die Miete?", "Wann ist die Wohnung frei?"]
+        answer: "Wie hoch ist die Kaution?"
+      - id: ask2
+        type: fill-blank
+        tags: [questions]
+        prompt: "Sind Haustiere ___? (allowed)"
+        answers: [erlaubt]
+      - id: ask3
+        type: translation
+        tags: [questions]
+        prompt: When could I view the flat?
+        answers:
+          - "Wann könnte ich die Wohnung besichtigen?"
+      - id: ask4
+        type: translation
+        tags: [questions, indirect questions]
+        prompt: "Can you tell me whether the flat is still available? (Können Sie mir sagen, ob …)"
+        answers:
+          - "Können Sie mir sagen, ob die Wohnung noch frei ist?"
+
+  - title: A note to the neighbours
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [neighbours]
+        prompt: Complete the note.
+        bank: [Nachbarn, Einzug, laut, Verständnis, eingeladen]
+        text: "Liebe ___, wir sind neu im Haus und möchten am Samstag unseren ___ feiern. Es wird vielleicht etwas ___. Wir bitten um ___. Sie sind natürlich auch herzlich ___! Familie Novak, 2. OG"
+        gaps:
+          - [Nachbarn]
+          - [Einzug]
+          - [laut]
+          - [Verständnis]
+          - [eingeladen]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [house rules]
+        prompt: Please separate the rubbish.
+        answer: "Bitte trennen Sie den Müll."
+      - id: order2
+        type: word-order
+        tags: [moving]
+        prompt: I have to register at the local office.
+        answer: "Ich muss mich beim Bürgeramt anmelden."
+
+  - title: Flat adverts
+    stimulus:
+      kind: text
+      label: Wohnungsanzeigen
+      text: |
+        A) 2-Zi.-Whg., 55 m², 3. OG ohne Aufzug, Balkon, KM 620 €, NK 130 €, Kaution 2 KM. Keine Haustiere. Ab 1.9.
+
+        B) Helle 3-Zi.-Whg. im EG mit Garten, 80 m², EBK, WM 1.150 €. Haustiere erlaubt. Ab sofort.
+
+        C) Zimmer in 4er-WG, 14 m², nur 5 Min. zur Uni, 390 € warm. Wir suchen eine Nichtraucherin.
+    items:
+      - id: read1
+        type: multiple-choice
+        tags: [reading]
+        prompt: "Familie Braun hat einen Hund und möchte einen Garten. Welche Anzeige passt?"
+        options: [Anzeige A, Anzeige B, Anzeige C]
+        answer: Anzeige B
+        shuffle: false
+      - id: read2
+        type: multiple-choice
+        tags: [reading]
+        prompt: "Wie hoch ist die Warmmiete in Anzeige A?"
+        options: ["750 €", "620 €", "1.240 €"]
+        answer: "750 €"
+      - id: read3
+        type: true-false
+        tags: [reading]
+        prompt: Wohnung A hat einen Aufzug.
+        answer: false
+
+  - title: Ask about the flat
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, housing]
+        prompt: "You are interested in flat A above. Write an email to the landlord."
+        points:
+          - Say which advert you read and that you are interested
+          - Introduce yourself briefly (job, who would live there)
+          - Ask two questions about the flat
+          - Ask when you could view it
+        minWords: 40
+        phrases:
+          - Sehr geehrte Damen und Herren,
+          - ich habe Ihre Anzeige gelesen und interessiere mich für …
+          - Könnten Sie mir sagen, ob / wie hoch …?
+          - Wann könnte ich die Wohnung besichtigen?
+          - Mit freundlichen Grüßen
+        sample: "Sehr geehrte Damen und Herren, ich habe Ihre Anzeige für die 2-Zimmer-Wohnung gelesen und interessiere mich sehr dafür. Ich bin 29 Jahre alt, arbeite als Krankenpflegerin und würde allein dort wohnen. Könnten Sie mir sagen, ob es einen Keller gibt? Und wie hoch sind die Heizkosten im Winter? Wann könnte ich die Wohnung besichtigen? Mit freundlichen Grüßen, Elena Petrova"
