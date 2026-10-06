@@ -1,0 +1,431 @@
+level: a1
+title: Modelltest 6
+description: >-
+  A practice exam in the format of Start Deutsch 1, with the real time limits. Topics: clothes,
+  weather, the department store and colours.
+passMark: 60
+scoring: total
+modules:
+  - skill: listening
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Kundin
+                  text: "Was kostet die Jacke?"
+                - speaker: Verkäufer
+                  text: "Neunundsiebzig Euro. Heute ist sie aber im Angebot: neunundfünfzig Euro."
+            prompt: Was kostet die Jacke heute?
+            options: ["59 Euro", "79 Euro", "95 Euro"]
+            answer: "59 Euro"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Wie ist das Wetter in Hamburg?"
+                - speaker: Frau
+                  text: "Es regnet, und es ist windig. Nimm einen Regenschirm mit."
+            prompt: Wie ist das Wetter?
+            options: [Es regnet., Die Sonne scheint., Es schneit.]
+            answer: Es regnet.
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Kunde
+                  text: "Haben Sie das Hemd in Größe vierzig?"
+                - speaker: Verkäuferin
+                  text: "Nein, nur in zweiundvierzig."
+            prompt: Welche Größe gibt es?
+            options: ["42", "40", "44"]
+            answer: "42"
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Frau
+                  text: "Wo finde ich Sportschuhe?"
+                - speaker: Mann
+                  text: "Im ersten Stock, neben den Taschen."
+            prompt: Wo sind die Sportschuhe?
+            options: [im ersten Stock, im Erdgeschoss, im zweiten Stock]
+            answer: im ersten Stock
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Mann
+                  text: "Welche Farbe magst du? Rot oder Grün?"
+                - speaker: Frau
+                  text: "Keine von beiden. Ich nehme den blauen Pullover."
+            prompt: Welchen Pullover nimmt die Frau?
+            options: [den blauen, den roten, den grünen]
+            answer: den blauen
+          - id: h1-6
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 6
+              lines:
+                - speaker: Frau
+                  text: "Kann ich mit Karte bezahlen?"
+                - speaker: Kassierer
+                  text: "Ja, natürlich. Das macht dreiundzwanzig Euro fünfzig."
+            prompt: Was bezahlt die Frau?
+            options: ["23,50 Euro", "32,50 Euro", "23,15 Euro"]
+            answer: "23,50 Euro"
+
+      - title: "Hören, Teil 2"
+        instructions: Richtig oder falsch? Sie hören jeden Text nur einmal.
+        items:
+          - id: h2-1
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 1
+              plays: 1
+              lines:
+                - text: "Heute im Kaufhaus: Alle Wintermäntel dreißig Prozent billiger. Sie finden die Mäntel im zweiten Stock."
+            prompt: Die Mäntel sind im ersten Stock.
+            answer: false
+          - id: h2-2
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 2
+              plays: 1
+              lines:
+                - text: "Das Wetter morgen: Sonne und zweiundzwanzig Grad."
+            prompt: Morgen ist es warm.
+            answer: true
+          - id: h2-3
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 3
+              plays: 1
+              lines:
+                - text: "Liebe Kunden, unser Geschäft schließt in fünfzehn Minuten. Bitte kommen Sie zur Kasse."
+            prompt: Das Geschäft schließt bald.
+            answer: true
+          - id: h2-4
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 4
+              plays: 1
+              lines:
+                - text: "Am Wochenende gibt es in den Bergen viel Schnee. Die Skilifte sind von acht bis sechzehn Uhr geöffnet."
+            prompt: Die Skilifte sind bis 18 Uhr geöffnet.
+            answer: false
+
+      - title: "Hören, Teil 3"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 1
+              lines:
+                - text: "Hallo Eva, hier ist Moni. Morgen ist es kalt. Bring bitte eine warme Jacke und einen Schal mit."
+            prompt: Was soll Eva mitbringen?
+            options: [eine Jacke und einen Schal, einen Regenschirm, eine Sonnenbrille]
+            answer: eine Jacke und einen Schal
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 2
+              lines:
+                - text: "Guten Tag, hier ist das Schuhgeschäft Fuß. Ihre Schuhe sind repariert. Sie können sie ab Donnerstag abholen."
+            prompt: Ab wann kann man die Schuhe abholen?
+            options: [ab Donnerstag, ab Dienstag, ab heute]
+            answer: ab Donnerstag
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 3
+              lines:
+                - text: "Hallo Kai, ich bin im Kaufhaus. Die Hose gibt es nicht in Schwarz. Soll ich eine graue kaufen?"
+            prompt: Welche Farbe gibt es nicht?
+            options: [Schwarz, Grau, Blau]
+            answer: Schwarz
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 4
+              lines:
+                - text: "Hi Nina, das Wetter ist super! Wir gehen heute Nachmittag an den See. Kommst du mit? Wir treffen uns um zwei am Bahnhof."
+            prompt: Wo treffen sie sich?
+            options: [am Bahnhof, am See, im Park]
+            answer: am Bahnhof
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 5
+              lines:
+                - text: "Hallo Frau Weber, hier ist die Reinigung. Ihr Kleid ist fertig. Es kostet acht Euro."
+            prompt: Was ist fertig?
+            options: [das Kleid, der Anzug, der Mantel]
+            answer: das Kleid
+
+  - skill: reading
+    minutes: 25
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1 (Text 1)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Hallo Lisa,
+            ich bin seit Montag in Schweden. Hier ist es sehr kalt, nur zwei Grad! Gestern habe ich warme Schuhe und eine Mütze gekauft.
+            Am Wochenende fahren wir in die Berge.
+            Viele Grüße
+            Tim
+        items:
+          - id: l1-1
+            type: true-false
+            prompt: In Schweden ist es warm.
+            answer: false
+          - id: l1-2
+            type: true-false
+            prompt: Tim hat eine Mütze gekauft.
+            answer: true
+          - id: l1-3
+            type: true-false
+            prompt: Am Wochenende fährt Tim ans Meer.
+            answer: false
+
+      - title: "Lesen, Teil 1 (Text 2)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: Nachricht
+          text: |
+            Liebe Jana,
+            die Bluse passt mir leider nicht, sie ist zu klein. Ich bringe sie morgen zurück ins Geschäft. Kommst du mit? Ich habe um 16 Uhr Zeit.
+            Mara
+        items:
+          - id: l1-4
+            type: true-false
+            prompt: Die Bluse ist zu groß.
+            answer: false
+          - id: l1-5
+            type: true-false
+            prompt: Mara möchte morgen ins Geschäft gehen.
+            answer: true
+
+      - title: "Lesen, Teil 2"
+        instructions: Lesen Sie die Situationen und die Anzeigen. Wo finden Sie Informationen? Wählen Sie a oder b.
+        items:
+          - id: l2-1
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Modehaus Elegant: Anzüge und Kleider für besondere Feste.
+
+                b) Second-Hand-Laden: Kleidung für wenig Geld.
+            prompt: Sie brauchen für eine Hochzeit einen Anzug.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Kinderkleidung Mini: Kleidung für Kinder von 0 bis 10 Jahren.
+
+                b) Sportladen Fit: Kleidung und Schuhe für Erwachsene.
+            prompt: Sie suchen eine Hose für Ihre Tochter (5 Jahre).
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Wetter-Telefon: aktuelles Wetter, Tel. 0800 123 4.
+
+                b) Radio Nord: Musik und Nachrichten.
+            prompt: Sie möchten wissen, wie das Wetter morgen ist.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Schneiderei Nadel: Wir machen Ihre Hosen kürzer und reparieren Kleidung.
+
+                b) Wäscherei Blau: Wir waschen Ihre Kleidung.
+            prompt: Ihre neue Hose ist zu lang.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Online-Shop Mode24: Lieferung in zwei Tagen.
+
+                b) Kaufhaus Zentrum: Sofort mitnehmen, auch samstags.
+            prompt: Sie brauchen heute noch eine Jacke.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die Texte und die Aufgaben. Richtig oder falsch?
+        items:
+          - id: l3-1
+            type: true-false
+            stimulus:
+              kind: text
+              label: In der Umkleidekabine
+              text: "Bitte nur drei Teile mitnehmen."
+            prompt: Sie können fünf Hosen mit in die Kabine nehmen.
+            answer: false
+          - id: l3-2
+            type: true-false
+            stimulus:
+              kind: text
+              label: An der Kasse
+              text: "Umtausch nur mit Kassenbon innerhalb von 14 Tagen."
+            prompt: Für den Umtausch brauchen Sie den Kassenbon.
+            answer: true
+          - id: l3-3
+            type: true-false
+            stimulus:
+              kind: text
+              label: Im Schaufenster
+              text: "Sommerschlussverkauf! Alles 50 % billiger."
+            prompt: Ein T-Shirt für 20 Euro kostet jetzt 10 Euro.
+            answer: true
+          - id: l3-4
+            type: true-false
+            stimulus:
+              kind: text
+              label: Am Eingang
+              text: "Sonntags geschlossen."
+            prompt: Am Sonntag können Sie hier einkaufen.
+            answer: false
+          - id: l3-5
+            type: true-false
+            stimulus:
+              kind: text
+              label: Am Kaufhaus
+              text: "Toiletten im 3. Stock."
+            prompt: Die Toiletten sind im Erdgeschoss.
+            answer: false
+
+  - skill: writing
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Ihr Freund Hiro möchte eine Kundenkarte vom Kaufhaus. Im Formular fehlen fünf Informationen. Helfen Sie ihm.
+        items:
+          - id: s1
+            type: form
+            situation: "Hiro Tanaka ist Japaner. Er ist 32 Jahre alt und wohnt mit seiner Frau in Stuttgart, Königstraße 21. Seine E-Mail-Adresse ist hiro.t@mail.de. Er möchte Informationen per E-Mail bekommen."
+            fields:
+              - { label: Familienname, answers: [Tanaka] }
+              - { label: Nationalität, answers: [japanisch, Japaner] }
+              - { label: Familienstand, answers: [verheiratet] }
+              - { label: Wohnort, answers: [Stuttgart] }
+              - { label: E-Mail, answers: [hiro.t@mail.de] }
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht die Anrede und den Gruß.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie möchten am Samstag mit Ihrer Freundin Julia einkaufen gehen. Schreiben Sie ihr."
+            points:
+              - Was möchten Sie kaufen?
+              - Wann und wo treffen Sie sich?
+              - Fragen Sie, ob Julia Zeit hat.
+            minWords: 25
+            sample: "Liebe Julia, ich brauche neue Schuhe und eine Jacke. Gehen wir am Samstag zusammen einkaufen? Wir treffen uns um elf Uhr vor dem Kaufhaus. Hast du Zeit? Viele Grüße, Sofia"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: sich vorstellen"
+        instructions: Stellen Sie sich vor. Buchstabieren Sie danach Ihren Vornamen und sagen Sie Ihr Geburtsjahr.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Stellen Sie sich bitte vor. Buchstabieren Sie dann Ihren Vornamen und sagen Sie Ihr Geburtsjahr."
+            cards: [Name?, Alter?, Land?, Wohnort?, Sprachen?, Beruf?, Hobby?]
+            checklist:
+              - I said something for all seven cue words
+              - I spelled my first name
+              - I said a year correctly
+            sample: "Hallo, ich heiße Dario Rossi. Ich bin dreißig Jahre alt und komme aus Italien. Ich wohne in Nürnberg. Ich spreche Italienisch und Deutsch. Ich bin Friseur. Mein Hobby ist Fußball. Dario: D, A, R, I, O. Ich bin neunzehnhundertfünfundneunzig geboren."
+
+      - title: "Sprechen, Teil 2: um Informationen bitten und Informationen geben"
+        instructions: Stellen Sie zu jeder Karte eine Frage und antworten Sie selbst darauf.
+        items:
+          - id: sp2a
+            type: speaking-task
+            prompt: "Thema: Kleidung. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [Lieblingsfarbe, Schuhe, Kaufhaus]
+            checklist:
+              - I asked a real question for each card
+              - I answered each question in a full sentence
+            sample: "Was ist Ihre Lieblingsfarbe? Meine Lieblingsfarbe ist Grün. Wie viele Schuhe haben Sie? Ich habe fünf Paar Schuhe. Kaufen Sie gern im Kaufhaus ein? Nein, ich kaufe lieber online."
+          - id: sp2b
+            type: speaking-task
+            prompt: "Thema: Wetter. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [Sommer, Regen, Winter]
+            checklist:
+              - I asked a real question for each card
+              - I used at least two different question words
+            sample: "Mögen Sie den Sommer? Ja, ich liebe den Sommer. Was machen Sie bei Regen? Bei Regen lese ich zu Hause. Wie ist der Winter in Ihrem Land? Bei uns ist der Winter nicht kalt."
+
+      - title: "Sprechen, Teil 3: Bitten formulieren und darauf reagieren"
+        instructions: Formulieren Sie zu jeder Karte eine Bitte und reagieren Sie darauf.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Formulieren Sie zu jeder Karte eine Bitte und eine Antwort."
+            cards: [Regenschirm, Größe, Tasche, Jacke]
+            checklist:
+              - I made a polite request for each card
+              - I gave a response to each request
+            sample: "Kannst du mir bitte deinen Regenschirm leihen? Ja, hier bitte. Haben Sie das Kleid bitte in Größe 38? Moment, ich schaue. Halten Sie bitte kurz meine Tasche? Natürlich. Zieh bitte eine Jacke an, es ist kalt. Okay, Mama."

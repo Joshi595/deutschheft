@@ -1,0 +1,478 @@
+level: a2
+title: Modelltest 4
+description: >-
+  A practice exam in the format of the Goethe-Zertifikat A2, with the real time limits. Topics:
+  health, sport, the doctor's and a healthy life.
+passMark: 60
+scoring: total
+modules:
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Mit 70 zum ersten Marathon
+
+            Helga Brandt aus Dortmund ist 72 Jahre alt – und sie ist im Oktober ihren ersten Marathon gelaufen. Mit dem Laufen hat sie erst vor vier Jahren angefangen. „Mein Arzt hat gesagt, ich soll mehr Sport machen. Zuerst bin ich nur spazieren gegangen, dann bin ich langsam gelaufen", erzählt sie.
+
+            Heute trainiert Helga viermal pro Woche mit einer Laufgruppe im Park. Die meisten in der Gruppe sind viel jünger, aber das stört sie nicht. „Die jungen Leute motivieren mich", sagt sie.
+
+            Für den Marathon hat sie fünfeinhalb Stunden gebraucht. „Die Zeit war mir egal. Ich wollte nur ankommen." Ihr nächstes Ziel: ein Halbmarathon in Berlin.
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: Helga Brandt läuft seit …
+            options: ["vier Jahren.", "ihrer Jugend.", "einem Jahr."]
+            answer: "vier Jahren."
+          - id: l1-2
+            type: multiple-choice
+            prompt: Mit dem Sport hat sie angefangen, weil …
+            options: ["ihr Arzt es gesagt hat.", "ihre Freundin läuft.", "sie einen Marathon sehen wollte."]
+            answer: "ihr Arzt es gesagt hat."
+          - id: l1-3
+            type: multiple-choice
+            prompt: Helga trainiert …
+            options: ["mit einer Laufgruppe.", "allein.", "nur am Wochenende."]
+            answer: "mit einer Laufgruppe."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Für Helga war beim Marathon wichtig, dass …
+            options: ["sie ins Ziel kommt.", "sie schnell ist.", "sie gewinnt."]
+            answer: "sie ins Ziel kommt."
+          - id: l1-5
+            type: multiple-choice
+            prompt: Als Nächstes möchte Helga …
+            options: ["einen Halbmarathon laufen.", "mit dem Laufen aufhören.", "einen zweiten Marathon in Dortmund laufen."]
+            answer: "einen Halbmarathon laufen."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind im Ärztehaus. Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Ärztehaus am Park – Wegweiser
+          text: |
+            3. OG: Zahnarzt Dr. Ilić · Kieferorthopädie
+            2. OG: Augenarzt Dr. Lehmann · Hals-Nasen-Ohren-Arzt Dr. Schön
+            1. OG: Kinderärztin Dr. Wolf · Frauenärztin Dr. Aksoy
+            EG: Apotheke · Labor · Anmeldung Physiotherapie
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Sie sehen nicht mehr gut.
+            options: [2. OG, 3. OG, anderer Stock]
+            answer: 2. OG
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Ihr Baby hat Fieber.
+            options: [1. OG, EG, anderer Stock]
+            answer: 1. OG
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Sie haben ein Rezept und brauchen das Medikament.
+            options: [EG, 2. OG, anderer Stock]
+            answer: EG
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            prompt: Sie haben Ohrenschmerzen.
+            options: [2. OG, 1. OG, anderer Stock]
+            answer: 2. OG
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie möchten einen Yoga-Kurs machen.
+            options: [EG, 3. OG, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Hallo Anja,
+
+            danke für deine Nachricht! Mir geht es schon viel besser. Ich hatte mir beim Skifahren das Bein gebrochen und war eine Woche im Krankenhaus. Jetzt bin ich wieder zu Hause, aber ich muss noch sechs Wochen mit Krücken gehen.
+
+            Das Schlimmste ist, dass ich nicht arbeiten kann. Und Einkaufen ist auch schwierig. Zum Glück hilft mir mein Nachbar, er bringt mir jeden zweiten Tag Lebensmittel.
+
+            Hast du am Wochenende Zeit? Dann komm doch vorbei! Ich kann leider nichts kochen, aber wir können Pizza bestellen.
+
+            Liebe Grüße
+            Daniel
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Daniel hat sich verletzt …
+            options: ["beim Skifahren.", "beim Fußball.", "bei der Arbeit."]
+            answer: "beim Skifahren."
+          - id: l3-2
+            type: multiple-choice
+            prompt: Wie lange war Daniel im Krankenhaus?
+            options: ["eine Woche", "sechs Wochen", "zwei Tage"]
+            answer: "eine Woche"
+          - id: l3-3
+            type: multiple-choice
+            prompt: Was findet Daniel am schlimmsten?
+            options: ["dass er nicht arbeiten kann", "die Schmerzen", "das Essen im Krankenhaus"]
+            answer: "dass er nicht arbeiten kann"
+          - id: l3-4
+            type: multiple-choice
+            prompt: Der Nachbar …
+            options: ["bringt ihm Lebensmittel.", "kocht für ihn.", "fährt ihn zum Arzt."]
+            answer: "bringt ihm Lebensmittel."
+          - id: l3-5
+            type: multiple-choice
+            prompt: Am Wochenende möchte Daniel …
+            options: ["mit Anja Pizza essen.", "für Anja kochen.", "ins Restaurant gehen."]
+            answer: "mit Anja Pizza essen."
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Rückenschule: 8 Termine, Übungen gegen Rückenschmerzen, die Krankenkasse bezahlt.
+
+            b) Fußballverein sucht Spielerinnen: Frauenmannschaft, Training dienstags und freitags.
+
+            c) Nichtraucherkurs: In 6 Wochen ohne Zigaretten, Volkshochschule.
+
+            d) Kochkurs „Gesund essen mit wenig Geld": 3 Abende, 20 Euro.
+
+            e) Schwimmkurs für Kinder ab 5 Jahren: Samstagvormittag im Hallenbad.
+
+            f) Fitnessstudio 24/7: rund um die Uhr geöffnet, 19,90 Euro im Monat.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Herr Becker sitzt den ganzen Tag im Büro und hat oft Rückenschmerzen.
+            options: [a, b, c, d, e, f, X]
+            answer: a
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Sevgi möchte endlich mit dem Rauchen aufhören.
+            options: [a, b, c, d, e, f, X]
+            answer: c
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Jonas arbeitet nachts und möchte nach der Arbeit, um 3 Uhr, trainieren.
+            options: [a, b, c, d, e, f, X]
+            answer: f
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Familie Ramos möchte, dass ihr Sohn (7) schwimmen lernt.
+            options: [a, b, c, d, e, f, X]
+            answer: e
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            prompt: Frau Lin möchte einen Tanzkurs machen.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Guten Tag, hier ist die Praxis Doktor Yildiz. Ihre Blutwerte sind gut. Sie müssen nicht noch einmal kommen. Schönen Tag noch!"
+            prompt: Was sagt die Praxis?
+            options: ["Die Werte sind gut.", "Man soll noch einmal kommen.", "Der Termin ist morgen."]
+            answer: "Die Werte sind gut."
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Hallo Mareike, hier ist Lars. Ich kann heute nicht zum Tennis kommen, ich habe mir den Fuß verletzt. Vielleicht spielen wir nächsten Mittwoch?"
+            prompt: Warum kommt Lars nicht?
+            options: ["Er hat sich am Fuß verletzt.", "Er muss arbeiten.", "Er hat Fieber."]
+            answer: "Er hat sich am Fuß verletzt."
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Im Hallenbad Süd ist das große Becken heute wegen Reparatur gesperrt. Das Kinderbecken und die Sauna sind geöffnet."
+            prompt: Was ist heute geschlossen?
+            options: ["das große Becken", "die Sauna", "das Kinderbecken"]
+            answer: "das große Becken"
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Gesundheitstipp der Woche: Trinken Sie jeden Tag mindestens anderthalb Liter Wasser, im Sommer mehr."
+            prompt: Wie viel Wasser soll man mindestens trinken?
+            options: ["1,5 Liter", "1 Liter", "3 Liter"]
+            answer: "1,5 Liter"
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Hier ist die Apotheke am Rathaus. Ihr Medikament ist leider erst morgen ab zehn Uhr da. Entschuldigen Sie bitte."
+            prompt: Wann ist das Medikament da?
+            options: ["morgen ab 10 Uhr", "heute ab 10 Uhr", "übermorgen"]
+            answer: "morgen ab 10 Uhr"
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Welchen Sport macht Sabine an welchem Tag? Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Sabines Sportwoche
+          plays: 1
+          lines:
+            - speaker: Freund
+              text: "Sabine, du machst ja jetzt so viel Sport!"
+            - speaker: Sabine
+              text: "Ja! Am Montag gehe ich schwimmen, gleich nach der Arbeit."
+            - speaker: Freund
+              text: "Und dienstags?"
+            - speaker: Sabine
+              text: "Da ist Yoga. Am Mittwoch spiele ich Volleyball, und am Donnerstag wollte ich eigentlich ins Fitnessstudio, aber das ist mir zu teuer. Jetzt gehe ich am Donnerstag einfach joggen."
+            - speaker: Freund
+              text: "Und am Freitag?"
+            - speaker: Sabine
+              text: "Freitag fahre ich mit dem Fahrrad zu meiner Mutter, das sind dreißig Kilometer!"
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Montag
+            options: [Schwimmen, Yoga, Volleyball, Joggen, Radfahren, Fitnessstudio]
+            answer: Schwimmen
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Dienstag
+            options: [Schwimmen, Yoga, Volleyball, Joggen, Radfahren, Fitnessstudio]
+            answer: Yoga
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Mittwoch
+            options: [Schwimmen, Yoga, Volleyball, Joggen, Radfahren, Fitnessstudio]
+            answer: Volleyball
+            shuffle: false
+          - id: h2-4
+            type: multiple-choice
+            prompt: Donnerstag
+            options: [Schwimmen, Yoga, Volleyball, Joggen, Radfahren, Fitnessstudio]
+            answer: Joggen
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Freitag
+            options: [Schwimmen, Yoga, Volleyball, Joggen, Radfahren, Fitnessstudio]
+            answer: Radfahren
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Ärztin
+                  text: "Wie lange haben Sie schon Husten?"
+                - speaker: Patient
+                  text: "Seit zwei Wochen. Fieber hatte ich nur am Anfang."
+            prompt: Seit wann hat der Mann Husten?
+            options: [seit zwei Wochen, seit zwei Tagen, seit einem Monat]
+            answer: seit zwei Wochen
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Was soll ich gegen die Kopfschmerzen machen?"
+                - speaker: Apothekerin
+                  text: "Nehmen Sie diese Tabletten, aber höchstens drei am Tag. Und trinken Sie viel."
+            prompt: Wie viele Tabletten darf der Mann pro Tag nehmen?
+            options: ["höchstens 3", "höchstens 2", "so viele er will"]
+            answer: "höchstens 3"
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Kommst du mit ins Fitnessstudio?"
+                - speaker: Mann
+                  text: "Heute nicht. Ich gehe lieber im Wald spazieren, das Wetter ist so schön."
+            prompt: Was macht der Mann heute?
+            options: [Er geht spazieren., Er geht ins Fitnessstudio., Er bleibt zu Hause.]
+            answer: Er geht spazieren.
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Frau
+                  text: "Ich hätte gern einen Termin beim Zahnarzt."
+                - speaker: Arzthelfer
+                  text: "Diese Woche ist alles voll. Nächsten Dienstag um neun?"
+                - speaker: Frau
+                  text: "Ja, das passt."
+            prompt: Wann ist der Termin?
+            options: ["nächsten Dienstag um 9 Uhr", "diese Woche", "nächsten Donnerstag um 9 Uhr"]
+            answer: "nächsten Dienstag um 9 Uhr"
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Mann
+                  text: "Isst du immer noch kein Fleisch?"
+                - speaker: Frau
+                  text: "Nein, seit einem Jahr nicht. Und jetzt trinke ich auch keinen Kaffee mehr, nur noch Tee."
+            prompt: Was trinkt die Frau jetzt?
+            options: [Tee, Kaffee, Saft]
+            answer: Tee
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio Nord – Gesund leben
+          lines:
+            - speaker: Moderatorin
+              text: "Herr Dr. Ahmadi, Sie sind Sportarzt. Wie viel Sport sollte man machen?"
+            - speaker: Dr. Ahmadi
+              text: "Erwachsene sollten sich mindestens zweieinhalb Stunden pro Woche bewegen. Das muss kein Marathon sein, auch schnelles Spazierengehen hilft."
+            - speaker: Moderatorin
+              text: "Viele Menschen sagen, sie haben keine Zeit."
+            - speaker: Dr. Ahmadi
+              text: "Das verstehe ich. Mein Tipp: Nehmen Sie die Treppe statt den Aufzug und fahren Sie mit dem Fahrrad zur Arbeit."
+            - speaker: Moderatorin
+              text: "Und was machen Sie selbst?"
+            - speaker: Dr. Ahmadi
+              text: "Ich spiele zweimal pro Woche Badminton. Und am Wochenende wandere ich mit meiner Familie."
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Erwachsene sollen sich mindestens zweieinhalb Stunden pro Woche bewegen.
+            answer: true
+          - id: h4-2
+            type: true-false
+            prompt: Nur Laufen ist guter Sport.
+            answer: false
+          - id: h4-3
+            type: true-false
+            prompt: Dr. Ahmadi empfiehlt, mit dem Fahrrad zur Arbeit zu fahren.
+            answer: true
+          - id: h4-4
+            type: true-false
+            prompt: Er spielt jeden Tag Badminton.
+            answer: false
+          - id: h4-5
+            type: true-false
+            prompt: Am Wochenende wandert er allein.
+            answer: false
+
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie wollten heute mit Ihrem Freund Erik joggen gehen, aber Sie sind erkältet. Schreiben Sie Erik eine SMS: Sagen Sie ab. Schreiben Sie, was Sie haben. Schlagen Sie einen neuen Termin vor."
+            points:
+              - absagen
+              - was Sie haben
+              - neuer Termin
+            minWords: 20
+            sample: "Hallo Erik, ich kann heute leider nicht joggen. Ich bin erkältet und habe Halsschmerzen. Können wir nächsten Samstag laufen gehen? Liebe Grüße, Kim"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie möchten im Fitnessstudio 'Fit & Fun' Mitglied werden. Schreiben Sie eine E-Mail: Stellen Sie sich kurz vor. Fragen Sie nach den Preisen. Fragen Sie, ob es Kurse am Abend gibt."
+            points:
+              - kurze Vorstellung
+              - Frage nach den Preisen
+              - Frage nach Abendkursen
+            minWords: 30
+            sample: "Sehr geehrte Damen und Herren, mein Name ist Lukas Meyer, ich bin 35 Jahre alt und möchte gern Mitglied in Ihrem Studio werden. Wie viel kostet die Mitgliedschaft pro Monat? Gibt es auch Kurse am Abend, nach 19 Uhr? Mit freundlichen Grüßen, Lukas Meyer"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Sport?, Frühstück?, Schlaf?, Arzt?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Welchen Sport machst du? Ich spiele Basketball, zweimal pro Woche. Was isst du zum Frühstück? Ich esse Müsli mit Joghurt. Wie viele Stunden schläfst du? Ungefähr sieben Stunden, am Wochenende mehr. Wann warst du zuletzt beim Arzt? Im Januar, ich hatte eine Grippe."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Gesundheit. Erzählen Sie, was Sie für Ihre Gesundheit tun."
+            cards: [Sport?, Essen?, Stress?, Was möchten Sie ändern?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used weil, deshalb or a comparative
+            sample: "Für meine Gesundheit fahre ich jeden Tag mit dem Fahrrad zur Arbeit. Ich esse viel Gemüse, aber leider auch zu viel Schokolade. Bei der Arbeit habe ich oft Stress, deshalb gehe ich abends spazieren. Ich möchte früher ins Bett gehen, weil ich zu wenig schlafe."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten mit einer Freundin oder einem Freund eine kranke Kollegin besuchen. Finden Sie einen Termin am Mittwoch.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Mittwoch: 9–13 Uhr Arbeit, 14 Uhr Friseur, 17–18 Uhr Schwimmen, ab 20 Uhr Elternabend. Ihr Partner hat um 13, um 15 und um 18:30 Uhr keine Zeit. Planen Sie: Wann? Wo treffen? Was mitbringen?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Treffpunkt, Geschenk]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a time, a place and a present
+            sample: "– Wann hast du am Mittwoch Zeit? Wie wäre es um eins? – Um eins kann ich leider nicht, da esse ich mit meiner Schwester. Und um zwei? – Um zwei bin ich beim Friseur. Hast du um vier Zeit? – Ja, um vier passt es. – Gut, dann treffen wir uns um vier vor ihrem Haus. Was bringen wir mit? – Vielleicht Blumen und eine Zeitschrift?"

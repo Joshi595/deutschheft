@@ -1,0 +1,433 @@
+level: a1
+title: Modelltest 5
+description: >-
+  A practice exam in the format of Start Deutsch 1, with the real time limits. Topics: family,
+  birthdays, invitations and the weekend.
+passMark: 60
+scoring: total
+modules:
+  - skill: listening
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Frau
+                  text: "Wie alt ist deine Schwester?"
+                - speaker: Mann
+                  text: "Sie ist zweiundzwanzig. Mein Bruder ist achtzehn."
+            prompt: Wie alt ist die Schwester?
+            options: ["22", "18", "28"]
+            answer: "22"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Wann hast du Geburtstag?"
+                - speaker: Frau
+                  text: "Am dritten März. Und du?"
+                - speaker: Mann
+                  text: "Im Oktober."
+            prompt: Wann hat die Frau Geburtstag?
+            options: [am 3. März, im Oktober, am 13. März]
+            answer: am 3. März
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Was schenken wir Opa? Ein Buch?"
+                - speaker: Mann
+                  text: "Er liest nicht so gern. Kaufen wir lieber Blumen für seinen Garten."
+            prompt: Was schenken sie Opa?
+            options: [Blumen, ein Buch, Wein]
+            answer: Blumen
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Hast du Kinder?"
+                - speaker: Frau
+                  text: "Ja, zwei Töchter und einen Sohn."
+            prompt: Wie viele Kinder hat die Frau?
+            options: ["drei", "zwei", "eins"]
+            answer: "drei"
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Frau
+                  text: "Wo wohnen deine Eltern?"
+                - speaker: Mann
+                  text: "Meine Mutter wohnt in Polen, mein Vater in Hamburg."
+            prompt: Wo wohnt der Vater?
+            options: [in Hamburg, in Polen, in München]
+            answer: in Hamburg
+          - id: h1-6
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 6
+              lines:
+                - speaker: Mann
+                  text: "Wann beginnt die Party?"
+                - speaker: Frau
+                  text: "Um acht. Aber komm ruhig um sieben, dann kochen wir zusammen."
+            prompt: Wann soll der Mann kommen?
+            options: ["um 7 Uhr", "um 8 Uhr", "um 6 Uhr"]
+            answer: "um 7 Uhr"
+
+      - title: "Hören, Teil 2"
+        instructions: Richtig oder falsch? Sie hören jeden Text nur einmal.
+        items:
+          - id: h2-1
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 1
+              plays: 1
+              lines:
+                - text: "Liebe Eltern, das Sommerfest im Kindergarten ist am Samstag um vierzehn Uhr. Bitte bringen Sie einen Kuchen mit."
+            prompt: Das Sommerfest ist am Sonntag.
+            answer: false
+          - id: h2-2
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 2
+              plays: 1
+              lines:
+                - text: "Im Kaufhaus Merkur: Heute alle Spielsachen zwanzig Prozent billiger!"
+            prompt: Spielsachen sind heute billiger.
+            answer: true
+          - id: h2-3
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 3
+              plays: 1
+              lines:
+                - text: "Der kleine Ali sucht seinen Vater. Herr Demir, bitte kommen Sie zur Kasse drei."
+            prompt: Herr Demir soll zur Kasse 3 kommen.
+            answer: true
+          - id: h2-4
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 4
+              plays: 1
+              lines:
+                - text: "Das Wetter am Wochenende: Es bleibt kalt und es schneit."
+            prompt: Am Wochenende ist es warm.
+            answer: false
+
+      - title: "Hören, Teil 3"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 1
+              lines:
+                - text: "Hallo Katja, ich mache am Samstag eine Geburtstagsparty. Sie ist in meinem Garten. Kommst du?"
+            prompt: Wo ist die Party?
+            options: [im Garten, im Restaurant, im Park]
+            answer: im Garten
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 2
+              lines:
+                - text: "Hallo Tante Rosa, hier ist Ben. Danke für das Geschenk! Das Fahrrad ist super."
+            prompt: Was hat Ben bekommen?
+            options: [ein Fahrrad, ein Buch, ein Spiel]
+            answer: ein Fahrrad
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 3
+              lines:
+                - text: "Hallo Mama, ich bin's, Lukas. Ich komme heute zum Abendessen, aber erst um halb acht."
+            prompt: Wann kommt Lukas?
+            options: ["um 19:30 Uhr", "um 18:30 Uhr", "um 20:30 Uhr"]
+            answer: "um 19:30 Uhr"
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 4
+              lines:
+                - text: "Hallo Sven, hier ist Clara. Die Hochzeit von Anna ist nicht im Juni, sondern im August. Bitte sag es Mark."
+            prompt: Wann ist die Hochzeit?
+            options: [im August, im Juni, im Juli]
+            answer: im August
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 5
+              lines:
+                - text: "Hi, hier ist Nora. Ich kann am Sonntag nicht schwimmen gehen. Ich besuche meine Großeltern."
+            prompt: Was macht Nora am Sonntag?
+            options: [Sie besucht die Großeltern., Sie geht schwimmen., Sie arbeitet.]
+            answer: Sie besucht die Großeltern.
+
+  - skill: reading
+    minutes: 25
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1 (Text 1)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: Einladung
+          text: |
+            Liebe Freunde,
+            ich werde 30! Ich feiere am Samstag, 12. Juni, ab 19 Uhr in meiner Wohnung, Lindenweg 4.
+            Es gibt Essen und Musik. Bitte bringt etwas zu trinken mit.
+            Bitte antwortet bis Mittwoch.
+            Eure Tanja
+        items:
+          - id: l1-1
+            type: true-false
+            prompt: Tanja hat Geburtstag.
+            answer: true
+          - id: l1-2
+            type: true-false
+            prompt: Die Party ist in einem Restaurant.
+            answer: false
+          - id: l1-3
+            type: true-false
+            prompt: Die Gäste sollen Getränke mitbringen.
+            answer: true
+
+      - title: "Lesen, Teil 1 (Text 2)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: SMS
+          text: |
+            Hallo Papa,
+            ich bin noch bei Lisa. Ihre Mutter bringt mich um 20 Uhr mit dem Auto nach Hause. Du musst mich nicht abholen.
+            Lena
+        items:
+          - id: l1-4
+            type: true-false
+            prompt: Lena fährt mit dem Bus nach Hause.
+            answer: false
+          - id: l1-5
+            type: true-false
+            prompt: Der Vater soll Lena abholen.
+            answer: false
+
+      - title: "Lesen, Teil 2"
+        instructions: Lesen Sie die Situationen und die Anzeigen. Wo finden Sie Informationen? Wählen Sie a oder b.
+        items:
+          - id: l2-1
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Partyservice Lecker: Wir kochen für Ihre Feier, ab 20 Personen.
+
+                b) Konditorei Süß: Torten für Geburtstage und Hochzeiten.
+            prompt: Sie brauchen eine Geburtstagstorte.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Zoo: Familienkarte (2 Erwachsene, 2 Kinder) 35 Euro.
+
+                b) Theater: Abendvorstellung, nur für Erwachsene.
+            prompt: Sie möchten mit Ihren Kindern einen Ausflug machen.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Blumen Rosa: Blumen und Pflanzen, Mo–Sa 8–18 Uhr.
+
+                b) Blumen am Bahnhof: auch am Sonntag 9–13 Uhr geöffnet.
+            prompt: Es ist Sonntag. Sie brauchen Blumen für Ihre Mutter.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Saal "Zur Linde": Raum für Feiern bis 80 Personen.
+
+                b) Café Klein: Platz für 10 Personen.
+            prompt: Sie möchten eine Hochzeit mit 60 Gästen feiern.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Spielplatz im Stadtpark: für Kinder bis 12 Jahre.
+
+                b) Jugendzentrum: Musik und Sport für Jugendliche ab 14 Jahren.
+            prompt: Ihr Sohn ist 15 und möchte Freunde treffen.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die Texte und die Aufgaben. Richtig oder falsch?
+        items:
+          - id: l3-1
+            type: true-false
+            stimulus:
+              kind: text
+              label: Am Schwimmbad
+              text: "Kinder unter 6 Jahren nur mit Erwachsenen."
+            prompt: Ein Kind (4 Jahre) darf allein schwimmen gehen.
+            answer: false
+          - id: l3-2
+            type: true-false
+            stimulus:
+              kind: text
+              label: Im Restaurant
+              text: "Sonntags Familienbrunch 10–14 Uhr. Kinder essen gratis."
+            prompt: Kinder bezahlen beim Brunch nichts.
+            answer: true
+          - id: l3-3
+            type: true-false
+            stimulus:
+              kind: text
+              label: Im Kindergarten
+              text: "Morgen geschlossen! Ausflug der Mitarbeiter."
+            prompt: Morgen ist der Kindergarten geöffnet.
+            answer: false
+          - id: l3-4
+            type: true-false
+            stimulus:
+              kind: text
+              label: An der Kirche
+              text: "Konzert am Sonntag um 17 Uhr. Eintritt frei."
+            prompt: Für das Konzert muss man nichts bezahlen.
+            answer: true
+          - id: l3-5
+            type: true-false
+            stimulus:
+              kind: text
+              label: Im Supermarkt
+              text: "Heute: Geburtstagskarten 2 für 1 Euro."
+            prompt: Zwei Karten kosten zusammen einen Euro.
+            answer: true
+
+  - skill: writing
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Ihr Freund Samir meldet seine Tochter im Sportverein an. Im Formular fehlen fünf Informationen. Helfen Sie ihm.
+        items:
+          - id: s1
+            type: form
+            situation: "Samir Haddad meldet seine Tochter Lina im Schwimmverein an. Lina ist am 15. April 2016 geboren. Sie wohnen in Bonn in der Schulstraße 9. Lina möchte am Mittwoch trainieren. Samir bezahlt bar."
+            fields:
+              - { label: Vorname des Kindes, answers: [Lina] }
+              - { label: Geburtsdatum, answers: ["15.04.2016", "15.4.2016"] }
+              - { label: Wohnort, answers: [Bonn] }
+              - { label: Trainingstag, answers: [Mittwoch] }
+              - { label: Zahlungsweise, answers: [bar] }
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht die Anrede und den Gruß.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Ihre Freundin Tanja hat Sie zu ihrer Geburtstagsparty eingeladen. Sie können kommen. Schreiben Sie ihr."
+            points:
+              - Danken Sie für die Einladung.
+              - Sagen Sie, dass Sie kommen.
+              - Fragen Sie, was Sie mitbringen sollen.
+            minWords: 25
+            sample: "Liebe Tanja, vielen Dank für die Einladung zu deiner Party! Ich komme sehr gern am Samstag. Was soll ich mitbringen? Ich kann einen Salat machen. Bis bald! Viele Grüße, Elena"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: sich vorstellen"
+        instructions: Stellen Sie sich vor. Buchstabieren Sie danach Ihren Familiennamen und sagen Sie Ihre Telefonnummer.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Stellen Sie sich bitte vor. Buchstabieren Sie dann Ihren Familiennamen und sagen Sie Ihre Telefonnummer."
+            cards: [Name?, Alter?, Land?, Wohnort?, Sprachen?, Beruf?, Hobby?]
+            checklist:
+              - I said something for all seven cue words
+              - I spelled my surname
+              - I said a phone number digit by digit
+            sample: "Guten Tag, ich heiße Grace Mensah. Ich bin fünfundzwanzig und komme aus Ghana. Ich wohne in Düsseldorf. Ich spreche Englisch, Twi und ein bisschen Deutsch. Ich bin Studentin. Ich singe gern. Mensah: M, E, N, S, A, H. Meine Nummer ist null, eins, sieben, sechs, zwei, drei, neun, fünf."
+
+      - title: "Sprechen, Teil 2: um Informationen bitten und Informationen geben"
+        instructions: Stellen Sie zu jeder Karte eine Frage und antworten Sie selbst darauf.
+        items:
+          - id: sp2a
+            type: speaking-task
+            prompt: "Thema: Familie. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [Geschwister, Eltern, Kinder]
+            checklist:
+              - I asked a real question for each card
+              - I answered each question in a full sentence
+            sample: "Haben Sie Geschwister? Ja, ich habe einen Bruder. Wo wohnen Ihre Eltern? Meine Eltern wohnen in der Türkei. Haben Sie Kinder? Nein, ich habe keine Kinder."
+          - id: sp2b
+            type: speaking-task
+            prompt: "Thema: Feste. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [Geburtstag, Geschenk, Party]
+            checklist:
+              - I asked a real question for each card
+              - I used at least two different question words
+            sample: "Wann haben Sie Geburtstag? Im Mai. Was möchten Sie zum Geburtstag haben? Ich möchte ein Buch. Machen Sie gern Partys? Ja, ich feiere gern mit Freunden."
+
+      - title: "Sprechen, Teil 3: Bitten formulieren und darauf reagieren"
+        instructions: Formulieren Sie zu jeder Karte eine Bitte und reagieren Sie darauf.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Formulieren Sie zu jeder Karte eine Bitte und eine Antwort."
+            cards: [Kuchen, Musik, Tür, Salz]
+            checklist:
+              - I made a polite request for each card
+              - I gave a response to each request
+            sample: "Kannst du bitte einen Kuchen backen? Ja, gern. Mach bitte die Musik leiser. Okay. Machen Sie bitte die Tür zu. Natürlich. Gibst du mir bitte das Salz? Hier, bitte."

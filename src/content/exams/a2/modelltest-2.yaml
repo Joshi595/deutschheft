@@ -1,0 +1,480 @@
+level: a2
+title: Modelltest 2
+description: >-
+  A second complete practice exam in the format of the Goethe-Zertifikat A2, with the real time
+  limits. Topics: work, colleagues, training and the working day.
+passMark: 60
+scoring: total
+modules:
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Von der Bank in die Backstube
+
+            Zwölf Jahre lang hat Thomas Engel (41) in einer Bank gearbeitet. Dann hatte er genug. „Ich habe den ganzen Tag am Computer gesessen und war oft müde und unzufrieden", erzählt er. Vor drei Jahren hat er gekündigt und eine Ausbildung als Bäcker begonnen.
+
+            Am Anfang war es schwer. Bäcker stehen um drei Uhr morgens auf, und Thomas war viel älter als die anderen Azubis. Auch das Geld war knapp, denn als Azubi verdient man wenig. Aber seine Frau hat ihn immer unterstützt.
+
+            Seit letztem Monat hat Thomas seine eigene kleine Bäckerei in Kassel. Sein Brot ist schon bekannt in der Stadt, besonders das Roggenbrot nach einem Rezept seiner Großmutter. Am Wochenende gibt es oft eine lange Schlange vor dem Laden.
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: Thomas Engel hat …
+            options: ["zwölf Jahre in einer Bank gearbeitet.", "drei Jahre in einer Bank gearbeitet.", "nie am Computer gearbeitet."]
+            answer: "zwölf Jahre in einer Bank gearbeitet."
+          - id: l1-2
+            type: multiple-choice
+            prompt: In der Bank war Thomas …
+            options: ["oft unzufrieden.", "sehr glücklich.", "nie müde."]
+            answer: "oft unzufrieden."
+          - id: l1-3
+            type: multiple-choice
+            prompt: In der Ausbildung war schwer, dass …
+            options: ["er sehr früh aufstehen musste.", "seine Frau dagegen war.", "die anderen Azubis unfreundlich waren."]
+            answer: "er sehr früh aufstehen musste."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Die eigene Bäckerei hat Thomas …
+            options: ["seit einem Monat.", "seit drei Jahren.", "seit zwölf Jahren."]
+            answer: "seit einem Monat."
+          - id: l1-5
+            type: multiple-choice
+            prompt: Das Roggenbrot macht Thomas …
+            options: ["nach einem Rezept seiner Großmutter.", "nur am Wochenende.", "mit seiner Frau."]
+            answer: "nach einem Rezept seiner Großmutter."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind im Bürogebäude. Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Bürozentrum Am Hafen – Wegweiser
+          text: |
+            4. OG: Rechtsanwälte Klein & Partner · Steuerberatung Huber
+            3. OG: Sprachschule Lingua · Übersetzungsbüro
+            2. OG: Arztpraxis Dr. Becker (Allgemeinmedizin) · Physiotherapie
+            1. OG: Jobcenter · Agentur für Arbeit
+            EG: Empfang · Café · Copyshop
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Sie suchen eine neue Arbeit und brauchen Beratung.
+            options: [1. OG, 4. OG, anderer Stock]
+            answer: 1. OG
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Sie möchten einen Deutschkurs machen.
+            options: [3. OG, 2. OG, anderer Stock]
+            answer: 3. OG
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Sie brauchen Hilfe bei Ihrer Steuererklärung.
+            options: [4. OG, 1. OG, anderer Stock]
+            answer: 4. OG
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            prompt: Sie müssen Ihre Zeugnisse kopieren.
+            options: [EG, 3. OG, anderer Stock]
+            answer: EG
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie haben Zahnschmerzen.
+            options: [2. OG, EG, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+            explanation: There is no dentist on the board; Dr. Becker is a general doctor.
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Liebe Svenja,
+
+            stell dir vor: Ich habe die Stelle als Erzieherin bekommen! Ab dem 1. September arbeite ich im Kindergarten „Sonnenblume". Ich bin so froh, denn ich habe sechs Monate gesucht.
+
+            Ich arbeite nur 30 Stunden pro Woche, von Montag bis Donnerstag. Am Freitag habe ich frei, das ist super für mich, weil ich am Freitag noch meinen Deutschkurs habe. Die Kolleginnen habe ich schon kennengelernt, sie sind sehr nett. Nur der Weg ist lang: Ich brauche mit dem Bus fast eine Stunde.
+
+            Wollen wir am Samstag zusammen feiern? Ich lade dich zum Essen ein!
+
+            Liebe Grüße
+            Marisol
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Marisol arbeitet bald …
+            options: ["in einem Kindergarten.", "in einer Schule.", "in einem Restaurant."]
+            answer: "in einem Kindergarten."
+          - id: l3-2
+            type: multiple-choice
+            prompt: Wie lange hat Marisol eine Stelle gesucht?
+            options: ["ein halbes Jahr", "ein Jahr", "drei Monate"]
+            answer: "ein halbes Jahr"
+          - id: l3-3
+            type: multiple-choice
+            prompt: Am Freitag …
+            options: ["hat Marisol Deutschkurs.", "arbeitet Marisol nur vormittags.", "trifft sie die Kolleginnen."]
+            answer: "hat Marisol Deutschkurs."
+          - id: l3-4
+            type: multiple-choice
+            prompt: Was ist nicht so gut an der Stelle?
+            options: ["Der Weg zur Arbeit ist lang.", "Die Kolleginnen sind unfreundlich.", "Sie muss am Freitag arbeiten."]
+            answer: "Der Weg zur Arbeit ist lang."
+          - id: l3-5
+            type: multiple-choice
+            prompt: Marisol möchte am Samstag …
+            options: ["mit Svenja essen gehen.", "Svenja zu Hause besuchen.", "zum Kindergarten fahren."]
+            answer: "mit Svenja essen gehen."
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Bewerbungstraining: Wir helfen Ihnen beim Lebenslauf und üben das Vorstellungsgespräch. Kostenlos für Arbeitssuchende.
+
+            b) Nachtschicht im Lager: Wir suchen Helfer für die Nacht, 22–6 Uhr, guter Lohn.
+
+            c) Minijob im Café: Wochenende, 10 Stunden pro Woche, auch für Studenten.
+
+            d) Computerkurs Excel für den Beruf: 5 Abende, Volkshochschule.
+
+            e) Praktikum im Hotel: 3 Monate, mit Unterkunft, für junge Leute bis 25.
+
+            f) Kinderbetreuung im Betrieb: Firmen-Kita für Mitarbeiter, 7–18 Uhr.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Jana studiert und möchte am Wochenende etwas Geld verdienen.
+            options: [a, b, c, d, e, f, X]
+            answer: c
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Herr Osei sucht Arbeit und möchte lernen, wie man eine Bewerbung schreibt.
+            options: [a, b, c, d, e, f, X]
+            answer: a
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Luis (22) möchte Erfahrung in der Hotelbranche sammeln.
+            options: [a, b, c, d, e, f, X]
+            answer: e
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Frau Petrov braucht für ihre Arbeit bessere Computerkenntnisse.
+            options: [a, b, c, d, e, f, X]
+            answer: d
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            prompt: Ingrid möchte als Krankenschwester arbeiten und sucht eine Stelle im Krankenhaus.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Guten Tag, Herr Lindner. Hier ist Frau Wagner von der Firma Nordlicht. Wir möchten Sie gern zu einem Vorstellungsgespräch einladen, am Dienstag um vierzehn Uhr. Bitte bestätigen Sie den Termin per E-Mail."
+            prompt: Was soll Herr Lindner tun?
+            options: ["den Termin per E-Mail bestätigen", "Frau Wagner anrufen", "am Montag kommen"]
+            answer: "den Termin per E-Mail bestätigen"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Liebe Mitarbeiterinnen und Mitarbeiter, die Betriebsversammlung findet nicht am Mittwoch statt, sondern am Freitag um zehn Uhr in der Kantine."
+            prompt: Wann ist die Versammlung?
+            options: ["am Freitag um 10 Uhr", "am Mittwoch um 10 Uhr", "am Freitag um 12 Uhr"]
+            answer: "am Freitag um 10 Uhr"
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Hallo Katrin, hier ist Jens. Ich bin heute leider krank und kann nicht ins Büro kommen. Kannst du bitte um elf die Besprechung mit den Kunden übernehmen?"
+            prompt: Was soll Katrin machen?
+            options: ["die Besprechung leiten", "Jens besuchen", "die Kunden anrufen"]
+            answer: "die Besprechung leiten"
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Und hier eine Meldung aus der Wirtschaft: Die Firma Bergmann sucht dieses Jahr hundertfünfzig neue Auszubildende, vor allem in der Elektrotechnik."
+            prompt: Wie viele Azubis sucht die Firma?
+            options: ["150", "115", "50"]
+            answer: "150"
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Hier ist die Mailbox von Doris Mayer, Personalabteilung. Ich bin bis Montag im Urlaub. In dringenden Fällen wenden Sie sich bitte an meinen Kollegen Herrn Brandt."
+            prompt: Wen soll man in dringenden Fällen kontaktieren?
+            options: [Herrn Brandt, Frau Mayer, den Chef]
+            answer: Herrn Brandt
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Was macht Ali an welchem Tag? Wählen Sie für jeden Tag die passende Aktivität. Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Alis Woche im neuen Job
+          plays: 1
+          lines:
+            - speaker: Freundin
+              text: "Und, Ali, wie ist die erste Woche im neuen Job?"
+            - speaker: Ali
+              text: "Voll! Am Montag hatte ich nur Einführung, ich habe alle Kollegen kennengelernt."
+            - speaker: Freundin
+              text: "Und am Dienstag?"
+            - speaker: Ali
+              text: "Da war ich den ganzen Tag in einem Computerkurs. Am Mittwoch sollte ich eigentlich zu einem Kunden fahren, aber der Termin ist ausgefallen. Also habe ich im Büro Akten sortiert."
+            - speaker: Freundin
+              text: "Klingt spannend."
+            - speaker: Ali
+              text: "Haha. Am Donnerstag bin ich dann doch zum Kunden gefahren, mit meinem Chef. Und am Freitag haben wir mit dem Team gegrillt."
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Montag
+            options: [Kollegen kennenlernen, Computerkurs, Akten sortieren, Kundenbesuch, Grillen]
+            answer: Kollegen kennenlernen
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Dienstag
+            options: [Kollegen kennenlernen, Computerkurs, Akten sortieren, Kundenbesuch, Grillen]
+            answer: Computerkurs
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Mittwoch
+            options: [Kollegen kennenlernen, Computerkurs, Akten sortieren, Kundenbesuch, Grillen]
+            answer: Akten sortieren
+            shuffle: false
+          - id: h2-4
+            type: multiple-choice
+            prompt: Donnerstag
+            options: [Kollegen kennenlernen, Computerkurs, Akten sortieren, Kundenbesuch, Grillen]
+            answer: Kundenbesuch
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Freitag
+            options: [Kollegen kennenlernen, Computerkurs, Akten sortieren, Kundenbesuch, Grillen]
+            answer: Grillen
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Frau
+                  text: "Wie kommst du morgen zur Arbeit? Mit dem Auto?"
+                - speaker: Mann
+                  text: "Nein, das ist in der Werkstatt. Ich nehme die S-Bahn, das Fahrrad ist zu weit."
+            prompt: Wie fährt der Mann morgen zur Arbeit?
+            options: [mit der S-Bahn, mit dem Auto, mit dem Fahrrad]
+            answer: mit der S-Bahn
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Wann machst du Mittagspause?"
+                - speaker: Frau
+                  text: "Normalerweise um zwölf, aber heute erst um eins. Ich habe noch ein Telefonat."
+            prompt: Wann macht die Frau heute Pause?
+            options: ["um 13 Uhr", "um 12 Uhr", "um 11 Uhr"]
+            answer: "um 13 Uhr"
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Was schenken wir Herrn Roth zum Abschied? Einen Gutschein?"
+                - speaker: Mann
+                  text: "Er reist doch so gern. Ein Reiseführer über Kanada wäre schön, da fährt er im Herbst hin."
+                - speaker: Frau
+                  text: "Gute Idee."
+            prompt: Was schenken sie Herrn Roth?
+            options: [einen Reiseführer, einen Gutschein, Blumen]
+            answer: einen Reiseführer
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Wie viele Stunden arbeitest du jetzt?"
+                - speaker: Frau
+                  text: "Früher vierzig, jetzt nur noch fünfundzwanzig, wegen der Kinder."
+            prompt: Wie viele Stunden arbeitet die Frau jetzt?
+            options: ["25", "40", "15"]
+            answer: "25"
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Frau
+                  text: "Der Drucker funktioniert schon wieder nicht!"
+                - speaker: Mann
+                  text: "Ich rufe den Techniker an. Bis dahin kannst du im zweiten Stock drucken."
+            prompt: Was macht der Mann?
+            options: [Er ruft den Techniker an., Er repariert den Drucker., Er kauft einen neuen Drucker.]
+            answer: Er ruft den Techniker an.
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio Mitte – Berufe im Porträt
+          lines:
+            - speaker: Moderatorin
+              text: "Frau Duman, Sie sind Busfahrerin in München. Wie sind Sie zu diesem Beruf gekommen?"
+            - speaker: Frau Duman
+              text: "Ich war früher Verkäuferin, aber ich wollte etwas Neues. Vor fünf Jahren habe ich dann den Busführerschein gemacht. Die Firma hat ihn bezahlt."
+            - speaker: Moderatorin
+              text: "Was gefällt Ihnen an der Arbeit?"
+            - speaker: Frau Duman
+              text: "Ich bin gern unterwegs und sehe die ganze Stadt. Die Schichten sind manchmal anstrengend, besonders die frühen. Da fange ich um vier Uhr an."
+            - speaker: Moderatorin
+              text: "Gibt es viele Frauen in Ihrem Beruf?"
+            - speaker: Frau Duman
+              text: "Immer mehr! In meinem Team sind wir schon acht Frauen von dreißig Fahrern."
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Frau Duman war früher Verkäuferin.
+            answer: true
+          - id: h4-2
+            type: true-false
+            prompt: Sie hat den Busführerschein selbst bezahlt.
+            answer: false
+          - id: h4-3
+            type: true-false
+            prompt: Sie fährt gern durch die Stadt.
+            answer: true
+          - id: h4-4
+            type: true-false
+            prompt: Die Frühschicht beginnt um sechs Uhr.
+            answer: false
+          - id: h4-5
+            type: true-false
+            prompt: In ihrem Team gibt es mehr Frauen als Männer.
+            answer: false
+
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie haben eine neue Arbeitsstelle. Schreiben Sie Ihrem Freund Max eine SMS: Erzählen Sie von der Stelle. Schreiben Sie, wann Sie anfangen. Laden Sie ihn zum Feiern ein."
+            points:
+              - die neue Stelle
+              - wann Sie anfangen
+              - Einladung zum Feiern
+            minWords: 20
+            sample: "Hallo Max, ich habe eine neue Stelle als Koch in einem Hotel! Ich fange am 1. Juni an. Wollen wir am Samstag zusammen feiern? Ich lade dich ein! Liebe Grüße, Tarek"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Ihre Kollegin Frau Meier hat Sie gefragt, ob Sie am Samstag für sie arbeiten können. Sie können nicht. Schreiben Sie Frau Meier eine E-Mail: Entschuldigen Sie sich. Nennen Sie einen Grund. Machen Sie einen anderen Vorschlag."
+            points:
+              - Entschuldigung
+              - Grund
+              - anderer Vorschlag
+            minWords: 30
+            sample: "Liebe Frau Meier, es tut mir leid, aber ich kann am Samstag leider nicht für Sie arbeiten. Meine Schwester heiratet an diesem Tag. Vielleicht kann Herr Schmitt helfen? Oder ich arbeite nächsten Samstag für Sie. Viele Grüße, Nora Haas"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Arbeit?, Arbeitszeit?, Kollegen?, Traumberuf?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Wo arbeitest du? Ich arbeite in einem Supermarkt, an der Kasse. Wann arbeitest du? Ich arbeite von acht bis sechzehn Uhr, manchmal auch samstags. Wie sind deine Kollegen? Sie sind sehr nett, wir gehen manchmal zusammen essen. Was ist dein Traumberuf? Mein Traumberuf ist Tierärztin, weil ich Tiere liebe."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Arbeit und Beruf. Erzählen Sie über Ihre Arbeit oder Ihren Wunschberuf."
+            cards: [Was?, Wo?, Wie lange schon?, Was gefällt Ihnen?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used seit, weil and a Perfekt sentence
+            sample: "Ich arbeite als Altenpflegerin in einem Pflegeheim in Köln. Ich arbeite dort seit vier Jahren. Vorher habe ich in meiner Heimat als Krankenschwester gearbeitet. Mir gefällt meine Arbeit, weil ich gern mit alten Menschen spreche und ihnen helfe. Nicht so schön sind die Nachtschichten. In Zukunft möchte ich eine Weiterbildung machen."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten mit einer Kollegin oder einem Kollegen ein Abschiedsgeschenk für Ihre Chefin kaufen. Finden Sie einen Termin am Donnerstag.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Donnerstag: 8–12 Uhr Arbeit, 13 Uhr Zahnarzt, 15–17 Uhr Deutschkurs, ab 19 Uhr Kino. Ihr Kollege hat um 12, um 14 und ab 18 Uhr keine Zeit. Planen Sie: Wann? Wo treffen? Was kaufen?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Treffpunkt, Geschenk]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a time, a place and a present
+            sample: "– Hast du am Donnerstag Zeit? Wie wäre es um zwölf? – Um zwölf kann ich leider nicht, da esse ich mit einem Kunden. Und um eins? – Um eins habe ich einen Termin beim Zahnarzt. Wie wäre es um halb drei? – Nein, um halb drei bin ich im Deutschkurs. Aber um siebzehn Uhr passt es. – Gut, dann treffen wir uns um fünf vor dem Kaufhaus. Was kaufen wir? – Vielleicht eine schöne Tasse und Blumen?"

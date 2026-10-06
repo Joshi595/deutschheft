@@ -1,0 +1,438 @@
+level: a1
+title: Modelltest 2
+description: >-
+  A second complete practice exam in the format of Start Deutsch 1: listening, reading, writing and
+  speaking, with the real time limits. Topics: shopping, the doctor's, free time and the flat.
+passMark: 60
+scoring: total
+modules:
+  - skill: listening
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Frau
+                  text: "Was kostet das Brot?"
+                - speaker: Verkäufer
+                  text: "Das große Brot kostet drei Euro zwanzig, das kleine zwei Euro."
+                - speaker: Frau
+                  text: "Dann nehme ich das kleine."
+            prompt: Was bezahlt die Frau?
+            options: ["2,00 Euro", "3,20 Euro", "2,20 Euro"]
+            answer: "2,00 Euro"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Wann beginnt der Deutschkurs?"
+                - speaker: Frau
+                  text: "Am Montag um neun Uhr. Der Kurs ist im Raum vierzehn."
+            prompt: Wann beginnt der Kurs?
+            options: ["Montag um 9 Uhr", "Montag um 14 Uhr", "Mittwoch um 9 Uhr"]
+            answer: "Montag um 9 Uhr"
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Wo ist mein Handy? Auf dem Tisch ist es nicht."
+                - speaker: Mann
+                  text: "Ich glaube, es liegt in deiner Tasche."
+                - speaker: Frau
+                  text: "Ah ja, hier ist es. Danke!"
+            prompt: Wo ist das Handy?
+            options: [in der Tasche, auf dem Tisch, im Auto]
+            answer: in der Tasche
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Was machst du am Wochenende?"
+                - speaker: Frau
+                  text: "Am Samstag arbeite ich. Aber am Sonntag spiele ich Tennis mit Anna."
+            prompt: Was macht die Frau am Sonntag?
+            options: [Sie spielt Tennis., Sie arbeitet., Sie besucht Anna zu Hause.]
+            answer: Sie spielt Tennis.
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Ärztin
+                  text: "Wie oft nehmen Sie die Tabletten?"
+                - speaker: Patient
+                  text: "Zweimal am Tag, morgens und abends."
+            prompt: Wie oft nimmt der Mann die Tabletten?
+            options: [zweimal am Tag, dreimal am Tag, einmal am Tag]
+            answer: zweimal am Tag
+          - id: h1-6
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 6
+              lines:
+                - speaker: Frau
+                  text: "Haben Sie die Schuhe auch in Blau?"
+                - speaker: Verkäufer
+                  text: "Nein, leider nur in Schwarz und Braun."
+                - speaker: Frau
+                  text: "Gut, dann nehme ich die schwarzen."
+            prompt: Welche Schuhe kauft die Frau?
+            options: [schwarze, blaue, braune]
+            answer: schwarze
+
+      - title: "Hören, Teil 2"
+        instructions: Richtig oder falsch? Sie hören jeden Text nur einmal.
+        items:
+          - id: h2-1
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 1
+              plays: 1
+              lines:
+                - text: "Liebe Fahrgäste, der Bus Nummer acht fährt heute nicht bis zum Bahnhof. Bitte steigen Sie am Marktplatz um."
+            prompt: Der Bus 8 fährt heute bis zum Bahnhof.
+            answer: false
+          - id: h2-2
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 2
+              plays: 1
+              lines:
+                - text: "Heute im Supermarkt: Ein Kilo Bananen nur ein Euro neunundvierzig!"
+            prompt: Die Bananen sind heute billig.
+            answer: true
+          - id: h2-3
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 3
+              plays: 1
+              lines:
+                - text: "Achtung, eine Information für alle Gäste: Das Schwimmbad schließt heute schon um achtzehn Uhr."
+            prompt: Das Schwimmbad ist heute bis 20 Uhr geöffnet.
+            answer: false
+          - id: h2-4
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 4
+              plays: 1
+              lines:
+                - text: "Der Flug nach Wien hat dreißig Minuten Verspätung. Neue Abflugzeit: vierzehn Uhr dreißig."
+            prompt: Der Flug nach Wien fliegt später.
+            answer: true
+
+      - title: "Hören, Teil 3"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 1
+              lines:
+                - text: "Hallo Tom, hier ist Lisa. Ich bin krank und kann heute nicht zum Kurs kommen. Kannst du mir bitte die Hausaufgaben schicken? Danke!"
+            prompt: Was möchte Lisa?
+            options: [die Hausaufgaben, ein Buch, einen Arzt]
+            answer: die Hausaufgaben
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 2
+              lines:
+                - text: "Guten Tag, Frau Novak. Hier ist die Praxis Doktor Weiß. Ihr Termin ist nicht am Dienstag, sondern am Donnerstag um zehn Uhr."
+            prompt: Wann ist der Termin?
+            options: ["Donnerstag, 10 Uhr", "Dienstag, 10 Uhr", "Donnerstag, 12 Uhr"]
+            answer: "Donnerstag, 10 Uhr"
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 3
+              lines:
+                - text: "Hallo Papa, ich bin's, Mia. Ich bin bei Sara und mache Hausaufgaben. Ich komme um sieben nach Hause."
+            prompt: Wo ist Mia?
+            options: [bei Sara, in der Schule, zu Hause]
+            answer: bei Sara
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 4
+              lines:
+                - text: "Hallo, hier ist Ben. Wir machen am Freitag ein Picknick im Park. Kannst du Getränke mitbringen? Ich bringe Kuchen."
+            prompt: Was bringt Ben mit?
+            options: [Kuchen, Getränke, Obst]
+            answer: Kuchen
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 5
+              lines:
+                - text: "Guten Morgen, hier ist das Möbelhaus Krone. Ihr Sofa kommt morgen zwischen acht und zwölf Uhr."
+            prompt: Was kommt morgen?
+            options: [das Sofa, der Tisch, das Bett]
+            answer: das Sofa
+
+  - skill: reading
+    minutes: 25
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1 (Text 1)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Liebe Oma,
+            wie geht es dir? Ich wohne jetzt in Frankfurt. Meine Wohnung ist klein, aber sehr schön. Sie hat ein Zimmer, eine Küche und ein Bad.
+            Meine Arbeit beginnt um acht Uhr. Ich fahre mit der U-Bahn. Am Wochenende besuche ich dich!
+            Viele Grüße
+            Jana
+        items:
+          - id: l1-1
+            type: true-false
+            prompt: Janas Wohnung hat zwei Zimmer.
+            answer: false
+          - id: l1-2
+            type: true-false
+            prompt: Jana fährt mit der U-Bahn zur Arbeit.
+            answer: true
+          - id: l1-3
+            type: true-false
+            prompt: Jana besucht die Oma am Wochenende.
+            answer: true
+
+      - title: "Lesen, Teil 1 (Text 2)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: Nachricht
+          text: |
+            Hallo Paul,
+            ich bin heute bis 19 Uhr im Büro. Bitte kauf Milch und Eier. Das Geld liegt auf dem Küchentisch.
+            Bis heute Abend!
+            Eva
+        items:
+          - id: l1-4
+            type: true-false
+            prompt: Paul soll Milch und Eier kaufen.
+            answer: true
+          - id: l1-5
+            type: true-false
+            prompt: Das Geld ist im Büro.
+            answer: false
+
+      - title: "Lesen, Teil 2"
+        instructions: Lesen Sie die Situationen und die Anzeigen. Wo finden Sie Informationen? Wählen Sie a oder b.
+        items:
+          - id: l2-1
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Pizzeria Roma: Pizza und Pasta. Täglich 12 bis 23 Uhr. Wir liefern auch nach Hause!
+
+                b) Café Sonne: Kaffee und Kuchen. Montag bis Samstag 8 bis 18 Uhr.
+            prompt: Sie möchten am Abend Pizza zu Hause essen.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Sprachschule Wort: Englischkurse für Kinder, nachmittags.
+
+                b) Sprachschule Babel: Deutschkurse für Erwachsene, abends 18 bis 20 Uhr.
+            prompt: Sie arbeiten bis 17 Uhr und möchten Deutsch lernen.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Fahrradladen Speiche: Neue Fahrräder ab 300 Euro.
+
+                b) Fahrrad-Flohmarkt: Gebrauchte Fahrräder ab 40 Euro. Samstag, 9 bis 13 Uhr.
+            prompt: Sie möchten ein billiges Fahrrad kaufen.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Zahnarztpraxis Dr. Lange: Notdienst am Wochenende, Telefon 0341 55 66.
+
+                b) Augenarzt Dr. Kim: Termine Montag bis Freitag.
+            prompt: Es ist Sonntag und Sie haben Zahnschmerzen.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Wohnung zu vermieten: 3 Zimmer, Balkon, 950 Euro.
+
+                b) Zimmer in WG frei: 1 Zimmer, 380 Euro, nur für Studenten.
+            prompt: Sie sind Student und haben nicht viel Geld.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die Texte und die Aufgaben. Richtig oder falsch?
+        items:
+          - id: l3-1
+            type: true-false
+            stimulus:
+              kind: text
+              label: An der Bäckerei
+              text: "Sonntag 7 bis 11 Uhr geöffnet. Montag Ruhetag."
+            prompt: Am Montag können Sie hier Brot kaufen.
+            answer: false
+          - id: l3-2
+            type: true-false
+            stimulus:
+              kind: text
+              label: Im Park
+              text: "Hunde bitte an die Leine!"
+            prompt: Hunde dürfen hier frei laufen.
+            answer: false
+          - id: l3-3
+            type: true-false
+            stimulus:
+              kind: text
+              label: Im Hotel
+              text: "Frühstück von 6:30 bis 10:00 Uhr im Erdgeschoss."
+            prompt: Um 9 Uhr können Sie frühstücken.
+            answer: true
+          - id: l3-4
+            type: true-false
+            stimulus:
+              kind: text
+              label: An der Arztpraxis
+              text: "Wir sind umgezogen! Neue Adresse: Gartenstraße 5, 2. Stock."
+            prompt: Die Praxis ist jetzt in der Gartenstraße.
+            answer: true
+          - id: l3-5
+            type: true-false
+            stimulus:
+              kind: text
+              label: Im Kino
+              text: "Heute alle Filme nur 6 Euro! Kinder bis 12 Jahre: 4 Euro."
+            prompt: Ein Kind (10 Jahre) bezahlt heute 6 Euro.
+            answer: false
+
+  - skill: writing
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Ihr Freund Pedro möchte im Fitnessstudio Mitglied werden. Im Formular fehlen fünf Informationen. Helfen Sie ihm.
+        items:
+          - id: s1
+            type: form
+            situation: "Pedro Alves kommt aus Portugal. Er ist am 2. Juni 1995 geboren und wohnt in Hamburg, Bergstraße 12. Er ist Koch von Beruf. Er möchte am Abend trainieren und bezahlt jeden Monat per Überweisung."
+            fields:
+              - { label: Nachname, answers: [Alves] }
+              - { label: Herkunftsland, answers: [Portugal] }
+              - { label: Geburtsdatum, answers: ["02.06.1995", "2.6.1995"] }
+              - { label: Beruf, answers: [Koch] }
+              - { label: Zahlungsweise, answers: [Überweisung, per Überweisung] }
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht die Anrede und den Gruß.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie sind krank und können nicht zum Deutschkurs kommen. Schreiben Sie Ihrer Lehrerin, Frau Klein, eine E-Mail."
+            points:
+              - Warum schreiben Sie?
+              - Wie lange sind Sie krank?
+              - Bitten Sie um die Hausaufgaben.
+            minWords: 25
+            sample: "Liebe Frau Klein, ich bin leider krank und kann heute nicht zum Kurs kommen. Ich habe Fieber. Ich bleibe bis Freitag zu Hause. Können Sie mir bitte die Hausaufgaben schicken? Viele Grüße, Ahmed"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: sich vorstellen"
+        instructions: Stellen Sie sich vor. Buchstabieren Sie danach Ihren Vornamen und sagen Sie eine Zahl.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Stellen Sie sich bitte vor. Buchstabieren Sie dann Ihren Vornamen und sagen Sie Ihre Postleitzahl."
+            cards: [Name?, Alter?, Land?, Wohnort?, Sprachen?, Beruf?, Hobby?]
+            checklist:
+              - I said something for all seven cue words
+              - I spelled my first name with German letter names
+              - I said my postcode clearly
+            sample: "Hallo, ich heiße Lucía Romero. Ich bin achtundzwanzig Jahre alt und komme aus Spanien. Ich wohne in Köln. Ich spreche Spanisch, Englisch und ein bisschen Deutsch. Ich bin Krankenschwester. Mein Hobby ist Tanzen. Mein Vorname ist L, U, C, I, A. Meine Postleitzahl ist fünf, null, sechs, sieben, acht."
+
+      - title: "Sprechen, Teil 2: um Informationen bitten und Informationen geben"
+        instructions: Stellen Sie zu jeder Karte eine Frage und antworten Sie selbst darauf.
+        items:
+          - id: sp2a
+            type: speaking-task
+            prompt: "Thema: Freizeit. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [Sport, Kino, Wochenende]
+            checklist:
+              - I asked a real question for each card
+              - I answered each question in a full sentence
+            sample: "Machen Sie gern Sport? Ja, ich schwimme gern. Gehen Sie oft ins Kino? Nein, nur einmal im Monat. Was machen Sie am Wochenende? Am Wochenende besuche ich meine Familie."
+          - id: sp2b
+            type: speaking-task
+            prompt: "Thema: Essen. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [Frühstück, Lieblingsessen, Restaurant]
+            checklist:
+              - I asked a real question for each card
+              - I used at least two different question words
+            sample: "Was essen Sie zum Frühstück? Ich esse Brot mit Käse. Was ist Ihr Lieblingsessen? Mein Lieblingsessen ist Reis mit Hähnchen. Gehen Sie gern ins Restaurant? Ja, am Samstag gehe ich oft ins Restaurant."
+
+      - title: "Sprechen, Teil 3: Bitten formulieren und darauf reagieren"
+        instructions: Formulieren Sie zu jeder Karte eine Bitte und reagieren Sie darauf.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Formulieren Sie zu jeder Karte eine Bitte und eine Antwort."
+            cards: [Fenster, Wasser, Stift, Taxi]
+            checklist:
+              - I made a polite request for each card
+              - I gave a response to each request
+            sample: "Machen Sie bitte das Fenster auf. Ja, gern. Kann ich bitte ein Glas Wasser haben? Natürlich, hier bitte. Haben Sie einen Stift für mich? Tut mir leid, ich habe keinen Stift. Rufen Sie mir bitte ein Taxi. Ja, sofort."

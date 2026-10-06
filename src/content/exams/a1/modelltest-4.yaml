@@ -1,0 +1,433 @@
+level: a1
+title: Modelltest 4
+description: >-
+  A practice exam in the format of Start Deutsch 1, with the real time limits. Topics: work, the
+  office, appointments and the daily routine.
+passMark: 60
+scoring: total
+modules:
+  - skill: listening
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Kollegin
+                  text: "Wann ist die Besprechung? Um zehn?"
+                - speaker: Kollege
+                  text: "Nein, um halb elf. Im Raum zwei."
+            prompt: Wann ist die Besprechung?
+            options: ["um 10:30 Uhr", "um 10 Uhr", "um 11:30 Uhr"]
+            answer: "um 10:30 Uhr"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Was bist du von Beruf?"
+                - speaker: Frau
+                  text: "Ich bin Lehrerin. Ich arbeite an einer Grundschule."
+            prompt: Was ist die Frau von Beruf?
+            options: [Lehrerin, Ärztin, Verkäuferin]
+            answer: Lehrerin
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Wie lange arbeitest du heute?"
+                - speaker: Mann
+                  text: "Bis fünf. Dann gehe ich einkaufen."
+            prompt: Bis wann arbeitet der Mann?
+            options: ["bis 17 Uhr", "bis 15 Uhr", "bis 19 Uhr"]
+            answer: "bis 17 Uhr"
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Chef
+                  text: "Frau Bauer, kopieren Sie bitte diese Briefe."
+                - speaker: Frau Bauer
+                  text: "Wie viele Kopien brauchen Sie?"
+                - speaker: Chef
+                  text: "Fünf, bitte."
+            prompt: Wie viele Kopien braucht der Chef?
+            options: ["5", "15", "50"]
+            answer: "5"
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Mann
+                  text: "Wann stehst du morgens auf?"
+                - speaker: Frau
+                  text: "Um sechs. Ich frühstücke und fahre um sieben zur Arbeit."
+            prompt: Wann steht die Frau auf?
+            options: ["um 6 Uhr", "um 7 Uhr", "um 8 Uhr"]
+            answer: "um 6 Uhr"
+          - id: h1-6
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 6
+              lines:
+                - speaker: Kollege
+                  text: "Wo ist das Büro von Herrn Weber?"
+                - speaker: Kollegin
+                  text: "Im zweiten Stock, Zimmer zwei null fünf."
+            prompt: In welchem Zimmer ist Herr Weber?
+            options: ["205", "250", "105"]
+            answer: "205"
+
+      - title: "Hören, Teil 2"
+        instructions: Richtig oder falsch? Sie hören jeden Text nur einmal.
+        items:
+          - id: h2-1
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 1
+              plays: 1
+              lines:
+                - text: "Achtung, liebe Mitarbeiter: Die Kantine ist heute geschlossen. Morgen ist sie wieder geöffnet."
+            prompt: Die Kantine ist heute geöffnet.
+            answer: false
+          - id: h2-2
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 2
+              plays: 1
+              lines:
+                - text: "Frau Schneider, bitte kommen Sie zum Empfang. Ein Besucher wartet auf Sie."
+            prompt: Frau Schneider hat Besuch.
+            answer: true
+          - id: h2-3
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 3
+              plays: 1
+              lines:
+                - text: "Unser Geschäft hat neue Öffnungszeiten: Montag bis Freitag von neun bis neunzehn Uhr, Samstag bis vierzehn Uhr."
+            prompt: Am Samstag ist das Geschäft bis 19 Uhr geöffnet.
+            answer: false
+          - id: h2-4
+            type: true-false
+            stimulus:
+              kind: audio
+              label: Durchsage 4
+              plays: 1
+              lines:
+                - text: "Das Wetter morgen: Am Vormittag Regen, am Nachmittag Sonne."
+            prompt: Am Nachmittag scheint die Sonne.
+            answer: true
+
+      - title: "Hören, Teil 3"
+        instructions: Was ist richtig? Wählen Sie a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 1
+              lines:
+                - text: "Hallo Frau Ito, hier ist Herr Klein von der Firma Werner. Unser Termin ist morgen nicht um neun, sondern um elf Uhr."
+            prompt: Wann ist der Termin morgen?
+            options: ["um 11 Uhr", "um 9 Uhr", "um 7 Uhr"]
+            answer: "um 11 Uhr"
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 2
+              lines:
+                - text: "Hallo Schatz, ich muss heute länger arbeiten. Kannst du die Kinder vom Kindergarten abholen?"
+            prompt: Was soll der Partner machen?
+            options: [die Kinder abholen, länger arbeiten, kochen]
+            answer: die Kinder abholen
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 3
+              lines:
+                - text: "Guten Tag, hier ist die Bäckerei Lang. Wir suchen eine Verkäuferin. Kommen Sie bitte am Montag um acht Uhr zu einem Gespräch."
+            prompt: Wann ist das Gespräch?
+            options: ["Montag um 8 Uhr", "Montag um 18 Uhr", "Dienstag um 8 Uhr"]
+            answer: "Montag um 8 Uhr"
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 4
+              lines:
+                - text: "Hi Jan, ich bin's, Max. Mein Computer ist kaputt. Kann ich morgen deinen Laptop haben?"
+            prompt: Was möchte Max?
+            options: [einen Laptop, ein Handy, einen Drucker]
+            answer: einen Laptop
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Nachricht 5
+              lines:
+                - text: "Hallo, hier ist das Sekretariat der Sprachschule. Ihre Prüfung ist am vierundzwanzigsten Mai um neun Uhr."
+            prompt: Wann ist die Prüfung?
+            options: [am 24. Mai, am 4. Mai, am 14. Mai]
+            answer: am 24. Mai
+
+  - skill: reading
+    minutes: 25
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1 (Text 1)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Hallo Mehmet,
+            ich habe eine neue Arbeit! Ich bin jetzt Koch in einem Restaurant in der Altstadt. Ich arbeite von Dienstag bis Samstag, am Sonntag und Montag habe ich frei.
+            Hast du am Montag Zeit? Dann trinken wir einen Kaffee.
+            Grüße
+            Luca
+        items:
+          - id: l1-1
+            type: true-false
+            prompt: Luca arbeitet in einem Restaurant.
+            answer: true
+          - id: l1-2
+            type: true-false
+            prompt: Luca arbeitet am Sonntag.
+            answer: false
+          - id: l1-3
+            type: true-false
+            prompt: Luca möchte Mehmet am Montag treffen.
+            answer: true
+
+      - title: "Lesen, Teil 1 (Text 2)"
+        instructions: Lesen Sie den Text und die Aufgaben. Richtig oder falsch?
+        stimulus:
+          kind: text
+          label: Notiz im Büro
+          text: |
+            Liebe Kolleginnen und Kollegen,
+            am Freitag feiern wir den Geburtstag von Frau Roth. Wir treffen uns um 15 Uhr in der Küche. Bitte bringt etwas zu essen mit!
+            Thomas
+        items:
+          - id: l1-4
+            type: true-false
+            prompt: Die Feier ist am Freitag.
+            answer: true
+          - id: l1-5
+            type: true-false
+            prompt: Die Kollegen treffen sich im Büro von Frau Roth.
+            answer: false
+
+      - title: "Lesen, Teil 2"
+        instructions: Lesen Sie die Situationen und die Anzeigen. Wo finden Sie Informationen? Wählen Sie a oder b.
+        items:
+          - id: l2-1
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Supermarkt Frisch sucht Kassierer/in, Teilzeit, vormittags.
+
+                b) Taxi Express sucht Fahrer/in mit Führerschein, nachts.
+            prompt: Sie möchten am Vormittag arbeiten.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Computerkurs für Anfänger: E-Mails schreiben und Internet. Dienstag 18 Uhr.
+
+                b) Englischkurs für den Beruf: Telefonieren und E-Mails auf Englisch. Donnerstag 18 Uhr.
+            prompt: Sie möchten lernen, wie man E-Mails am Computer schreibt.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Copyshop Blitz: Kopien, Drucke, Fotos. Montag bis Samstag.
+
+                b) Schreibwaren König: Stifte, Papier, Hefte.
+            prompt: Sie brauchen zwanzig Kopien.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Kantine Mittagstisch: Essen für Mitarbeiter, 12 bis 14 Uhr, 5 Euro.
+
+                b) Restaurant Krone: Abendessen ab 18 Uhr, Hauptgericht ab 18 Euro.
+            prompt: Sie möchten mittags billig essen.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige a
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Anzeigen
+              text: |
+                a) Kinderbetreuung "Sonnenschein": Montag bis Freitag 7 bis 17 Uhr.
+
+                b) Babysitterin sucht Arbeit: abends und am Wochenende.
+            prompt: Sie arbeiten am Samstagabend und suchen jemanden für Ihr Kind.
+            options: [Anzeige a, Anzeige b]
+            answer: Anzeige b
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die Texte und die Aufgaben. Richtig oder falsch?
+        items:
+          - id: l3-1
+            type: true-false
+            stimulus:
+              kind: text
+              label: Am Aufzug
+              text: "Aufzug kaputt. Bitte die Treppe benutzen."
+            prompt: Sie können heute mit dem Aufzug fahren.
+            answer: false
+          - id: l3-2
+            type: true-false
+            stimulus:
+              kind: text
+              label: An der Bürotür
+              text: "Sprechzeiten: Mo, Mi, Fr 9–12 Uhr."
+            prompt: Am Mittwochvormittag können Sie hier fragen.
+            answer: true
+          - id: l3-3
+            type: true-false
+            stimulus:
+              kind: text
+              label: In der Firma
+              text: "Rauchen nur im Hof erlaubt."
+            prompt: Im Büro darf man rauchen.
+            answer: false
+          - id: l3-4
+            type: true-false
+            stimulus:
+              kind: text
+              label: An der Post
+              text: "Pakete bis 18 Uhr abgeben. Samstag bis 12 Uhr."
+            prompt: Am Samstag können Sie um 11 Uhr ein Paket abgeben.
+            answer: true
+          - id: l3-5
+            type: true-false
+            stimulus:
+              kind: text
+              label: Am Drucker
+              text: "Papier leer. Neues Papier im Schrank links."
+            prompt: Das neue Papier ist im Schrank rechts.
+            answer: false
+
+  - skill: writing
+    minutes: 20
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Ihre Kollegin Olga möchte einen Parkausweis für die Firma. Im Formular fehlen fünf Informationen. Helfen Sie ihr.
+        items:
+          - id: s1
+            type: form
+            situation: "Olga Ivanova arbeitet seit März in der Firma, in der Abteilung Einkauf. Sie fährt einen roten VW, das Kennzeichen ist B-OI 482. Sie arbeitet von Montag bis Donnerstag. Ihre Telefonnummer im Büro ist 314."
+            fields:
+              - { label: Name, answers: [Ivanova, Olga Ivanova] }
+              - { label: Abteilung, answers: [Einkauf] }
+              - { label: Auto (Farbe), answers: [rot] }
+              - { label: Kennzeichen, answers: ["B-OI 482"] }
+              - { label: Telefon, answers: ["314"] }
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie zu jedem Punkt ein bis zwei Sätze (circa 30 Wörter). Vergessen Sie nicht die Anrede und den Gruß.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie haben morgen einen Termin bei Ihrem Chef, Herrn Hofmann. Sie können nicht kommen. Schreiben Sie ihm eine E-Mail."
+            points:
+              - Warum schreiben Sie?
+              - Warum können Sie nicht kommen?
+              - Schlagen Sie einen neuen Termin vor.
+            minWords: 25
+            sample: "Sehr geehrter Herr Hofmann, leider kann ich morgen nicht zu unserem Termin kommen. Mein Sohn ist krank. Haben Sie am Donnerstag um zehn Uhr Zeit? Mit freundlichen Grüßen, Fatma Kaya"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: sich vorstellen"
+        instructions: Stellen Sie sich vor. Buchstabieren Sie danach Ihren Familiennamen und sagen Sie eine Zahl.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Stellen Sie sich bitte vor. Buchstabieren Sie dann Ihren Familiennamen und sagen Sie Ihre Hausnummer."
+            cards: [Name?, Alter?, Land?, Wohnort?, Sprachen?, Beruf?, Hobby?]
+            checklist:
+              - I said something for all seven cue words
+              - I spelled my surname
+              - I said my house number
+            sample: "Hallo, ich bin Anh Nguyen. Ich bin dreiunddreißig Jahre alt und komme aus Vietnam. Ich wohne in Leipzig. Ich spreche Vietnamesisch, Englisch und Deutsch. Ich arbeite in einem Büro. In meiner Freizeit koche ich gern. Nguyen: N, G, U, Y, E, N. Meine Hausnummer ist siebenundvierzig."
+
+      - title: "Sprechen, Teil 2: um Informationen bitten und Informationen geben"
+        instructions: Stellen Sie zu jeder Karte eine Frage und antworten Sie selbst darauf.
+        items:
+          - id: sp2a
+            type: speaking-task
+            prompt: "Thema: Arbeit. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [Beruf, Kollegen, Pause]
+            checklist:
+              - I asked a real question for each card
+              - I answered each question in a full sentence
+            sample: "Was sind Sie von Beruf? Ich bin Mechaniker. Wie sind Ihre Kollegen? Meine Kollegen sind sehr nett. Wann machen Sie Pause? Ich mache um zwölf Uhr Pause."
+          - id: sp2b
+            type: speaking-task
+            prompt: "Thema: Tagesablauf. Stellen Sie zu jeder Karte eine Frage und geben Sie eine Antwort."
+            cards: [aufstehen, Mittagessen, Abend]
+            checklist:
+              - I asked a real question for each card
+              - I used a separable verb correctly
+            sample: "Wann stehen Sie auf? Ich stehe um halb sieben auf. Wo essen Sie zu Mittag? Ich esse in der Kantine. Was machen Sie am Abend? Am Abend sehe ich fern oder lese."
+
+      - title: "Sprechen, Teil 3: Bitten formulieren und darauf reagieren"
+        instructions: Formulieren Sie zu jeder Karte eine Bitte und reagieren Sie darauf.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Formulieren Sie zu jeder Karte eine Bitte und eine Antwort."
+            cards: [Kopie, Telefon, Kaffee, Licht]
+            checklist:
+              - I made a polite request for each card
+              - I gave a response to each request
+            sample: "Machen Sie bitte eine Kopie für mich. Ja, gern. Kann ich bitte kurz Ihr Telefon benutzen? Natürlich. Bringen Sie mir bitte einen Kaffee? Tut mir leid, ich habe keine Zeit. Machen Sie bitte das Licht an. Ja, sofort."

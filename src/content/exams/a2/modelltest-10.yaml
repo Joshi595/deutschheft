@@ -1,0 +1,474 @@
+level: a2
+title: Modelltest 10
+description: >-
+  A practice exam in the format of the Goethe-Zertifikat A2, with the real time limits. Topics:
+  family, celebrations, invitations and presents.
+passMark: 60
+scoring: total
+modules:
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Eine Hochzeit mit 400 Gästen
+
+            Als Aylin und Stefan im Juni geheiratet haben, kamen 400 Gäste – aus der Türkei, aus Deutschland und aus Polen. „Bei türkischen Hochzeiten ist es normal, dass die ganze Familie kommt, auch Cousins und Nachbarn", erklärt Aylin. Stefans Familie war zuerst überrascht: Sie hatten mit 80 Gästen gerechnet.
+
+            Das Fest hat in einem großen Saal stattgefunden und hat bis vier Uhr morgens gedauert. Es gab türkische Musik und deutsche Schlager, und am Ende haben alle zusammen getanzt.
+
+            Die Planung hat fast ein Jahr gedauert. „Das Schwierigste war das Essen", sagt Stefan. „Wir wollten, dass alle etwas mögen. Also gab es Döner, Kartoffelsalat und Pierogi."
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: Die Gäste kamen …
+            options: ["aus drei Ländern.", "nur aus Deutschland.", "aus der ganzen Welt."]
+            answer: "aus drei Ländern."
+          - id: l1-2
+            type: multiple-choice
+            prompt: Stefans Familie war überrascht, weil …
+            options: ["so viele Gäste kamen.", "die Hochzeit in der Türkei war.", "es kein Essen gab."]
+            answer: "so viele Gäste kamen."
+          - id: l1-3
+            type: multiple-choice
+            prompt: Das Fest …
+            options: ["hat bis zum frühen Morgen gedauert.", "war in einem Garten.", "war um Mitternacht zu Ende."]
+            answer: "hat bis zum frühen Morgen gedauert."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Wie lange hat die Planung gedauert?
+            options: ["fast ein Jahr", "einen Monat", "zwei Jahre"]
+            answer: "fast ein Jahr"
+          - id: l1-5
+            type: multiple-choice
+            prompt: Beim Essen war wichtig, dass …
+            options: ["es allen schmeckt.", "es billig ist.", "es nur türkisches Essen gibt."]
+            answer: "es allen schmeckt."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind im Kaufhaus. Sie suchen Geschenke. Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Kaufhaus Kranz – Wegweiser
+          text: |
+            3. Stock: Spielwaren · Babyartikel · Schreibwaren
+            2. Stock: Haushalt · Geschirr · Bettwäsche · Dekoration
+            1. Stock: Mode · Schmuck · Uhren
+            Erdgeschoss: Parfüm · Bücher · Geschenkpapier · Blumen
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Sie möchten Ihrer Mutter eine Kette schenken.
+            options: [1. Stock, Erdgeschoss, anderer Stock]
+            answer: 1. Stock
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Ihre Freundin bekommt ein Baby. Sie suchen etwas für das Kind.
+            options: [3. Stock, 2. Stock, anderer Stock]
+            answer: 3. Stock
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Ein Paar heiratet und wünscht sich Teller und Gläser.
+            options: [2. Stock, 1. Stock, anderer Stock]
+            answer: 2. Stock
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            prompt: Sie brauchen Papier, um das Geschenk einzupacken.
+            options: [Erdgeschoss, 3. Stock, anderer Stock]
+            answer: Erdgeschoss
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie möchten Ihrem Vater ein Fahrrad schenken.
+            options: [3. Stock, 2. Stock, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Liebe Familie,
+
+            unsere Oma Gisela wird am 15. Juli 90 Jahre alt! Das wollen wir groß feiern. Wir haben im Restaurant „Zur Linde" einen Raum für 30 Personen reserviert. Das Fest beginnt um 12 Uhr mit einem Mittagessen.
+
+            Oma wünscht sich keine Geschenke, sie hat schon alles. Aber sie freut sich sehr über alte Fotos! Bitte bringt ein Foto mit, auf dem ihr mit Oma zu sehen seid. Wir machen daraus ein großes Album.
+
+            Bitte sagt bis zum 30. Juni Bescheid, ob ihr kommt. Wer eine Übernachtung braucht, kann bei uns schlafen.
+
+            Herzliche Grüße
+            Eure Petra
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Was wird gefeiert?
+            options: ["der 90. Geburtstag von Oma Gisela", "eine Hochzeit", "Petras Geburtstag"]
+            answer: "der 90. Geburtstag von Oma Gisela"
+          - id: l3-2
+            type: multiple-choice
+            prompt: Das Fest beginnt …
+            options: ["mit einem Mittagessen.", "mit einem Abendessen.", "am Nachmittag mit Kaffee."]
+            answer: "mit einem Mittagessen."
+          - id: l3-3
+            type: multiple-choice
+            prompt: Was sollen die Gäste mitbringen?
+            options: ["ein altes Foto mit Oma", "ein Geschenk", "einen Kuchen"]
+            answer: "ein altes Foto mit Oma"
+          - id: l3-4
+            type: multiple-choice
+            prompt: Bis wann sollen die Gäste antworten?
+            options: ["bis zum 30. Juni", "bis zum 15. Juli", "bis zum 1. Juli"]
+            answer: "bis zum 30. Juni"
+          - id: l3-5
+            type: multiple-choice
+            prompt: Wer übernachten möchte, …
+            options: ["kann bei Petra schlafen.", "muss ein Hotel buchen.", "schläft im Restaurant."]
+            answer: "kann bei Petra schlafen."
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Partyraum zu vermieten: bis 50 Personen, mit Küche, am Wochenende.
+
+            b) Clown Bobo: Zauberei und Spiele für Kindergeburtstage.
+
+            c) Fotograf für Hochzeiten und Familienfeiern: schöne Bilder zu fairen Preisen.
+
+            d) Konditorei Sahne: Torten auf Bestellung, auch ohne Zucker und ohne Gluten.
+
+            e) DJ Max: Musik für Ihre Party, alle Musikrichtungen.
+
+            f) Tischdekoration und Blumen: Wir dekorieren Ihr Fest.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Lina wird sechs. Ihre Eltern suchen ein lustiges Programm für die Kinder.
+            options: [a, b, c, d, e, f, X]
+            answer: b
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Herr Roth hat Diabetes und möchte eine Geburtstagstorte bestellen.
+            options: [a, b, c, d, e, f, X]
+            answer: d
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Familie Akın feiert mit 40 Gästen und braucht einen Raum.
+            options: [a, b, c, d, e, f, X]
+            answer: a
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Sara und Tim möchten schöne Bilder von ihrer Hochzeit.
+            options: [a, b, c, d, e, f, X]
+            answer: c
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            prompt: Frau Lopez sucht einen Babysitter für den Abend der Feier.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Hallo Nina, hier ist Tante Rita. Danke für die Einladung zu deiner Hochzeit! Onkel Peter und ich kommen sehr gern. Wir bringen auch unsere Tochter mit."
+            prompt: Wie viele Personen kommen von Tante Rita?
+            options: ["drei", "zwei", "vier"]
+            answer: "drei"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Liebe Eltern, das Sommerfest der Schule ist am Freitag ab fünfzehn Uhr auf dem Schulhof. Bitte bringen Sie einen Salat oder einen Kuchen mit."
+            prompt: Wo ist das Sommerfest?
+            options: ["auf dem Schulhof", "in der Turnhalle", "im Park"]
+            answer: "auf dem Schulhof"
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Hi Mia, ich bin's, Lukas. Ich habe heute Geburtstag und feiere heute Abend im Biergarten am See. Komm doch auch, ab acht Uhr!"
+            prompt: Wo feiert Lukas?
+            options: ["im Biergarten am See", "zu Hause", "im Restaurant"]
+            answer: "im Biergarten am See"
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Hier ist die Konditorei Sahne. Ihre Torte für die Taufe ist fertig. Sie können sie morgen ab neun Uhr abholen."
+            prompt: Ab wann kann man die Torte abholen?
+            options: ["morgen ab 9 Uhr", "heute ab 9 Uhr", "morgen ab 19 Uhr"]
+            answer: "morgen ab 9 Uhr"
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Hallo Oma, hier ist Emil. Danke für das Geld zum Geburtstag! Ich habe mir davon einen Fußball gekauft."
+            prompt: Was hat Emil gekauft?
+            options: [einen Fußball, ein Buch, ein Spiel]
+            answer: einen Fußball
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Wer bringt was zur Party mit? Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Die Party-Planung
+          plays: 1
+          lines:
+            - speaker: Clara
+              text: "Okay, Max, wer bringt was zur Party? Anna macht doch den Kuchen, oder?"
+            - speaker: Max
+              text: "Ja, Anna backt den Kuchen. Und Jonas bringt die Musikanlage mit."
+            - speaker: Clara
+              text: "Gut. Lea wollte eigentlich Salat machen, aber sie hat keine Zeit. Sie bringt jetzt Getränke."
+            - speaker: Max
+              text: "Und Tom?"
+            - speaker: Clara
+              text: "Tom macht den Salat. Und Sophie kümmert sich um die Dekoration, Luftballons und so."
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Anna
+            options: [Kuchen, Musikanlage, Getränke, Salat, Dekoration, Pizza]
+            answer: Kuchen
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Jonas
+            options: [Kuchen, Musikanlage, Getränke, Salat, Dekoration, Pizza]
+            answer: Musikanlage
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Lea
+            options: [Kuchen, Musikanlage, Getränke, Salat, Dekoration, Pizza]
+            answer: Getränke
+            shuffle: false
+          - id: h2-4
+            type: multiple-choice
+            prompt: Tom
+            options: [Kuchen, Musikanlage, Getränke, Salat, Dekoration, Pizza]
+            answer: Salat
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Sophie
+            options: [Kuchen, Musikanlage, Getränke, Salat, Dekoration, Pizza]
+            answer: Dekoration
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Frau
+                  text: "Was schenken wir Lisa zur Hochzeit?"
+                - speaker: Mann
+                  text: "Sie wünschen sich Geld für ihre Hochzeitsreise. Das ist am einfachsten."
+            prompt: Was schenken sie Lisa?
+            options: [Geld, Geschirr, eine Reise]
+            answer: Geld
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Feiern wir Silvester bei uns?"
+                - speaker: Frau
+                  text: "Nein, dieses Jahr bei meinen Eltern. Letztes Jahr waren wir bei uns."
+            prompt: Wo feiern sie Silvester?
+            options: [bei den Eltern der Frau, bei ihnen zu Hause, im Restaurant]
+            answer: bei den Eltern der Frau
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Wie viele Gäste kommen zu deinem Geburtstag?"
+                - speaker: Mann
+                  text: "Ich habe zwanzig eingeladen, aber nur fünfzehn kommen."
+            prompt: Wie viele Gäste kommen?
+            options: ["15", "20", "5"]
+            answer: "15"
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Was ziehst du zur Hochzeit an?"
+                - speaker: Frau
+                  text: "Ich wollte das rote Kleid anziehen, aber es ist zu klein. Ich nehme das blaue."
+            prompt: Was zieht die Frau an?
+            options: [das blaue Kleid, das rote Kleid, einen Anzug]
+            answer: das blaue Kleid
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Frau
+                  text: "Wann kommen deine Großeltern zu Weihnachten?"
+                - speaker: Mann
+                  text: "Am dreiundzwanzigsten, mit dem Zug. Sie bleiben bis zum siebenundzwanzigsten."
+            prompt: Wann kommen die Großeltern?
+            options: [am 23. Dezember, am 24. Dezember, am 27. Dezember]
+            answer: am 23. Dezember
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio Familie – Feste in aller Welt
+          lines:
+            - speaker: Moderatorin
+              text: "Herr Tran, Sie kommen aus Vietnam. Welches Fest ist für Ihre Familie am wichtigsten?"
+            - speaker: Herr Tran
+              text: "Das Neujahrsfest Tết, im Januar oder Februar. Dann kommt die ganze Familie zusammen, oft drei Generationen."
+            - speaker: Moderatorin
+              text: "Feiern Sie Tết auch in Deutschland?"
+            - speaker: Herr Tran
+              text: "Ja, natürlich. Wir kochen traditionelle Gerichte, und die Kinder bekommen Geld in roten Umschlägen."
+            - speaker: Moderatorin
+              text: "Und Weihnachten?"
+            - speaker: Herr Tran
+              text: "Das feiern wir auch, vor allem für die Kinder. Sie lieben den Weihnachtsbaum."
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Das wichtigste Fest für Familie Tran ist Weihnachten.
+            answer: false
+          - id: h4-2
+            type: true-false
+            prompt: Bei Tết kommt die ganze Familie zusammen.
+            answer: true
+          - id: h4-3
+            type: true-false
+            prompt: In Deutschland feiern sie Tết nicht.
+            answer: false
+          - id: h4-4
+            type: true-false
+            prompt: Die Kinder bekommen Geld in roten Umschlägen.
+            answer: true
+          - id: h4-5
+            type: true-false
+            prompt: Die Kinder mögen den Weihnachtsbaum.
+            answer: true
+
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Ihr Freund Daniel hat heute Geburtstag, aber Sie können nicht zu seiner Party kommen. Schreiben Sie ihm eine SMS: Gratulieren Sie. Schreiben Sie, warum Sie nicht kommen. Machen Sie einen Vorschlag für ein Treffen."
+            points:
+              - Glückwunsch
+              - Grund
+              - Vorschlag
+            minWords: 20
+            sample: "Lieber Daniel, alles Gute zum Geburtstag! Leider kann ich heute nicht zu deiner Party kommen, weil ich arbeiten muss. Wollen wir am Sonntag zusammen frühstücken? Liebe Grüße, Eva"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Ihre Kollegin Frau Wolf hat Sie zu ihrer Hochzeit eingeladen. Schreiben Sie ihr: Bedanken Sie sich. Sagen Sie, dass Sie kommen. Fragen Sie, ob Sie Ihren Partner oder Ihre Partnerin mitbringen dürfen."
+            points:
+              - Dank
+              - Zusage
+              - Frage nach Begleitung
+            minWords: 30
+            sample: "Liebe Frau Wolf, vielen Dank für die Einladung zu Ihrer Hochzeit! Ich komme sehr gern und freue mich schon darauf. Darf ich meinen Mann mitbringen? Er würde Sie auch gern kennenlernen. Herzliche Grüße, Olga Petrova"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Familie?, Geburtstag?, Lieblingsfest?, Geschenk?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Wie groß ist deine Familie? Wir sind fünf: meine Eltern, zwei Schwestern und ich. Wann hast du Geburtstag? Am achten August, im Sommer. Was ist dein Lieblingsfest? Ramadan-Fest, weil die ganze Familie zusammen isst. Was war dein schönstes Geschenk? Ein Fahrrad von meinem Vater."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Familie. Erzählen Sie über Ihre Familie."
+            cards: [Wer?, Wo wohnen sie?, Wie oft sehen Sie sie?, Was machen Sie zusammen?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used possessive articles and a weil clause
+            sample: "Meine Familie ist ziemlich groß. Meine Eltern und mein Bruder wohnen in Spanien, in Valencia. Meine Schwester wohnt wie ich in Deutschland, in München. Meine Eltern sehe ich nur zweimal im Jahr, weil die Reise teuer ist. Aber wir telefonieren jeden Sonntag. Wenn wir zusammen sind, kochen wir Paella und gehen an den Strand."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten mit einer Freundin oder einem Freund eine Überraschungsparty für einen gemeinsamen Freund vorbereiten. Finden Sie einen Termin am Donnerstag.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Donnerstag: 8–14 Uhr Arbeit, 15 Uhr Elterngespräch in der Schule, 18–19 Uhr Fitness. Ihr Partner hat um 14, um 16 und ab 20 Uhr keine Zeit. Planen Sie: Wann? Wo? Wer kauft was?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Treffpunkt, Aufgaben]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a time, a place and who does what
+            sample: "– Wann können wir die Party vorbereiten? Um zwei? – Um zwei kann ich leider nicht, da habe ich einen Termin. Wie wäre es um vier? – Um vier habe ich gerade das Elterngespräch hinter mir, aber du hast um vier keine Zeit, oder? – Stimmt. Und um fünf? – Um fünf passt es gut. Treffen wir uns im Supermarkt? Ich kaufe die Getränke, und du die Dekoration."
