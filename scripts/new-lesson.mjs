@@ -35,26 +35,46 @@ title: ${JSON.stringify(title)}
 titleDe: ""
 summary: One sentence saying what the learner will be able to do.
 order: ${order}
-minutes: 20
+unit: 1
+kind: grammar
+minutes: 45
 topics: []
+objectives:
+  - First thing the learner will be able to do
+  - Second thing the learner will be able to do
 ---
 
 Open with why this matters, in two or three sentences.
 
-## First point
+## The idea
 
-Explain, then show.
+The rule in plain words, starting from zero.
+
+## Step by step
+
+<Step n="1" title="First point">
+
+Explain one rule, then show it with at least three examples.
 
 <Example de="Ein **Beispiel** auf Deutsch." en="An example in German." />
 
-<GrammarBox title="The rule in one line">
+</Step>
 
-State the rule, then contrast right and wrong.
+## Compared with English
 
-<Example de="Das ist **richtig**." en="This is right." />
-<Example wrong de="Das ist **falsch**." />
+<Compare en="The English sentence" de="Der deutsche Satz" note="Where the two languages differ." />
 
-</GrammarBox>
+## Typical mistakes
+
+<Mistake wrong="Das ist **falsch**." right="Das ist **richtig**." why="Why the first version is wrong." />
+
+## Summary
+
+<Summary>
+
+One table or a short list to revise from.
+
+</Summary>
 `,
 
   [join(content, 'exercises', level, `${name}.yaml`)]: `lesson: ${key}
@@ -107,6 +127,10 @@ name: Level name
 description: What a learner can do at this level.
 order: ${'abc'.indexOf(level[0]) * 2 + Number(level[1])}
 status: active
+exam: Name of the exam this level prepares for
+units:
+  - title: First unit
+    summary: What this unit covers.
 `;
 }
 
@@ -119,4 +143,6 @@ for (const [path, text] of Object.entries(files)) {
   console.log(`created ${path.slice(content.length + 1).replace(/\\/g, '/')}`);
 }
 
-console.log(`\nLesson ${key} is ready to edit. Run "npm run dev" to see it, and "npm test" to check the answer keys.`);
+console.log(`\nLesson ${key} is ready to edit. Run "npm run dev" to see it, and "npm test" to check it.`);
+console.log('If the level is in TEMPLATE_LEVELS (tests/content.test.ts), "npm test" fails until the chapter');
+console.log('meets the minimums in CONTRIBUTING.md: that is intended, so thin chapters never ship.');
