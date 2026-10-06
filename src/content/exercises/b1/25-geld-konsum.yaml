@@ -1,0 +1,172 @@
+lesson: b1.25
+sets:
+  - title: Money words
+    items:
+      - id: w1
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: die Gebühr, right: the fee }
+          - { left: die Zinsen, right: interest }
+          - { left: der Kredit, right: the loan }
+          - { left: die Laufzeit, right: the term of a contract }
+          - { left: erstatten, right: to refund }
+          - { left: die Werbung, right: advertising }
+      - id: w2
+        type: multiple-choice
+        tags: [contracts]
+        prompt: "You want to end your gym contract. What do you write?"
+        options: ["Hiermit kündige ich meinen Vertrag.", "Hiermit sage ich meinen Vertrag ab.", "Hiermit schließe ich meinen Vertrag ab."]
+        answer: "Hiermit kündige ich meinen Vertrag."
+      - id: w5
+        type: multiple-choice
+        tags: [bank]
+        prompt: "You take cash out of a machine. You …"
+        options: [heben Geld ab, zahlen Geld ein, überweisen Geld]
+        answer: heben Geld ab
+      - id: w6
+        type: multiple-choice
+        tags: [bank]
+        prompt: "You send money from your account to the landlord's account. You …"
+        options: [überweisen das Geld, heben das Geld ab, sparen das Geld]
+        answer: überweisen das Geld
+      - id: w7
+        type: fill-blank
+        tags: [bank]
+        prompt: "Ich ___ jeden Monat 100 Euro für den Urlaub. (save)"
+        answers: [spare]
+      - id: w3
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Die Jacke war im ___, nur 30 Euro! (on special offer)"
+        answers: [Angebot]
+      - id: w4
+        type: fill-blank
+        tags: [reflexive]
+        prompt: "Ein neues Auto kann ich ___ nicht leisten."
+        answers: [mir]
+
+  - title: Contracts
+    items:
+      - id: c1
+        type: true-false
+        tags: [contracts]
+        prompt: "'Der Vertrag verlängert sich automatisch' means it ends automatically."
+        answer: false
+      - id: c2
+        type: word-order
+        tags: [contracts]
+        prompt: I hereby cancel my contract.
+        answer: "Hiermit kündige ich meinen Vertrag."
+      - id: c3
+        type: multiple-choice
+        tags: [contracts]
+        prompt: "The period you must wait between giving notice and the end of the contract is the …"
+        options: [Kündigungsfrist, Laufzeit, Gebühr]
+        answer: Kündigungsfrist
+
+  - title: Complaint phrases
+    items:
+      - id: cp1
+        type: multiple-choice
+        tags: [complaint]
+        prompt: "Which sentence fits a formal complaint?"
+        options:
+          - "Leider musste ich feststellen, dass das Gerät nicht funktioniert."
+          - "Euer Gerät ist total kaputt!!!"
+          - "Hey, das Ding geht nicht."
+        answer: "Leider musste ich feststellen, dass das Gerät nicht funktioniert."
+      - id: cp2
+        type: multiple-choice
+        tags: [complaint]
+        prompt: "Ich bitte Sie, mir den Kaufpreis ___."
+        options: [zu erstatten, erstatten, erstattet]
+        answer: zu erstatten
+      - id: cp3
+        type: multiple-choice
+        tags: [complaint]
+        prompt: "Bitte antworten Sie ___ von zwei Wochen."
+        options: [innerhalb, während, außerhalb]
+        answer: innerhalb
+      - id: cp4
+        type: translation
+        tags: [complaint]
+        prompt: My order has not arrived yet.
+        answers:
+          - "Meine Bestellung ist noch nicht angekommen."
+      - id: cp5
+        type: translation
+        tags: [complaint]
+        prompt: I would be grateful if you could send me a new device.
+        answers:
+          - "Ich wäre Ihnen dankbar, wenn Sie mir ein neues Gerät schicken könnten."
+
+  - title: A complaint letter
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [complaint]
+        prompt: Complete the complaint.
+        bank: [bestellt, feststellen, angerufen, erstatten, innerhalb, freundlichen]
+        text: "Sehr geehrte Damen und Herren, am 12. März habe ich bei Ihnen einen Wasserkocher ___ (Bestellnummer 48213). Leider musste ich ___, dass das Gerät nicht funktioniert. Ich habe bereits zweimal bei Ihrem Kundenservice ___, aber niemand konnte mir helfen. Ich bitte Sie, mir den Kaufpreis ___ von 14 Tagen zu ___. Mit ___ Grüßen, Tomás Rivera"
+        gaps:
+          - [bestellt]
+          - [feststellen]
+          - [angerufen]
+          - [innerhalb]
+          - [erstatten]
+          - [freundlichen]
+
+  - title: Shopping habits
+    stimulus:
+      kind: audio
+      label: Straßenumfrage
+      lines:
+        - speaker: Reporter
+          text: "Wo kaufen Sie Ihre Kleidung?"
+        - speaker: Frau
+          text: "Fast nur online. Das ist bequemer, und wenn etwas nicht passt, schicke ich es einfach zurück."
+        - speaker: Mann
+          text: "Ich kaufe lieber gebraucht, auf dem Flohmarkt oder im Second-Hand-Laden. Das ist billiger und besser für die Umwelt."
+        - speaker: Junge Frau
+          text: "Ich gebe zu viel Geld für Marken aus. Eigentlich kann ich mir das gar nicht leisten."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Warum kauft die erste Frau online?
+        options: ["Es ist bequemer.", "Es ist billiger.", "Es ist besser für die Umwelt."]
+        answer: "Es ist bequemer."
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Der Mann kauft am liebsten neue Kleidung.
+        answer: false
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was ist das Problem der jungen Frau?
+        options: ["Sie gibt zu viel Geld für Marken aus.", "Sie findet keine Kleidung.", "Ihre Bestellungen kommen nicht an."]
+        answer: "Sie gibt zu viel Geld für Marken aus."
+
+  - title: Write a complaint
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, formal]
+        prompt: "You ordered a jacket online three weeks ago. It still has not arrived, and nobody answers your emails. Write a complaint to the shop."
+        points:
+          - What you ordered and when
+          - The problem
+          - What you have already done
+          - What you expect now
+        minWords: 80
+        phrases:
+          - Sehr geehrte Damen und Herren,
+          - am … habe ich bei Ihnen … bestellt.
+          - Leider ist die Lieferung bis heute nicht angekommen.
+          - Ich habe bereits …
+          - Ich bitte Sie, … innerhalb von … zu …
+          - Mit freundlichen Grüßen
+        sample: "Sehr geehrte Damen und Herren, am 2. Oktober habe ich in Ihrem Online-Shop eine schwarze Winterjacke in Größe M bestellt und sofort per Kreditkarte bezahlt. Die Bestellnummer ist 77310. Leider ist die Lieferung bis heute nicht angekommen, obwohl auf Ihrer Webseite eine Lieferzeit von drei Tagen steht. Ich habe Ihnen bereits zwei E-Mails geschrieben, aber keine Antwort bekommen. Ich bitte Sie deshalb, mir die Jacke innerhalb von einer Woche zu schicken oder den Kaufpreis zu erstatten. Mit freundlichen Grüßen, Sara Petrović"
