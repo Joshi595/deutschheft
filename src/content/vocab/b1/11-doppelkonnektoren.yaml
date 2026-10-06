@@ -1,0 +1,105 @@
+lesson: b1.11
+items:
+  - id: sowohl-als-auch
+    de: sowohl … als auch
+    en: both … and
+    pos: conjunction
+    example: Sie spielt sowohl Klavier als auch Gitarre.
+    exampleEn: She plays both piano and guitar.
+  - id: nicht-nur-sondern-auch
+    de: nicht nur … sondern auch
+    en: not only … but also
+    pos: conjunction
+    example: Er ist nicht nur klug, sondern auch lustig.
+    exampleEn: He is not only clever but also funny.
+  - id: entweder-oder
+    de: entweder … oder
+    en: either … or
+    pos: conjunction
+    example: Wir essen entweder Pizza oder Pasta.
+    exampleEn: We will eat either pizza or pasta.
+  - id: weder-noch
+    de: weder … noch
+    en: neither … nor
+    pos: conjunction
+    example: Ich habe weder Zeit noch Lust.
+    exampleEn: I have neither the time nor the inclination.
+  - id: zwar-aber
+    de: zwar … aber
+    en: admittedly … but
+    pos: conjunction
+    example: Das Essen war zwar teuer, aber sehr gut.
+    exampleEn: The food was expensive, admittedly, but very good.
+  - id: je-desto
+    de: je … desto / umso
+    en: the … the (more)
+    pos: conjunction
+    example: Je öfter ich übe, desto leichter wird es.
+    exampleEn: The more often I practise, the easier it gets.
+  - id: zentral
+    de: zentral
+    en: central
+    pos: adjective
+    example: Das Hotel liegt sehr zentral.
+    exampleEn: The hotel is very central.
+  - id: verkehr
+    de: Verkehr
+    en: traffic
+    pos: noun
+    article: der
+    example: Am Morgen gibt es viel Verkehr.
+    exampleEn: There is a lot of traffic in the morning.
+  - id: vorteil
+    de: Vorteil
+    en: advantage
+    pos: noun
+    article: der
+    plural: Vorteile
+    example: Das hat sowohl Vorteile als auch Nachteile.
+    exampleEn: That has both advantages and disadvantages.
+  - id: nachteil
+    de: Nachteil
+    en: disadvantage
+    pos: noun
+    article: der
+    plural: Nachteile
+    example: Der Nachteil ist der lange Weg.
+    exampleEn: The disadvantage is the long journey.
+  - id: ueben
+    de: üben
+    en: to practise
+    pos: verb
+    example: Je mehr du übst, desto besser wirst du.
+    exampleEn: The more you practise, the better you get.
+  - id: ruhig-b1
+    de: ruhig
+    en: calm, quiet
+    pos: adjective
+    example: Je älter er wird, umso ruhiger wird er.
+    exampleEn: The older he gets, the calmer he becomes.
+  - id: lebendig
+    de: lebendig
+    en: lively
+    pos: adjective
+    example: Die Stadt ist zwar laut, aber sehr lebendig.
+    exampleEn: The city is loud, admittedly, but very lively.
+  - id: anstrengend
+    de: anstrengend
+    en: tiring, exhausting
+    pos: adjective
+    example: Der Job ist nicht nur anstrengend, sondern auch schlecht bezahlt.
+    exampleEn: The job is not only tiring but also badly paid.
+  - id: abwechslungsreich
+    de: abwechslungsreich
+    en: varied
+    pos: adjective
+    example: Die Arbeit ist sehr abwechslungsreich.
+    exampleEn: The work is very varied.
+  - id: entscheidung
+    de: Entscheidung
+    en: decision
+    pos: noun
+    article: die
+    plural: Entscheidungen
+    example: Entweder du triffst jetzt eine Entscheidung, oder ich entscheide.
+    exampleEn: Either you make a decision now or I will decide.
