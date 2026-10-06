@@ -1,0 +1,108 @@
+lesson: b1.05
+items:
+  - id: wohl
+    de: wohl
+    en: probably (in guesses)
+    pos: adverb
+    example: Er wird wohl noch arbeiten.
+    exampleEn: He is probably still working.
+  - id: wahrscheinlich-b1
+    de: wahrscheinlich
+    en: probably
+    pos: adverb
+    example: Wir kommen wahrscheinlich etwas später.
+    exampleEn: We will probably be a bit late.
+  - id: vermutlich
+    de: vermutlich
+    en: presumably
+    pos: adverb
+    example: Der Zug hat vermutlich Verspätung.
+    exampleEn: The train is presumably late.
+  - id: moeglicherweise
+    de: möglicherweise
+    en: possibly
+    pos: adverb
+    example: Möglicherweise müssen wir den Termin verschieben.
+    exampleEn: We may have to postpone the appointment.
+  - id: kaum
+    de: kaum
+    en: hardly, scarcely
+    pos: adverb
+    example: Das glaube ich kaum.
+    exampleEn: I hardly think so.
+  - id: auf-jeden-fall
+    de: auf jeden Fall
+    en: definitely, in any case
+    pos: phrase
+    example: Ich komme auf jeden Fall.
+    exampleEn: I am definitely coming.
+  - id: auf-keinen-fall
+    de: auf keinen Fall
+    en: definitely not, no way
+    pos: phrase
+    example: Das mache ich auf keinen Fall.
+    exampleEn: I am definitely not doing that.
+  - id: annehmen
+    de: annehmen
+    en: to assume; to accept
+    pos: verb
+    example: Ich nehme an, dass du Recht hast.
+    exampleEn: I assume you are right.
+  - id: vermuten
+    de: vermuten
+    en: to suspect, to presume
+    pos: verb
+    example: Die Polizei vermutet einen Unfall.
+    exampleEn: The police suspect an accident.
+  - id: vermutung
+    de: Vermutung
+    en: assumption, guess
+    pos: noun
+    article: die
+    plural: Vermutungen
+    example: Das ist nur eine Vermutung.
+    exampleEn: That is only a guess.
+  - id: zukunft-b1
+    de: in Zukunft
+    en: in future
+    pos: phrase
+    example: In Zukunft werden wir mehr online einkaufen.
+    exampleEn: In future we will shop online more.
+  - id: entwicklung
+    de: Entwicklung
+    en: development
+    pos: noun
+    article: die
+    plural: Entwicklungen
+    example: Die Entwicklung der Technik ist sehr schnell.
+    exampleEn: Technology is developing very fast.
+  - id: steigen
+    de: steigen
+    en: to rise
+    pos: verb
+    example: Die Preise steigen jedes Jahr.
+    exampleEn: Prices rise every year.
+  - id: sinken
+    de: sinken
+    en: to fall, to sink
+    pos: verb
+    example: Die Zahl der Autos wird sinken.
+    exampleEn: The number of cars will fall.
+  - id: moeglich
+    de: möglich
+    en: possible
+    pos: adjective
+    example: Es ist möglich, dass es morgen schneit.
+    exampleEn: It is possible that it will snow tomorrow.
+  - id: sicher-b1
+    de: sicher
+    en: sure; safe
+    pos: adjective
+    example: Ich bin mir nicht sicher.
+    exampleEn: I am not sure.
+  - id: voraussichtlich
+    de: voraussichtlich
+    en: expected, probably
+    pos: adverb
+    example: Die Bauarbeiten dauern voraussichtlich bis Mai.
+    exampleEn: The building work is expected to last until May.
