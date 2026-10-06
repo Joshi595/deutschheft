@@ -1,0 +1,157 @@
+lesson: b1.13
+sets:
+  - title: Genitive forms
+    items:
+      - id: gen1
+        type: fill-blank
+        tags: [genitive]
+        prompt: "Am Ende des ___ haben alle geweint. (Film)"
+        answers: [Films]
+      - id: gen2
+        type: fill-blank
+        tags: [genitive]
+        prompt: "Die Fenster des ___ sind alt. (Haus)"
+        answers: [Hauses]
+      - id: gen3
+        type: multiple-choice
+        tags: [genitive]
+        prompt: "Das ist die Meinung ___ Kollegin."
+        options: [meiner, meines, meine]
+        answer: meiner
+      - id: gen4
+        type: multiple-choice
+        tags: [genitive adjectives]
+        prompt: "Wegen des ___ Wetters fällt das Fest aus."
+        options: [schlechten, schlechtes, schlechte]
+        answer: schlechten
+      - id: gen5
+        type: fill-blank
+        tags: [genitive adjectives]
+        prompt: "Die Preise der ___ Wohnungen sind hoch. (neu)"
+        answers: [neuen]
+
+  - title: Genitive prepositions
+    items:
+      - id: prep1
+        type: matching
+        tags: [genitive prepositions]
+        prompt: Match the preposition with its meaning.
+        pairs:
+          - { left: wegen, right: because of }
+          - { left: trotz, right: despite }
+          - { left: während, right: during }
+          - { left: innerhalb, right: within }
+          - { left: außerhalb, right: outside }
+          - { left: aufgrund, right: due to }
+      - id: prep2
+        type: multiple-choice
+        tags: [genitive prepositions]
+        prompt: "___ des Urlaubs habe ich keine E-Mails gelesen."
+        options: [Während, Innerhalb, Statt]
+        answer: Während
+      - id: prep3
+        type: multiple-choice
+        tags: [genitive prepositions]
+        prompt: "Bitte antworten Sie ___ einer Woche."
+        options: [innerhalb, außerhalb, trotz]
+        answer: innerhalb
+      - id: prep4
+        type: fill-blank
+        tags: [genitive prepositions]
+        prompt: "Wir wohnen außerhalb ___ Stadt."
+        answers: [der]
+
+  - title: The n-declension
+    items:
+      - id: n1
+        type: multiple-choice
+        tags: [n-declension]
+        prompt: "Ich habe den ___ angerufen."
+        options: [Kunden, Kunde, Kundes]
+        answer: Kunden
+      - id: n2
+        type: multiple-choice
+        tags: [n-declension]
+        prompt: "Kannst du dem ___ helfen?"
+        options: [Jungen, Junge, Junges]
+        answer: Jungen
+      - id: n3
+        type: multiple-choice
+        tags: [n-declension]
+        prompt: "Ich habe mit ___ Müller gesprochen."
+        options: [Herrn, Herr, Herren]
+        answer: Herrn
+      - id: n4
+        type: fill-blank
+        tags: [n-declension]
+        prompt: "Ich habe einen ___ nach dem Weg gefragt. (Polizist)"
+        answers: [Polizisten]
+      - id: n5
+        type: fill-blank
+        tags: [n-declension]
+        prompt: "Die Bedeutung des ___ ist interessant. (Name)"
+        answers: [Namens]
+      - id: n6
+        type: true-false
+        tags: [n-declension]
+        prompt: "der Lehrer is an n-noun: den Lehrern, dem Lehrern."
+        answer: false
+        explanation: Lehrer is a normal noun. Only the dative plural has -n.
+
+  - title: Say it formally
+    instructions: Rewrite with the genitive.
+    items:
+      - id: form1
+        type: translation
+        tags: [genitive style]
+        prompt: "das Haus von meinen Eltern →"
+        answers:
+          - "das Haus meiner Eltern"
+      - id: form2
+        type: translation
+        tags: [genitive style]
+        prompt: "wegen dem Streik →"
+        answers:
+          - "wegen des Streiks"
+      - id: form3
+        type: translation
+        tags: [genitive style]
+        prompt: "das Büro von dem neuen Chef →"
+        answers:
+          - "das Büro des neuen Chefs"
+
+  - title: A formal email
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [genitive, n-declension]
+        prompt: Fill in the gaps.
+        bank: [Herrn, des, der, aufgrund, innerhalb, Kunden]
+        text: "Sehr geehrte Damen und Herren, ___ eines technischen Problems konnten wir Ihre Bestellung leider nicht liefern. Wir haben bereits mit ___ Schmidt aus unserer Abteilung gesprochen. Er wird alle betroffenen ___ ___ der nächsten Tage informieren. Den Rest ___ Betrags erstatten wir Ihnen am Ende ___ Woche. Mit freundlichen Grüßen"
+        gaps:
+          - [aufgrund]
+          - [Herrn]
+          - [Kunden]
+          - [innerhalb]
+          - [des]
+          - [der]
+
+  - title: Write formally
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, formal]
+        prompt: "Write a short email to your landlord, Herr Krüger, about a problem in your flat. Use at least three genitive forms."
+        points:
+          - What the problem is (e.g. the heating of the flat)
+          - Since when, and what happened during that time
+          - What you ask him to do, and within what time
+          - A polite closing
+        minWords: 60
+        phrases:
+          - Sehr geehrter Herr Krüger,
+          - seit Anfang der Woche funktioniert die Heizung meiner Wohnung nicht.
+          - Während des Wochenendes …
+          - Könnten Sie innerhalb der nächsten Tage …?
+          - Mit freundlichen Grüßen
+        sample: "Sehr geehrter Herr Krüger, seit Anfang der Woche funktioniert die Heizung meiner Wohnung leider nicht. Während des Wochenendes war es in der Wohnung nur fünfzehn Grad, und wegen der Kälte ist meine Tochter krank geworden. Könnten Sie bitte innerhalb der nächsten zwei Tage einen Techniker schicken? Ich bin außerhalb der Arbeitszeit, also ab 17 Uhr, immer zu Hause. Mit freundlichen Grüßen, Marta Nowak"

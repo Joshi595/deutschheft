@@ -1,0 +1,128 @@
+lesson: b1.13
+items:
+  - id: innerhalb
+    de: innerhalb + Genitiv
+    en: within, inside
+    pos: preposition
+    example: Bitte zahlen Sie innerhalb einer Woche.
+    exampleEn: Please pay within a week.
+  - id: ausserhalb
+    de: außerhalb + Genitiv
+    en: outside
+    pos: preposition
+    example: Das Hotel liegt außerhalb der Stadt.
+    exampleEn: The hotel is outside the town.
+  - id: aufgrund
+    de: aufgrund + Genitiv
+    en: due to, on the basis of
+    pos: preposition
+    example: Aufgrund des Wetters wurde der Flug gestrichen.
+    exampleEn: Due to the weather the flight was cancelled.
+  - id: statt-praep
+    de: statt + Genitiv
+    en: instead of
+    pos: preposition
+    example: Statt eines Autos hat er ein Fahrrad gekauft.
+    exampleEn: Instead of a car he bought a bike.
+  - id: kunde
+    de: Kunde
+    en: customer
+    pos: noun
+    article: der
+    plural: Kunden
+    example: Ich muss noch den Kunden anrufen.
+    exampleEn: I still have to call the customer.
+  - id: junge
+    de: Junge
+    en: boy
+    pos: noun
+    article: der
+    plural: Jungen
+    example: Kannst du dem Jungen helfen?
+    exampleEn: Can you help the boy?
+  - id: mensch
+    de: Mensch
+    en: human being, person
+    pos: noun
+    article: der
+    plural: Menschen
+    example: Ich kenne keinen Menschen hier.
+    exampleEn: I do not know a single person here.
+  - id: herr
+    de: Herr
+    en: Mr, gentleman
+    pos: noun
+    article: der
+    plural: Herren
+    example: Ich habe mit Herrn Weber gesprochen.
+    exampleEn: I spoke to Mr Weber.
+  - id: student-b1
+    de: Student
+    en: student
+    pos: noun
+    article: der
+    plural: Studenten
+    example: Der Professor hat dem Studenten geholfen.
+    exampleEn: The professor helped the student.
+  - id: praktikant
+    de: Praktikant
+    en: intern
+    pos: noun
+    article: der
+    plural: Praktikanten
+    example: Wir suchen einen Praktikanten für drei Monate.
+    exampleEn: We are looking for an intern for three months.
+  - id: polizist
+    de: Polizist
+    en: police officer
+    pos: noun
+    article: der
+    plural: Polizisten
+    example: Ich habe einen Polizisten nach dem Weg gefragt.
+    exampleEn: I asked a police officer the way.
+  - id: journalist
+    de: Journalist
+    en: journalist
+    pos: noun
+    article: der
+    plural: Journalisten
+    example: Das Interview des Journalisten war sehr gut.
+    exampleEn: The journalist's interview was very good.
+  - id: name
+    de: Name
+    en: name
+    pos: noun
+    article: der
+    plural: Namen
+    example: Die Bedeutung des Namens ist interessant.
+    exampleEn: The meaning of the name is interesting.
+  - id: neffe
+    de: Neffe
+    en: nephew
+    pos: noun
+    article: der
+    plural: Neffen
+    example: Ich habe meinem Neffen ein Buch geschenkt.
+    exampleEn: I gave my nephew a book.
+  - id: ergebnis
+    de: Ergebnis
+    en: result
+    pos: noun
+    article: das
+    plural: Ergebnisse
+    example: Die Ergebnisse der Studie sind überraschend.
+    exampleEn: The results of the study are surprising.
+  - id: studie
+    de: Studie
+    en: study (research)
+    pos: noun
+    article: die
+    plural: Studien
+    example: Laut einer Studie schlafen viele Menschen zu wenig.
+    exampleEn: According to a study many people sleep too little.
+  - id: kosten
+    de: Kosten
+    en: costs
+    pos: phrase
+    example: Aufgrund der hohen Kosten wurde das Projekt gestoppt.
+    exampleEn: Due to the high costs the project was stopped.
