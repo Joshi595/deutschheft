@@ -1,0 +1,121 @@
+lesson: b1.20
+items:
+  - id: anschreiben
+    de: Anschreiben
+    en: cover letter
+    pos: noun
+    article: das
+    plural: Anschreiben
+    example: Das Anschreiben sollte nur eine Seite lang sein.
+    exampleEn: The cover letter should only be one page long.
+  - id: vorstellungsgespraech
+    de: Vorstellungsgespräch
+    en: job interview
+    pos: noun
+    article: das
+    plural: Vorstellungsgespräche
+    example: Morgen habe ich ein Vorstellungsgespräch.
+    exampleEn: I have a job interview tomorrow.
+  - id: berufserfahrung
+    de: Berufserfahrung
+    en: work experience
+    pos: noun
+    article: die
+    example: Sie haben mindestens zwei Jahre Berufserfahrung.
+    exampleEn: You have at least two years' work experience.
+  - id: zeugnis
+    de: Zeugnis
+    en: certificate, reference
+    pos: noun
+    article: das
+    plural: Zeugnisse
+    example: Bitte schicken Sie uns Ihre Zeugnisse.
+    exampleEn: Please send us your certificates.
+  - id: staerke
+    de: Stärke
+    en: strength
+    pos: noun
+    article: die
+    plural: Stärken
+    example: Was sind Ihre Stärken?
+    exampleEn: What are your strengths?
+  - id: schwaeche
+    de: Schwäche
+    en: weakness
+    pos: noun
+    article: die
+    plural: Schwächen
+    example: Meine größte Schwäche ist Ungeduld.
+    exampleEn: My biggest weakness is impatience.
+  - id: zuverlaessig
+    de: zuverlässig
+    en: reliable
+    pos: adjective
+    example: Wir suchen einen zuverlässigen Mitarbeiter.
+    exampleEn: We are looking for a reliable employee.
+  - id: teamfaehig
+    de: teamfähig
+    en: good at teamwork
+    pos: adjective
+    example: Ich bin teamfähig und flexibel.
+    exampleEn: I work well in a team and am flexible.
+  - id: unbefristet
+    de: unbefristet
+    en: permanent (contract)
+    pos: adjective
+    example: Ich habe einen unbefristeten Vertrag.
+    exampleEn: I have a permanent contract.
+  - id: befristet
+    de: befristet
+    en: fixed-term
+    pos: adjective
+    example: Der Vertrag ist auf ein Jahr befristet.
+    exampleEn: The contract is for a fixed term of one year.
+  - id: einarbeitung
+    de: Einarbeitung
+    en: induction, training period
+    pos: noun
+    article: die
+    example: Die Einarbeitung dauert vier Wochen.
+    exampleEn: The induction lasts four weeks.
+  - id: weiterbildung-b1
+    de: Weiterbildung
+    en: further training
+    pos: noun
+    article: die
+    plural: Weiterbildungen
+    example: Die Firma bezahlt eine Weiterbildung.
+    exampleEn: The company pays for further training.
+  - id: leiten
+    de: leiten
+    en: to lead, to manage
+    pos: verb
+    example: Sie leitet ein Team von zehn Leuten.
+    exampleEn: She manages a team of ten people.
+  - id: sich-selbststaendig-machen
+    de: sich selbstständig machen
+    en: to become self-employed
+    pos: phrase
+    example: Er hat sich letztes Jahr selbstständig gemacht.
+    exampleEn: He became self-employed last year.
+  - id: aufgabe
+    de: Aufgabe
+    en: task, duty
+    pos: noun
+    article: die
+    plural: Aufgaben
+    example: Zu Ihren Aufgaben gehört die Beratung von Kunden.
+    exampleEn: Your tasks include advising customers.
+  - id: schichtdienst
+    de: Schichtdienst
+    en: shift work
+    pos: noun
+    article: der
+    example: Im Krankenhaus arbeite ich im Schichtdienst.
+    exampleEn: At the hospital I work shifts.
+  - id: kenntnisse-b1
+    de: Sprachkenntnisse
+    en: language skills
+    pos: phrase
+    example: Gute Deutschkenntnisse sind erforderlich.
+    exampleEn: Good German is required.
