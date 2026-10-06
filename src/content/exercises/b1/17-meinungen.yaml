@@ -1,0 +1,186 @@
+lesson: b1.17
+sets:
+  - title: Word order with opinion phrases
+    items:
+      - id: wo1
+        type: multiple-choice
+        tags: [word order]
+        prompt: Choose the correct sentence.
+        options:
+          - "Meiner Meinung nach sollten Kinder weniger fernsehen."
+          - "Meiner Meinung nach Kinder sollten weniger fernsehen."
+          - "Meiner Meinung nach Kinder weniger fernsehen sollten."
+        answer: "Meiner Meinung nach sollten Kinder weniger fernsehen."
+      - id: wo2
+        type: word-order
+        tags: [word order]
+        prompt: I am convinced that sport is important.
+        answer: "Ich bin davon überzeugt, dass Sport wichtig ist."
+      - id: wo3
+        type: word-order
+        tags: [word order]
+        prompt: On the one hand it is practical, on the other hand it is expensive.
+        answer: "Einerseits ist es praktisch, andererseits ist es teuer."
+
+  - title: Agree, partly agree or disagree?
+    items:
+      - id: ag1
+        type: multiple-choice
+        tags: [reactions]
+        prompt: "'Das sehe ich genauso.'"
+        options: [agree, partly agree, disagree]
+        answer: agree
+        shuffle: false
+      - id: ag2
+        type: multiple-choice
+        tags: [reactions]
+        prompt: "'Das stimmt zwar, aber …'"
+        options: [agree, partly agree, disagree]
+        answer: partly agree
+        shuffle: false
+      - id: ag3
+        type: multiple-choice
+        tags: [reactions]
+        prompt: "'Da bin ich anderer Meinung.'"
+        options: [agree, partly agree, disagree]
+        answer: disagree
+        shuffle: false
+      - id: ag4
+        type: multiple-choice
+        tags: [reactions]
+        prompt: "'Ich sehe das ein bisschen anders.'"
+        options: [agree, partly agree, disagree]
+        answer: disagree
+        shuffle: false
+      - id: ag5
+        type: multiple-choice
+        tags: [reactions]
+        prompt: "'Da hast du völlig Recht.'"
+        options: [agree, partly agree, disagree]
+        answer: agree
+        shuffle: false
+
+  - title: Fixed phrases
+    items:
+      - id: fix1
+        type: fill-blank
+        tags: [phrases]
+        prompt: "Da hast du ___. (You are right.)"
+        answers: [Recht, recht]
+      - id: fix2
+        type: fill-blank
+        tags: [phrases]
+        prompt: "Ich stimme ___ zu. (you, informal)"
+        answers: [dir]
+      - id: fix3
+        type: fill-blank
+        tags: [phrases]
+        prompt: "___ spricht, dass man Zeit spart. (In favour of it)"
+        answers: [Dafür]
+      - id: fix4
+        type: fill-blank
+        tags: [phrases]
+        prompt: "___ kann man sagen, dass … (in summary)"
+        answers: [Zusammenfassend]
+      - id: fix6
+        type: multiple-choice
+        tags: [phrases]
+        prompt: "How do you say 'I think so' in German?"
+        options: ["Ich denke schon.", "Ich denke so.", "Ich glaube es so."]
+        answer: "Ich denke schon."
+      - id: fix5
+        type: matching
+        tags: [phrases]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: Meiner Meinung nach, right: In my opinion }
+          - { left: Der Grund dafür ist, right: The reason for this is }
+          - { left: Andererseits, right: On the other hand }
+          - { left: Insgesamt, right: Overall }
+          - { left: Ich verstehe deinen Punkt, right: I see your point }
+
+  - title: An opinion post
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [structure]
+        prompt: Complete the post on 'Should cities ban cars from the centre?'
+        bank: [Meinung, Einerseits, andererseits, Dafür, Grund, Zusammenfassend]
+        text: "Meiner ___ nach sollten die Städte die Innenstädte autofrei machen. Der ___ dafür ist, dass die Luft dann viel besser wäre. ___ spricht auch, dass es weniger Lärm gibt. ___ verstehe ich die Geschäftsleute, die Angst um ihre Kunden haben, ___ kommen viele Leute ohnehin mit dem Bus. ___ kann man sagen, dass die Vorteile größer sind."
+        gaps:
+          - [Meinung]
+          - [Grund]
+          - [Dafür]
+          - [Einerseits]
+          - [andererseits]
+          - [Zusammenfassend]
+
+  - title: A discussion
+    stimulus:
+      kind: audio
+      label: Diskussion im Radio
+      lines:
+        - speaker: Moderatorin
+          text: "Sollte man in Schulen Handys verbieten? Herr Kraft, was meinen Sie?"
+        - speaker: Herr Kraft
+          text: "Ich bin ganz klar dafür. Die Kinder können sich ohne Handy viel besser konzentrieren."
+        - speaker: Frau Aydin
+          text: "Da bin ich anderer Meinung. Das Handy ist auch ein Lernwerkzeug. Man muss den Kindern zeigen, wie man es sinnvoll benutzt."
+        - speaker: Herr Kraft
+          text: "Das stimmt zwar, aber in der Pause sollten die Kinder miteinander sprechen und nicht am Bildschirm sitzen."
+        - speaker: Frau Aydin
+          text: "Da haben Sie teilweise Recht. Vielleicht wäre eine Regel nur für die Pausen ein guter Kompromiss."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was meint Herr Kraft?
+        options: ["Handys sollten in Schulen verboten werden.", "Handys sind ein gutes Lernwerkzeug.", "Die Kinder sollten in den Pausen spielen dürfen, was sie wollen."]
+        answer: "Handys sollten in Schulen verboten werden."
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Frau Aydin stimmt Herrn Kraft am Anfang zu.
+        answer: false
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Welchen Kompromiss schlägt Frau Aydin vor?
+        options: ["eine Regel nur für die Pausen", "Handys nur für Lehrer", "Handys nur in der Mathestunde"]
+        answer: "eine Regel nur für die Pausen"
+
+  - title: Your opinion
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, opinion]
+        prompt: "Online forum topic: 'Should everyone do one year of voluntary social work after school?' Write your opinion."
+        points:
+          - Your opinion
+          - Two reasons, with an example
+          - An argument on the other side
+          - A conclusion
+        minWords: 80
+        phrases:
+          - Meiner Meinung nach …
+          - Der Grund dafür ist, dass …
+          - Zum Beispiel …
+          - Zwar …, aber … / Andererseits …
+          - Zusammenfassend …
+        sample: "Meiner Meinung nach wäre ein soziales Jahr nach der Schule für alle jungen Menschen sinnvoll. Der Grund dafür ist, dass man dabei sehr viel über das Leben lernt. Zum Beispiel hat mein Bruder ein Jahr in einem Altenheim gearbeitet, und danach wusste er, dass er Krankenpfleger werden möchte. Außerdem helfen die Jugendlichen der Gesellschaft. Andererseits verstehe ich, dass manche sofort studieren oder Geld verdienen möchten. Deshalb sollte das Jahr freiwillig bleiben, aber gut bezahlt werden. Zusammenfassend kann man sagen, dass die Vorteile klar überwiegen."
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, discussion]
+        prompt: "Your partner says: 'Ich finde, man sollte in der Stadt kein Auto haben.' React: agree partly, disagree with one point, give your own view and suggest a compromise."
+        cards: [reagieren, widersprechen, eigene Meinung, Kompromiss]
+        phrases:
+          - Da hast du teilweise Recht, aber …
+          - Ich sehe das ein bisschen anders, denn …
+          - Für mich ist wichtig, dass …
+          - Vielleicht wäre es ein guter Kompromiss, wenn …
+        checklist:
+          - I reacted to what my partner said
+          - I disagreed politely
+          - I gave a reason and an example
+          - I suggested a compromise with the Konjunktiv II
+        sample: "Da hast du teilweise Recht. In der Stadt gibt es Busse und Bahnen, und man findet sowieso keinen Parkplatz. Aber ich sehe das ein bisschen anders, wenn man Kinder hat. Mit zwei kleinen Kindern und Einkäufen ist ein Auto sehr praktisch. Vielleicht wäre es ein guter Kompromiss, wenn mehr Leute Carsharing nutzen würden."

@@ -1,0 +1,112 @@
+lesson: b1.17
+items:
+  - id: meinung
+    de: Meinung
+    en: opinion
+    pos: noun
+    article: die
+    plural: Meinungen
+    example: Meiner Meinung nach ist das falsch.
+    exampleEn: In my opinion that is wrong.
+  - id: ansicht
+    de: Ansicht
+    en: view, opinion
+    pos: noun
+    article: die
+    plural: Ansichten
+    example: Ich teile deine Ansicht nicht.
+    exampleEn: I do not share your view.
+  - id: ueberzeugt
+    de: überzeugt (von)
+    en: convinced (of)
+    pos: adjective
+    example: Ich bin davon überzeugt, dass es klappt.
+    exampleEn: I am convinced it will work.
+  - id: zustimmen
+    de: zustimmen + Dativ
+    en: to agree with
+    pos: verb
+    example: Da stimme ich dir völlig zu.
+    exampleEn: I completely agree with you there.
+  - id: widersprechen
+    de: widersprechen + Dativ
+    en: to contradict, to disagree
+    pos: verb
+    example: Da muss ich Ihnen widersprechen.
+    exampleEn: I have to disagree with you there.
+  - id: recht-haben
+    de: Recht haben
+    en: to be right
+    pos: phrase
+    example: Da hast du Recht.
+    exampleEn: You are right there.
+  - id: einverstanden
+    de: einverstanden
+    en: in agreement, OK with
+    pos: adjective
+    example: Bist du damit einverstanden?
+    exampleEn: Are you OK with that?
+  - id: einerseits
+    de: einerseits … andererseits
+    en: on the one hand … on the other hand
+    pos: phrase
+    example: Einerseits ist es teuer, andererseits ist es sehr gut.
+    exampleEn: On the one hand it is expensive, on the other it is very good.
+  - id: dafuer-spricht
+    de: Dafür spricht, dass …
+    en: In favour of it is that …
+    pos: phrase
+    example: Dafür spricht, dass man Zeit spart.
+    exampleEn: In favour of it is that you save time.
+  - id: zusammenfassend
+    de: zusammenfassend
+    en: in summary
+    pos: adverb
+    example: Zusammenfassend kann man sagen, dass …
+    exampleEn: In summary, one can say that …
+  - id: insgesamt
+    de: insgesamt
+    en: overall
+    pos: adverb
+    example: Insgesamt bin ich zufrieden.
+    exampleEn: Overall I am satisfied.
+  - id: argument
+    de: Argument
+    en: argument, point
+    pos: noun
+    article: das
+    plural: Argumente
+    example: Das ist ein gutes Argument.
+    exampleEn: That is a good point.
+  - id: standpunkt
+    de: Standpunkt
+    en: point of view
+    pos: noun
+    article: der
+    plural: Standpunkte
+    example: Ich verstehe deinen Standpunkt.
+    exampleEn: I understand your point of view.
+  - id: teilweise
+    de: teilweise
+    en: partly
+    pos: adverb
+    example: Da hast du teilweise Recht.
+    exampleEn: You are partly right there.
+  - id: erleben
+    de: erleben
+    en: to experience
+    pos: verb
+    example: Ich habe selbst erlebt, wie schwer das ist.
+    exampleEn: I have experienced myself how hard that is.
+  - id: diskutieren
+    de: diskutieren
+    en: to discuss
+    pos: verb
+    example: Wir haben lange über das Thema diskutiert.
+    exampleEn: We discussed the topic for a long time.
+  - id: genauso-b1
+    de: Das sehe ich genauso.
+    en: I see it the same way.
+    pos: phrase
+    example: Das sehe ich genauso wie du.
+    exampleEn: I see it exactly as you do.
