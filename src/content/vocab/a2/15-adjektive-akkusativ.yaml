@@ -1,0 +1,126 @@
+lesson: a2.15
+items:
+  - id: mantel
+    de: Mantel
+    en: coat
+    pos: noun
+    article: der
+    plural: Mäntel
+    example: Ich suche einen warmen Mantel.
+    exampleEn: I am looking for a warm coat.
+  - id: anzug
+    de: Anzug
+    en: suit
+    pos: noun
+    article: der
+    plural: Anzüge
+    example: Er trägt einen grauen Anzug.
+    exampleEn: He is wearing a grey suit.
+  - id: kleid
+    de: Kleid
+    en: dress
+    pos: noun
+    article: das
+    plural: Kleider
+    example: Das rote Kleid ist sehr schön.
+    exampleEn: The red dress is very nice.
+  - id: hemd
+    de: Hemd
+    en: shirt
+    pos: noun
+    article: das
+    plural: Hemden
+    example: Ich brauche ein weißes Hemd.
+    exampleEn: I need a white shirt.
+  - id: socke
+    de: Socke
+    en: sock
+    pos: noun
+    article: die
+    plural: Socken
+    example: Ich habe keine sauberen Socken mehr.
+    exampleEn: I have no clean socks left.
+  - id: krawatte
+    de: Krawatte
+    en: tie
+    pos: noun
+    article: die
+    plural: Krawatten
+    example: Die blaue Krawatte passt gut.
+    exampleEn: The blue tie goes well.
+  - id: anprobieren
+    de: anprobieren
+    en: to try on
+    pos: verb
+    example: Kann ich die Hose anprobieren?
+    exampleEn: Can I try the trousers on?
+  - id: umkleidekabine
+    de: Umkleidekabine
+    en: changing room
+    pos: noun
+    article: die
+    plural: Umkleidekabinen
+    example: Die Umkleidekabine ist dort hinten.
+    exampleEn: The changing room is back there.
+  - id: groesse
+    de: Größe
+    en: size
+    pos: noun
+    article: die
+    plural: Größen
+    example: Haben Sie das in Größe 40?
+    exampleEn: Do you have it in size 40?
+  - id: tragen
+    de: tragen
+    en: to wear; to carry
+    pos: verb
+    example: Sie trägt heute einen schwarzen Rock.
+    exampleEn: She is wearing a black skirt today.
+  - id: eng
+    de: eng
+    en: tight, narrow
+    pos: adjective
+    example: Die Hose ist zu eng.
+    exampleEn: The trousers are too tight.
+  - id: weit-kleidung
+    de: weit
+    en: loose, wide
+    pos: adjective
+    example: Ich mag weite Pullover.
+    exampleEn: I like loose jumpers.
+  - id: warm
+    de: warm
+    en: warm
+    pos: adjective
+    example: Im Winter brauche ich warme Schuhe.
+    exampleEn: I need warm shoes in winter.
+  - id: bunt
+    de: bunt
+    en: colourful
+    pos: adjective
+    example: Sie trägt gern bunte Kleider.
+    exampleEn: She likes wearing colourful dresses.
+  - id: welcher
+    de: welcher, welche, welches
+    en: which
+    pos: other
+    example: Welchen Pullover nimmst du?
+    exampleEn: Which jumper are you taking?
+  - id: was-fuer-ein
+    de: was für ein
+    en: what kind of
+    pos: phrase
+    example: Was für ein Auto hast du?
+    exampleEn: What kind of car do you have?
+  - id: stehen-kleidung
+    de: stehen (+ Dativ)
+    en: to suit (someone)
+    pos: verb
+    example: Die Farbe steht dir gut.
+    exampleEn: The colour suits you.
+  - id: umtauschen
+    de: umtauschen
+    en: to exchange (in a shop)
+    pos: verb
+    example: Kann ich die Schuhe umtauschen?
+    exampleEn: Can I exchange the shoes?

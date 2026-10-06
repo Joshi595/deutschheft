@@ -1,0 +1,208 @@
+lesson: a2.15
+sets:
+  - title: After den, die, das
+    instructions: Write the adjective with its ending.
+    items:
+      - id: def1
+        type: fill-blank
+        tags: [accusative endings]
+        prompt: "Ich nehme den ___ Pullover. (blau)"
+        answers: [blauen]
+      - id: def2
+        type: fill-blank
+        tags: [accusative endings]
+        prompt: "Kennst du die ___ Kollegin? (neu)"
+        answers: [neue]
+      - id: def3
+        type: fill-blank
+        tags: [accusative endings]
+        prompt: "Wir kaufen das ___ Sofa. (groß)"
+        answers: [große]
+      - id: def4
+        type: fill-blank
+        tags: [accusative endings]
+        prompt: "Ich mag die ___ Häuser. (alt)"
+        answers: [alten]
+
+  - title: After einen, eine, ein
+    items:
+      - id: indef1
+        type: multiple-choice
+        tags: [accusative endings]
+        prompt: "Ich suche einen ___ Mantel."
+        options: [warmen, warmer, warme]
+        answer: warmen
+      - id: indef2
+        type: multiple-choice
+        tags: [accusative endings]
+        prompt: "Wir haben ein ___ Haus gekauft."
+        options: [kleines, kleinen, kleine]
+        answer: kleines
+      - id: indef3
+        type: multiple-choice
+        tags: [accusative endings]
+        prompt: "Sie hat eine ___ Idee."
+        options: [tolle, tollen, toller]
+        answer: tolle
+      - id: indef4
+        type: multiple-choice
+        tags: [accusative endings]
+        prompt: "Ich suche ___ Schreibtisch."
+        options: [einen neuen, ein neuen, einen neuer]
+        answer: einen neuen
+      - id: indef5
+        type: fill-blank
+        tags: [accusative endings]
+        prompt: "Ich habe keine ___ Socken mehr. (sauber)"
+        answers: [sauberen]
+      - id: indef6
+        type: fill-blank
+        tags: [accusative endings]
+        prompt: "Ich brauche ein ___ Hemd. (weiß)"
+        answers: [weißes]
+
+  - title: Nominative or accusative?
+    items:
+      - id: nomacc1
+        type: multiple-choice
+        tags: [nominative accusative]
+        prompt: "___ Mantel ist zu teuer."
+        options: [Der schwarze, Den schwarzen]
+        answer: Der schwarze
+        explanation: The coat is the subject.
+      - id: nomacc2
+        type: multiple-choice
+        tags: [nominative accusative]
+        prompt: "Ich kaufe ___ Mantel."
+        options: [den schwarzen, der schwarze]
+        answer: den schwarzen
+      - id: nomacc3
+        type: multiple-choice
+        tags: [nominative accusative]
+        prompt: "Es gibt ___ Park in der Nähe."
+        options: [einen schönen, ein schöner]
+        answer: einen schönen
+        explanation: es gibt takes the accusative.
+      - id: nomacc4
+        type: true-false
+        tags: [nominative accusative]
+        prompt: "In the accusative, only the masculine endings differ from the nominative."
+        answer: true
+
+  - title: No article
+    items:
+      - id: none1
+        type: fill-blank
+        tags: [no article endings]
+        prompt: "Ich trinke gern ___ Kaffee. (schwarz)"
+        answers: [schwarzen]
+      - id: none2
+        type: fill-blank
+        tags: [no article endings]
+        prompt: "Wir brauchen ___ Brot. (frisch)"
+        answers: [frisches]
+
+  - title: In the shop
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [accusative endings]
+        prompt: Complete the conversation.
+        text: "– Guten Tag, ich suche einen warm___ Pullover. – Was für einen? Wir haben einen grau___ und einen rot___. – Ich nehme den rot___. Haben Sie auch eine passend___ Mütze? – Ja, diese hier. Und vielleicht ein bunt___ Tuch?"
+        gaps:
+          - [en]
+          - [en]
+          - [en]
+          - [en]
+          - [e]
+          - [es]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [accusative endings]
+        prompt: He is wearing a grey suit.
+        answer: "Er trägt einen grauen Anzug."
+      - id: order2
+        type: word-order
+        tags: [was fuer ein]
+        prompt: What kind of car do you have?
+        answer: "Was für ein Auto hast du?"
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [accusative endings]
+        prompt: I am looking for a warm coat.
+        answers:
+          - "Ich suche einen warmen Mantel."
+      - id: tr2
+        type: translation
+        tags: [accusative endings]
+        prompt: "Which jacket do you like? – The green one."
+        answers:
+          - "Welche Jacke gefällt dir? – Die grüne."
+          - "Welche Jacke gefällt dir? Die grüne."
+
+  - title: Shopping for clothes
+    stimulus:
+      kind: audio
+      label: Im Kleidungsgeschäft
+      lines:
+        - speaker: Verkäufer
+          text: "Kann ich Ihnen helfen?"
+        - speaker: Kundin
+          text: "Ja, ich suche eine Hose für die Arbeit. Eine schwarze oder eine dunkelblaue."
+        - speaker: Verkäufer
+          text: "Welche Größe haben Sie?"
+        - speaker: Kundin
+          text: "Achtunddreißig."
+        - speaker: Verkäufer
+          text: "Hier ist eine schwarze in Größe achtunddreißig. Die Umkleidekabine ist dort hinten."
+        - speaker: Kundin
+          text: "Hm, die ist ein bisschen eng. Haben Sie die auch in vierzig?"
+        - speaker: Verkäufer
+          text: "Leider nicht in Schwarz. Aber die dunkelblaue haben wir in vierzig."
+        - speaker: Kundin
+          text: "Gut, dann nehme ich die dunkelblaue."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wofür braucht die Frau die Hose?
+        options: ["für die Arbeit", "für eine Party", "für den Urlaub"]
+        answer: "für die Arbeit"
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Die schwarze Hose in Größe 38 passt gut.
+        answer: false
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Welche Hose kauft sie?
+        options: ["die dunkelblaue in 40", "die schwarze in 40", "die schwarze in 38"]
+        answer: "die dunkelblaue in 40"
+
+  - title: Your turn
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, accusative endings]
+        prompt: You are in a clothes shop. Ask the shop assistant for help, describe what you are looking for, try it on and decide.
+        cards: [Was? (Jacke, Schuhe …), Farbe, Größe, Anprobieren, Kaufen oder nicht?]
+        phrases:
+          - Ich suche einen / eine / ein …
+          - Haben Sie das auch in Blau / in Größe …?
+          - Kann ich … anprobieren?
+          - Der / Die / Das … ist zu eng / zu groß.
+          - Ich nehme den / die / das …
+        checklist:
+          - I described what I wanted with an adjective
+          - I asked about colour and size
+          - The masculine accusative endings were -en
+          - I said which one I would take
+        sample: "Guten Tag, ich suche eine warme Jacke für den Winter. Haben Sie die graue auch in Größe 40? Kann ich sie anprobieren? … Hm, die ist ein bisschen zu eng. Haben Sie noch eine andere? … Die dunkelblaue passt gut. Ich nehme die dunkelblaue Jacke."
