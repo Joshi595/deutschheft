@@ -1,0 +1,172 @@
+lesson: b1.27
+sets:
+  - title: Words
+    items:
+      - id: w1
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: die Ausstellung, right: the exhibition }
+          - { left: die Handlung, right: the plot }
+          - { left: die Unterkunft, right: the accommodation }
+          - { left: der Brauch, right: the custom }
+          - { left: das Mitglied, right: the member }
+          - { left: die Sehenswürdigkeit, right: the sight }
+      - id: w2
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Sie arbeitet ___ im Tierheim. (as a volunteer)"
+        answers: [ehrenamtlich]
+      - id: w3
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Zum Karneval ___ ich mich als Pirat. (verkleiden)"
+        answers: [verkleide]
+
+  - title: Grammar in context
+    items:
+      - id: g1
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Der Film handelt ___ einer Frau, die allein reist."
+        options: [von, über, mit]
+        answer: von
+      - id: g2
+        type: multiple-choice
+        tags: [reflexive]
+        prompt: "Die Ausstellung ___ wirklich."
+        options: [lohnt sich, lohnt, lohnt es]
+        answer: lohnt sich
+      - id: g3
+        type: multiple-choice
+        tags: [Perfekt]
+        prompt: "Letzten Sommer ___ wir durch Portugal gereist."
+        options: [sind, haben]
+        answer: sind
+      - id: g4
+        type: multiple-choice
+        tags: [passive]
+        prompt: "In meiner Heimat ___ das Neujahrsfest im Frühling gefeiert."
+        options: [wird, ist, hat]
+        answer: wird
+      - id: g5
+        type: multiple-choice
+        tags: [relative clauses]
+        prompt: "Wir haben eine Ferienwohnung gebucht, ___ direkt am Strand liegt."
+        options: [die, der, das]
+        answer: die
+      - id: g6
+        type: multiple-choice
+        tags: [Konjunktiv II]
+        prompt: "Wenn ich das gewusst hätte, ___ ich ein anderes Hotel gebucht."
+        options: [hätte, habe, würde]
+        answer: hätte
+      - id: g7
+        type: word-order
+        tags: [recommendation]
+        prompt: I would recommend the film to everyone.
+        answer: "Ich würde den Film jedem empfehlen."
+
+  - title: Write a review
+    items:
+      - id: rev1
+        type: translation
+        tags: [review]
+        prompt: The book is about a journey to India.
+        answers:
+          - "Das Buch handelt von einer Reise nach Indien."
+      - id: rev2
+        type: translation
+        tags: [review]
+        prompt: The actors were great, but the plot was boring.
+        answers:
+          - "Die Schauspieler waren super, aber die Handlung war langweilig."
+          - "Die Schauspieler waren toll, aber die Handlung war langweilig."
+
+  - title: What went wrong?
+    items:
+      - id: prob1
+        type: multiple-choice
+        tags: [travel problems]
+        prompt: "Der Zug ist ___. (was cancelled)"
+        options: [ausgefallen, verspätet, abgefahren]
+        answer: ausgefallen
+      - id: prob2
+        type: multiple-choice
+        tags: [travel problems]
+        prompt: "Mein Koffer ist nicht ___."
+        options: [angekommen, ankommen, angekommt]
+        answer: angekommen
+      - id: prob3
+        type: translation
+        tags: [travel problems]
+        prompt: The flight was three hours late.
+        answers:
+          - "Der Flug hatte drei Stunden Verspätung."
+
+  - title: A trip report
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [report]
+        prompt: Complete the email.
+        bank: [sind, besichtigt, Highlight, Verspätung, gelohnt, würde]
+        text: "Liebe Clara, wir ___ gestern aus Prag zurückgekommen! Wir haben die Altstadt und die Burg ___. Das ___ war ein Jazzkonzert in einem kleinen Keller. Leider hatte unser Zug auf der Rückfahrt drei Stunden ___. Aber die Reise hat sich wirklich ___. Ich ___ dir Prag sehr empfehlen! Liebe Grüße, Mia"
+        gaps:
+          - [sind]
+          - [besichtigt]
+          - [Highlight]
+          - [Verspätung]
+          - [gelohnt]
+          - [würde]
+
+  - title: An event programme
+    stimulus:
+      kind: text
+      label: Kulturprogramm im Mai
+      text: |
+        Fr, 3. Mai, 20 Uhr – Stadttheater: „Der Besuch der alten Dame" von Friedrich Dürrenmatt. Karten ab 15 €, Schüler und Studenten 8 €.
+
+        Sa, 4. Mai, 10–18 Uhr – Kunsthalle: Ausstellung „Licht und Farbe". Eintritt frei, Führungen um 11 und 15 Uhr.
+
+        So, 5. Mai, 16 Uhr – Stadtpark: Konzert der Musikschule. Bei Regen in der Aula der Gesamtschule.
+    items:
+      - id: read1
+        type: multiple-choice
+        tags: [reading]
+        prompt: Was kostet das Theater für Studenten?
+        options: ["8 €", "15 €", "nichts"]
+        answer: "8 €"
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: Für die Ausstellung muss man Eintritt bezahlen.
+        answer: false
+      - id: read3
+        type: multiple-choice
+        tags: [reading]
+        prompt: Wo ist das Konzert, wenn es regnet?
+        options: ["in der Aula der Gesamtschule", "im Stadttheater", "in der Kunsthalle"]
+        answer: "in der Aula der Gesamtschule"
+
+  - title: Tell a friend
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, informal]
+        prompt: "You went to a festival, concert or event last weekend. Write an email to a friend about it."
+        points:
+          - Where you were and with whom
+          - What it was like
+          - What you liked best
+          - Suggest going together next time
+        minWords: 80
+        phrases:
+          - Liebe … / Lieber …,
+          - letztes Wochenende war ich …
+          - Am besten hat mir … gefallen.
+          - Leider …
+          - Hast du Lust, nächstes Mal mitzukommen?
+          - Liebe Grüße
+        sample: "Lieber Jonas, letztes Wochenende war ich mit meiner Schwester auf dem Stadtfest in Freiburg. Es war total voll, aber die Stimmung war super. Überall gab es Musik, und auf dem Marktplatz hat eine Band gespielt, die ich vorher nicht kannte. Am besten hat mir das Feuerwerk am Samstagabend gefallen, das über dem Fluss stattfand. Leider hat es am Sonntag geregnet, deshalb sind wir früher nach Hause gefahren. Hast du Lust, nächstes Jahr mitzukommen? Ich würde mich freuen! Liebe Grüße, Ana"
