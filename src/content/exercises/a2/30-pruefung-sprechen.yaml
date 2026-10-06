@@ -1,0 +1,104 @@
+lesson: a2.30
+sets:
+  - title: "Teil 1: make the question"
+    instructions: Turn the card into a full question with du.
+    items:
+      - id: q1
+        type: translation
+        tags: [questions]
+        prompt: "Card: Wohnort?"
+        answers:
+          - "Wo wohnst du?"
+      - id: q2
+        type: translation
+        tags: [questions]
+        prompt: "Card: Geburtstag? (when)"
+        answers:
+          - "Wann hast du Geburtstag?"
+      - id: q3
+        type: translation
+        tags: [questions]
+        prompt: "Card: Sprachen? (which)"
+        answers:
+          - "Welche Sprachen sprichst du?"
+      - id: q4
+        type: multiple-choice
+        tags: [questions]
+        prompt: "Card: Lieblingsessen? Which question fits?"
+        options: ["Was isst du am liebsten?", "Lieblingsessen du?", "Du isst gern?"]
+        answer: "Was isst du am liebsten?"
+
+  - title: "Teil 3: planning phrases"
+    items:
+      - id: plan1
+        type: multiple-choice
+        tags: [planning]
+        prompt: "You want to suggest a time."
+        options: ["Wie wäre es um drei?", "Das passt.", "Einverstanden."]
+        answer: "Wie wäre es um drei?"
+      - id: plan2
+        type: multiple-choice
+        tags: [planning]
+        prompt: "Your partner suggests ten o'clock, but you have a doctor's appointment."
+        options: ["Um zehn kann ich leider nicht, da muss ich zum Arzt.", "Ja, gute Idee!", "Wann hast du Zeit?"]
+        answer: "Um zehn kann ich leider nicht, da muss ich zum Arzt."
+      - id: plan3
+        type: cloze
+        tags: [planning]
+        prompt: Complete the planning dialogue.
+        bank: [wäre, leider, passt, treffen, Zeit]
+        text: "– Wann hast du ___? Wie ___ es um elf? – Um elf kann ich ___ nicht, da habe ich Deutschkurs. Um eins? – Ja, um eins ___ es. – Gut, dann ___ wir uns um eins vor dem Kaufhaus."
+        gaps:
+          - [Zeit]
+          - [wäre]
+          - [leider]
+          - [passt]
+          - [treffen]
+
+  - title: Speak
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, exam]
+        prompt: "Teil 1: Your partner has drawn these cards. Answer each question with a full sentence and one detail."
+        cards: [Wohnort?, Arbeit?, Sport?, Wochenende?]
+        phrases:
+          - Ich wohne in … seit …
+          - Ich arbeite als … bei …
+          - Ich spiele / mache gern …, weil …
+          - Am Wochenende …
+        checklist:
+          - I answered all four cards in full sentences
+          - I added a detail to each answer
+          - I used at least one weil or denn
+        sample: "Ich wohne in Freiburg, seit drei Jahren. Ich arbeite als Verkäuferin in einer Buchhandlung. Sport mache ich nicht so oft, aber ich gehe gern schwimmen, weil das gut für den Rücken ist. Am Wochenende besuche ich oft meine Eltern."
+      - id: speak2
+        type: speaking-task
+        tags: [speaking, exam]
+        prompt: "Teil 2: Talk for about a minute about the topic 'Wohnen'. Answer the four questions on the card."
+        cards: [Wo?, Wie groß?, Mit wem?, Was gefällt dir (nicht)?]
+        phrases:
+          - Ich wohne in … in einer … Wohnung.
+          - Die Wohnung hat … Zimmer.
+          - Ich wohne mit … zusammen. / Ich wohne allein.
+          - Mir gefällt …, aber …
+        checklist:
+          - I answered all four questions on the card
+          - I spoke for about a minute without long pauses
+          - I used adjectives with endings and a weil clause
+        sample: "Ich wohne in Leipzig, in einem alten Haus im Zentrum. Meine Wohnung ist nicht sehr groß, sie hat zwei Zimmer, eine kleine Küche und ein Bad. Ich wohne mit meinem Freund zusammen. Mir gefällt die Lage, weil ich zu Fuß zur Arbeit gehen kann. Aber die Straße ist sehr laut, und wir haben keinen Balkon. Deshalb suchen wir vielleicht nächstes Jahr eine neue Wohnung."
+      - id: speak3
+        type: speaking-task
+        tags: [speaking, exam]
+        prompt: "Teil 3: Your friend Max is in hospital. You want to visit him together with your partner on Saturday. Your diary: 9–11 Uhr Fitnessstudio, 12 Uhr Mittagessen mit Oma, 15–17 Uhr Kinderfest. Your partner is busy at 10, 14 and from 18 Uhr. Find a time. Play both sides."
+        cards: [Vorschlag machen, ablehnen + Grund, zustimmen, Treffpunkt]
+        phrases:
+          - Wann hast du am Samstag Zeit?
+          - Wie wäre es um …?
+          - Da kann ich leider nicht, da …
+          - Ja, das passt. Dann treffen wir uns um … vor …
+        checklist:
+          - I made at least two suggestions
+          - I refused at least once with a reason
+          - We agreed on a time and a meeting point
+        sample: "– Wann hast du am Samstag Zeit? Wie wäre es um zehn? – Um zehn kann ich leider nicht, da bin ich im Fitnessstudio. Und um zwölf esse ich mit meiner Oma. Hast du um eins Zeit? – Um eins passt es gut. – Super, dann treffen wir uns um eins vor dem Krankenhaus und kaufen vorher noch Blumen für Max."
