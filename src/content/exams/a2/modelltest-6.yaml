@@ -1,0 +1,481 @@
+level: a2
+title: Modelltest 6
+description: >-
+  A practice exam in the format of the Goethe-Zertifikat A2, with the real time limits. Topics:
+  shopping, services, complaints and money.
+passMark: 60
+scoring: total
+modules:
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Der Laden ohne Verpackung
+
+            Seit einem Jahr gibt es in Münster einen besonderen Supermarkt: Im „Ohne-Laden" gibt es keine Verpackungen aus Plastik. Die Kunden bringen ihre eigenen Gläser, Dosen und Taschen mit und füllen Reis, Nudeln, Nüsse oder Öl selbst ab. Bezahlt wird nach Gewicht.
+
+            Die Idee hatte Jana Peters (31). „Ich habe mich jeden Tag über den vielen Plastikmüll geärgert", sagt sie. Am Anfang kamen nur wenige Kunden, aber heute kaufen jeden Tag etwa 200 Menschen bei ihr ein. Wer keine Gläser hat, kann im Laden welche kaufen oder für ein Pfand von einem Euro leihen.
+
+            Die Preise sind etwas höher als im normalen Supermarkt. Trotzdem plant Jana Peters schon einen zweiten Laden in Osnabrück.
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: Im „Ohne-Laden" …
+            options: ["gibt es keine Plastikverpackungen.", "kann man nur Obst kaufen.", "bekommt man alles in Plastiktüten."]
+            answer: "gibt es keine Plastikverpackungen."
+          - id: l1-2
+            type: multiple-choice
+            prompt: Die Kunden bezahlen …
+            options: ["nach Gewicht.", "pro Glas.", "einen festen Preis."]
+            answer: "nach Gewicht."
+          - id: l1-3
+            type: multiple-choice
+            prompt: Jana Peters hatte die Idee, weil …
+            options: ["sie der Plastikmüll gestört hat.", "sie Gläser verkaufen wollte.", "ihr alter Laden zu klein war."]
+            answer: "sie der Plastikmüll gestört hat."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Wer keine Gläser mitbringt, …
+            options: ["kann Gläser leihen.", "kann nichts kaufen.", "bekommt eine Plastiktüte."]
+            answer: "kann Gläser leihen."
+          - id: l1-5
+            type: multiple-choice
+            prompt: Die Preise im Laden sind …
+            options: ["etwas höher als im Supermarkt.", "billiger als im Supermarkt.", "genauso wie im Supermarkt."]
+            answer: "etwas höher als im Supermarkt."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind im Einkaufszentrum. Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: City-Center – Wegweiser
+          text: |
+            2. OG: Elektronik · Handy-Shop · Spielwaren · Bücher
+            1. OG: Damenmode · Herrenmode · Kindermode · Schuhe
+            EG: Drogerie · Bank · Post · Schlüsseldienst · Information
+            UG: Supermarkt · Bäckerei · Getränke · Reinigung
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Sie möchten Geld abheben.
+            options: [EG, UG, anderer Stock]
+            answer: EG
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Ihr Anzug muss gereinigt werden.
+            options: [UG, 1. OG, anderer Stock]
+            answer: UG
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Sie suchen ein Geschenk für Ihren Neffen (6 Jahre).
+            options: [2. OG, 1. OG, anderer Stock]
+            answer: 2. OG
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            prompt: Sie brauchen einen neuen Schlüssel für Ihre Wohnung.
+            options: [EG, 2. OG, anderer Stock]
+            answer: EG
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie möchten neue Möbel kaufen.
+            options: [1. OG, 2. OG, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Sehr geehrte Damen und Herren,
+
+            am 3. März habe ich in Ihrem Online-Shop eine Kaffeemaschine bestellt (Bestellnummer 44 812). Die Maschine ist am 6. März angekommen, aber sie funktioniert nicht: Das Wasser wird nicht heiß.
+
+            Ich habe schon zweimal bei Ihrem Kundenservice angerufen, aber niemand hat mich zurückgerufen. Ich möchte die Maschine gern umtauschen. Wenn Sie keine neue Maschine haben, möchte ich mein Geld zurück.
+
+            Bitte schicken Sie mir einen Paketschein für die Rücksendung.
+
+            Mit freundlichen Grüßen
+            Petra Wolf
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Frau Wolf hat die Maschine …
+            options: ["online bestellt.", "im Geschäft gekauft.", "geschenkt bekommen."]
+            answer: "online bestellt."
+          - id: l3-2
+            type: multiple-choice
+            prompt: Was ist das Problem?
+            options: ["Das Wasser wird nicht heiß.", "Die Maschine ist nicht angekommen.", "Die Maschine ist zu laut."]
+            answer: "Das Wasser wird nicht heiß."
+          - id: l3-3
+            type: multiple-choice
+            prompt: Der Kundenservice …
+            options: ["hat nicht zurückgerufen.", "hat das Problem gelöst.", "hat eine neue Maschine geschickt."]
+            answer: "hat nicht zurückgerufen."
+          - id: l3-4
+            type: multiple-choice
+            prompt: Frau Wolf möchte zuerst …
+            options: ["die Maschine umtauschen.", "ihr Geld zurück.", "eine Reparatur."]
+            answer: "die Maschine umtauschen."
+          - id: l3-5
+            type: multiple-choice
+            prompt: Was soll die Firma schicken?
+            options: ["einen Paketschein", "eine Rechnung", "einen Gutschein"]
+            answer: "einen Paketschein"
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Handy-Reparatur Express: Display kaputt? Reparatur in einer Stunde.
+
+            b) Second-Hand-Kinderkleidung: gut erhaltene Sachen für Babys und Kinder, sehr günstig.
+
+            c) Schneiderei Faden: Wir ändern Ihre Kleidung, Hosen kürzen ab 8 Euro.
+
+            d) Lebensmittel-Lieferdienst: Bestellen Sie online, wir liefern am selben Tag.
+
+            e) Fahrradverleih am Bahnhof: E-Bikes und normale Räder, pro Tag ab 12 Euro.
+
+            f) Verbraucherberatung: Probleme mit einem Vertrag? Kostenlose Beratung jeden Dienstag.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Lisa ist krank und kann nicht einkaufen gehen.
+            options: [a, b, c, d, e, f, X]
+            answer: d
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Herr Ito hat einen Handyvertrag und versteht die Rechnung nicht.
+            options: [a, b, c, d, e, f, X]
+            answer: f
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Familie Bauer bekommt ein Baby und hat nicht viel Geld.
+            options: [a, b, c, d, e, f, X]
+            answer: b
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Der neue Rock von Frau Saleh ist zu lang.
+            options: [a, b, c, d, e, f, X]
+            answer: c
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            prompt: Max möchte ein gebrauchtes Fahrrad kaufen.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+            explanation: The bike shop only rents bikes.
+
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Liebe Kunden, heute bis achtzehn Uhr gibt es in unserer Schuhabteilung im ersten Stock auf alle Sportschuhe dreißig Prozent Rabatt."
+            prompt: Was ist heute billiger?
+            options: ["Sportschuhe", "alle Schuhe", "Sportkleidung"]
+            answer: "Sportschuhe"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Guten Tag, Herr Brandt, hier ist Ihre Bank. Ihre neue Karte ist angekommen. Sie können sie ab morgen am Schalter abholen. Bitte bringen Sie Ihren Ausweis mit."
+            prompt: Was soll Herr Brandt mitbringen?
+            options: ["seinen Ausweis", "seine alte Karte", "Geld"]
+            answer: "seinen Ausweis"
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Hallo Schatz, ich bin im Supermarkt. Es gibt keine Bio-Milch mehr. Soll ich normale Milch kaufen oder gehe ich noch in den Bioladen?"
+            prompt: Was gibt es im Supermarkt nicht mehr?
+            options: ["Bio-Milch", "normale Milch", "Brot"]
+            answer: "Bio-Milch"
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Guten Tag, hier ist die Post. Ihr Paket konnten wir heute nicht zustellen. Sie können es ab morgen zehn Uhr in der Filiale in der Bahnhofstraße abholen."
+            prompt: Wo ist das Paket?
+            options: ["in der Filiale in der Bahnhofstraße", "beim Nachbarn", "vor der Tür"]
+            answer: "in der Filiale in der Bahnhofstraße"
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Hier ist die Werkstatt Auto-Fix. Ihr Wagen ist fertig. Die Reparatur kostet dreihundertvierzig Euro. Wir haben bis achtzehn Uhr geöffnet."
+            prompt: Was kostet die Reparatur?
+            options: ["340 Euro", "430 Euro", "314 Euro"]
+            answer: "340 Euro"
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Was erledigt Martina an welchem Tag? Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Martinas Erledigungen
+          plays: 1
+          lines:
+            - speaker: Freund
+              text: "Martina, hast du diese Woche mal Zeit für einen Kaffee?"
+            - speaker: Martina
+              text: "Schwierig. Am Montag muss ich zur Bank, ich brauche ein neues Konto."
+            - speaker: Freund
+              text: "Und am Dienstag?"
+            - speaker: Martina
+              text: "Da bringe ich die Jacke zurück, die ist zu klein. Am Mittwoch wollte ich eigentlich zum Friseur, aber der hat erst nächste Woche einen Termin. Also gehe ich am Mittwoch zur Post und schicke das Paket an meine Mutter."
+            - speaker: Freund
+              text: "Und Donnerstag?"
+            - speaker: Martina
+              text: "Donnerstag bringe ich das Auto in die Werkstatt. Aber Freitag habe ich Zeit – Kaffee am Freitag?"
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Montag
+            options: [Bank, Jacke umtauschen, Post, Werkstatt, Kaffee, Friseur]
+            answer: Bank
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Dienstag
+            options: [Bank, Jacke umtauschen, Post, Werkstatt, Kaffee, Friseur]
+            answer: Jacke umtauschen
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Mittwoch
+            options: [Bank, Jacke umtauschen, Post, Werkstatt, Kaffee, Friseur]
+            answer: Post
+            shuffle: false
+          - id: h2-4
+            type: multiple-choice
+            prompt: Donnerstag
+            options: [Bank, Jacke umtauschen, Post, Werkstatt, Kaffee, Friseur]
+            answer: Werkstatt
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Freitag
+            options: [Bank, Jacke umtauschen, Post, Werkstatt, Kaffee, Friseur]
+            answer: Kaffee
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Kundin
+                  text: "Ich möchte diesen Pullover zurückgeben. Er ist zu klein."
+                - speaker: Verkäufer
+                  text: "Möchten Sie ihn umtauschen oder das Geld zurück?"
+                - speaker: Kundin
+                  text: "Lieber eine größere Größe, bitte."
+            prompt: Was möchte die Kundin?
+            options: [eine größere Größe, das Geld zurück, einen Gutschein]
+            answer: eine größere Größe
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Kann ich mit Karte zahlen?"
+                - speaker: Verkäuferin
+                  text: "Leider funktioniert das Gerät gerade nicht. Nur bar, bitte."
+            prompt: Wie bezahlt der Mann?
+            options: [bar, mit Karte, mit dem Handy]
+            answer: bar
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Wie viel kostet der Brief nach Kanada?"
+                - speaker: Postangestellter
+                  text: "Ein Euro siebzig. Mit Einschreiben vier Euro."
+                - speaker: Frau
+                  text: "Ohne Einschreiben, bitte."
+            prompt: Was bezahlt die Frau?
+            options: ["1,70 Euro", "4,00 Euro", "5,70 Euro"]
+            answer: "1,70 Euro"
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Wo hast du die Lampe gekauft? Im Kaufhaus?"
+                - speaker: Frau
+                  text: "Nein, auf dem Flohmarkt. Nur fünf Euro!"
+            prompt: Wo hat die Frau die Lampe gekauft?
+            options: [auf dem Flohmarkt, im Kaufhaus, online]
+            answer: auf dem Flohmarkt
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Frau
+                  text: "Wann ist mein Mantel fertig?"
+                - speaker: Mann
+                  text: "Morgen ist leider nicht möglich. Übermorgen ab vierzehn Uhr."
+            prompt: Wann ist der Mantel fertig?
+            options: ["übermorgen ab 14 Uhr", "morgen ab 14 Uhr", "heute"]
+            answer: "übermorgen ab 14 Uhr"
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio West – Einkaufen heute
+          lines:
+            - speaker: Moderatorin
+              text: "Herr Wagner, Sie haben ein kleines Lebensmittelgeschäft im Dorf. Wie läuft das Geschäft?"
+            - speaker: Herr Wagner
+              text: "Ganz gut. Viele ältere Leute kaufen bei mir, weil der nächste Supermarkt zehn Kilometer entfernt ist."
+            - speaker: Moderatorin
+              text: "Was verkaufen Sie?"
+            - speaker: Herr Wagner
+              text: "Fast alles: Brot, Obst, Gemüse, Milch. Und viele Produkte kommen von Bauern aus der Region."
+            - speaker: Moderatorin
+              text: "Bieten Sie auch einen Lieferservice an?"
+            - speaker: Herr Wagner
+              text: "Ja, seit letztem Jahr. Zweimal pro Woche bringt mein Sohn die Einkäufe zu Kunden, die nicht mehr gut laufen können."
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Herr Wagner hat einen großen Supermarkt in der Stadt.
+            answer: false
+          - id: h4-2
+            type: true-false
+            prompt: Der nächste Supermarkt ist weit weg.
+            answer: true
+          - id: h4-3
+            type: true-false
+            prompt: Viele Produkte kommen aus der Region.
+            answer: true
+          - id: h4-4
+            type: true-false
+            prompt: Den Lieferservice gibt es schon seit zehn Jahren.
+            answer: false
+          - id: h4-5
+            type: true-false
+            prompt: Der Sohn bringt die Einkäufe zu den Kunden.
+            answer: true
+
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie sind im Supermarkt und haben Ihre Einkaufsliste vergessen. Schreiben Sie Ihrer Mitbewohnerin Sara eine SMS: Erklären Sie das Problem. Fragen Sie, was Sie kaufen sollen. Fragen Sie, ob sie noch etwas braucht."
+            points:
+              - Problem
+              - Frage nach der Einkaufsliste
+              - Frage, ob sie noch etwas braucht
+            minWords: 20
+            sample: "Hallo Sara, ich bin im Supermarkt, aber ich habe die Einkaufsliste zu Hause vergessen! Was sollen wir für das Abendessen kaufen? Brauchst du noch etwas? Liebe Grüße, Mia"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie haben online eine Hose bestellt. Sie ist zu groß. Schreiben Sie an den Online-Shop: Was haben Sie bestellt? Was ist das Problem? Was möchten Sie?"
+            points:
+              - Bestellung
+              - Problem
+              - Wunsch (Umtausch oder Geld zurück)
+            minWords: 30
+            sample: "Sehr geehrte Damen und Herren, letzte Woche habe ich bei Ihnen eine schwarze Hose in Größe 40 bestellt. Leider ist sie mir zu groß. Ich möchte sie gern gegen eine Hose in Größe 38 umtauschen. Mit freundlichen Grüßen, Tanja Roth"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Einkaufen?, Online?, Lieblingsgeschäft?, Geld sparen?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Wann kaufst du ein? Meistens am Samstag, auf dem Markt. Kaufst du oft online? Nur Bücher und Elektronik. Was ist dein Lieblingsgeschäft? Ein kleiner Buchladen in meiner Straße. Wie sparst du Geld? Ich kaufe viel im Angebot und gebraucht."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Einkaufen. Erzählen Sie, wie Sie einkaufen."
+            cards: [Wo?, Wie oft?, Was kaufen Sie am liebsten?, Online oder im Geschäft?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used a comparison and a weil clause
+            sample: "Ich kaufe Lebensmittel meistens im Supermarkt in meiner Nähe, zweimal pro Woche. Am liebsten kaufe ich auf dem Wochenmarkt ein, weil das Gemüse dort frischer ist. Kleidung kaufe ich lieber im Geschäft als online, weil ich sie anprobieren möchte. Bücher bestelle ich aber oft im Internet."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten mit einer Freundin oder einem Freund ein Geschenk für einen gemeinsamen Freund kaufen. Finden Sie einen Termin am Freitag.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Freitag: 7–15 Uhr Arbeit, 16 Uhr Zahnarzt, ab 19 Uhr Kino. Ihr Partner hat um 15:30, um 17 und um 18:30 Uhr keine Zeit. Planen Sie: Wann? Wo? Was für ein Geschenk?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Treffpunkt, Geschenk]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a time, a place and a present
+            sample: "– Wollen wir am Freitag das Geschenk kaufen? Wie wäre es um halb vier? – Um halb vier kann ich nicht, da muss ich meinen Sohn abholen. Und um vier? – Um vier bin ich beim Zahnarzt. Hast du um Viertel nach fünf Zeit? – Ja, das passt. Treffen wir uns im City-Center? – Gut. Was schenken wir ihm? Vielleicht ein Buch über Fußball?"

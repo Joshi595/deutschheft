@@ -1,0 +1,478 @@
+level: a2
+title: Modelltest 3
+description: >-
+  A practice exam in the format of the Goethe-Zertifikat A2, with the real time limits. Topics:
+  travel, holidays, hotels and transport.
+passMark: 60
+scoring: total
+modules:
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Mit dem Fahrrad nach Rom
+
+            Lena und Ben Hoffmann aus Freiburg haben etwas Besonderes gemacht: Sie sind mit dem Fahrrad von Freiburg nach Rom gefahren. 1.200 Kilometer in fünf Wochen!
+
+            „Wir wollten Urlaub machen, aber nicht mit dem Flugzeug", erzählt Lena (34). Jeden Tag sind sie etwa 50 Kilometer gefahren. Geschlafen haben sie meistens auf Campingplätzen, manchmal auch bei Familien, die sie unterwegs kennengelernt haben.
+
+            Am schwierigsten waren die Alpen. „Drei Tage lang ging es nur bergauf", lacht Ben. Am schönsten war die Toskana mit ihren kleinen Dörfern. Im nächsten Jahr wollen die beiden mit dem Rad nach Kopenhagen fahren.
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: Lena und Ben sind …
+            options: ["mit dem Fahrrad nach Rom gefahren.", "nach Rom geflogen.", "mit dem Zug nach Rom gefahren."]
+            answer: "mit dem Fahrrad nach Rom gefahren."
+          - id: l1-2
+            type: multiple-choice
+            prompt: Wie lange hat die Reise gedauert?
+            options: ["fünf Wochen", "fünf Tage", "zwölf Wochen"]
+            answer: "fünf Wochen"
+          - id: l1-3
+            type: multiple-choice
+            prompt: Sie haben meistens …
+            options: ["auf Campingplätzen geschlafen.", "in Hotels geschlafen.", "bei Freunden geschlafen."]
+            answer: "auf Campingplätzen geschlafen."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Was war am schwierigsten?
+            options: ["die Alpen", "die Toskana", "das Wetter"]
+            answer: "die Alpen"
+          - id: l1-5
+            type: multiple-choice
+            prompt: Nächstes Jahr …
+            options: ["fahren sie mit dem Rad nach Kopenhagen.", "fliegen sie nach Rom.", "bleiben sie zu Hause."]
+            answer: "fahren sie mit dem Rad nach Kopenhagen."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind im Bahnhof. Lesen Sie die Aufgaben und die Informationstafel. Wohin gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Hauptbahnhof – Wegweiser
+          text: |
+            Obergeschoss: Gleise 1–8 · Wartesaal · DB Lounge (1. Klasse)
+            Erdgeschoss: Reisezentrum (Fahrkarten, Beratung) · Bäckerei · Zeitschriften · Apotheke
+            Untergeschoss: S-Bahn und U-Bahn · Schließfächer · Toiletten · Fundbüro
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Sie möchten Ihren Koffer für einige Stunden lassen.
+            options: [Untergeschoss, Erdgeschoss, anderer Stock]
+            answer: Untergeschoss
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Sie brauchen eine Fahrkarte und Informationen zu Verbindungen.
+            options: [Erdgeschoss, Obergeschoss, anderer Stock]
+            answer: Erdgeschoss
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Ihr Zug fährt von Gleis 5.
+            options: [Obergeschoss, Untergeschoss, anderer Stock]
+            answer: Obergeschoss
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            prompt: Sie haben Kopfschmerzen und brauchen Tabletten.
+            options: [Erdgeschoss, Untergeschoss, anderer Stock]
+            answer: Erdgeschoss
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie möchten ein Auto mieten.
+            options: [Erdgeschoss, Obergeschoss, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Lieber Jakob,
+
+            viele Grüße aus Kroatien! Wir sind jetzt seit einer Woche hier, in einer Ferienwohnung direkt am Meer. Das Wetter ist fantastisch, jeden Tag über 30 Grad. Morgens gehen wir schwimmen, nachmittags ist es zu heiß, dann schlafen wir oder lesen.
+
+            Leider hatten wir am Anfang ein Problem: Unser Gepäck ist nicht mit uns angekommen! Wir mussten zwei Tage lang mit den Kleidern vom Flug leben. Zum Glück hat die Fluggesellschaft uns 200 Euro für neue Sachen bezahlt.
+
+            Nächsten Samstag fliegen wir zurück. Kannst du uns vom Flughafen abholen? Wir landen um 18:40 Uhr.
+
+            Liebe Grüße
+            Paula und Tim
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Paula und Tim wohnen …
+            options: ["in einer Ferienwohnung am Meer.", "in einem Hotel in der Stadt.", "auf einem Campingplatz."]
+            answer: "in einer Ferienwohnung am Meer."
+          - id: l3-2
+            type: multiple-choice
+            prompt: Was machen sie nachmittags?
+            options: ["Sie schlafen oder lesen.", "Sie gehen schwimmen.", "Sie besichtigen die Stadt."]
+            answer: "Sie schlafen oder lesen."
+          - id: l3-3
+            type: multiple-choice
+            prompt: Was war das Problem?
+            options: ["Das Gepäck kam nicht an.", "Der Flug hatte Verspätung.", "Die Wohnung war schmutzig."]
+            answer: "Das Gepäck kam nicht an."
+          - id: l3-4
+            type: multiple-choice
+            prompt: Die Fluggesellschaft …
+            options: ["hat 200 Euro bezahlt.", "hat neue Kleider geschickt.", "hat nichts gemacht."]
+            answer: "hat 200 Euro bezahlt."
+          - id: l3-5
+            type: multiple-choice
+            prompt: Was soll Jakob machen?
+            options: ["die beiden am Flughafen abholen", "nach Kroatien kommen", "die Wohnung gießen"]
+            answer: "die beiden am Flughafen abholen"
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Ferienhaus in Dänemark: 4 Schlafzimmer, direkt am Strand, Hunde erlaubt.
+
+            b) Städtereise Paris: 3 Tage mit dem Bus, Hotel und Stadtführung, 299 Euro.
+
+            c) Wanderwoche in den Alpen: mit Bergführer, für sportliche Erwachsene.
+
+            d) Sprachreise nach Malta: Englischkurs am Vormittag, Strand am Nachmittag, für Jugendliche 14–17.
+
+            e) Wellness-Hotel im Schwarzwald: Sauna, Massage, Ruhe. Keine Kinder.
+
+            f) Kreuzfahrt im Mittelmeer: 10 Tage, ab 1.500 Euro pro Person.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Familie Berg (2 Erwachsene, 3 Kinder, 1 Hund) möchte Urlaub am Meer machen.
+            options: [a, b, c, d, e, f, X]
+            answer: a
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Tobias (16) möchte in den Ferien sein Englisch verbessern.
+            options: [a, b, c, d, e, f, X]
+            answer: d
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Herr und Frau Weiß sind gestresst und möchten sich ein paar Tage erholen.
+            options: [a, b, c, d, e, f, X]
+            answer: e
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Svetlana hat wenig Geld und möchte eine Woche nach Spanien fliegen.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            prompt: Kemal möchte ein Wochenende lang eine berühmte Stadt kennenlernen.
+            options: [a, b, c, d, e, f, X]
+            answer: b
+            shuffle: false
+
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Achtung an Gleis zwei: Der ICE nach Köln hat heute fünfundzwanzig Minuten Verspätung. Wir bitten um Entschuldigung."
+            prompt: Wie viel Verspätung hat der Zug?
+            options: ["25 Minuten", "20 Minuten", "2 Stunden"]
+            answer: "25 Minuten"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Hallo Frau Simon, hier ist das Hotel Alpenblick. Leider ist das Zimmer mit Balkon nicht mehr frei. Wir können Ihnen ein Zimmer mit Blick auf den Garten geben, zum gleichen Preis."
+            prompt: Was bekommt Frau Simon?
+            options: ["ein Zimmer mit Gartenblick", "ein Zimmer mit Balkon", "ein billigeres Zimmer"]
+            answer: "ein Zimmer mit Gartenblick"
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Liebe Fluggäste, das Boarding für den Flug nach Madrid beginnt jetzt an Gate B zwölf. Bitte halten Sie Ihre Bordkarte bereit."
+            prompt: Wo beginnt das Boarding?
+            options: ["an Gate B12", "an Gate B2", "an Gate D12"]
+            answer: "an Gate B12"
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Hallo Mira, hier ist Papa. Wir sind schon im Urlaub angekommen. Das Wetter ist leider schlecht, es regnet. Aber das Hotel ist sehr schön."
+            prompt: Wie ist das Wetter?
+            options: [Es regnet., Es ist heiß., Es schneit.]
+            answer: Es regnet.
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Das Reisewetter für das Wochenende: An der Nordsee wird es windig, aber sonnig, bei achtzehn Grad. In den Bergen gibt es Gewitter."
+            prompt: Wie wird das Wetter an der Nordsee?
+            options: ["windig und sonnig", "Gewitter", "regnerisch und kalt"]
+            answer: "windig und sonnig"
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Was macht Familie Novak an welchem Tag im Urlaub? Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Urlaubspläne
+          plays: 1
+          lines:
+            - speaker: Mann
+              text: "Also, wir haben eine Woche in Hamburg. Was machen wir?"
+            - speaker: Frau
+              text: "Am Montag kommen wir an, da gehen wir nur ein bisschen spazieren, an der Elbe."
+            - speaker: Mann
+              text: "Und am Dienstag die Hafenrundfahrt?"
+            - speaker: Frau
+              text: "Ja, und am Mittwoch wollte ich eigentlich in den Zoo, aber da soll es regnen. Dann gehen wir lieber ins Museum."
+            - speaker: Mann
+              text: "Okay. Donnerstag ist das Musical, die Karten habe ich schon."
+            - speaker: Frau
+              text: "Und am Freitag fahren wir an die Ostsee, zum Baden."
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Montag
+            options: [Spaziergang, Hafenrundfahrt, Museum, Musical, Strand, Zoo]
+            answer: Spaziergang
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Dienstag
+            options: [Spaziergang, Hafenrundfahrt, Museum, Musical, Strand, Zoo]
+            answer: Hafenrundfahrt
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Mittwoch
+            options: [Spaziergang, Hafenrundfahrt, Museum, Musical, Strand, Zoo]
+            answer: Museum
+            shuffle: false
+            explanation: "She wanted the zoo (eigentlich), but because of rain they go to the museum."
+          - id: h2-4
+            type: multiple-choice
+            prompt: Donnerstag
+            options: [Spaziergang, Hafenrundfahrt, Museum, Musical, Strand, Zoo]
+            answer: Musical
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Freitag
+            options: [Spaziergang, Hafenrundfahrt, Museum, Musical, Strand, Zoo]
+            answer: Strand
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Frau
+                  text: "Fahren wir mit dem Auto nach Wien?"
+                - speaker: Mann
+                  text: "Das dauert zu lange. Mit dem Flugzeug ist es teuer. Nehmen wir den Nachtzug!"
+                - speaker: Frau
+                  text: "Gute Idee."
+            prompt: Wie fahren sie nach Wien?
+            options: [mit dem Zug, mit dem Auto, mit dem Flugzeug]
+            answer: mit dem Zug
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Gast
+                  text: "Wir hätten gern ein Doppelzimmer für drei Nächte."
+                - speaker: Rezeption
+                  text: "Gern, mit Frühstück kostet das hundertzehn Euro pro Nacht."
+            prompt: Wie lange bleiben die Gäste?
+            options: [drei Nächte, zwei Nächte, eine Woche]
+            answer: drei Nächte
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Mann
+                  text: "Hast du die Pässe eingepackt?"
+                - speaker: Frau
+                  text: "Ja, die Pässe und die Tickets. Aber ich habe die Sonnencreme vergessen."
+            prompt: Was hat die Frau vergessen?
+            options: [die Sonnencreme, die Pässe, die Tickets]
+            answer: die Sonnencreme
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Frau
+                  text: "Wo warst du im Urlaub?"
+                - speaker: Mann
+                  text: "Wir wollten nach Griechenland, aber dann sind wir nach Portugal gefahren. Das war billiger."
+            prompt: Wo war der Mann im Urlaub?
+            options: [in Portugal, in Griechenland, in Spanien]
+            answer: in Portugal
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Mann
+                  text: "Wann müssen wir am Flughafen sein?"
+                - speaker: Frau
+                  text: "Der Flug geht um zehn. Wir müssen zwei Stunden vorher da sein."
+            prompt: Wann müssen sie am Flughafen sein?
+            options: ["um 8 Uhr", "um 10 Uhr", "um 12 Uhr"]
+            answer: "um 8 Uhr"
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio Süd – Reisen
+          lines:
+            - speaker: Moderator
+              text: "Herr Okafor, Sie arbeiten als Reiseleiter. Wohin fahren Sie mit Ihren Gruppen?"
+            - speaker: Herr Okafor
+              text: "Meistens nach Italien und Spanien. Im Winter fahre ich auch oft mit Senioren nach Teneriffa."
+            - speaker: Moderator
+              text: "Wie viele Leute sind in einer Gruppe?"
+            - speaker: Herr Okafor
+              text: "Zwischen zwanzig und vierzig. Wir fahren mit dem Bus, nur nach Teneriffa natürlich mit dem Flugzeug."
+            - speaker: Moderator
+              text: "Haben Sie selbst noch Zeit für Urlaub?"
+            - speaker: Herr Okafor
+              text: "Wenig. Aber im November mache ich immer zwei Wochen Pause. Dann besuche ich meine Familie in Nigeria."
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Herr Okafor fährt meistens nach Italien und Spanien.
+            answer: true
+          - id: h4-2
+            type: true-false
+            prompt: Im Winter fährt er mit Schülern nach Teneriffa.
+            answer: false
+          - id: h4-3
+            type: true-false
+            prompt: In einer Gruppe sind höchstens zwanzig Leute.
+            answer: false
+          - id: h4-4
+            type: true-false
+            prompt: Nach Teneriffa fliegen sie.
+            answer: true
+          - id: h4-5
+            type: true-false
+            prompt: Im November besucht er seine Familie.
+            answer: true
+
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie sind im Urlaub. Schreiben Sie Ihrer Freundin Lea eine SMS: Wo sind Sie? Wie ist das Wetter? Was haben Sie schon gemacht?"
+            points:
+              - wo Sie sind
+              - Wetter
+              - was Sie gemacht haben
+            minWords: 20
+            sample: "Hallo Lea, ich bin in Barcelona! Das Wetter ist super, jeden Tag Sonne. Gestern war ich am Strand, und heute habe ich die Sagrada Família besichtigt. Liebe Grüße, Ana"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie haben im Hotel Seeblick ein Zimmer gebucht, aber Sie kommen einen Tag später. Schreiben Sie an das Hotel: Warum schreiben Sie? Warum kommen Sie später? Fragen Sie, ob das Zimmer noch frei bleibt."
+            points:
+              - Grund für die E-Mail
+              - warum später
+              - Frage nach dem Zimmer
+            minWords: 30
+            sample: "Sehr geehrte Damen und Herren, ich habe bei Ihnen vom 5. bis 8. Juli ein Doppelzimmer gebucht. Leider kann ich erst am 6. Juli kommen, weil mein Flug gestrichen wurde. Bleibt das Zimmer für mich frei? Mit freundlichen Grüßen, Jan Kowal"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Urlaub?, Lieblingsland?, Verkehrsmittel?, Reisepläne?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Wo warst du letzten Sommer im Urlaub? Ich war in der Türkei, bei meiner Familie. Was ist dein Lieblingsland? Mein Lieblingsland ist Japan, weil das Essen so gut ist. Wie reist du am liebsten? Am liebsten mit dem Zug, da kann ich lesen. Was sind deine Reisepläne? Im Herbst möchte ich nach Schweden fahren."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Reisen. Erzählen Sie über Ihre schönste Reise."
+            cards: [Wohin?, Mit wem?, Was gemacht?, Warum so schön?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used the Perfekt and a weil clause
+            sample: "Meine schönste Reise war nach Norwegen. Ich bin vor drei Jahren mit meinem Bruder dorthin gefahren. Wir haben in einer kleinen Hütte gewohnt und sind jeden Tag gewandert. Einmal haben wir sogar Wale gesehen. Die Reise war so schön, weil die Natur fantastisch war und wir viel Zeit zusammen hatten."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten mit einer Freundin oder einem Freund am Sonntag einen Ausflug an einen See machen. Finden Sie eine Zeit.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Sonntag: bis 10 Uhr schlafen, 12–14 Uhr Mittagessen bei den Eltern, ab 19 Uhr Fußball im Fernsehen. Ihr Partner hat um 10 und 11 Uhr keine Zeit und muss um 18 Uhr zu Hause sein. Planen Sie: Wann? Wie fahren? Was mitnehmen?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Fahrt, Picknick]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a time, transport and what to bring
+            sample: "– Wollen wir am Sonntag an den See fahren? Wie wäre es um elf? – Um elf kann ich leider nicht, da muss ich meiner Oma helfen. Hast du am Nachmittag Zeit? – Bis zwei Uhr bin ich bei meinen Eltern. Aber um halb drei passt es. – Super. Dann fahren wir mit dem Fahrrad, das ist nicht so weit. Um sechs muss ich aber zu Hause sein. – Kein Problem. Ich bringe Getränke mit, und du Obst und Kuchen?"

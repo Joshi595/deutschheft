@@ -1,0 +1,477 @@
+level: a2
+title: Modelltest 5
+description: >-
+  A practice exam in the format of the Goethe-Zertifikat A2, with the real time limits. Topics:
+  housing, moving, neighbours and the house rules.
+passMark: 60
+scoring: total
+modules:
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Jung und Alt unter einem Dach
+
+            In Leipzig gibt es ein besonderes Wohnprojekt: Studenten wohnen bei älteren Menschen und bezahlen fast keine Miete. Stattdessen helfen sie im Haushalt – sie kaufen ein, putzen oder arbeiten im Garten. Die Regel ist einfach: eine Stunde Hilfe pro Woche für jeden Quadratmeter Zimmer.
+
+            Ein Beispiel ist Sofia (23) aus Griechenland. Sie wohnt seit einem Jahr bei Gerda Wolf (81) in einem 15 Quadratmeter großen Zimmer. „Ich helfe Gerda beim Einkaufen und wir kochen oft zusammen", erzählt Sofia. „Und Gerda hilft mir mit meinem Deutsch."
+
+            Das Projekt hat vor fünf Jahren mit zehn Paaren begonnen. Heute gibt es schon über hundert. Die Stadt möchte das Projekt jetzt auch für Familien öffnen.
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: Die Studenten im Projekt …
+            options: ["bezahlen fast keine Miete.", "bezahlen sehr viel Miete.", "wohnen in einem Studentenheim."]
+            answer: "bezahlen fast keine Miete."
+          - id: l1-2
+            type: multiple-choice
+            prompt: Für ein Zimmer mit 15 Quadratmetern hilft man …
+            options: ["15 Stunden pro Woche.", "eine Stunde pro Woche.", "jeden Tag."]
+            answer: "15 Stunden pro Woche."
+          - id: l1-3
+            type: multiple-choice
+            prompt: Sofia und Gerda …
+            options: ["kochen oft zusammen.", "kennen sich seit fünf Jahren.", "wohnen in Griechenland."]
+            answer: "kochen oft zusammen."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Gerda hilft Sofia …
+            options: ["mit der deutschen Sprache.", "beim Einkaufen.", "mit Geld."]
+            answer: "mit der deutschen Sprache."
+          - id: l1-5
+            type: multiple-choice
+            prompt: In Zukunft soll das Projekt …
+            options: ["auch für Familien sein.", "nur noch für Studenten sein.", "aufhören."]
+            answer: "auch für Familien sein."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind im Möbelhaus. Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Möbelhaus Wohntraum – Wegweiser
+          text: |
+            3. Stock: Restaurant · Kinderparadies · Kundenservice
+            2. Stock: Schlafzimmer · Betten · Kinderzimmer
+            1. Stock: Wohnzimmer · Sofas · Regale · Teppiche
+            Erdgeschoss: Küchen · Geschirr · Lampen · Kasse
+            Untergeschoss: Gartenmöbel · Pflanzen · Lager (Abholung)
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Sie brauchen ein neues Bett.
+            options: [2. Stock, 1. Stock, anderer Stock]
+            answer: 2. Stock
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Sie möchten einen Tisch für den Balkon.
+            options: [Untergeschoss, 1. Stock, anderer Stock]
+            answer: Untergeschoss
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Sie suchen Teller und Tassen.
+            options: [Erdgeschoss, 3. Stock, anderer Stock]
+            answer: Erdgeschoss
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            prompt: Ihr neues Regal ist kaputt angekommen. Sie möchten sich beschweren.
+            options: [3. Stock, 1. Stock, anderer Stock]
+            answer: 3. Stock
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie brauchen eine neue Waschmaschine.
+            options: [Erdgeschoss, Untergeschoss, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Hallo Felix,
+
+            endlich ist der Umzug vorbei! Seit Samstag wohnen wir in der neuen Wohnung in der Gartenstraße. Sie ist viel größer als die alte: vier Zimmer, eine große Küche und ein Balkon nach Süden. Die Kinder haben jetzt jeder ein eigenes Zimmer.
+
+            Der Umzug war aber anstrengend. Der Aufzug war kaputt, und wir mussten alles in den fünften Stock tragen! Zum Glück haben uns drei Freunde geholfen.
+
+            Die Nachbarn sind sehr nett. Gestern hat uns die Nachbarin von gegenüber einen Kuchen gebracht.
+
+            Am 12. Mai machen wir eine Einweihungsparty. Kommst du? Bring gern deine Freundin mit!
+
+            Viele Grüße
+            Ole
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Die neue Wohnung …
+            options: ["hat vier Zimmer.", "ist kleiner als die alte.", "hat keinen Balkon."]
+            answer: "hat vier Zimmer."
+          - id: l3-2
+            type: multiple-choice
+            prompt: Warum war der Umzug anstrengend?
+            options: ["Der Aufzug funktionierte nicht.", "Es hat geregnet.", "Niemand hat geholfen."]
+            answer: "Der Aufzug funktionierte nicht."
+          - id: l3-3
+            type: multiple-choice
+            prompt: In welchem Stock wohnt Ole?
+            options: ["im fünften Stock", "im dritten Stock", "im Erdgeschoss"]
+            answer: "im fünften Stock"
+          - id: l3-4
+            type: multiple-choice
+            prompt: Die Nachbarin …
+            options: ["hat einen Kuchen gebracht.", "hat beim Umzug geholfen.", "war unfreundlich."]
+            answer: "hat einen Kuchen gebracht."
+          - id: l3-5
+            type: multiple-choice
+            prompt: Ole möchte, dass Felix …
+            options: ["zur Party kommt.", "beim Streichen hilft.", "einen Kuchen mitbringt."]
+            answer: "zur Party kommt."
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Kleiner Umzugsservice: Wir transportieren Möbel in der Stadt, auch am Wochenende.
+
+            b) WG-Zimmer frei: 14 m², ab sofort, 350 Euro warm, Nichtraucher.
+
+            c) Malerbetrieb Farbe: Wir streichen Wände und Türen, kostenloser Kostenvoranschlag.
+
+            d) 3-Zimmer-Wohnung mit Garten im Erdgeschoss, für Familien mit Kindern, 980 Euro.
+
+            e) Schlüsseldienst 24 Stunden: Tür zu? Schlüssel weg? Wir kommen sofort.
+
+            f) Möbelbörse: gebrauchte Möbel kostenlos abzugeben, nur Selbstabholung.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Familie Marić hat zwei kleine Kinder und sucht eine Wohnung mit Garten.
+            options: [a, b, c, d, e, f, X]
+            answer: d
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Es ist Mitternacht und Herr Klein hat seinen Schlüssel verloren.
+            options: [a, b, c, d, e, f, X]
+            answer: e
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Ana hat wenig Geld und braucht einen Tisch und Stühle für ihre erste Wohnung.
+            options: [a, b, c, d, e, f, X]
+            answer: f
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Pavel möchte sein Wohnzimmer neu streichen lassen.
+            options: [a, b, c, d, e, f, X]
+            answer: c
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            prompt: Frau Yilmaz sucht jemanden, der ihre Wohnung putzt.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Guten Tag, Frau Herrmann, hier ist Ihr Vermieter, Herr Lux. Der Handwerker kommt nicht am Dienstag, sondern am Donnerstag um zehn, um die Heizung zu reparieren."
+            prompt: Wann kommt der Handwerker?
+            options: ["am Donnerstag um 10 Uhr", "am Dienstag um 10 Uhr", "am Donnerstag um 12 Uhr"]
+            answer: "am Donnerstag um 10 Uhr"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Liebe Mieterinnen und Mieter, am Montag wird das Treppenhaus gestrichen. Bitte benutzen Sie an diesem Tag den Hintereingang."
+            prompt: Was sollen die Mieter am Montag tun?
+            options: ["den Hintereingang benutzen", "das Treppenhaus putzen", "zu Hause bleiben"]
+            answer: "den Hintereingang benutzen"
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Hallo Ines, hier ist Robert. Ich habe die Wohnung in der Lindenstraße besichtigt. Sie ist schön, aber zu teuer: neunhundert Euro kalt. Ich suche weiter."
+            prompt: Warum nimmt Robert die Wohnung nicht?
+            options: ["Sie ist zu teuer.", "Sie ist zu klein.", "Sie ist zu laut."]
+            answer: "Sie ist zu teuer."
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Hier ist die Stadtreinigung. Wegen des Feiertags wird der Müll diese Woche nicht am Donnerstag, sondern am Freitag abgeholt."
+            prompt: Wann wird der Müll abgeholt?
+            options: [am Freitag, am Donnerstag, am Samstag]
+            answer: am Freitag
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Hallo, hier ist Familie Kraus von nebenan. Wir feiern am Samstag den Geburtstag unserer Tochter. Es wird vielleicht laut. Sie sind herzlich eingeladen!"
+            prompt: Was macht Familie Kraus am Samstag?
+            options: ["Sie feiern einen Geburtstag.", "Sie ziehen um.", "Sie renovieren."]
+            answer: "Sie feiern einen Geburtstag."
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Was machen Tom und Julia in welchem Zimmer? Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Die neue Wohnung
+          plays: 1
+          lines:
+            - speaker: Julia
+              text: "Okay, Tom, wo fangen wir an? Die Küche muss zuerst geputzt werden."
+            - speaker: Tom
+              text: "Gut, Küche putzen. Und im Wohnzimmer bauen wir das Regal auf."
+            - speaker: Julia
+              text: "Ja. Das Schlafzimmer wollte ich eigentlich gelb streichen, aber blau ist schöner. Wir streichen es blau."
+            - speaker: Tom
+              text: "Und im Bad?"
+            - speaker: Julia
+              text: "Da hängen wir nur den Spiegel auf. Und den Balkon dekorieren wir mit Blumen."
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Küche
+            options: [putzen, Regal aufbauen, streichen, Spiegel aufhängen, Blumen, Lampe]
+            answer: putzen
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Wohnzimmer
+            options: [putzen, Regal aufbauen, streichen, Spiegel aufhängen, Blumen, Lampe]
+            answer: Regal aufbauen
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Schlafzimmer
+            options: [putzen, Regal aufbauen, streichen, Spiegel aufhängen, Blumen, Lampe]
+            answer: streichen
+            shuffle: false
+          - id: h2-4
+            type: multiple-choice
+            prompt: Bad
+            options: [putzen, Regal aufbauen, streichen, Spiegel aufhängen, Blumen, Lampe]
+            answer: Spiegel aufhängen
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Balkon
+            options: [putzen, Regal aufbauen, streichen, Spiegel aufhängen, Blumen, Lampe]
+            answer: Blumen
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Frau
+                  text: "Wohin stellen wir den Fernseher?"
+                - speaker: Mann
+                  text: "Nicht vor das Fenster, da ist es zu hell. Lieber an die Wand neben der Tür."
+            prompt: Wo steht der Fernseher?
+            options: [an der Wand neben der Tür, vor dem Fenster, im Schlafzimmer]
+            answer: an der Wand neben der Tür
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Wie hoch sind die Nebenkosten?"
+                - speaker: Vermieterin
+                  text: "Hundertachtzig Euro im Monat. Die Kaltmiete ist siebenhundert."
+            prompt: Wie hoch sind die Nebenkosten?
+            options: ["180 Euro", "700 Euro", "880 Euro"]
+            answer: "180 Euro"
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Entschuldigung, Ihre Musik ist sehr laut. Es ist schon elf Uhr."
+                - speaker: Mann
+                  text: "Oh, Entschuldigung! Ich mache sie sofort leiser."
+            prompt: Was macht der Mann?
+            options: [Er macht die Musik leiser., Er macht eine Party., Er geht ins Bett.]
+            answer: Er macht die Musik leiser.
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Wann ziehst du um?"
+                - speaker: Frau
+                  text: "Eigentlich am ersten Juli, aber jetzt erst am fünfzehnten. Die Wohnung ist noch nicht fertig."
+            prompt: Wann zieht die Frau um?
+            options: [am 15. Juli, am 1. Juli, am 5. Juli]
+            answer: am 15. Juli
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Frau
+                  text: "Wo kann ich mein Fahrrad abstellen?"
+                - speaker: Hausmeister
+                  text: "Im Keller, nicht im Hof. Der Hof ist für die Mülltonnen."
+            prompt: Wo soll das Fahrrad stehen?
+            options: [im Keller, im Hof, im Treppenhaus]
+            answer: im Keller
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio Stadt – Wohnen in der Stadt
+          lines:
+            - speaker: Moderator
+              text: "Frau Kaya, Sie suchen schon lange eine Wohnung in Frankfurt. Wie ist die Situation?"
+            - speaker: Frau Kaya
+              text: "Sehr schwierig. Ich suche seit acht Monaten. Bei jeder Besichtigung sind dreißig oder vierzig Leute."
+            - speaker: Moderator
+              text: "Wo wohnen Sie im Moment?"
+            - speaker: Frau Kaya
+              text: "Bei meiner Schwester. Ihre Wohnung hat nur zwei Zimmer, und sie hat zwei Kinder. Das ist eng."
+            - speaker: Moderator
+              text: "Was wäre Ihre Traumwohnung?"
+            - speaker: Frau Kaya
+              text: "Zwei Zimmer mit Balkon, in der Nähe von meiner Arbeit. Aber jetzt nehme ich auch eine Wohnung am Stadtrand."
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Frau Kaya sucht seit acht Monaten eine Wohnung.
+            answer: true
+          - id: h4-2
+            type: true-false
+            prompt: Bei den Besichtigungen sind nur wenige Leute.
+            answer: false
+          - id: h4-3
+            type: true-false
+            prompt: Im Moment wohnt sie bei ihrer Schwester.
+            answer: true
+          - id: h4-4
+            type: true-false
+            prompt: Die Wohnung der Schwester ist sehr groß.
+            answer: false
+          - id: h4-5
+            type: true-false
+            prompt: Frau Kaya möchte nur im Zentrum wohnen.
+            answer: false
+
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie ziehen am Samstag um. Schreiben Sie Ihrem Freund Malik eine SMS: Bitten Sie um Hilfe. Sagen Sie, wann er kommen soll. Schreiben Sie, was Sie danach machen."
+            points:
+              - Bitte um Hilfe
+              - wann
+              - was danach
+            minWords: 20
+            sample: "Hallo Malik, ich ziehe am Samstag um. Kannst du mir bitte helfen? Komm um neun Uhr in die Bergstraße 4. Danach grillen wir zusammen im Garten! Danke, Jonas"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie haben eine Wohnungsanzeige gelesen. Schreiben Sie dem Vermieter, Herrn Schulte, eine E-Mail: Stellen Sie sich kurz vor. Fragen Sie, ob die Wohnung noch frei ist. Fragen Sie nach einem Termin für eine Besichtigung."
+            points:
+              - Vorstellung
+              - Frage, ob die Wohnung frei ist
+              - Besichtigungstermin
+            minWords: 30
+            sample: "Sehr geehrter Herr Schulte, ich heiße Emma Kühn, bin 28 Jahre alt und arbeite als Lehrerin. Ich habe Ihre Anzeige gelesen. Ist die Wohnung noch frei? Wann kann ich die Wohnung besichtigen? Ich habe abends immer Zeit. Mit freundlichen Grüßen, Emma Kühn"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Wohnung?, Nachbarn?, Lieblingszimmer?, Garten?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Wie groß ist deine Wohnung? Sie hat drei Zimmer und ist ziemlich hell. Wie sind deine Nachbarn? Meine Nachbarn sind ruhig und freundlich. Was ist dein Lieblingszimmer? Die Küche, weil ich gern koche. Hast du einen Garten? Nein, aber einen kleinen Balkon mit Pflanzen."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Wohnen. Erzählen Sie über Ihre Wohnung."
+            cards: [Wo?, Wie groß?, Mit wem?, Was gefällt Ihnen (nicht)?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used adjective endings and a weil clause
+            sample: "Ich wohne in einer kleinen Wohnung in der Altstadt von Bamberg. Die Wohnung hat zwei Zimmer, eine kleine Küche und ein altes Bad. Ich wohne mit meiner Katze zusammen. Mir gefällt die Lage, weil alles in der Nähe ist. Nicht so gut ist, dass es keinen Aufzug gibt und ich im vierten Stock wohne."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten mit einer Freundin oder einem Freund einem Bekannten beim Umzug helfen. Finden Sie eine Zeit am Samstag.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Samstag: 8–10 Uhr Markt, 11 Uhr Telefonat mit den Eltern, 16–18 Uhr Fußballtraining, ab 20 Uhr Party. Ihr Partner hat um 9, um 12 und um 15 Uhr keine Zeit. Planen Sie: Wann? Wie lange? Was mitbringen?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Treffpunkt, Werkzeug/Essen]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a time, a place and what to bring
+            sample: "– Wann können wir beim Umzug helfen? Um neun? – Um neun kann ich leider nicht, da bin ich auf dem Markt. Und du? – Um neun habe ich auch einen Termin. Wie wäre es um eins? – Um eins passt es. Bis vier haben wir drei Stunden. – Gut, dann treffen wir uns um eins vor seiner alten Wohnung. Ich bringe Werkzeug mit. – Und ich bringe Getränke und belegte Brötchen."

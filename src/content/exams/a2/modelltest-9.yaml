@@ -1,0 +1,476 @@
+level: a2
+title: Modelltest 9
+description: >-
+  A practice exam in the format of the Goethe-Zertifikat A2, with the real time limits. Topics:
+  the city, transport, the environment and the weather.
+passMark: 60
+scoring: total
+modules:
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Eine Stadt ohne Autos?
+
+            Seit Mai dürfen in der Altstadt von Lüneburg keine Autos mehr fahren. Nur Busse, Taxis und Lieferwagen am Morgen dürfen noch in die Innenstadt. Am Anfang haben sich viele Geschäftsleute beschwert. Sie hatten Angst, dass weniger Kunden kommen.
+
+            Ein halbes Jahr später sieht es anders aus: In der Altstadt ist es ruhiger, und die Luft ist besser. Viele Cafés haben jetzt Tische auf der Straße. „Wir haben sogar mehr Kunden als vorher", sagt Buchhändlerin Ute Kramer.
+
+            Wer mit dem Auto in die Stadt kommt, parkt am Stadtrand. Von dort fährt alle zehn Minuten ein kostenloser Bus ins Zentrum.
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: In der Altstadt von Lüneburg dürfen …
+            options: ["Busse und Taxis fahren.", "alle Autos fahren.", "keine Fahrzeuge fahren."]
+            answer: "Busse und Taxis fahren."
+          - id: l1-2
+            type: multiple-choice
+            prompt: Am Anfang hatten die Geschäftsleute Angst, dass …
+            options: ["weniger Kunden kommen.", "die Busse zu laut sind.", "es keine Parkplätze gibt."]
+            answer: "weniger Kunden kommen."
+          - id: l1-3
+            type: multiple-choice
+            prompt: Heute ist die Luft in der Altstadt …
+            options: ["besser.", "schlechter.", "genauso wie vorher."]
+            answer: "besser."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Ute Kramer sagt, dass …
+            options: ["sie mehr Kunden hat.", "sie ihren Laden schließen muss.", "die Cafés zu laut sind."]
+            answer: "sie mehr Kunden hat."
+          - id: l1-5
+            type: multiple-choice
+            prompt: Der Bus vom Stadtrand ins Zentrum …
+            options: ["kostet nichts.", "fährt nur am Wochenende.", "fährt jede Stunde."]
+            answer: "kostet nichts."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind im Rathaus. Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Rathaus – Wegweiser
+          text: |
+            3. Stock: Bauamt · Umweltamt
+            2. Stock: Standesamt (Hochzeiten, Geburten) · Ausländerbehörde
+            1. Stock: Bürgerbüro (Anmeldung, Pass, Ausweis) · Fundbüro
+            Erdgeschoss: Information · Kasse · Touristeninformation
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Sie sind umgezogen und müssen sich anmelden.
+            options: [1. Stock, 2. Stock, anderer Stock]
+            answer: 1. Stock
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Sie möchten heiraten.
+            options: [2. Stock, 1. Stock, anderer Stock]
+            answer: 2. Stock
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Sie haben im Bus Ihre Tasche verloren.
+            options: [1. Stock, Erdgeschoss, anderer Stock]
+            answer: 1. Stock
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            prompt: Sie möchten einen Stadtplan für Touristen.
+            options: [Erdgeschoss, 3. Stock, anderer Stock]
+            answer: Erdgeschoss
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie möchten ein Busticket für den Monat kaufen.
+            options: [Erdgeschoss, 1. Stock, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Liebe Nachbarn,
+
+            am Samstag, den 20. April, machen wir in unserer Straße eine große Putzaktion! Wir wollen den kleinen Park an der Ecke sauber machen, denn dort liegt viel Müll. Wir treffen uns um zehn Uhr vor Haus Nummer 8.
+
+            Handschuhe und Müllsäcke bekommen wir von der Stadt. Bitte bringen Sie gute Laune und, wenn möglich, eine Gartenschere mit. Für Kinder gibt es einen Malwettbewerb zum Thema „Unsere grüne Straße".
+
+            Um 13 Uhr grillen wir alle zusammen. Bei Regen machen wir die Aktion eine Woche später.
+
+            Viele Grüße
+            Ihre Nachbarschaftsinitiative
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Was wollen die Nachbarn am 20. April machen?
+            options: ["den Park sauber machen", "ein Straßenfest feiern", "Bäume pflanzen"]
+            answer: "den Park sauber machen"
+          - id: l3-2
+            type: multiple-choice
+            prompt: Wo treffen sich die Nachbarn?
+            options: ["vor Haus Nummer 8", "im Park", "im Rathaus"]
+            answer: "vor Haus Nummer 8"
+          - id: l3-3
+            type: multiple-choice
+            prompt: Die Handschuhe …
+            options: ["kommen von der Stadt.", "muss jeder mitbringen.", "kann man kaufen."]
+            answer: "kommen von der Stadt."
+          - id: l3-4
+            type: multiple-choice
+            prompt: Für die Kinder gibt es …
+            options: ["einen Malwettbewerb.", "einen Ausflug.", "ein Fußballspiel."]
+            answer: "einen Malwettbewerb."
+          - id: l3-5
+            type: multiple-choice
+            prompt: Was passiert, wenn es regnet?
+            options: ["Die Aktion ist eine Woche später.", "Alle grillen trotzdem.", "Die Aktion fällt ganz aus."]
+            answer: "Die Aktion ist eine Woche später."
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Carsharing Stadtauto: Autos stundenweise mieten, ab 3 Euro pro Stunde.
+
+            b) Fahrradwerkstatt zum Selbermachen: Werkzeug und Hilfe kostenlos, Dienstag und Donnerstag.
+
+            c) Repair-Café: Wir reparieren kaputte Elektrogeräte, jeden ersten Samstag im Monat.
+
+            d) Monatsticket für Bus und Bahn: 49 Euro, in ganz Deutschland.
+
+            e) Kleidertausch: Bringen Sie alte Kleidung und nehmen Sie neue mit, Sonntag im Jugendzentrum.
+
+            f) Naturführung im Stadtwald: Pflanzen und Vögel kennenlernen, für Familien.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Herr Lang braucht nur manchmal ein Auto, zum Beispiel für einen Großeinkauf.
+            options: [a, b, c, d, e, f, X]
+            answer: a
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Der Toaster von Frau Kim ist kaputt. Sie möchte ihn nicht wegwerfen.
+            options: [a, b, c, d, e, f, X]
+            answer: c
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Tim möchte selbst lernen, wie man sein Fahrrad repariert.
+            options: [a, b, c, d, e, f, X]
+            answer: b
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Sara fährt jeden Tag mit der Bahn zur Arbeit und möchte Geld sparen.
+            options: [a, b, c, d, e, f, X]
+            answer: d
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            prompt: Familie Bauer sucht einen Platz für ihren Campingwagen.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Achtung, Fahrgäste der U-Bahn-Linie vier: Wegen Bauarbeiten fährt die Linie heute nur bis zum Hauptbahnhof. Bitte nehmen Sie ab dort den Bus siebzehn."
+            prompt: Was sollen die Fahrgäste ab dem Hauptbahnhof nehmen?
+            options: ["den Bus 17", "die U-Bahn 4", "ein Taxi"]
+            answer: "den Bus 17"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Und nun das Wetter für morgen: Im Süden wird es sehr heiß, bis vierunddreißig Grad. Am Abend kann es Gewitter geben."
+            prompt: Was gibt es morgen am Abend vielleicht?
+            options: [Gewitter, Schnee, Nebel]
+            answer: Gewitter
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Hallo Jens, hier ist Mara. Ich stehe im Stau auf der Autobahn. Ich komme mindestens eine halbe Stunde später. Fangt schon ohne mich an!"
+            prompt: Warum kommt Mara später?
+            options: ["Sie steht im Stau.", "Ihr Zug hat Verspätung.", "Sie hat verschlafen."]
+            answer: "Sie steht im Stau."
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Liebe Bürgerinnen und Bürger, ab dem ersten Juni gibt es in der Stadt neue Mülltonnen für Biomüll. Die braunen Tonnen werden jeden Dienstag geleert."
+            prompt: Wann werden die Biotonnen geleert?
+            options: [jeden Dienstag, jeden Donnerstag, am 1. Juni]
+            answer: jeden Dienstag
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Hier ist die Fahrradstation am Bahnhof. Ihr Fahrrad ist repariert. Die Reparatur kostet fünfundzwanzig Euro. Sie können es bis neunzehn Uhr abholen."
+            prompt: Bis wann kann man das Fahrrad abholen?
+            options: ["bis 19 Uhr", "bis 17 Uhr", "bis 25 Uhr"]
+            answer: "bis 19 Uhr"
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Wie fährt Mehmet an welchem Tag zur Arbeit? Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Mehmets Arbeitsweg
+          plays: 1
+          lines:
+            - speaker: Kollegin
+              text: "Mehmet, wie kommst du eigentlich zur Arbeit?"
+            - speaker: Mehmet
+              text: "Das ist jeden Tag anders! Am Montag fahre ich mit dem Fahrrad, da habe ich nachmittags frei."
+            - speaker: Kollegin
+              text: "Und am Dienstag?"
+            - speaker: Mehmet
+              text: "Dienstags nehme ich den Bus, weil ich danach zum Arzt muss. Am Mittwoch nimmt mich mein Nachbar mit dem Auto mit. Am Donnerstag wollte ich eigentlich laufen, aber das ist zu weit. Also fahre ich mit der Straßenbahn."
+            - speaker: Kollegin
+              text: "Und Freitag?"
+            - speaker: Mehmet
+              text: "Freitag arbeite ich von zu Hause."
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Montag
+            options: [Fahrrad, Bus, Auto, Straßenbahn, Homeoffice, zu Fuß]
+            answer: Fahrrad
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Dienstag
+            options: [Fahrrad, Bus, Auto, Straßenbahn, Homeoffice, zu Fuß]
+            answer: Bus
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Mittwoch
+            options: [Fahrrad, Bus, Auto, Straßenbahn, Homeoffice, zu Fuß]
+            answer: Auto
+            shuffle: false
+          - id: h2-4
+            type: multiple-choice
+            prompt: Donnerstag
+            options: [Fahrrad, Bus, Auto, Straßenbahn, Homeoffice, zu Fuß]
+            answer: Straßenbahn
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Freitag
+            options: [Fahrrad, Bus, Auto, Straßenbahn, Homeoffice, zu Fuß]
+            answer: Homeoffice
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Frau
+                  text: "Entschuldigung, wie komme ich zum Museum?"
+                - speaker: Mann
+                  text: "Gehen Sie über die Brücke und dann die zweite Straße rechts."
+            prompt: Wie kommt die Frau zum Museum?
+            options: ["über die Brücke, dann die zweite Straße rechts", "geradeaus bis zur Ampel", "die erste Straße links"]
+            answer: "über die Brücke, dann die zweite Straße rechts"
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Nimmst du einen Schirm mit?"
+                - speaker: Frau
+                  text: "Nein, es soll nur bewölkt sein. Aber ich nehme eine Jacke mit, es wird kühl."
+            prompt: Was nimmt die Frau mit?
+            options: [eine Jacke, einen Schirm, eine Sonnenbrille]
+            answer: eine Jacke
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Wohin kommt die leere Glasflasche?"
+                - speaker: Mann
+                  text: "Die hat Pfand. Die bringen wir zurück in den Supermarkt."
+            prompt: Was passiert mit der Flasche?
+            options: [Sie geht zurück in den Supermarkt., Sie kommt in den Glascontainer., Sie kommt in den Restmüll.]
+            answer: Sie geht zurück in den Supermarkt.
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Wann fährt der nächste Bus zum Flughafen?"
+                - speaker: Frau
+                  text: "Der um zehn ist gerade weg. Der nächste kommt um zehn Uhr zwanzig."
+            prompt: Wann fährt der nächste Bus?
+            options: ["um 10:20 Uhr", "um 10 Uhr", "um 10:40 Uhr"]
+            answer: "um 10:20 Uhr"
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Frau
+                  text: "Wie war das Wetter in Schottland?"
+                - speaker: Mann
+                  text: "Wir hatten Glück! Nur einen Tag Regen, sonst Sonne."
+            prompt: Wie war das Wetter meistens?
+            options: [sonnig, regnerisch, neblig]
+            answer: sonnig
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio Grün – Umwelt im Alltag
+          lines:
+            - speaker: Moderator
+              text: "Frau Berger, Sie und Ihre Familie leben fast ohne Plastik. Wie geht das?"
+            - speaker: Frau Berger
+              text: "Wir kaufen auf dem Markt ein und bringen eigene Taschen und Dosen mit. Milch kaufen wir in Glasflaschen."
+            - speaker: Moderator
+              text: "Ist das nicht teurer?"
+            - speaker: Frau Berger
+              text: "Manche Sachen schon, aber wir kaufen auch weniger. Wir werfen viel weniger weg als früher."
+            - speaker: Moderator
+              text: "Was ist am schwierigsten?"
+            - speaker: Frau Berger
+              text: "Spielsachen für die Kinder. Die sind fast immer aus Plastik. Wir kaufen sie jetzt meistens gebraucht."
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Familie Berger kauft auf dem Markt ein.
+            answer: true
+          - id: h4-2
+            type: true-false
+            prompt: Die Milch kaufen sie in Plastikflaschen.
+            answer: false
+          - id: h4-3
+            type: true-false
+            prompt: Sie werfen heute weniger weg.
+            answer: true
+          - id: h4-4
+            type: true-false
+            prompt: Am schwierigsten ist Kleidung ohne Plastik.
+            answer: false
+          - id: h4-5
+            type: true-false
+            prompt: Spielsachen kaufen sie meistens gebraucht.
+            answer: true
+
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie sind mit Ihrer Freundin Hanna im Café verabredet, aber Ihr Bus fährt nicht. Schreiben Sie Hanna eine SMS: Erklären Sie das Problem. Schreiben Sie, wie Sie jetzt kommen. Schreiben Sie, wann Sie da sind."
+            points:
+              - Problem
+              - wie Sie jetzt kommen
+              - wann Sie da sind
+            minWords: 20
+            sample: "Hallo Hanna, mein Bus fährt heute nicht, es gibt einen Streik. Ich nehme jetzt ein Fahrrad aus dem Fahrradverleih. Ich bin in zwanzig Minuten im Café. Bis gleich! Rosa"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Vor Ihrem Haus ist die Straßenlampe seit einer Woche kaputt. Schreiben Sie an die Stadtverwaltung: Was ist das Problem? Seit wann? Bitten Sie um eine schnelle Reparatur."
+            points:
+              - Problem
+              - seit wann
+              - Bitte um Reparatur
+            minWords: 30
+            sample: "Sehr geehrte Damen und Herren, vor meinem Haus in der Rosenstraße 14 ist die Straßenlampe kaputt. Das Problem gibt es seit einer Woche. Abends ist es sehr dunkel und gefährlich. Bitte reparieren Sie die Lampe schnell. Mit freundlichen Grüßen, Ali Haddad"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Stadt?, Verkehrsmittel?, Lieblingswetter?, Umwelt?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Wie gefällt dir deine Stadt? Sehr gut, sie ist nicht zu groß und hat viele Parks. Wie fährst du zur Arbeit? Mit dem Fahrrad, nur im Winter mit dem Bus. Welches Wetter magst du am liebsten? Ich mag den Herbst, wenn die Sonne scheint. Was machst du für die Umwelt? Ich trenne den Müll und kaufe wenig Plastik."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Meine Stadt. Erzählen Sie über die Stadt, in der Sie wohnen."
+            cards: [Wo?, Was gibt es dort?, Verkehr?, Was gefällt Ihnen (nicht)?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used a comparison and a weil clause
+            sample: "Ich wohne in Göttingen, das ist eine Studentenstadt in Niedersachsen. Es gibt eine alte Universität, viele Cafés und einen schönen Wald. Die meisten Leute fahren Fahrrad, weil die Stadt nicht so groß ist. Mir gefällt, dass es hier ruhiger ist als in Berlin. Nicht so gut ist, dass im Sommer viele Studenten weg sind."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten mit einer Nachbarin oder einem Nachbarn bei der Putzaktion im Park helfen. Finden Sie eine Zeit am Samstag.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Samstag: 8–10 Uhr Sport, 12–13 Uhr Mittagessen mit Freunden, ab 17 Uhr Geburtstag. Ihr Nachbar hat um 10:30 und um 14 Uhr keine Zeit. Die Aktion geht von 10 bis 16 Uhr. Planen Sie: Wann? Wie lange? Was mitbringen?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Treffpunkt, mitbringen]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a time and what to bring
+            sample: "– Wann gehen wir zur Putzaktion? Um halb elf? – Da kann ich leider nicht, ich muss meine Tochter zum Schwimmen bringen. Wie wäre es um elf? – Um elf ist gut, aber ich muss um zwölf zum Mittagessen. – Dann treffen wir uns um elf und um Viertel nach zwei noch einmal? – Gute Idee. Ich bringe Handschuhe mit. – Und ich Müllsäcke und Wasser."

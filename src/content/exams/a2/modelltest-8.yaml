@@ -1,0 +1,479 @@
+level: a2
+title: Modelltest 8
+description: >-
+  A practice exam in the format of the Goethe-Zertifikat A2, with the real time limits. Topics:
+  free time, hobbies, culture and events.
+passMark: 60
+scoring: total
+modules:
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Ein Chor für alle
+
+            Jeden Donnerstagabend singen im Gemeindehaus von Kiel-Nord über 40 Menschen zusammen. Das Besondere: Die Sängerinnen und Sänger kommen aus 15 Ländern, und viele können keine Noten lesen. „Das ist egal", sagt Chorleiterin Merve Aydın. „Bei uns kann jeder mitmachen."
+
+            Der Chor singt Lieder in vielen Sprachen – auf Deutsch, Arabisch, Spanisch und sogar auf Plattdeutsch. Für viele Mitglieder ist der Chor mehr als ein Hobby. „Hier habe ich meine besten Freunde gefunden", erzählt Yusuf (34), der vor drei Jahren aus Syrien gekommen ist.
+
+            Im Dezember gibt der Chor ein großes Konzert in der Stadthalle. Der Eintritt ist frei, aber man kann Geld für ein Kinderheim spenden.
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: Der Chor trifft sich …
+            options: ["jeden Donnerstagabend.", "jeden Sonntag.", "einmal im Monat."]
+            answer: "jeden Donnerstagabend."
+          - id: l1-2
+            type: multiple-choice
+            prompt: Im Chor …
+            options: ["muss man keine Noten lesen können.", "singen nur Profis.", "singen nur Deutsche."]
+            answer: "muss man keine Noten lesen können."
+          - id: l1-3
+            type: multiple-choice
+            prompt: Der Chor singt …
+            options: ["in vielen Sprachen.", "nur auf Deutsch.", "nur alte Lieder."]
+            answer: "in vielen Sprachen."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Yusuf hat im Chor …
+            options: ["Freunde gefunden.", "Deutsch unterrichtet.", "eine Arbeit gefunden."]
+            answer: "Freunde gefunden."
+          - id: l1-5
+            type: multiple-choice
+            prompt: Für das Konzert im Dezember …
+            options: ["muss man keinen Eintritt bezahlen.", "kosten die Karten 15 Euro.", "braucht man eine Einladung."]
+            answer: "muss man keinen Eintritt bezahlen."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind im Kulturzentrum. Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Kulturzentrum Alte Fabrik – Wegweiser
+          text: |
+            3. OG: Tanzsaal · Theaterwerkstatt
+            2. OG: Kino (2 Säle) · Bar
+            1. OG: Ausstellung „Fotografie heute" · Malkurse
+            EG: Kasse · Information · Café · Garderobe
+            UG: Konzertsaal · Musikproberäume
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Sie möchten einen Film sehen.
+            options: [2. OG, 3. OG, anderer Stock]
+            answer: 2. OG
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Sie möchten Ihre Jacke abgeben.
+            options: [EG, UG, anderer Stock]
+            answer: EG
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Ihre Band möchte üben.
+            options: [UG, 3. OG, anderer Stock]
+            answer: UG
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            prompt: Sie möchten Fotos von Künstlern ansehen.
+            options: [1. OG, 2. OG, anderer Stock]
+            answer: 1. OG
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie möchten Bücher ausleihen.
+            options: [EG, 1. OG, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Hallo Lukas,
+
+            rate mal, wo ich am Samstag war: beim Konzert von Silbermond! Meine Schwester hatte zwei Karten gewonnen und hat mich mitgenommen. Das Konzert war unglaublich, die Halle war voll, und alle haben mitgesungen.
+
+            Leider war der Weg nach Hause nicht so schön. Die letzte S-Bahn ist ausgefallen, und wir mussten eine Stunde auf ein Taxi warten. Wir waren erst um drei Uhr morgens zu Hause!
+
+            Nächsten Monat spielen sie noch einmal in Berlin. Hast du Lust mitzukommen? Die Karten kosten 55 Euro, ich kann sie online kaufen.
+
+            Bis bald
+            Jonas
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Die Karten für das Konzert …
+            options: ["hat die Schwester gewonnen.", "hat Jonas gekauft.", "waren ein Geschenk von Lukas."]
+            answer: "hat die Schwester gewonnen."
+          - id: l3-2
+            type: multiple-choice
+            prompt: Wie war das Konzert?
+            options: ["sehr gut", "langweilig", "zu laut"]
+            answer: "sehr gut"
+          - id: l3-3
+            type: multiple-choice
+            prompt: Warum sind sie spät nach Hause gekommen?
+            options: ["Die S-Bahn ist ausgefallen.", "Sie waren noch in einer Bar.", "Das Konzert hat lange gedauert."]
+            answer: "Die S-Bahn ist ausgefallen."
+          - id: l3-4
+            type: multiple-choice
+            prompt: Wo spielt die Band nächsten Monat?
+            options: ["in Berlin", "in derselben Stadt", "in München"]
+            answer: "in Berlin"
+          - id: l3-5
+            type: multiple-choice
+            prompt: Jonas möchte …
+            options: ["Karten online kaufen.", "Karten gewinnen.", "nicht mehr zu Konzerten gehen."]
+            answer: "Karten online kaufen."
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Kinderkino: jeden Sonntag 15 Uhr, Filme für Kinder ab 6, Eintritt 3 Euro.
+
+            b) Schachclub: Wir spielen jeden Mittwoch ab 19 Uhr, Anfänger willkommen.
+
+            c) Stadtführung bei Nacht: Geschichten über Geister und Verbrecher, Freitag 21 Uhr.
+
+            d) Gartenarbeit im Gemeinschaftsgarten: Gemüse anbauen mit Nachbarn, Samstagvormittag.
+
+            e) Lesekreis in der Bibliothek: Wir lesen und diskutieren einmal im Monat einen Roman.
+
+            f) Klettern für Familien: Kletterhalle Nord, Kurs am Sonntagvormittag.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Herr Abdi liest gern und möchte mit anderen über Bücher sprechen.
+            options: [a, b, c, d, e, f, X]
+            answer: e
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Familie Novak möchte am Sonntag mit den Kindern etwas Sportliches machen.
+            options: [a, b, c, d, e, f, X]
+            answer: f
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Frau Wong hat keinen Garten, möchte aber Tomaten anbauen.
+            options: [a, b, c, d, e, f, X]
+            answer: d
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Pedro möchte nach der Arbeit ein Spiel lernen und neue Leute kennenlernen.
+            options: [a, b, c, d, e, f, X]
+            answer: b
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            prompt: Anja sucht einen Tanzkurs für Salsa.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Liebe Besucher, die Vorstellung im Saal zwei beginnt heute fünfzehn Minuten später, um zwanzig Uhr fünfzehn."
+            prompt: Wann beginnt die Vorstellung?
+            options: ["um 20:15 Uhr", "um 20 Uhr", "um 19:45 Uhr"]
+            answer: "um 20:15 Uhr"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Hallo Daria, hier ist Felix. Ich habe zwei Karten für das Fußballspiel am Sonntag. Kommst du mit? Das Spiel beginnt um halb vier."
+            prompt: Was möchte Felix?
+            options: ["mit Daria zum Fußball gehen", "Fußball spielen", "Karten kaufen"]
+            answer: "mit Daria zum Fußball gehen"
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Und hier die Veranstaltungstipps fürs Wochenende: Am Samstag gibt es im Stadtpark ein Open-Air-Konzert. Bei Regen findet es in der Stadthalle statt."
+            prompt: Wo ist das Konzert, wenn es regnet?
+            options: ["in der Stadthalle", "im Stadtpark", "im Kino"]
+            answer: "in der Stadthalle"
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Hier ist die Mailbox der Tanzschule Takt. Unsere Kurse beginnen wieder am achten September. Anmeldung bitte über unsere Webseite."
+            prompt: Wie meldet man sich an?
+            options: ["über die Webseite", "am Telefon", "in der Tanzschule"]
+            answer: "über die Webseite"
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Das Museum ist heute bis zweiundzwanzig Uhr geöffnet. Ab achtzehn Uhr ist der Eintritt frei."
+            prompt: Ab wann ist der Eintritt frei?
+            options: ["ab 18 Uhr", "ab 22 Uhr", "den ganzen Tag"]
+            answer: "ab 18 Uhr"
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Was macht Ben an welchem Tag seiner Ferien? Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Bens Ferienwoche
+          plays: 1
+          lines:
+            - speaker: Mutter
+              text: "Ben, was hast du in den Ferien vor?"
+            - speaker: Ben
+              text: "Am Montag gehe ich mit Max ins Schwimmbad."
+            - speaker: Mutter
+              text: "Und am Dienstag?"
+            - speaker: Ben
+              text: "Da ist das Fußballcamp. Am Mittwoch wollte ich eigentlich ins Kino, aber Oma hat Geburtstag. Also besuchen wir Oma."
+            - speaker: Mutter
+              text: "Stimmt. Und Donnerstag?"
+            - speaker: Ben
+              text: "Donnerstag gehen wir ins Kino, das ist billiger. Und am Freitag spiele ich mit Lina Computerspiele."
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Montag
+            options: [Schwimmbad, Fußballcamp, Oma besuchen, Kino, Computerspiele, Zoo]
+            answer: Schwimmbad
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Dienstag
+            options: [Schwimmbad, Fußballcamp, Oma besuchen, Kino, Computerspiele, Zoo]
+            answer: Fußballcamp
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Mittwoch
+            options: [Schwimmbad, Fußballcamp, Oma besuchen, Kino, Computerspiele, Zoo]
+            answer: Oma besuchen
+            shuffle: false
+          - id: h2-4
+            type: multiple-choice
+            prompt: Donnerstag
+            options: [Schwimmbad, Fußballcamp, Oma besuchen, Kino, Computerspiele, Zoo]
+            answer: Kino
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Freitag
+            options: [Schwimmbad, Fußballcamp, Oma besuchen, Kino, Computerspiele, Zoo]
+            answer: Computerspiele
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Frau
+                  text: "Welchen Film sehen wir? Die Komödie?"
+                - speaker: Mann
+                  text: "Ich möchte lieber den Krimi sehen. Komödien finde ich langweilig."
+                - speaker: Frau
+                  text: "Okay, dann den Krimi."
+            prompt: Welchen Film sehen sie?
+            options: [einen Krimi, eine Komödie, einen Liebesfilm]
+            answer: einen Krimi
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Was machst du am Wochenende?"
+                - speaker: Frau
+                  text: "Ich wollte wandern, aber es soll regnen. Ich glaube, ich gehe ins Museum."
+            prompt: Was macht die Frau am Wochenende?
+            options: [Sie geht ins Museum., Sie geht wandern., Sie bleibt zu Hause.]
+            answer: Sie geht ins Museum.
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Zwei Karten für heute Abend, bitte."
+                - speaker: Kassierer
+                  text: "Das macht vierundzwanzig Euro. Möchten Sie in der fünften Reihe sitzen?"
+            prompt: Wie viel kosten die Karten zusammen?
+            options: ["24 Euro", "12 Euro", "42 Euro"]
+            answer: "24 Euro"
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Spielst du immer noch Gitarre?"
+                - speaker: Frau
+                  text: "Nein, dafür habe ich keine Zeit mehr. Aber ich habe mit Klavier angefangen."
+            prompt: Welches Instrument spielt die Frau jetzt?
+            options: [Klavier, Gitarre, Geige]
+            answer: Klavier
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Frau
+                  text: "Wo treffen wir uns vor dem Konzert?"
+                - speaker: Mann
+                  text: "Nicht am Eingang, da ist es zu voll. Lieber im Café gegenüber."
+            prompt: Wo treffen sie sich?
+            options: [im Café gegenüber, am Eingang, an der Kasse]
+            answer: im Café gegenüber
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio Kultur – Hobbys
+          lines:
+            - speaker: Moderator
+              text: "Frau Sato, Ihr Hobby ist ungewöhnlich: Sie bauen Möbel aus altem Holz."
+            - speaker: Frau Sato
+              text: "Ja, seit sechs Jahren. Ich finde alte Bretter auf dem Sperrmüll oder bei Freunden und mache daraus Tische und Regale."
+            - speaker: Moderator
+              text: "Wo arbeiten Sie?"
+            - speaker: Frau Sato
+              text: "In der Garage. Mein Mann musste sein Auto auf die Straße stellen."
+            - speaker: Moderator
+              text: "Verkaufen Sie die Möbel?"
+            - speaker: Frau Sato
+              text: "Manchmal, auf dem Kunstmarkt im Sommer. Aber die meisten verschenke ich an Familie und Freunde."
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Frau Sato baut Möbel aus neuem Holz.
+            answer: false
+          - id: h4-2
+            type: true-false
+            prompt: Sie macht das seit sechs Jahren.
+            answer: true
+          - id: h4-3
+            type: true-false
+            prompt: Sie arbeitet in der Küche.
+            answer: false
+          - id: h4-4
+            type: true-false
+            prompt: Das Auto ihres Mannes steht jetzt auf der Straße.
+            answer: true
+          - id: h4-5
+            type: true-false
+            prompt: Sie verkauft die meisten Möbel.
+            answer: false
+
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie haben zwei Karten für ein Konzert am Freitag. Schreiben Sie Ihrem Freund Can eine SMS: Laden Sie ihn ein. Schreiben Sie, wann und wo das Konzert ist. Schlagen Sie einen Treffpunkt vor."
+            points:
+              - Einladung
+              - wann und wo
+              - Treffpunkt
+            minWords: 20
+            sample: "Hallo Can, ich habe zwei Karten für ein Jazzkonzert! Kommst du mit? Es ist am Freitag um 20 Uhr in der Stadthalle. Treffen wir uns um halb acht am Eingang? Gruß, Lena"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie möchten im Sportverein 'Blau-Weiß' Volleyball spielen. Schreiben Sie an den Trainer, Herrn Möller: Stellen Sie sich vor. Fragen Sie nach den Trainingszeiten. Fragen Sie, was ein Jahr Mitgliedschaft kostet."
+            points:
+              - Vorstellung
+              - Trainingszeiten
+              - Kosten
+            minWords: 30
+            sample: "Sehr geehrter Herr Möller, ich heiße Diego Silva, bin 26 Jahre alt und habe in Brasilien zehn Jahre Volleyball gespielt. Wann ist das Training? Und was kostet die Mitgliedschaft für ein Jahr? Mit freundlichen Grüßen, Diego Silva"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Hobby?, Musik?, Kino?, Wochenende?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Was ist dein Hobby? Ich fotografiere gern, vor allem Tiere. Welche Musik hörst du? Ich höre gern Pop und manchmal Klassik. Wie oft gehst du ins Kino? Etwa einmal im Monat, am liebsten mit Freunden. Was machst du am Wochenende? Ich gehe oft wandern oder treffe meine Familie."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Freizeit. Erzählen Sie über Ihr Lieblingshobby."
+            cards: [Was?, Seit wann?, Mit wem?, Warum?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used seit, weil and a Perfekt sentence
+            sample: "Mein Lieblingshobby ist Kochen. Ich koche seit zehn Jahren, meine Mutter hat es mir gezeigt. Meistens koche ich für meine Familie, aber am Wochenende lade ich oft Freunde ein. Letzten Samstag habe ich zum Beispiel eine Lasagne gemacht. Ich koche gern, weil ich dabei entspannen kann und weil alle glücklich sind, wenn das Essen schmeckt."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten mit einer Freundin oder einem Freund am Samstag ins Kino gehen. Finden Sie eine Zeit.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Samstag: 9–12 Uhr arbeiten, 15 Uhr Kaffee mit Oma, ab 21 Uhr Party. Ihr Partner hat um 13, um 17 und um 18 Uhr keine Zeit. Die Filme laufen um 14, 16:30 und 19 Uhr. Planen Sie: Welcher Film? Wann treffen? Danach essen?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Treffpunkt, Essen]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a film time, a meeting point and food
+            sample: "– Welchen Film nehmen wir? Um vierzehn Uhr? – Da kann ich leider nicht, um drei trinke ich Kaffee mit meiner Oma. Und um halb fünf? – Um fünf habe ich einen Termin. Wie wäre es um sieben? – Ja, um sieben passt es. Treffen wir uns um Viertel vor sieben vor dem Kino? – Gut. Und danach essen wir noch eine Pizza?"

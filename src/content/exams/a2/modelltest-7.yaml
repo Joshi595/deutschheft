@@ -1,0 +1,478 @@
+level: a2
+title: Modelltest 7
+description: >-
+  A practice exam in the format of the Goethe-Zertifikat A2, with the real time limits. Topics:
+  school, learning, courses and languages.
+passMark: 60
+scoring: total
+modules:
+  - skill: reading
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text aus der Zeitung. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Mit 65 an die Uni
+
+            Karl Huber war 40 Jahre lang Elektriker. Als er mit 65 in Rente gegangen ist, hatte er plötzlich viel Zeit. „Ich wollte nicht nur im Garten sitzen", sagt er. Deshalb studiert er jetzt Geschichte an der Universität Regensburg – als Seniorstudent.
+
+            Für Senioren gibt es an vielen deutschen Universitäten spezielle Programme. Sie bezahlen eine kleine Gebühr und dürfen dann die Vorlesungen besuchen. Prüfungen müssen sie nicht machen, aber sie dürfen.
+
+            Karl geht dreimal pro Woche zur Uni. Am liebsten mag er die Seminare, weil er dort mit den jungen Studenten diskutieren kann. „Manchmal erzähle ich, wie es früher war. Das finden die jungen Leute spannend."
+        items:
+          - id: l1-1
+            type: multiple-choice
+            prompt: Karl Huber war früher …
+            options: ["Elektriker.", "Lehrer.", "Professor."]
+            answer: "Elektriker."
+          - id: l1-2
+            type: multiple-choice
+            prompt: Karl studiert, weil …
+            options: ["er nicht nur im Garten sitzen wollte.", "er einen neuen Beruf braucht.", "sein Sohn auch studiert."]
+            answer: "er nicht nur im Garten sitzen wollte."
+          - id: l1-3
+            type: multiple-choice
+            prompt: Seniorstudenten …
+            options: ["müssen keine Prüfungen machen.", "studieren kostenlos.", "dürfen keine Vorlesungen besuchen."]
+            answer: "müssen keine Prüfungen machen."
+          - id: l1-4
+            type: multiple-choice
+            prompt: Wie oft geht Karl zur Uni?
+            options: ["dreimal pro Woche", "jeden Tag", "einmal pro Woche"]
+            answer: "dreimal pro Woche"
+          - id: l1-5
+            type: multiple-choice
+            prompt: In den Seminaren …
+            options: ["diskutiert Karl mit jungen Studenten.", "ist Karl der Lehrer.", "schreibt Karl Prüfungen."]
+            answer: "diskutiert Karl mit jungen Studenten."
+
+      - title: "Lesen, Teil 2"
+        instructions: Sie sind in der Volkshochschule. Lesen Sie die Aufgaben und die Informationstafel. In welchen Stock gehen Sie? Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Volkshochschule – Wegweiser
+          text: |
+            3. OG: Computerräume · EDV-Kurse
+            2. OG: Sprachkurse (Deutsch, Englisch, Spanisch) · Prüfungsbüro
+            1. OG: Kochstudio · Malen und Zeichnen · Musikraum
+            EG: Anmeldung und Beratung · Bibliothek · Cafeteria
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: Sie möchten sich für einen Kurs anmelden.
+            options: [EG, 2. OG, anderer Stock]
+            answer: EG
+            shuffle: false
+          - id: l2-2
+            type: multiple-choice
+            prompt: Sie haben eine Frage zu Ihrer Deutschprüfung.
+            options: [2. OG, EG, anderer Stock]
+            answer: 2. OG
+            shuffle: false
+          - id: l2-3
+            type: multiple-choice
+            prompt: Ihr Kurs „Italienisch kochen" beginnt gleich.
+            options: [1. OG, EG, anderer Stock]
+            answer: 1. OG
+            shuffle: false
+          - id: l2-4
+            type: multiple-choice
+            prompt: Sie möchten lernen, wie man E-Mails am Computer schreibt.
+            options: [3. OG, 2. OG, anderer Stock]
+            answer: 3. OG
+            shuffle: false
+          - id: l2-5
+            type: multiple-choice
+            prompt: Sie möchten schwimmen lernen.
+            options: [1. OG, EG, anderer Stock]
+            answer: anderer Stock
+            shuffle: false
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die E-Mail. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: E-Mail
+          text: |
+            Liebe Frau Schmidt,
+
+            vielen Dank für den tollen Deutschkurs! Ich habe in den letzten sechs Monaten sehr viel gelernt. Am Anfang konnte ich nur „Hallo" und „Danke" sagen, und jetzt schreibe ich Ihnen eine E-Mail auf Deutsch!
+
+            Leider kann ich ab September nicht mehr am Abendkurs teilnehmen, weil ich eine neue Arbeit mit Schichtdienst habe. Gibt es auch einen Kurs am Samstagvormittag? Ich möchte unbedingt weiterlernen, denn im Dezember möchte ich die A2-Prüfung machen.
+
+            Können Sie mir bitte Informationen schicken?
+
+            Viele Grüße
+            Hamid Rahimi
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Hamid hat den Kurs …
+            options: ["sechs Monate besucht.", "gerade angefangen.", "ein Jahr besucht."]
+            answer: "sechs Monate besucht."
+          - id: l3-2
+            type: multiple-choice
+            prompt: Warum kann Hamid nicht mehr am Abendkurs teilnehmen?
+            options: ["Er arbeitet jetzt im Schichtdienst.", "Er zieht um.", "Der Kurs ist zu teuer."]
+            answer: "Er arbeitet jetzt im Schichtdienst."
+          - id: l3-3
+            type: multiple-choice
+            prompt: Hamid fragt nach einem Kurs …
+            options: ["am Samstagvormittag.", "am Sonntag.", "am Freitagabend."]
+            answer: "am Samstagvormittag."
+          - id: l3-4
+            type: multiple-choice
+            prompt: Im Dezember möchte Hamid …
+            options: ["eine Prüfung machen.", "in Urlaub fahren.", "aufhören zu lernen."]
+            answer: "eine Prüfung machen."
+          - id: l3-5
+            type: multiple-choice
+            prompt: Frau Schmidt soll …
+            options: ["Informationen schicken.", "Hamid anrufen.", "einen neuen Kurs anbieten."]
+            answer: "Informationen schicken."
+
+      - title: "Lesen, Teil 4"
+        instructions: Sechs Personen suchen im Internet nach Informationen. Lesen Sie die Aufgaben und die Anzeigen. Welche Anzeige passt? Für eine Aufgabe gibt es keine Lösung. Wählen Sie dann X.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Nachhilfe in Mathe und Physik: erfahrene Lehrerin, für Schüler der Klassen 5–10.
+
+            b) Gitarrenunterricht für Kinder und Erwachsene: Einzelstunden, auch am Wochenende.
+
+            c) Integrationskurs Deutsch: Vormittagskurs mit Kinderbetreuung.
+
+            d) Spanisch für den Urlaub: Wochenendkurs, 2 Tage, für Anfänger.
+
+            e) Führerschein-Theorie: Abendkurs, in 4 Wochen zur Prüfung.
+
+            f) Hausaufgabenhilfe: kostenlos für Grundschulkinder, im Jugendzentrum.
+        items:
+          - id: l4-1
+            type: multiple-choice
+            prompt: Frau Hassan möchte Deutsch lernen, aber sie hat ein kleines Kind.
+            options: [a, b, c, d, e, f, X]
+            answer: c
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            prompt: Carla fliegt im Sommer nach Mexiko und möchte ein bisschen Spanisch lernen.
+            options: [a, b, c, d, e, f, X]
+            answer: d
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            prompt: Der Sohn von Herrn Lee (14) hat schlechte Noten in Mathe.
+            options: [a, b, c, d, e, f, X]
+            answer: a
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            prompt: Jana (8) braucht Hilfe bei den Hausaufgaben, aber ihre Eltern haben wenig Geld.
+            options: [a, b, c, d, e, f, X]
+            answer: f
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            prompt: Tom möchte Klavier spielen lernen.
+            options: [a, b, c, d, e, f, X]
+            answer: X
+            shuffle: false
+
+  - skill: listening
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Hören, Teil 1"
+        instructions: Sie hören fünf kurze Texte. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h1-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 1
+              lines:
+                - text: "Liebe Kursteilnehmer, der Deutschkurs am Donnerstag fällt aus, weil die Lehrerin krank ist. Der Kurs wird am Samstag um zehn Uhr nachgeholt."
+            prompt: Wann wird der Kurs nachgeholt?
+            options: ["am Samstag um 10 Uhr", "am Donnerstag um 10 Uhr", "am Freitag um 10 Uhr"]
+            answer: "am Samstag um 10 Uhr"
+          - id: h1-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 2
+              lines:
+                - text: "Hallo Frau Demir, hier ist die Grundschule am Park. Ihre Tochter hat Bauchschmerzen. Können Sie sie bitte abholen?"
+            prompt: Warum ruft die Schule an?
+            options: ["Die Tochter hat Bauchschmerzen.", "Die Tochter hat ihre Jacke vergessen.", "Es gibt einen Elternabend."]
+            answer: "Die Tochter hat Bauchschmerzen."
+          - id: h1-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 3
+              lines:
+                - text: "Die Anmeldung für die Sommerkurse beginnt am ersten Mai. Sie können sich online oder im Büro im Erdgeschoss anmelden."
+            prompt: Ab wann kann man sich anmelden?
+            options: [ab 1. Mai, ab 1. März, ab Juni]
+            answer: ab 1. Mai
+          - id: h1-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 4
+              lines:
+                - text: "Hi Paula, hier ist Nico. Kannst du mir dein Deutschbuch leihen? Ich habe meins im Bus vergessen. Ich brauche es bis Montag."
+            prompt: Was möchte Nico?
+            options: ["ein Buch leihen", "Paula besuchen", "zusammen lernen"]
+            answer: "ein Buch leihen"
+          - id: h1-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Text 5
+              lines:
+                - text: "Hier ist das Prüfungszentrum. Die Ergebnisse der A2-Prüfung sind da. Sie können Ihr Zertifikat ab Mittwoch abholen."
+            prompt: Ab wann kann man das Zertifikat abholen?
+            options: [ab Mittwoch, ab Montag, ab Freitag]
+            answer: ab Mittwoch
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören ein Gespräch. Welchen Kurs macht Elena an welchem Tag? Sie hören den Text einmal.
+        stimulus:
+          kind: audio
+          label: Elenas Kurse
+          plays: 1
+          lines:
+            - speaker: Freund
+              text: "Elena, du machst ja so viele Kurse!"
+            - speaker: Elena
+              text: "Ja, ich lerne gern. Am Montag habe ich Deutsch, schon seit einem Jahr."
+            - speaker: Freund
+              text: "Und am Dienstag?"
+            - speaker: Elena
+              text: "Dienstags gehe ich zum Malkurs. Am Mittwoch wollte ich eigentlich einen Kochkurs machen, aber der war schon voll. Jetzt mache ich am Mittwoch einen Computerkurs."
+            - speaker: Freund
+              text: "Und Donnerstag?"
+            - speaker: Elena
+              text: "Da singe ich im Chor. Und am Freitag habe ich Yoga, zum Entspannen."
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Montag
+            options: [Deutsch, Malen, Computer, Chor, Yoga, Kochen]
+            answer: Deutsch
+            shuffle: false
+          - id: h2-2
+            type: multiple-choice
+            prompt: Dienstag
+            options: [Deutsch, Malen, Computer, Chor, Yoga, Kochen]
+            answer: Malen
+            shuffle: false
+          - id: h2-3
+            type: multiple-choice
+            prompt: Mittwoch
+            options: [Deutsch, Malen, Computer, Chor, Yoga, Kochen]
+            answer: Computer
+            shuffle: false
+          - id: h2-4
+            type: multiple-choice
+            prompt: Donnerstag
+            options: [Deutsch, Malen, Computer, Chor, Yoga, Kochen]
+            answer: Chor
+            shuffle: false
+          - id: h2-5
+            type: multiple-choice
+            prompt: Freitag
+            options: [Deutsch, Malen, Computer, Chor, Yoga, Kochen]
+            answer: Yoga
+            shuffle: false
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören fünf kurze Gespräche. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.
+        items:
+          - id: h3-1
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 1
+              lines:
+                - speaker: Mutter
+                  text: "Was hast du heute in der Schule gemacht?"
+                - speaker: Kind
+                  text: "Wir hatten Sport und Mathe. Und in Kunst haben wir Tiere gemalt."
+            prompt: Was hat das Kind in Kunst gemacht?
+            options: [Tiere gemalt, Sport gemacht, gerechnet]
+            answer: Tiere gemalt
+          - id: h3-2
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 2
+              lines:
+                - speaker: Mann
+                  text: "Wie lange lernst du schon Deutsch?"
+                - speaker: Frau
+                  text: "Seit zwei Jahren. Vorher habe ich ein Jahr Englisch gelernt."
+            prompt: Seit wann lernt die Frau Deutsch?
+            options: [seit zwei Jahren, seit einem Jahr, seit drei Jahren]
+            answer: seit zwei Jahren
+          - id: h3-3
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 3
+              lines:
+                - speaker: Frau
+                  text: "Was kostet der Kurs?"
+                - speaker: Mann
+                  text: "Normalerweise zweihundert Euro. Für Studenten hundertfünfzig."
+                - speaker: Frau
+                  text: "Ich bin Studentin."
+            prompt: Was bezahlt die Frau?
+            options: ["150 Euro", "200 Euro", "100 Euro"]
+            answer: "150 Euro"
+          - id: h3-4
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 4
+              lines:
+                - speaker: Mann
+                  text: "Wie lernst du Vokabeln?"
+                - speaker: Frau
+                  text: "Früher mit Karteikarten, jetzt mit einer App auf dem Handy."
+            prompt: Wie lernt die Frau jetzt Vokabeln?
+            options: [mit einer App, mit Karteikarten, mit einem Buch]
+            answer: mit einer App
+          - id: h3-5
+            type: multiple-choice
+            stimulus:
+              kind: audio
+              label: Gespräch 5
+              lines:
+                - speaker: Frau
+                  text: "Wann ist der Elternabend?"
+                - speaker: Mann
+                  text: "Am Dienstag um neunzehn Uhr, im Raum zwölf."
+            prompt: Wo ist der Elternabend?
+            options: [im Raum 12, im Raum 19, in der Aula]
+            answer: im Raum 12
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören ein Interview. Sind die Aussagen richtig oder falsch? Sie hören den Text zweimal.
+        stimulus:
+          kind: audio
+          label: Radio Campus – Sprachen lernen
+          lines:
+            - speaker: Moderatorin
+              text: "Herr Okeke, Sie sprechen sechs Sprachen. Wie machen Sie das?"
+            - speaker: Herr Okeke
+              text: "Als Kind habe ich in Nigeria schon drei Sprachen gesprochen. Englisch und Französisch habe ich in der Schule gelernt."
+            - speaker: Moderatorin
+              text: "Und Deutsch?"
+            - speaker: Herr Okeke
+              text: "Deutsch lerne ich seit vier Jahren, seit ich in Hamburg wohne. Am meisten hilft mir, mit Kollegen zu sprechen."
+            - speaker: Moderatorin
+              text: "Was ist Ihr Tipp für andere?"
+            - speaker: Herr Okeke
+              text: "Jeden Tag ein bisschen, zehn Minuten sind genug. Und keine Angst vor Fehlern!"
+        items:
+          - id: h4-1
+            type: true-false
+            prompt: Herr Okeke hat als Kind drei Sprachen gesprochen.
+            answer: true
+          - id: h4-2
+            type: true-false
+            prompt: Französisch hat er an der Universität gelernt.
+            answer: false
+          - id: h4-3
+            type: true-false
+            prompt: Er wohnt seit vier Jahren in Hamburg.
+            answer: true
+          - id: h4-4
+            type: true-false
+            prompt: Am meisten hilft ihm ein Deutschkurs.
+            answer: false
+          - id: h4-5
+            type: true-false
+            prompt: Er empfiehlt, jeden Tag zwei Stunden zu lernen.
+            answer: false
+
+  - skill: writing
+    minutes: 30
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine SMS (20–30 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie haben die A2-Prüfung bestanden. Schreiben Sie Ihrer Freundin Sophie eine SMS: Erzählen Sie es ihr. Schreiben Sie, wie die Prüfung war. Laden Sie sie zum Feiern ein."
+            points:
+              - Prüfung bestanden
+              - wie die Prüfung war
+              - Einladung zum Feiern
+            minWords: 20
+            sample: "Hallo Sophie, ich habe die A2-Prüfung bestanden! Das Hören war schwer, aber das Sprechen war super. Wollen wir am Freitag zusammen feiern? Ich lade dich zum Essen ein! Liebe Grüße, Amira"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie eine E-Mail (30–40 Wörter). Schreiben Sie zu allen drei Punkten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Ihr Sohn kann morgen nicht in die Schule kommen. Schreiben Sie seiner Lehrerin, Frau Peters, eine E-Mail: Warum kommt er nicht? Wie lange fehlt er? Fragen Sie nach den Hausaufgaben."
+            points:
+              - Grund
+              - wie lange
+              - Frage nach den Hausaufgaben
+            minWords: 30
+            sample: "Liebe Frau Peters, mein Sohn Leo kann morgen leider nicht in die Schule kommen, weil er Fieber hat. Er bleibt wahrscheinlich bis Freitag zu Hause. Könnten Sie mir bitte sagen, welche Hausaufgaben er machen soll? Viele Grüße, Maria Costa"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: Fragen zur Person"
+        instructions: Stellen Sie mit jeder Karte eine Frage und antworten Sie dann selbst auf jede Frage.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Fragen Sie mit diesen vier Karten. Beantworten Sie die Fragen dann auch selbst."
+            cards: [Sprachen?, Schule?, Lieblingsfach?, Kurs?]
+            checklist:
+              - I asked a full question with a verb for each card
+              - I answered each question in a full sentence
+              - I added a detail to at least two answers
+            sample: "Welche Sprachen sprichst du? Ich spreche Ukrainisch, Russisch und ein bisschen Deutsch. Wo bist du zur Schule gegangen? In Kiew, in eine große Schule. Was war dein Lieblingsfach? Biologie, weil ich Tiere mag. Welchen Kurs möchtest du machen? Ich möchte einen Fotografiekurs machen."
+
+      - title: "Sprechen, Teil 2: Über das eigene Leben erzählen"
+        instructions: Erzählen Sie etwa eine Minute über das Thema. Die Fragen auf der Karte helfen Ihnen.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: Deutsch lernen. Erzählen Sie, wie Sie Deutsch lernen."
+            cards: [Seit wann?, Wo?, Was ist schwer?, Was hilft Ihnen?]
+            checklist:
+              - I answered all four questions on the card
+              - I spoke for about a minute
+              - I used seit, weil and a comparative
+            sample: "Ich lerne seit anderthalb Jahren Deutsch. Zuerst habe ich einen Integrationskurs gemacht, jetzt lerne ich an der Volkshochschule. Am schwierigsten finde ich die Artikel und das Hören, weil die Leute so schnell sprechen. Am meisten hilft mir, deutsche Serien mit Untertiteln zu sehen. Und ich spreche jeden Tag mit meinen Nachbarn."
+
+      - title: "Sprechen, Teil 3: Etwas gemeinsam planen"
+        instructions: Sie möchten mit einer Kursteilnehmerin oder einem Kursteilnehmer für die Prüfung lernen. Finden Sie einen Termin am Dienstag.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Kalender am Dienstag: 8–13 Uhr Arbeit, 14 Uhr Kinder abholen, 17–19 Uhr Deutschkurs. Ihr Partner hat um 10, um 15:30 und ab 20 Uhr keine Zeit. Planen Sie: Wann? Wo? Was lernen?"
+            cards: [Vorschlag, ablehnen + Grund, zustimmen, Ort, Prüfungsteil]
+            checklist:
+              - I made at least two suggestions
+              - I refused at least once and gave a reason
+              - We agreed on a time, a place and what to practise
+            sample: "– Wann können wir am Dienstag zusammen lernen? Um zehn? – Um zehn arbeite ich leider. Wie wäre es um halb vier? – Da habe ich einen Termin. Aber um vier passt es. – Gut, um vier. Wo treffen wir uns? In der Bibliothek? – Ja, da ist es ruhig. Was üben wir? – Lass uns das Schreiben üben, das finde ich am schwierigsten."
