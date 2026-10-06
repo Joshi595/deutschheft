@@ -1,0 +1,159 @@
+lesson: b1.24
+sets:
+  - title: The system
+    items:
+      - id: sys1
+        type: multiple-choice
+        tags: [school system]
+        prompt: "Which school ends with the Abitur?"
+        options: [das Gymnasium, die Realschule, die Grundschule]
+        answer: das Gymnasium
+      - id: sys2
+        type: multiple-choice
+        tags: [school system]
+        prompt: "In the German system a mark of 1 means …"
+        options: [very good, failed, average]
+        answer: very good
+      - id: sys3
+        type: true-false
+        tags: [school system]
+        prompt: "In the dual system, apprentices work in a company and also go to a vocational school."
+        answer: true
+      - id: sys4
+        type: true-false
+        tags: [school system]
+        prompt: "Most public universities in Germany charge high tuition fees."
+        answer: false
+      - id: sys5
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: die Vorlesung, right: the lecture }
+          - { left: das Stipendium, right: the scholarship }
+          - { left: der Azubi, right: the apprentice }
+          - { left: das Zeugnis, right: the school report }
+          - { left: die Volkshochschule, right: adult education centre }
+          - { left: die Anerkennung, right: recognition }
+
+  - title: Grammar in context
+    items:
+      - id: g1
+        type: multiple-choice
+        tags: [studieren]
+        prompt: "Mein Sohn ___ in die 5. Klasse."
+        options: [geht, studiert, lernt]
+        answer: geht
+      - id: g2
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Sie macht eine Ausbildung ___ Bankkauffrau."
+        options: [zur, zum, für]
+        answer: zur
+      - id: g3
+        type: multiple-choice
+        tags: [passive]
+        prompt: "Mein Abschluss ___ in Deutschland anerkannt."
+        options: [wurde, hat, wird geworden]
+        answer: wurde
+      - id: g4
+        type: fill-blank
+        tags: [reflexive]
+        prompt: "Ich kann ___ neue Wörter gut merken."
+        answers: [mir]
+      - id: g5
+        type: fill-blank
+        tags: [separable]
+        prompt: "Ich bilde mich gerade beruflich ___."
+        answers: [weiter]
+      - id: g6
+        type: word-order
+        tags: [um zu]
+        prompt: I am doing further training to have better chances.
+        answer: "Ich bilde mich weiter, um bessere Chancen zu haben."
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [university]
+        prompt: I am in my fourth semester of computer science.
+        answers:
+          - "Ich studiere im vierten Semester Informatik."
+      - id: tr2
+        type: translation
+        tags: [learning]
+        prompt: I learn best when I repeat words out loud.
+        answers:
+          - "Ich lerne am besten, wenn ich Wörter laut wiederhole."
+      - id: tr4
+        type: translation
+        tags: [exams]
+        prompt: I passed the exam.
+        answers:
+          - "Ich habe die Prüfung bestanden."
+      - id: tr3
+        type: translation
+        tags: [passive]
+        prompt: The qualification must be recognised.
+        answers:
+          - "Der Abschluss muss anerkannt werden."
+
+  - title: My education
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [education]
+        prompt: Complete the text.
+        bank: [Abitur, studiert, Semester, Abschluss, anerkannt, Weiterbildung]
+        text: "In meiner Heimat habe ich mit 18 das ___ gemacht und danach vier Jahre Architektur ___. Nach dem achten ___ hatte ich meinen ___. In Deutschland wurde er leider nicht sofort ___. Deshalb mache ich jetzt eine ___ an einer Hochschule."
+        gaps:
+          - [Abitur]
+          - [studiert]
+          - [Semester]
+          - [Abschluss]
+          - [anerkannt]
+          - [Weiterbildung]
+
+  - title: A reading text
+    stimulus:
+      kind: text
+      label: Lernen im Alter
+      text: "Immer mehr Menschen über 60 besuchen Kurse an der Volkshochschule oder studieren sogar an der Universität. Laut einer Studie lernen Senioren zwar langsamer als junge Leute, aber sie können sich Wissen genauso gut merken, wenn es für sie interessant ist. Besonders beliebt sind Sprachkurse und Computerkurse. Viele ältere Menschen sagen, dass das Lernen ihnen hilft, aktiv zu bleiben und neue Kontakte zu finden."
+    items:
+      - id: read1
+        type: true-false
+        tags: [reading]
+        prompt: Senioren lernen genauso schnell wie junge Leute.
+        answer: false
+      - id: read2
+        type: true-false
+        tags: [reading]
+        prompt: Senioren können sich interessante Dinge gut merken.
+        answer: true
+      - id: read3
+        type: multiple-choice
+        tags: [reading]
+        prompt: Warum lernen viele ältere Menschen?
+        options: ["um aktiv zu bleiben und Kontakte zu finden", "um einen neuen Job zu finden", "weil die Kurse kostenlos sind"]
+        answer: "um aktiv zu bleiben und Kontakte zu finden"
+
+  - title: Present it
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, presentation]
+        prompt: "Present the topic 'Studium oder Ausbildung?' – compare both and say what you would recommend."
+        cards: [das Studium, die Ausbildung, Vorteile und Nachteile, Situation in meinem Land, meine Meinung]
+        phrases:
+          - Ich möchte das Thema … vorstellen.
+          - Ein Vorteil des Studiums ist, dass …
+          - Bei einer Ausbildung verdient man …
+          - In meinem Heimatland …
+          - Ich würde … empfehlen, weil …
+        checklist:
+          - I gave the presentation a clear structure
+          - I compared both options with pros and cons
+          - I talked about my own country
+          - I gave a recommendation with a reason
+        sample: "Ich möchte heute das Thema 'Studium oder Ausbildung?' vorstellen. Ein Vorteil des Studiums ist, dass man später oft mehr verdient. Ein Nachteil ist, dass man lange kein eigenes Geld hat. Bei einer Ausbildung verdient man dagegen von Anfang an Geld und lernt sehr praktisch. In meinem Heimatland Indien studieren fast alle, die die Möglichkeit haben, eine Ausbildung wie in Deutschland gibt es kaum. Ich würde jungen Leuten empfehlen, zuerst ein Praktikum zu machen, damit sie wissen, was ihnen Spaß macht."
