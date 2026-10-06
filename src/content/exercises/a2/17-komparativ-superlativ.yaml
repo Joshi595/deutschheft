@@ -1,0 +1,219 @@
+lesson: a2.17
+sets:
+  - title: The forms
+    items:
+      - id: form1
+        type: matching
+        tags: [irregular comparison]
+        prompt: Match each adjective with its comparative.
+        pairs:
+          - { left: gut, right: besser }
+          - { left: viel, right: mehr }
+          - { left: gern, right: lieber }
+          - { left: hoch, right: höher }
+          - { left: nah, right: näher }
+      - id: form2
+        type: fill-blank
+        tags: [comparative]
+        prompt: "billig → ___"
+        answers: [billiger]
+      - id: form3
+        type: fill-blank
+        tags: [comparative, umlaut]
+        prompt: "alt → ___"
+        answers: [älter]
+      - id: form4
+        type: fill-blank
+        tags: [comparative, umlaut]
+        prompt: "jung → ___"
+        answers: [jünger]
+      - id: form5
+        type: fill-blank
+        tags: [comparative]
+        prompt: "teuer → ___"
+        answers: [teurer]
+      - id: form6
+        type: fill-blank
+        tags: [superlative]
+        prompt: "schnell → am ___"
+        answers: [schnellsten]
+      - id: form7
+        type: fill-blank
+        tags: [superlative]
+        prompt: "kurz → am ___"
+        answers: [kürzesten]
+      - id: form8
+        type: fill-blank
+        tags: [superlative]
+        prompt: "gut → am ___"
+        answers: [besten]
+
+  - title: als or wie?
+    items:
+      - id: alswie1
+        type: multiple-choice
+        tags: [als wie]
+        prompt: "Der Zug ist schneller ___ der Bus."
+        options: [als, wie, dann]
+        answer: als
+      - id: alswie2
+        type: multiple-choice
+        tags: [als wie]
+        prompt: "Mein Zimmer ist genauso groß ___ dein Zimmer."
+        options: [wie, als]
+        answer: wie
+      - id: alswie3
+        type: multiple-choice
+        tags: [als wie]
+        prompt: "Heute ist es nicht so kalt ___ gestern."
+        options: [wie, als]
+        answer: wie
+      - id: alswie4
+        type: multiple-choice
+        tags: [als wie]
+        prompt: "Sie spricht besser Deutsch ___ ich."
+        options: [als, wie]
+        answer: als
+
+  - title: Which sentence is correct?
+    items:
+      - id: corr1
+        type: multiple-choice
+        tags: [comparative]
+        prompt: Choose the correct sentence.
+        options:
+          - "Deutsch ist schwieriger als Englisch."
+          - "Deutsch ist mehr schwierig als Englisch."
+          - "Deutsch ist schwieriger wie Englisch."
+        answer: "Deutsch ist schwieriger als Englisch."
+      - id: corr2
+        type: multiple-choice
+        tags: [superlative]
+        prompt: Choose the correct sentence.
+        options:
+          - "Im Juli ist es am wärmsten."
+          - "Im Juli ist es am warmsten."
+          - "Im Juli ist es wärmste."
+        answer: "Im Juli ist es am wärmsten."
+      - id: corr3
+        type: true-false
+        tags: [gern lieber]
+        prompt: "'Ich trinke lieber Tee' means 'I prefer tea'."
+        answer: true
+
+  - title: Before a noun
+    items:
+      - id: noun1
+        type: fill-blank
+        tags: [comparative endings]
+        prompt: "Wir suchen eine ___ Wohnung. (groß, comparative)"
+        answers: [größere]
+      - id: noun2
+        type: fill-blank
+        tags: [superlative endings]
+        prompt: "Das ist der ___ Tag des Jahres. (schön, superlative)"
+        answers: [schönste]
+      - id: noun3
+        type: fill-blank
+        tags: [comparative endings]
+        prompt: "Wir nehmen das ___ Hotel. (billig, comparative)"
+        answers: [billigere]
+
+  - title: Comparing two trips
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [comparison]
+        prompt: Fill in the gaps.
+        bank: [als, wie, lieber, am, billiger, besten]
+        text: "Mit dem Zug nach Hamburg ist es teurer ___ mit dem Bus, aber schneller. Der Bus ist ___, aber nicht so bequem ___ der Zug. Ich fahre ___ mit dem Zug, denn dort kann ich arbeiten. Am ___ ist natürlich das Auto, aber ich habe keins. Und ___ schnellsten ist das Flugzeug."
+        gaps:
+          - [als]
+          - [billiger]
+          - [wie]
+          - [lieber]
+          - [besten]
+          - [am]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [comparative]
+        prompt: My brother is older than me.
+        answer: "Mein Bruder ist älter als ich."
+      - id: order2
+        type: word-order
+        tags: [gern lieber]
+        prompt: Most of all I like eating pizza.
+        answer: "Am liebsten esse ich Pizza."
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [comparative]
+        prompt: The bus is not as fast as the train.
+        answers:
+          - "Der Bus ist nicht so schnell wie der Zug."
+      - id: tr2
+        type: translation
+        tags: [comparative]
+        prompt: The food here is better than in the canteen.
+        answers:
+          - "Das Essen hier ist besser als in der Kantine."
+
+  - title: Which hotel?
+    stimulus:
+      kind: audio
+      label: Hotelsuche
+      lines:
+        - speaker: Mann
+          text: "Wir haben zwei Hotels zur Auswahl. Das Hotel am See kostet neunzig Euro pro Nacht, das Hotel im Zentrum hundertzwanzig."
+        - speaker: Frau
+          text: "Das am See ist billiger. Aber wie weit ist es vom Zentrum?"
+        - speaker: Mann
+          text: "Zwanzig Minuten mit dem Bus. Das Hotel im Zentrum ist natürlich näher."
+        - speaker: Frau
+          text: "Und welches ist schöner?"
+        - speaker: Mann
+          text: "Ich finde das am See schöner. Es ist ruhiger und hat einen Garten."
+        - speaker: Frau
+          text: "Dann nehmen wir das am See. Ruhe ist mir am wichtigsten."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Welches Hotel ist billiger?
+        options: ["das Hotel am See", "das Hotel im Zentrum"]
+        answer: "das Hotel am See"
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Das Hotel am See ist näher am Zentrum.
+        answer: false
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was ist der Frau am wichtigsten?
+        options: [Ruhe, der Preis, das Zentrum]
+        answer: Ruhe
+
+  - title: Your choice
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, comparison]
+        prompt: "City or countryside? Compare living in a city with living in the country and say which you prefer."
+        cards: [Preise, Verkehr, Ruhe, Freizeit, Arbeit]
+        phrases:
+          - In der Stadt ist … teurer / lauter / interessanter als auf dem Land.
+          - Auf dem Land ist es nicht so … wie in der Stadt.
+          - Am wichtigsten ist für mich …
+          - Ich wohne lieber …, weil …
+        checklist:
+          - I made at least three comparisons with als
+          - I used so … wie or nicht so … wie once
+          - I said what I prefer with lieber or am liebsten
+        sample: "In der Stadt sind die Wohnungen teurer als auf dem Land, und es ist lauter. Aber es gibt mehr Arbeit und die Freizeit ist interessanter. Auf dem Land ist es ruhiger, aber der Bus fährt nicht so oft wie in der Stadt. Für mich ist die Natur am wichtigsten, deshalb wohne ich lieber auf dem Land."
