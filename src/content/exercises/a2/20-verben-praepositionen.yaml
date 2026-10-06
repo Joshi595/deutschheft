@@ -1,0 +1,196 @@
+lesson: a2.20
+sets:
+  - title: Which preposition?
+    items:
+      - id: prep1
+        type: multiple-choice
+        tags: [verbs with prepositions]
+        prompt: "Ich warte ___ den Bus."
+        options: [auf, für, an]
+        answer: auf
+      - id: prep2
+        type: multiple-choice
+        tags: [verbs with prepositions]
+        prompt: "Er interessiert sich ___ Fußball."
+        options: [für, in, an]
+        answer: für
+      - id: prep3
+        type: multiple-choice
+        tags: [verbs with prepositions]
+        prompt: "Ich denke oft ___ meine Familie."
+        options: [an, auf, über]
+        answer: an
+      - id: prep4
+        type: multiple-choice
+        tags: [verbs with prepositions]
+        prompt: "Das Kind hat Angst ___ dem Hund."
+        options: [vor, von, für]
+        answer: vor
+      - id: prep5
+        type: multiple-choice
+        tags: [verbs with prepositions]
+        prompt: "Wer kümmert sich ___ die Katze?"
+        options: [um, für, auf]
+        answer: um
+      - id: prep6
+        type: matching
+        tags: [verbs with prepositions]
+        prompt: Match the verb with its preposition.
+        pairs:
+          - { left: träumen, right: von }
+          - { left: sich ärgern, right: über }
+          - { left: teilnehmen, right: an }
+          - { left: fragen, right: nach }
+          - { left: telefonieren, right: mit }
+
+  - title: auf or über?
+    items:
+      - id: freuen1
+        type: multiple-choice
+        tags: [sich freuen]
+        prompt: "Nächste Woche fahren wir weg. Ich freue mich ___ den Urlaub."
+        options: [auf, über]
+        answer: auf
+      - id: freuen2
+        type: multiple-choice
+        tags: [sich freuen]
+        prompt: "Danke für das Geschenk! Ich freue mich sehr ___ das Buch."
+        options: [über, auf]
+        answer: über
+
+  - title: The case
+    items:
+      - id: case1
+        type: fill-blank
+        tags: [case]
+        prompt: "Ich warte auf ___ Zug. (der)"
+        answers: [den]
+      - id: case2
+        type: fill-blank
+        tags: [case]
+        prompt: "Ich spreche mit ___ Chefin. (die)"
+        answers: [der]
+      - id: case3
+        type: fill-blank
+        tags: [case]
+        prompt: "Ich nehme an ___ Kurs teil. (ein)"
+        answers: [einem]
+
+  - title: Ask the question
+    items:
+      - id: q1
+        type: multiple-choice
+        tags: [wo-words]
+        prompt: "___ wartest du? – Auf den Bus."
+        options: [Worauf, Auf wen, Wofür]
+        answer: Worauf
+      - id: q2
+        type: multiple-choice
+        tags: [wo-words]
+        prompt: "___ wartest du? – Auf meine Schwester."
+        options: [Auf wen, Worauf, Wem]
+        answer: Auf wen
+      - id: q3
+        type: multiple-choice
+        tags: [wo-words]
+        prompt: "___ interessierst du dich? – Für Geschichte."
+        options: [Wofür, Für wen, Worauf]
+        answer: Wofür
+      - id: q4
+        type: multiple-choice
+        tags: [wo-words]
+        prompt: "___ hast du telefoniert? – Mit meinem Vater."
+        options: [Mit wem, Womit, Mit wen]
+        answer: Mit wem
+      - id: q5
+        type: fill-blank
+        tags: [wo-words]
+        prompt: "___ habt ihr gesprochen? – Über das Wetter."
+        answers: [Worüber]
+
+  - title: Answer short
+    items:
+      - id: da1
+        type: multiple-choice
+        tags: [da-words]
+        prompt: "Freust du dich auf die Party? – Ja, ich freue mich ___."
+        options: [darauf, auf sie, worauf]
+        answer: darauf
+      - id: da2
+        type: multiple-choice
+        tags: [da-words]
+        prompt: "Denkst du an Tom? – Ja, ich denke oft ___."
+        options: [an ihn, daran, woran]
+        answer: an ihn
+        explanation: Tom is a person, so preposition + pronoun.
+      - id: da3
+        type: fill-blank
+        tags: [da-words]
+        prompt: "Interessierst du dich für Politik? – Nein, ___ interessiere ich mich nicht."
+        answers: [dafür]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [verbs with prepositions]
+        prompt: I am looking forward to the holidays.
+        answer: "Ich freue mich auf die Ferien."
+      - id: order2
+        type: word-order
+        tags: [verbs with prepositions]
+        prompt: Who looks after the children?
+        answer: "Wer kümmert sich um die Kinder?"
+
+  - title: Plans and worries
+    stimulus:
+      kind: audio
+      label: Vor der Prüfung
+      lines:
+        - speaker: Nina
+          text: "Hey Max, du siehst müde aus. Worüber denkst du nach?"
+        - speaker: Max
+          text: "Über die Prüfung am Freitag. Ich habe ein bisschen Angst davor."
+        - speaker: Nina
+          text: "Du hast doch so viel gelernt! Ich freue mich schon auf die Zeit danach. Wir fahren ans Meer, oder?"
+        - speaker: Max
+          text: "Ja, darauf freue ich mich auch. Aber wer kümmert sich dann um meinen Hund?"
+        - speaker: Nina
+          text: "Frag doch deine Schwester. Sie interessiert sich doch so für Hunde."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wovor hat Max Angst?
+        options: ["vor der Prüfung", "vor dem Meer", "vor dem Hund"]
+        answer: "vor der Prüfung"
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Max freut sich auf die Reise ans Meer.
+        answer: true
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wer kann sich vielleicht um den Hund kümmern?
+        options: ["Max' Schwester", "Nina", "Max' Eltern"]
+        answer: "Max' Schwester"
+
+  - title: About you
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, verbs with prepositions]
+        prompt: Answer the questions about yourself in full sentences.
+        cards: [Wofür interessierst du dich?, Worauf freust du dich?, Worüber ärgerst du dich?, Wovon träumst du?]
+        phrases:
+          - Ich interessiere mich für …
+          - Ich freue mich auf …
+          - Ich ärgere mich oft über …
+          - Ich träume von …
+        checklist:
+          - I answered all four questions
+          - I used the right preposition each time
+          - The case after the preposition was right
+        sample: "Ich interessiere mich für Musik und Kochen. Ich freue mich auf meinen Urlaub im August. Ich ärgere mich oft über die Verspätungen der Bahn. Und ich träume von einem kleinen Haus mit Garten."

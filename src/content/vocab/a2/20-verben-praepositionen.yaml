@@ -1,0 +1,111 @@
+lesson: a2.20
+items:
+  - id: warten-auf
+    de: warten auf + A
+    en: to wait for
+    pos: verb
+    example: Ich warte auf den Bus.
+    exampleEn: I am waiting for the bus.
+  - id: sich-freuen-auf
+    de: sich freuen auf + A
+    en: to look forward to
+    pos: verb
+    example: Ich freue mich auf das Wochenende.
+    exampleEn: I am looking forward to the weekend.
+  - id: sich-freuen-ueber
+    de: sich freuen über + A
+    en: to be pleased about
+    pos: verb
+    example: Sie freut sich über die Blumen.
+    exampleEn: She is pleased with the flowers.
+  - id: denken-an
+    de: denken an + A
+    en: to think of
+    pos: verb
+    example: Ich denke oft an dich.
+    exampleEn: I often think of you.
+  - id: sich-erinnern-an
+    de: sich erinnern an + A
+    en: to remember
+    pos: verb
+    example: Ich erinnere mich gut an den Urlaub.
+    exampleEn: I remember the holiday well.
+  - id: sich-interessieren-fuer
+    de: sich interessieren für + A
+    en: to be interested in
+    pos: verb
+    example: Interessierst du dich für Kunst?
+    exampleEn: Are you interested in art?
+  - id: sich-aergern-ueber
+    de: sich ärgern über + A
+    en: to be annoyed about
+    pos: verb
+    example: Er ärgert sich über das Wetter.
+    exampleEn: He is annoyed about the weather.
+  - id: sich-kuemmern-um
+    de: sich kümmern um + A
+    en: to look after, to take care of
+    pos: verb
+    example: Wer kümmert sich um die Kinder?
+    exampleEn: Who looks after the children?
+  - id: angst-haben-vor
+    de: Angst haben vor + D
+    en: to be afraid of
+    pos: verb
+    example: Ich habe Angst vor der Prüfung.
+    exampleEn: I am afraid of the exam.
+  - id: traeumen-von
+    de: träumen von + D
+    en: to dream of
+    pos: verb
+    example: Er träumt von einer Weltreise.
+    exampleEn: He dreams of a trip round the world.
+  - id: teilnehmen-an
+    de: teilnehmen an + D
+    en: to take part in
+    pos: verb
+    example: Ich nehme an einem Kurs teil.
+    exampleEn: I am taking part in a course.
+  - id: fragen-nach
+    de: fragen nach + D
+    en: to ask about
+    pos: verb
+    example: Der Tourist fragt nach dem Weg.
+    exampleEn: The tourist asks the way.
+  - id: sprechen-ueber
+    de: sprechen über + A
+    en: to talk about
+    pos: verb
+    example: Wir sprechen über die Arbeit.
+    exampleEn: We are talking about work.
+  - id: worauf
+    de: worauf?
+    en: what … for / on?
+    pos: other
+    example: Worauf wartest du?
+    exampleEn: What are you waiting for?
+  - id: darauf
+    de: darauf
+    en: on it, for it, to it
+    pos: adverb
+    example: Ich freue mich schon darauf.
+    exampleEn: I am already looking forward to it.
+  - id: wofuer
+    de: wofür?
+    en: what … for / in?
+    pos: other
+    example: Wofür interessierst du dich?
+    exampleEn: What are you interested in?
+  - id: sich-verabschieden
+    de: sich verabschieden von + D
+    en: to say goodbye to
+    pos: verb
+    example: Ich verabschiede mich von meinen Kollegen.
+    exampleEn: I am saying goodbye to my colleagues.
+  - id: laerm
+    de: Lärm
+    en: noise
+    pos: noun
+    article: der
+    example: Der Lärm von der Baustelle ist schrecklich.
+    exampleEn: The noise from the building site is terrible.
