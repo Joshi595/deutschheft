@@ -1,0 +1,167 @@
+lesson: a2.25
+sets:
+  - title: At the doctor's
+    items:
+      - id: doc1
+        type: multiple-choice
+        tags: [symptoms]
+        prompt: "Ich ___ Fieber und Husten."
+        options: [habe, bin, tue]
+        answer: habe
+      - id: doc2
+        type: multiple-choice
+        tags: [symptoms]
+        prompt: "Der Rücken tut ___ weh."
+        options: [mir, mich, ich]
+        answer: mir
+      - id: doc3
+        type: multiple-choice
+        tags: [symptoms]
+        prompt: "Ich habe ___ drei Tagen Halsschmerzen."
+        options: [seit, für, vor]
+        answer: seit
+      - id: doc4
+        type: fill-blank
+        tags: [symptoms]
+        prompt: "Ich bin hingefallen und habe mich ___. (hurt)"
+        answers: [verletzt]
+      - id: doc5
+        type: matching
+        tags: [health vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: das Rezept, right: the prescription }
+          - { left: die Apotheke, right: the pharmacy }
+          - { left: der Termin, right: the appointment }
+          - { left: Mir ist schlecht., right: I feel sick. }
+          - { left: Gute Besserung!, right: Get well soon! }
+
+  - title: Medicine instructions
+    stimulus:
+      kind: text
+      label: Beipackzettel
+      text: "Erwachsene: dreimal täglich 1 Tablette nach dem Essen mit einem Glas Wasser. Kinder unter 12 Jahren: nur nach Rücksprache mit dem Arzt. Nicht länger als 5 Tage nehmen. Nicht zusammen mit Alkohol einnehmen."
+    items:
+      - id: med1
+        type: true-false
+        tags: [reading]
+        prompt: Erwachsene nehmen die Tabletten vor dem Essen.
+        answer: false
+      - id: med2
+        type: true-false
+        tags: [reading]
+        prompt: Man darf die Tabletten höchstens fünf Tage nehmen.
+        answer: true
+      - id: med3
+        type: multiple-choice
+        tags: [reading]
+        prompt: Was gilt für Kinder unter 12?
+        options: ["Sie müssen zuerst den Arzt fragen.", "Sie nehmen eine halbe Tablette.", "Sie dürfen die Tabletten nie nehmen."]
+        answer: "Sie müssen zuerst den Arzt fragen."
+
+  - title: Travel
+    items:
+      - id: travel1
+        type: multiple-choice
+        tags: [travel]
+        prompt: "You want a ticket there and back. You ask for a ticket ___."
+        options: [hin und zurück, einfach, mit Anschluss]
+        answer: hin und zurück
+      - id: travel2
+        type: fill-blank
+        tags: [travel]
+        prompt: "Von welchem ___ fährt der Zug nach Bonn? (platform)"
+        answers: [Gleis]
+      - id: travel3
+        type: fill-blank
+        tags: [travel]
+        prompt: "Der Zug hat zwanzig Minuten ___. (delay)"
+        answers: [Verspätung]
+      - id: travel4
+        type: translation
+        tags: [travel]
+        prompt: I would like a double room with breakfast.
+        answers:
+          - "Ich hätte gern ein Doppelzimmer mit Frühstück."
+          - "Ich möchte ein Doppelzimmer mit Frühstück."
+      - id: travel5
+        type: multiple-choice
+        tags: [travel, perfect tense]
+        prompt: "Letztes Jahr ___ wir nach Portugal geflogen."
+        options: [sind, haben]
+        answer: sind
+
+  - title: A holiday story
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [holiday, perfect tense]
+        prompt: Fill in the gaps.
+        bank: [sind, war, hat, haben, Leider, gefallen]
+        text: "Im Sommer ___ wir nach Griechenland geflogen. Das Hotel ___ sehr schön und direkt am Meer. Wir ___ viel gebadet und Fisch gegessen. ___ hat mein Mann sich am dritten Tag den Fuß verletzt. Am besten ___ mir die Insel Kreta ___."
+        gaps:
+          - [sind]
+          - [war]
+          - [haben]
+          - [Leider]
+          - [hat]
+          - [gefallen]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [advice]
+        prompt: You should stay in bed for a few days.
+        answer: "Sie sollten ein paar Tage im Bett bleiben."
+      - id: order2
+        type: word-order
+        tags: [medicine]
+        prompt: Take the tablets three times a day after meals.
+        answer: "Nehmen Sie die Tabletten dreimal täglich nach dem Essen."
+
+  - title: An announcement
+    stimulus:
+      kind: audio
+      label: Durchsage am Bahnhof
+      lines:
+        - speaker: Durchsage
+          text: "Achtung an Gleis 5. Der ICE 691 nach Stuttgart, planmäßige Abfahrt 14 Uhr 12, hat heute circa 25 Minuten Verspätung. Fahrgäste mit Anschluss nach Ulm nehmen bitte den Regionalexpress um 14 Uhr 20 von Gleis 8. Wir bitten um Entschuldigung."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wie viel Verspätung hat der ICE?
+        options: ["circa 25 Minuten", "circa 12 Minuten", "circa 20 Minuten"]
+        answer: "circa 25 Minuten"
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Von welchem Gleis fährt der Zug nach Ulm?
+        options: ["Gleis 8", "Gleis 5", "Gleis 14"]
+        answer: "Gleis 8"
+      - id: listen3
+        type: true-false
+        tags: [listening]
+        prompt: Der ICE nach Stuttgart fällt heute aus.
+        answer: false
+
+  - title: Call the surgery
+    items:
+      - id: speak1
+        type: speaking-task
+        tags: [speaking, health]
+        prompt: You are ill. Call your doctor's surgery, describe your symptoms and ask for an appointment today.
+        cards: [Name, Symptome, Seit wann?, Termin heute?, Versicherung]
+        phrases:
+          - Guten Tag, mein Name ist …
+          - Ich habe seit … Fieber / Schmerzen …
+          - Haben Sie heute noch einen Termin frei? Es ist dringend.
+          - Ich bin bei der … versichert.
+        checklist:
+          - I gave my name
+          - I described at least two symptoms with seit
+          - I asked for an appointment politely
+          - I answered the question about insurance
+        sample: "Guten Tag, mein Name ist Marco Rossi. Ich habe seit gestern hohes Fieber und starke Halsschmerzen. Außerdem tut mir der Kopf weh. Haben Sie heute noch einen Termin frei? Es ist ziemlich dringend. Ich bin bei der AOK gesetzlich versichert."
