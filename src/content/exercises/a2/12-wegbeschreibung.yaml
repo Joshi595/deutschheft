@@ -1,0 +1,186 @@
+lesson: a2.12
+sets:
+  - title: Words for the way
+    items:
+      - id: word1
+        type: matching
+        tags: [directions]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: geradeaus, right: straight on }
+          - { left: die Ampel, right: the traffic lights }
+          - { left: die Kreuzung, right: the crossroads }
+          - { left: abbiegen, right: to turn }
+          - { left: umsteigen, right: to change }
+          - { left: die Haltestelle, right: the stop }
+      - id: word2
+        type: multiple-choice
+        tags: [directions]
+        prompt: "Entschuldigung, wie komme ich ___ Bahnhof?"
+        options: [zum, nach, zur]
+        answer: zum
+      - id: word3
+        type: multiple-choice
+        tags: [directions]
+        prompt: "Entschuldigung, wie komme ich ___ Post?"
+        options: [zur, zum, nach]
+        answer: zur
+      - id: word4
+        type: fill-blank
+        tags: [directions]
+        prompt: "Die Bank ist auf der rechten ___."
+        answers: [Seite]
+
+  - title: Route prepositions
+    items:
+      - id: prep1
+        type: multiple-choice
+        tags: [route prepositions]
+        prompt: "Gehen Sie ___ den Park."
+        options: [durch, entlang, bis]
+        answer: durch
+      - id: prep2
+        type: multiple-choice
+        tags: [route prepositions]
+        prompt: "Gehen Sie über ___ Brücke."
+        options: [die, der]
+        answer: die
+      - id: prep3
+        type: multiple-choice
+        tags: [route prepositions]
+        prompt: "Fahren Sie die Straße ___."
+        options: [entlang, durch, vorbei]
+        answer: entlang
+      - id: prep4
+        type: fill-blank
+        tags: [route prepositions]
+        prompt: "Gehen Sie bis ___ Ampel. (zu + der)"
+        answers: [zur]
+      - id: prep5
+        type: fill-blank
+        tags: [route prepositions]
+        prompt: "Sie gehen am Kino ___."
+        answers: [vorbei]
+
+  - title: Separable verbs on the way
+    items:
+      - id: sep1
+        type: fill-blank
+        tags: [separable verbs]
+        prompt: "An der Kreuzung biegen Sie links ___."
+        answers: [ab]
+      - id: sep2
+        type: multiple-choice
+        tags: [separable verbs]
+        prompt: "Gestern ___ ich am Hauptbahnhof umgestiegen."
+        options: [bin, habe]
+        answer: bin
+      - id: sep3
+        type: fill-blank
+        tags: [separable verbs]
+        prompt: "Sie müssen am Marktplatz ___. (to get off)"
+        answers: [aussteigen]
+
+  - title: Give the directions
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [directions, route prepositions]
+        prompt: Complete the directions.
+        bank: [geradeaus, über, links, vorbei, Seite, Zuerst]
+        text: "___ gehen Sie hier ___ bis zur Ampel. Dann biegen Sie ___ ab. Gehen Sie ___ die Brücke und am Supermarkt ___. Das Museum ist auf der rechten ___."
+        gaps:
+          - [Zuerst]
+          - [geradeaus]
+          - [links]
+          - [über]
+          - [vorbei]
+          - [Seite]
+
+  - title: Build the sentence
+    instructions: Put the words in the right order.
+    items:
+      - id: order1
+        type: word-order
+        tags: [directions]
+        prompt: Turn right at the traffic lights.
+        answer: "An der Ampel biegen Sie rechts ab."
+      - id: order2
+        type: word-order
+        tags: [transport]
+        prompt: Take the number 4 towards the centre.
+        answer: "Nehmen Sie die Linie 4 Richtung Zentrum."
+      - id: order3
+        type: word-order
+        tags: [directions]
+        prompt: Is there a pharmacy near here?
+        answer: "Gibt es hier in der Nähe eine Apotheke?"
+
+  - title: Say it in German
+    items:
+      - id: tr1
+        type: translation
+        tags: [directions]
+        prompt: "Excuse me, how do I get to the town hall?"
+        answers:
+          - "Entschuldigung, wie komme ich zum Rathaus?"
+      - id: tr2
+        type: translation
+        tags: [directions]
+        prompt: "Could you repeat that, please?"
+        answers:
+          - "Können Sie das bitte wiederholen?"
+          - "Könnten Sie das bitte wiederholen?"
+
+  - title: On the street
+    stimulus:
+      kind: audio
+      label: Der Weg zum Museum
+      lines:
+        - speaker: Touristin
+          text: "Entschuldigung, wie komme ich zum Stadtmuseum?"
+        - speaker: Mann
+          text: "Zum Museum? Das ist nicht weit, ungefähr zehn Minuten zu Fuß. Gehen Sie hier geradeaus bis zur Kirche."
+        - speaker: Touristin
+          text: "Bis zur Kirche, ja."
+        - speaker: Mann
+          text: "Dort biegen Sie rechts ab und gehen durch den Park. Danach kommen Sie an einer Bäckerei vorbei, und das Museum ist auf der linken Seite."
+        - speaker: Touristin
+          text: "Vielen Dank!"
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wie lange braucht die Frau zu Fuß?
+        options: ["etwa zehn Minuten", "etwa zwei Minuten", "etwa eine halbe Stunde"]
+        answer: "etwa zehn Minuten"
+      - id: listen2
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wo biegt sie rechts ab?
+        options: ["an der Kirche", "an der Ampel", "an der Bäckerei"]
+        answer: "an der Kirche"
+      - id: listen3
+        type: true-false
+        tags: [listening]
+        prompt: Das Museum ist auf der rechten Seite.
+        answer: false
+
+  - title: Explain the way
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, directions]
+        prompt: "A friend is visiting you for the first time and arrives at the station. Write a message explaining how to get from the station to your flat."
+        points:
+          - Which bus or tram to take, or that it is walkable
+          - Where to get off or which way to walk
+          - At least two landmarks on the way
+          - Which house or floor it is
+        minWords: 40
+        phrases:
+          - Nimm am Bahnhof die Linie … Richtung …
+          - Steig an der Haltestelle … aus.
+          - Geh geradeaus / über … / an … vorbei.
+          - Ich wohne im … Stock.
+        sample: "Hallo Mia, vom Bahnhof ist es ganz einfach. Nimm die Linie 7 Richtung Uni und steig an der Haltestelle Lindenplatz aus. Dann geh die Hauptstraße entlang bis zur Ampel und links. Du kommst an einer Apotheke vorbei. Mein Haus ist das gelbe, Nummer 12. Ich wohne im dritten Stock. Bis bald! Lukas"
