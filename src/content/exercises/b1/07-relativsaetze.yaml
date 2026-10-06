@@ -1,0 +1,163 @@
+lesson: b1.07
+sets:
+  - title: Nominative
+    items:
+      - id: nom1
+        type: fill-blank
+        tags: [nominative]
+        prompt: "Der Mann, ___ dort steht, ist mein Chef."
+        answers: [der]
+      - id: nom2
+        type: fill-blank
+        tags: [nominative]
+        prompt: "Ich habe eine Kollegin, ___ fünf Sprachen spricht."
+        answers: [die]
+      - id: nom3
+        type: fill-blank
+        tags: [nominative]
+        prompt: "Das ist das Kind, ___ so gut singt."
+        answers: [das]
+      - id: nom4
+        type: fill-blank
+        tags: [nominative]
+        prompt: "Die Leute, ___ hier wohnen, sind sehr nett."
+        answers: [die]
+
+  - title: Accusative
+    items:
+      - id: acc1
+        type: multiple-choice
+        tags: [accusative]
+        prompt: "Der Film, ___ ich gestern gesehen habe, war super."
+        options: [den, der, dem]
+        answer: den
+      - id: acc2
+        type: multiple-choice
+        tags: [accusative]
+        prompt: "Die Frau, ___ du kennst, ist meine Tante."
+        options: [die, der, den]
+        answer: die
+      - id: acc3
+        type: multiple-choice
+        tags: [accusative]
+        prompt: "Der Pullover, ___ du trägst, ist schön."
+        options: [den, der, das]
+        answer: den
+      - id: acc4
+        type: fill-blank
+        tags: [accusative]
+        prompt: "Das Buch, ___ sie mir geschenkt hat, ist spannend."
+        answers: [das]
+
+  - title: Dative
+    items:
+      - id: dat1
+        type: multiple-choice
+        tags: [dative]
+        prompt: "Der Freund, ___ ich geholfen habe, hat mich eingeladen."
+        options: [dem, den, der]
+        answer: dem
+      - id: dat2
+        type: multiple-choice
+        tags: [dative]
+        prompt: "Die Kollegin, ___ das Auto gehört, ist im Urlaub."
+        options: [der, die, dem]
+        answer: der
+      - id: dat3
+        type: multiple-choice
+        tags: [dative]
+        prompt: "Das sind die Nachbarn, ___ ich die Schlüssel gegeben habe."
+        options: [denen, den, die]
+        answer: denen
+      - id: dat4
+        type: fill-blank
+        tags: [dative]
+        prompt: "Das Kind, ___ ich das Buch vorgelesen habe, ist eingeschlafen."
+        answers: [dem]
+
+  - title: Whose
+    items:
+      - id: gen1
+        type: multiple-choice
+        tags: [dessen deren]
+        prompt: "Das ist der Mann, ___ Auto vor meiner Tür steht."
+        options: [dessen, deren, dem]
+        answer: dessen
+      - id: gen2
+        type: multiple-choice
+        tags: [dessen deren]
+        prompt: "Die Frau, ___ Sohn in meiner Klasse ist, ist Ärztin."
+        options: [deren, dessen, der]
+        answer: deren
+      - id: gen3
+        type: fill-blank
+        tags: [dessen deren]
+        prompt: "Die Familie, ___ Haus wir gekauft haben, wohnt jetzt in Spanien."
+        answers: [deren]
+
+  - title: Join the sentences
+    instructions: Make one sentence with a relative clause.
+    items:
+      - id: join1
+        type: translation
+        tags: [building relative clauses]
+        prompt: "Ich habe einen Freund. Der Freund wohnt in Rom."
+        answers:
+          - "Ich habe einen Freund, der in Rom wohnt."
+      - id: join2
+        type: translation
+        tags: [building relative clauses]
+        prompt: "Die Wohnung ist zu teuer. Wir haben die Wohnung gestern besichtigt."
+        answers:
+          - "Die Wohnung, die wir gestern besichtigt haben, ist zu teuer."
+      - id: join3
+        type: word-order
+        tags: [building relative clauses]
+        prompt: The restaurant you recommended to me was great.
+        answer: "Das Restaurant, das du mir empfohlen hast, war toll."
+
+  - title: True or false?
+    items:
+      - id: tf1
+        type: true-false
+        tags: [rules]
+        prompt: "In German you can leave out the relative pronoun, as in English 'the film I saw'."
+        answer: false
+      - id: tf2
+        type: true-false
+        tags: [rules]
+        prompt: "The case of the relative pronoun comes from its job in the relative clause."
+        answer: true
+
+  - title: People in my building
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [all cases]
+        prompt: Fill in the relative pronouns.
+        bank: [der, die, den, dem, denen, deren]
+        text: "Im Erdgeschoss wohnt Herr Kurz, ___ jeden Morgen joggen geht. Über ihm wohnt eine Familie, ___ Kinder sehr laut sind. Im zweiten Stock wohnt eine Studentin, ___ ich manchmal beim Deutschlernen helfe. Ganz oben wohnen zwei alte Damen, ___ ich oft die Einkäufe trage. Und der Hausmeister, ___ alle kennen, wohnt im Keller."
+        gaps:
+          - [der]
+          - [deren]
+          - [der]
+          - [denen]
+          - [den]
+
+  - title: Describe it
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, relative clauses]
+        prompt: "Describe three people who are important in your life. Use at least one relative clause for each."
+        points:
+          - Person 1, with a relative clause
+          - Person 2, with a relative clause in the accusative or dative
+          - Person 3, with dessen or deren if possible
+          - Why these people are important to you
+        minWords: 60
+        phrases:
+          - Meine Mutter ist eine Frau, die …
+          - Mein bester Freund ist jemand, dem ich …
+          - Meine Lehrerin, deren …, …
+        sample: "Meine Großmutter ist eine Frau, die nie aufgibt. Sie hat sieben Kinder großgezogen. Mein bester Freund ist Jonas, den ich seit der Schule kenne und dem ich alles erzählen kann. Und dann gibt es meine erste Deutschlehrerin, deren Unterricht mir so viel Spaß gemacht hat, dass ich weitergelernt habe. Diese drei Menschen sind wichtig für mich, weil sie mir immer Mut gemacht haben."
