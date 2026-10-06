@@ -1,0 +1,175 @@
+lesson: b1.23
+sets:
+  - title: Words
+    items:
+      - id: w1
+        type: matching
+        tags: [vocabulary]
+        prompt: Match the German with the English.
+        pairs:
+          - { left: abnehmen, right: to lose weight }
+          - { left: zunehmen, right: to put on weight }
+          - { left: sich entspannen, right: to relax }
+          - { left: schwindelig, right: dizzy }
+          - { left: die Überweisung, right: the referral }
+          - { left: der Hausarzt, right: the GP }
+      - id: w2
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Yoga hilft mir, Stress ___. (abbauen, with zu)"
+        answers: [abzubauen]
+      - id: w3
+        type: fill-blank
+        tags: [vocabulary]
+        prompt: "Bei welcher ___ sind Sie versichert? (health insurance company)"
+        answers: [Krankenkasse]
+
+  - title: Grammar in context
+    items:
+      - id: g1
+        type: multiple-choice
+        tags: [reflexive]
+        prompt: "Ich ___ gesund."
+        options: [ernähre mich, ernähre, ernähre mir]
+        answer: ernähre mich
+      - id: g2
+        type: multiple-choice
+        tags: [prepositions]
+        prompt: "Ich verzichte ___ Zucker."
+        options: [auf, von, an]
+        answer: auf
+      - id: g3
+        type: multiple-choice
+        tags: [Konjunktiv II]
+        prompt: "Es wäre besser, wenn du mehr Pausen ___."
+        options: [machen würdest, machst, gemacht hast]
+        answer: machen würdest
+      - id: g4
+        type: multiple-choice
+        tags: [seit]
+        prompt: "Ich ___ seit Wochen Rückenschmerzen."
+        options: [habe, hatte, habe gehabt]
+        answer: habe
+      - id: g5
+        type: word-order
+        tags: [obwohl]
+        prompt: I feel tired all the time although I sleep enough.
+        answer: "Ich fühle mich ständig müde, obwohl ich genug schlafe."
+      - id: g6
+        type: word-order
+        tags: [advice]
+        prompt: If I were you I would go to the doctor.
+        answer: "An deiner Stelle würde ich zum Arzt gehen."
+
+  - title: Healthy or unhealthy?
+    items:
+      - id: hu1
+        type: multiple-choice
+        tags: [lifestyle]
+        prompt: "den ganzen Tag sitzen"
+        options: [unhealthy, healthy]
+        answer: unhealthy
+        shuffle: false
+      - id: hu2
+        type: multiple-choice
+        tags: [lifestyle]
+        prompt: "sich viel bewegen"
+        options: [unhealthy, healthy]
+        answer: healthy
+        shuffle: false
+      - id: hu3
+        type: multiple-choice
+        tags: [lifestyle]
+        prompt: "auf Alkohol verzichten"
+        options: [unhealthy, healthy]
+        answer: healthy
+        shuffle: false
+
+  - title: The health system
+    items:
+      - id: hs1
+        type: true-false
+        tags: [health system]
+        prompt: "In Germany health insurance is compulsory."
+        answer: true
+      - id: hs2
+        type: multiple-choice
+        tags: [health system]
+        prompt: "For a specialist you often need … from your GP."
+        options: [eine Überweisung, eine Rechnung, ein Rezept]
+        answer: eine Überweisung
+      - id: hs3
+        type: multiple-choice
+        tags: [health system]
+        prompt: "Your employer needs a document saying you are ill. It is called …"
+        options: [die Krankschreibung, die Krankenkasse, die Notaufnahme]
+        answer: die Krankschreibung
+
+  - title: Advice
+    items:
+      - id: cloze1
+        type: cloze
+        tags: [advice]
+        prompt: Complete the advice.
+        bank: [solltest, wäre, würdest, zu, verzichten, bewegen]
+        text: "Du ___ wirklich mehr schlafen. Es ___ auch besser, wenn du abends weniger Kaffee trinken ___. An deiner Stelle würde ich auf Fast Food ___ und mich mehr ___. Und es ist wichtig, genug Wasser ___ trinken."
+        gaps:
+          - [solltest]
+          - [wäre]
+          - [würdest]
+          - [verzichten]
+          - [bewegen]
+          - [zu]
+
+  - title: At the doctor's
+    stimulus:
+      kind: audio
+      label: In der Praxis
+      lines:
+        - speaker: Ärztin
+          text: "Was kann ich für Sie tun?"
+        - speaker: Patient
+          text: "Seit ein paar Wochen fühle ich mich ständig müde, und manchmal ist mir schwindelig. Am schlimmsten ist es nachmittags."
+        - speaker: Ärztin
+          text: "Wie viel schlafen Sie denn?"
+        - speaker: Patient
+          text: "Höchstens fünf Stunden. Ich habe gerade viel Stress bei der Arbeit."
+        - speaker: Ärztin
+          text: "Das ist zu wenig. Ich mache eine Blutuntersuchung, aber ich glaube, Sie sollten vor allem mehr schlafen und Stress abbauen. Ich schreibe Sie für drei Tage krank."
+    items:
+      - id: listen1
+        type: multiple-choice
+        tags: [listening]
+        prompt: Wann geht es dem Patienten am schlechtesten?
+        options: [nachmittags, morgens, nachts]
+        answer: nachmittags
+      - id: listen2
+        type: true-false
+        tags: [listening]
+        prompt: Der Patient schläft acht Stunden pro Nacht.
+        answer: false
+      - id: listen3
+        type: multiple-choice
+        tags: [listening]
+        prompt: Was macht die Ärztin?
+        options: ["Sie schreibt ihn drei Tage krank.", "Sie gibt ihm Tabletten.", "Sie schickt ihn ins Krankenhaus."]
+        answer: "Sie schreibt ihn drei Tage krank."
+
+  - title: Your opinion
+    items:
+      - id: write1
+        type: writing-task
+        tags: [writing, opinion]
+        prompt: "Forum topic: 'Should unhealthy food like sweets and fast food be more expensive?' Write your opinion."
+        points:
+          - Your opinion
+          - Reasons and an example
+          - An argument against
+          - Your own eating habits
+        minWords: 80
+        phrases:
+          - Ich bin der Meinung, dass …
+          - Dafür spricht, dass …
+          - Andererseits …
+          - Ich selbst ernähre mich …
+        sample: "Ich bin der Meinung, dass ungesundes Essen teurer sein sollte. Dafür spricht, dass viele Menschen, auch Kinder, zu viel Zucker essen und davon krank werden. Zum Beispiel haben immer mehr Jugendliche Übergewicht. Wenn Obst und Gemüse billiger wären als Chips, würden mehr Leute gesund essen. Andererseits ist es nicht fair für Familien mit wenig Geld, wenn alles teurer wird. Ich selbst ernähre mich meistens gesund, aber auf Schokolade möchte ich nicht ganz verzichten. Wichtiger als hohe Preise wäre für mich mehr Unterricht über Ernährung in den Schulen."
