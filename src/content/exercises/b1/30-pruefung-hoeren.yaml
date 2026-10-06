@@ -1,0 +1,93 @@
+lesson: b1.30
+sets:
+  - title: "Teil 1: a voicemail"
+    instructions: Sie hören eine Nachricht zweimal. Lösen Sie beide Aufgaben.
+    stimulus:
+      kind: audio
+      label: Anrufbeantworter
+      lines:
+        - text: "Hallo Frau Brandt, hier ist Kerstin Lehmann von der Sprachschule Lingua. Ihr Kurs am Donnerstag findet leider nicht im Raum 12 statt, sondern im Raum 5 im Erdgeschoss, weil Raum 12 renoviert wird. Außerdem beginnt der Kurs ab nächster Woche schon um 17:30 Uhr statt um 18 Uhr. Bei Fragen erreichen Sie mich bis 16 Uhr."
+    items:
+      - id: h1-1
+        type: true-false
+        prompt: Der Kurs findet am Donnerstag in einem anderen Raum statt.
+        answer: true
+      - id: h1-2
+        type: multiple-choice
+        prompt: Ab nächster Woche beginnt der Kurs …
+        options: ["um 17:30 Uhr.", "um 18 Uhr.", "um 16 Uhr."]
+        answer: "um 17:30 Uhr."
+
+  - title: "Teil 3: a conversation (once)"
+    instructions: Sie hören ein Gespräch einmal. Richtig oder falsch?
+    stimulus:
+      kind: audio
+      label: Geburtstagsgeschenk
+      plays: 1
+      lines:
+        - speaker: Tim
+          text: "Sag mal, was schenken wir eigentlich Papa zum Sechzigsten? Wieder ein Buch?"
+        - speaker: Laura
+          text: "Ach nein, Bücher hat er genug. Ich dachte an einen Kochkurs. Er kocht doch so gern."
+        - speaker: Tim
+          text: "Hm, aber er sagt immer, er hat keine Zeit. Was ist mit einem Wochenende in Wien? Da wollte er schon immer mal hin."
+        - speaker: Laura
+          text: "Das ist teuer. Aber wenn Onkel Peter auch mitbezahlt … Ja, warum nicht. Ich rufe ihn heute Abend an."
+        - speaker: Tim
+          text: "Super. Und ich schaue nach Zugverbindungen."
+    items:
+      - id: h3-1
+        type: true-false
+        prompt: Laura möchte dem Vater wieder ein Buch schenken.
+        answer: false
+      - id: h3-2
+        type: true-false
+        prompt: Am Ende entscheiden sie sich für ein Wochenende in Wien.
+        answer: true
+      - id: h3-3
+        type: true-false
+        prompt: Laura ruft Onkel Peter an.
+        answer: true
+      - id: h3-4
+        type: true-false
+        prompt: Tim bucht ein Hotel.
+        answer: false
+        explanation: He is going to look for train connections.
+
+  - title: "Teil 4: who says what?"
+    instructions: Sie hören eine Diskussion zweimal. Wer sagt das?
+    stimulus:
+      kind: audio
+      label: Radiodiskussion – Homeoffice
+      lines:
+        - speaker: Moderatorin
+          text: "Willkommen zu unserer Sendung. Heute geht es um das Thema Homeoffice. Bei mir sind Frau Wolf, Personalchefin, und Herr Kaya, Softwareentwickler."
+        - speaker: Herr Kaya
+          text: "Für mich ist Homeoffice ideal. Ich spare jeden Tag zwei Stunden Fahrzeit und kann mich zu Hause viel besser konzentrieren."
+        - speaker: Frau Wolf
+          text: "Das verstehe ich. Aber ich sehe auch, dass viele Mitarbeiter sich allein fühlen. Der Kontakt zu den Kollegen fehlt."
+        - speaker: Moderatorin
+          text: "Gibt es denn einen Kompromiss?"
+        - speaker: Frau Wolf
+          text: "Bei uns gibt es jetzt zwei feste Bürotage pro Woche. Das funktioniert gut."
+        - speaker: Herr Kaya
+          text: "Zwei Tage finde ich in Ordnung, aber nicht mehr."
+    items:
+      - id: h4-1
+        type: multiple-choice
+        prompt: Man spart durch Homeoffice viel Zeit.
+        options: [Moderatorin, Frau Wolf, Herr Kaya]
+        answer: Herr Kaya
+        shuffle: false
+      - id: h4-2
+        type: multiple-choice
+        prompt: Manche Menschen fühlen sich im Homeoffice einsam.
+        options: [Moderatorin, Frau Wolf, Herr Kaya]
+        answer: Frau Wolf
+        shuffle: false
+      - id: h4-3
+        type: multiple-choice
+        prompt: Gibt es eine Lösung zwischen beiden Positionen?
+        options: [Moderatorin, Frau Wolf, Herr Kaya]
+        answer: Moderatorin
+        shuffle: false
