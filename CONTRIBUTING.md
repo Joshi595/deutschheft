@@ -9,7 +9,7 @@ src/content/
 ├── lessons/     b1/07-relativsaetze.mdx              the chapter (explanation)
 ├── exercises/   b1/07-relativsaetze.yaml             the practice
 ├── vocab/       b1/07-relativsaetze.yaml             the word list
-└── exams/       b1/modelltest-1.yaml                 mock exams
+└── exams/       b1/modelltest-01.yaml                mock exams
 ```
 
 ## Add a chapter

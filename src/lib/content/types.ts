@@ -83,7 +83,7 @@ export interface QuizSection {
 }
 
 export interface ClientQuiz {
-  /** Storage id for results, e.g. "exam:a1/modelltest-1" or "checkpoint:a1:2". */
+  /** Storage id for results, e.g. "exam:a1/modelltest-01" or "checkpoint:a1:2". */
   id: string;
   kind: 'exam' | 'checkpoint';
   title: string;
