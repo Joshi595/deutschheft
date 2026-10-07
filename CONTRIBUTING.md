@@ -21,7 +21,7 @@ npm run new:lesson -- b1 33 konjunktiv-1 "Reported speech"
 This creates the three files with a template to fill in. Then:
 
 ```
-npm run dev     # see it at http://localhost:4321/German/
+npm run dev     # see it at http://localhost:4321/deutschheft/
 npm test        # checks the template, the minimums and every answer key
 npm run build   # fails if any file breaks the schema
 ```

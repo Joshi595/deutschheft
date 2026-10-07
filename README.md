@@ -3,7 +3,7 @@
 A German notebook that quizzes you back: short lessons, exercises that check themselves,
 spaced-repetition review, and a personal notebook, organised by CEFR level.
 
-Live site: https://joshi595.github.io/German/
+Live site: https://joshi595.github.io/deutschheft/
 
 ## What is in it
 
@@ -39,7 +39,7 @@ Requires Node.js 22.12 or newer.
 
 ```
 npm install
-npm run dev        # http://localhost:4321/German/
+npm run dev        # http://localhost:4321/deutschheft/
 ```
 
 | Command | What it does |
