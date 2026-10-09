@@ -371,12 +371,12 @@ function Checklist({ labels, values, onToggle, disabled, legend }: {
   );
 }
 
-function ModelAnswer({ text }: { text: string }) {
+function ModelAnswer({ text, label = 'Model answer' }: { text: string; label?: string }) {
   return (
     <div className="rounded-xl bg-surface-2 p-4">
-      <p className="eyebrow mb-1">Model answer</p>
+      <p className="eyebrow mb-1">{label}</p>
       <p className="whitespace-pre-line leading-relaxed" lang="de">{text}</p>
-      <button type="button" className="btn btn-quiet btn-small mt-2 -ml-2" onClick={() => speak(text)}>
+      <button type="button" className="listen btn btn-quiet btn-small mt-2 -ml-2" onClick={() => speak(text)}>
         Listen
       </button>
     </div>
@@ -512,6 +512,8 @@ function Recorder({ id, allowRecord }: { id: string; allowRecord: boolean }) {
 
 export function SpeakingTask({ item, response, onChange, locked, phase }: WidgetProps<'speaking-task'>) {
   const compared = response.done.length === item.checklist.length;
+  // Listen-and-repeat hears the model first; a free answer sees it only afterwards.
+  const repeat = item.repeat && phase === 'practice';
   const showModel = phase === 'assess' || (phase === 'practice' && (compared || locked));
 
   const toggle = (index: number) => {
@@ -529,9 +531,16 @@ export function SpeakingTask({ item, response, onChange, locked, phase }: Widget
         </p>
       )}
 
+      {repeat && <ModelAnswer text={item.sample} label="Listen, then repeat" />}
       {phase === 'practice' && <Phrases phrases={item.phrases} />}
 
       <Recorder id={item.id} allowRecord={phase !== 'assess' && !locked} />
+      {phase === 'practice' && !locked && (
+        <p className="text-sm text-muted">
+          Recording is optional and stays on this device. If you cannot speak aloud right now, say it in your head or
+          write it down, then compare.
+        </p>
+      )}
 
       {phase === 'practice' && !compared && !locked && (
         <button
@@ -539,13 +548,13 @@ export function SpeakingTask({ item, response, onChange, locked, phase }: Widget
           className="btn justify-self-start"
           onClick={() => onChange({ type: 'speaking-task', done: item.checklist.map(() => false) })}
         >
-          I have said it. Show a model answer
+          {repeat ? 'I have said it' : 'I have said it. Show a model answer'}
         </button>
       )}
 
       {showModel && (
         <>
-          <ModelAnswer text={item.sample} />
+          {!repeat && <ModelAnswer text={item.sample} />}
           <Checklist
             legend="Be honest. What did your answer manage?"
             labels={item.checklist}

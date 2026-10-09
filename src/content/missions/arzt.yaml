@@ -1,0 +1,144 @@
+title: At the doctor's
+titleDe: Beim Arzt
+level: a2
+order: 1
+minutes: 8
+icon: doctor
+objective: Make an appointment by phone, describe your symptoms, and understand what the doctor tells you to do.
+scene: >-
+  You have had a sore throat and a fever for three days. This morning you call the practice of
+  Dr. Yilmaz, and a few hours later you are sitting in the consulting room.
+lessons: [a2.05, a2.13, a2.25]
+phrases:
+  - { de: "Ich brauche einen Termin.", en: "I need an appointment." }
+  - { de: "Seit wann haben Sie die Beschwerden?", en: "How long have you had the symptoms?" }
+  - { de: "Was fehlt Ihnen?", en: "What is the trouble?" }
+  - { de: "Mein Hals tut weh.", en: "My throat hurts." }
+  - { de: "dreimal täglich nach dem Essen", en: "three times a day after meals" }
+  - { de: "Gute Besserung!", en: "Get well soon!" }
+practised:
+  - Giving a reason with weil, verb at the end
+  - Saying how long with seit and the dative
+  - Understanding a time and an instruction on the phone
+  - Reporting what you were told with sollen
+steps:
+  - lines:
+      - { speaker: Sprechstundenhilfe, text: "Praxis Dr. Yilmaz, guten Morgen. Was kann ich für Sie tun?", en: "Dr. Yilmaz's practice, good morning. What can I do for you?" }
+    task:
+      id: call
+      type: multiple-choice
+      tags: [weil, health]
+      prompt: You need an appointment today. What do you say?
+      options:
+        - "Guten Morgen. Ich brauche einen Termin, weil ich Halsschmerzen habe."
+        - "Guten Morgen. Ich brauche einen Termin, weil ich habe Halsschmerzen."
+        - "Guten Morgen. Ich will einen Termin, denn Halsschmerzen."
+      answer: "Guten Morgen. Ich brauche einen Termin, weil ich Halsschmerzen habe."
+      feedback:
+        "Guten Morgen. Ich brauche einen Termin, weil ich habe Halsschmerzen.": "After weil the verb goes to the end: …, weil ich Halsschmerzen habe."
+        "Guten Morgen. Ich will einen Termin, denn Halsschmerzen.": "denn needs a whole clause with a verb, and ich will sounds demanding on the phone. Ich brauche … is neutral."
+      explanation: "weil sends its verb to the end of the clause. That one position is the difference between weil and denn."
+    you: { text: "Guten Morgen. Ich brauche einen Termin, weil ich Halsschmerzen habe.", en: "Good morning. I need an appointment because I have a sore throat." }
+
+  - lines:
+      - { speaker: Sprechstundenhilfe, text: "Seit wann haben Sie die Beschwerden?", en: "How long have you had the symptoms?" }
+    task:
+      id: since
+      type: fill-blank
+      tags: [seit, dative]
+      prompt: "___ drei Tagen. Ich habe auch Fieber."
+      answers: [Seit]
+      translation: For three days. I also have a fever.
+      explanation: "seit + dative says how long something has been going on: seit drei Tagen. German keeps the present tense here, where English says “have had”."
+    you: { text: "Seit drei Tagen. Ich habe auch Fieber.", en: "For three days. I also have a fever." }
+
+  - task:
+      id: appointment
+      type: multiple-choice
+      tags: [listening, time]
+      stimulus:
+        kind: audio
+        label: Am Telefon
+        lines:
+          - { speaker: Sprechstundenhilfe, text: "Dann kommen Sie bitte heute um Viertel nach elf. Und bringen Sie bitte Ihre Versichertenkarte mit." }
+      prompt: Wann ist der Termin?
+      options: ["Heute um 11:15 Uhr", "Heute um 10:45 Uhr", "Morgen um 11:15 Uhr"]
+      answer: "Heute um 11:15 Uhr"
+      shuffle: false
+      feedback:
+        "Heute um 10:45 Uhr": "Viertel nach elf is a quarter past eleven. 10:45 would be Viertel vor elf."
+        "Morgen um 11:15 Uhr": "She says heute: today."
+
+  - task:
+      id: bring
+      type: multiple-choice
+      tags: [listening, health]
+      stimulus:
+        kind: audio
+        label: Am Telefon
+        lines:
+          - { speaker: Sprechstundenhilfe, text: "Dann kommen Sie bitte heute um Viertel nach elf. Und bringen Sie bitte Ihre Versichertenkarte mit." }
+      prompt: Listen once more. Was sollen Sie mitbringen?
+      options: ["die Versichertenkarte", "ein Rezept", "Tabletten"]
+      answer: "die Versichertenkarte"
+      feedback:
+        "ein Rezept": "das Rezept is the prescription the doctor writes for you afterwards. She asks for your insurance card."
+        "Tabletten": "Tablets are what you may get later. She asks for your insurance card."
+      explanation: "die Versichertenkarte is your health insurance card. A practice asks for it on your first visit each quarter."
+
+  - lines:
+      - { speaker: Dr. Yilmaz, text: "Guten Tag. Was fehlt Ihnen denn?", en: "Hello. So what is the trouble?" }
+    task:
+      id: symptoms
+      type: word-order
+      tags: [health, word order]
+      prompt: Say that your throat hurts and that you have a fever.
+      answer: "Mein Hals tut weh und ich habe Fieber."
+      # Same tiles as the answer, so the capitals stay where the tiles have them.
+      alternatives: ["ich habe Fieber und Mein Hals tut weh."]
+      explanation: "wehtun splits in two: Mein Hals tut weh. und joins two main clauses without changing their word order."
+    you: { text: "Mein Hals tut weh und ich habe Fieber.", en: "My throat hurts and I have a fever." }
+
+  - lines:
+      - { speaker: Dr. Yilmaz, text: "Machen Sie bitte den Mund auf. Ja, der Hals ist ganz rot. Sie haben eine Halsentzündung.", en: "Please open your mouth. Yes, your throat is quite red. You have a throat infection." }
+      - { speaker: Dr. Yilmaz, text: "Sie sollten viel trinken und im Bett bleiben. Nehmen Sie die Tabletten dreimal täglich nach dem Essen.", en: "You should drink a lot and stay in bed. Take the tablets three times a day after meals." }
+    task:
+      id: dose
+      type: multiple-choice
+      tags: [health, instructions]
+      prompt: Wie oft sollen Sie die Tabletten nehmen?
+      options: ["dreimal am Tag", "einmal am Tag", "alle drei Stunden"]
+      answer: "dreimal am Tag"
+      feedback:
+        "einmal am Tag": "dreimal is three times. einmal is once."
+        "alle drei Stunden": "dreimal täglich means three times a day, not every three hours."
+      explanation: "täglich = am Tag. nach dem Essen: after a meal, so not on an empty stomach."
+
+  - task:
+      id: sick-note
+      type: word-order
+      tags: [politeness, dative]
+      prompt: You cannot go to work. Ask whether the doctor can give you a sick note.
+      answer: "Können Sie mir eine Krankschreibung geben?"
+      explanation: "Können Sie mir …? is a polite request. mir is dative: the note is given to me."
+    you: { text: "Können Sie mir eine Krankschreibung geben?", en: "Can you give me a sick note?" }
+
+  - lines:
+      - { speaker: Dr. Yilmaz, text: "Natürlich. Bleiben Sie bis Freitag zu Hause. Gute Besserung!", en: "Of course. Stay at home until Friday. Get well soon!" }
+    task:
+      id: report
+      type: speaking-task
+      tags: [speaking, sollen]
+      prompt: At the desk, the receptionist asks what the doctor said. Tell her what you have, what you are supposed to do, and until when you are staying at home.
+      cards: [Halsentzündung, viel trinken, Tabletten, bis Freitag]
+      phrases:
+        - Ich habe eine …
+        - Ich soll …
+        - Ich bleibe bis … zu Hause.
+      checklist:
+        - I named the illness
+        - I used sollen for what the doctor told me to do
+        - I said until when I am staying at home
+      sample: "Ich habe eine Halsentzündung. Ich soll viel trinken und dreimal täglich Tabletten nehmen. Ich bleibe bis Freitag zu Hause."
+outro:
+  - { speaker: Sprechstundenhilfe, text: "Alles klar. Hier ist Ihre Krankschreibung. Gute Besserung!", en: "All right. Here is your sick note. Get well soon!" }

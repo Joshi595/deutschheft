@@ -10,7 +10,7 @@ import {
   type NotebookState,
   type SavedWord,
 } from './notebook/logic';
-import { applyAttempt, emptyProgress, markStudyDay, type ProgressState } from './progress/logic';
+import { addXp, applyAttempt, attemptXp, emptyProgress, markStudyDay, XP, type ProgressState } from './progress/logic';
 import { addAttempt, type QuizAttempt, type QuizHistory } from './quiz/score';
 import { cardId, enroll, schedule, type CardKind, type ReviewGrade, type ReviewState } from './srs/scheduler';
 
@@ -23,16 +23,29 @@ export interface Settings {
   theme: 'system' | 'light' | 'dark';
   /** Playback speed for spoken German, 0.5 to 1.2. */
   speechRate: number;
+  /** Name of the browser voice the learner chose. Unset means the best one available. */
+  voice?: string;
   /** The learner's own Groq key. Stored in this browser only; never part of a backup. */
   aiKey: string;
   aiModel: string;
+  /** Level id the learner chose, e.g. "a2". Unset until chosen; then it is inferred from progress. */
+  level?: string;
+  /** Points to aim for each day. 0 means the goal is paused. */
+  dailyGoal: number;
 }
+
+export const DAILY_GOALS = [
+  { xp: 50, label: 'Light', detail: 'about 5 minutes' },
+  { xp: 100, label: 'Regular', detail: 'about 10 minutes' },
+  { xp: 200, label: 'Intensive', detail: 'about 20 minutes' },
+] as const;
 
 export const defaultSettings: Settings = {
   theme: 'system',
   speechRate: 0.9,
   aiKey: '',
   aiModel: 'llama-3.3-70b-versatile',
+  dailyGoal: 50,
 };
 
 function json<T>(fallback: T, revive: (value: unknown) => T = (value) => value as T) {
@@ -54,6 +67,8 @@ export const $progress = persistentAtom<ProgressState>('lg:progress:v1', emptyPr
 export const $review = persistentAtom<ReviewState>('lg:review:v1', {}, json<ReviewState>({}));
 export const $notebook = persistentAtom<NotebookState>('lg:notebook:v1', emptyNotebook, json(emptyNotebook));
 export const $quizzes = persistentAtom<QuizHistory>('lg:quizzes:v1', {}, json<QuizHistory>({}));
+/** Ids of the milestones the learner has already been shown, so each is announced once. */
+export const $seenMilestones = persistentAtom<string[]>('lg:milestones-seen:v1', [], json<string[]>([]));
 export const $settings = persistentAtom<Settings>(
   SETTINGS_KEY,
   defaultSettings,
@@ -71,9 +86,14 @@ export interface AnswerEvent {
   expected: string;
 }
 
-/** Record one submitted answer. A wrong answer is logged and queued for review. */
-export function recordAnswer(event: AnswerEvent, now = new Date()): void {
-  $progress.set(applyAttempt($progress.get(), event.exerciseId, event.correct, now));
+/**
+ * Record one submitted answer. A wrong answer is logged and queued for review.
+ * Returns the points the answer earned.
+ */
+export function recordAnswer(event: AnswerEvent, now = new Date()): number {
+  const before = $progress.get();
+  const earned = attemptXp(before.exercises[event.exerciseId], event.correct);
+  $progress.set(addXp(applyAttempt(before, event.exerciseId, event.correct, now), earned, now));
   if (!event.correct) {
     const mistake: Mistake = {
       exerciseId: event.exerciseId,
@@ -86,6 +106,7 @@ export function recordAnswer(event: AnswerEvent, now = new Date()): void {
     $notebook.set(logMistake($notebook.get(), mistake));
     enrollCards('exercise', [event.exerciseId], now);
   }
+  return earned;
 }
 
 // --- Review ----------------------------------------------------------------
@@ -99,7 +120,7 @@ export function rateCard(id: string, grade: ReviewGrade, now = new Date()): void
   const card = $review.get()[id];
   if (!card) return;
   $review.set({ ...$review.get(), [id]: schedule(card, grade, now) });
-  $progress.set(markStudyDay($progress.get(), now));
+  $progress.set(addXp(markStudyDay($progress.get(), now), XP.review[grade], now));
 }
 
 export function removeCard(id: string): void {
@@ -111,7 +132,8 @@ export function removeCard(id: string): void {
 
 export function recordQuizAttempt(quizId: string, attempt: QuizAttempt, now = new Date()): void {
   $quizzes.set(addAttempt($quizzes.get(), quizId, attempt));
-  $progress.set(markStudyDay($progress.get(), now));
+  const earned = XP.quizDone + (attempt.passed ? XP.quizPassed : 0);
+  $progress.set(addXp(markStudyDay($progress.get(), now), earned, now));
 }
 
 // --- Notebook --------------------------------------------------------------
@@ -163,4 +185,7 @@ export function resetAll(): void {
   $review.set({});
   $notebook.set(emptyNotebook);
   $quizzes.set({});
+  $seenMilestones.set([]);
+  // Starting over includes choosing a level again; the daily goal is a preference and stays.
+  $settings.set({ ...$settings.get(), level: undefined });
 }

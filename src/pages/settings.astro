@@ -1,16 +1,22 @@
 ---
 import SettingsPage from '../components/settings/SettingsPage';
 import Base from '../layouts/Base.astro';
+import { getCatalog } from '../lib/content/catalog';
+
+const catalog = await getCatalog();
+const levels = catalog.levels
+  .filter((level) => level.status === 'active' && level.lessons.length > 0)
+  .map(({ id, title, name }) => ({ id, title, name }));
 ---
 
-<Base title="Settings" description="Theme, audio, optional AI key and data backup." width="narrow">
+<Base title="Settings" description="Level and daily goal, theme, audio, optional AI key and data backup." width="narrow">
   <header>
     <p class="eyebrow" lang="de">Einstellungen</p>
     <h1 class="mt-1 text-4xl sm:text-5xl">Settings</h1>
   </header>
 
   <div class="mt-8">
-    <SettingsPage client:only="react">
+    <SettingsPage client:only="react" levels={levels}>
       <div slot="fallback" class="card p-6 text-muted">Loading settings …</div>
     </SettingsPage>
   </div>

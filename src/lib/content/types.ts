@@ -71,6 +71,46 @@ export interface ExamLink {
   minutes: number;
 }
 
+export interface DialogueLine {
+  speaker: string;
+  text: string;
+  en?: string;
+}
+
+export interface MissionStep {
+  lines: DialogueLine[];
+  task: ClientExercise;
+  you?: { text: string; en?: string };
+}
+
+export type MissionIcon = 'bakery' | 'train' | 'doctor' | 'restaurant' | 'home' | 'work';
+
+/** A mission as listed: enough to show it and to tell whether it is done. */
+export interface MissionSummary {
+  /** File name without extension, e.g. "baeckerei". */
+  id: string;
+  href: string;
+  title: string;
+  titleDe: string;
+  level: string;
+  minutes: number;
+  icon: MissionIcon;
+  objective: string;
+  /** Keys of the chapters it draws on. */
+  lessonKeys: string[];
+  /** Ids of its tasks, as stored in progress. */
+  taskIds: string[];
+}
+
+export interface ClientMission extends MissionSummary {
+  scene: string;
+  lessons: { title: string; href: string }[];
+  phrases: { de: string; en: string }[];
+  practised: string[];
+  steps: MissionStep[];
+  outro: DialogueLine[];
+}
+
 /** One timed (or untimed) section of a quiz: an exam module or a checkpoint. */
 export interface QuizSection {
   /** Exam skill, or "mixed" for a checkpoint. */

@@ -15,9 +15,60 @@ export interface ProgressState {
   exercises: Record<string, ExerciseRecord>;
   /** Local calendar days (YYYY-MM-DD) with at least one answered exercise or review. */
   days: string[];
+  /** Points earned per local day. Absent in data saved before points existed. */
+  xp?: Record<string, number>;
 }
 
 export const emptyProgress: ProgressState = { exercises: {}, days: [] };
+
+/**
+ * Points are only given for retrieval that worked: solving an exercise for the
+ * first time, and rating a review card. Re-solving something already solved
+ * earns nothing, so points cannot be collected by clicking.
+ */
+export const XP = {
+  firstTry: 10,
+  afterMiss: 5,
+  review: { again: 1, hard: 3, good: 5, easy: 5 },
+  quizDone: 25,
+  quizPassed: 25,
+} as const;
+
+/** Points for one submitted answer, given the exercise's record before it. */
+export function attemptXp(previous: ExerciseRecord | undefined, correct: boolean): number {
+  if (!correct || previous?.correct) return 0;
+  return previous ? XP.afterMiss : XP.firstTry;
+}
+
+export function addXp(state: ProgressState, amount: number, now: Date): ProgressState {
+  if (amount <= 0) return state;
+  const today = localDay(now);
+  return { ...state, xp: { ...state.xp, [today]: (state.xp?.[today] ?? 0) + amount } };
+}
+
+export function xpOn(state: ProgressState, day: string): number {
+  return state.xp?.[day] ?? 0;
+}
+
+export function totalXp(state: ProgressState): number {
+  return Object.values(state.xp ?? {}).reduce((sum, value) => sum + value, 0);
+}
+
+export interface DayActivity {
+  day: string;
+  date: Date;
+  xp: number;
+  studied: boolean;
+}
+
+/** The last `count` local days, oldest first, ending today. */
+export function recentDays(state: ProgressState, now: Date, count = 7): DayActivity[] {
+  return Array.from({ length: count }, (_, index) => {
+    const date = new Date(now.getFullYear(), now.getMonth(), now.getDate() - (count - 1 - index));
+    const day = localDay(date);
+    return { day, date, xp: xpOn(state, day), studied: state.days.includes(day) };
+  });
+}
 
 /** Local calendar day, so a streak follows the learner's own midnight. */
 export function localDay(date: Date): string {

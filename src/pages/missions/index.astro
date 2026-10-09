@@ -1,0 +1,53 @@
+---
+import ProgressMeter from '../../components/ui/ProgressMeter.astro';
+import Base from '../../layouts/Base.astro';
+import { getCatalog } from '../../lib/content/catalog';
+import { MISSION_ICONS } from '../../lib/content/icons';
+
+const catalog = await getCatalog();
+const levels = catalog.levels
+  .map((level) => ({ level, missions: catalog.missions.filter((mission) => mission.level === level.id) }))
+  .filter((group) => group.missions.length > 0);
+---
+
+<Base title="Missions" description="Everyday situations in German, played through as a conversation.">
+  <header class="max-w-3xl">
+    <p class="eyebrow" lang="de">Unterwegs</p>
+    <h1 class="mt-1 text-4xl sm:text-5xl">Missions</h1>
+    <p class="mt-3 text-lg text-muted">
+      Everyday situations, played through as a conversation. The other person speaks, you answer, and it goes on from
+      there. Each one takes under ten minutes and uses what the chapters teach.
+    </p>
+  </header>
+
+  {
+    levels.map(({ level, missions }) => (
+      <section class="mt-10" aria-labelledby={`missions-${level.id}`}>
+        <h2 id={`missions-${level.id}`} class="text-2xl">
+          {level.title} <span class="text-muted">{level.name}</span>
+        </h2>
+        <ul class="mt-4 grid gap-4 sm:grid-cols-2">
+          {missions.map((mission) => (
+            <li class="min-w-0">
+              <a href={mission.href} class="card flex h-full gap-4 p-5 transition-colors hover:border-ink">
+                <span class="grid size-14 flex-none place-items-center rounded-2xl bg-accent-soft">
+                  <svg width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d={MISSION_ICONS[mission.icon]} />
+                  </svg>
+                </span>
+                <span class="flex min-w-0 flex-1 flex-col gap-2">
+                  <span>
+                    <span class="font-display block text-2xl font-semibold break-words hyphens-auto" lang="de">{mission.titleDe}</span>
+                    <span class="text-sm text-muted">{mission.title}, about {mission.minutes} min</span>
+                  </span>
+                  <span class="flex-1">{mission.objective}</span>
+                  <ProgressMeter ids={mission.taskIds} label="tasks" />
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>

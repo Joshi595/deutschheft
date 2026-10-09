@@ -9,7 +9,8 @@ src/content/
 ├── lessons/     b1/07-relativsaetze.mdx              the chapter (explanation)
 ├── exercises/   b1/07-relativsaetze.yaml             the practice
 ├── vocab/       b1/07-relativsaetze.yaml             the word list
-└── exams/       b1/modelltest-01.yaml                mock exams
+├── exams/       b1/modelltest-01.yaml                mock exams
+└── missions/    baeckerei.yaml                       everyday situations as conversations
 ```
 
 ## Add a chapter
@@ -90,7 +91,7 @@ the "needs work" stats), `hint` and `explanation`.
 
 | Type | Fields |
 | --- | --- |
-| `multiple-choice` | `prompt`, `options`, `answer` (one of the options), `shuffle` (default true; set false for a/b/c lists) |
+| `multiple-choice` | `prompt`, `options`, `answer` (one of the options), `shuffle` (default true; set false for a/b/c lists), optional `feedback` (wrong option → why it is wrong, shown when the learner picks it) |
 | `true-false` | `prompt`, `answer` (true or false) |
 | `fill-blank` | `prompt` with exactly one `___`, `answers` (all accepted forms), optional `translation` |
 | `cloze` | `text` with two or more `___`, `gaps` (one list of accepted answers per gap), optional `bank` and `prompt` |
@@ -100,7 +101,7 @@ the "needs work" stats), `hint` and `explanation`.
 | `matching` | `pairs` of `left` and `right`, optional `prompt` |
 | `writing` | `prompt`, `sample`, optional `mustInclude` |
 | `writing-task` | `prompt`, `points` (content points), `minWords`, `sample`, optional `phrases` |
-| `speaking-task` | `prompt`, `checklist`, `sample`, optional `cards` and `phrases` |
+| `speaking-task` | `prompt`, `checklist`, `sample`, optional `cards` and `phrases`; `repeat: true` makes it listen-and-repeat (the sample is heard before speaking, not after) |
 
 A set or a single item can carry a `stimulus`, which is shown above the questions:
 
@@ -157,6 +158,36 @@ separately, as in B1) and `modules`. Each module has a `skill` (`reading`, `list
 `tests/content.test.ts` checks that each level's mock exams have the modules, timing and task types
 of the real Goethe exam.
 
+## Missions
+
+`missions/<slug>.yaml` is one everyday situation played through as a conversation. Its top fields
+are `title`, `titleDe`, `level`, `order`, `minutes`, `icon` (`bakery`, `train`, `doctor`,
+`restaurant`, `home`, `work`), `objective`, `scene`, `lessons` (keys of the chapters it draws on),
+`phrases` (`de` and `en`) and `practised`. Then come the `steps` and an optional `outro`:
+
+```yaml
+steps:
+  - lines:                       # what the other person says; read aloud and shown as a bubble
+      - { speaker: Verkäuferin, text: "Guten Morgen! Was darf es sein?", en: "Good morning! What can I get you?" }
+    task:                        # any exercise type from the table above
+      id: order
+      type: multiple-choice
+      prompt: You want four bread rolls. What do you say?
+      options: ["Ich hätte gern vier Brötchen, bitte.", "Gib mir vier Brötchen!"]
+      answer: "Ich hätte gern vier Brötchen, bitte."
+      feedback:
+        "Gib mir vier Brötchen!": "A command to a friend; it sounds rude in a shop."
+    you: { text: "Ich hätte gern vier Brötchen, bitte.", en: "I would like four bread rolls, please." }
+```
+
+`you` is the learner's own line; it joins the conversation once the task is done. The tests ask
+every mission for at least four different task types, one speaking task, and `feedback` for every
+wrong option that is a sentence. A `word-order` alternative has to use the answer's tiles exactly,
+capital letters included.
+
+Tasks are stored like chapter exercises, under the key `mission.<slug>`, so a missed task joins the
+review deck and the mistakes log. Never change a task `id` once published.
+
 ## Where the code lives
 
 | Path | What it is |
@@ -166,8 +197,12 @@ of the real Goethe exam.
 | `src/lib/grading/` | Pure grading functions, one per exercise type. |
 | `src/lib/quiz/` | Scoring for checkpoints and mock exams. |
 | `src/lib/progress/`, `src/lib/srs/`, `src/lib/notebook/` | Pure rules for progress, review scheduling and the notebook. |
+| `src/lib/progress/coach.ts` | What the Today page suggests and which milestones are reached. Every rule is a comparison on stored answers. |
+| `src/lib/content/course.ts` | The course outline that the Today and Progress pages read from the page instead of taking as props. |
 | `src/lib/stores.ts` | Browser storage that applies those rules. |
-| `src/components/exercises/` | One input widget per exercise type, and the card around them. |
+| `src/components/exercises/` | One input widget per exercise type, the card around them, and the practice session of a chapter. |
+| `src/components/session/` | The progress bar and summary shared by practice sessions and missions. |
+| `src/components/home/`, `src/components/progress/`, `src/components/missions/` | The Today page, the Progress page and the mission runner. |
 | `src/components/quiz/` | The mock exam and checkpoint runner. |
 | `src/components/lesson/` | Step, Compare, Mistake, Summary and the other chapter components. |
 | `src/pages/` | Routes. They read from the catalog and name no level or chapter. |

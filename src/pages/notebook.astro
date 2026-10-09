@@ -4,9 +4,11 @@ import Base from '../layouts/Base.astro';
 import { getCatalog } from '../lib/content/catalog';
 
 const catalog = await getCatalog();
-const lessons = Object.fromEntries(
-  catalog.lessons.map((lesson) => [lesson.key, { title: lesson.title, href: lesson.href, level: lesson.level }]),
-);
+const lessons = Object.fromEntries([
+  ...catalog.lessons.map((lesson) => [lesson.key, { title: lesson.title, href: lesson.href, level: lesson.level }]),
+  // Mistakes made in a mission are logged under the mission's own key.
+  ...catalog.missions.map((mission) => [`mission.${mission.id}`, { title: mission.titleDe, href: mission.href, level: mission.level }]),
+]);
 ---
 
 <Base title="Notebook" description="Your saved words, lesson notes and mistakes log." width="narrow">

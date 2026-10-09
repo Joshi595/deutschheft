@@ -10,30 +10,36 @@ const { items } = Astro.props;
 const headword = (item: ClientVocabItem) => (item.article ? `${item.article} ${item.de}` : item.de);
 ---
 
-<ul class="card divide-y divide-line">
-  {
-    items.map((item) => (
-      <li class="flex items-start gap-2 px-3 py-3 sm:px-4">
-        <SpeakButton text={headword(item)} />
-        <div class="min-w-0 flex-1">
-          <p class="flex flex-wrap items-baseline gap-x-2">
-            <span class="de text-lg" lang="de">{headword(item)}</span>
-            {item.plural && item.plural !== '-' && (
-              <span class="text-sm text-muted" lang="de">pl. die {item.plural}</span>
-            )}
-            <span class="text-muted">{item.en}</span>
-          </p>
-          {item.example && (
-            <p class="mt-0.5 flex items-start gap-1 text-sm">
-              <span>
-                <span lang="de">{item.example}</span>
-                {item.exampleEn && <span class="text-muted"> {item.exampleEn}</span>}
+<div class="vocab">
+  <label class="mb-2 inline-flex cursor-pointer items-center gap-2 text-sm text-muted">
+    <input type="checkbox" class="hide-en size-4 accent-[var(--ink)]" />
+    Hide English to test yourself
+  </label>
+  <ul class="card divide-y divide-line">
+    {
+      items.map((item) => (
+        <li class="flex items-start gap-2 px-3 py-3 sm:px-4">
+          <SpeakButton text={headword(item)} />
+          <div class="min-w-0 flex-1">
+            <p class="flex flex-wrap items-baseline gap-x-2">
+              <span class="de text-lg" lang="de">
+                {item.article && <span class={`gender-${item.article}`}>{item.article}</span>} {item.de}
               </span>
+              {item.plural && item.plural !== '-' && (
+                <span class="text-sm text-muted" lang="de">pl. die {item.plural}</span>
+              )}
+              <span class="vocab-en text-muted">{item.en}</span>
             </p>
-          )}
-        </div>
-        {item.example && <SpeakButton text={item.example} />}
-      </li>
-    ))
-  }
-</ul>
+            {item.example && (
+              <p class="mt-0.5 text-sm">
+                <span lang="de">{item.example}</span>
+                {item.exampleEn && <span class="vocab-en text-muted"> {item.exampleEn}</span>}
+              </p>
+            )}
+          </div>
+          {item.example && <SpeakButton text={item.example} />}
+        </li>
+      ))
+    }
+  </ul>
+</div>

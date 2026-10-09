@@ -1,53 +1,42 @@
 ---
-import DashboardPanel from '../components/dashboard/DashboardPanel';
-import ProgressMeter from '../components/ui/ProgressMeter.astro';
+import ArticleGame, { packNouns, type Noun } from '../components/home/ArticleGame';
+import Today from '../components/home/Today';
+import CourseData from '../components/ui/CourseData.astro';
 import Base from '../layouts/Base.astro';
-import { getCatalog, toLevelSummaries } from '../lib/content/catalog';
-import { url } from '../lib/url';
-import { site } from '../site';
+import { getCatalog } from '../lib/content/catalog';
 
 const catalog = await getCatalog();
-const levels = toLevelSummaries(catalog);
+
+// Every noun in the active levels, once each, for the article game.
+const seen = new Set<string>();
+const nouns: Noun[] = catalog.levels
+  .filter((level) => level.status === 'active')
+  .flatMap((level) =>
+    level.lessons.flatMap((lesson) =>
+      lesson.vocab.flatMap((item) => (item.article ? [{ article: item.article, de: item.de, en: item.en, level: level.id }] : [])),
+    ),
+  )
+  .filter((noun) => !seen.has(noun.de) && seen.add(noun.de));
 ---
 
 <Base>
-  <header class="max-w-3xl">
-    <p class="eyebrow" lang="de">Guten Tag</p>
-    <h1 class="mt-2 text-4xl sm:text-6xl">{site.tagline}</h1>
-    <p class="mt-4 text-lg text-muted">
-      Short lessons, exercises that check themselves, reviews timed so the words stick, and a notebook for
-      everything you pick up along the way.
-    </p>
-  </header>
+  <CourseData />
 
-  <section class="mt-10" aria-label="Your progress">
-    <DashboardPanel client:only="react" levels={levels} reviewHref={url('review/')}>
-      <div slot="fallback" class="card p-6 text-muted">Loading your progress …</div>
-    </DashboardPanel>
-  </section>
+  <Today client:only="react">
+    <div slot="fallback" class="card min-h-96 p-6 text-muted">Opening your notebook …</div>
+  </Today>
 
-  <section class="mt-14" aria-labelledby="levels">
-    <h2 id="levels" class="text-3xl">Levels</h2>
-    <ul class="mt-5 grid gap-4 sm:grid-cols-2">
-      {
-        catalog.levels.map((level) => {
-          const ids = level.lessons.flatMap((lesson) => lesson.exercises.map((exercise) => exercise.id));
-          const planned = level.status === 'planned';
-          return (
-            <li>
-              <a href={level.href} class:list={['card flex h-full flex-col gap-3 p-5 transition-colors hover:border-ink', planned && 'opacity-70']}>
-                <span class="flex items-baseline justify-between gap-3">
-                  <span class="font-display text-4xl font-semibold">{level.title}</span>
-                  <span class="chip">{planned ? 'Planned' : `${level.lessons.length} ${level.lessons.length === 1 ? 'lesson' : 'lessons'}`}</span>
-                </span>
-                <span class="font-semibold">{level.name}</span>
-                <span class="flex-1 text-muted">{level.description}</span>
-                {!planned && ids.length > 0 && <ProgressMeter ids={ids} />}
-              </a>
-            </li>
-          );
-        })
-      }
-    </ul>
+  <section class="mt-14 grid items-center gap-6 lg:grid-cols-[1fr_1.3fr] lg:gap-12" aria-labelledby="warm-up">
+    <div>
+      <p class="eyebrow" lang="de">Zum Aufwärmen</p>
+      <h2 id="warm-up" class="mt-1 text-3xl">A two-minute warm-up</h2>
+      <p class="mt-3 text-muted">
+        Every German noun comes with der, die or das, and guessing is the fastest way to get a feel for them. Every
+        word in the game comes from the course. It is practice for its own sake: no points, no pressure.
+      </p>
+    </div>
+    <ArticleGame client:only="react" data={packNouns(nouns)}>
+      <div slot="fallback" class="card min-h-80 p-6 text-muted">Loading the game …</div>
+    </ArticleGame>
   </section>
 </Base>

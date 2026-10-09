@@ -1,0 +1,168 @@
+title: At the restaurant
+titleDe: Im Restaurant
+level: a2
+order: 2
+minutes: 8
+icon: restaurant
+objective: Get your table, order politely, deal with a mix-up, and pay with a tip the German way.
+scene: >-
+  Friday evening at a traditional restaurant in Munich. You booked a table, you are hungry, and
+  you do not eat meat or fish.
+lessons: [a2.15, a2.19, a2.22]
+phrases:
+  - { de: "Einen Tisch für zwei Personen auf den Namen …", en: "A table for two under the name …" }
+  - { de: "Ich hätte gern …", en: "I would like …" }
+  - { de: "Haben Sie schon gewählt?", en: "Have you decided yet?" }
+  - { de: "Ich hatte … bestellt.", en: "I had ordered …" }
+  - { de: "Die Rechnung, bitte.", en: "The bill, please." }
+  - { de: "Machen Sie zwanzig, bitte.", en: "Make it twenty, please." }
+practised:
+  - Ordering with the polite form hätte gern
+  - Adjective endings in the accusative
+  - Pointing out a mistake without being rude
+  - Paying and tipping by naming the total
+steps:
+  - lines:
+      - { speaker: Kellner, text: "Guten Abend! Haben Sie reserviert?", en: "Good evening! Do you have a reservation?" }
+    task:
+      id: reserved
+      type: multiple-choice
+      tags: [accusative, restaurant]
+      prompt: You booked a table for two under the name Novak. What do you say?
+      options:
+        - "Ja, einen Tisch für zwei Personen auf den Namen Novak."
+        - "Ja, ein Tisch für zwei Personen bei dem Namen Novak."
+        - "Ja, ich bin Tisch für zwei."
+      answer: "Ja, einen Tisch für zwei Personen auf den Namen Novak."
+      feedback:
+        "Ja, ein Tisch für zwei Personen bei dem Namen Novak.": "Two slips. The table is what you reserved, so it is accusative: einen Tisch. And the fixed phrase is auf den Namen …"
+        "Ja, ich bin Tisch für zwei.": "Ich bin … says what you are. Say what you reserved: einen Tisch für zwei Personen."
+      explanation: "The full sentence would be Ich habe einen Tisch reserviert, so the short answer keeps the accusative: einen Tisch."
+    you: { text: "Ja, einen Tisch für zwei Personen auf den Namen Novak.", en: "Yes, a table for two under the name Novak." }
+
+  - lines:
+      - { speaker: Kellner, text: "Ah ja, bitte hier entlang. Möchten Sie schon etwas trinken?", en: "Ah yes, this way please. Would you like something to drink already?" }
+    task:
+      id: drink
+      type: fill-blank
+      tags: [konjunktiv 2, politeness]
+      prompt: "Ich ___ gern ein großes Mineralwasser."
+      answers: [hätte]
+      translation: I would like a large mineral water.
+      hint: The polite form of haben.
+      explanation: "hätte is the Konjunktiv II of haben, the polite way to order. Notice ein großes Mineralwasser: a das-noun in the accusative takes -es."
+    you: { text: "Ich hätte gern ein großes Mineralwasser.", en: "I would like a large mineral water." }
+
+  - task:
+      id: menu
+      type: multiple-choice
+      tags: [reading, food]
+      stimulus:
+        kind: text
+        label: Speisekarte
+        title: Hauptgerichte
+        text: |-
+          Wiener Schnitzel vom Kalb mit Kartoffelsalat – 21,50 €
+          Gegrillter Lachs mit Gemüse und Reis – 18,90 €
+          Käsespätzle mit Röstzwiebeln und grünem Salat (vegetarisch) – 13,90 €
+      prompt: You do not eat meat or fish. Which main course can you order?
+      options: ["Käsespätzle", "Wiener Schnitzel", "Gegrillter Lachs"]
+      answer: "Käsespätzle"
+      feedback:
+        "Wiener Schnitzel": "vom Kalb means made of veal."
+        "Gegrillter Lachs": "der Lachs is salmon."
+      explanation: "vegetarisch marks a dish without meat or fish. Käsespätzle are small egg noodles baked with cheese."
+
+  - lines:
+      - { speaker: Kellner, text: "So, Ihr Wasser. Haben Sie schon gewählt?", en: "Here is your water. Have you decided yet?" }
+    task:
+      id: order
+      type: word-order
+      tags: [restaurant, word order]
+      prompt: Order the Käsespätzle, but without onions.
+      answer: "Ich nehme die Käsespätzle, aber bitte ohne Zwiebeln."
+      explanation: "Ich nehme … is a natural way to order once you have decided. ohne always takes the accusative."
+    you: { text: "Ich nehme die Käsespätzle, aber bitte ohne Zwiebeln.", en: "I will have the Käsespätzle, but without onions, please." }
+
+  - lines:
+      - { speaker: Kellner, text: "So, einmal das Wiener Schnitzel. Guten Appetit!", en: "Here we are, one Wiener Schnitzel. Enjoy your meal!" }
+    task:
+      id: mix-up
+      type: multiple-choice
+      tags: [politeness, past]
+      prompt: That is not what you ordered. How do you point it out politely?
+      options:
+        - "Entschuldigung, ich glaube, das ist ein Missverständnis. Ich hatte die Käsespätzle bestellt."
+        - "Das ist falsch. Ich will das nicht."
+        - "Entschuldigung, ich hätte gern die Käsespätzle bestellen."
+      answer: "Entschuldigung, ich glaube, das ist ein Missverständnis. Ich hatte die Käsespätzle bestellt."
+      feedback:
+        "Das ist falsch. Ich will das nicht.": "Understandable, but blunt. Entschuldigung, ich glaube … softens it, and saying what you ordered helps the waiter put it right."
+        "Entschuldigung, ich hätte gern die Käsespätzle bestellen.": "Ich hätte gern … places a new order. You are talking about an order you already made: Ich hatte … bestellt."
+      explanation: "Ich hatte … bestellt (I had ordered) makes it clear that the order came first. ich glaube keeps the tone friendly."
+    you: { text: "Entschuldigung, ich glaube, das ist ein Missverständnis. Ich hatte die Käsespätzle bestellt.", en: "Excuse me, I think there is a misunderstanding. I had ordered the Käsespätzle." }
+
+  - lines:
+      - { speaker: Kellner, text: "Oh, das tut mir leid! Ich bringe Ihnen sofort die Käsespätzle.", en: "Oh, I am sorry! I will bring you the Käsespätzle right away." }
+    task:
+      id: bill
+      type: translation
+      tags: [restaurant]
+      prompt: "The food was good and you are ready to leave. Say: “The bill, please.”"
+      answers:
+        - "Die Rechnung, bitte."
+        - "Die Rechnung bitte!"
+        - "Bitte die Rechnung."
+        - "Ich hätte gern die Rechnung."
+        - "Ich möchte bitte zahlen."
+        - "Zahlen, bitte."
+      hint: "the bill = die Rechnung"
+    you: { text: "Die Rechnung, bitte.", en: "The bill, please." }
+
+  - task:
+      id: total
+      type: multiple-choice
+      tags: [listening, prices]
+      stimulus:
+        kind: audio
+        label: Der Kellner
+        lines:
+          - { speaker: Kellner, text: "Sehr gern. Das macht zusammen siebzehn Euro achtzig." }
+      prompt: Wie viel kostet es?
+      options: ["17,80 €", "70,80 €", "17,18 €"]
+      answer: "17,80 €"
+      shuffle: false
+      feedback:
+        "70,80 €": "siebzehn is 17. Seventy would be siebzig."
+        "17,18 €": "achtzig is 80. Eighteen would be achtzehn."
+
+  - task:
+      id: tip
+      type: multiple-choice
+      tags: [restaurant, culture]
+      prompt: The bill is 17,80 €. You want to pay 20 € including the tip, and you hand over a 50-euro note. What do you say?
+      options:
+        - "Machen Sie zwanzig, bitte."
+        - "Stimmt so."
+        - "Zwanzig Euro Trinkgeld, bitte."
+      answer: "Machen Sie zwanzig, bitte."
+      feedback:
+        "Stimmt so.": "Stimmt so means “keep the change”. With a 50-euro note that would be a tip of more than 32 euros."
+        "Zwanzig Euro Trinkgeld, bitte.": "That makes 20 euros the tip itself. Name the total you want to pay: Machen Sie zwanzig."
+      explanation: "In Germany you tell the waiter the total, tip included, while you pay; coins are not left on the table. Five to ten percent is usual."
+    you: { text: "Machen Sie zwanzig, bitte.", en: "Make it twenty, please." }
+
+  - task:
+      id: goodbye
+      type: speaking-task
+      tags: [speaking, politeness]
+      repeat: true
+      prompt: Say that the food was delicious and wish him a nice evening. Listen first, then say it aloud.
+      checklist:
+        - I said the whole line aloud
+        - "I stressed the first syllable of lecker and of Abend"
+        - It sounded friendly, not read out
+      sample: "Danke, das Essen war sehr lecker. Einen schönen Abend noch!"
+    you: { text: "Danke, das Essen war sehr lecker. Einen schönen Abend noch!", en: "Thank you, the food was delicious. Have a nice evening!" }
+outro:
+  - { speaker: Kellner, text: "Vielen Dank! Ihnen auch einen schönen Abend.", en: "Thank you very much! A nice evening to you too." }

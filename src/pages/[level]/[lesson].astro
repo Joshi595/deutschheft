@@ -46,7 +46,7 @@ const sections = [
 
 <Base title={`${lesson.title} (${level.title})`} description={lesson.summary} width="narrow">
   <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('')} class="hover:text-ink">Learn</a>
+    <a href={url('learn/')} class="hover:text-ink">Learn</a>
     <span aria-hidden="true"> / </span>
     <a href={level.href} class="hover:text-ink">{level.title}</a>
     <span aria-hidden="true"> / </span>
@@ -69,7 +69,7 @@ const sections = [
     <ul class="flex gap-1 overflow-x-auto text-sm font-semibold">
       {
         sections.map((section) => (
-          <li><a href={`#${section.id}`} class="block px-3 py-2.5 text-muted hover:text-ink">{section.label}</a></li>
+          <li><a href={`#${section.id}`} data-section-link class="block border-b-2 border-transparent px-3 py-2.5 text-muted hover:text-ink aria-[current=true]:border-accent aria-[current=true]:text-ink">{section.label}</a></li>
         ))
       }
     </ul>
@@ -161,3 +161,21 @@ const sections = [
     }
   </nav>
 </Base>
+
+<script>
+  // Highlight the section-nav link for whichever section is in view.
+  const links = document.querySelectorAll<HTMLAnchorElement>('[data-section-link]');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        links.forEach((link) => link.setAttribute('aria-current', String(link.hash === `#${entry.target.id}`)));
+      }
+    },
+    { rootMargin: '-30% 0px -60% 0px' },
+  );
+  links.forEach((link) => {
+    const section = document.querySelector(link.hash);
+    if (section) observer.observe(section);
+  });
+</script>

@@ -1,0 +1,139 @@
+title: At the bakery
+titleDe: In der Bäckerei
+level: a1
+order: 1
+minutes: 6
+icon: bakery
+objective: Order bread rolls and a piece of cake, understand the price, and pay.
+scene: >-
+  Saturday morning in a small bakery in Leipzig. It smells of fresh bread and there is a queue
+  behind you, so keep it short and friendly. You want rolls for breakfast and something sweet.
+lessons: [a1.03, a1.09, a1.10]
+phrases:
+  - { de: "Ich hätte gern …", en: "I would like …" }
+  - { de: "Sonst noch etwas?", en: "Anything else?" }
+  - { de: "Das macht vier Euro achtzig.", en: "That comes to 4.80 euros." }
+  - { de: "Kann ich mit Karte zahlen?", en: "Can I pay by card?" }
+  - { de: "Leider nur bar.", en: "Cash only, unfortunately." }
+  - { de: "Schönes Wochenende!", en: "Have a nice weekend!" }
+practised:
+  - Ordering politely with Ich hätte gern …
+  - Understanding a price when you hear it
+  - Asking a yes/no question with the verb first
+  - Paying and saying goodbye
+steps:
+  - lines:
+      - { speaker: Verkäuferin, text: "Guten Morgen! Was darf es sein?", en: "Good morning! What can I get you?" }
+    task:
+      id: order
+      type: multiple-choice
+      tags: [ordering, politeness]
+      prompt: You want four bread rolls. What do you say?
+      options:
+        - "Guten Morgen! Ich hätte gern vier Brötchen, bitte."
+        - "Guten Morgen! Ich habe vier Brötchen, bitte."
+        - "Gib mir vier Brötchen!"
+      answer: "Guten Morgen! Ich hätte gern vier Brötchen, bitte."
+      feedback:
+        "Guten Morgen! Ich habe vier Brötchen, bitte.": "Ich habe means “I have”. To order, say Ich hätte gern … or Ich möchte …"
+        "Gib mir vier Brötchen!": "This is a command to a friend (du) and sounds rude in a shop. Ich hätte gern … is the polite way to order."
+      explanation: "Ich hätte gern … (I would like …) is the standard polite order. Ich möchte … works just as well."
+    you: { text: "Guten Morgen! Ich hätte gern vier Brötchen, bitte.", en: "Good morning! I would like four bread rolls, please." }
+
+  - lines:
+      - { speaker: Verkäuferin, text: "Gern. Sonst noch etwas?", en: "Certainly. Anything else?" }
+    task:
+      id: cake
+      type: translation
+      tags: [ordering, food]
+      prompt: "Say: “Yes, a piece of apple cake, please.”"
+      answers:
+        - "Ja, ein Stück Apfelkuchen, bitte."
+        - "Ja, bitte ein Stück Apfelkuchen."
+        - "Ja, ich hätte gern ein Stück Apfelkuchen."
+        - "Ja, ich möchte ein Stück Apfelkuchen, bitte."
+      hint: "a piece of = ein Stück, with no word for “of”."
+      explanation: "After a quantity such as ein Stück, eine Tasse or ein Kilo, the food follows directly: ein Stück Apfelkuchen."
+    you: { text: "Ja, ein Stück Apfelkuchen, bitte.", en: "Yes, a piece of apple cake, please." }
+
+  - task:
+      id: price
+      type: multiple-choice
+      tags: [listening, prices]
+      stimulus:
+        kind: audio
+        label: Die Verkäuferin
+        lines:
+          - { speaker: Verkäuferin, text: "Das macht zusammen vier Euro achtzig." }
+      prompt: Wie viel kostet es?
+      options: ["4,80 €", "4,18 €", "8,40 €"]
+      answer: "4,80 €"
+      shuffle: false
+      feedback:
+        "4,18 €": "achtzig is 80. Eighteen would be achtzehn."
+        "8,40 €": "The euros come first: vier Euro achtzig is 4,80 €."
+      explanation: "Das macht … is how a price is announced. The word Cent is usually left out: vier Euro achtzig."
+
+  - lines:
+      - { speaker: Verkäuferin, text: "Vier Euro achtzig, bitte.", en: "4.80 euros, please." }
+    task:
+      id: card
+      type: word-order
+      tags: [questions, modal verbs]
+      prompt: Ask whether you can pay by card.
+      answer: "Kann ich mit Karte zahlen?"
+      explanation: "A yes/no question starts with the verb. With a modal verb, the second verb goes to the end: Kann ich … zahlen?"
+    you: { text: "Kann ich mit Karte zahlen?", en: "Can I pay by card?" }
+
+  - lines:
+      - { speaker: Verkäuferin, text: "Leider nur bar. Das Kartengerät ist kaputt.", en: "Cash only, unfortunately. The card reader is broken." }
+    task:
+      id: cash
+      type: true-false
+      tags: [listening, shopping]
+      prompt: Sie können heute mit Karte zahlen.
+      answer: false
+      explanation: "Leider nur bar: unfortunately cash only. kaputt means broken."
+
+  - task:
+      id: hand-over
+      type: multiple-choice
+      tags: [sein, plural]
+      prompt: You hand over a five-euro note. What do you say?
+      options:
+        - "Hier sind fünf Euro."
+        - "Hier ist fünf Euro."
+        - "Ich bin fünf Euro."
+      answer: "Hier sind fünf Euro."
+      feedback:
+        "Hier ist fünf Euro.": "Five euros are more than one, so the verb is plural: Hier sind …"
+        "Ich bin fünf Euro.": "Ich bin means “I am”. You are handing something over: Hier sind …"
+    you: { text: "Hier sind fünf Euro.", en: "Here are five euros." }
+
+  - lines:
+      - { speaker: Verkäuferin, text: "Danke. Und zwanzig Cent zurück. Möchten Sie eine Tüte?", en: "Thanks. And twenty cents back. Would you like a bag?" }
+    task:
+      id: bag
+      type: fill-blank
+      tags: [shopping, nouns]
+      prompt: "Ja, gern. Eine ___, bitte."
+      answers: [Tüte]
+      translation: Yes, please. A bag, please.
+      hint: She has just said the word.
+      explanation: "die Tüte is the paper or plastic bag you get in a shop. A bag you carry around yourself is die Tasche."
+    you: { text: "Ja, gern. Eine Tüte, bitte.", en: "Yes, please. A bag, please." }
+
+  - task:
+      id: goodbye
+      type: speaking-task
+      tags: [speaking, greetings]
+      repeat: true
+      prompt: Thank her, wish her a nice weekend and say goodbye. Listen first, then say it aloud.
+      checklist:
+        - I said the whole line aloud, without stopping
+        - "The w in Wochenende and Wiedersehen sounded like an English v"
+        - "The ch in Wochenende came from the back of the throat, as in the model"
+      sample: "Vielen Dank! Schönes Wochenende. Auf Wiedersehen!"
+    you: { text: "Vielen Dank! Schönes Wochenende. Auf Wiedersehen!", en: "Thank you very much! Have a nice weekend. Goodbye!" }
+outro:
+  - { speaker: Verkäuferin, text: "Danke, gleichfalls! Tschüss!", en: "Thanks, you too! Bye!" }

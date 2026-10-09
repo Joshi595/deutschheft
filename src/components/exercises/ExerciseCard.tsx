@@ -22,6 +22,9 @@ interface Props {
   onAttempt?: () => void;
   /** Called once the item is solved (true) or its answer revealed (false). */
   onFinish?: (correct: boolean) => void;
+  /** In a session: shows a button that moves on once the item is finished. */
+  onNext?: () => void;
+  nextLabel?: string;
 }
 
 /** Choosing between a few options, or marking your own work, gets one go. Typed answers get two. */
@@ -29,7 +32,7 @@ function defaultAttempts(item: ClientExercise): number {
   return item.type === 'multiple-choice' || item.type === 'true-false' || isSelfAssessed(item) ? 1 : 2;
 }
 
-export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFinish }: Props) {
+export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFinish, onNext, nextLabel = 'Continue' }: Props) {
   const allowed = maxAttempts ?? defaultAttempts(item);
   const record = useStore($progress).exercises[item.id];
   const settings = useStore($settings);
@@ -39,6 +42,7 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
   const [attempts, setAttempts] = useState(0);
   const [result, setResult] = useState<GradeResult | null>(null);
   const [round, setRound] = useState(0);
+  const [earned, setEarned] = useState(0);
   const [ai, setAi] = useState<{ state: 'idle' | 'loading' | 'done' | 'error'; text?: string }>({ state: 'idle' });
 
   const locked = status === 'solved' || status === 'revealed';
@@ -49,14 +53,16 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
   function check() {
     if (locked || !ready) return;
     const graded = grade(item, response);
-    recordAnswer({
-      exerciseId: item.id,
-      lessonKey: item.lessonKey,
-      correct: graded.correct,
-      prompt: promptOf(item),
-      given: describeResponse(response),
-      expected: graded.expected,
-    });
+    setEarned(
+      recordAnswer({
+        exerciseId: item.id,
+        lessonKey: item.lessonKey,
+        correct: graded.correct,
+        prompt: promptOf(item),
+        given: describeResponse(response),
+        expected: graded.expected,
+      }),
+    );
     onAttempt?.();
     setResult(graded);
     if (graded.correct) {
@@ -77,6 +83,7 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
     setStatus('idle');
     setAttempts(0);
     setResult(null);
+    setEarned(0);
     setAi({ state: 'idle' });
     setRound(round + 1);
   }
@@ -123,7 +130,7 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
 
       <div className="mt-4 grid gap-3" aria-live="polite">
         {status === 'retry' && (
-          <div className="rounded-xl bg-bad-soft px-4 py-3 text-bad">
+          <div className="shake rounded-xl bg-bad-soft px-4 py-3 text-bad">
             <p className="font-semibold">Not quite. Try once more.</p>
             {result?.note && <p className="text-sm">{result.note}</p>}
             {item.hint && <p className="text-sm">Hint: {item.hint}</p>}
@@ -131,14 +138,17 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
         )}
 
         {status === 'solved' && (
-          <div className="rounded-xl bg-good-soft px-4 py-3 text-good">
-            <p className="font-semibold">{selfAssessed ? 'Gut gemacht!' : 'Richtig!'}</p>
+          <div className="pop rounded-xl bg-good-soft px-4 py-3 text-good">
+            <p className="flex items-baseline justify-between gap-3 font-semibold">
+              <span lang="de">{selfAssessed ? 'Gut gemacht!' : 'Richtig!'}</span>
+              {earned > 0 && <span className="text-sm tabular-nums">+{earned} points</span>}
+            </p>
             {result?.note && <p className="text-sm">{result.note}</p>}
           </div>
         )}
 
         {status === 'revealed' && result && (
-          <div className="rounded-xl bg-bad-soft px-4 py-3 text-bad">
+          <div className="shake rounded-xl bg-bad-soft px-4 py-3 text-bad">
             <p className="font-semibold">Not this time. It is back in your review queue.</p>
             {result.note && <p className="text-sm">{result.note}</p>}
           </div>
@@ -154,7 +164,7 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
             )}
             {item.explanation && <p className="mt-1">{item.explanation}</p>}
             {solution && (
-              <button type="button" className="btn btn-quiet btn-small mt-2 -ml-2" onClick={() => speak(solution, settings.speechRate)}>
+              <button type="button" className="listen btn btn-quiet btn-small mt-2 -ml-2" onClick={() => speak(solution, settings.speechRate)}>
                 Listen to the sentence
               </button>
             )}
@@ -170,12 +180,17 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
 
         <div className="flex flex-wrap items-center gap-2">
           {!locked && (
-            <button type="button" className="btn btn-primary" onClick={check} disabled={!ready}>
+            <button type="button" className="btn btn-accent" onClick={check} disabled={!ready}>
               {selfAssessed ? 'Done' : 'Check'}
             </button>
           )}
+          {locked && onNext && (
+            <button type="button" className="btn btn-accent" onClick={onNext} autoFocus>
+              {nextLabel}
+            </button>
+          )}
           {locked && (
-            <button type="button" className="btn" onClick={restart}>
+            <button type="button" className={onNext ? 'btn btn-quiet' : 'btn'} onClick={restart}>
               Try again
             </button>
           )}

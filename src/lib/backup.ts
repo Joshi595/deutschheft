@@ -52,6 +52,10 @@ export function parseBackup(json: string): BackupData {
     progress: {
       exercises: isRecord(progress.exercises) ? (progress.exercises as ProgressState['exercises']) : emptyProgress.exercises,
       days: Array.isArray(progress.days) ? progress.days.filter((day): day is string => typeof day === 'string') : [],
+      // Absent in backups made before points existed.
+      ...(isRecord(progress.xp) && {
+        xp: Object.fromEntries(Object.entries(progress.xp).filter((entry): entry is [string, number] => typeof entry[1] === 'number')),
+      }),
     },
     review: isRecord(raw.review) ? (raw.review as ReviewState) : {},
     notebook: {
