@@ -7,6 +7,7 @@ import {
   exerciseFileSchema,
   lessonSchema,
   levelSchema,
+  missionSchema,
   vocabFileSchema,
   type Exercise,
 } from '../src/lib/content/schema';
@@ -99,6 +100,10 @@ const vocabFiles = files('vocab', '.yaml').map((path) => ({
 const examFiles = files('exams', '.yaml').map((path) => ({
   path,
   data: examFileSchema.parse(parse(readFileSync(path, 'utf8'))),
+}));
+const missionFiles = files('missions', '.yaml').map((path) => ({
+  path,
+  data: missionSchema.parse(parse(readFileSync(path, 'utf8'))),
 }));
 
 const levelOf = (key: string) => key.split('.')[0]!;
@@ -286,6 +291,44 @@ describe('mock exams', () => {
             expect(stimulus?.kind, `${module.skill} ${part.title} ${item.id}`).toBe(kind);
           }
         }
+      }
+    });
+  }
+});
+
+describe('missions', () => {
+  const lessonKeys = new Set(lessons.map((lesson) => lesson.data.key));
+
+  it('exist for every level that has chapters', () => {
+    for (const level of new Set(lessons.map((lesson) => levelOf(lesson.data.key)))) {
+      expect(missionFiles.some((file) => file.data.level === level), `no mission for ${level}`).toBe(true);
+    }
+  });
+
+  for (const { path, data } of missionFiles) {
+    const where = label(path);
+
+    it(`${where}: every model answer is accepted by the grader`, () => {
+      checkItems(data.steps.map((step) => step.task), where);
+    });
+
+    it(`${where}: belongs to a level and draws on chapters that exist`, () => {
+      expect(levels.some((level) => level.id === data.level), `no level ${data.level}`).toBe(true);
+      for (const key of data.lessons) expect(lessonKeys.has(key), `unknown lesson ${key}`).toBe(true);
+    });
+
+    it(`${where}: mixes task types and asks the learner to speak`, () => {
+      const types = new Set(data.steps.map((step) => step.task.type));
+      expect(types.size, 'different task types').toBeGreaterThanOrEqual(4);
+      expect(types.has('speaking-task'), 'a speaking task').toBe(true);
+    });
+
+    it(`${where}: explains every wrong choice in a decision`, () => {
+      for (const { task } of data.steps) {
+        // Options that are numbers or single words explain themselves less; sentences must be explained.
+        if (task.type !== 'multiple-choice' || !task.options.some((option) => option.includes(' '))) continue;
+        const wrong = task.options.filter((option) => option !== task.answer);
+        for (const option of wrong) expect(task.feedback?.[option], `${task.id}: no feedback for "${option}"`).toBeTruthy();
       }
     });
   }

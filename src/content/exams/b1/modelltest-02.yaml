@@ -1,0 +1,643 @@
+level: b1
+title: Modelltest 02
+description: >-
+  A second complete practice exam in the format of the Goethe-Zertifikat B1, with the real time
+  limits. Each module is passed separately with 60 percent. Topics: work, careers and the working
+  world.
+passMark: 60
+scoring: per-module
+modules:
+  - skill: reading
+    minutes: 65
+    points: 25
+    parts:
+      - title: "Lesen, Teil 1"
+        instructions: Lesen Sie den Text und die Aufgaben. Sind die Aussagen richtig oder falsch?
+        stimulus:
+          kind: text
+          label: Blog
+          text: |
+            Mein Jahr als Au-pair in Hamburg
+
+            Vor einem Jahr bin ich aus Kolumbien nach Hamburg gekommen, um als Au-pair bei einer Familie mit zwei Kindern zu arbeiten. Ich hatte vorher nur ein halbes Jahr Deutsch gelernt und war sehr nervös. Am ersten Abend habe ich fast nichts verstanden, weil die Familie so schnell gesprochen hat.
+
+            Aber die Kinder, Mila (5) und Paul (8), waren meine besten Lehrer. Sie haben mich jedes Mal korrigiert, wenn ich einen Fehler gemacht habe – nicht immer freundlich, aber sehr effektiv! Vormittags habe ich einen Sprachkurs besucht, nachmittags habe ich die Kinder von der Schule abgeholt und mit ihnen gespielt.
+
+            Nicht alles war einfach. Im Winter war es oft dunkel und kalt, und ich hatte Heimweh. Zum Glück habe ich in meinem Kurs andere Au-pairs kennengelernt. Mit ihnen habe ich am Wochenende Ausflüge gemacht, zum Beispiel an die Ostsee.
+
+            Jetzt ist mein Jahr fast vorbei. Ich habe beschlossen, in Deutschland zu bleiben und eine Ausbildung als Erzieherin zu machen.
+        items:
+          - id: l1-1
+            type: true-false
+            prompt: Die Autorin hatte vor ihrer Ankunft schon lange Deutsch gelernt.
+            answer: false
+          - id: l1-2
+            type: true-false
+            prompt: Am Anfang hat sie die Familie kaum verstanden.
+            answer: true
+          - id: l1-3
+            type: true-false
+            prompt: Die Kinder haben ihr beim Deutschlernen geholfen.
+            answer: true
+          - id: l1-4
+            type: true-false
+            prompt: Nachmittags hat sie einen Sprachkurs besucht.
+            answer: false
+          - id: l1-5
+            type: true-false
+            prompt: Im Winter hat sie ihre Heimat vermisst.
+            answer: true
+          - id: l1-6
+            type: true-false
+            prompt: Nach dem Jahr möchte sie zurück nach Kolumbien.
+            answer: false
+
+      - title: "Lesen, Teil 2 (Text 1)"
+        instructions: Lesen Sie den Text aus der Presse. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Die Vier-Tage-Woche im Test
+
+            Ein Jahr lang hat eine Softwarefirma in Köln getestet, ob ihre Mitarbeiter nur vier Tage pro Woche arbeiten können – bei gleichem Gehalt. Das Ergebnis überrascht: Die Firma hat genauso viel geschafft wie vorher, und die Mitarbeiter waren deutlich seltener krank.
+
+            „Wir haben unnötige Besprechungen gestrichen und konzentrierter gearbeitet", erklärt Geschäftsführerin Laura Schwarz. Nicht alle Mitarbeiter waren am Anfang begeistert. Einige hatten Angst, dass sie in vier Tagen zu viel Stress haben würden. Inzwischen möchte aber fast niemand zurück zur Fünf-Tage-Woche.
+
+            Experten warnen allerdings: Das Modell funktioniert nicht in allen Branchen. In Krankenhäusern oder in der Pflege fehlt es schon heute an Personal.
+        items:
+          - id: l2-1
+            type: multiple-choice
+            prompt: In dem Test haben die Mitarbeiter …
+            options: ["vier Tage gearbeitet und gleich viel verdient.", "vier Tage gearbeitet und weniger verdient.", "fünf Tage gearbeitet, aber kürzer."]
+            answer: "vier Tage gearbeitet und gleich viel verdient."
+          - id: l2-2
+            type: multiple-choice
+            prompt: Ein Ergebnis des Tests war, dass …
+            options: ["die Mitarbeiter seltener krank waren.", "die Firma weniger geschafft hat.", "es mehr Besprechungen gab."]
+            answer: "die Mitarbeiter seltener krank waren."
+          - id: l2-3
+            type: multiple-choice
+            prompt: Experten meinen, dass die Vier-Tage-Woche …
+            options: ["nicht überall möglich ist.", "in allen Branchen funktioniert.", "besonders gut für Krankenhäuser ist."]
+            answer: "nicht überall möglich ist."
+
+      - title: "Lesen, Teil 2 (Text 2)"
+        instructions: Lesen Sie den Text aus der Presse. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Zeitungsartikel
+          text: |
+            Handwerk sucht Nachwuchs
+
+            In Deutschland sind im letzten Jahr über 60.000 Ausbildungsplätze im Handwerk frei geblieben. Besonders Bäckereien, Metzgereien und Sanitärbetriebe finden kaum noch junge Leute. Viele Schulabgänger wollen lieber studieren, weil sie glauben, dass sie mit einem Studium mehr verdienen.
+
+            „Das stimmt oft nicht mehr", sagt Handwerksmeister Jürgen Brandl. „Ein guter Installateur verdient heute mehr als viele Akademiker, und er findet sofort eine Stelle." Um junge Menschen zu gewinnen, bieten viele Betriebe jetzt Praktika in den Ferien an, manche zahlen sogar den Führerschein.
+
+            Auch Geflüchtete und Zuwanderer sind eine große Hoffnung für das Handwerk. Viele Betriebe helfen ihnen mit Sprachkursen während der Ausbildung.
+        items:
+          - id: l2-4
+            type: multiple-choice
+            prompt: Viele Ausbildungsplätze im Handwerk …
+            options: ["sind frei geblieben.", "wurden gestrichen.", "sind sehr schlecht bezahlt."]
+            answer: "sind frei geblieben."
+          - id: l2-5
+            type: multiple-choice
+            prompt: Jürgen Brandl sagt, dass Handwerker …
+            options: ["oft gut verdienen.", "immer weniger verdienen als Akademiker.", "schwer eine Stelle finden."]
+            answer: "oft gut verdienen."
+          - id: l2-6
+            type: multiple-choice
+            prompt: Was machen manche Betriebe, um junge Leute zu gewinnen?
+            options: ["Sie bezahlen den Führerschein.", "Sie bezahlen das Studium.", "Sie bieten nur Vollzeitstellen an."]
+            answer: "Sie bezahlen den Führerschein."
+
+      - title: "Lesen, Teil 3"
+        instructions: Lesen Sie die Situationen und die Anzeigen. Welche Anzeige passt? Sie können jede Anzeige nur einmal wählen. Für eine Situation gibt es keine passende Anzeige. Wählen Sie dann 0.
+        stimulus:
+          kind: text
+          label: Anzeigen
+          text: |
+            a) Bewerbungsfotos: professionell, in 15 Minuten, ohne Termin. Fotostudio Licht.
+
+            b) Coaching für Führungskräfte: Lernen Sie, Ihr Team besser zu leiten. Wochenendseminar.
+
+            c) Anerkennungsberatung: Hilfe bei der Anerkennung ausländischer Berufsabschlüsse, kostenlos.
+
+            d) Wirtschaftsenglisch: Abendkurs für Berufstätige, Telefonieren und Verhandeln auf Englisch.
+
+            e) Jobbörse für Studenten: Minijobs und Werkstudentenstellen in der Region.
+
+            f) Existenzgründung: Sie wollen sich selbstständig machen? Infoabend bei der IHK.
+
+            g) Kita-Plätze für Kinder von Mitarbeitern: Betriebskindergarten Firma Stahl.
+
+            h) Lebenslauf-Check: Wir prüfen Ihre Bewerbungsunterlagen, 30 Euro.
+
+            i) Pflegefachkräfte gesucht: Krankenhaus Nord, gutes Gehalt, Hilfe bei der Wohnungssuche.
+
+            j) Rhetorikkurs: Sicher präsentieren vor Publikum, 4 Abende.
+        items:
+          - id: l3-1
+            type: multiple-choice
+            prompt: Frau Silva ist Ärztin aus Brasilien und möchte in Deutschland in ihrem Beruf arbeiten.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: c
+            shuffle: false
+          - id: l3-2
+            type: multiple-choice
+            prompt: Kai studiert und sucht einen Job für 10 Stunden pro Woche.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: e
+            shuffle: false
+          - id: l3-3
+            type: multiple-choice
+            prompt: Herr Yilmaz möchte ein eigenes Restaurant eröffnen.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: f
+            shuffle: false
+          - id: l3-4
+            type: multiple-choice
+            prompt: Anna muss nächsten Monat ihr Projekt vor 100 Kollegen vorstellen und ist sehr nervös.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: j
+            shuffle: false
+          - id: l3-5
+            type: multiple-choice
+            prompt: Lucas ist seit Kurzem Teamleiter und möchte lernen, wie er sein Team motiviert.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: b
+            shuffle: false
+          - id: l3-6
+            type: multiple-choice
+            prompt: Frau Kim möchte wissen, ob ihre Bewerbung gut genug ist.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: h
+            shuffle: false
+          - id: l3-7
+            type: multiple-choice
+            prompt: Herr Novak sucht eine Stelle als Busfahrer.
+            options: [a, b, c, d, e, f, g, h, i, j, "0"]
+            answer: "0"
+            shuffle: false
+
+      - title: "Lesen, Teil 4"
+        instructions: "Lesen Sie die Texte. Thema: Sollten alle Arbeitnehmer das Recht auf Homeoffice haben? Ist die Person dafür? Wählen Sie ja oder nein."
+        items:
+          - id: l4-1
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Miriam, 38, Stuttgart
+              text: "Seit ich zwei Tage pro Woche zu Hause arbeite, kann ich meine Kinder selbst von der Schule abholen. Für Familien ist das ein Riesenvorteil. Es sollte ein Recht für alle sein."
+            prompt: Ist Miriam dafür?
+            options: [ja, nein]
+            answer: ja
+            shuffle: false
+          - id: l4-2
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Klaus, 55, Bremen
+              text: "Ich bin Chef eines kleinen Betriebs. Wenn alle zu Hause sind, funktioniert die Zusammenarbeit nicht. Die Firma sollte das entscheiden, nicht ein Gesetz."
+            prompt: Ist Klaus dafür?
+            options: [ja, nein]
+            answer: nein
+            shuffle: false
+          - id: l4-3
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Deniz, 27, Berlin
+              text: "Zwar fühle ich mich zu Hause manchmal einsam, aber ich spare jeden Tag zwei Stunden im Zug. Diese Freiheit sollte jeder bekommen, der am Computer arbeitet."
+            prompt: Ist Deniz dafür?
+            options: [ja, nein]
+            answer: ja
+            shuffle: false
+          - id: l4-4
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Susanne, 44, Dresden
+              text: "Ich bin Krankenschwester. Ein Recht auf Homeoffice wäre ungerecht, weil Leute wie ich es nie nutzen können. Das spaltet die Gesellschaft."
+            prompt: Ist Susanne dafür?
+            options: [ja, nein]
+            answer: nein
+            shuffle: false
+          - id: l4-5
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Tobias, 31, München
+              text: "In München sind die Mieten so hoch, dass viele weit draußen wohnen müssen. Homeoffice ist für sie die einzige Lösung. Ich finde, das sollte gesetzlich geregelt werden."
+            prompt: Ist Tobias dafür?
+            options: [ja, nein]
+            answer: ja
+            shuffle: false
+          - id: l4-6
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Ingrid, 62, Hannover
+              text: "Für junge Leute mag das gut sein. Aber ich habe beobachtet, dass neue Kollegen ohne Büro kaum etwas lernen. Ich halte nichts von einem allgemeinen Recht darauf."
+            prompt: Ist Ingrid dafür?
+            options: [ja, nein]
+            answer: nein
+            shuffle: false
+          - id: l4-7
+            type: multiple-choice
+            stimulus:
+              kind: text
+              label: Ahmed, 35, Köln
+              text: "Am Anfang war ich skeptisch, weil ich dachte, die Leute arbeiten zu Hause weniger. Aber in unserer Abteilung ist das Gegenteil passiert. Ich bin inzwischen ein klarer Befürworter."
+            prompt: Ist Ahmed dafür?
+            options: [ja, nein]
+            answer: ja
+            shuffle: false
+
+      - title: "Lesen, Teil 5"
+        instructions: Lesen Sie die Aufgaben und den Text. Wählen Sie die richtige Lösung a, b oder c.
+        stimulus:
+          kind: text
+          label: Hinweise für neue Mitarbeiter – Firma Nordtech
+          text: |
+            Arbeitszeit: Unsere Kernarbeitszeit ist von 9:30 bis 15:00 Uhr. Außerhalb dieser Zeit können Sie Beginn und Ende Ihres Arbeitstages frei wählen.
+
+            Urlaub: Urlaubsanträge stellen Sie mindestens vier Wochen vorher bei Ihrer Teamleitung. Im ersten halben Jahr können maximal zehn Tage genommen werden.
+
+            Krankheit: Bitte informieren Sie Ihre Teamleitung am ersten Krankheitstag vor 9 Uhr. Ab dem dritten Tag benötigen wir eine ärztliche Bescheinigung.
+
+            Kantine: Die Kantine ist von 11:30 bis 14:00 Uhr geöffnet. Mitarbeiter erhalten 50 % Rabatt auf alle Gerichte.
+        items:
+          - id: l5-1
+            type: multiple-choice
+            prompt: Ein Mitarbeiter muss …
+            options: ["zwischen 9:30 und 15 Uhr im Büro sein.", "immer um 8 Uhr anfangen.", "bis 18 Uhr arbeiten."]
+            answer: "zwischen 9:30 und 15 Uhr im Büro sein."
+          - id: l5-2
+            type: multiple-choice
+            prompt: In den ersten sechs Monaten kann man …
+            options: ["höchstens zehn Tage Urlaub nehmen.", "keinen Urlaub nehmen.", "so viel Urlaub nehmen, wie man will."]
+            answer: "höchstens zehn Tage Urlaub nehmen."
+          - id: l5-3
+            type: multiple-choice
+            prompt: Wenn man zwei Tage krank ist, …
+            options: ["braucht man keine Bescheinigung vom Arzt.", "muss man sofort zum Arzt.", "muss man die Personalabteilung anrufen."]
+            answer: "braucht man keine Bescheinigung vom Arzt."
+          - id: l5-4
+            type: multiple-choice
+            prompt: In der Kantine …
+            options: ["bezahlen Mitarbeiter die Hälfte.", "ist das Essen kostenlos.", "kann man den ganzen Tag essen."]
+            answer: "bezahlen Mitarbeiter die Hälfte."
+
+  - skill: listening
+    minutes: 40
+    points: 25
+    parts:
+      - title: "Hören, Teil 1 (Text 1)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Nachricht auf der Mailbox
+          lines:
+            - text: "Guten Tag, Frau Novak, hier spricht Herr Albrecht von der Personalabteilung der Firma Meier. Vielen Dank für Ihre Bewerbung. Wir möchten Sie gern zu einem Gespräch einladen, und zwar am Donnerstag, dem zwölften, um zehn Uhr. Bitte bringen Sie Ihre Zeugnisse im Original mit. Wenn der Termin nicht passt, rufen Sie mich bitte bis Dienstag zurück."
+        items:
+          - id: h1-1
+            type: true-false
+            prompt: Frau Novak ist zu einem Vorstellungsgespräch eingeladen.
+            answer: true
+          - id: h1-2
+            type: multiple-choice
+            prompt: Was soll Frau Novak mitbringen?
+            options: ["ihre Zeugnisse im Original", "einen neuen Lebenslauf", "ein Foto"]
+            answer: "ihre Zeugnisse im Original"
+
+      - title: "Hören, Teil 1 (Text 2)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Durchsage im Betrieb
+          lines:
+            - text: "Liebe Kolleginnen und Kollegen, wegen Bauarbeiten bleibt der Parkplatz hinter dem Gebäude ab Montag zwei Wochen lang geschlossen. Bitte nutzen Sie in dieser Zeit das Parkhaus am Bahnhof. Die Firma übernimmt die Kosten, wenn Sie Ihr Ticket am Empfang abgeben."
+        items:
+          - id: h1-3
+            type: true-false
+            prompt: Der Parkplatz ist ab Montag für zwei Wochen gesperrt.
+            answer: true
+          - id: h1-4
+            type: multiple-choice
+            prompt: Wer bezahlt das Parkhaus?
+            options: ["die Firma", "die Mitarbeiter", "die Stadt"]
+            answer: "die Firma"
+
+      - title: "Hören, Teil 1 (Text 3)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Radio – Nachrichten
+          lines:
+            - text: "In Deutschland arbeiten immer mehr Menschen in Teilzeit. Laut einer neuen Studie sind es inzwischen fast dreißig Prozent aller Beschäftigten. Besonders viele Frauen arbeiten Teilzeit, oft wegen der Kinderbetreuung. Experten fordern deshalb mehr und bessere Kita-Plätze."
+        items:
+          - id: h1-5
+            type: true-false
+            prompt: Ungefähr ein Drittel aller Beschäftigten arbeitet Teilzeit.
+            answer: true
+          - id: h1-6
+            type: multiple-choice
+            prompt: Was fordern die Experten?
+            options: ["mehr Kita-Plätze", "mehr Vollzeitstellen", "höhere Gehälter"]
+            answer: "mehr Kita-Plätze"
+
+      - title: "Hören, Teil 1 (Text 4)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Nachricht von einem Kollegen
+          lines:
+            - text: "Hallo Sandra, hier ist Marco. Ich stehe im Stau und schaffe es nicht pünktlich zur Präsentation um neun. Kannst du bitte anfangen? Die Folien sind auf dem Server im Ordner Projekte. Ich bin spätestens um halb zehn da."
+        items:
+          - id: h1-7
+            type: true-false
+            prompt: Marco kommt pünktlich zur Präsentation.
+            answer: false
+          - id: h1-8
+            type: multiple-choice
+            prompt: Was soll Sandra tun?
+            options: ["mit der Präsentation anfangen", "die Präsentation absagen", "Marco abholen"]
+            answer: "mit der Präsentation anfangen"
+
+      - title: "Hören, Teil 1 (Text 5)"
+        instructions: Sie hören einen Text zweimal. Lösen Sie beide Aufgaben.
+        stimulus:
+          kind: audio
+          label: Werbung im Radio
+          lines:
+            - text: "Sie suchen eine neue Herausforderung? Die Jobmesse 'Karriere Nord' findet am Samstag von zehn bis sechzehn Uhr in der Messehalle statt. Über hundert Firmen stellen sich vor. Der Eintritt ist frei, und Sie können Ihren Lebenslauf vor Ort kostenlos prüfen lassen."
+        items:
+          - id: h1-9
+            type: true-false
+            prompt: Für die Jobmesse muss man Eintritt bezahlen.
+            answer: false
+          - id: h1-10
+            type: multiple-choice
+            prompt: Was kann man auf der Messe kostenlos machen?
+            options: ["den Lebenslauf prüfen lassen", "Bewerbungsfotos machen lassen", "einen Sprachkurs besuchen"]
+            answer: "den Lebenslauf prüfen lassen"
+
+      - title: "Hören, Teil 2"
+        instructions: Sie hören einen Text einmal. Wählen Sie für jede Aufgabe die richtige Lösung a, b oder c.
+        stimulus:
+          kind: audio
+          label: Erster Arbeitstag – Begrüßung neuer Azubis
+          plays: 1
+          lines:
+            - speaker: Ausbilder
+              text: "Guten Morgen und herzlich willkommen bei der Firma Lindner! Ich bin Herr Koch, Ihr Ausbilder. Heute ist Ihr erster Tag, und ich möchte Ihnen kurz erklären, wie die nächsten Wochen ablaufen."
+            - speaker: Ausbilder
+              text: "In den ersten zwei Wochen lernen Sie alle Abteilungen kennen, jeden Tag eine andere. Danach beginnen Sie in der Abteilung, die zu Ihrem Beruf passt."
+            - speaker: Ausbilder
+              text: "Die Berufsschule ist zweimal pro Woche, dienstags und donnerstags. An diesen Tagen kommen Sie nicht in den Betrieb."
+            - speaker: Ausbilder
+              text: "Ihre Arbeitskleidung bekommen Sie heute Nachmittag im Lager. Bitte tragen Sie in der Werkstatt immer Sicherheitsschuhe."
+            - speaker: Ausbilder
+              text: "Und noch etwas Schönes: Am Freitag gibt es für alle neuen Azubis ein gemeinsames Mittagessen mit der Geschäftsführung."
+        items:
+          - id: h2-1
+            type: multiple-choice
+            prompt: Herr Koch ist …
+            options: ["der Ausbilder.", "der Geschäftsführer.", "ein neuer Azubi."]
+            answer: "der Ausbilder."
+          - id: h2-2
+            type: multiple-choice
+            prompt: In den ersten zwei Wochen …
+            options: ["lernen die Azubis alle Abteilungen kennen.", "gehen die Azubis nur in die Berufsschule.", "arbeiten die Azubis in der Werkstatt."]
+            answer: "lernen die Azubis alle Abteilungen kennen."
+          - id: h2-3
+            type: multiple-choice
+            prompt: Die Berufsschule ist …
+            options: ["dienstags und donnerstags.", "montags und mittwochs.", "jeden Freitag."]
+            answer: "dienstags und donnerstags."
+          - id: h2-4
+            type: multiple-choice
+            prompt: Die Arbeitskleidung bekommen die Azubis …
+            options: ["heute Nachmittag im Lager.", "morgen in der Werkstatt.", "in der Berufsschule."]
+            answer: "heute Nachmittag im Lager."
+          - id: h2-5
+            type: multiple-choice
+            prompt: Am Freitag …
+            options: ["essen die Azubis mit der Geschäftsführung.", "haben die Azubis frei.", "gibt es einen Test."]
+            answer: "essen die Azubis mit der Geschäftsführung."
+
+      - title: "Hören, Teil 3"
+        instructions: Sie hören ein Gespräch einmal. Sind die Aussagen richtig oder falsch?
+        stimulus:
+          kind: audio
+          label: Gespräch in der Kantine
+          plays: 1
+          lines:
+            - speaker: Julia
+              text: "Hallo Stefan! Ich habe gehört, du gehst weg?"
+            - speaker: Stefan
+              text: "Ja, Ende des Monats ist mein letzter Tag. Ich habe eine Stelle in Wien bekommen."
+            - speaker: Julia
+              text: "Wien! Wow. Aber warum? Gefällt es dir hier nicht mehr?"
+            - speaker: Stefan
+              text: "Doch, die Kollegen sind super. Aber meine Freundin hat in Wien eine Professur bekommen, und wir wollen nicht mehr pendeln. Zwei Jahre Fernbeziehung reichen."
+            - speaker: Julia
+              text: "Das verstehe ich. Was machst du dort?"
+            - speaker: Stefan
+              text: "Fast das Gleiche wie hier, Projektmanagement, aber in einer größeren Firma. Und ich verdiene etwas mehr."
+            - speaker: Julia
+              text: "Machst du eine Abschiedsfeier?"
+            - speaker: Stefan
+              text: "Klar, am letzten Freitag des Monats, nach der Arbeit im Biergarten. Du bist natürlich eingeladen!"
+        items:
+          - id: h3-1
+            type: true-false
+            prompt: Stefan verlässt die Firma Ende des Monats.
+            answer: true
+          - id: h3-2
+            type: true-false
+            prompt: Stefan geht weg, weil er die Kollegen nicht mag.
+            answer: false
+          - id: h3-3
+            type: true-false
+            prompt: Stefans Freundin arbeitet in Wien an einer Universität.
+            answer: true
+          - id: h3-4
+            type: true-false
+            prompt: Stefan und seine Freundin haben bisher zusammengewohnt.
+            answer: false
+          - id: h3-5
+            type: true-false
+            prompt: In Wien macht Stefan etwas ganz anderes als jetzt.
+            answer: false
+          - id: h3-6
+            type: true-false
+            prompt: In der neuen Stelle verdient er mehr Geld.
+            answer: true
+          - id: h3-7
+            type: true-false
+            prompt: Die Abschiedsfeier ist in der Kantine.
+            answer: false
+
+      - title: "Hören, Teil 4"
+        instructions: Sie hören eine Diskussion zweimal. Wer sagt was? Wählen Sie Moderatorin, Herr Wendt oder Frau Ilić.
+        stimulus:
+          kind: audio
+          label: "Radiodiskussion: Sollen Bewerbungen ohne Foto sein?"
+          lines:
+            - speaker: Moderatorin
+              text: "Willkommen zu unserer Sendung. In vielen Ländern sind Bewerbungsfotos unüblich, in Deutschland noch nicht. Bei mir sind Herr Wendt, Personalchef eines Autozulieferers, und Frau Ilić von einer Beratungsstelle für Migrantinnen. Herr Wendt, brauchen Sie ein Foto?"
+            - speaker: Herr Wendt
+              text: "Ehrlich gesagt nicht. Wir haben vor zwei Jahren angefangen, Bewerbungen ohne Foto und ohne Namen zu lesen. Wir schauen nur noch auf Qualifikationen."
+            - speaker: Frau Ilić
+              text: "Das ist ein gutes Beispiel. In meiner Beratung erlebe ich oft, dass Frauen mit Kopftuch oder mit einem ausländischen Namen keine Einladung bekommen, obwohl sie gut qualifiziert sind."
+            - speaker: Moderatorin
+              text: "Hat sich bei Ihnen etwas verändert, Herr Wendt?"
+            - speaker: Herr Wendt
+              text: "Ja. Wir laden jetzt mehr Bewerberinnen und Bewerber mit Migrationshintergrund ein. Und ehrlich: Unser Team ist dadurch besser geworden."
+            - speaker: Frau Ilić
+              text: "Trotzdem reicht das allein nicht. Im Vorstellungsgespräch sieht man die Person ja doch. Wichtig ist, dass auch die Interviewer geschult werden."
+            - speaker: Herr Wendt
+              text: "Da gebe ich Ihnen recht. Wir haben deshalb ein Training für alle Führungskräfte eingeführt."
+            - speaker: Moderatorin
+              text: "Es klingt, als ob Sie beide in die gleiche Richtung denken. Vielen Dank für das Gespräch."
+        items:
+          - id: h4-1
+            type: multiple-choice
+            prompt: In anderen Ländern verschickt man selten Fotos mit der Bewerbung.
+            options: [Moderatorin, Herr Wendt, Frau Ilić]
+            answer: Moderatorin
+            shuffle: false
+          - id: h4-2
+            type: multiple-choice
+            prompt: Die Firma liest Bewerbungen ohne Namen.
+            options: [Moderatorin, Herr Wendt, Frau Ilić]
+            answer: Herr Wendt
+            shuffle: false
+          - id: h4-3
+            type: multiple-choice
+            prompt: Qualifizierte Frauen werden wegen ihres Aussehens oft nicht eingeladen.
+            options: [Moderatorin, Herr Wendt, Frau Ilić]
+            answer: Frau Ilić
+            shuffle: false
+          - id: h4-4
+            type: multiple-choice
+            prompt: Ist bei Ihnen etwas anders geworden?
+            options: [Moderatorin, Herr Wendt, Frau Ilić]
+            answer: Moderatorin
+            shuffle: false
+          - id: h4-5
+            type: multiple-choice
+            prompt: Das Team arbeitet heute besser als früher.
+            options: [Moderatorin, Herr Wendt, Frau Ilić]
+            answer: Herr Wendt
+            shuffle: false
+          - id: h4-6
+            type: multiple-choice
+            prompt: Bewerbungen ohne Foto lösen das Problem nicht ganz.
+            options: [Moderatorin, Herr Wendt, Frau Ilić]
+            answer: Frau Ilić
+            shuffle: false
+          - id: h4-7
+            type: multiple-choice
+            prompt: Die Führungskräfte bekommen ein Training.
+            options: [Moderatorin, Herr Wendt, Frau Ilić]
+            answer: Herr Wendt
+            shuffle: false
+          - id: h4-8
+            type: multiple-choice
+            prompt: Die Gäste haben ähnliche Meinungen.
+            options: [Moderatorin, Herr Wendt, Frau Ilić]
+            answer: Moderatorin
+            shuffle: false
+
+  - skill: writing
+    minutes: 60
+    points: 25
+    parts:
+      - title: "Schreiben, Teil 1"
+        instructions: Schreiben Sie eine E-Mail (circa 80 Wörter). Schreiben Sie etwas zu allen drei Punkten. Zeit – circa 20 Minuten.
+        items:
+          - id: s1
+            type: writing-task
+            prompt: "Sie haben vor Kurzem eine neue Stelle angefangen. Ihre Freundin Carla möchte wissen, wie es Ihnen geht. Schreiben Sie Carla eine E-Mail: Beschreiben Sie Ihre neue Arbeit. Begründen Sie, warum Sie die Stelle gewechselt haben. Machen Sie einen Vorschlag für ein Treffen."
+            points:
+              - die neue Arbeit beschreiben
+              - Grund für den Wechsel
+              - Vorschlag für ein Treffen
+            minWords: 70
+            sample: "Liebe Carla, danke für deine Nachricht! Seit drei Wochen arbeite ich jetzt in einem Architekturbüro im Zentrum. Ich plane dort Wohnungen und arbeite in einem kleinen, sehr netten Team. Ich habe die Stelle gewechselt, weil ich in der alten Firma nur Büroarbeit gemacht habe und mich nicht weiterentwickeln konnte. Hier darf ich eigene Projekte machen, und das macht mir viel Spaß. Hast du nächsten Samstag Zeit? Dann könnten wir zusammen frühstücken und ich erzähle dir mehr. Liebe Grüße, Elif"
+
+      - title: "Schreiben, Teil 2"
+        instructions: Schreiben Sie Ihre Meinung (circa 80 Wörter). Zeit – circa 25 Minuten.
+        items:
+          - id: s2
+            type: writing-task
+            prompt: "Sie haben im Radio eine Sendung zum Thema 'Lieber studieren oder eine Ausbildung machen?' gehört. Im Online-Gästebuch der Sendung schreibt Kevin: 'Ohne Studium hat man heute keine Chance auf einen guten Job.' Schreiben Sie Ihre Meinung."
+            points:
+              - auf Kevins Aussage reagieren
+              - eigene Meinung mit Begründung
+              - Beispiel oder Erfahrung
+              - Schluss
+            minWords: 70
+            sample: "Kevin schreibt, dass man ohne Studium keine Chance auf einen guten Job hat. Da bin ich anderer Meinung. Meiner Meinung nach kann eine Ausbildung genauso gut sein, weil man von Anfang an Geld verdient und viel Praxis bekommt. Mein Bruder ist zum Beispiel Elektriker geworden und hat heute seine eigene Firma. Er verdient mehr als viele seiner Freunde mit Studium. Zwar braucht man für manche Berufe ein Studium, aber nicht für alle. Deshalb sollte jeder das wählen, was zu ihm passt."
+
+      - title: "Schreiben, Teil 3"
+        instructions: Schreiben Sie eine E-Mail (circa 40 Wörter). Zeit – circa 15 Minuten.
+        items:
+          - id: s3
+            type: writing-task
+            prompt: "Ihr Teamleiter, Herr Krause, hat Sie gebeten, am Samstag bei einer Messe zu helfen. Sie können nicht. Schreiben Sie Herrn Krause. Entschuldigen Sie sich höflich und schlagen Sie eine andere Lösung vor."
+            points:
+              - Entschuldigung
+              - andere Lösung
+            minWords: 35
+            sample: "Sehr geehrter Herr Krause, vielen Dank für Ihre Anfrage. Leider kann ich am Samstag nicht bei der Messe helfen, da ich schon lange einen Familientermin geplant habe. Es tut mir sehr leid. Ich könnte aber am Freitag die Vorbereitung übernehmen. Mit freundlichen Grüßen, Tomás Rivera"
+
+  - skill: speaking
+    minutes: 15
+    points: 25
+    parts:
+      - title: "Sprechen, Teil 1: gemeinsam etwas planen"
+        instructions: Sie möchten mit Ihrem Partner / Ihrer Partnerin für einen Kollegen, der in Rente geht, eine Abschiedsfeier organisieren. Sprechen Sie über die Punkte unten.
+        items:
+          - id: sp1
+            type: speaking-task
+            prompt: "Planen Sie gemeinsam eine Abschiedsfeier für einen Kollegen."
+            cards: [Wann und wo?, Wer wird eingeladen?, Essen und Getränke?, Geschenk?, Wer macht was?]
+            checklist:
+              - I made suggestions for every point
+              - I reacted to my partner's suggestions, with reasons
+              - I disagreed politely at least once
+              - We reached a decision on each point
+            sample: "– Was hältst du davon, wenn wir die Feier am letzten Arbeitstag von Herrn Busch machen, im Besprechungsraum? – Gute Idee, aber der Raum ist klein. Wir laden ja die ganze Abteilung ein. Lieber in der Kantine. – Einverstanden. Und das Essen? Wir könnten einen Partyservice bestellen. – Das ist teuer. Vielleicht bringt jeder etwas mit? – Gut. Als Geschenk könnten wir ihm einen Gutschein für eine Ballonfahrt schenken, er hat davon erzählt. – Super! Ich sammle das Geld, und du kümmerst dich um die Einladung."
+
+      - title: "Sprechen, Teil 2: ein Thema präsentieren"
+        instructions: Sie sollen Ihren Zuhörern ein aktuelles Thema präsentieren. Folgen Sie den fünf Folien.
+        items:
+          - id: sp2
+            type: speaking-task
+            prompt: "Thema: 'Sollte man mehrmals im Leben den Beruf wechseln?'"
+            cards: [Thema und Struktur, meine persönlichen Erfahrungen, die Situation in meinem Heimatland, Vor- und Nachteile + meine Meinung, Abschluss und Dank]
+            checklist:
+              - I followed the five slides in order
+              - I gave a personal example
+              - I described the situation in my home country
+              - I gave pros, cons and my opinion with reasons
+              - I spoke for about three minutes
+            sample: "Ich möchte heute über das Thema 'Berufswechsel' sprechen. Zuerst erzähle ich von meinen Erfahrungen, dann von der Situation in meinem Heimatland, und am Ende spreche ich über Vor- und Nachteile. Ich selbst war zuerst Lehrerin und arbeite jetzt in einer Softwarefirma. In meinem Heimatland Polen bleiben ältere Menschen oft ihr ganzes Leben im selben Beruf, aber junge Leute wechseln immer häufiger. Ein Vorteil ist, dass man Neues lernt und motiviert bleibt. Ein Nachteil ist, dass man am Anfang wenig verdient und wieder von vorn beginnt. Meiner Meinung nach ist ein Wechsel sinnvoll, wenn man unzufrieden ist. Zum Schluss möchte ich sagen: Es ist nie zu spät für etwas Neues. Vielen Dank für Ihre Aufmerksamkeit."
+
+      - title: "Sprechen, Teil 3: über ein Thema sprechen"
+        instructions: Reagieren Sie auf die Präsentation Ihres Partners / Ihrer Partnerin. Beantworten Sie dann eine Frage zu Ihrer eigenen Präsentation.
+        items:
+          - id: sp3
+            type: speaking-task
+            prompt: "Ihr Partner / Ihre Partnerin hat das Thema 'Teilzeit für Väter' präsentiert. Geben Sie eine Rückmeldung und stellen Sie eine Frage. Beantworten Sie dann die Frage: 'Was war am schwierigsten bei Ihrem Berufswechsel?'"
+            cards: [Dank, Rückmeldung, Frage, Antwort]
+            checklist:
+              - I thanked my partner and said something specific I liked
+              - I asked a real question about the presentation
+              - I answered the question about my own presentation
+            sample: "Vielen Dank für deine Präsentation. Besonders interessant fand ich, dass in deiner Firma schon viele Väter Teilzeit arbeiten. Ich habe eine Frage: Haben die Väter dadurch Nachteile bei der Karriere? … Zu Ihrer Frage: Am schwierigsten war für mich, dass ich am Anfang viel weniger verdient habe. Wir mussten ein Jahr sehr sparsam leben, aber das hat sich gelohnt."

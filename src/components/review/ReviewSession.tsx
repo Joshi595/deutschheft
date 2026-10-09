@@ -1,10 +1,14 @@
 import { useStore } from '@nanostores/react';
 import { useEffect, useMemo, useState } from 'react';
 import type { ClientExercise, ClientVocabItem } from '../../lib/content/types';
+import { gradeText } from '../../lib/grading/grade';
+import { localDay, totalXp, xpOn } from '../../lib/progress/logic';
 import { speak } from '../../lib/speech';
 import { dueCards, type ReviewGrade, type StoredCard } from '../../lib/srs/scheduler';
-import { $notebook, $review, $settings, rateCard } from '../../lib/stores';
+import { $notebook, $progress, $review, $settings, rateCard } from '../../lib/stores';
 import { ExerciseCard } from '../exercises/ExerciseCard';
+import { GermanInput } from '../exercises/GermanInput';
+import { GoalRing } from '../ui/GoalRing';
 
 interface Props {
   vocab: ClientVocabItem[];
@@ -32,6 +36,12 @@ const GRADES: { grade: ReviewGrade; label: string; hint: string; className: stri
   { grade: 'good', label: 'Good', hint: 'Knew it', className: 'hover:border-good hover:text-good' },
   { grade: 'easy', label: 'Easy', hint: 'Instantly', className: '' },
 ];
+
+/** What counts as a right typed answer: the card's German, with or without a bracketed note, or one of its alternatives. */
+function acceptedFor(back: string): string[] {
+  const plain = back.replace(/\s*\([^)]*\)/g, '').trim();
+  return [...new Set([back, plain, ...plain.split(/\s*\/\s*/)])].filter(Boolean);
+}
 
 function untilText(due: Date, now: Date): string {
   const minutes = Math.max(1, Math.round((due.getTime() - now.getTime()) / 60_000));
@@ -85,19 +95,28 @@ export default function ReviewSession({ vocab, exercises, lessons, homeHref }: P
   const [queue, setQueue] = useState<string[]>(() => dueNow().slice(0, SESSION_SIZE));
   const [position, setPosition] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const [typed, setTyped] = useState('');
   const [exerciseResult, setExerciseResult] = useState<boolean | null>(null);
   const [reviewed, setReviewed] = useState(0);
+  const [startPoints] = useState(() => totalXp($progress.get()));
+  const goal = settings.dailyGoal;
+  const progress = useStore($progress);
 
   const currentId = queue[position];
   const current = currentId ? review[currentId] : undefined;
   const flashcard = current ? flashcardFor(current) : undefined;
   const exercise = current?.kind === 'exercise' ? exerciseById.get(current.ref) : undefined;
 
+  // A typed answer is checked against the card; the learner still decides how well they knew it.
+  const check = flashcard && typed.trim() ? gradeText(typed, acceptedFor(flashcard.back)) : undefined;
+  const suggested: ReviewGrade | undefined = check ? (check.correct ? 'good' : 'again') : undefined;
+
   function advance(grade: ReviewGrade) {
     if (!currentId) return;
     rateCard(currentId, grade);
     setReviewed(reviewed + 1);
     setRevealed(false);
+    setTyped('');
     setExerciseResult(null);
     setPosition(position + 1);
   }
@@ -115,6 +134,8 @@ export default function ReviewSession({ vocab, exercises, lessons, homeHref }: P
         setRevealed(true);
       } else if (revealed && ['1', '2', '3', '4'].includes(event.key)) {
         advance(GRADES[Number(event.key) - 1]!.grade);
+      } else if (revealed && suggested && event.key === 'Enter') {
+        advance(suggested);
       }
     }
     window.addEventListener('keydown', onKey);
@@ -132,15 +153,31 @@ export default function ReviewSession({ vocab, exercises, lessons, homeHref }: P
       .filter((due) => due.getTime() > Date.now())
       .sort((a, b) => a.getTime() - b.getTime())[0];
 
+    // Words that have slipped at least twice, worst first: the learner's own difficult list.
+    const slipping = Object.values(review)
+      .filter((card) => card.kind !== 'exercise' && card.lapses >= 2)
+      .sort((a, b) => b.lapses - a.lapses)
+      .flatMap((card) => {
+        const word = flashcardFor(card);
+        return word ? [{ ...word, lapses: card.lapses }] : [];
+      })
+      .slice(0, 8);
+    const earned = totalXp(progress) - startPoints;
+
     return (
+      <div className="grid gap-6">
       <div className="card p-6 sm:p-8">
         {reviewed > 0 ? (
-          <>
-            <p className="eyebrow">Session done</p>
-            <h2 className="mt-2 text-3xl">
-              {reviewed} {reviewed === 1 ? 'card' : 'cards'} reviewed.
-            </h2>
-          </>
+          <div className="flex flex-wrap items-center justify-between gap-5">
+            <div>
+              <p className="eyebrow" lang="de">Geschafft!</p>
+              <h2 className="mt-1 text-3xl">
+                {reviewed} {reviewed === 1 ? 'card' : 'cards'} reviewed
+              </h2>
+              {earned > 0 && <p className="mt-1 text-muted tabular-nums">+{earned} points</p>}
+            </div>
+            <GoalRing earned={xpOn(progress, localDay(new Date()))} goal={goal} />
+          </div>
         ) : deckSize === 0 ? (
           <>
             <p className="eyebrow">Nothing here yet</p>
@@ -174,14 +211,39 @@ export default function ReviewSession({ vocab, exercises, lessons, homeHref }: P
               </p>
             )}
             <a href={homeHref} className="btn mt-3">
-              Back to lessons
+              Back to Today
             </a>
           </div>
         )}
       </div>
+
+      {slipping.length > 0 && (
+        <section className="card p-5" aria-labelledby="slipping">
+          <h2 id="slipping" className="text-xl">Words that keep slipping</h2>
+          <p className="mt-1 text-sm text-muted">
+            The ones you have forgotten most often. They already come up more often in review; saying them aloud helps too.
+          </p>
+          <ul className="mt-3 divide-y divide-line">
+            {slipping.map((word) => (
+              <li key={word.back} className="flex items-center gap-2 py-2">
+                <button type="button" className="speak" onClick={() => speak(word.back, settings.speechRate)} aria-label={`Listen: ${word.back}`} title="Listen">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M11 5 6 9H3v6h3l5 4z" />
+                    <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                  </svg>
+                </button>
+                <span className="min-w-0 flex-1">
+                  <span className="de" lang="de">{word.back}</span> <span className="text-muted">{word.front}</span>
+                </span>
+                <span className="text-sm text-muted tabular-nums">slipped {word.lapses} times</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      </div>
     );
   }
-
   // --- A card ---------------------------------------------------------------
 
   const lesson = lessons[exercise?.lessonKey ?? flashcard?.lessonKey ?? ''];
@@ -209,12 +271,9 @@ export default function ReviewSession({ vocab, exercises, lessons, homeHref }: P
             topic={lesson?.title ?? ''}
             maxAttempts={1}
             onFinish={setExerciseResult}
+            onNext={() => advance(exerciseResult ? 'good' : 'again')}
+            nextLabel="Next card"
           />
-          {exerciseResult !== null && (
-            <button type="button" className="btn btn-primary justify-self-start" onClick={() => advance(exerciseResult ? 'good' : 'again')}>
-              Next card
-            </button>
-          )}
         </>
       )}
 
@@ -224,14 +283,32 @@ export default function ReviewSession({ vocab, exercises, lessons, homeHref }: P
           <p className="font-display mt-3 text-3xl sm:text-4xl">{flashcard.front}</p>
 
           {!revealed ? (
-            <button type="button" className="btn btn-primary mt-8" onClick={() => setRevealed(true)}>
-              Show answer
-            </button>
+            <div className="mt-6 grid gap-3">
+              <GermanInput
+                label="Your answer in German"
+                placeholder="Type it, or just say it"
+                value={typed}
+                onChange={setTyped}
+                onSubmit={() => setRevealed(true)}
+              />
+              <div className="flex flex-wrap items-center gap-3">
+                <button type="button" className="btn btn-accent" onClick={() => setRevealed(true)}>
+                  {typed.trim() ? 'Check' : 'Show answer'}
+                </button>
+                <span className="text-sm text-muted">Typing is optional. A noun needs its article.</span>
+              </div>
+            </div>
           ) : (
             <div className="mt-8 border-t border-line pt-6">
+              {check && (
+                <p className={`mb-5 rounded-xl px-4 py-3 ${check.correct ? 'pop bg-good-soft text-good' : 'shake bg-bad-soft text-bad'}`}>
+                  <span className="font-semibold" lang="de">{check.correct ? 'Richtig!' : 'Nicht ganz.'}</span> You wrote{' '}
+                  <span className="de" lang="de">{typed.trim()}</span>. {check.note}
+                </p>
+              )}
               <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
                 <span className="de font-display text-3xl sm:text-4xl" lang="de">{flashcard.back}</span>
-                <button type="button" className="btn btn-small" onClick={() => speak(flashcard.back, settings.speechRate)}>
+                <button type="button" className="listen btn btn-small" onClick={() => speak(flashcard.back, settings.speechRate)}>
                   Listen
                 </button>
               </p>
@@ -242,10 +319,17 @@ export default function ReviewSession({ vocab, exercises, lessons, homeHref }: P
                   {flashcard.exampleEn && <span className="block text-sm text-muted">{flashcard.exampleEn}</span>}
                 </p>
               )}
-              <p className="mt-8 text-sm text-muted">How well did you know it?</p>
+              <p className="mt-8 text-sm text-muted">
+                How well did you know it?{suggested && ' Enter takes the highlighted one.'}
+              </p>
               <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">
                 {GRADES.map(({ grade, label, hint, className }, index) => (
-                  <button key={grade} type="button" className={`btn h-auto flex-col gap-0 py-2 ${className}`} onClick={() => advance(grade)}>
+                  <button
+                    key={grade}
+                    type="button"
+                    className={`btn h-auto flex-col gap-0 py-2 ${className} ${grade === suggested ? 'border-ink bg-accent-soft' : ''}`}
+                    onClick={() => advance(grade)}
+                  >
                     <span>{label}</span>
                     <span className="text-xs font-normal text-muted">{hint} · {index + 1}</span>
                   </button>

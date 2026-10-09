@@ -108,7 +108,7 @@ export default function NotebookPage({ lessons }: Props) {
                       )}
                     </p>
                   </div>
-                  <button type="button" className="btn btn-quiet btn-small" onClick={() => speak(word.de, settings.speechRate)}>
+                  <button type="button" className="listen btn btn-quiet btn-small" onClick={() => speak(word.de, settings.speechRate)}>
                     Listen
                   </button>
                   <button type="button" className="btn btn-quiet btn-small" onClick={() => deleteWord(word.id)} aria-label={`Delete ${word.de}`}>

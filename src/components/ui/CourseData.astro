@@ -1,0 +1,11 @@
+---
+// The course outline, written into the page once for every component that
+// recommends or counts. Read it on the client with readCourse().
+import { getCatalog, toLevelSummaries } from '../../lib/content/catalog';
+import { COURSE_ELEMENT, packCourse, toCourse } from '../../lib/content/course';
+
+const catalog = await getCatalog();
+const json = packCourse(toCourse(toLevelSummaries(catalog), catalog.missions));
+---
+
+<script type="application/json" id={COURSE_ELEMENT} set:html={json} />

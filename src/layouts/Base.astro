@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/inter';
-import '@fontsource-variable/fraunces';
+import '@fontsource-variable/fraunces/full.css';
+import '@fontsource-variable/fraunces/full-italic.css';
 import '../styles/global.css';
 import { site } from '../site';
 import { url } from '../lib/url';
@@ -16,21 +17,30 @@ const { title, description = site.description, width = 'wide' } = Astro.props;
 const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.tagline}`;
 const path = Astro.url.pathname;
 
+// Icons are 24px line drawings, one path each.
 const nav = [
-  { href: url(''), label: 'Learn' },
-  { href: url('review/'), label: 'Review' },
-  { href: url('notebook/'), label: 'Notebook' },
-  { href: url('settings/'), label: 'Settings' },
+  { href: url(''), label: 'Today', icon: 'M7 3v3M17 3v3M4 9.5h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1ZM8.5 14.5l2.3 2.3 4.7-4.8' },
+  { href: url('learn/'), label: 'Learn', icon: 'M12 6.5c-1.8-1.3-4-2-7-2v13c3 0 5.2.7 7 2 1.8-1.3 4-2 7-2v-13c-3 0-5.2.7-7 2Zm0 0v13' },
+  { href: url('missions/'), label: 'Missions', icon: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm3.6-12.6-2.1 5.1-5.1 2.1 2.1-5.1 5.1-2.1Z' },
+  { href: url('review/'), label: 'Review', icon: 'm17 3 3 3-3 3M4 11V9a3 3 0 0 1 3-3h13M7 21l-3-3 3-3M20 13v2a3 3 0 0 1-3 3H4' },
+  { href: url('notebook/'), label: 'Notebook', icon: 'M7 3h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 0v18M13 8h2.5M13 12h2.5' },
 ];
-// Levels and lessons live under "Learn", so it is the fallback.
-const active = nav.slice(1).find((item) => path.startsWith(item.href)) ?? nav[0]!;
+const [today, learn] = nav as [(typeof nav)[number], (typeof nav)[number], ...typeof nav];
+const elsewhere = [url('settings/'), url('progress/')];
+// Levels and lessons live under "Learn", so it is the fallback; settings and progress light up nothing.
+const active =
+  path === today.href
+    ? today
+    : elsewhere.some((href) => path.startsWith(href))
+      ? undefined
+      : (nav.slice(1).find((item) => path.startsWith(item.href)) ?? learn);
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)" />
@@ -51,7 +61,7 @@ const active = nav.slice(1).find((item) => path.startsWith(item.href)) ?? nav[0]
       } catch (error) {}
     </script>
   </head>
-  <body class="flex flex-col">
+  <body class="flex flex-col pb-[calc(3.5rem+env(safe-area-inset-bottom))] sm:pb-0">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 btn">Skip to content</a>
 
     <div class="flex h-1" aria-hidden="true">
@@ -61,11 +71,11 @@ const active = nav.slice(1).find((item) => path.startsWith(item.href)) ?? nav[0]
     </div>
 
     <header class="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
-      <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-3">
+      <div class="mx-auto flex max-w-5xl items-center gap-x-5 px-4 py-2.5">
         <a href={url('')} class="font-display text-xl font-semibold tracking-tight">
           {site.name}<span class="text-accent">.</span>
         </a>
-        <nav aria-label="Main" class="-mx-2 flex items-center text-sm font-semibold">
+        <nav aria-label="Main" class="hidden items-center text-sm font-semibold sm:flex">
           {
             nav.map((item) => (
               <a
@@ -77,16 +87,44 @@ const active = nav.slice(1).find((item) => path.startsWith(item.href)) ?? nav[0]
                 ]}
               >
                 {item.label}
-                {item.label === 'Review' && (
-                  <span data-due-badge hidden class="chip chip-accent ml-1 px-1.5 text-[0.7rem]" />
-                )}
+                {item.label === 'Review' && <span data-due-badge hidden class="chip chip-accent ml-1 px-1.5 text-[0.7rem]" />}
                 {item === active && <span class="absolute inset-x-3 -bottom-0.5 h-0.5 rounded bg-accent" />}
               </a>
             ))
           }
         </nav>
+        <div class="ml-auto flex items-center gap-1.5">
+          <a
+            href={url('progress/')}
+            data-goal-chip
+            aria-current={path.startsWith(url('progress/')) ? 'page' : undefined}
+            class="flex min-h-9 items-center gap-2 rounded-full border border-line bg-surface py-1 pr-3 pl-1.5 text-sm font-semibold tabular-nums transition-colors hover:border-ink aria-[current=page]:border-ink"
+          >
+            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+              <circle cx="11" cy="11" r="8.5" fill="none" stroke="var(--surface-2)" stroke-width="3.5"></circle>
+              <circle data-goal-arc cx="11" cy="11" r="8.5" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="53.4" stroke-dashoffset="53.4" transform="rotate(-90 11 11)" style="transition: stroke-dashoffset 0.5s ease"></circle>
+            </svg>
+            <span data-goal-text>Progress</span>
+          </a>
+          <a
+            href={url('settings/')}
+            aria-label="Settings"
+            title="Settings"
+            aria-current={path.startsWith(url('settings/')) ? 'page' : undefined}
+            class="grid size-9 place-items-center rounded-full text-muted transition-colors hover:bg-surface-2 hover:text-ink aria-[current=page]:bg-surface-2 aria-[current=page]:text-ink"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h9M17 7h3M4 17h3M11 17h9M15 4.5v5M9 14.5v5"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </header>
+
+    <p data-voice-notice class="voice-notice border-b border-line bg-accent-soft px-4 py-2 text-center text-sm">
+      This browser has no German voice, so listening is switched off.{' '}
+      <a href={`${url('settings/')}#audio`} class="font-semibold underline underline-offset-4">How to get it back</a>
+    </p>
 
     <main id="main" class:list={['mx-auto w-full flex-1 px-4 py-8 sm:py-12', width === 'narrow' ? 'max-w-3xl' : 'max-w-5xl']}>
       <slot />
@@ -99,15 +137,33 @@ const active = nav.slice(1).find((item) => path.startsWith(item.href)) ?? nav[0]
       </div>
     </footer>
 
-    <script>
-      import { germanAvailable, speak } from '../lib/speech';
-      import { dueCards } from '../lib/srs/scheduler';
-      import { $review, $settings } from '../lib/stores';
+    <nav aria-label="Main" class="tabbar sm:hidden">
+      {
+        nav.map((item) => (
+          <a href={item.href} aria-current={item === active ? 'page' : undefined}>
+            <span class="tab-icon relative">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d={item.icon} />
+              </svg>
+              {item.label === 'Review' && <span data-due-badge hidden class="chip chip-accent absolute -top-1 left-7 px-1.5 text-[0.65rem] ring-2 ring-bg" />}
+            </span>
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
 
-      // Theme follows the setting live, including changes made in another tab.
+    <script>
+      import { localDay, xpOn } from '../lib/progress/logic';
+      import { germanAvailable, setPreferredVoice, speak } from '../lib/speech';
+      import { dueCards } from '../lib/srs/scheduler';
+      import { $progress, $review, $settings } from '../lib/stores';
+
+      // Theme and chosen voice follow the settings live, including changes made in another tab.
       $settings.subscribe((settings) => {
         if (settings.theme === 'system') delete document.documentElement.dataset.theme;
         else document.documentElement.dataset.theme = settings.theme;
+        setPreferredVoice(settings.voice);
       });
 
       // One click handler for every [data-speak] button on the page.
@@ -123,15 +179,35 @@ const active = nav.slice(1).find((item) => path.startsWith(item.href)) ?? nav[0]
       checkVoices();
       window.speechSynthesis?.addEventListener('voiceschanged', checkVoices);
 
-      // Due-card count next to "Review".
+      // Due-card count next to "Review", in the top bar and in the tab bar.
       $review.subscribe((review) => {
-        const badge = document.querySelector<HTMLElement>('[data-due-badge]');
-        if (!badge) return;
         const due = dueCards(review, new Date()).length;
-        badge.hidden = due === 0;
-        badge.textContent = due > 99 ? '99+' : String(due);
-        badge.setAttribute('aria-label', `${due} cards due`);
+        document.querySelectorAll<HTMLElement>('[data-due-badge]').forEach((badge) => {
+          badge.hidden = due === 0;
+          badge.textContent = due > 99 ? '99+' : String(due);
+          badge.setAttribute('aria-label', `${due} cards due`);
+        });
       });
+
+      // Today's points against the daily goal, in the top bar.
+      function paintGoal() {
+        const chip = document.querySelector<HTMLElement>('[data-goal-chip]');
+        const arc = chip?.querySelector<SVGCircleElement>('[data-goal-arc]');
+        const text = chip?.querySelector<HTMLElement>('[data-goal-text]');
+        if (!chip || !arc || !text) return;
+        const earned = xpOn($progress.get(), localDay(new Date()));
+        const goal = $settings.get().dailyGoal;
+        const share = goal > 0 ? Math.min(1, earned / goal) : 0;
+        arc.style.strokeDashoffset = String(53.4 * (1 - share));
+        arc.style.stroke = share >= 1 ? 'var(--good)' : 'var(--accent)';
+        text.textContent = goal > 0 ? `${earned}/${goal}` : `${earned}`;
+        chip.setAttribute(
+          'aria-label',
+          goal > 0 ? `${earned} of ${goal} points today. Open your progress.` : `${earned} points today. Open your progress.`,
+        );
+      }
+      $progress.subscribe(paintGoal);
+      $settings.subscribe(paintGoal);
 
       if ('serviceWorker' in navigator && import.meta.env.PROD) {
         navigator.serviceWorker.register(`${import.meta.env.BASE_URL.replace(/\/+$/, '')}/sw.js`).catch(() => {});

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { buildBackup, parseBackup, type BackupData } from '../src/lib/backup';
 import { addWord, emptyNotebook, logMistake, matches, MAX_MISTAKES, setNote } from '../src/lib/notebook/logic';
-import { applyAttempt, emptyProgress } from '../src/lib/progress/logic';
+import { addXp, applyAttempt, emptyProgress } from '../src/lib/progress/logic';
 import { enroll } from '../src/lib/srs/scheduler';
 
 const now = new Date('2026-10-02T09:00:00Z');
@@ -9,7 +9,7 @@ const now = new Date('2026-10-02T09:00:00Z');
 describe('backup', () => {
   it('round-trips everything the learner has stored', () => {
     const data: BackupData = {
-      progress: applyAttempt(emptyProgress, 'a2.01.mc1', true, now),
+      progress: addXp(applyAttempt(emptyProgress, 'a2.01.mc1', true, now), 10, now),
       review: enroll({}, 'vocab', ['a2.01.freundlich'], now),
       notebook: setNote(emptyNotebook, 'a2.01', 'Predicate adjectives take no ending.'),
       quizzes: {

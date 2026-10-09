@@ -1,0 +1,41 @@
+---
+import MissionRunner from '../../components/missions/MissionRunner';
+import Base from '../../layouts/Base.astro';
+import { getCatalog } from '../../lib/content/catalog';
+import { url } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const catalog = await getCatalog();
+  return catalog.missions.map((mission) => ({ params: { mission: mission.id } }));
+}
+
+const catalog = await getCatalog();
+const index = catalog.missions.findIndex((candidate) => candidate.id === Astro.params.mission);
+const mission = catalog.missions[index]!;
+const next = catalog.missions[index + 1];
+---
+
+<Base title={`${mission.titleDe} (${mission.title})`} description={mission.objective} width="narrow">
+  <nav aria-label="Breadcrumb" class="text-sm text-muted">
+    <a href={url('missions/')} class="hover:text-ink">Missions</a>
+    <span aria-hidden="true"> / </span>
+    <span>{mission.title}</span>
+  </nav>
+
+  <header class="mt-4">
+    <p class="eyebrow">{mission.level.toUpperCase()} mission</p>
+    <h1 class="mt-1 text-4xl sm:text-5xl" lang="de">{mission.titleDe}</h1>
+    <p class="mt-2 text-lg text-muted">{mission.title}</p>
+  </header>
+
+  <div class="mt-8">
+    <MissionRunner
+      client:only="react"
+      mission={mission}
+      next={next && { href: next.href, title: next.titleDe }}
+      listHref={url('missions/')}
+    >
+      <div slot="fallback" class="card p-6 text-muted">Setting the scene …</div>
+    </MissionRunner>
+  </div>
+</Base>

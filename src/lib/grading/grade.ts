@@ -94,7 +94,7 @@ export function gradeGaps(given: readonly string[], accepted: readonly (readonly
 }
 
 export function gradeMultipleChoice(item: ExerciseOf<'multiple-choice'>, choice: string): GradeResult {
-  return { correct: choice === item.answer, expected: item.answer };
+  return { correct: choice === item.answer, expected: item.answer, note: item.feedback?.[choice] };
 }
 
 export function gradeTrueFalse(item: ExerciseOf<'true-false'>, value: boolean | null): GradeResult {

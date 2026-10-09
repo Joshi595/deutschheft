@@ -5,6 +5,7 @@ import { url } from '../url';
 import type {
   ClientExercise,
   ClientExerciseSet,
+  ClientMission,
   ClientQuiz,
   ClientVocabItem,
   ExamLink,
@@ -37,6 +38,7 @@ export interface LevelBundle extends LevelSummary {
 export interface Catalog {
   levels: LevelBundle[];
   lessons: LessonBundle[];
+  missions: ClientMission[];
 }
 
 /** Questions per checkpoint, spread evenly over the unit's lessons. */
@@ -51,12 +53,13 @@ export function getCatalog(): Promise<Catalog> {
 }
 
 async function build(): Promise<Catalog> {
-  const [levelEntries, lessonEntries, exerciseEntries, vocabEntries, examEntries] = await Promise.all([
+  const [levelEntries, lessonEntries, exerciseEntries, vocabEntries, examEntries, missionEntries] = await Promise.all([
     getCollection('levels'),
     getCollection('lessons'),
     getCollection('exercises'),
     getCollection('vocab'),
     getCollection('exams'),
+    getCollection('missions'),
   ]);
 
   const lessonKeys = new Set<string>();
@@ -183,7 +186,30 @@ async function build(): Promise<Catalog> {
       };
     });
 
-  return { levels, lessons: levels.flatMap((level) => level.lessons) };
+  const byKey = new Map(lessons.map((lesson) => [lesson.key, lesson]));
+  const missions: ClientMission[] = missionEntries
+    .sort((a, b) => a.data.level.localeCompare(b.data.level) || a.data.order - b.data.order)
+    .map((entry) => {
+      const { lessons: lessonKeys, steps, order: _order, ...data } = entry.data;
+      if (!levelIds.has(data.level)) throw new Error(`Mission "${entry.id}" has level "${data.level}", which does not exist`);
+      for (const key of lessonKeys) {
+        if (!byKey.has(key)) throw new Error(`Mission "${entry.id}" refers to lesson "${key}", which does not exist`);
+      }
+      // Tasks are stored and reviewed like lesson exercises, under a key of their own.
+      const lessonKey = `mission.${entry.id}`;
+      const tasks = steps.map((step) => ({ ...step, task: { ...step.task, id: `${lessonKey}.${step.task.id}`, lessonKey } }));
+      return {
+        ...data,
+        id: entry.id,
+        href: url(`missions/${entry.id}/`),
+        lessonKeys,
+        lessons: lessonKeys.map((key) => ({ title: byKey.get(key)!.title, href: byKey.get(key)!.href })),
+        taskIds: tasks.map((step) => step.task.id),
+        steps: tasks,
+      };
+    });
+
+  return { levels, lessons: levels.flatMap((level) => level.lessons), missions };
 }
 
 function indexByLesson<C extends 'exercises' | 'vocab'>(

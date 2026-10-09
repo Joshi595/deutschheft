@@ -25,7 +25,7 @@ const quiz = level.quizzes.find((candidate) => candidate.id === Astro.props.quiz
 
 <Base title={`${quiz.title} (${level.title})`} description={quiz.description} width="narrow">
   <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('')} class="hover:text-ink">Learn</a>
+    <a href={url('learn/')} class="hover:text-ink">Learn</a>
     <span aria-hidden="true"> / </span>
     <a href={level.href} class="hover:text-ink">{level.title}</a>
     <span aria-hidden="true"> / </span>

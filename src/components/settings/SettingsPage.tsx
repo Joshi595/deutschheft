@@ -1,7 +1,22 @@
 import { useStore } from '@nanostores/react';
-import { useRef, useState } from 'react';
-import { germanAvailable, speak } from '../../lib/speech';
-import { $notebook, $progress, $review, $settings, exportBackup, importBackup, resetAll, updateSettings, type Settings } from '../../lib/stores';
+import { useEffect, useRef, useState } from 'react';
+import { germanAvailable, rankGermanVoices, speak } from '../../lib/speech';
+import { XP } from '../../lib/progress/logic';
+import {
+  $notebook,
+  $progress,
+  $review,
+  $settings,
+  DAILY_GOALS,
+  exportBackup,
+  importBackup,
+  resetAll,
+  updateSettings,
+  type Settings,
+} from '../../lib/stores';
+
+/** Short, with sounds a poor voice gets wrong: ch, ü, ei, and a question's melody. */
+const SAMPLE = 'Guten Tag! Ich möchte ein Brötchen und zwei Stück Kuchen. Wie geht es Ihnen heute?';
 
 const THEMES: { value: Settings['theme']; label: string }[] = [
   { value: 'system', label: 'Match device' },
@@ -9,7 +24,12 @@ const THEMES: { value: Settings['theme']; label: string }[] = [
   { value: 'dark', label: 'Dark' },
 ];
 
-export default function SettingsPage() {
+interface Props {
+  /** Levels that have chapters, for the level choice. */
+  levels: { id: string; title: string; name: string }[];
+}
+
+export default function SettingsPage({ levels }: Props) {
   const settings = useStore($settings);
   const progress = useStore($progress);
   const review = useStore($review);
@@ -18,7 +38,20 @@ export default function SettingsPage() {
   const [message, setMessage] = useState<{ kind: 'ok' | 'error'; text: string } | null>(null);
   const [showKey, setShowKey] = useState(false);
 
+  // The browser's German voices, best first. Browsers report them late, so the list is read again when it changes.
+  const listVoices = () => rankGermanVoices(window.speechSynthesis?.getVoices() ?? []);
+  const [voices, setVoices] = useState(listVoices);
+  useEffect(() => {
+    const update = () => setVoices(listVoices());
+    window.speechSynthesis?.addEventListener('voiceschanged', update);
+    return () => window.speechSynthesis?.removeEventListener('voiceschanged', update);
+  }, []);
   const voice = germanAvailable();
+
+  // The page renders after the browser has tried to jump to "#learning", so do the jump again.
+  useEffect(() => {
+    if (window.location.hash) document.querySelector(window.location.hash)?.scrollIntoView();
+  }, []);
 
   function download() {
     const backup = exportBackup();
@@ -54,6 +87,51 @@ export default function SettingsPage() {
 
   return (
     <div className="grid gap-6">
+      <Section title="Learning" id="learning">
+        <label className="grid gap-2">
+          <span className="text-sm font-semibold">Level</span>
+          <select
+            className="field max-w-sm"
+            value={settings.level ?? ''}
+            onChange={(event) => updateSettings({ level: event.target.value || undefined })}
+          >
+            <option value="">Follow what I studied last</option>
+            {levels.map((level) => (
+              <option key={level.id} value={level.id}>
+                {level.title} {level.name}
+              </option>
+            ))}
+          </select>
+          <span className="text-sm text-muted">
+            Decides which chapter and which missions the Today page suggests. Every level stays open whatever you choose.
+          </span>
+        </label>
+        <fieldset className="grid gap-2">
+          <legend className="text-sm font-semibold">Daily goal</legend>
+          <div role="radiogroup" aria-label="Daily goal" className="mt-2 flex flex-wrap gap-2">
+            {[...DAILY_GOALS, { xp: 0, label: 'Paused', detail: 'no goal' }].map((option) => (
+              <button
+                key={option.xp}
+                type="button"
+                role="radio"
+                aria-checked={settings.dailyGoal === option.xp}
+                className={`btn h-auto flex-col items-start gap-0 py-2 ${settings.dailyGoal === option.xp ? 'btn-primary' : ''}`}
+                onClick={() => updateSettings({ dailyGoal: option.xp })}
+              >
+                <span>{option.label}</span>
+                <span className="text-xs font-normal opacity-75">
+                  {option.xp > 0 ? `${option.xp} points, ${option.detail}` : option.detail}
+                </span>
+              </button>
+            ))}
+          </div>
+          <span className="text-sm text-muted">
+            A first-time solve is worth {XP.firstTry} points, a reviewed card up to {XP.review.good}. Pausing keeps your points and
+            your streak count; it only removes the target.
+          </span>
+        </fieldset>
+      </Section>
+
       <Section title="Appearance">
         <div role="radiogroup" aria-label="Theme" className="flex flex-wrap gap-2">
           {THEMES.map(({ value, label }) => (
@@ -71,11 +149,52 @@ export default function SettingsPage() {
         </div>
       </Section>
 
-      <Section title="Spoken German">
+      <Section title="Spoken German" id="audio">
         <p className="text-sm text-muted">
-          Audio uses the German voice built into your browser or device.
-          {voice === false && ' No German voice was found here, so the listen buttons are hidden. Installing a German voice in your system settings brings them back.'}
+          Audio is spoken by a voice built into your browser, so how good it sounds depends on the browser.
         </p>
+        {voice === false ? (
+          <div className="rounded-xl bg-accent-soft px-4 py-3 text-sm">
+            <p className="font-semibold">This browser has no German voice.</p>
+            <p className="mt-1">
+              Listening is switched off here, because an English voice reading German teaches the wrong sounds. Two ways to
+              get it back:
+            </p>
+            <ul className="mt-1 list-disc pl-5">
+              <li>
+                Open this site in Microsoft Edge or Google Chrome. Both bring a German voice with them. If you are already
+                in one of them, reload the page: the voice sometimes arrives late.
+              </li>
+              <li>
+                Or add German to this device: on Windows, Settings, then Time &amp; language, then Speech, then Add voices.
+                Restart the browser afterwards.
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <label className="grid gap-2">
+            <span className="text-sm font-semibold">Voice</span>
+            <select
+              className="field max-w-xl"
+              value={voices.some((candidate) => candidate.name === settings.voice) ? settings.voice : ''}
+              onChange={(event) => {
+                updateSettings({ voice: event.target.value || undefined });
+                speak(SAMPLE, settings.speechRate);
+              }}
+            >
+              <option value="">Automatic: {voices[0]?.name ?? 'the browser’s German voice'}</option>
+              {voices.map((candidate) => (
+                <option key={candidate.name} value={candidate.name}>
+                  {candidate.name}
+                </option>
+              ))}
+            </select>
+            <span className="text-sm text-muted">
+              Choosing one plays a sample. Voices marked Natural sound most like a person. One marked Multilingual or
+              Mehrsprachig guesses the language of each phrase and often gets short German wrong.
+            </span>
+          </label>
+        )}
         <label className="grid gap-2">
           <span className="text-sm font-semibold">
             Speed: <span className="tabular-nums">{settings.speechRate.toFixed(2)}×</span>
@@ -94,7 +213,7 @@ export default function SettingsPage() {
           type="button"
           className="btn justify-self-start"
           disabled={voice === false}
-          onClick={() => speak('Guten Tag! Wie geht es Ihnen heute?', settings.speechRate)}
+          onClick={() => speak(SAMPLE, settings.speechRate)}
         >
           Play a sample
         </button>
@@ -175,9 +294,9 @@ export default function SettingsPage() {
   );
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, id, children }: { title: string; id?: string; children: React.ReactNode }) {
   return (
-    <section className="card grid gap-4 p-5">
+    <section id={id} className="card grid scroll-mt-24 gap-4 p-5">
       <h2 className="text-2xl">{title}</h2>
       {children}
     </section>

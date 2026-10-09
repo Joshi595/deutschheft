@@ -87,6 +87,8 @@ const multipleChoice = z.object({
   answer: z.string(),
   /** Options are shown in a shuffled order. Set to false when the order matters, as with "a" and "b". */
   shuffle: z.boolean().default(true),
+  /** Why a particular wrong option is wrong, by option. Shown when the learner picks it. */
+  feedback: z.record(z.string(), z.string()).optional(),
 });
 
 const trueFalse = z.object({
@@ -185,6 +187,8 @@ const speakingTask = z.object({
   /** What a good answer does; the learner rates their own attempt against it. */
   checklist: z.array(z.string()).min(1),
   sample: z.string(),
+  /** Listen and repeat: the sample is shown and heard before the learner speaks, not after. */
+  repeat: z.boolean().optional(),
 });
 
 export const exerciseSchema = z.discriminatedUnion('type', [
@@ -223,6 +227,13 @@ function checkSets(sets: ExerciseSetInput[], basePath: (string | number)[], seen
 
       if (item.type === 'multiple-choice' && !item.options.includes(item.answer)) {
         issues.push({ path: [...path, 'answer'], message: `Answer "${item.answer}" is not one of the options` });
+      }
+      if (item.type === 'multiple-choice') {
+        for (const option of Object.keys(item.feedback ?? {})) {
+          if (!item.options.includes(option) || option === item.answer) {
+            issues.push({ path: [...path, 'feedback'], message: `Feedback "${option}" must belong to a wrong option` });
+          }
+        }
       }
       if (item.type === 'fill-blank' && item.prompt.split('___').length !== 2) {
         issues.push({ path: [...path, 'prompt'], message: 'A fill-blank prompt needs exactly one "___" gap' });
@@ -294,6 +305,54 @@ export const examFileSchema = z
     }
   });
 
+const lineSchema = z.object({ speaker: z.string(), text: z.string(), en: z.string().optional() });
+
+/**
+ * A mission: one everyday situation played through as a conversation. Each step
+ * is what the other person says, then one task for the learner. The tasks are
+ * ordinary exercises, so they are graded, logged and reviewed like any other.
+ */
+export const missionSchema = z
+  .object({
+    title: z.string(),
+    titleDe: z.string(),
+    /** Level id, e.g. "a1". */
+    level: z.string().regex(/^[a-z][0-9]$/),
+    order: z.number().int(),
+    minutes: z.number().int().positive(),
+    /** Picture shown with the mission. */
+    icon: z.enum(['bakery', 'train', 'doctor', 'restaurant', 'home', 'work']),
+    /** What the learner gets done, in one sentence. */
+    objective: z.string(),
+    /** Sets the scene, in English, before the first line. */
+    scene: z.string(),
+    /** Chapters this mission draws on. */
+    lessons: z.array(lessonKey).default([]),
+    /** Phrases worth taking away. */
+    phrases: z.array(z.object({ de: z.string(), en: z.string() })).min(1),
+    /** What was practised, listed on completion. */
+    practised: z.array(z.string()).min(1),
+    steps: z
+      .array(
+        z.object({
+          /** What the other person says before the task. */
+          lines: z.array(lineSchema).default([]),
+          task: exerciseSchema,
+          /** The learner's own line, added to the conversation once the task is done. */
+          you: z.object({ text: z.string(), en: z.string().optional() }).optional(),
+        }),
+      )
+      .min(3),
+    /** Lines that close the conversation after the last task. */
+    outro: z.array(lineSchema).default([]),
+  })
+  .superRefine((file, ctx) => {
+    const tasks = [{ title: '', items: file.steps.map((step) => step.task) }];
+    for (const issue of checkSets(tasks, ['steps'], new Set())) {
+      ctx.addIssue({ code: 'custom', path: issue.path, message: issue.message });
+    }
+  });
+
 export const vocabItemSchema = z.object({
   id: localId,
   /** The German word without its article, e.g. "Stadt". */
@@ -333,5 +392,6 @@ export type ExerciseSet = z.infer<typeof exerciseSetSchema>;
 export type ExamFile = z.infer<typeof examFileSchema>;
 export type ExamSkill = z.infer<typeof examSkill>;
 export type VocabItem = z.infer<typeof vocabItemSchema>;
+export type Mission = z.infer<typeof missionSchema>;
 
 export type ExerciseOf<T extends Exercise['type']> = Extract<Exercise, { type: T }>;

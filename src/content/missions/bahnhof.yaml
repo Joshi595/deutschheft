@@ -1,0 +1,144 @@
+title: At the train station
+titleDe: Am Bahnhof
+level: a1
+order: 2
+minutes: 7
+icon: train
+objective: Buy a train ticket, catch the departure time and platform, and understand a delay announcement.
+scene: >-
+  Hamburg main station on a Friday afternoon. You have to get to Berlin today and come back on
+  Sunday. First the ticket desk, then the platform.
+lessons: [a1.11, a1.13, a1.17]
+phrases:
+  - { de: "Ich möchte eine Fahrkarte nach …", en: "I would like a ticket to …" }
+  - { de: "Einfach oder hin und zurück?", en: "One way or return?" }
+  - { de: "Von welchem Gleis fährt der Zug?", en: "Which platform does the train leave from?" }
+  - { de: "Muss ich umsteigen?", en: "Do I have to change trains?" }
+  - { de: "Der Zug hat Verspätung.", en: "The train is delayed." }
+  - { de: "Gute Reise!", en: "Have a good trip!" }
+practised:
+  - Buying a ticket with Ich möchte …
+  - Understanding 24-hour times and platform numbers
+  - "Asking with a modal verb: Muss ich …?"
+  - "Catching the key word in an announcement: Verspätung"
+steps:
+  - lines:
+      - { speaker: Mitarbeiter, text: "Guten Tag. Wie kann ich Ihnen helfen?", en: "Hello. How can I help you?" }
+    task:
+      id: ticket
+      type: word-order
+      tags: [travel, modal verbs]
+      prompt: Say that you would like a ticket to Berlin.
+      answer: "Ich möchte eine Fahrkarte nach Berlin."
+      # Same tiles as the answer, so the capitals stay where the tiles have them.
+      alternatives: ["eine Fahrkarte nach Berlin möchte Ich."]
+      explanation: "nach is used for cities and most countries: nach Berlin, nach Österreich."
+    you: { text: "Ich möchte eine Fahrkarte nach Berlin, bitte.", en: "I would like a ticket to Berlin, please." }
+
+  - lines:
+      - { speaker: Mitarbeiter, text: "Einfach oder hin und zurück?", en: "One way or return?" }
+    task:
+      id: return
+      type: multiple-choice
+      tags: [travel]
+      prompt: You are coming back on Sunday. What do you answer?
+      options:
+        - "Hin und zurück, bitte."
+        - "Einfach, bitte."
+        - "Nach Berlin, bitte."
+      answer: "Hin und zurück, bitte."
+      feedback:
+        "Einfach, bitte.": "einfach is a one-way ticket. You are coming back, so you need hin und zurück: there and back."
+        "Nach Berlin, bitte.": "He already knows where you are going. He asked whether you need a one-way or a return ticket."
+    you: { text: "Hin und zurück, bitte.", en: "Return, please." }
+
+  - task:
+      id: time
+      type: multiple-choice
+      tags: [listening, time]
+      stimulus:
+        kind: audio
+        label: Der Mitarbeiter
+        lines:
+          - { speaker: Mitarbeiter, text: "Der nächste Zug nach Berlin fährt um sechzehn Uhr achtunddreißig von Gleis sieben." }
+      prompt: Wann fährt der Zug?
+      options: ["16:38", "16:08", "6:38"]
+      answer: "16:38"
+      shuffle: false
+      feedback:
+        "16:08": "achtunddreißig is 38: the units come first (acht), then the tens (dreißig)."
+        "6:38": "sechzehn is 16. Six would be sechs."
+      explanation: "Stations use the 24-hour clock, and German numbers say the units before the tens: acht-und-dreißig."
+
+  - task:
+      id: platform
+      type: multiple-choice
+      tags: [listening, numbers]
+      stimulus:
+        kind: audio
+        label: Der Mitarbeiter
+        lines:
+          - { speaker: Mitarbeiter, text: "Der nächste Zug nach Berlin fährt um sechzehn Uhr achtunddreißig von Gleis sieben." }
+      prompt: Listen once more. Von welchem Gleis fährt der Zug?
+      options: ["Gleis 7", "Gleis 17", "Gleis 6"]
+      answer: "Gleis 7"
+      shuffle: false
+      feedback:
+        "Gleis 17": "sieben is 7. Seventeen would be siebzehn."
+        "Gleis 6": "Six is sechs. He says sieben."
+      explanation: "das Gleis is the platform. von Gleis sieben: from platform seven."
+
+  - task:
+      id: change
+      type: translation
+      tags: [modal verbs, questions]
+      prompt: "Ask: “Do I have to change trains?”"
+      answers: ["Muss ich umsteigen?"]
+      hint: "to change trains = umsteigen. The modal verb comes first, the other verb goes to the end."
+      explanation: "müssen is a modal verb: in a question it comes first and umsteigen waits at the end."
+    you: { text: "Muss ich umsteigen?", en: "Do I have to change trains?" }
+
+  - lines:
+      - { speaker: Mitarbeiter, text: "Nein, der Zug fährt direkt. Gute Reise!", en: "No, the train is direct. Have a good trip!" }
+    task:
+      id: direct
+      type: true-false
+      tags: [travel]
+      prompt: Sie müssen einmal umsteigen.
+      answer: false
+      explanation: "Der Zug fährt direkt: it goes straight to Berlin, so there is no change."
+
+  - task:
+      id: delay
+      type: multiple-choice
+      tags: [listening, travel]
+      stimulus:
+        kind: audio
+        label: Durchsage am Gleis
+        lines:
+          - { text: "Achtung an Gleis sieben! Der ICE nach Berlin hat heute circa zehn Minuten Verspätung. Wir bitten um Entschuldigung." }
+      prompt: You are on the platform. Was ist das Problem?
+      options:
+        - "Der Zug kommt zehn Minuten später."
+        - "Der Zug fährt heute von einem anderen Gleis."
+        - "Der Zug fällt heute aus."
+      answer: "Der Zug kommt zehn Minuten später."
+      feedback:
+        "Der Zug fährt heute von einem anderen Gleis.": "Nothing is said about another platform. Verspätung means a delay."
+        "Der Zug fällt heute aus.": "ausfallen means to be cancelled. The train is only late: zehn Minuten Verspätung."
+      explanation: "die Verspätung, the delay, is the word to listen for in any station announcement."
+
+  - task:
+      id: ask
+      type: speaking-task
+      tags: [speaking, questions]
+      repeat: true
+      prompt: A train pulls in. Ask the traveller next to you whether it is the one to Berlin. Listen first, then say it aloud.
+      checklist:
+        - I said the whole question aloud
+        - My voice went up at the end, as in the model
+        - "The z in Zug sounded like ts"
+      sample: "Entschuldigung, ist das der Zug nach Berlin?"
+    you: { text: "Entschuldigung, ist das der Zug nach Berlin?", en: "Excuse me, is this the train to Berlin?" }
+outro:
+  - { speaker: Reisende, text: "Ja, genau. Endlich!", en: "Yes, exactly. At last!" }
