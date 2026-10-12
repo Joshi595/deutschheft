@@ -1,5 +1,6 @@
 import { useStore } from '@nanostores/react';
 import { useEffect, useRef, useState } from 'react';
+import { hearingMode, installHearing, type HearingMode } from '../../lib/hearing';
 import { germanAvailable, rankGermanVoices, speak } from '../../lib/speech';
 import { XP } from '../../lib/progress/logic';
 import {
@@ -47,6 +48,13 @@ export default function SettingsPage({ levels }: Props) {
     return () => window.speechSynthesis?.removeEventListener('voiceschanged', update);
   }, []);
   const voice = germanAvailable();
+
+  // Where this browser would recognise speech; unknown until it has answered.
+  const [hearing, setHearing] = useState<HearingMode>();
+  const [installing, setInstalling] = useState(false);
+  useEffect(() => {
+    void hearingMode().then(setHearing);
+  }, []);
 
   // The page renders after the browser has tried to jump to "#learning", so do the jump again.
   useEffect(() => {
@@ -217,6 +225,60 @@ export default function SettingsPage({ levels }: Props) {
         >
           Play a sample
         </button>
+      </Section>
+
+      <Section title="Speaking practice" id="speaking">
+        <p className="text-sm text-muted">
+          In the Speak section you always hear a model and can record yourself next to it. Recordings stay in this tab
+          and are gone when you close it.
+        </p>
+        {hearing === 'none' ? (
+          <p className="rounded-xl bg-surface-2 px-4 py-3 text-sm">
+            This browser cannot recognise speech, so it cannot write down what it hears. Chrome and Edge can. Everything
+            else in the Speak section works here.
+          </p>
+        ) : (
+          <>
+            <label className="flex items-start gap-3">
+              <input
+                type="checkbox"
+                className="mt-1 size-4 accent-[var(--ink)]"
+                checked={settings.speechCheck === true}
+                onChange={(event) => updateSettings({ speechCheck: event.target.checked })}
+              />
+              <span>
+                <span className="font-semibold">Write down what the browser hears</span>
+                <span className="block text-sm text-muted">
+                  After you speak, the app shows what the browser understood and marks the words it found. It is a rough
+                  check of whether a machine understood you, not a score for your accent.
+                </span>
+              </span>
+            </label>
+            <p className="rounded-xl bg-surface-2 px-4 py-3 text-sm">
+              {hearing === 'device'
+                ? 'In this browser, German speech is recognised on this device. Your voice does not leave it.'
+                : 'In this browser, what you say is sent to the browser maker’s speech service (Google in Chrome, Microsoft in Edge) to be recognised. This app does not store or send it anywhere else.'}
+            </p>
+            {hearing === 'installable' && (
+              <div className="flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  className="btn"
+                  disabled={installing}
+                  onClick={async () => {
+                    setInstalling(true);
+                    await installHearing();
+                    setHearing(await hearingMode());
+                    setInstalling(false);
+                  }}
+                >
+                  {installing ? 'Downloading …' : 'Keep it on this device'}
+                </button>
+                <span className="text-sm text-muted">Downloads the browser’s German speech pack once. After that nothing is sent.</span>
+              </div>
+            )}
+          </>
+        )}
       </Section>
 
       <Section title="AI explanations (optional)">

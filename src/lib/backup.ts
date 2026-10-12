@@ -1,6 +1,7 @@
 import { emptyNotebook, type NotebookState } from './notebook/logic';
 import { emptyProgress, type ProgressState } from './progress/logic';
 import type { QuizHistory } from './quiz/score';
+import { emptySpeaking, type SpeakingState } from './speaking/logic';
 import type { ReviewState } from './srs/scheduler';
 
 /** Export and import of everything the learner has stored in the browser. */
@@ -14,6 +15,8 @@ export interface BackupData {
   notebook: NotebookState;
   /** Mock exam and checkpoint results. Absent in version 1 backups. */
   quizzes: QuizHistory;
+  /** The Speak section. Absent in backups made before it existed. */
+  speaking?: SpeakingState;
 }
 
 export interface Backup extends BackupData {
@@ -64,5 +67,12 @@ export function parseBackup(json: string): BackupData {
       mistakes: Array.isArray(notebook.mistakes) ? (notebook.mistakes as NotebookState['mistakes']) : [],
     },
     quizzes: isRecord(raw.quizzes) ? (raw.quizzes as QuizHistory) : {},
+    ...(isRecord(raw.speaking) && {
+      speaking: {
+        cards: isRecord(raw.speaking.cards) ? (raw.speaking.cards as SpeakingState['cards']) : emptySpeaking.cards,
+        ears: isRecord(raw.speaking.ears) ? (raw.speaking.ears as SpeakingState['ears']) : emptySpeaking.ears,
+        talks: isRecord(raw.speaking.talks) ? (raw.speaking.talks as SpeakingState['talks']) : emptySpeaking.talks,
+      },
+    }),
   };
 }

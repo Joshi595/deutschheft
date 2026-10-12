@@ -1,0 +1,18 @@
+title: Asking the way
+titleDe: Nach dem Weg fragen
+level: a1
+order: 2
+icon: map
+scene: You are in the centre of Freiburg and cannot find the station. A woman is waiting at the traffic lights.
+partner: Passantin
+lines:
+  - { who: you, id: ask, cue: "Stop her politely and ask where the station is.", text: "Entschuldigung, wo ist der Bahnhof?", en: "Excuse me, where is the station?" }
+  - { who: partner, text: "Der Bahnhof? Der ist nicht weit. Gehen Sie hier geradeaus und dann die zweite Straße links.", en: "The station? It is not far. Go straight on here and then take the second street on the left." }
+  - { who: you, id: check, cue: "Check that you got it: straight on, then the second street on the left?", text: "Geradeaus und dann die zweite Straße links?", en: "Straight on and then the second street on the left?" }
+  - { who: partner, text: "Ja, genau. Dann sehen Sie den Bahnhof schon.", en: "Yes, exactly. Then you will see the station." }
+  - { who: you, id: far, cue: "Ask how far it is.", text: "Wie weit ist das?", en: "How far is it?" }
+  - { who: partner, text: "Ungefähr zehn Minuten zu Fuß.", en: "About ten minutes on foot." }
+  - { who: you, id: bus, cue: "Ask whether there is also a bus.", text: "Gibt es auch einen Bus?", en: "Is there a bus as well?" }
+  - { who: partner, text: "Ja, die Linie vier. Die Haltestelle ist dort drüben.", en: "Yes, line four. The stop is over there." }
+  - { who: you, id: thanks, cue: "Thank her very much.", text: "Vielen Dank!", en: "Thank you very much!" }
+  - { who: partner, text: "Gern geschehen. Schönen Tag noch!", en: "You are welcome. Have a nice day!" }

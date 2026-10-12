@@ -3,14 +3,18 @@ import { join, relative } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { parse } from 'yaml';
 import {
+  conversationSchema,
   examFileSchema,
   exerciseFileSchema,
   lessonSchema,
   levelSchema,
   missionSchema,
+  packSchema,
+  soundSchema,
   vocabFileSchema,
   type Exercise,
 } from '../src/lib/content/schema';
+import { clipKey } from '../src/lib/speech';
 import { grade, type Response } from '../src/lib/grading/grade';
 import { normalize } from '../src/lib/grading/normalize';
 import { tokenize } from '../src/lib/grading/shuffle';
@@ -104,6 +108,12 @@ const examFiles = files('exams', '.yaml').map((path) => ({
 const missionFiles = files('missions', '.yaml').map((path) => ({
   path,
   data: missionSchema.parse(parse(readFileSync(path, 'utf8'))),
+}));
+const soundFiles = files('speaking/sounds', '.yaml').map((path) => ({ path, data: soundSchema.parse(parse(readFileSync(path, 'utf8'))) }));
+const packFiles = files('speaking/packs', '.yaml').map((path) => ({ path, data: packSchema.parse(parse(readFileSync(path, 'utf8'))) }));
+const talkFiles = files('speaking/conversations', '.yaml').map((path) => ({
+  path,
+  data: conversationSchema.parse(parse(readFileSync(path, 'utf8'))),
 }));
 
 const levelOf = (key: string) => key.split('.')[0]!;
@@ -332,6 +342,61 @@ describe('missions', () => {
       }
     });
   }
+});
+
+describe('speak section', () => {
+  const levelIds = new Set(levels.map((level) => level.id));
+  const withChapters = new Set(lessons.map((lesson) => levelOf(lesson.data.key)));
+
+  it('numbers the sounds without gaps or repeats', () => {
+    const orders = soundFiles.map((file) => file.data.order).sort((a, b) => a - b);
+    expect(orders).toEqual(orders.map((_, index) => index + 1));
+  });
+
+  it('gives every level with chapters phrase packs and conversations', () => {
+    for (const level of withChapters) {
+      expect(packFiles.some((file) => file.data.level === level), `no phrase pack for ${level}`).toBe(true);
+      expect(talkFiles.some((file) => file.data.level === level), `no conversation for ${level}`).toBe(true);
+    }
+  });
+
+  it('puts packs and conversations on levels that exist, under names no mission uses', () => {
+    const missionNames = new Set(missionFiles.map((file) => label(file.path).replace(/^missions\/|\.yaml$/g, '')));
+    for (const { path, data } of [...packFiles, ...talkFiles]) expect(levelIds.has(data.level), label(path)).toBe(true);
+    for (const { path } of talkFiles) {
+      const name = label(path).replace(/^.*\/|\.yaml$/g, '');
+      expect(missionNames.has(name), `${label(path)} shares its name with a mission`).toBe(false);
+    }
+  });
+
+  it('lets both sides speak in every conversation', () => {
+    for (const { path, data } of talkFiles) {
+      const sides = new Set(data.lines.map((line) => line.who));
+      expect(sides.size, `${label(path)} needs both sides`).toBe(2);
+    }
+  });
+
+  // Once clips have been recorded, every German line of the section must have one, or it would
+  // fall back to the browser's voice in the middle of a recorded conversation.
+  const index = join(import.meta.dirname, '..', 'public', 'audio', 'index.json');
+  const recorded: Record<string, string[]> = existsSync(index) ? JSON.parse(readFileSync(index, 'utf8')) : {};
+  it.skipIf(!recorded.a?.length)('has a recorded clip for every German line', () => {
+    const main = new Set(recorded.a);
+    const spoken = [
+      ...soundFiles.flatMap(({ data }) => [...data.words, ...data.pairs.flat(), data.sentence].map((word) => word.de)),
+      ...packFiles.flatMap(({ data }) => data.phrases.map((phrase) => phrase.de)),
+    ];
+    const dialogue = [
+      ...talkFiles.flatMap(({ data }) => data.lines.map((line) => line.text)),
+      ...missionFiles.flatMap(({ data }) => data.steps.flatMap((step) => [...step.lines.map((line) => line.text), ...(step.you ? [step.you.text] : [])])),
+    ];
+    for (const text of [...spoken, ...dialogue]) expect(main.has(clipKey(text)), `no clip for "${text}". Run scripts/make_audio.py`).toBe(true);
+    // A second voice is optional, but if there is one it has to cover every line of every dialogue.
+    const second = new Set(recorded.b);
+    if (second.size > 0) {
+      for (const text of dialogue) expect(second.has(clipKey(text)), `no second-voice clip for "${text}". Run scripts/make_audio.py`).toBe(true);
+    }
+  });
 });
 
 /**

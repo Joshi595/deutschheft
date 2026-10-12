@@ -1,0 +1,16 @@
+title: When words fail you
+titleDe: Wenn die Worte fehlen
+level: b1
+order: 3
+summary: Buying time, describing a word you do not know, and checking that you understood. These keep you speaking when your vocabulary runs out.
+phrases:
+  - { id: search, cue: "You cannot find the word. Buy time.", de: "Wie soll ich das sagen?", en: "How shall I put it?" }
+  - { id: mean, cue: "Rephrase what you meant: it is too late.", de: "Ich meine damit, dass es zu spät ist.", en: "What I mean is that it is too late." }
+  - { id: describe, cue: "You do not know the word for corkscrew. Describe it.", de: "Das ist ein Ding, mit dem man Flaschen öffnet.", en: "It is a thing you open bottles with." }
+  - { id: detail, cue: "Ask them to explain it in more detail.", de: "Könnten Sie das genauer erklären?", en: "Could you explain that in more detail?" }
+  - { id: understood, cue: "Check that you understood correctly.", de: "Habe ich das richtig verstanden?", en: "Did I understand that correctly?" }
+  - { id: you-mean, cue: "Check what they mean: that you should come tomorrow.", de: "Sie meinen also, dass ich morgen kommen soll?", en: "So you mean that I should come tomorrow?" }
+  - { id: other-words, cue: "Say it again in other words: you need more time.", de: "Anders gesagt, ich brauche mehr Zeit.", en: "In other words, I need more time." }
+  - { id: interrupt, cue: "Interrupt politely.", de: "Entschuldigung, darf ich kurz unterbrechen?", en: "Excuse me, may I interrupt for a moment?" }
+  - { id: back, cue: "Bring the talk back to the topic.", de: "Kommen wir zurück zum Thema.", en: "Let us come back to the topic." }
+  - { id: not-sure, cue: "Admit that you do not know exactly.", de: "Das weiß ich leider nicht genau.", en: "Unfortunately I do not know exactly." }

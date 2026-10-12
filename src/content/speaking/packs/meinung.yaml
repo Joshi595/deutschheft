@@ -1,0 +1,17 @@
+title: Likes, opinions and reasons
+titleDe: Meinung und Gründe
+level: a2
+order: 2
+summary: Saying what you like and think, giving a reason, and reacting to a suggestion.
+phrases:
+  - { id: like, cue: "Say that you like the film.", de: "Der Film gefällt mir gut.", en: "I like the film." }
+  - { id: prefer, cue: "Say that you prefer tea to coffee.", de: "Ich trinke lieber Tee als Kaffee.", en: "I prefer drinking tea to coffee." }
+  - { id: good-idea, cue: "Say that you think it is a good idea.", de: "Ich finde, das ist eine gute Idee.", en: "I think that is a good idea." }
+  - { id: because, cue: "Say that you are staying at home because you are tired.", de: "Ich bleibe zu Hause, weil ich müde bin.", en: "I am staying at home because I am tired." }
+  - { id: agree, cue: "Agree with what was said.", de: "Das stimmt.", en: "That is true." }
+  - { id: disagree, cue: "Disagree politely.", de: "Das sehe ich anders.", en: "I see that differently." }
+  - { id: suggest, cue: "Suggest going to the cinema.", de: "Wollen wir ins Kino gehen?", en: "Shall we go to the cinema?" }
+  - { id: how-about, cue: "Suggest Saturday instead.", de: "Wie wäre es mit Samstag?", en: "How about Saturday?" }
+  - { id: sounds-good, cue: "Accept a suggestion gladly.", de: "Das klingt gut!", en: "That sounds good!" }
+  - { id: rather-not, cue: "Turn a suggestion down kindly, saying you do not feel like it.", de: "Lieber nicht, ich habe keine Lust.", en: "I would rather not, I do not feel like it." }
+  - { id: same-to-me, cue: "Say that you do not mind either way.", de: "Das ist mir egal.", en: "I do not mind." }

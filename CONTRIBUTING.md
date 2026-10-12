@@ -10,7 +10,8 @@ src/content/
 ├── exercises/   b1/07-relativsaetze.yaml             the practice
 ├── vocab/       b1/07-relativsaetze.yaml             the word list
 ├── exams/       b1/modelltest-01.yaml                mock exams
-└── missions/    baeckerei.yaml                       everyday situations as conversations
+├── missions/    baeckerei.yaml                       everyday situations as conversations
+└── speaking/    sounds/, packs/, conversations/      the Speak section
 ```
 
 ## Add a chapter
@@ -188,6 +189,45 @@ capital letters included.
 Tasks are stored like chapter exercises, under the key `mission.<slug>`, so a missed task joins the
 review deck and the mistakes log. Never change a task `id` once published.
 
+## The Speak section
+
+Three kinds of file under `src/content/speaking/`:
+
+| Folder | One file is | Fields |
+| --- | --- | --- |
+| `sounds/` | one German sound | `title`, `name`, `order`, `how` (steps), `trap` (the usual slip), `words` (`de`, `en`), `pairs` (two words that differ only in this sound; the learner tells them apart by ear), `sentence` |
+| `packs/` | phrases for one purpose | `title`, `titleDe`, `level`, `order`, `summary`, `phrases` (`id`, `cue`, `de`, `en`) |
+| `conversations/` | a dialogue to speak through | `title`, `titleDe`, `level`, `order`, `icon`, `scene`, `partner`, `lines` (`who: partner` or `you`, `text`, `en`; a `you` line also needs `id` and `cue`) |
+
+A `cue` is an instruction, not a translation: "Ask them to say it again." That is what the learner
+sees before speaking. Every mission is also offered as a conversation automatically, with the
+task's prompt as the cue, so a conversation file must not have the name of a mission.
+
+Lines the learner says from a cue become cards in the speaking deck, keyed `pack.<file>.<id>` or
+`talk.<file>.<id>`. As with exercises, never change an `id` once published.
+
+### Recorded audio
+
+Every German line of the Speak section, of the missions and of the vocabulary lists has an MP3
+clip in `public/audio/`, named by a hash of its text. After adding or changing such a line, record
+the missing clips, or the content test fails:
+
+```
+py -3.12 -m venv ..\venv_audio
+..\venv_audio\Scripts\pip install piper-tts lameenc pyyaml
+..\venv_audio\Scripts\python -m piper.download_voices de_DE-thorsten-high --data-dir ..\venv_audio\voices
+..\venv_audio\Scripts\python scripts\make_audio.py
+```
+
+The script only records what is missing, deletes clips nothing refers to, and rewrites
+`public/audio/index.json`. Commit the changed files in `public/audio/` with the content. Piper needs
+Python 3.9 or newer, which is why it has an environment of its own. Since nobody can listen to
+thousands of clips, `make_audio.py --check` transcribes the sentences back with a speech
+recogniser and lists the ones that came out differently; listen to those.
+
+A text without a clip is read by the browser's German voice instead (`speak()` in
+`src/lib/speech.ts` decides), so audio never has to block a content change elsewhere.
+
 ## Where the code lives
 
 | Path | What it is |
@@ -203,6 +243,10 @@ review deck and the mistakes log. Never change a task `id` once published.
 | `src/components/exercises/` | One input widget per exercise type, the card around them, and the practice session of a chapter. |
 | `src/components/session/` | The progress bar and summary shared by practice sessions and missions. |
 | `src/components/home/`, `src/components/progress/`, `src/components/missions/` | The Today page, the Progress page and the mission runner. |
+| `src/lib/speaking/logic.ts` | Rules of the Speak section: the spoken-sentence deck, what is new, what to do next. |
+| `src/lib/hearing.ts` | "What it heard": the browser's speech recognition, and matching its transcript against the model sentence. |
+| `src/lib/content/speak.ts` | Builds the sentence bank and turns a mission into a conversation. |
+| `src/components/speak/` | `SpeakTurn` (cue, speak, compare, rate) and the four screens built on it. |
 | `src/components/quiz/` | The mock exam and checkpoint runner. |
 | `src/components/lesson/` | Step, Compare, Mistake, Summary and the other chapter components. |
 | `src/pages/` | Routes. They read from the catalog and name no level or chapter. |

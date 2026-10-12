@@ -1,6 +1,16 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { examFileSchema, exerciseFileSchema, lessonSchema, levelSchema, missionSchema, vocabFileSchema } from './lib/content/schema';
+import {
+  conversationSchema,
+  examFileSchema,
+  exerciseFileSchema,
+  lessonSchema,
+  levelSchema,
+  missionSchema,
+  packSchema,
+  soundSchema,
+  vocabFileSchema,
+} from './lib/content/schema';
 
 // One folder per content type, one sub-folder per level. Adding a level or a
 // lesson means adding files here; nothing in src/pages or src/components changes.
@@ -35,4 +45,20 @@ const missions = defineCollection({
   schema: missionSchema,
 });
 
-export const collections = { levels, lessons, exercises, vocab, exams, missions };
+// The Speak section: sounds to train, phrase packs, and conversations to speak through.
+const sounds = defineCollection({
+  loader: glob({ base: './src/content/speaking/sounds', pattern: '*.yaml' }),
+  schema: soundSchema,
+});
+
+const packs = defineCollection({
+  loader: glob({ base: './src/content/speaking/packs', pattern: '*.yaml' }),
+  schema: packSchema,
+});
+
+const conversations = defineCollection({
+  loader: glob({ base: './src/content/speaking/conversations', pattern: '*.yaml' }),
+  schema: conversationSchema,
+});
+
+export const collections = { levels, lessons, exercises, vocab, exams, missions, sounds, packs, conversations };

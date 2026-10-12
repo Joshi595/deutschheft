@@ -1,0 +1,24 @@
+title: "ö"
+name: an "eh" said with rounded lips
+order: 2
+how:
+  - Say "eh", the vowel of "bed", and hold it.
+  - Keep your tongue where it is and round your lips.
+  - That is ö. In schön it is long, in zwölf it is short.
+trap: English speakers say "o" or "er". Then schön (beautiful) turns into schon (already).
+words:
+  - { de: "schön", en: "beautiful" }
+  - { de: "hören", en: "to hear" }
+  - { de: "möchten", en: "would like" }
+  - { de: "Brötchen", en: "bread roll" }
+  - { de: "zwölf", en: "twelve" }
+  - { de: "öffnen", en: "to open" }
+  - { de: "Löffel", en: "spoon" }
+pairs:
+  - [{ de: "schon", en: "already" }, { de: "schön", en: "beautiful" }]
+  - [{ de: "kennen", en: "to know" }, { de: "können", en: "can" }]
+  - [{ de: "lesen", en: "to read" }, { de: "lösen", en: "to solve" }]
+  - [{ de: "Tochter", en: "daughter" }, { de: "Töchter", en: "daughters" }]
+  - [{ de: "Ofen", en: "oven" }, { de: "Öfen", en: "ovens" }]
+  - [{ de: "konnte", en: "was able to" }, { de: "könnte", en: "would be able to" }]
+sentence: { de: "Ich möchte zwölf schöne Brötchen.", en: "I would like twelve nice bread rolls." }

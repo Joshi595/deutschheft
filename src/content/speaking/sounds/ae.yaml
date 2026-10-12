@@ -1,0 +1,24 @@
+title: "ä"
+name: the "e" of "bed"
+order: 3
+how:
+  - Say the vowel of English "bed". That is the short ä, as in Äpfel.
+  - For the long ä, as in Käse, hold the same sound longer and open your mouth a little more.
+  - The two dots always move the sound away from "ah" towards "eh".
+trap: English speakers read ä as a plain "a". Then Äpfel (apples) turns into Apfel (apple).
+words:
+  - { de: "Käse", en: "cheese" }
+  - { de: "Mädchen", en: "girl" }
+  - { de: "spät", en: "late" }
+  - { de: "Äpfel", en: "apples" }
+  - { de: "Getränk", en: "drink" }
+  - { de: "erklären", en: "to explain" }
+  - { de: "nächste", en: "next" }
+pairs:
+  - [{ de: "Apfel", en: "apple" }, { de: "Äpfel", en: "apples" }]
+  - [{ de: "Vater", en: "father" }, { de: "Väter", en: "fathers" }]
+  - [{ de: "hatte", en: "had" }, { de: "hätte", en: "would have" }]
+  - [{ de: "zahlen", en: "to pay" }, { de: "zählen", en: "to count" }]
+  - [{ de: "Laden", en: "shop" }, { de: "Läden", en: "shops" }]
+  - [{ de: "Bar", en: "bar" }, { de: "Bär", en: "bear" }]
+sentence: { de: "Das Mädchen isst später Käse und Äpfel.", en: "The girl will eat cheese and apples later." }

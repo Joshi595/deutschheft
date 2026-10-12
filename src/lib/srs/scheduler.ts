@@ -5,7 +5,8 @@ import { createEmptyCard, fsrs, Rating, type Card, type Grade } from 'ts-fsrs';
  * are ISO strings here and converted at the boundary.
  */
 
-export type CardKind = 'vocab' | 'exercise' | 'custom';
+/** `phrase` cards are sentences said aloud; they live in the speaking deck, not in the review deck. */
+export type CardKind = 'vocab' | 'exercise' | 'custom' | 'phrase';
 
 export interface StoredCard {
   kind: CardKind;

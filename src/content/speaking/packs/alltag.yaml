@@ -1,0 +1,17 @@
+title: Everyday requests
+titleDe: Im Alltag
+level: a1
+order: 2
+summary: The short questions and requests you need in shops, in the street and with strangers.
+phrases:
+  - { id: where, cue: "Ask a stranger where the toilet is.", de: "Entschuldigung, wo ist die Toilette?", en: "Excuse me, where is the toilet?" }
+  - { id: cost, cue: "Ask what this costs.", de: "Was kostet das?", en: "What does this cost?" }
+  - { id: coffee, cue: "Say that you would like a coffee.", de: "Ich hätte gern einen Kaffee.", en: "I would like a coffee." }
+  - { id: have, cue: "Ask whether they have bread rolls.", de: "Haben Sie Brötchen?", en: "Do you have bread rolls?" }
+  - { id: time, cue: "Ask what time it is.", de: "Wie spät ist es?", en: "What time is it?" }
+  - { id: open, cue: "Ask when the shop opens.", de: "Wann öffnet das Geschäft?", en: "When does the shop open?" }
+  - { id: help, cue: "Ask someone to help you.", de: "Können Sie mir bitte helfen?", en: "Can you help me, please?" }
+  - { id: looking, cue: "Say that you are looking for the station.", de: "Ich suche den Bahnhof.", en: "I am looking for the station." }
+  - { id: ticket, cue: "Ask for a ticket to Munich.", de: "Eine Fahrkarte nach München, bitte.", en: "A ticket to Munich, please." }
+  - { id: sorry, cue: "You bumped into someone. Apologise.", de: "Entschuldigung, das tut mir leid.", en: "Excuse me, I am sorry." }
+  - { id: no-problem, cue: "Someone apologises to you. Say it is no problem.", de: "Kein Problem.", en: "No problem." }

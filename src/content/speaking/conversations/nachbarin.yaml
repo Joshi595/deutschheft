@@ -1,0 +1,20 @@
+title: Meeting a neighbour
+titleDe: Die neue Nachbarin
+level: a1
+order: 1
+icon: chat
+scene: You have just moved in. On the stairs you meet the woman from the flat next door for the first time.
+partner: Nachbarin
+lines:
+  - { who: partner, text: "Hallo! Sind Sie neu hier im Haus?", en: "Hello! Are you new here in the building?" }
+  - { who: you, id: new, cue: "Say yes, and that you have lived here since Monday.", text: "Ja, ich wohne seit Montag hier.", en: "Yes, I have lived here since Monday." }
+  - { who: partner, text: "Herzlich willkommen! Ich bin Frau Schmidt. Und wie heißen Sie?", en: "Welcome! I am Ms Schmidt. And what is your name?" }
+  - { who: you, id: name, cue: "Say that your name is Alex Kim and that you are pleased to meet her.", text: "Ich heiße Alex Kim. Freut mich!", en: "My name is Alex Kim. Pleased to meet you!" }
+  - { who: partner, text: "Freut mich auch. Woher kommen Sie?", en: "Pleased to meet you too. Where are you from?" }
+  - { who: you, id: from, cue: "Say that you come from Canada, and ask her the same.", text: "Ich komme aus Kanada. Und Sie?", en: "I come from Canada. And you?" }
+  - { who: partner, text: "Ich komme aus Hamburg, aber ich wohne schon lange hier. Was machen Sie beruflich?", en: "I come from Hamburg, but I have lived here for a long time. What do you do for a living?" }
+  - { who: you, id: job, cue: "Say that you work in a hospital.", text: "Ich arbeite in einem Krankenhaus.", en: "I work in a hospital." }
+  - { who: partner, text: "Das ist interessant. Brauchen Sie vielleicht Hilfe mit den Kartons?", en: "That is interesting. Do you perhaps need help with the boxes?" }
+  - { who: you, id: decline, cue: "Decline politely and say that it is very kind.", text: "Nein, danke. Das ist sehr nett!", en: "No, thank you. That is very kind!" }
+  - { who: partner, text: "Gern. Dann einen schönen Tag noch!", en: "You are welcome. Have a nice day, then!" }
+  - { who: you, id: bye, cue: "Wish her the same and say goodbye.", text: "Danke, gleichfalls. Auf Wiedersehen!", en: "Thanks, you too. Goodbye!" }

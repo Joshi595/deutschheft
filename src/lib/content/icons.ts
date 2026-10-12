@@ -8,4 +8,6 @@ export const MISSION_ICONS: Record<MissionIcon, string> = {
   restaurant: 'M15 8v32M10 8v9a5 5 0 0 0 10 0V8M32 40V8c-4 3-6 8-6 14v5h6',
   home: 'M7 23 24 9l17 14M12 20v18h24V20M21 38V28h6v10',
   work: 'M10 16h28a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V18a2 2 0 0 1 2-2ZM18 16v-4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4M8 26h32M22 26v3h4v-3',
+  chat: 'M12 10h24a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H22l-8 7v-7h-2a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4ZM16 18h16M16 24h10',
+  map: 'M24 42s12-11 12-21a12 12 0 0 0-24 0c0 10 12 21 12 21ZM24 26a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z',
 };

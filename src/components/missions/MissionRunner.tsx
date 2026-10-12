@@ -7,12 +7,15 @@ import { speak, speakLines, stopSpeaking } from '../../lib/speech';
 import { $notebook, $progress, $settings, saveWord } from '../../lib/stores';
 import { ExerciseCard } from '../exercises/ExerciseCard';
 import { SessionBar, SessionSummary, useSessionLog } from '../session/Session';
+import { Say } from '../speak/SpeakTurn';
 
 interface Props {
   mission: ClientMission;
   /** The mission to offer afterwards, if there is one. */
   next?: { href: string; title: string };
   listHref: string;
+  /** The same situation as a conversation to speak through. */
+  speakHref: string;
 }
 
 type Stage = { name: 'intro' } | { name: 'play'; step: number; finished: boolean } | { name: 'summary' };
@@ -20,19 +23,14 @@ type Stage = { name: 'intro' } | { name: 'play'; step: number; finished: boolean
 /** The learner's own lines, in the voice of a second speaker. */
 const YOU = 'Du';
 
-function Bubble({ line, showEnglish, rate }: { line: DialogueLine; showEnglish: boolean; rate: number }) {
+function Bubble({ line, showEnglish }: { line: DialogueLine; showEnglish: boolean }) {
   const mine = line.speaker === YOU;
   return (
     <li className={`bubble rise ${mine ? 'bubble-you' : ''}`}>
       <span className="block text-xs font-semibold text-muted">{mine ? 'You' : line.speaker}</span>
       <span className="flex items-start gap-1">
         <span className="de text-lg" lang="de">{line.text}</span>
-        <button type="button" className="speak -my-0.5" onClick={() => speak(line.text, rate)} aria-label={`Listen: ${line.text}`} title="Listen">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M11 5 6 9H3v6h3l5 4z" />
-            <path d="M15.5 8.5a5 5 0 0 1 0 7" />
-          </svg>
-        </button>
+        <Say text={line.text} voice={mine ? 1 : 0} />
       </span>
       {showEnglish && line.en && <span className="block text-sm text-muted">{line.en}</span>}
     </li>
@@ -40,7 +38,7 @@ function Bubble({ line, showEnglish, rate }: { line: DialogueLine; showEnglish: 
 }
 
 /** One everyday situation, played through as a conversation: they speak, you do a task, it goes on. */
-export default function MissionRunner({ mission, next, listHref }: Props) {
+export default function MissionRunner({ mission, next, listHref, speakHref }: Props) {
   const progress = useStore($progress);
   const settings = useStore($settings);
   const notebook = useStore($notebook);
@@ -145,13 +143,18 @@ export default function MissionRunner({ mission, next, listHref }: Props) {
                   Try the mission again
                 </button>
               )}
+              {missed === 0 && (
+                <a href={speakHref} className="btn btn-accent">
+                  Now speak it yourself
+                </a>
+              )}
               {missed === 0 && next && (
-                <a href={next.href} className="btn btn-accent">
+                <a href={next.href} className="btn">
                   Next mission: {next.title}
                 </a>
               )}
               <a href={listHref} className="btn">
-                All missions
+                All conversations
               </a>
             </>
           }
@@ -182,12 +185,7 @@ export default function MissionRunner({ mission, next, listHref }: Props) {
           <ul className="mt-3 divide-y divide-line">
             {mission.phrases.map((phrase) => (
               <li key={phrase.de} className="flex items-center gap-2 py-2">
-                <button type="button" className="speak" onClick={() => speak(phrase.de, settings.speechRate)} aria-label={`Listen: ${phrase.de}`} title="Listen">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M11 5 6 9H3v6h3l5 4z" />
-                    <path d="M15.5 8.5a5 5 0 0 1 0 7" />
-                  </svg>
-                </button>
+                <Say text={phrase.de} />
                 <span>
                   <span className="de" lang="de">{phrase.de}</span>
                   <span className="block text-sm text-muted">{phrase.en}</span>
@@ -200,13 +198,13 @@ export default function MissionRunner({ mission, next, listHref }: Props) {
         <section aria-labelledby="whole">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h3 id="whole" className="text-xl">The whole conversation</h3>
-            <button type="button" className="listen btn btn-small" onClick={() => speakLines(all, settings.speechRate)}>
+            <button type="button" className="listen btn btn-small" data-clip onClick={() => speakLines(all, settings.speechRate)}>
               Play it through
             </button>
           </div>
           <ol className="mt-3 grid gap-2">
             {all.map((line, index) => (
-              <Bubble key={index} line={line} showEnglish rate={settings.speechRate} />
+              <Bubble key={index} line={line} showEnglish />
             ))}
           </ol>
         </section>
@@ -231,7 +229,7 @@ export default function MissionRunner({ mission, next, listHref }: Props) {
           <ol className="grid gap-2" aria-label="Conversation" aria-live="polite">
             {lines.length > shown.length && <li className="text-sm text-muted">{lines.length - shown.length} earlier lines</li>}
             {shown.map((line, index) => (
-              <Bubble key={`${stage.step}-${lines.length - shown.length + index}`} line={line} showEnglish={showEnglish} rate={settings.speechRate} />
+              <Bubble key={`${stage.step}-${lines.length - shown.length + index}`} line={line} showEnglish={showEnglish} />
             ))}
           </ol>
           <button type="button" className="mt-2 text-sm text-muted underline underline-offset-4 hover:text-ink" onClick={() => setShowEnglish(!showEnglish)}>
@@ -256,7 +254,7 @@ export default function MissionRunner({ mission, next, listHref }: Props) {
             log.record(step.task, correct);
             setStage({ ...stage, finished: true });
             // The learner's line joins the conversation, and is heard the way it should sound.
-            if (step.you && step.task.type !== 'speaking-task') speak(step.you.text, settings.speechRate);
+            if (step.you && step.task.type !== 'speaking-task') speak(step.you.text, settings.speechRate, 1);
           }}
           onNext={() => {
             stopSpeaking();

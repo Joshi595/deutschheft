@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { packCourse, unpackCourse, type Course } from '../src/lib/content/course';
 import { currentLevel, greeting, isNewLearner, milestones, suggest, upcoming, type Learner } from '../src/lib/progress/coach';
 import { addXp, applyAttempt, attemptXp, emptyProgress, recentDays, totalXp, XP, xpOn, type ProgressState } from '../src/lib/progress/logic';
+import { emptySpeaking, rateSpoken, recordTalk } from '../src/lib/speaking/logic';
 import { enroll, schedule } from '../src/lib/srs/scheduler';
 
 const now = new Date('2026-10-09T10:00:00');
@@ -211,6 +212,24 @@ describe('milestones', () => {
     expect(next).toHaveLength(2);
     expect(next.every((milestone) => !milestone.earned)).toBe(true);
     expect(next[0]!.current / next[0]!.target).toBeGreaterThanOrEqual(next[1]!.current / next[1]!.target);
+  });
+});
+
+describe('speaking on the Today page', () => {
+  it('suggests sentences that are due again, and counts speaking towards stamps', () => {
+    const quiet = { ...fresh, speaking: emptySpeaking };
+    expect(suggest(course, quiet, now).map((item) => item.kind)).not.toContain('speak');
+
+    let speaking = rateSpoken(emptySpeaking, 'pack.weiter.again', 'again', now).state;
+    speaking = recordTalk(speaking, 'weg', 'read');
+    const later = new Date(now.getTime() + 30 * 60_000);
+    const speak = suggest(course, { ...fresh, speaking }, later).find((item) => item.kind === 'speak');
+    expect(speak).toMatchObject({ title: 'Say 1 sentence aloud', href: '/speak/sentences/' });
+
+    const byId = Object.fromEntries(milestones(course, { ...fresh, speaking }).map((milestone) => [milestone.id, milestone]));
+    expect(byId['talk-1']!.earned).toBe(true);
+    expect(byId['spoken-50']).toMatchObject({ earned: false, current: 0 });
+    expect(milestones(course, fresh).some((milestone) => milestone.id === 'talk-1')).toBe(false);
   });
 });
 

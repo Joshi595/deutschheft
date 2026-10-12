@@ -1,0 +1,23 @@
+title: "z"
+name: 'a "ts", as at the end of "cats"'
+order: 7
+how:
+  - Say "cats" and listen to the last two sounds.
+  - Start a word with exactly that. Zeit begins like "tsite".
+  - It is always "ts", at the start, in the middle and at the end. tz sounds the same.
+trap: English speakers say the buzzing z of "zoo". In German that sound is written s, so Zeit (time) turns into seit (since).
+words:
+  - { de: "zehn", en: "ten" }
+  - { de: "Zeit", en: "time" }
+  - { de: "Zug", en: "train" }
+  - { de: "zwei", en: "two" }
+  - { de: "Zimmer", en: "room" }
+  - { de: "Platz", en: "place, square" }
+  - { de: "jetzt", en: "now" }
+pairs:
+  - [{ de: "Zeit", en: "time" }, { de: "seit", en: "since" }]
+  - [{ de: "Zoo", en: "zoo" }, { de: "so", en: "so" }]
+  - [{ de: "Zahl", en: "number" }, { de: "Saal", en: "hall" }]
+  - [{ de: "reizen", en: "to irritate" }, { de: "reisen", en: "to travel" }]
+  - [{ de: "Katze", en: "cat" }, { de: "Kasse", en: "till" }]
+sentence: { de: "Zwei Züge fahren jetzt zum Zoo.", en: "Two trains are going to the zoo now." }

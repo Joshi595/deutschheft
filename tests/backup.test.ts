@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { buildBackup, parseBackup, type BackupData } from '../src/lib/backup';
 import { addWord, emptyNotebook, logMistake, matches, MAX_MISTAKES, setNote } from '../src/lib/notebook/logic';
 import { addXp, applyAttempt, emptyProgress } from '../src/lib/progress/logic';
+import { emptySpeaking, rateSpoken, recordEar, recordTalk } from '../src/lib/speaking/logic';
 import { enroll } from '../src/lib/srs/scheduler';
 
 const now = new Date('2026-10-02T09:00:00Z');
@@ -17,6 +18,7 @@ describe('backup', () => {
           { at: now.toISOString(), total: 72, passed: true, sections: [{ skill: 'reading', points: 18, max: 25 }] },
         ],
       },
+      speaking: recordTalk(recordEar(rateSpoken(emptySpeaking, 'pack.weiter.again', 'good', now).state, 'ue', 7), 'weg', 'prompted'),
     };
     const json = JSON.stringify(buildBackup(data, now));
     expect(parseBackup(json)).toEqual(data);

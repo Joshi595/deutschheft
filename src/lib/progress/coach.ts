@@ -1,6 +1,7 @@
 import type { Course, CourseLesson, CourseLevel } from '../content/course';
 import type { MissionSummary } from '../content/types';
 import { bestAttempt, type QuizHistory } from '../quiz/score';
+import { sentencesKnown, soundsPassed, spokenDue, talksFinished, type SpeakingState } from '../speaking/logic';
 import { dueCards, type ReviewState } from '../srs/scheduler';
 import { url } from '../url';
 import { completion, longestStreak, weakTags, type ProgressState } from './logic';
@@ -17,6 +18,8 @@ export interface Learner {
   quizzes: QuizHistory;
   /** Level id chosen in settings, if any. */
   level?: string;
+  /** The Speak section; absent where it is not needed. */
+  speaking?: SpeakingState;
 }
 
 /** With this many cards due again (not counting new ones), reviewing comes before anything new. */
@@ -65,7 +68,7 @@ export function currentLevel(course: Course, learner: Learner): CourseLevel | un
   return active.slice(start).find((level) => !levelComplete(learner.progress, level)) ?? active[active.length - 1];
 }
 
-export type SuggestionKind = 'review' | 'lesson' | 'checkpoint' | 'weak' | 'mission' | 'exam';
+export type SuggestionKind = 'review' | 'lesson' | 'speak' | 'checkpoint' | 'weak' | 'mission' | 'exam';
 
 export interface Suggestion {
   kind: SuggestionKind;
@@ -126,6 +129,18 @@ export function suggest(course: Course, learner: Learner, now: Date): Suggestion
   }
 
   if (due > 0 && !reviewFirst) suggestions.push(review);
+
+  const spoken = learner.speaking ? spokenDue(learner.speaking, now).length : 0;
+  if (spoken > 0) {
+    suggestions.push({
+      kind: 'speak',
+      title: `Say ${plural(Math.min(spoken, 10), 'sentence')} aloud`,
+      action: 'Start speaking',
+      reason: `${plural(spoken, 'sentence you have said before is', 'sentences you have said before are')} due again in the Speak section.`,
+      href: url('speak/sentences/'),
+      minutes: Math.max(1, Math.round(Math.min(spoken, 10) / 3)),
+    });
+  }
 
   const unit = level.units.find(
     (candidate) =>
@@ -252,6 +267,13 @@ export function milestones(course: Course, learner: Learner): Milestone[] {
     { id: 'checkpoint', stamp: 'Kontrolle', title: 'Pass a unit checkpoint', current: passed('checkpoint:'), target: 1 },
     { id: 'mission-1', stamp: 'Unterwegs', title: 'Complete a mission', current: missions, target: 1 },
   ];
+  if (learner.speaking) {
+    list.push(
+      { id: 'talk-1', stamp: 'Im Gespräch', title: 'Speak through a conversation', current: talksFinished(learner.speaking), target: 1 },
+      { id: 'spoken-50', stamp: '50 Sätze', title: 'Know 50 sentences by heart, aloud', current: sentencesKnown(learner.speaking), target: 50 },
+      { id: 'ears', stamp: 'Gutes Ohr', title: 'Pass the ear training of 10 sounds', current: soundsPassed(learner.speaking), target: 10 },
+    );
+  }
   if (course.missions.length > 1) {
     list.push({ id: 'mission-all', stamp: 'Alle Missionen', title: 'Complete every mission', current: missions, target: course.missions.length });
   }

@@ -17,7 +17,9 @@ const next = catalog.missions[index + 1];
 
 <Base title={`${mission.titleDe} (${mission.title})`} description={mission.objective} width="narrow">
   <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('missions/')} class="hover:text-ink">Missions</a>
+    <a href={url('speak/')} class="hover:text-ink">Speak</a>
+    <span aria-hidden="true"> / </span>
+    <a href={url('speak/conversations/')} class="hover:text-ink">Conversations</a>
     <span aria-hidden="true"> / </span>
     <span>{mission.title}</span>
   </nav>
@@ -33,7 +35,8 @@ const next = catalog.missions[index + 1];
       client:only="react"
       mission={mission}
       next={next && { href: next.href, title: next.titleDe }}
-      listHref={url('missions/')}
+      listHref={url('speak/conversations/')}
+      speakHref={url(`speak/conversations/${mission.id}/`)}
     >
       <div slot="fallback" class="card p-6 text-muted">Setting the scene …</div>
     </MissionRunner>

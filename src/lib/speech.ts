@@ -1,4 +1,9 @@
-/** Spoken German through the browser's built-in voices (Web Speech API). */
+import { url } from './url';
+
+/**
+ * Spoken German: a recorded clip where one exists, otherwise the browser's
+ * built-in German voice (Web Speech API).
+ */
 
 export interface VoiceInfo {
   name: string;
@@ -84,14 +89,108 @@ function utterance(text: string, rate: number, speakerIndex = 0): SpeechSynthesi
   return result;
 }
 
+// --- Recorded clips ------------------------------------------------------------
+
 /**
- * Without a German voice the browser would read German with an English one,
- * which teaches the wrong sounds. Silence is better; the layout says why.
+ * Name of the recorded clip for a text: FNV-1a over its UTF-8 bytes, as eight
+ * hex digits. scripts/make_audio.py names the files with the same function.
  */
-export function speak(text: string, rate = 0.9): void {
-  if (germanAvailable() === false) return;
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utterance(text, rate));
+export function clipKey(text: string): string {
+  let hash = 0x811c9dc5;
+  for (const byte of new TextEncoder().encode(text.normalize('NFC').trim())) {
+    hash ^= byte;
+    hash = Math.imul(hash, 0x01000193);
+  }
+  return (hash >>> 0).toString(16).padStart(8, '0');
+}
+
+/** Which clips exist, per recorded voice ("a" is the main voice, "b" the second speaker). */
+let clips: Promise<Record<string, Set<string>>> | undefined;
+
+function loadClips(): Promise<Record<string, Set<string>>> {
+  clips ??= fetch(url('audio/index.json'))
+    .then((response) => (response.ok ? response.json() : {}))
+    .then((index: Record<string, string[]>) => Object.fromEntries(Object.entries(index).map(([voice, keys]) => [voice, new Set(keys)])))
+    .catch(() => ({}));
+  return clips;
+}
+
+/** Address of the clip for a text, in the second voice for every other speaker if it has one. */
+async function clipFor(text: string, speakerIndex: number): Promise<string | undefined> {
+  const index = await loadClips();
+  const key = clipKey(text);
+  const order = speakerIndex % 2 === 1 ? ['b', 'a'] : ['a', 'b'];
+  const voice = order.find((candidate) => index[candidate]?.has(key));
+  return voice && url(`audio/${voice}/${key}.mp3`);
+}
+
+const player = typeof Audio === 'undefined' ? undefined : new Audio();
+/** Clips already fetched, as local object addresses. */
+const fetched = new Map<string, string>();
+
+/**
+ * Play one clip to its end. It is fetched as an ordinary request instead of
+ * being streamed by the audio element, so the offline cache can keep it.
+ */
+async function playClip(src: string, rate: number): Promise<void> {
+  if (!player) return;
+  let local = fetched.get(src);
+  if (!local) {
+    const response = await fetch(src).catch(() => undefined);
+    if (!response?.ok) return;
+    local = URL.createObjectURL(await response.blob());
+    fetched.set(src, local);
+  }
+  await new Promise<void>((resolve) => {
+    player.onended = player.onerror = player.onpause = () => resolve();
+    player.src = local;
+    // Clips are recorded at a natural pace, which is what the default setting of 0.9 stands for.
+    player.playbackRate = Math.min(1.4, Math.max(0.6, rate / 0.9));
+    player.play().catch(() => resolve());
+  });
+}
+
+function voiceLine(text: string, rate: number, speakerIndex: number): Promise<void> {
+  return new Promise((resolve) => {
+    const spoken = utterance(text, rate, speakerIndex);
+    spoken.onend = spoken.onerror = () => resolve();
+    window.speechSynthesis.speak(spoken);
+  });
+}
+
+/** Goes up whenever something new starts or everything is stopped, so an older script knows to give way. */
+let turn = 0;
+
+function silence(): void {
+  turn++;
+  player?.pause();
+  if (speechSupported()) window.speechSynthesis.cancel();
+}
+
+/**
+ * Say the lines one after another. A line with a recorded clip plays the clip;
+ * otherwise the browser's German voice reads it. Without either, the line is
+ * skipped: an English voice reading German would teach the wrong sounds.
+ * Resolves to whether it ran to the end without being interrupted.
+ */
+async function play(lines: readonly SpokenLine[], rate: number, firstVoice = 0): Promise<boolean> {
+  silence();
+  const mine = turn;
+  const speakers = [...new Set(lines.map((line) => line.speaker ?? ''))];
+  for (const line of lines) {
+    const speaker = firstVoice + speakers.indexOf(line.speaker ?? '');
+    const src = await clipFor(line.text, speaker);
+    if (mine !== turn) return false;
+    if (src) await playClip(src, rate);
+    else if (germanAvailable() !== false) await voiceLine(line.text, rate, speaker);
+    if (mine !== turn) return false;
+  }
+  return true;
+}
+
+/** Say one text. `voice` 1 asks for the second recorded voice, as for the other speaker of a dialogue. */
+export function speak(text: string, rate = 0.9, voice = 0): void {
+  void play([{ text }], rate, voice);
 }
 
 export interface SpokenLine {
@@ -103,20 +202,10 @@ export interface SpokenLine {
  * Speak a script line by line, giving each speaker a voice of their own.
  * Calls `onEnd` when the last line has finished (not when it is stopped).
  */
-export function speakLines(lines: readonly SpokenLine[], rate = 0.9, onEnd?: () => void): void {
-  if (germanAvailable() === false) {
-    onEnd?.();
-    return;
-  }
-  window.speechSynthesis.cancel();
-  const speakers = [...new Set(lines.map((line) => line.speaker ?? ''))];
-  lines.forEach((line, index) => {
-    const spoken = utterance(line.text, rate, speakers.indexOf(line.speaker ?? ''));
-    if (index === lines.length - 1) spoken.onend = () => onEnd?.();
-    window.speechSynthesis.speak(spoken);
-  });
+export function speakLines(lines: readonly SpokenLine[], rate = 0.9, onEnd?: () => void, firstVoice = 0): void {
+  void play(lines, rate, firstVoice).then((finished) => finished && onEnd?.());
 }
 
 export function stopSpeaking(): void {
-  if (speechSupported()) window.speechSynthesis.cancel();
+  silence();
 }

@@ -1,0 +1,16 @@
+title: Presenting a topic
+titleDe: Ein Thema präsentieren
+level: b1
+order: 2
+summary: The fixed phrases that carry a short presentation from the first sentence to the last. This is part 2 of the B1 speaking exam.
+phrases:
+  - { id: topic, cue: "Open your presentation by naming the topic, nutrition.", de: "Ich möchte heute über das Thema Ernährung sprechen.", en: "Today I would like to talk about nutrition." }
+  - { id: structure, cue: "Say how your talk is organised: first your experience, then your country.", de: "Zuerst spreche ich über meine Erfahrungen, dann über die Situation in meinem Land.", en: "First I will talk about my experience, then about the situation in my country." }
+  - { id: experience, cue: "Introduce a personal experience: it is not easy.", de: "Ich habe selbst die Erfahrung gemacht, dass das nicht einfach ist.", en: "I have found out for myself that this is not easy." }
+  - { id: country, cue: "Say that in your home country it is quite different.", de: "In meinem Heimatland ist das ganz anders.", en: "In my home country that is quite different." }
+  - { id: advantage, cue: "Name a big advantage: it saves time.", de: "Ein großer Vorteil ist, dass man Zeit spart.", en: "A big advantage is that you save time." }
+  - { id: disadvantage, cue: "Name a disadvantage: it is expensive.", de: "Ein Nachteil ist allerdings, dass es teuer ist.", en: "One disadvantage, however, is that it is expensive." }
+  - { id: conclude, cue: "Sum up: the advantages outweigh the rest.", de: "Zusammenfassend kann man sagen, dass die Vorteile überwiegen.", en: "To sum up, one can say that the advantages outweigh the rest." }
+  - { id: thanks, cue: "End the presentation.", de: "Vielen Dank für Ihre Aufmerksamkeit.", en: "Thank you for your attention." }
+  - { id: questions, cue: "Invite questions.", de: "Haben Sie noch Fragen?", en: "Do you have any questions?" }
+  - { id: feedback, cue: "Respond warmly to someone else's presentation.", de: "Ihre Präsentation hat mir sehr gut gefallen.", en: "I liked your presentation very much." }

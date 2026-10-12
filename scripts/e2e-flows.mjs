@@ -22,10 +22,11 @@ const problems = [];
 const ok = (name, condition, detail = '') => results.push(`${condition ? 'PASS' : 'FAIL'}  ${name}${detail ? '  -> ' + detail : ''}`);
 const tokenize = (sentence) => sentence.trim().replace(/[.!?]+$/, '').split(/\s+/).filter(Boolean);
 
-const browser = await chromium.launch({ channel: 'msedge', headless: true });
-const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, permissions: [] });
+// A fake microphone, so that recording can be tried without a person in the room.
+const browser = await chromium.launch({ channel: 'msedge', headless: true, args: ['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream'] });
+const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, permissions: ['microphone'] });
 // A learner's browser normally has a German voice. Automation hides the online ones, so one
-// is supplied here and kept silent; section 9 checks what happens with other voice lists.
+// is supplied here and kept silent; section 10 checks what happens with other voice lists.
 await context.addInitScript(() => {
   window.SpeechSynthesisUtterance = class {
     constructor(text) {
@@ -35,6 +36,15 @@ await context.addInitScript(() => {
   speechSynthesis.getVoices = () => [{ name: 'Microsoft Katja Online (Natural) - German (Germany)', lang: 'de-DE' }];
   speechSynthesis.cancel = () => {};
   speechSynthesis.speak = (utterance) => utterance.onend?.();
+  // A speech recogniser that always hears the same sentence, to try "what it heard" without a real one.
+  window.SpeechRecognition = class {
+    start() {
+      setTimeout(() => this.onresult?.({ resultIndex: 0, results: [[{ transcript: 'Entschuldigung wo ist der Bahnhof' }]] }), 30);
+    }
+    stop() {
+      setTimeout(() => this.onend?.(), 60);
+    }
+  };
 });
 const page = await context.newPage();
 page.on('console', (m) => m.type() === 'error' && problems.push(`console: ${m.text()}`));
@@ -44,6 +54,8 @@ const shot = async (name) => {
   if (process.env.E2E_SHOTS) await page.screenshot({ path: join(process.env.E2E_SHOTS, `flow-${name}.png`) });
 };
 const store = (key) => page.evaluate((k) => JSON.parse(localStorage.getItem(k) ?? 'null'), key);
+/** Whether something shows up within a few seconds; for what appears only after audio or recognition has finished. */
+const appears = (locator) => locator.first().waitFor({ state: 'visible', timeout: 5000 }).then(() => true, () => false);
 
 /** Answer the exercise card on screen. `wrong` gives a deliberately wrong answer where that is easy. */
 async function answer(item, { wrong = false } = {}) {
@@ -188,7 +200,9 @@ await page.getByRole('button', { name: 'Try the mission again' }).click();
 card = await answer(mission.steps[0].task);
 ok('a retried task counts as solved', await card.getByText('Richtig!').isVisible());
 await page.goto(BASE + 'missions/', { waitUntil: 'networkidle' });
-ok('mission list shows the mission complete', (await page.locator('a[href$="missions/baeckerei/"] [data-meter-done]').textContent()) === String(mission.steps.length));
+await page.waitForURL(/speak\/conversations\/$/);
+ok('the old missions address leads to the conversations', await page.getByRole('heading', { level: 1, name: 'Conversations' }).isVisible());
+ok('a situation with a mission offers both ways in', await page.locator('li', { hasText: 'In der Bäckerei' }).getByRole('link', { name: 'Guided mission' }).isVisible());
 
 // --- 5. Review with typed recall -----------------------------------------------
 await page.goto(BASE + 'review/', { waitUntil: 'networkidle' });
@@ -230,22 +244,105 @@ const tag = items[0].tags[0];
 await page.goto(`${BASE}a1/01-begruessung/?tag=${encodeURIComponent(tag)}#practice`, { waitUntil: 'networkidle' });
 ok('a topic link opens focused practice', await page.getByText(`Practise “${tag}”`).isVisible(), tag);
 
-// --- 8. Phone: navigation and no sideways scrolling ---------------------------
+// --- 8. The Speak section --------------------------------------------------------
+const speakingStore = () => store('lg:speaking:v1');
+const model = page.locator('p.de.font-display');
+
+await page.goto(BASE + 'speak/', { waitUntil: 'networkidle' });
+ok('speak: one next step is recommended', (await page.locator('#speak-next').isVisible()) && (await page.locator('section a.btn-accent').isVisible()));
+
+// Sentences: new ones are read aloud first, then said from the cue.
+await page.goto(BASE + 'speak/sentences/', { waitUntil: 'networkidle' });
+await page.getByRole('button', { name: 'Start speaking' }).click();
+ok('sentences: a new sentence is shown to be read aloud', (await page.getByText('New', { exact: true }).isVisible()) && (await model.isVisible()));
+await page.getByRole('button', { name: 'Speak', exact: true }).click();
+await page.waitForTimeout(700);
+await page.getByRole('button', { name: 'Stop' }).click();
+ok('sentences: the learner’s recording appears next to the model', await page.getByLabel('Your recording').isVisible());
+await shot('8-sentence');
+await page.getByRole('button', { name: 'I have read it aloud' }).click();
+let recallHidden = true;
+for (let turns = 1; turns < 20 && !(await page.getByRole('heading', { name: 'Sitting done' }).count()); turns++) {
+  const reading = await page.getByText('New', { exact: true }).count();
+  if (!reading && (await model.count())) recallHidden = false;
+  await page.getByRole('button', { name: 'I said it' }).click();
+  if (reading) await page.getByRole('button', { name: 'I have read it aloud' }).click();
+  else await page.getByRole('button', { name: /Got it/ }).click();
+}
+ok('sentences: from the cue, the German stays hidden until it has been said', recallHidden);
+ok('sentences: a sitting ends with a summary', await page.getByRole('heading', { name: 'Sitting done' }).isVisible());
+let speaking = await speakingStore();
+ok('sentences: the new ones joined the speaking deck', Object.keys(speaking.cards).length === 5, `${Object.keys(speaking.cards).length} cards`);
+
+// A conversation, first read aloud, then from the cue with "what it heard" switched on.
+await page.goto(BASE + 'speak/conversations/weg/', { waitUntil: 'networkidle' });
+await page.getByRole('button', { name: /^Read/ }).click();
+ok('conversation: reading shows the learner’s line', await model.isVisible());
+for (let turn = 0; turn < 5; turn++) {
+  await page.getByRole('button', { name: 'I said it' }).click();
+  await page.getByRole('button', { name: 'Continue' }).click();
+}
+ok('conversation: the other person’s lines appear as the talk goes on', await page.locator('.bubble').getByText('Gern geschehen. Schönen Tag noch!').isVisible());
+await page.getByRole('button', { name: 'Finish the conversation' }).click();
+speaking = await speakingStore();
+ok('conversation: reading aloud is recorded but schedules nothing', speaking.talks.weg === 1 && !Object.keys(speaking.cards).some((id) => id.includes('talk.weg')));
+
+await page.goto(BASE + 'settings/#speaking', { waitUntil: 'networkidle' });
+await page.getByLabel(/Write down what the browser hears/).check();
+ok('settings: say where the audio goes before it is switched on', await page.getByText(/sent to the browser maker|recognised on this device/).isVisible());
+await page.goto(BASE + 'speak/conversations/weg/', { waitUntil: 'networkidle' });
+await page.getByRole('button', { name: /^Prompted/ }).click();
+ok('conversation: with a cue only, the line is hidden', (await model.count()) === 0);
+await page.getByRole('button', { name: 'Speak', exact: true }).click();
+await page.waitForTimeout(400);
+await page.getByRole('button', { name: 'Stop' }).click();
+ok('what it heard: the transcript is shown with the words it found', await appears(page.getByText('5 of 5 words found')));
+ok('what it heard: it suggests a rating and leaves the choice', /bg-accent-soft/.test(await page.getByRole('button', { name: /Got it/ }).getAttribute('class')));
+await shot('8-heard');
+await page.getByRole('button', { name: /Got it/ }).click();
+for (let turn = 1; turn < 5; turn++) {
+  await page.getByRole('button', { name: 'I said it' }).click();
+  await page.getByRole('button', { name: /Almost/ }).click();
+}
+await page.getByRole('button', { name: 'Finish the conversation' }).click();
+speaking = await speakingStore();
+ok('conversation: lines said from the cue join the deck', speaking.talks.weg === 2 && Object.keys(speaking.cards).filter((id) => id.includes('talk.weg')).length === 5);
+ok('conversation: the next step is less help', await page.getByRole('button', { name: /Again with less help: From memory/ }).isVisible());
+
+// Ear training on one sound.
+await page.goto(BASE + 'speak/sounds/ue/', { waitUntil: 'networkidle' });
+await page.getByRole('button', { name: 'Start listening' }).click();
+for (let trial = 0; trial < 8; trial++) {
+  await page.keyboard.press('1');
+  await page.getByRole('button', { name: /Next word|See the result/ }).click();
+}
+ok('sounds: an ear-training round ends with a score', await page.getByText(/\d of 8 heard right/).isVisible());
+ok('sounds: the best score is kept', typeof (await speakingStore()).ears.ue === 'number');
+
+// An exam task against the clock.
+await page.goto(BASE + 'speak/exam/a1/', { waitUntil: 'networkidle' });
+await page.locator('ul button.card').first().click();
+await page.getByRole('button', { name: 'Start the clock' }).click();
+ok('exam speaking: a task opens with a running clock and a model to compare with', (await page.getByRole('button', { name: 'Stop the clock' }).isVisible()) && (await page.locator('article').isVisible()));
+
+// --- 9. Phone: navigation and no sideways scrolling ---------------------------
 const phone = await browser.newContext({ viewport: { width: 390, height: 844 }, storageState: await context.storageState() });
 const mobile = await phone.newPage();
 mobile.on('pageerror', (e) => problems.push(`phone pageerror: ${e.message}`));
-for (const route of ['', 'learn/', 'a1/', 'a1/01-begruessung/', 'missions/', 'missions/vorstellungsgespraech/', 'review/', 'notebook/', 'progress/', 'settings/', 'a1/checkpoint/1/', 'b2/']) {
+const routes = ['', 'learn/', 'a1/', 'a1/01-begruessung/', 'missions/vorstellungsgespraech/', 'review/', 'notebook/', 'progress/', 'settings/', 'a1/checkpoint/1/', 'b2/'];
+const speakRoutes = ['speak/', 'speak/sentences/', 'speak/conversations/', 'speak/conversations/vorstellungsgespraech/', 'speak/sounds/', 'speak/sounds/lang-kurz/', 'speak/exam/b1/'];
+for (const route of [...routes, ...speakRoutes]) {
   await mobile.goto(BASE + route, { waitUntil: 'networkidle' });
   const overflow = await mobile.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   ok(`phone: /${route} fits the screen`, overflow <= 0, overflow > 0 ? `${overflow}px too wide` : '');
 }
 ok('phone: tab bar is shown', await mobile.locator('.tabbar').isVisible());
 ok('phone: top nav is hidden', !(await mobile.locator('header nav').isVisible()));
-await mobile.locator('.tabbar').getByRole('link', { name: 'Missions' }).click();
-await mobile.waitForURL(/missions\/$/);
-ok('phone: tab bar navigates', (await mobile.locator('.tabbar a[aria-current="page"]').textContent()).trim() === 'Missions');
+await mobile.locator('.tabbar').getByRole('link', { name: 'Speak' }).click();
+await mobile.waitForURL(/speak\/$/);
+ok('phone: tab bar navigates', (await mobile.locator('.tabbar a[aria-current="page"]').textContent()).trim() === 'Speak');
 
-// --- 9. Audio: the right voice, and an honest state when there is none ------------
+// --- 10. Audio: the right voice, and an honest state when there is none -----------
 // Automation hides a browser's online voices, so the lists are given here: they are what
 // Edge and Brave reported on a Windows PC that has no German voice of its own.
 const ENGLISH = [['Microsoft David - English (United States)', 'en-US']];
@@ -256,6 +353,7 @@ const EDGE_GERMAN = [
 ];
 async function withVoices(list) {
   const audio = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  audio.on('response', (response) => response.status() >= 400 && problems.push(`audio http ${response.status()}: ${response.url()}`));
   await audio.addInitScript((voices) => {
     localStorage.setItem('lg:settings:v1', JSON.stringify({ level: 'a1', dailyGoal: 50 }));
     window.__spoken = [];
@@ -273,17 +371,42 @@ async function withVoices(list) {
 
 let audio = await withVoices([...ENGLISH, ...EDGE_GERMAN]);
 await audio.goto(BASE + 'a1/01-begruessung/', { waitUntil: 'networkidle' });
-await audio.locator('.speak:visible').first().click();
+// A sentence without a recorded clip is read by the browser's voice.
+await audio.locator('.prose .speak:not([data-clip]):visible').first().click();
+await audio.waitForTimeout(500);
 let voicesUsed = await audio.evaluate(() => window.__spoken);
 ok('audio: a sentence is read by a German-only voice, not a multilingual one', voicesUsed.length === 1 && /Katja/.test(voicesUsed[0]), String(voicesUsed[0]));
 await audio.goto(BASE + 'settings/#audio', { waitUntil: 'networkidle' });
 await audio.getByLabel('Voice').selectOption({ label: EDGE_GERMAN[2][0] });
+await audio.waitForTimeout(500);
 voicesUsed = await audio.evaluate(() => window.__spoken);
 ok('audio: a voice chosen in settings is the one that speaks', /Conrad/.test(voicesUsed.at(-1)), String(voicesUsed.at(-1)));
 
 audio = await withVoices(ENGLISH);
+await audio.goto(BASE + 'a1/01-begruessung/', { waitUntil: 'networkidle' });
+ok('audio: without a German voice the learner is told why buttons are missing', (await audio.locator('[data-voice-notice]').isVisible()) && (await audio.locator('.prose .speak:not([data-clip]):visible').count()) === 0);
+const clips = [];
+audio.on('response', (response) => /\/audio\/[ab]\/\w+\.mp3$/.test(response.url()) && clips.push(response.status()));
+const recorded = audio.locator('#vocabulary .speak[data-clip]:visible');
+if (await recorded.count()) {
+  await recorded.first().click();
+  await audio.waitForTimeout(600);
+  ok('audio: a recorded line can be heard in a browser without a German voice', clips.length === 1 && clips[0] === 200, `clip requests: ${clips.join(', ') || 'none'}`);
+
+  // Once the offline cache is in charge, a clip that was played keeps working without a connection.
+  await audio.evaluate(() => navigator.serviceWorker.ready.then(() => true));
+  await audio.reload({ waitUntil: 'networkidle' });
+  await recorded.first().click();
+  await audio.waitForTimeout(600);
+  await audio.context().setOffline(true);
+  await audio.reload({ waitUntil: 'load' });
+  clips.length = 0;
+  await recorded.first().click();
+  await audio.waitForTimeout(600);
+  ok('audio: a clip that was played once still plays offline', clips.length === 1 && clips[0] === 200, `clip requests offline: ${clips.join(', ') || 'none'}`);
+  await audio.context().setOffline(false);
+}
 await audio.goto(BASE + 'missions/baeckerei/', { waitUntil: 'networkidle' });
-ok('audio: without a German voice the learner is told why there is nothing to press', (await audio.locator('[data-voice-notice]').isVisible()) && (await audio.locator('.speak:visible, .listen:visible').count()) === 0);
 await audio.getByRole('button', { name: 'Start mission' }).click();
 await audio.waitForTimeout(300);
 voicesUsed = await audio.evaluate(() => window.__spoken);

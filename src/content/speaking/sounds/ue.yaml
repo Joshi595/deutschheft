@@ -1,0 +1,24 @@
+title: "ü"
+name: an "ee" said with rounded lips
+order: 1
+how:
+  - Say a long English "ee", as in "see", and hold it.
+  - Without moving your tongue, round your lips as if to whistle.
+  - The sound that comes out is ü. The short ü, as in fünf, is the same shape, only quicker.
+trap: English speakers say "oo" as in "food". Then Mütter (mothers) turns into Mutter (mother).
+words:
+  - { de: "Tür", en: "door" }
+  - { de: "fünf", en: "five" }
+  - { de: "müde", en: "tired" }
+  - { de: "über", en: "over, about" }
+  - { de: "Glück", en: "luck" }
+  - { de: "Gemüse", en: "vegetables" }
+  - { de: "Frühstück", en: "breakfast" }
+pairs:
+  - [{ de: "Mutter", en: "mother" }, { de: "Mütter", en: "mothers" }]
+  - [{ de: "Bruder", en: "brother" }, { de: "Brüder", en: "brothers" }]
+  - [{ de: "vier", en: "four" }, { de: "für", en: "for" }]
+  - [{ de: "Tier", en: "animal" }, { de: "Tür", en: "door" }]
+  - [{ de: "Kiste", en: "box" }, { de: "Küste", en: "coast" }]
+  - [{ de: "spielen", en: "to play" }, { de: "spülen", en: "to rinse" }]
+sentence: { de: "Fünf müde Schüler frühstücken in der Küche.", en: "Five tired pupils have breakfast in the kitchen." }

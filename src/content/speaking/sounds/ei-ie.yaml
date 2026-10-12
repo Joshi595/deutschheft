@@ -1,0 +1,24 @@
+title: "ei and ie"
+name: 'ei is "eye" and ie is "ee", never the other way round'
+order: 10
+how:
+  - Look at the second letter and say its English name.
+  - ei ends in i, so it sounds like "eye". Wein sounds like "vine".
+  - ie ends in e, so it sounds like "ee". Wien sounds like "veen".
+trap: English speakers swap them, because "ie" and "ei" are unreliable in English. Then Wien (Vienna) turns into Wein (wine).
+words:
+  - { de: "nein", en: "no" }
+  - { de: "mein", en: "my" }
+  - { de: "klein", en: "small" }
+  - { de: "Arbeit", en: "work" }
+  - { de: "sie", en: "she, they" }
+  - { de: "viel", en: "much" }
+  - { de: "Brief", en: "letter" }
+pairs:
+  - [{ de: "Wein", en: "wine" }, { de: "Wien", en: "Vienna" }]
+  - [{ de: "Reise", en: "journey" }, { de: "Riese", en: "giant" }]
+  - [{ de: "leider", en: "unfortunately" }, { de: "Lieder", en: "songs" }]
+  - [{ de: "heiß", en: "hot" }, { de: "hieß", en: "was called" }]
+  - [{ de: "schreiben", en: "to write" }, { de: "schrieben", en: "wrote" }]
+  - [{ de: "meine", en: "my" }, { de: "Miene", en: "expression" }]
+sentence: { de: "Sie schreibt leider viele kleine Briefe.", en: "Unfortunately she writes many short letters." }

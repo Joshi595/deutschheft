@@ -1,12 +1,17 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { isSelfAssessed } from '../grading/response';
 import { seededShuffle } from '../grading/shuffle';
+import type { BankPhrase } from '../speaking/logic';
 import { url } from '../url';
+import type { Pack } from './schema';
+import { authoredTalk, missionToTalk, speakBank } from './speak';
 import type {
+  ClientConversation,
   ClientExercise,
   ClientExerciseSet,
   ClientMission,
   ClientQuiz,
+  ClientSound,
   ClientVocabItem,
   ExamLink,
   LessonSummary,
@@ -39,6 +44,11 @@ export interface Catalog {
   levels: LevelBundle[];
   lessons: LessonBundle[];
   missions: ClientMission[];
+  /** The Speak section: sounds to train, phrase packs, conversations, and every sentence to say aloud. */
+  sounds: ClientSound[];
+  packs: (Pack & { id: string })[];
+  talks: ClientConversation[];
+  bank: BankPhrase[];
 }
 
 /** Questions per checkpoint, spread evenly over the unit's lessons. */
@@ -53,13 +63,16 @@ export function getCatalog(): Promise<Catalog> {
 }
 
 async function build(): Promise<Catalog> {
-  const [levelEntries, lessonEntries, exerciseEntries, vocabEntries, examEntries, missionEntries] = await Promise.all([
+  const [levelEntries, lessonEntries, exerciseEntries, vocabEntries, examEntries, missionEntries, soundEntries, packEntries, talkEntries] = await Promise.all([
     getCollection('levels'),
     getCollection('lessons'),
     getCollection('exercises'),
     getCollection('vocab'),
     getCollection('exams'),
     getCollection('missions'),
+    getCollection('sounds'),
+    getCollection('packs'),
+    getCollection('conversations'),
   ]);
 
   const lessonKeys = new Set<string>();
@@ -209,7 +222,29 @@ async function build(): Promise<Catalog> {
       };
     });
 
-  return { levels, lessons: levels.flatMap((level) => level.lessons), missions };
+  const ordered = levels.flatMap((level) => level.lessons);
+  const byLevel = <T extends { data: { level: string; order: number } }>(a: T, b: T) =>
+    a.data.level.localeCompare(b.data.level) || a.data.order - b.data.order;
+
+  const sounds: ClientSound[] = soundEntries
+    .sort((a, b) => a.data.order - b.data.order)
+    .map((entry) => ({ ...entry.data, id: entry.id, href: url(`speak/sounds/${entry.id}/`) }));
+  const packs = packEntries.sort(byLevel).map((entry) => ({ ...entry.data, id: entry.id }));
+
+  // A mission and a written conversation share one address space, so their names must not clash.
+  for (const entry of talkEntries) {
+    if (missions.some((mission) => mission.id === entry.id)) throw new Error(`Conversation "${entry.id}" has the same name as a mission`);
+    if (!levelIds.has(entry.data.level)) throw new Error(`Conversation "${entry.id}" has level "${entry.data.level}", which does not exist`);
+  }
+  const talkHref = (id: string) => url(`speak/conversations/${id}/`);
+  const talks = [
+    ...missions.map((mission) => ({ level: mission.level, order: 0, talk: missionToTalk(mission, talkHref(mission.id)) })),
+    ...talkEntries.sort(byLevel).map((entry) => ({ level: entry.data.level, order: 1, talk: authoredTalk(entry.id, entry.data, talkHref(entry.id)) })),
+  ]
+    .sort((a, b) => a.level.localeCompare(b.level) || a.order - b.order)
+    .map(({ talk }) => talk);
+
+  return { levels, lessons: ordered, missions, sounds, packs, talks, bank: speakBank({ packs, talks, lessons: ordered }) };
 }
 
 function indexByLesson<C extends 'exercises' | 'vocab'>(

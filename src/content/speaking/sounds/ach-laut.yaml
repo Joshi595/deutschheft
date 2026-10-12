@@ -1,0 +1,23 @@
+title: "ch after a, o and u"
+name: a rough breath from the back of the mouth
+order: 5
+how:
+  - Say "k" and notice where the back of your tongue touches.
+  - Bring your tongue to the same place, but do not close the gap completely.
+  - Breathe out through it. That scraping breath is the ch of Buch. It comes after a, o, u and au.
+trap: English speakers say "k". Then Nacht (night) turns into nackt (naked).
+words:
+  - { de: "Buch", en: "book" }
+  - { de: "acht", en: "eight" }
+  - { de: "auch", en: "also" }
+  - { de: "machen", en: "to do, to make" }
+  - { de: "Sprache", en: "language" }
+  - { de: "Woche", en: "week" }
+  - { de: "Kuchen", en: "cake" }
+pairs:
+  - [{ de: "Nacht", en: "night" }, { de: "nackt", en: "naked" }]
+  - [{ de: "acht", en: "eight" }, { de: "Akt", en: "act" }]
+  - [{ de: "doch", en: "after all" }, { de: "Dock", en: "dock" }]
+  - [{ de: "roch", en: "smelled" }, { de: "Rock", en: "skirt" }]
+  - [{ de: "lachen", en: "to laugh" }, { de: "Laken", en: "sheets" }]
+sentence: { de: "Ich mache auch noch einen Kuchen.", en: "I am going to make a cake as well." }

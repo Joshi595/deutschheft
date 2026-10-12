@@ -1,0 +1,23 @@
+title: "r"
+name: made in the throat, not with the tip of the tongue
+order: 6
+how:
+  - At the start of a syllable the r is made at the back, where you gargle. Say "ach" and add your voice.
+  - Keep the tip of your tongue down behind your lower teeth. It does nothing.
+  - After a vowel the r almost disappears. The ending -er sounds like a short "a", so Lehrer ends like "Lehra".
+trap: English speakers curl the tongue tip back. That is understood, but it is the clearest sign of an English accent.
+words:
+  - { de: "rot", en: "red" }
+  - { de: "Reise", en: "journey" }
+  - { de: "Bruder", en: "brother" }
+  - { de: "Freund", en: "friend" }
+  - { de: "hören", en: "to hear" }
+  - { de: "Lehrer", en: "teacher" }
+  - { de: "Wasser", en: "water" }
+pairs:
+  - [{ de: "Reise", en: "journey" }, { de: "leise", en: "quiet" }]
+  - [{ de: "Rand", en: "edge" }, { de: "Land", en: "country" }]
+  - [{ de: "Rippe", en: "rib" }, { de: "Lippe", en: "lip" }]
+  - [{ de: "Gras", en: "grass" }, { de: "Glas", en: "glass" }]
+  - [{ de: "Herr", en: "Mr, gentleman" }, { de: "hell", en: "bright" }]
+sentence: { de: "Der Lehrer fährt mit dem roten Fahrrad.", en: "The teacher rides the red bicycle." }
