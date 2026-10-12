@@ -4,6 +4,7 @@ import { countWords, type GradeResult, type Response, type ResponseOf } from '..
 import { seededShuffle, tokenize } from '../../lib/grading/shuffle';
 import { speak } from '../../lib/speech';
 import { GermanInput } from './GermanInput';
+import { useRecording } from './useRecording';
 
 /**
  * One input widget per exercise type. Each reports a Response; none of them grades.
@@ -455,41 +456,15 @@ export function WritingTask({ item, response, onChange, locked, phase }: WidgetP
   );
 }
 
-/** Recordings live only in this tab's memory, keyed by item id. */
-const recordings = new Map<string, string>();
-
 function Recorder({ id, allowRecord }: { id: string; allowRecord: boolean }) {
-  const [url, setUrl] = useState<string | undefined>(recordings.get(id));
-  const [recorder, setRecorder] = useState<MediaRecorder | null>(null);
-  const [error, setError] = useState(false);
-
-  async function start() {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const media = new MediaRecorder(stream);
-      const chunks: Blob[] = [];
-      media.ondataavailable = (event) => chunks.push(event.data);
-      media.onstop = () => {
-        stream.getTracks().forEach((track) => track.stop());
-        const next = URL.createObjectURL(new Blob(chunks, { type: media.mimeType }));
-        recordings.set(id, next);
-        setUrl(next);
-        setRecorder(null);
-      };
-      media.start();
-      setRecorder(media);
-      setError(false);
-    } catch {
-      setError(true);
-    }
-  }
+  const { url, recording, failed, start, stop } = useRecording(id);
 
   return (
     <div className="grid gap-2">
       {allowRecord && (
         <div className="flex flex-wrap items-center gap-3">
-          {recorder ? (
-            <button type="button" className="btn btn-accent" onClick={() => recorder.stop()}>
+          {recording ? (
+            <button type="button" className="btn btn-accent" onClick={stop}>
               Stop recording
             </button>
           ) : (
@@ -497,11 +472,11 @@ function Recorder({ id, allowRecord }: { id: string; allowRecord: boolean }) {
               {url ? 'Record again' : 'Record yourself'}
             </button>
           )}
-          {recorder && <span className="text-sm text-bad" aria-live="polite">Recording …</span>}
+          {recording && <span className="text-sm text-bad" aria-live="polite">Recording …</span>}
         </div>
       )}
       {url && <audio controls src={url} className="w-full max-w-md" aria-label="Your recording" />}
-      {error && (
+      {failed && (
         <p className="text-sm text-muted">
           The microphone is not available. Say your answer out loud instead; the recording is only there to help you listen back.
         </p>

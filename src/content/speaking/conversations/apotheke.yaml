@@ -1,0 +1,20 @@
+title: At the pharmacy
+titleDe: In der Apotheke
+level: a2
+order: 2
+icon: doctor
+scene: You have had a cough and a headache since yesterday. You go to the pharmacy to get something for it.
+partner: Apotheker
+lines:
+  - { who: partner, text: "Guten Tag. Wie kann ich Ihnen helfen?", en: "Hello. How can I help you?" }
+  - { who: you, id: need, cue: "Greet him and say that you need something for a cough.", text: "Guten Tag. Ich brauche etwas gegen Husten.", en: "Hello. I need something for a cough." }
+  - { who: partner, text: "Seit wann haben Sie den Husten?", en: "How long have you had the cough?" }
+  - { who: you, id: since, cue: "Say since yesterday, and that you also have a headache.", text: "Seit gestern. Ich habe auch Kopfschmerzen.", en: "Since yesterday. I also have a headache." }
+  - { who: partner, text: "Haben Sie Fieber?", en: "Do you have a fever?" }
+  - { who: you, id: fever, cue: "Say no, you do not have a fever.", text: "Nein, Fieber habe ich nicht.", en: "No, I do not have a fever." }
+  - { who: partner, text: "Dann empfehle ich Ihnen diesen Hustensaft. Nehmen Sie dreimal täglich einen Löffel.", en: "Then I recommend this cough syrup. Take one spoonful three times a day." }
+  - { who: you, id: when, cue: "Ask whether you should take it before or after meals.", text: "Soll ich ihn vor oder nach dem Essen nehmen?", en: "Should I take it before or after meals?" }
+  - { who: partner, text: "Nach dem Essen. Und trinken Sie viel Tee.", en: "After meals. And drink plenty of tea." }
+  - { who: you, id: price, cue: "Ask what the cough syrup costs.", text: "Was kostet der Hustensaft?", en: "What does the cough syrup cost?" }
+  - { who: partner, text: "Sieben Euro fünfzig. Wenn es in drei Tagen nicht besser ist, gehen Sie bitte zum Arzt.", en: "Seven euros fifty. If it is not better in three days, please see a doctor." }
+  - { who: you, id: thanks, cue: "Say all right, and thank him for the advice.", text: "In Ordnung. Vielen Dank für den Rat!", en: "All right. Thank you for the advice!" }

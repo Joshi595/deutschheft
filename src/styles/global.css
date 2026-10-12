@@ -326,7 +326,7 @@
      Set by the layout when the browser has voices but none of them is German.
      Every control that would speak goes, and one line says why.
   */
-  .no-german-voice :is(.speak, .listen) {
+  .no-german-voice :is(.speak, .listen):not([data-clip]) {
     display: none;
   }
   .voice-notice {

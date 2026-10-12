@@ -1,0 +1,48 @@
+---
+import SoundTrainer from '../../../components/speak/SoundTrainer';
+import Base from '../../../layouts/Base.astro';
+import { getCatalog } from '../../../lib/content/catalog';
+import { url } from '../../../lib/url';
+
+export async function getStaticPaths() {
+  const catalog = await getCatalog();
+  return catalog.sounds.map((sound) => ({ params: { id: sound.id } }));
+}
+
+const { sounds } = await getCatalog();
+const index = sounds.findIndex((candidate) => candidate.id === Astro.params.id);
+const sound = sounds[index]!;
+const next = sounds[index + 1];
+---
+
+<Base title={`The sound ${sound.title}`} description={sound.name} width="narrow">
+  <nav aria-label="Breadcrumb" class="text-sm text-muted">
+    <a href={url('speak/')} class="hover:text-ink">Speak</a>
+    <span aria-hidden="true"> / </span>
+    <a href={url('speak/sounds/')} class="hover:text-ink">Sounds</a>
+    <span aria-hidden="true"> / </span>
+    <span>{sound.title}</span>
+  </nav>
+
+  <header class="mt-4">
+    <p class="eyebrow">Sound {sound.order} of {sounds.length}</p>
+    <h1 class="mt-1 text-4xl sm:text-5xl" lang="de">{sound.title}</h1>
+    <p class="mt-2 text-lg text-muted">{sound.name}</p>
+  </header>
+
+  <section class="card mt-8 border-l-4 border-l-accent p-5" aria-labelledby="how">
+    <h2 id="how" class="text-xl">How to make it</h2>
+    <ol class="mt-2 grid list-decimal gap-1.5 pl-5">
+      {sound.how.map((step) => <li>{step}</li>)}
+    </ol>
+    <p class="mt-4 rounded-xl bg-bad-soft px-4 py-3 text-sm">
+      <span class="font-semibold text-bad">The usual slip. </span>{sound.trap}
+    </p>
+  </section>
+
+  <div class="mt-10">
+    <SoundTrainer client:only="react" sound={sound} next={next && { href: next.href, title: next.title }} listHref={url('speak/sounds/')}>
+      <div slot="fallback" class="card p-6 text-muted">Loading the sound …</div>
+    </SoundTrainer>
+  </div>
+</Base>

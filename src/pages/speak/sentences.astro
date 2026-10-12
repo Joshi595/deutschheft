@@ -1,0 +1,30 @@
+---
+import SentenceSession from '../../components/speak/SentenceSession';
+import CourseData from '../../components/ui/CourseData.astro';
+import Base from '../../layouts/Base.astro';
+import { url } from '../../lib/url';
+---
+
+<Base title="Sentences" description="Say German sentences aloud from a cue, and have them come back until they are automatic." width="narrow">
+  <CourseData />
+
+  <nav aria-label="Breadcrumb" class="text-sm text-muted">
+    <a href={url('speak/')} class="hover:text-ink">Speak</a>
+    <span aria-hidden="true"> / </span>
+    <span>Sentences</span>
+  </nav>
+
+  <header class="mt-4">
+    <p class="eyebrow" lang="de">Sätze</p>
+    <h1 class="mt-1 text-4xl sm:text-5xl">Sentences</h1>
+    <p class="mt-3 text-muted">
+      Knowing a sentence and being able to say it are different things. Here you say it, every time, before you see it.
+    </p>
+  </header>
+
+  <div class="mt-8">
+    <SentenceSession client:only="react" bankHref={url('speak/phrases.json')} speakHref={url('speak/')} conversationsHref={url('speak/conversations/')}>
+      <div slot="fallback" class="card p-6 text-muted">Loading your sentences …</div>
+    </SentenceSession>
+  </div>
+</Base>

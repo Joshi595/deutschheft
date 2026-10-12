@@ -17,6 +17,7 @@
 | Go to | What happens |
 | --- | --- |
 | [**Today**](https://joshi595.github.io/deutschheft/) | Say how much German you have, and get one recommended next step. Or play *Der, die oder das?* right away. |
+| [**Speak**](https://joshi595.github.io/deutschheft/speak/) | Speaking practice on its own: German sounds, sentences said aloud, conversations where you speak your part, exam tasks against the clock. |
 | [**A mission**](https://joshi595.github.io/deutschheft/missions/baeckerei/) | Order bread rolls in a German bakery: the assistant speaks, you answer, it goes on. Six minutes. |
 | [**A1 chapters**](https://joshi595.github.io/deutschheft/a1/) | Start from zero: chapters with audio and examples, practised ten exercises at a time. |
 | [**Review**](https://joshi595.github.io/deutschheft/review/) | The words and exercises you missed come back on a schedule, so they stick. |
@@ -39,6 +40,15 @@ On a phone, open the site and choose **Add to Home Screen** to install it as an 
   forms, and writing and speaking tasks with a checklist and a model answer. A chapter's exercises
   are worked through ten at a time, one on screen, with a summary at the end. Typed answers get a
   second try, a hint, and then the solution with an explanation.
+- **Speak**, a section just for speaking. *Sounds*: twelve German sounds, each with ear training
+  on pairs of similar words (the app checks which one you heard) and words to say. *Sentences*: a
+  cue, you say the German, then you hear the model; they come back on later days until automatic.
+  *Conversations*: the app speaks the other person and you speak your part, first reading, then
+  from a cue, then from memory. *Exam speaking*: all 127 speaking tasks of the course with a
+  clock, a recorder, a model answer and a checklist. You can record yourself next to the model,
+  and optionally let the browser write down what it heard.
+- **Recorded audio.** The Speak section and the chapter vocabulary are spoken by recorded clips,
+  the same in every browser. Everything else uses the browser's own German voice.
 - **Missions.** Six everyday situations (bakery, train station, doctor, restaurant, flat viewing,
   job interview), played through as a conversation built from the same exercise types. A wrong
   choice is told why it is wrong, and a task you miss comes back in review.
@@ -72,10 +82,13 @@ shown with its reason. There is no model and no guessing.
 | Checkpoint | Every chapter of a unit is finished and its checkpoint is not passed. |
 | Trouble spot | A topic with at least 4 answered exercises and under 70 % right on the first try. |
 | Mission | The next unfinished mission of the level, once the chapters it draws on are finished. |
+| Speaking | Sentences in the speaking deck that are due again. On the Speak page itself: due sentences first, else a conversation of your level not yet spoken from the cue, else the next sound not yet passed by ear, else an exam task. |
 | Mock exam | Every chapter of a level is finished and no mock exam of it is passed. |
 
 Points are given only for retrieval that worked: 10 for an exercise solved on the first try, 5 if
 it took a second go, up to 5 for a reviewed card. Solving the same exercise again earns nothing.
+A sentence said aloud counts like a reviewed card, but only when it is new or due: repeating a
+conversation is free practice. Reading a line aloud and ear training earn no points.
 
 ## What is measured, and what is not
 
@@ -91,6 +104,7 @@ What each learner can see for themselves, on the Progress page, comes from these
 | Exercises solved, and right first time | `exercises` in `lg:progress:v1` |
 | Words retained | cards in `lg:review:v1` (FSRS state, repetitions, lapses) |
 | Checkpoint and mock exam results | `lg:quizzes:v1` |
+| Sentences said aloud, sounds passed by ear, conversations spoken | `lg:speaking:v1` |
 
 Points and stamps show effort and coverage. The measures of learning are the first-try rate, the
 words still known in review, and the mock exam scores. To learn how learners in general use the
@@ -99,10 +113,14 @@ app would take opt-in, self-hosted, cookieless page counts, which is not built.
 ## Known limits
 
 - **No B2 yet.** It is listed as planned. B1 with its mock exams is the most advanced level.
-- **Speaking is not scored.** You hear a model, record yourself if you like, and mark your own
-  attempt against a checklist. Automatic pronunciation scoring needs speech recognition, which in
-  browsers either sends audio to a third party or is not available at all, so it is left out.
-- **Voices are the browser's.** Edge and Chrome bring a German voice with them; a browser that
+- **Speaking is not scored.** You hear a model, record yourself and rate your own attempt. As an
+  option that is off until you switch it on, the browser writes down what it heard and the app
+  marks the words it found. That shows whether a machine understood you, not how good your accent
+  is. In most browsers the audio goes to the browser maker's speech service for this (the app
+  says so before you switch it on); Chrome can download a German pack and keep it on the device.
+  Brave and Firefox cannot recognise speech at all.
+- **Outside the Speak section and the vocabulary lists, voices are the browser's.** Edge and
+  Chrome bring a German voice with them; a browser that
   only has the device's own voices (Brave, Firefox, an editor's built-in browser) has none unless
   German is installed on the device. The app picks the best German voice it finds, never a
   multilingual one if it can help it, and Settings lets you choose another. Without any German
@@ -130,6 +148,7 @@ npm run dev        # http://localhost:4321/deutschheft/
 | `npm run check` | Type check |
 | `npm run build` | Build the static site into `dist/`; fails if any content file is invalid |
 | `npm run preview` | Serve the built site |
+| `python scripts/make_audio.py` | Record German lines that have no audio clip yet, and drop clips nothing uses any more. Needs its own Python environment; see the top of the file |
 | `node scripts/e2e-flows.mjs` | Drive the built site in a browser: first visit, practice, a mission, review, phone layout. See the top of the file |
 | `npm run new:lesson -- b1 33 konjunktiv-1 "Title"` | Scaffold a new chapter from the template |
 

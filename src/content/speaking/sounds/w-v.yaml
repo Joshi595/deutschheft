@@ -1,0 +1,24 @@
+title: "w and v"
+name: w is English "v", and v is usually "f"
+order: 9
+how:
+  - For w, touch your lower lip to your upper teeth and use your voice, as in English "very". Wasser begins like "vasser".
+  - For v in German words, do the same without your voice. Vater begins like "fater".
+  - Never round your lips for w. The English "w" sound does not exist in German.
+trap: English speakers round the lips for w and buzz the v. Then wir (we) and vier (four) both come out wrong.
+words:
+  - { de: "Wasser", en: "water" }
+  - { de: "wie", en: "how" }
+  - { de: "Wohnung", en: "flat" }
+  - { de: "wir", en: "we" }
+  - { de: "Vater", en: "father" }
+  - { de: "viel", en: "much" }
+  - { de: "Vogel", en: "bird" }
+pairs:
+  - [{ de: "Wein", en: "wine" }, { de: "fein", en: "fine" }]
+  - [{ de: "wir", en: "we" }, { de: "vier", en: "four" }]
+  - [{ de: "Welt", en: "world" }, { de: "fällt", en: "falls" }]
+  - [{ de: "Wort", en: "word" }, { de: "fort", en: "away" }]
+  - [{ de: "Wand", en: "wall" }, { de: "fand", en: "found" }]
+  - [{ de: "wischen", en: "to wipe" }, { de: "fischen", en: "to fish" }]
+sentence: { de: "Mein Vater wohnt in Wien und trinkt viel Wasser.", en: "My father lives in Vienna and drinks a lot of water." }

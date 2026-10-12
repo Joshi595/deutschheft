@@ -25,3 +25,10 @@ venv_german/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Python bytecode from scripts/make_audio.py
+__pycache__/
+# Audio tooling environment (lives next to the repo, listed in case it is moved inside)
+venv_audio/
+# Scratch audio from experiments; only the MP3 clips in public/audio/ belong in the repo
+*.wav

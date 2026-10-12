@@ -1,0 +1,17 @@
+title: Keep the conversation going
+titleDe: Im Gespräch bleiben
+level: a1
+order: 1
+summary: What to say when you did not understand, so that the conversation carries on instead of stopping.
+phrases:
+  - { id: again, cue: "You did not catch it. Ask them to say it again.", de: "Können Sie das bitte wiederholen?", en: "Can you repeat that, please?" }
+  - { id: slower, cue: "They speak too fast. Ask them to speak more slowly.", de: "Können Sie bitte langsamer sprechen?", en: "Can you speak more slowly, please?" }
+  - { id: not-understood, cue: "Say that you do not understand that.", de: "Entschuldigung, das verstehe ich nicht.", en: "Sorry, I do not understand that." }
+  - { id: meaning, cue: "Ask what the word Quittung means.", de: "Was bedeutet das Wort Quittung?", en: "What does the word Quittung mean?" }
+  - { id: called, cue: "You point at something. Ask what it is called in German.", de: "Wie heißt das auf Deutsch?", en: "What is that called in German?" }
+  - { id: spell, cue: "Ask them to spell it.", de: "Können Sie das bitte buchstabieren?", en: "Can you spell that, please?" }
+  - { id: write, cue: "Ask them to write it down.", de: "Können Sie das bitte aufschreiben?", en: "Can you write that down, please?" }
+  - { id: little, cue: "Say that you only speak a little German.", de: "Ich spreche nur ein bisschen Deutsch.", en: "I only speak a little German." }
+  - { id: moment, cue: "You need a second to think. Ask them to wait a moment.", de: "Einen Moment, bitte.", en: "One moment, please." }
+  - { id: english, cue: "Ask whether they speak English.", de: "Sprechen Sie Englisch?", en: "Do you speak English?" }
+  - { id: thanks, cue: "Thank them for their help.", de: "Vielen Dank für Ihre Hilfe!", en: "Thank you very much for your help!" }

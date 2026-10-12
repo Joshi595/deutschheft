@@ -21,11 +21,11 @@ const path = Astro.url.pathname;
 const nav = [
   { href: url(''), label: 'Today', icon: 'M7 3v3M17 3v3M4 9.5h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1ZM8.5 14.5l2.3 2.3 4.7-4.8' },
   { href: url('learn/'), label: 'Learn', icon: 'M12 6.5c-1.8-1.3-4-2-7-2v13c3 0 5.2.7 7 2 1.8-1.3 4-2 7-2v-13c-3 0-5.2.7-7 2Zm0 0v13' },
-  { href: url('missions/'), label: 'Missions', icon: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm3.6-12.6-2.1 5.1-5.1 2.1 2.1-5.1 5.1-2.1Z' },
+  { href: url('speak/'), label: 'Speak', icon: 'M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3ZM6 11a6 6 0 0 0 12 0M12 17v4M9 21h6' },
   { href: url('review/'), label: 'Review', icon: 'm17 3 3 3-3 3M4 11V9a3 3 0 0 1 3-3h13M7 21l-3-3 3-3M20 13v2a3 3 0 0 1-3 3H4' },
   { href: url('notebook/'), label: 'Notebook', icon: 'M7 3h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 0v18M13 8h2.5M13 12h2.5' },
 ];
-const [today, learn] = nav as [(typeof nav)[number], (typeof nav)[number], ...typeof nav];
+const [today, learn, speak] = nav as [(typeof nav)[number], (typeof nav)[number], (typeof nav)[number], ...typeof nav];
 const elsewhere = [url('settings/'), url('progress/')];
 // Levels and lessons live under "Learn", so it is the fallback; settings and progress light up nothing.
 const active =
@@ -33,7 +33,9 @@ const active =
     ? today
     : elsewhere.some((href) => path.startsWith(href))
       ? undefined
-      : (nav.slice(1).find((item) => path.startsWith(item.href)) ?? learn);
+      : path.startsWith(url('missions/'))
+        ? speak
+        : (nav.slice(1).find((item) => path.startsWith(item.href)) ?? learn);
 ---
 
 <!doctype html>
@@ -122,7 +124,7 @@ const active =
     </header>
 
     <p data-voice-notice class="voice-notice border-b border-line bg-accent-soft px-4 py-2 text-center text-sm">
-      This browser has no German voice, so listening is switched off.{' '}
+      This browser has no German voice, so listening is switched off wherever there is no recording.{' '}
       <a href={`${url('settings/')}#audio`} class="font-semibold underline underline-offset-4">How to get it back</a>
     </p>
 

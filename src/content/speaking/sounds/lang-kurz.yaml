@@ -1,0 +1,25 @@
+title: "long and short vowels"
+name: the length of a vowel changes the word
+order: 12
+how:
+  - A vowel is long before a single consonant, before h, and when it is doubled. Staat, Sohn and Name are long.
+  - A vowel is short before two consonants. Stadt, Sonne and Mann are short.
+  - Hold a long vowel about twice as long. Cut a short vowel off quickly and close onto the consonant.
+trap: English speakers make every vowel medium long. Then Staat (state) and Stadt (town) sound the same.
+words:
+  - { de: "Name", en: "name" }
+  - { de: "Mann", en: "man" }
+  - { de: "lesen", en: "to read" }
+  - { de: "essen", en: "to eat" }
+  - { de: "Sohn", en: "son" }
+  - { de: "Sonne", en: "sun" }
+  - { de: "Stuhl", en: "chair" }
+pairs:
+  - [{ de: "Staat", en: "state" }, { de: "Stadt", en: "town" }]
+  - [{ de: "Miete", en: "rent" }, { de: "Mitte", en: "middle" }]
+  - [{ de: "Ofen", en: "oven" }, { de: "offen", en: "open" }]
+  - [{ de: "wen", en: "whom" }, { de: "wenn", en: "if, when" }]
+  - [{ de: "Beet", en: "flower bed" }, { de: "Bett", en: "bed" }]
+  - [{ de: "fühlen", en: "to feel" }, { de: "füllen", en: "to fill" }]
+  - [{ de: "bieten", en: "to offer" }, { de: "bitten", en: "to ask" }]
+sentence: { de: "Der Sohn sitzt in der Sonne und liest.", en: "The son is sitting in the sun, reading." }

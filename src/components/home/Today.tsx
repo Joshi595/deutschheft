@@ -13,7 +13,7 @@ import {
   type SuggestionKind,
 } from '../../lib/progress/coach';
 import { completion, currentStreak, localDay, recentDays, xpOn } from '../../lib/progress/logic';
-import { $progress, $quizzes, $review, $seenMilestones, $settings, DAILY_GOALS, updateSettings } from '../../lib/stores';
+import { $progress, $quizzes, $review, $seenMilestones, $settings, $speaking, DAILY_GOALS, updateSettings } from '../../lib/stores';
 import { url } from '../../lib/url';
 import { GoalRing } from '../ui/GoalRing';
 import { Stamp } from '../ui/Stamp';
@@ -29,6 +29,7 @@ const STARTING_POINT: Record<string, { claim: string; detail: string }> = {
 const KIND_LABEL: Record<SuggestionKind, string> = {
   review: 'Review',
   lesson: 'Chapter',
+  speak: 'Speaking',
   checkpoint: 'Checkpoint',
   weak: 'Trouble spot',
   mission: 'Mission',
@@ -45,7 +46,8 @@ export default function Today() {
   const seen = useStore($seenMilestones);
   const now = new Date();
 
-  const learner: Learner = { progress, review, quizzes, level: settings.level };
+  const speaking = useStore($speaking);
+  const learner: Learner = { progress, review, quizzes, level: settings.level, speaking };
   const all = milestones(course, learner);
 
   // Milestones earned since the last visit are announced once, then remembered as seen.

@@ -128,7 +128,7 @@ steps:
       type: speaking-task
       tags: [speaking, konjunktiv 2]
       prompt: Close the viewing. Say that you like the flat very much, that you would like to rent it, and ask when she will decide.
-      cards: [gefällt mir, würde gern mieten, Entscheidung?]
+      cards: [gefällt mir, würde gern mieten, "Entscheidung?"]
       phrases:
         - Die Wohnung gefällt mir sehr gut.
         - Ich würde sie sehr gern mieten.

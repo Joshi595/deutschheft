@@ -1,0 +1,19 @@
+title: Raising a problem at work
+titleDe: Ein Problem ansprechen
+level: b1
+order: 1
+icon: work
+scene: Your colleague Jana has handed in her part of a shared report late for the second time, and you had to work the weekend. You want to talk about it without spoiling the mood.
+partner: Kollegin
+lines:
+  - { who: you, id: open, cue: "Ask Jana whether she has a moment, because you would like to discuss something with her.", text: "Jana, hast du kurz Zeit? Ich würde gern etwas mit dir besprechen.", en: "Jana, do you have a moment? I would like to discuss something with you." }
+  - { who: partner, text: "Klar, worum geht es denn?", en: "Sure, what is it about?" }
+  - { who: you, id: problem, cue: "Say that it is about the report, and that you only got her part on Friday evening.", text: "Es geht um den Bericht. Ich habe deinen Teil erst am Freitagabend bekommen.", en: "It is about the report. I only got your part on Friday evening." }
+  - { who: partner, text: "Oh, das tut mir leid. Ich hatte letzte Woche so viel zu tun.", en: "Oh, I am sorry. I had so much to do last week." }
+  - { who: you, id: effect, cue: "Say that you understand, but that because of it you had to work at the weekend.", text: "Das verstehe ich, aber deshalb musste ich am Wochenende arbeiten.", en: "I understand that, but because of it I had to work at the weekend." }
+  - { who: partner, text: "Das wusste ich nicht. Das war wirklich nicht meine Absicht.", en: "I did not know that. That really was not my intention." }
+  - { who: you, id: wish, cue: "Say that it would help you if she let you know earlier next time.", text: "Es würde mir helfen, wenn du mir nächstes Mal früher Bescheid sagen würdest.", en: "It would help me if you let me know earlier next time." }
+  - { who: partner, text: "Du hast recht. Wie wäre es, wenn wir immer mittwochs kurz über den Stand sprechen?", en: "You are right. How about we talk briefly about where things stand every Wednesday?" }
+  - { who: you, id: agree, cue: "Say that this is a good idea, and suggest Wednesdays after the lunch break.", text: "Das ist eine gute Idee. Am besten mittwochs nach der Mittagspause.", en: "That is a good idea. Ideally on Wednesdays after the lunch break." }
+  - { who: partner, text: "Einverstanden. Und danke, dass du es direkt angesprochen hast.", en: "Agreed. And thank you for bringing it up directly." }
+  - { who: you, id: close, cue: "Say that you are glad you could sort it out.", text: "Ich bin froh, dass wir das klären konnten.", en: "I am glad we could sort that out." }

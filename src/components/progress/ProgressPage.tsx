@@ -2,7 +2,8 @@ import { useStore } from '@nanostores/react';
 import { readCourse } from '../../lib/content/course';
 import { milestones, wordsKnown, type Learner } from '../../lib/progress/coach';
 import { completion, currentStreak, longestStreak, recentDays, totalXp, weakTags } from '../../lib/progress/logic';
-import { $progress, $quizzes, $review, $settings } from '../../lib/stores';
+import { sentencesKnown } from '../../lib/speaking/logic';
+import { $progress, $quizzes, $review, $settings, $speaking } from '../../lib/stores';
 import { Stamp } from '../ui/Stamp';
 import { WeekStrip } from '../ui/WeekStrip';
 
@@ -17,7 +18,8 @@ export default function ProgressPage() {
   const quizzes = useStore($quizzes);
   const settings = useStore($settings);
   const now = new Date();
-  const learner: Learner = { progress, review, quizzes, level: settings.level };
+  const speaking = useStore($speaking);
+  const learner: Learner = { progress, review, quizzes, level: settings.level, speaking };
 
   const week = recentDays(progress, now, 7);
   const weekStart = week[0]!.date.getTime();
@@ -42,9 +44,9 @@ export default function ProgressPage() {
     { label: 'Exercises solved', value: solved },
     { label: 'Chapters finished', value: chapters },
     { label: 'Words known', value: wordsKnown(review) },
+    { label: 'Sentences you can say', value: sentencesKnown(speaking) },
     { label: 'Days studied', value: progress.days.length },
     { label: 'Longest run of days', value: longestStreak(progress.days) },
-    { label: 'Best day, in points', value: bestDay },
   ];
 
   return (
@@ -79,7 +81,7 @@ export default function ProgressPage() {
         </dl>
         <p className="mt-3 text-sm text-muted">
           {currentStreak(progress.days, now) > 1 ? `Currently ${currentStreak(progress.days, now)} days in a row. ` : ''}
-          {totalXp(progress).toLocaleString('en')} points in total. A word counts as known once you have recalled it in a review and
+          {totalXp(progress).toLocaleString('en')} points in total, {bestDay} on your best day. A word counts as known once you have recalled it in a review and
           it has not slipped since.
         </p>
       </section>

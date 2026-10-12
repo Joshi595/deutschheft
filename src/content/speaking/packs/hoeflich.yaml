@@ -1,0 +1,16 @@
+title: Polite requests
+titleDe: Höflich bitten
+level: a2
+order: 3
+summary: Asking for things in a way that works with strangers, in offices and at work.
+phrases:
+  - { id: window, cue: "Ask a stranger politely to open the window.", de: "Könnten Sie bitte das Fenster öffnen?", en: "Could you open the window, please?" }
+  - { id: pay, cue: "Say that you would like to pay.", de: "Ich würde gern zahlen.", en: "I would like to pay." }
+  - { id: sit, cue: "Ask whether you may sit here.", de: "Darf ich mich hier hinsetzen?", en: "May I sit here?" }
+  - { id: possible, cue: "Ask whether it would be possible to come tomorrow.", de: "Wäre es möglich, morgen zu kommen?", en: "Would it be possible to come tomorrow?" }
+  - { id: question, cue: "Say that you have a question.", de: "Ich hätte eine Frage.", en: "I have a question." }
+  - { id: advice, cue: "Advise a friend to see a doctor.", de: "Du solltest zum Arzt gehen.", en: "You should see a doctor." }
+  - { id: where-station, cue: "Ask politely where the station is, with an indirect question.", de: "Können Sie mir sagen, wo der Bahnhof ist?", en: "Can you tell me where the station is?" }
+  - { id: still-open, cue: "Ask whether they know if the shop is still open.", de: "Wissen Sie, ob das Geschäft noch geöffnet ist?", en: "Do you know whether the shop is still open?" }
+  - { id: kind, cue: "Thank someone warmly for a favour.", de: "Das ist sehr nett von Ihnen.", en: "That is very kind of you." }
+  - { id: welcome, cue: "Someone thanks you. Reply.", de: "Gern geschehen.", en: "You are welcome." }

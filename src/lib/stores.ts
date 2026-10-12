@@ -12,6 +12,7 @@ import {
 } from './notebook/logic';
 import { addXp, applyAttempt, attemptXp, emptyProgress, markStudyDay, XP, type ProgressState } from './progress/logic';
 import { addAttempt, type QuizAttempt, type QuizHistory } from './quiz/score';
+import { emptySpeaking, rateSpoken, recordEar, recordTalk, type SpeakingState, type SpokenGrade, type TalkHelp } from './speaking/logic';
 import { cardId, enroll, schedule, type CardKind, type ReviewGrade, type ReviewState } from './srs/scheduler';
 
 /**
@@ -32,6 +33,8 @@ export interface Settings {
   level?: string;
   /** Points to aim for each day. 0 means the goal is paused. */
   dailyGoal: number;
+  /** Let the browser's speech recognition write down what was said in the Speak section. Off unless switched on. */
+  speechCheck?: boolean;
 }
 
 export const DAILY_GOALS = [
@@ -67,6 +70,12 @@ export const $progress = persistentAtom<ProgressState>('lg:progress:v1', emptyPr
 export const $review = persistentAtom<ReviewState>('lg:review:v1', {}, json<ReviewState>({}));
 export const $notebook = persistentAtom<NotebookState>('lg:notebook:v1', emptyNotebook, json(emptyNotebook));
 export const $quizzes = persistentAtom<QuizHistory>('lg:quizzes:v1', {}, json<QuizHistory>({}));
+/** The Speak section: the spoken-sentence deck, ear-training scores and conversations finished. */
+export const $speaking = persistentAtom<SpeakingState>(
+  'lg:speaking:v1',
+  emptySpeaking,
+  json(emptySpeaking, (value) => ({ ...emptySpeaking, ...(value as Partial<SpeakingState>) })),
+);
 /** Ids of the milestones the learner has already been shown, so each is announced once. */
 export const $seenMilestones = persistentAtom<string[]>('lg:milestones-seen:v1', [], json<string[]>([]));
 export const $settings = persistentAtom<Settings>(
@@ -128,6 +137,25 @@ export function removeCard(id: string): void {
   $review.set(rest);
 }
 
+// --- Speaking --------------------------------------------------------------
+
+/** Rate a sentence said aloud. Returns the points it earned; none if it was not due. */
+export function rateSpokenCard(ref: string, grade: SpokenGrade, now = new Date()): number {
+  const { state, earned } = rateSpoken($speaking.get(), ref, grade, now);
+  $speaking.set(state);
+  $progress.set(addXp(markStudyDay($progress.get(), now), earned, now));
+  return earned;
+}
+
+export function saveEarScore(sound: string, score: number): void {
+  $speaking.set(recordEar($speaking.get(), sound, score));
+}
+
+export function saveTalk(conversation: string, help: TalkHelp, now = new Date()): void {
+  $speaking.set(recordTalk($speaking.get(), conversation, help));
+  $progress.set(markStudyDay($progress.get(), now));
+}
+
 // --- Mock exams and checkpoints ----------------------------------------------
 
 export function recordQuizAttempt(quizId: string, attempt: QuizAttempt, now = new Date()): void {
@@ -166,7 +194,7 @@ export function updateSettings(patch: Partial<Settings>): void {
 
 export function exportBackup(now = new Date()): Backup {
   return buildBackup(
-    { progress: $progress.get(), review: $review.get(), notebook: $notebook.get(), quizzes: $quizzes.get() },
+    { progress: $progress.get(), review: $review.get(), notebook: $notebook.get(), quizzes: $quizzes.get(), speaking: $speaking.get() },
     now,
   );
 }
@@ -178,6 +206,7 @@ export function importBackup(fileText: string): void {
   $review.set(data.review);
   $notebook.set(data.notebook);
   $quizzes.set(data.quizzes);
+  $speaking.set(data.speaking ?? emptySpeaking);
 }
 
 export function resetAll(): void {
@@ -185,6 +214,7 @@ export function resetAll(): void {
   $review.set({});
   $notebook.set(emptyNotebook);
   $quizzes.set({});
+  $speaking.set(emptySpeaking);
   $seenMilestones.set([]);
   // Starting over includes choosing a level again; the daily goal is a preference and stays.
   $settings.set({ ...$settings.get(), level: undefined });

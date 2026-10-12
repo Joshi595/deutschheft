@@ -1,0 +1,21 @@
+title: Planning a trip together
+titleDe: Einen Ausflug planen
+level: b1
+order: 2
+icon: train
+scene: You and your course partner are organising a Saturday outing for your German class. This is what part 1 of the B1 speaking exam asks for. Make suggestions, react, and decide.
+partner: Kurspartner
+lines:
+  - { who: partner, text: "Also, wohin könnten wir mit dem Kurs fahren? Hast du eine Idee?", en: "So, where could we go with the class? Do you have an idea?" }
+  - { who: you, id: suggest, cue: "Suggest going to Lake Constance, because you can hike and swim there.", text: "Ich schlage vor, dass wir an den Bodensee fahren, weil man dort wandern und schwimmen kann.", en: "I suggest that we go to Lake Constance, because you can hike and swim there." }
+  - { who: partner, text: "Der Bodensee ist schön, aber ziemlich weit. Wie kommen wir denn dorthin?", en: "Lake Constance is lovely, but quite far. How do we get there?" }
+  - { who: you, id: transport, cue: "Say it is best to take the train, and that a group ticket is not expensive.", text: "Am besten nehmen wir den Zug. Ein Gruppenticket ist nicht teuer.", en: "It is best if we take the train. A group ticket is not expensive." }
+  - { who: partner, text: "Gute Idee. Und wann sollen wir uns treffen?", en: "Good idea. And when should we meet?" }
+  - { who: you, id: time, cue: "Propose meeting at eight at the station, so that you have the whole day.", text: "Wir könnten uns um acht Uhr am Bahnhof treffen, damit wir den ganzen Tag haben.", en: "We could meet at eight at the station, so that we have the whole day." }
+  - { who: partner, text: "Acht Uhr ist mir ein bisschen zu früh. Wie wäre es mit neun?", en: "Eight is a bit too early for me. How about nine?" }
+  - { who: you, id: compromise, cue: "Agree, and say that nine is fine too.", text: "Einverstanden, neun Uhr ist auch in Ordnung.", en: "Agreed, nine is fine too." }
+  - { who: partner, text: "Super. Was machen wir mit dem Essen? Gehen wir in ein Restaurant?", en: "Great. What do we do about food? Shall we go to a restaurant?" }
+  - { who: you, id: food, cue: "Say a restaurant is too expensive for many, and that everyone should bring something for a picnic.", text: "Ein Restaurant ist für viele zu teuer. Jeder sollte etwas für ein Picknick mitbringen.", en: "A restaurant is too expensive for many. Everyone should bring something for a picnic." }
+  - { who: partner, text: "Stimmt, das ist günstiger. Wer sagt den anderen Bescheid?", en: "True, that is cheaper. Who lets the others know?" }
+  - { who: you, id: tasks, cue: "Offer to write to the group, and ask your partner to buy the tickets.", text: "Ich schreibe der Gruppe, und du könntest die Fahrkarten kaufen.", en: "I will write to the group, and you could buy the tickets." }
+  - { who: partner, text: "Abgemacht. Dann haben wir ja alles geplant!", en: "Deal. Then we have planned everything!" }

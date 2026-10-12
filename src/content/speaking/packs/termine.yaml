@@ -1,0 +1,17 @@
+title: Appointments and the phone
+titleDe: Termine und Telefon
+level: a2
+order: 1
+summary: Making, moving and cancelling an appointment, and getting through on the phone.
+phrases:
+  - { id: speak-to, cue: "On the phone, ask to speak to Mr Becker.", de: "Kann ich bitte mit Herrn Becker sprechen?", en: "Can I speak to Mr Becker, please?" }
+  - { id: appointment, cue: "Say that you would like to make an appointment.", de: "Ich möchte einen Termin vereinbaren.", en: "I would like to make an appointment." }
+  - { id: when-free, cue: "Ask when they have time.", de: "Wann haben Sie Zeit?", en: "When do you have time?" }
+  - { id: suit, cue: "Ask whether Tuesday at ten suits them.", de: "Passt es Ihnen am Dienstag um zehn Uhr?", en: "Does Tuesday at ten suit you?" }
+  - { id: cannot, cue: "Say that unfortunately you cannot make it then.", de: "Da kann ich leider nicht.", en: "Unfortunately I cannot make it then." }
+  - { id: move, cue: "Ask to move the appointment.", de: "Können wir den Termin verschieben?", en: "Can we move the appointment?" }
+  - { id: cancel, cue: "Say that you have to cancel the appointment.", de: "Ich muss den Termin leider absagen.", en: "Unfortunately I have to cancel the appointment." }
+  - { id: late, cue: "Say that you will be ten minutes late.", de: "Ich komme zehn Minuten später.", en: "I will be ten minutes late." }
+  - { id: call-back, cue: "Ask them to call you back.", de: "Können Sie mich bitte zurückrufen?", en: "Can you call me back, please?" }
+  - { id: message, cue: "Ask whether you can leave a message.", de: "Kann ich eine Nachricht hinterlassen?", en: "Can I leave a message?" }
+  - { id: confirm, cue: "Confirm it and say see you on Tuesday.", de: "Gut, dann bis Dienstag!", en: "Good, see you on Tuesday then!" }

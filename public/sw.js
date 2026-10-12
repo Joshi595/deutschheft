@@ -21,6 +21,8 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
   if (request.method !== 'GET' || url.origin !== self.location.origin) return;
+  // A request for part of a file (media players send these) cannot be cached; leave it to the browser.
+  if (request.headers.has('range')) return;
 
   const store = async (response) => {
     if (response.ok) {

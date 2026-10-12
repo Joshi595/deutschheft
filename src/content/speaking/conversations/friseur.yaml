@@ -1,0 +1,20 @@
+title: Making an appointment by phone
+titleDe: Einen Termin vereinbaren
+level: a2
+order: 1
+icon: chat
+scene: You need a haircut before a job interview on Friday afternoon. You call the salon around the corner.
+partner: Friseurin
+lines:
+  - { who: partner, text: "Salon Schneider, guten Tag. Was kann ich für Sie tun?", en: "Salon Schneider, hello. What can I do for you?" }
+  - { who: you, id: want, cue: "Greet her and say that you would like to make an appointment for a haircut.", text: "Guten Tag. Ich möchte einen Termin zum Haareschneiden vereinbaren.", en: "Hello. I would like to make an appointment for a haircut." }
+  - { who: partner, text: "Gern. Wann hätten Sie denn Zeit?", en: "Certainly. When would you have time?" }
+  - { who: you, id: when, cue: "Ask whether she has something free on Thursday afternoon.", text: "Haben Sie am Donnerstagnachmittag etwas frei?", en: "Do you have anything free on Thursday afternoon?" }
+  - { who: partner, text: "Am Donnerstag ist leider alles voll. Ginge es auch am Mittwoch um halb fünf?", en: "Thursday is fully booked, unfortunately. Would Wednesday at half past four work too?" }
+  - { who: you, id: cannot, cue: "Say that on Wednesday you unfortunately have to work until six.", text: "Am Mittwoch muss ich leider bis sechs Uhr arbeiten.", en: "On Wednesday I unfortunately have to work until six." }
+  - { who: partner, text: "Dann vielleicht am Freitag um neun Uhr morgens?", en: "Then perhaps on Friday at nine in the morning?" }
+  - { who: you, id: accept, cue: "Accept and say that this suits you well.", text: "Ja, das passt mir gut.", en: "Yes, that suits me well." }
+  - { who: partner, text: "Prima. Und wie ist Ihr Name, bitte?", en: "Great. And what is your name, please?" }
+  - { who: you, id: name, cue: "Give your name, Kim, and offer to spell it.", text: "Mein Name ist Kim. Soll ich das buchstabieren?", en: "My name is Kim. Shall I spell that?" }
+  - { who: partner, text: "Nein, das ist nicht nötig. Dann bis Freitag um neun!", en: "No, that is not necessary. See you on Friday at nine, then!" }
+  - { who: you, id: bye, cue: "Thank her and say goodbye the way you do on the phone.", text: "Vielen Dank. Auf Wiederhören!", en: "Thank you very much. Goodbye!" }

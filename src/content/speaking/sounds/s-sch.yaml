@@ -1,0 +1,23 @@
+title: "s, ß and sch"
+name: three hissing sounds that English spells differently
+order: 8
+how:
+  - A single s before a vowel buzzes like English "z". Sonne begins like "zonne".
+  - ß and ss never buzz. They are the sharp s of "kiss".
+  - sch is English "sh". At the start of a word, sp and st are said "shp" and "sht", as in Sport and Stadt.
+trap: English speakers say a sharp s at the start of Sonne, and "st" in Stadt instead of "sht".
+words:
+  - { de: "Sonne", en: "sun" }
+  - { de: "sehr", en: "very" }
+  - { de: "Straße", en: "street" }
+  - { de: "Schule", en: "school" }
+  - { de: "Sport", en: "sport" }
+  - { de: "Stadt", en: "town" }
+  - { de: "sprechen", en: "to speak" }
+pairs:
+  - [{ de: "reisen", en: "to travel" }, { de: "reißen", en: "to tear" }]
+  - [{ de: "weise", en: "wise" }, { de: "weiße", en: "white" }]
+  - [{ de: "Tasse", en: "cup" }, { de: "Tasche", en: "bag" }]
+  - [{ de: "Bus", en: "bus" }, { de: "Busch", en: "bush" }]
+  - [{ de: "Fleiß", en: "diligence" }, { de: "Fleisch", en: "meat" }]
+sentence: { de: "Die Schüler spielen auf der Straße vor der Schule.", en: "The pupils are playing in the street in front of the school." }

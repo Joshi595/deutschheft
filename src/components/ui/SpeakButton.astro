@@ -1,13 +1,24 @@
 ---
 // A static button; one delegated click handler in the layout does the speaking,
 // so a page with fifty of these still ships no per-button JavaScript.
+// A text with a recorded clip can be heard in any browser, so its button is
+// marked to stay visible even where there is no German voice.
+import { hasClip } from '../../lib/content/clips';
+
 interface Props {
   text: string;
 }
 const { text } = Astro.props;
 ---
 
-<button type="button" class="speak" data-speak={text} aria-label={`Listen: ${text}`} title="Listen">
+<button
+  type="button"
+  class="speak"
+  data-speak={text}
+  data-clip={hasClip(text) ? '' : undefined}
+  aria-label={`Listen: ${text}`}
+  title="Listen"
+>
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M11 5 6 9H3v6h3l5 4z"></path>
     <path d="M15.5 8.5a5 5 0 0 1 0 7"></path>

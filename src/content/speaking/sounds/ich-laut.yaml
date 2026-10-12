@@ -1,0 +1,23 @@
+title: "ch after e and i"
+name: a soft hiss, as at the start of "huge"
+order: 4
+how:
+  - Say "yes" and hold the y. Your tongue is high and close to the roof of your mouth.
+  - Now breathe out through that gap without using your voice.
+  - That hiss is the ch of ich. It comes after e, i, ä, ö, ü and after consonants, and in the ending -ig.
+trap: English speakers say "k" or "sh". Then nicht (not) turns into nickt (nods), and Kirche (church) into Kirsche (cherry).
+words:
+  - { de: "ich", en: "I" }
+  - { de: "nicht", en: "not" }
+  - { de: "sprechen", en: "to speak" }
+  - { de: "Milch", en: "milk" }
+  - { de: "Mädchen", en: "girl" }
+  - { de: "richtig", en: "correct" }
+  - { de: "zwanzig", en: "twenty" }
+pairs:
+  - [{ de: "Kirche", en: "church" }, { de: "Kirsche", en: "cherry" }]
+  - [{ de: "mich", en: "me" }, { de: "misch", en: "mix!" }]
+  - [{ de: "nicht", en: "not" }, { de: "nickt", en: "nods" }]
+  - [{ de: "dich", en: "you" }, { de: "dick", en: "thick" }]
+  - [{ de: "Löcher", en: "holes" }, { de: "Löscher", en: "extinguishers" }]
+sentence: { de: "Ich möchte sechzehn Brötchen, nicht zwanzig.", en: "I would like sixteen bread rolls, not twenty." }

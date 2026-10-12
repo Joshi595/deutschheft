@@ -307,6 +307,109 @@ export const examFileSchema = z
 
 const lineSchema = z.object({ speaker: z.string(), text: z.string(), en: z.string().optional() });
 
+/** Pictures for missions and conversations. */
+export const sceneIcon = z.enum(['bakery', 'train', 'doctor', 'restaurant', 'home', 'work', 'chat', 'map']);
+const levelId = z.string().regex(/^[a-z][0-9]$/);
+const word = z.object({ de: z.string(), en: z.string() });
+
+/**
+ * One German sound to train. The learner reads how it is made, tells pairs of
+ * similar words apart by ear, then says the words. Every German string here is
+ * recorded, so keep to single words and one short sentence.
+ */
+export const soundSchema = z
+  .object({
+    /** The sound as written, e.g. "ü" or "ch after i and e". */
+    title: z.string(),
+    /** What it is, in plain words, e.g. "an ee said with rounded lips". */
+    name: z.string(),
+    order: z.number().int(),
+    /** How to make it, as short steps. */
+    how: z.array(z.string()).min(2),
+    /** What an English speaker tends to say instead. */
+    trap: z.string(),
+    /** Words to say aloud. */
+    words: z.array(word).min(5),
+    /** Two words that differ only in this sound, told apart by ear. */
+    pairs: z.array(z.tuple([word, word])).min(4),
+    /** One sentence that is full of the sound. */
+    sentence: word,
+  })
+  .superRefine((file, ctx) => {
+    file.pairs.forEach(([a, b], index) => {
+      if (a.de === b.de) ctx.addIssue({ code: 'custom', path: ['pairs', index], message: 'The two words of a pair must differ' });
+    });
+  });
+
+/** A pack of phrases for one purpose, practised aloud in the Speak section. */
+export const packSchema = z
+  .object({
+    title: z.string(),
+    titleDe: z.string(),
+    level: levelId,
+    order: z.number().int(),
+    /** When these phrases are useful, in one sentence. */
+    summary: z.string(),
+    phrases: z
+      .array(
+        z.object({
+          id: localId,
+          /** What the learner wants to do, as an instruction: "Ask them to say it again." */
+          cue: z.string(),
+          de: z.string(),
+          en: z.string(),
+        }),
+      )
+      .min(6),
+  })
+  .superRefine((file, ctx) => {
+    const seen = new Set<string>();
+    file.phrases.forEach((phrase, index) => {
+      if (seen.has(phrase.id)) ctx.addIssue({ code: 'custom', path: ['phrases', index, 'id'], message: `Duplicate phrase id "${phrase.id}"` });
+      seen.add(phrase.id);
+    });
+  });
+
+/**
+ * A conversation to speak through. The app says the partner's lines; the
+ * learner says the lines marked `you`, from the cue or from memory.
+ */
+export const conversationSchema = z
+  .object({
+    title: z.string(),
+    titleDe: z.string(),
+    level: levelId,
+    order: z.number().int(),
+    icon: sceneIcon,
+    /** Sets the scene, in English. */
+    scene: z.string(),
+    /** Who the other person is, e.g. "Nachbarin". */
+    partner: z.string(),
+    lines: z
+      .array(
+        z.object({
+          who: z.enum(['partner', 'you']),
+          /** Stable id of a learner line; its card in the speaking deck is keyed off it. */
+          id: localId.optional(),
+          text: z.string(),
+          en: z.string(),
+          /** For a learner line: what to say, as an instruction. */
+          cue: z.string().optional(),
+        }),
+      )
+      .min(6),
+  })
+  .superRefine((file, ctx) => {
+    const seen = new Set<string>();
+    file.lines.forEach((line, index) => {
+      if (line.who !== 'you') return;
+      if (!line.id || !line.cue) ctx.addIssue({ code: 'custom', path: ['lines', index], message: 'A learner line needs an id and a cue' });
+      if (line.id && seen.has(line.id)) ctx.addIssue({ code: 'custom', path: ['lines', index, 'id'], message: `Duplicate line id "${line.id}"` });
+      if (line.id) seen.add(line.id);
+    });
+    if (seen.size < 3) ctx.addIssue({ code: 'custom', path: ['lines'], message: 'A conversation needs at least three learner lines' });
+  });
+
 /**
  * A mission: one everyday situation played through as a conversation. Each step
  * is what the other person says, then one task for the learner. The tasks are
@@ -321,7 +424,7 @@ export const missionSchema = z
     order: z.number().int(),
     minutes: z.number().int().positive(),
     /** Picture shown with the mission. */
-    icon: z.enum(['bakery', 'train', 'doctor', 'restaurant', 'home', 'work']),
+    icon: sceneIcon,
     /** What the learner gets done, in one sentence. */
     objective: z.string(),
     /** Sets the scene, in English, before the first line. */
@@ -393,5 +496,8 @@ export type ExamFile = z.infer<typeof examFileSchema>;
 export type ExamSkill = z.infer<typeof examSkill>;
 export type VocabItem = z.infer<typeof vocabItemSchema>;
 export type Mission = z.infer<typeof missionSchema>;
+export type Sound = z.infer<typeof soundSchema>;
+export type Pack = z.infer<typeof packSchema>;
+export type Conversation = z.infer<typeof conversationSchema>;
 
 export type ExerciseOf<T extends Exercise['type']> = Extract<Exercise, { type: T }>;

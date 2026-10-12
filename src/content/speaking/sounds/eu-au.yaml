@@ -1,0 +1,23 @@
+title: "eu, äu and au"
+name: 'the sounds "oy" and "ow"'
+order: 11
+how:
+  - eu and äu are the same sound. Both are English "oy", as in "boy". Neun sounds like "noyn".
+  - au is English "ow", as in "now". Haus sounds like "house".
+  - Glide from the first position to the second in one movement. It is one syllable, not two.
+trap: English speakers read eu as "you" and split the sound in two. Then neun (nine) is not understood, or sounds like nein (no).
+words:
+  - { de: "neu", en: "new" }
+  - { de: "heute", en: "today" }
+  - { de: "Freund", en: "friend" }
+  - { de: "Deutsch", en: "German" }
+  - { de: "Häuser", en: "houses" }
+  - { de: "Haus", en: "house" }
+  - { de: "kaufen", en: "to buy" }
+pairs:
+  - [{ de: "neun", en: "nine" }, { de: "nein", en: "no" }]
+  - [{ de: "Feuer", en: "fire" }, { de: "Feier", en: "celebration" }]
+  - [{ de: "Leute", en: "people" }, { de: "Laute", en: "sounds" }]
+  - [{ de: "Eule", en: "owl" }, { de: "Eile", en: "hurry" }]
+  - [{ de: "Frau", en: "woman" }, { de: "frei", en: "free" }]
+sentence: { de: "Meine Freundin kauft heute ein neues Haus.", en: "My friend is buying a new house today." }

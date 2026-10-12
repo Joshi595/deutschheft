@@ -1,4 +1,4 @@
-import type { ExamSkill, Exercise, Stimulus, VocabItem } from './schema';
+import type { ExamSkill, Exercise, Sound, Stimulus, VocabItem } from './schema';
 
 /**
  * Serialisable shapes handed from Astro pages to client components.
@@ -83,7 +83,39 @@ export interface MissionStep {
   you?: { text: string; en?: string };
 }
 
-export type MissionIcon = 'bakery' | 'train' | 'doctor' | 'restaurant' | 'home' | 'work';
+export type MissionIcon = 'bakery' | 'train' | 'doctor' | 'restaurant' | 'home' | 'work' | 'chat' | 'map';
+
+/** One line of a conversation to speak through. */
+export interface TalkLine {
+  who: 'partner' | 'you';
+  /** Name shown with a partner line. */
+  speaker: string;
+  text: string;
+  en?: string;
+  /** For a learner line: what to say, as an instruction. */
+  cue?: string;
+  /** For a learner line: its id in the speaking deck. */
+  ref?: string;
+}
+
+export interface ClientConversation {
+  id: string;
+  href: string;
+  title: string;
+  titleDe: string;
+  level: string;
+  icon: MissionIcon;
+  scene: string;
+  partner: string;
+  lines: TalkLine[];
+  /** The guided mission of the same situation, if there is one. */
+  missionHref?: string;
+}
+
+export interface ClientSound extends Sound {
+  id: string;
+  href: string;
+}
 
 /** A mission as listed: enough to show it and to tell whether it is done. */
 export interface MissionSummary {

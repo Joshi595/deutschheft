@@ -1,0 +1,16 @@
+title: Discussing and deciding together
+titleDe: Diskutieren und planen
+level: b1
+order: 1
+summary: Giving your view, reacting to someone else's, and reaching a decision. This is part 1 of the B1 speaking exam.
+phrases:
+  - { id: opinion, cue: "Give your opinion: it is too expensive.", de: "Meiner Meinung nach ist das zu teuer.", en: "In my opinion that is too expensive." }
+  - { id: agree-fully, cue: "Agree completely with a colleague you address formally.", de: "Da bin ich ganz Ihrer Meinung.", en: "I completely agree with you." }
+  - { id: partly, cue: "Agree in part, then add that you see it a little differently.", de: "Da haben Sie recht, aber ich sehe das etwas anders.", en: "You are right there, but I see it a little differently." }
+  - { id: not-convinced, cue: "Say that this does not quite convince you.", de: "Das überzeugt mich nicht ganz.", en: "That does not quite convince me." }
+  - { id: propose, cue: "Propose meeting at the station.", de: "Ich schlage vor, dass wir uns am Bahnhof treffen.", en: "I suggest that we meet at the station." }
+  - { id: what-think, cue: "Ask what the other person thinks of it.", de: "Was halten Sie davon?", en: "What do you think of that?" }
+  - { id: better-if, cue: "Say it would be better if you went by train.", de: "Es wäre besser, wenn wir mit dem Zug fahren würden.", en: "It would be better if we went by train." }
+  - { id: two-sides, cue: "Weigh two sides: practical, but it costs a lot.", de: "Einerseits ist das praktisch, andererseits kostet es viel.", en: "On the one hand it is practical, on the other it costs a lot." }
+  - { id: settled, cue: "Close the decision.", de: "Gut, dann machen wir es so.", en: "Good, then that is how we will do it." }
+  - { id: take-care, cue: "Offer to take care of the tickets.", de: "Ich kümmere mich um die Fahrkarten.", en: "I will take care of the tickets." }
