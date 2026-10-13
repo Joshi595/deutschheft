@@ -10,6 +10,7 @@ const words = [
   word('ich', 'I', { pos: 'other' }),
   word('Gute Nacht', 'good night (at bedtime)'),
   word('Zeit', 'time', { article: 'die', lesson: 'A2 · Later' }),
+  word('Das geht.', 'That works.', { pos: 'phrase' }),
 ];
 
 describe('findWords', () => {
@@ -25,6 +26,12 @@ describe('findWords', () => {
 
   it('matches a whole German phrase', () => {
     expect(findWords('Gute Nacht!', 'de-en', words)[0]).toBe(words[4]);
+    expect(findWords('Das geht.', 'de-en', words)[0]).toBe(words[6]);
+  });
+
+  it('does not cut the article off a course phrase', () => {
+    expect(findWords('Wie geht es dir?', 'de-en', words)).toEqual([]);
+    expect(findWords('der Zeit', 'de-en', words)[0]).toBe(words[0]);
   });
 
   it('matches one English sense, ignoring articles, "to" and notes in brackets', () => {

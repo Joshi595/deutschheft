@@ -48,15 +48,17 @@ export function googleTranslateHref(text: string, direction: Direction): string 
   return `https://translate.google.com/?sl=${from}&tl=${to}&op=translate&text=${encodeURIComponent(text)}`;
 }
 
-/** Lower case, letters only, no notes in brackets, no leading article or "to". */
-const bare = (text: string) =>
+/** Lower case, letters only, no notes in brackets. */
+const letters = (text: string) =>
   text
     .toLowerCase()
     .replace(/\(.*?\)/g, ' ')
     .replace(/[^\p{L}\s]/gu, ' ')
     .trim()
-    .replace(/\s+/g, ' ')
-    .replace(/^(der|die|das|the|to|a|an) /, '');
+    .replace(/\s+/g, ' ');
+
+/** The same without a leading article or "to", as a learner may type them ("der Hund", "to go"). */
+const bare = (text: string) => letters(text).replace(/^(der|die|das|the|to|a|an) /, '');
 
 /** Pronouns, prepositions and conjunctions: listed when looked up alone, not when found inside a sentence. */
 const SMALL = new Set(['other', 'preposition', 'conjunction']);
@@ -69,12 +71,14 @@ const SMALL = new Set(['other', 'preposition', 'conjunction']);
 export function findWords(text: string, direction: Direction, words: readonly CourseWord[], limit = 6): CourseWord[] {
   const query = bare(text);
   if (!query) return [];
+  // The course stores German without its article, so a leading "Das" is part of a phrase ("Das geht.").
   const keys = (word: CourseWord) =>
-    direction === 'de-en' ? [bare(word.de), bare(word.plural ?? '')] : word.en.split(/[,;/]/).map(bare);
-  const tokens = direction === 'de-en' ? [query, ...query.split(' ')] : [query];
+    direction === 'de-en' ? [letters(word.de), letters(word.plural ?? '')] : word.en.split(/[,;/]/).map(bare);
+  const whole = direction === 'de-en' ? [letters(text), query] : [query];
+  const tokens = direction === 'de-en' ? [...whole, ...query.split(' ')] : whole;
   const found = new Set<CourseWord>();
-  for (const [i, token] of tokens.entries()) {
-    const word = words.find((candidate) => (i === 0 || !SMALL.has(candidate.pos)) && keys(candidate).includes(token));
+  for (const token of tokens) {
+    const word = words.find((candidate) => (whole.includes(token) || !SMALL.has(candidate.pos)) && keys(candidate).includes(token));
     if (word) found.add(word);
   }
   return [...found].slice(0, limit);

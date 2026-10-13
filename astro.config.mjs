@@ -16,9 +16,6 @@ export default defineConfig({
   site: 'https://joshi595.github.io',
   base,
   trailingSlash: 'always',
-  // Missions are listed with the conversations of the Speak section; old links to their own list still arrive.
-  // A redirect target is not prefixed with the base by Astro, so it is written out here.
-  redirects: { '/missions': `${base}/speak/conversations/` },
   integrations: [react(), mdx()],
   markdown: {
     // "chapter 18" in a lesson links to that chapter's summary.

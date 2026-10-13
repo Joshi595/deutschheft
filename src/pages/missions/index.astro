@@ -1,0 +1,23 @@
+---
+// Missions are listed with the conversations of the Speak section; old links to their own list still arrive.
+// A page of its own rather than an Astro redirect, so it can name the site icon: without one the browser
+// asks for /favicon.ico at the domain root, which is not ours and answers 404.
+import { url } from '../../lib/url';
+
+const target = url('speak/conversations/');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting to {target}</title>
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={new URL(target, Astro.site)} />
+    <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+  </head>
+  <body>
+    <a href={target}>Missions are now under Speak, Conversations.</a>
+  </body>
+</html>
