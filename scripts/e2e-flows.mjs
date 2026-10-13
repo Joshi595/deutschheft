@@ -121,6 +121,8 @@ ok('onboarding saved level and goal', settings.level === 'a1' && settings.dailyG
 // --- 2. Chapter practice as a focused session -----------------------------------
 const lesson = yaml('exercises/a1/01-begruessung.yaml');
 const items = lesson.sets.flatMap((set) => set.items);
+// The practice section loads after the page; wait for it before counting its parts.
+await page.getByRole('button', { name: 'Start part 1' }).waitFor();
 ok('a chapter comes in two parts', (await page.getByText(/^Part [12] ·/).count()) === 2);
 await page.getByRole('button', { name: 'Start part 1' }).click();
 ok('session shows one exercise at a time', (await page.locator('article').count()) === 1);
