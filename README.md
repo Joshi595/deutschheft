@@ -55,6 +55,10 @@ On a phone, open the site and choose **Add to Home Screen** to install it as an 
 - **Review.** A lesson's vocabulary and every exercise you miss become cards that come back on a
   schedule (FSRS), so a few minutes a day keeps things from fading. You can type your answer and
   have it checked before you rate the card.
+- **Translate, on every page.** Select German on any page and press *Translate*, or type into the
+  box, in either direction. Words from the course are listed with their article, plural and the
+  chapter that teaches them, and a translation can be saved to the notebook (and so to review).
+  Translations come from MyMemory's free service and need a connection.
 - **Notebook.** Notes per lesson, your own saved words (which also become review cards), and a log
   of the answers you got wrong.
 - **Progress.** Points for exercises solved for the first time and for cards reviewed, the last
