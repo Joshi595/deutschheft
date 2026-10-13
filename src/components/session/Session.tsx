@@ -1,10 +1,11 @@
 import { useStore } from '@nanostores/react';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { ClientExercise } from '../../lib/content/types';
-import { grade } from '../../lib/grading/grade';
-import { emptyResponse, isSelfAssessed, promptOf } from '../../lib/grading/response';
+import type { GradeResult, Response } from '../../lib/grading/grade';
+import { headingOf, showsOwnSolution } from '../../lib/grading/response';
 import { localDay, totalXp, xpOn } from '../../lib/progress/logic';
 import { $progress, $settings } from '../../lib/stores';
+import { ItemWidget } from '../exercises/widgets';
 import { GoalRing } from '../ui/GoalRing';
 
 /** Shared parts of a focused session: lesson practice and missions both use them. */
@@ -13,6 +14,9 @@ export interface SessionResult {
   item: ClientExercise;
   /** Solved, as opposed to having the answer shown. */
   correct: boolean;
+  /** The answer that decided it, and how it was graded. */
+  response: Response;
+  result: GradeResult;
 }
 
 /** Collects the first outcome of each item, and the points earned since the session began. */
@@ -22,9 +26,11 @@ export function useSessionLog() {
 
   return {
     results,
-    record(item: ClientExercise, correct: boolean) {
+    record(item: ClientExercise, correct: boolean, response: Response, result: GradeResult) {
       // "Try again" on a finished item must not count it twice.
-      setResults((current) => (current.some((result) => result.item.id === item.id) ? current : [...current, { item, correct }]));
+      setResults((current) =>
+        current.some((logged) => logged.item.id === item.id) ? current : [...current, { item, correct, response, result }],
+      );
     },
     reset() {
       setResults([]);
@@ -120,12 +126,22 @@ export function SessionSummary({ remark, heading, results, points, children, act
       {missed.length > 0 && (
         <div className="mt-6">
           <p className="font-semibold">Worth another look</p>
-          <ul className="mt-2 grid gap-2 text-sm">
-            {missed.map(({ item }) => (
-              <li key={item.id} className="border-l-2 border-bad pl-3">
-                <span className="block">{promptOf(item)}</span>
-                {!isSelfAssessed(item) && (
-                  <span className="de text-good" lang="de">{grade(item, emptyResponse(item)).expected}</span>
+          {/* Each one as it was checked: the learner's answer struck through next to the right one. */}
+          <ul className="mt-2 grid gap-3">
+            {missed.map(({ item, response, result }) => (
+              <li key={item.id} className="rounded-xl border border-line border-l-4 border-l-bad bg-surface p-4">
+                <p className="mb-2 font-semibold">{headingOf(item)}</p>
+                <ItemWidget item={item} response={response} onChange={() => {}} locked result={result} />
+                {(!showsOwnSolution(item) || item.explanation) && (
+                  <div className="mt-3 grid gap-1 text-sm">
+                    {!showsOwnSolution(item) && (
+                      <p>
+                        <span className="text-muted">Answer: </span>
+                        <span className="de text-base" lang="de">{result.expected}</span>
+                      </p>
+                    )}
+                    {item.explanation && <p className="text-muted">{item.explanation}</p>}
+                  </div>
                 )}
               </li>
             ))}

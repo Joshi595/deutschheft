@@ -84,9 +84,16 @@ A table to revise from.
 `**double asterisks**` inside `de` highlight the part to notice. Every `Example` gets a listen
 button. Avoid `***triple***` emphasis and `{` `}` in MDX text.
 
+To refer back to an earlier chapter, write "chapter 18" (same level), "A1 chapter 13" (another
+level) or "the last chapter". The first mention of each becomes a link to that chapter's summary
+(`src/lib/content/chapter-links.ts`). Refer only to what the reader needs; the content test allows
+at most three chapters per lesson.
+
 ## Exercise file (`.yaml`)
 
-Exercises are grouped into sets with a `title` and optional `instructions`. Every item needs an
+Exercises are grouped into sets with a `title` and optional `instructions`. The app splits a
+chapter's sets into at most two parts of about the same size (`src/lib/content/parts.ts`), so
+order the sets from recognition to production. Every item needs an
 `id` (unique within the file, never reused) and a `type`. Optional on every item: `tags` (used for
 the "needs work" stats), `hint` and `explanation`.
 

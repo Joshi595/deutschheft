@@ -19,7 +19,7 @@
 | [**Today**](https://joshi595.github.io/deutschheft/) | Say how much German you have, and get one recommended next step. Or play *Der, die oder das?* right away. |
 | [**Speak**](https://joshi595.github.io/deutschheft/speak/) | Speaking practice on its own: German sounds, sentences said aloud, conversations where you speak your part, exam tasks against the clock. |
 | [**A mission**](https://joshi595.github.io/deutschheft/missions/baeckerei/) | Order bread rolls in a German bakery: the assistant speaks, you answer, it goes on. Six minutes. |
-| [**A1 chapters**](https://joshi595.github.io/deutschheft/a1/) | Start from zero: chapters with audio and examples, practised ten exercises at a time. |
+| [**A1 chapters**](https://joshi595.github.io/deutschheft/a1/) | Start from zero: chapters with audio and examples, practised in two short parts. |
 | [**Review**](https://joshi595.github.io/deutschheft/review/) | The words and exercises you missed come back on a schedule, so they stick. |
 
 On a phone, open the site and choose **Add to Home Screen** to install it as an app.
@@ -38,8 +38,12 @@ On a phone, open the site and choose **Add to Home Screen** to install it as an 
   straight into the first chapter.
 - **Exercises** of eleven kinds, from multiple choice and gap texts to reading and listening tasks,
   forms, and writing and speaking tasks with a checklist and a model answer. A chapter's exercises
-  are worked through ten at a time, one on screen, with a summary at the end. Typed answers get a
-  second try, a hint, and then the solution with an explanation.
+  come in at most two parts of about ten minutes, one exercise on screen, with a summary after each
+  part. Every checked answer shows what you gave next to the right answer, struck through in red
+  when it was wrong. Typed answers get a second try, a hint, and then the solution with an
+  explanation.
+- **Chapters refer back.** When a chapter builds on an earlier one ("the imperative from chapter
+  18"), the mention links to that chapter's summary card, so you can revise it in a minute.
 - **Speak**, a section just for speaking. *Sounds*: twelve German sounds, each with ear training
   on pairs of similar words (the app checks which one you heard) and words to say. *Sentences*: a
   cue, you say the German, then you hear the model; they come back on later days until automatic.

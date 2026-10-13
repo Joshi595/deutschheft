@@ -47,7 +47,7 @@ await context.addInitScript(() => {
   };
 });
 const page = await context.newPage();
-page.on('console', (m) => m.type() === 'error' && problems.push(`console: ${m.text()}`));
+page.on('console', (m) => m.type() === 'error' && problems.push(`console: ${m.text()} @ ${m.location().url}`));
 page.on('pageerror', (e) => problems.push(`pageerror: ${e.message}`));
 page.on('response', (r) => r.status() >= 400 && problems.push(`http ${r.status()}: ${r.url()}`));
 const shot = async (name) => {
@@ -121,7 +121,8 @@ ok('onboarding saved level and goal', settings.level === 'a1' && settings.dailyG
 // --- 2. Chapter practice as a focused session -----------------------------------
 const lesson = yaml('exercises/a1/01-begruessung.yaml');
 const items = lesson.sets.flatMap((set) => set.items);
-await page.getByRole('button', { name: 'Start practice' }).click();
+ok('a chapter comes in two parts', (await page.getByText(/^Part [12] ·/).count()) === 2);
+await page.getByRole('button', { name: 'Start part 1' }).click();
 ok('session shows one exercise at a time', (await page.locator('article').count()) === 1);
 ok('session has a progress bar', await page.getByRole('progressbar', { name: 'Session progress' }).isVisible());
 
@@ -139,12 +140,20 @@ card = await answer(items[1]);
 ok('right answer is confirmed with points', (await card.getByText('Richtig!').isVisible()) && (await card.getByText('+10 points').isVisible()));
 await shot('2-right');
 await card.getByRole('button', { name: 'Continue' }).click();
-for (let i = 2; i < 10; i++) {
+// Part 1 is the first sets in order, so the queue follows the file until "Finish".
+for (let i = 2; ; i++) {
   card = await answer(items[i]);
-  await card.getByRole('button', { name: i === 9 ? 'Finish' : 'Continue' }).click();
+  const finish = card.getByRole('button', { name: 'Finish' });
+  if (await finish.count()) {
+    await finish.click();
+    break;
+  }
+  await card.getByRole('button', { name: 'Continue' }).click();
 }
-ok('session ends with a summary', await page.getByRole('heading', { name: 'Session done' }).isVisible());
+ok('part ends with a summary', await page.getByRole('heading', { name: 'Part 1 done' }).isVisible());
 ok('summary lists what to look at again', await page.getByText('Worth another look').isVisible());
+ok('summary shows the wrong answer struck through', (await page.locator('#practice li del, #practice li [role=radio]').count()) > 0);
+ok('summary offers part 2 straight away', await page.getByRole('button', { name: /^Start part 2/ }).isVisible());
 ok('summary counts points', await page.getByText(/\+\d+ points/).first().isVisible());
 await shot('2-summary');
 const progress = await store('lg:progress:v1');
@@ -153,7 +162,7 @@ ok('points were stored for today', today >= 90, `${today} points`);
 ok('header shows points against the goal', (await page.locator('[data-goal-text]').textContent()) === `${today}/100`);
 ok('missed exercise joined the review deck', Object.keys(await store('lg:review:v1')).some((id) => id.startsWith('exercise:')));
 await page.getByRole('button', { name: 'Done for now' }).click();
-ok('overview offers to continue', await page.getByRole('button', { name: 'Continue practice' }).isVisible());
+ok('overview offers to continue', await page.getByRole('button', { name: 'Continue with part 1' }).isVisible());
 await page.getByRole('button', { name: 'Show all exercises as a list' }).click();
 ok('the full list is still available', (await page.locator('article').count()) === items.length, `${await page.locator('article').count()} cards`);
 
@@ -168,7 +177,7 @@ await page.reload({ waitUntil: 'networkidle' });
 ok('a stamp is announced only once', (await page.getByText(/new stamp/).count()) === 0);
 await page.getByRole('link', { name: 'Continue chapter' }).click();
 await page.waitForURL(/#practice/);
-ok('continue lands on the practice section', await page.getByRole('button', { name: 'Continue practice' }).isVisible());
+ok('continue lands on the practice section', await page.getByRole('button', { name: /^Continue with part/ }).isVisible());
 
 // --- 4. A mission from start to finish ------------------------------------------
 const mission = yaml('missions/baeckerei.yaml');

@@ -14,6 +14,7 @@ import {
   vocabFileSchema,
   type Exercise,
 } from '../src/lib/content/schema';
+import { chapterMentions, lessonOf } from '../src/lib/content/chapter-links';
 import { clipKey } from '../src/lib/speech';
 import { grade, type Response } from '../src/lib/grading/grade';
 import { normalize } from '../src/lib/grading/normalize';
@@ -185,6 +186,17 @@ describe('lessons', () => {
       const slot = `${levelOf(data.key)}#${data.order}`;
       expect(seen.has(slot), `duplicate order ${slot}`).toBe(false);
       seen.add(slot);
+    }
+  });
+
+  it('mention only chapters that exist, and only a few of them', () => {
+    const keys = new Set(lessons.map((lesson) => lesson.data.key));
+    for (const { path, body } of lessons) {
+      const lesson = lessonOf(path)!;
+      const mentioned = new Set(chapterMentions(body, lesson.level, lesson.number).map((mention) => mention.key));
+      for (const key of mentioned) expect(keys.has(key), `${label(path)} mentions ${key}`).toBe(true);
+      // Each mentioned chapter becomes a link; more than a few would clutter the page.
+      expect(mentioned.size, `${label(path)} links to ${[...mentioned].join(', ')}`).toBeLessThanOrEqual(3);
     }
   });
 

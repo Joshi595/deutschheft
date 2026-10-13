@@ -250,8 +250,8 @@ export default function MissionRunner({ mission, next, listHref, speakHref }: Pr
           item={step.task}
           number={stage.step + 1}
           topic={`${mission.titleDe} (${mission.title})`}
-          onFinish={(correct) => {
-            log.record(step.task, correct);
+          onFinish={(correct, response, result) => {
+            log.record(step.task, correct, response, result);
             setStage({ ...stage, finished: true });
             // The learner's line joins the conversation, and is heard the way it should sound.
             if (step.you && step.task.type !== 'speaking-task') speak(step.you.text, settings.speechRate, 1);

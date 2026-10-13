@@ -2,7 +2,7 @@ import { useStore } from '@nanostores/react';
 import { useEffect, useMemo, useState } from 'react';
 import type { ClientExercise, ClientQuiz, QuizSection } from '../../lib/content/types';
 import type { GradeResult, Response } from '../../lib/grading/grade';
-import { emptyResponse, headingOf, isAnswered, isSelfAssessed } from '../../lib/grading/response';
+import { emptyResponse, headingOf, isAnswered, isSelfAssessed, showsOwnSolution } from '../../lib/grading/response';
 import { bestAttempt, scoreQuiz, toAttempt, type QuizScore } from '../../lib/quiz/score';
 import { stopSpeaking } from '../../lib/speech';
 import { $quizzes, recordQuizAttempt } from '../../lib/stores';
@@ -355,7 +355,7 @@ function QuizItem({ item, number, response, onChange, phase, result }: QuizItemP
 
       {done && (
         <div className="mt-3 rounded-xl bg-surface-2 px-4 py-3 text-sm">
-          {!result.correct && !isSelfAssessed(item) && item.type !== 'cloze' && item.type !== 'form' && (
+          {!result.correct && !showsOwnSolution(item) && (
             <p>
               <span className="text-muted">Answer: </span>
               <span className="de" lang="de">{result.expected}</span>
@@ -363,7 +363,7 @@ function QuizItem({ item, number, response, onChange, phase, result }: QuizItemP
           )}
           {result.note && <p>{result.note}</p>}
           {item.explanation && <p className="mt-1">{item.explanation}</p>}
-          {!result.note && !item.explanation && (result.correct || item.type === 'cloze' || item.type === 'form' || isSelfAssessed(item)) && (
+          {!result.note && !item.explanation && (result.correct || showsOwnSolution(item)) && (
             <p className="text-muted">{result.correct ? 'Correct.' : 'See the solution above.'}</p>
           )}
         </div>
