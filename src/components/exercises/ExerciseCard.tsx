@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { groqProvider } from '../../lib/ai/provider';
 import type { ClientExercise } from '../../lib/content/types';
 import { describeResponse, grade, type GradeResult, type Response } from '../../lib/grading/grade';
-import { emptyResponse, headingOf, isReady, isSelfAssessed, promptOf, spokenSolution } from '../../lib/grading/response';
+import { emptyResponse, headingOf, isReady, isSelfAssessed, promptOf, showsOwnSolution, spokenSolution } from '../../lib/grading/response';
 import { speak } from '../../lib/speech';
 import { $progress, $settings, recordAnswer } from '../../lib/stores';
 import { StimulusView } from './StimulusView';
@@ -20,8 +20,8 @@ interface Props {
   maxAttempts?: number;
   /** Called on every submitted answer. */
   onAttempt?: () => void;
-  /** Called once the item is solved (true) or its answer revealed (false). */
-  onFinish?: (correct: boolean) => void;
+  /** Called once the item is solved (true) or its answer revealed (false), with the answer that decided it. */
+  onFinish?: (correct: boolean, response: Response, result: GradeResult) => void;
   /** In a session: shows a button that moves on once the item is finished. */
   onNext?: () => void;
   nextLabel?: string;
@@ -67,11 +67,11 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
     setResult(graded);
     if (graded.correct) {
       setStatus('solved');
-      onFinish?.(true);
+      onFinish?.(true, response, graded);
     } else if (attempts + 1 >= allowed) {
       setAttempts(attempts + 1);
       setStatus('revealed');
-      onFinish?.(false);
+      onFinish?.(false, response, graded);
     } else {
       setAttempts(attempts + 1);
       setStatus('retry');
@@ -103,8 +103,7 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
   }
 
   const solution = result && locked && !selfAssessed ? spokenSolution(item, result) : undefined;
-  // The gaps and fields show their own solutions in place; tasks show a model answer.
-  const showsOwnSolution = item.type === 'cloze' || item.type === 'form' || selfAssessed;
+  const ownSolution = showsOwnSolution(item);
   const aiAvailable =
     settings.aiKey.trim() !== '' &&
     item.type !== 'speaking-task' &&
@@ -154,20 +153,15 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
           </div>
         )}
 
-        {locked && result && (!showsOwnSolution || item.explanation) && (
+        {locked && result && (!ownSolution || item.explanation) && (
           <div className="rounded-xl bg-surface-2 px-4 py-3 text-sm">
-            {!showsOwnSolution && (status === 'revealed' || item.type === 'writing') && (
+            {!ownSolution && (status === 'revealed' || item.type === 'writing') && (
               <p>
                 <span className="text-muted">{item.type === 'writing' ? 'One possible answer: ' : 'Answer: '}</span>
                 <span className="de text-base" lang="de">{result.expected}</span>
               </p>
             )}
-            {item.explanation && <p className="mt-1">{item.explanation}</p>}
-            {solution && (
-              <button type="button" className="listen btn btn-quiet btn-small mt-2 -ml-2" onClick={() => speak(solution, settings.speechRate)}>
-                Listen to the sentence
-              </button>
-            )}
+            {item.explanation && <p className={ownSolution ? '' : 'mt-1'}>{item.explanation}</p>}
           </div>
         )}
 
@@ -192,6 +186,11 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
           {locked && (
             <button type="button" className={onNext ? 'btn btn-quiet' : 'btn'} onClick={restart}>
               Try again
+            </button>
+          )}
+          {solution && (
+            <button type="button" className="listen btn btn-quiet" onClick={() => speak(solution, settings.speechRate)}>
+              Listen to the sentence
             </button>
           )}
           {aiAvailable && ai.state !== 'loading' && ai.state !== 'done' && (

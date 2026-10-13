@@ -1,5 +1,6 @@
 import { useStore } from '@nanostores/react';
 import { useMemo, useState } from 'react';
+import { splitParts } from '../../lib/content/parts';
 import type { ClientExercise, ClientExerciseSet } from '../../lib/content/types';
 import { completion } from '../../lib/progress/logic';
 import { $progress, enrollCards } from '../../lib/stores';
@@ -15,12 +16,17 @@ interface Props {
   next?: { href: string; title: string };
 }
 
-/** Exercises per sitting. Short enough to finish, long enough to be worth starting. */
-const SESSION_SIZE = 10;
+/** Exercises in a session on one topic ("?tag="). A chapter is practised in parts instead. */
+const FOCUS_SIZE = 10;
 /** Rough time per exercise, for the "about n minutes" estimate. */
 const SECONDS_EACH = 40;
 
-type View = { name: 'overview' } | { name: 'list' } | { name: 'session'; queue: Step[]; position: number } | { name: 'summary' };
+type View =
+  | { name: 'overview' }
+  | { name: 'list' }
+  /** `part` is unset in a session on one topic. */
+  | { name: 'session'; queue: Step[]; position: number; part?: number }
+  | { name: 'summary'; part?: number };
 
 interface Step {
   item: ClientExercise;
@@ -33,9 +39,11 @@ function tagFromUrl(): string | undefined {
   return new URLSearchParams(window.location.search).get('tag') ?? undefined;
 }
 
+const minutesFor = (count: number) => Math.max(1, Math.round((count * SECONDS_EACH) / 60));
+
 /**
- * A lesson's exercises. By default they are worked through a few at a time, one
- * on screen, with a summary at the end; the full list is one click away.
+ * A lesson's exercises, in one or two parts (see splitParts), one on screen,
+ * with a summary after each part; the full list is one click away.
  */
 export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
   const progress = useStore($progress);
@@ -44,25 +52,38 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
   const log = useSessionLog();
   const stepRef = useStepFocus(view.name === 'session' ? view.position : -1);
 
-  const steps = useMemo<Step[]>(() => sets.flatMap((set, setIndex) => set.items.map((item) => ({ item, set, setIndex }))), [sets]);
+  const parts = useMemo<Step[][]>(
+    () =>
+      splitParts(sets.map((set) => set.items.length)).map((indices) =>
+        indices.flatMap((setIndex) => sets[setIndex]!.items.map((item) => ({ item, set: sets[setIndex]!, setIndex }))),
+      ),
+    [sets],
+  );
+  const steps = useMemo(() => parts.flat(), [parts]);
   const { done, total, complete } = completion(progress, steps.map((step) => step.item.id));
+  const solved = (step: Step) => progress.exercises[step.item.id]?.correct;
+  const partOpen = (index: number) => parts[index]!.filter((step) => !solved(step)).length;
+  const firstOpen = Math.max(0, parts.findIndex((_, index) => partOpen(index) > 0));
   const tagged = tag ? steps.filter((step) => step.item.tags.includes(tag)) : [];
   // A link may name a topic this lesson does not have; then it is simply ignored.
   const focus = tagged.length > 0 ? tag : undefined;
 
-  function start() {
-    const exercises = $progress.get().exercises;
-    let queue: Step[];
+  /** A session of this part: its unsolved steps, or all of them once the part is done. */
+  function queueFor(part: number): Step[] {
+    const open = parts[part]!.filter((step) => !solved(step));
+    return open.length > 0 ? open : parts[part]!;
+  }
+
+  function start(part = firstOpen) {
+    log.reset();
     if (focus) {
+      const exercises = $progress.get().exercises;
       // The ones that went wrong first, then the ones never tried.
       const rank = (step: Step) => (exercises[step.item.id]?.firstTry === false ? 0 : exercises[step.item.id] ? 2 : 1);
-      queue = [...tagged].sort((a, b) => rank(a) - rank(b));
-    } else {
-      const open = steps.filter((step) => !exercises[step.item.id]?.correct);
-      queue = open.length > 0 ? open : steps;
+      setView({ name: 'session', queue: [...tagged].sort((a, b) => rank(a) - rank(b)).slice(0, FOCUS_SIZE), position: 0 });
+      return;
     }
-    log.reset();
-    setView({ name: 'session', queue: queue.slice(0, SESSION_SIZE), position: 0 });
+    setView({ name: 'session', queue: queueFor(part), position: 0, part });
   }
 
   // --- One exercise at a time --------------------------------------------------
@@ -82,9 +103,11 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
           className="rise grid gap-4 outline-none"
         >
           <div>
-            <p className="eyebrow">
-              Part {step.setIndex + 1} of {sets.length}
-            </p>
+            {view.part !== undefined && parts.length > 1 && (
+              <p className="eyebrow">
+                Part {view.part + 1} of {parts.length}
+              </p>
+            )}
             <h3 className="text-xl">{step.set.title}</h3>
             {step.set.instructions && <p className="mt-1 text-muted">{step.set.instructions}</p>}
           </div>
@@ -94,8 +117,8 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
             number={view.position + 1}
             topic={topic}
             onAttempt={() => enrollCards('vocab', vocabIds)}
-            onFinish={(correct) => log.record(step.item, correct)}
-            onNext={() => setView(last ? { name: 'summary' } : { ...view, position: view.position + 1 })}
+            onFinish={(correct, response, result) => log.record(step.item, correct, response, result)}
+            onNext={() => setView(last ? { name: 'summary', part: view.part } : { ...view, position: view.position + 1 })}
             nextLabel={last ? 'Finish' : 'Continue'}
           />
         </div>
@@ -104,18 +127,27 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
   }
 
   if (view.name === 'summary') {
-    const left = total - done;
+    // Straight on to the other part while it is still open: stopping after the first is how a chapter is usually left half done.
+    const nextPart = view.part === undefined ? -1 : parts.findIndex((_, index) => index !== view.part && partOpen(index) > 0);
+    const missedHere = view.part === undefined ? 0 : partOpen(view.part);
+    const partDone = view.part !== undefined && parts.length > 1 && !complete;
+    const nextSize = nextPart >= 0 ? queueFor(nextPart).length : 0;
     return (
       <SessionSummary
         remark={complete ? 'Kapitel geschafft!' : 'Gut gemacht!'}
-        heading={complete ? 'Chapter complete' : 'Session done'}
+        heading={complete ? 'Chapter complete' : partDone ? `Part ${view.part! + 1} done` : 'Session done'}
         results={log.results}
         points={log.points()}
         actions={
           <>
-            {!complete && !focus && (
-              <button type="button" className="btn btn-accent" onClick={start} autoFocus>
-                Keep going: {Math.min(left, SESSION_SIZE)} more
+            {nextPart >= 0 && (
+              <button type="button" className="btn btn-accent" onClick={() => start(nextPart)} autoFocus>
+                Start part {nextPart + 1}: {nextSize} exercises, about {minutesFor(nextSize)} min
+              </button>
+            )}
+            {nextPart < 0 && missedHere > 0 && (
+              <button type="button" className="btn btn-accent" onClick={() => start(view.part)} autoFocus>
+                Redo the {missedHere} you missed
               </button>
             )}
             {complete && next && (
@@ -123,7 +155,7 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
                 Next chapter: {next.title}
               </a>
             )}
-            <button type="button" className="btn" onClick={() => setView({ name: 'overview' })}>
+            <button type="button" className={nextPart >= 0 ? 'btn btn-quiet' : 'btn'} onClick={() => setView({ name: 'overview' })}>
               Done for now
             </button>
           </>
@@ -133,7 +165,11 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
           <p>All {total} exercises of this chapter are solved. Its words and anything you missed will come back in Review.</p>
         ) : (
           <p className="text-muted">
-            <span className="font-semibold text-ink tabular-nums">{done} of {total}</span> exercises of this chapter solved.
+            {nextPart >= 0 && 'One more part and the chapter is done. '}
+            <span className="font-semibold text-ink tabular-nums">
+              {done} of {total}
+            </span>{' '}
+            exercises of this chapter solved.
           </p>
         )}
       </SessionSummary>
@@ -148,33 +184,40 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
         <button type="button" className="btn btn-small justify-self-start" onClick={() => setView({ name: 'overview' })}>
           Back to the overview
         </button>
-        {sets.map((set, index) => (
-          <section key={index} aria-labelledby={`set-${index}`}>
-            <p className="eyebrow">Part {index + 1}</p>
-            <h3 id={`set-${index}`} className="text-xl">
-              {set.title}
-            </h3>
-            {set.instructions && <p className="mt-1 text-muted">{set.instructions}</p>}
-            {set.stimulus && (
-              <div className="mt-4">
-                <StimulusView stimulus={set.stimulus} />
+        {sets.map((set, index) => {
+          const part = parts.findIndex((partSteps) => partSteps[0]!.setIndex === index);
+          return (
+            <section key={index} aria-labelledby={`set-${index}`}>
+              {part >= 0 && parts.length > 1 && (
+                <p className="eyebrow mb-1">
+                  Part {part + 1} of {parts.length}
+                </p>
+              )}
+              <h3 id={`set-${index}`} className="text-xl">
+                {set.title}
+              </h3>
+              {set.instructions && <p className="mt-1 text-muted">{set.instructions}</p>}
+              {set.stimulus && (
+                <div className="mt-4">
+                  <StimulusView stimulus={set.stimulus} />
+                </div>
+              )}
+              <div className="mt-4 grid gap-3">
+                {set.items.map((item, position) => (
+                  <ExerciseCard key={item.id} item={item} number={position + 1} topic={topic} onAttempt={() => enrollCards('vocab', vocabIds)} />
+                ))}
               </div>
-            )}
-            <div className="mt-4 grid gap-3">
-              {set.items.map((item, position) => (
-                <ExerciseCard key={item.id} item={item} number={position + 1} topic={topic} onAttempt={() => enrollCards('vocab', vocabIds)} />
-              ))}
-            </div>
-          </section>
-        ))}
+            </section>
+          );
+        })}
       </div>
     );
   }
 
   // --- Overview ----------------------------------------------------------------
 
-  const size = Math.min(SESSION_SIZE, focus ? tagged.length : complete ? total : total - done);
-  const minutes = Math.max(1, Math.round((size * SECONDS_EACH) / 60));
+  const size = focus ? Math.min(FOCUS_SIZE, tagged.length) : queueFor(firstOpen).length;
+  const minutes = minutesFor(size);
 
   return (
     <div className={`card p-5 sm:p-6 ${complete && !focus ? 'border-good' : ''}`}>
@@ -195,12 +238,22 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
               ? `${tagged.length} exercises on this topic, the ones you missed first.`
               : complete
                 ? `All ${total} exercises are solved. Reviews will keep them fresh.`
-                : `${sets.length} parts. You work through them ${SESSION_SIZE} at a time and can stop after any of them.`}
+                : parts.length > 1
+                  ? `Two parts, of about ${[...new Set(parts.map((part) => minutesFor(part.length)))].join(' and ')} minutes, one exercise at a time.`
+                  : `One part of about ${minutesFor(total)} minutes, one exercise at a time.`}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <button type="button" className="btn btn-accent btn-lg" onClick={start}>
-            {focus ? 'Start' : complete ? 'Practise again' : done > 0 ? 'Continue practice' : 'Start practice'}
+          <button type="button" className="btn btn-accent btn-lg" onClick={() => start()}>
+            {focus
+              ? 'Start'
+              : complete
+                ? 'Practise again'
+                : parts.length > 1
+                  ? `${done > 0 ? 'Continue with' : 'Start'} part ${firstOpen + 1}`
+                  : done > 0
+                    ? 'Continue practice'
+                    : 'Start practice'}
           </button>
           <span className="text-sm text-muted tabular-nums">
             {size} exercises, about {minutes} min
@@ -217,6 +270,36 @@ export default function ExerciseRunner({ topic, sets, vocabIds, next }: Props) {
             {done}/{total} solved
           </span>
         </div>
+      )}
+
+      {!focus && parts.length > 1 && (
+        <ol className="mt-5 grid gap-2">
+          {parts.map((part, index) => {
+            const left = partOpen(index);
+            return (
+              <li key={index} className="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl bg-surface-2 px-4 py-3">
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold">
+                    Part {index + 1}{' '}
+                    <span className="font-normal text-muted tabular-nums">
+                      · {part.length - left}/{part.length} solved
+                    </span>
+                  </p>
+                  <p className="text-sm text-muted">{[...new Set(part.map((step) => step.set.title))].join(' · ')}</p>
+                </div>
+                {left === 0 ? (
+                  <button type="button" className="btn btn-quiet btn-small" onClick={() => start(index)}>
+                    <span className="text-good">✓ Done</span> · Practise again
+                  </button>
+                ) : (
+                  <button type="button" className="btn btn-small" onClick={() => start(index)}>
+                    {left < part.length ? `Continue: ${left} left` : 'Start'}
+                  </button>
+                )}
+              </li>
+            );
+          })}
+        </ol>
       )}
 
       <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm">

@@ -32,6 +32,14 @@ export function isSelfAssessed(item: Exercise): boolean {
   return item.type === 'writing-task' || item.type === 'speaking-task';
 }
 
+/**
+ * Whether the checked widget shows the solution itself: the right option, or
+ * the learner's answer next to the right one. Free text needs an "Answer:" line.
+ */
+export function showsOwnSolution(item: Exercise): boolean {
+  return item.type !== 'translation' && item.type !== 'writing';
+}
+
 /** Whether there is enough of an answer to check in a lesson. */
 export function isReady(item: Exercise, response: Response): boolean {
   switch (response.type) {

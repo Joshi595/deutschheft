@@ -27,6 +27,31 @@ interface WidgetProps<T extends Response['type']> {
   phase: Phase;
 }
 
+/**
+ * One checked answer. Right: in green. Wrong: what the learner gave, struck
+ * through in red, then the right answer in green.
+ */
+function Fix({ given, expected, correct }: { given: string; expected: string; correct: boolean }) {
+  const right = 'rounded bg-good-soft px-1.5 py-0.5 font-semibold text-good no-underline';
+  if (correct) return <span className={right}>{expected}</span>;
+  return (
+    <>
+      {given.trim() ? (
+        <del className="rounded bg-bad-soft px-1.5 py-0.5 text-bad">
+          <span className="sr-only">Your answer: </span>
+          {given}
+        </del>
+      ) : (
+        <span className="text-sm italic text-muted">no answer</span>
+      )}{' '}
+      <ins className={right}>
+        <span className="sr-only">Correct answer: </span>
+        {expected}
+      </ins>
+    </>
+  );
+}
+
 const choiceClass = (state: 'plain' | 'chosen' | 'right' | 'wrong', locked: boolean) =>
   [
     'rounded-xl border px-4 py-3 text-left transition-colors disabled:cursor-default',
@@ -95,9 +120,7 @@ export function FillBlank({ item, response, onChange, locked, result, onSubmit }
       <p className="de text-lg leading-loose" lang="de">
         {before}
         {locked ? (
-          <span className={`rounded px-1.5 py-0.5 ${result?.correct ? 'bg-good-soft text-good' : 'bg-accent-soft'}`}>
-            {result?.expected}
-          </span>
+          <Fix given={response.text} expected={result?.expected ?? item.answers[0]!} correct={!!result?.correct} />
         ) : (
           <GermanInput
             label="Missing word"
@@ -118,7 +141,7 @@ export function FillBlank({ item, response, onChange, locked, result, onSubmit }
 const markClass = (mark: boolean | undefined) =>
   mark === undefined ? '' : mark ? ' border-good' : ' border-bad';
 
-export function Cloze({ item, response, onChange, locked, result }: WidgetProps<'cloze'>) {
+export function Cloze({ item, response, onChange, locked, result, onSubmit }: WidgetProps<'cloze'>) {
   const segments = item.text.split('___');
   const bank = useMemo(() => (item.bank ? seededShuffle(item.bank, item.id) : undefined), [item]);
   const set = (index: number, value: string) =>
@@ -142,9 +165,7 @@ export function Cloze({ item, response, onChange, locked, result }: WidgetProps<
               {segment}
               {accepted &&
                 (locked ? (
-                  <span className={`rounded px-1.5 py-0.5 font-semibold ${mark ? 'bg-good-soft text-good' : 'bg-accent-soft'}`}>
-                    {accepted[0]}
-                  </span>
+                  <Fix given={response.texts[index] ?? ''} expected={accepted[0]!} correct={!!mark} />
                 ) : bank ? (
                   <select
                     className={'field mx-1 inline-block w-auto min-h-0 py-1' + markClass(mark)}
@@ -168,6 +189,7 @@ export function Cloze({ item, response, onChange, locked, result }: WidgetProps<
                     spellCheck={false}
                     value={response.texts[index] ?? ''}
                     onChange={(event) => set(index, event.target.value)}
+                    onKeyDown={(event) => event.key === 'Enter' && onSubmit()}
                   />
                 ))}
             </span>
@@ -178,7 +200,7 @@ export function Cloze({ item, response, onChange, locked, result }: WidgetProps<
   );
 }
 
-export function Form({ item, response, onChange, locked, result }: WidgetProps<'form'>) {
+export function Form({ item, response, onChange, locked, result, onSubmit }: WidgetProps<'form'>) {
   const set = (index: number, value: string) =>
     onChange({ type: 'form', texts: response.texts.map((text, i) => (i === index ? value : text)) });
 
@@ -192,8 +214,8 @@ export function Form({ item, response, onChange, locked, result }: WidgetProps<'
             <label key={field.label} className="grid items-center gap-1 sm:grid-cols-[11rem_1fr] sm:gap-3">
               <span className="text-sm font-semibold" lang="de">{field.label}</span>
               {locked ? (
-                <span className={`rounded px-2 py-1 font-semibold ${mark ? 'bg-good-soft text-good' : 'bg-accent-soft'}`} lang="de">
-                  {field.answers[0]}
+                <span lang="de">
+                  <Fix given={response.texts[index] ?? ''} expected={field.answers[0]!} correct={!!mark} />
                 </span>
               ) : (
                 <input
@@ -204,6 +226,7 @@ export function Form({ item, response, onChange, locked, result }: WidgetProps<'
                   lang="de"
                   value={response.texts[index] ?? ''}
                   onChange={(event) => set(index, event.target.value)}
+                  onKeyDown={(event) => event.key === 'Enter' && onSubmit()}
                 />
               )}
             </label>
@@ -214,29 +237,37 @@ export function Form({ item, response, onChange, locked, result }: WidgetProps<'
   );
 }
 
-export function Translation({ item, response, onChange, locked, onSubmit }: WidgetProps<'translation'>) {
+/** Free text is not rewritten once checked; a green or red frame says how it went. */
+const verdictFrame = (locked: boolean, result: GradeResult | null) =>
+  locked && result ? `block rounded-[12px] ring-2 ${result.correct ? 'ring-good' : 'ring-bad'}` : 'block';
+
+export function Translation({ item, response, onChange, locked, result, onSubmit }: WidgetProps<'translation'>) {
   return (
-    <GermanInput
-      label={`German translation of: ${item.prompt}`}
-      placeholder="Auf Deutsch …"
-      value={response.text}
-      disabled={locked}
-      onChange={(text) => onChange({ type: 'translation', text })}
-      onSubmit={onSubmit}
-    />
+    <span className={verdictFrame(locked, result)}>
+      <GermanInput
+        label={`German translation of: ${item.prompt}`}
+        placeholder="Auf Deutsch …"
+        value={response.text}
+        disabled={locked}
+        onChange={(text) => onChange({ type: 'translation', text })}
+        onSubmit={onSubmit}
+      />
+    </span>
   );
 }
 
-export function Writing({ item, response, onChange, locked }: WidgetProps<'writing'>) {
+export function Writing({ item, response, onChange, locked, result }: WidgetProps<'writing'>) {
   return (
-    <GermanInput
-      multiline
-      label={item.prompt}
-      placeholder="Schreib einen Satz …"
-      value={response.text}
-      disabled={locked}
-      onChange={(text) => onChange({ type: 'writing', text })}
-    />
+    <span className={verdictFrame(locked, result)}>
+      <GermanInput
+        multiline
+        label={item.prompt}
+        placeholder="Schreib einen Satz …"
+        value={response.text}
+        disabled={locked}
+        onChange={(text) => onChange({ type: 'writing', text })}
+      />
+    </span>
   );
 }
 
@@ -251,22 +282,27 @@ export function Matching({ item, response, onChange, locked, result }: WidgetPro
             <span className="de min-w-[9rem] flex-1" lang="de">
               {pair.left}
             </span>
-            <select
-              className="field min-w-0 max-w-full flex-[1_1_12rem]"
-              aria-label={`Match for ${pair.left}`}
-              disabled={locked}
-              value={locked ? pair.right : (response.selection[pair.left] ?? '')}
-              onChange={(event) =>
-                onChange({ type: 'matching', selection: { ...response.selection, [pair.left]: event.target.value } })
-              }
-            >
-              <option value="">Choose …</option>
-              {rights.map((right) => (
-                <option key={right} value={right}>
-                  {right}
-                </option>
-              ))}
-            </select>
+            {locked ? (
+              <span className="min-w-0 flex-[1_1_12rem]">
+                <Fix given={response.selection[pair.left] ?? ''} expected={pair.right} correct={mark === true} />
+              </span>
+            ) : (
+              <select
+                className="field min-w-0 max-w-full flex-[1_1_12rem]"
+                aria-label={`Match for ${pair.left}`}
+                value={response.selection[pair.left] ?? ''}
+                onChange={(event) =>
+                  onChange({ type: 'matching', selection: { ...response.selection, [pair.left]: event.target.value } })
+                }
+              >
+                <option value="">Choose …</option>
+                {rights.map((right) => (
+                  <option key={right} value={right}>
+                    {right}
+                  </option>
+                ))}
+              </select>
+            )}
             <span className="w-5 text-center font-bold" aria-live="polite">
               {mark === true && <span className="text-good" aria-label="correct">✓</span>}
               {mark === false && <span className="text-bad" aria-label="wrong">✗</span>}
@@ -278,7 +314,7 @@ export function Matching({ item, response, onChange, locked, result }: WidgetPro
   );
 }
 
-export function WordOrder({ item, onChange, locked }: WidgetProps<'word-order'>) {
+export function WordOrder({ item, response, onChange, locked, result }: WidgetProps<'word-order'>) {
   const tiles = useMemo(() => seededShuffle(tokenize(item.answer), item.id), [item]);
   const [placed, setPlaced] = useState<number[]>([]);
 
@@ -289,8 +325,8 @@ export function WordOrder({ item, onChange, locked }: WidgetProps<'word-order'>)
 
   if (locked) {
     return (
-      <p className="de rounded-xl bg-surface-2 px-4 py-3 text-lg" lang="de">
-        {item.answer}
+      <p className="de text-lg leading-loose" lang="de">
+        <Fix given={response.tokens.join(' ')} expected={item.answer} correct={!!result?.correct} />
       </p>
     );
   }

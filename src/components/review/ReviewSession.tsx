@@ -270,7 +270,7 @@ export default function ReviewSession({ vocab, exercises, lessons, homeHref }: P
             number={position + 1}
             topic={lesson?.title ?? ''}
             maxAttempts={1}
-            onFinish={setExerciseResult}
+            onFinish={(correct) => setExerciseResult(correct)}
             onNext={() => advance(exerciseResult ? 'good' : 'again')}
             nextLabel="Next card"
           />
