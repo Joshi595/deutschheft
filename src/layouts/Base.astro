@@ -3,6 +3,7 @@ import '@fontsource-variable/inter';
 import '@fontsource-variable/fraunces/full.css';
 import '@fontsource-variable/fraunces/full-italic.css';
 import '../styles/global.css';
+import TranslatePanel from '../components/translate/TranslatePanel';
 import { site } from '../site';
 import { url } from '../lib/url';
 
@@ -154,6 +155,8 @@ const active =
         ))
       }
     </nav>
+
+    <TranslatePanel client:load wordsHref={url('words.json')} />
 
     <script>
       import { localDay, xpOn } from '../lib/progress/logic';
