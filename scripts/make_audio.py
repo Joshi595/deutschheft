@@ -13,15 +13,22 @@ It runs from its own Python environment, outside the repository:
     ..\\venv_audio\\Scripts\\python -m piper.download_voices de_DE-thorsten-high --data-dir ..\\venv_audio\\voices
     ..\\venv_audio\\Scripts\\python scripts\\make_audio.py
 
-Voice "a" reads everything. An optional voice "b" (--voice-b) is the second
-speaker in conversations; without it the main voice speaks both parts. A voice
-is a model file, optionally with "#<speaker number>" for a model that holds
-several speakers.
+Each clip is recorded once, in one of two voices. In conversations and missions
+every person has a voice that fits them (VOICE_OF) and the learner's lines take
+the other one; everything else is shared out between the two by its text.
+(--voice-b "" leaves the second voice out, and voice "a" reads everything.)
 
-Of the German Piper voices only thorsten-high passed the --check below. The
-multi-speaker "mls" voice came back as nonsense, and the smaller voices still
-blur the ch of "ich" and "möchten" even with the repair in Voice.pcm. Listen
-before choosing another voice.
+The default voices are Microsoft's neural voices, Katja (a) and Conrad (b),
+through the Azure Speech service. They need a Speech resource; its free tier
+covers the course many times over. Set the key and region first:
+
+    $env:AZURE_SPEECH_KEY = "<key>"; $env:AZURE_SPEECH_REGION = "<region, e.g. westeurope>"
+
+A voice is "azure:<voice name>", or a Piper model file, optionally with
+"#<speaker number>". Piper runs offline, but of its German voices only
+thorsten-high passed the --check below, and learners found it unclear.
+
+Clips are only made when missing, so to change a voice, delete its folder first.
 
     --shard K/N   record only every Nth clip, so that N copies of the script can share the work;
                   run once more without it afterwards to tidy up and write the index
@@ -55,46 +62,111 @@ def load(path: Path):
     return yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
-def texts() -> tuple[set[str], set[str]]:
-    """Every German string to record: (for voice a, for voice b)."""
-    everything: set[str] = set()
-    dialogue: set[str] = set()
+# The people in conversations and missions, each with a voice that fits: "a" is Katja, "b" is Conrad.
+# The learner's own lines take the other voice, so a dialogue always has two different voices.
+VOICE_OF = {
+    "Frau Brandt": "a", "Frau Dr. Keller": "a", "Friseurin": "a", "Kollegin": "a", "Nachbarin": "a",
+    "Passantin": "a", "Reisende": "a", "Sprechstundenhilfe": "a", "Verkäuferin": "a",
+    "Apotheker": "b", "Dr. Yilmaz": "b", "Kellner": "b", "Kurspartner": "b", "Mitarbeiter": "b",
+}
+OTHER = {"a": "b", "b": "a"}
 
-    for path in sorted((CONTENT / "speaking" / "sounds").glob("*.yaml")):
-        sound = load(path)
-        everything.update(word["de"] for word in sound["words"])
-        everything.update(word["de"] for pair in sound["pairs"] for word in pair)
-        everything.add(sound["sentence"]["de"])
 
-    for path in sorted((CONTENT / "speaking" / "packs").glob("*.yaml")):
-        everything.update(phrase["de"] for phrase in load(path)["phrases"])
+def voice_of(speaker: str) -> str:
+    return VOICE_OF.get(speaker) or sys.exit(f"New speaker {speaker!r}: give them a voice in VOICE_OF in scripts/make_audio.py.")
 
+
+def texts() -> dict[str, str]:
+    """Every German string to record, with the voice that says it ("a" or "b")."""
+    voices: dict[str, str] = {}
+    say = lambda text, voice: voices.setdefault(unicodedata.normalize("NFC", text).strip(), voice)
+
+    # Dialogue first: a line someone says in a scene keeps that person's voice everywhere.
     for path in sorted((CONTENT / "speaking" / "conversations").glob("*.yaml")):
-        dialogue.update(line["text"] for line in load(path)["lines"])
+        talk = load(path)
+        partner = voice_of(talk["partner"])
+        for line in talk["lines"]:
+            say(line["text"], partner if line["who"] == "partner" else OTHER[partner])
 
     for path in sorted((CONTENT / "missions").glob("*.yaml")):
         mission = load(path)
-        everything.update(phrase["de"] for phrase in mission["phrases"])
-        dialogue.update(line["text"] for line in mission.get("outro", []))
+        speakers = [line["speaker"] for step in mission["steps"] for line in step.get("lines", [])]
+        you = OTHER[voice_of(speakers[0])]
+        for line in [*(line for step in mission["steps"] for line in step.get("lines", [])), *mission.get("outro", [])]:
+            say(line["text"], voice_of(line["speaker"]))
         for step in mission["steps"]:
-            dialogue.update(line["text"] for line in step.get("lines", []))
-            if "you" in step:
-                dialogue.add(step["you"]["text"])
             task = step["task"]
             if task.get("stimulus", {}).get("kind") == "audio":
-                dialogue.update(line["text"] for line in task["stimulus"]["lines"])
+                for line in task["stimulus"]["lines"]:
+                    say(line["text"], voice_of(line["speaker"]) if line.get("speaker") else OTHER[you])
+            if "you" in step:
+                say(step["you"]["text"], you)
             if task["type"] == "speaking-task":
-                dialogue.add(task["sample"])
+                say(task["sample"], you)
 
+    # Everything else is shared out by its text: a fixed mix of both voices, the same on every visit.
+    rest: set[str] = set()
+    for path in sorted((CONTENT / "speaking" / "sounds").glob("*.yaml")):
+        sound = load(path)
+        rest.update(word["de"] for word in sound["words"])
+        rest.update(word["de"] for pair in sound["pairs"] for word in pair)
+        rest.add(sound["sentence"]["de"])
+    for path in sorted((CONTENT / "speaking" / "packs").glob("*.yaml")):
+        rest.update(phrase["de"] for phrase in load(path)["phrases"])
+    for path in sorted((CONTENT / "missions").glob("*.yaml")):
+        rest.update(phrase["de"] for phrase in load(path)["phrases"])
     for path in sorted((CONTENT / "vocab").glob("*/*.yaml")):
         for item in load(path)["items"]:
             # The headword as the vocabulary list shows it, and its example sentence.
-            everything.add(f"{item['article']} {item['de']}" if item.get("article") else item["de"])
+            rest.add(f"{item['article']} {item['de']}" if item.get("article") else item["de"])
             if item.get("example"):
-                everything.add(item["example"])
+                rest.add(item["example"])
+    for text in rest:
+        say(text, "ab"[int(clip_key(text), 16) % 2])
+    return voices
 
-    clean = lambda group: {unicodedata.normalize("NFC", text).strip() for text in group}
-    return clean(everything | dialogue), clean(dialogue)
+
+class AzureVoice:
+    """A Microsoft neural voice from the Azure Speech REST API, which returns MP3 itself."""
+
+    def __init__(self, name: str):
+        import os
+
+        self.name = name
+        self.key = os.environ.get("AZURE_SPEECH_KEY") or sys.exit("Set AZURE_SPEECH_KEY (and AZURE_SPEECH_REGION) first.")
+        self.url = f"https://{os.environ.get('AZURE_SPEECH_REGION', 'westeurope')}.tts.speech.microsoft.com/cognitiveservices/v1"
+
+    def mp3(self, text: str) -> bytes:
+        import time
+        import urllib.error
+        import urllib.request
+        from xml.sax.saxutils import escape
+
+        ssml = f"<speak version='1.0' xml:lang='de-DE'><voice name='{self.name}'>{escape(text)}</voice></speak>"
+        request = urllib.request.Request(
+            self.url,
+            data=ssml.encode("utf-8"),
+            headers={
+                "Ocp-Apim-Subscription-Key": self.key,
+                "Content-Type": "application/ssml+xml",
+                "X-Microsoft-OutputFormat": "audio-24khz-48kbitrate-mono-mp3",
+                "User-Agent": "deutschheft-make-audio",
+            },
+        )
+        for _ in range(10):
+            try:
+                with urllib.request.urlopen(request, timeout=60) as response:
+                    return response.read()
+            except urllib.error.HTTPError as error:
+                # The free tier allows about 20 requests a minute; wait as told and go on.
+                if error.code != 429 and error.code < 500:
+                    sys.exit(f"Azure answered {error.code} for {text!r}: {error.read()[:300]!r}")
+                time.sleep(int(error.headers.get("Retry-After") or 15))
+        sys.exit(f"Azure kept refusing {text!r}; run the script again later, it carries on where it stopped.")
+
+
+def open_voice(spec: str):
+    return AzureVoice(spec.removeprefix("azure:")) if spec.startswith("azure:") else Voice(spec)
 
 
 class Voice:
@@ -153,7 +225,7 @@ def record(folder: Path, wanted: set[str], spec: str, shard: tuple[int, int] | N
         # One of several processes working side by side: take every nth clip and leave the tidying to a final run.
         missing = [key for key in missing if int(key, 16) % shard[1] == shard[0]]
     if missing:
-        voice = Voice(spec)
+        voice = open_voice(spec)
         for count, key in enumerate(missing, 1):
             (folder / f"{key}.mp3").write_bytes(voice.mp3(by_key[key]))
             if count % 100 == 0 or count == len(missing):
@@ -193,8 +265,8 @@ def check(folder: Path, wanted: set[str], report: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("--voice-a", default=str(VOICES / "de_DE-thorsten-high.onnx"))
-    parser.add_argument("--voice-b", default="", help="a second voice for the other speaker in conversations; none by default")
+    parser.add_argument("--voice-a", default="azure:de-DE-KatjaNeural", help=f"e.g. {VOICES / 'de_DE-thorsten-high.onnx'} for Piper")
+    parser.add_argument("--voice-b", default="azure:de-DE-ConradNeural", help='the other speaker in conversations; "" for none')
     parser.add_argument("--shard", help="K/N: record only every Nth clip, for N processes side by side. Finish with a run without it.")
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--only", default="ab", help="with --check: which voices to check, e.g. b")
@@ -206,17 +278,19 @@ def main() -> None:
             print(f"{clip_key(text)}  {text!r}")
         return
 
-    everything, dialogue = texts()
+    voices = texts()
+    if not args.voice_b:
+        voices = dict.fromkeys(voices, "a")
+    wanted_by = {name: {text for text, voice in voices.items() if voice == name} for name in "ab"}
     if args.check:
-        for name, wanted in (("a", everything), ("b", dialogue)):
+        for name, wanted in wanted_by.items():
             if name in args.only:
                 check(OUT / name, wanted, ROOT.parent / "venv_audio" / f"check-{name}.txt")
         return
 
     shard = tuple(int(part) for part in args.shard.split("/")) if args.shard else None
-    # Without a second voice the folder is emptied, and the app uses the main voice for both speakers.
-    second = record(OUT / "b", dialogue if args.voice_b else set(), args.voice_b, shard)
-    index = {"a": record(OUT / "a", everything, args.voice_a, shard), "b": second}
+    # Each clip exists in one voice only; the app plays it from whichever folder has it.
+    index = {name: record(OUT / name, wanted_by[name], spec, shard) for name, spec in (("a", args.voice_a), ("b", args.voice_b))}
     if not shard:
         (OUT / "index.json").write_text(json.dumps(index, separators=(",", ":")) + "\n", encoding="utf-8")
 

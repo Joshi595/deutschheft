@@ -51,8 +51,10 @@ On a phone, open the site and choose **Add to Home Screen** to install it as an 
   from a cue, then from memory. *Exam speaking*: all 127 speaking tasks of the course with a
   clock, a recorder, a model answer and a checklist. You can record yourself next to the model,
   and optionally let the browser write down what it heard.
-- **Recorded audio.** The Speak section and the chapter vocabulary are spoken by recorded clips,
-  the same in every browser. Everything else uses the browser's own German voice.
+- **Recorded audio.** The Speak section, the missions and the chapter vocabulary are spoken by
+  recorded clips in two natural voices, Katja and Conrad (Microsoft neural voices), the same in
+  every browser. In conversations each person keeps a voice that suits them and your lines take
+  the other one. Everything else uses the browser's own German voice.
 - **Missions.** Six everyday situations (bakery, train station, doctor, restaurant, flat viewing,
   job interview), played through as a conversation built from the same exercise types. A wrong
   choice is told why it is wrong, and a task you miss comes back in review.
