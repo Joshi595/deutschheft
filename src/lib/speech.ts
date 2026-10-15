@@ -104,7 +104,10 @@ export function clipKey(text: string): string {
   return (hash >>> 0).toString(16).padStart(8, '0');
 }
 
-/** Which clips exist, per recorded voice ("a" is the main voice, "b" the second speaker). */
+/**
+ * Which clips exist, per recorded voice ("a" Katja, "b" Conrad). scripts/make_audio.py records
+ * each text in one voice only, matched to the person who says it, so a clip is in one folder.
+ */
 let clips: Promise<Record<string, Set<string>>> | undefined;
 
 function loadClips(): Promise<Record<string, Set<string>>> {
@@ -115,7 +118,7 @@ function loadClips(): Promise<Record<string, Set<string>>> {
   return clips;
 }
 
-/** Address of the clip for a text, in the second voice for every other speaker if it has one. */
+/** Address of the clip for a text. Should a text ever be in both voices, every other speaker gets "b". */
 async function clipFor(text: string, speakerIndex: number): Promise<string | undefined> {
   const index = await loadClips();
   const key = clipKey(text);

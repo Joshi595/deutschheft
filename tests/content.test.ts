@@ -393,7 +393,8 @@ describe('speak section', () => {
   const index = join(import.meta.dirname, '..', 'public', 'audio', 'index.json');
   const recorded: Record<string, string[]> = existsSync(index) ? JSON.parse(readFileSync(index, 'utf8')) : {};
   it.skipIf(!recorded.a?.length)('has a recorded clip for every German line', () => {
-    const main = new Set(recorded.a);
+    // Each clip is in one of the two voices.
+    const main = new Set([...(recorded.a ?? []), ...(recorded.b ?? [])]);
     const spoken = [
       ...soundFiles.flatMap(({ data }) => [...data.words, ...data.pairs.flat(), data.sentence].map((word) => word.de)),
       ...packFiles.flatMap(({ data }) => data.phrases.map((phrase) => phrase.de)),
@@ -403,11 +404,6 @@ describe('speak section', () => {
       ...missionFiles.flatMap(({ data }) => data.steps.flatMap((step) => [...step.lines.map((line) => line.text), ...(step.you ? [step.you.text] : [])])),
     ];
     for (const text of [...spoken, ...dialogue]) expect(main.has(clipKey(text)), `no clip for "${text}". Run scripts/make_audio.py`).toBe(true);
-    // A second voice is optional, but if there is one it has to cover every line of every dialogue.
-    const second = new Set(recorded.b);
-    if (second.size > 0) {
-      for (const text of dialogue) expect(second.has(clipKey(text)), `no second-voice clip for "${text}". Run scripts/make_audio.py`).toBe(true);
-    }
   });
 });
 
