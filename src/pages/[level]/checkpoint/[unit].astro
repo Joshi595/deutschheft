@@ -2,7 +2,6 @@
 import QuizRunner from '../../../components/quiz/QuizRunner';
 import Base from '../../../layouts/Base.astro';
 import { getCatalog } from '../../../lib/content/catalog';
-import { url } from '../../../lib/url';
 
 export async function getStaticPaths() {
   const catalog = await getCatalog();
@@ -18,13 +17,6 @@ const quiz = level.checkpoints.get(number)!;
 ---
 
 <Base title={`${quiz.title} (${level.title})`} description={quiz.description} width="narrow">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('learn/')} class="hover:text-ink">Learn</a>
-    <span aria-hidden="true"> / </span>
-    <a href={level.href} class="hover:text-ink">{level.title}</a>
-    <span aria-hidden="true"> / </span>
-    <span>Unit {number}</span>
-  </nav>
 
   <header class="mt-4">
     <p class="eyebrow">{level.title} · Unit {number}</p>

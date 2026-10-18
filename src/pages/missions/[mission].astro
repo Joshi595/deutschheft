@@ -16,13 +16,6 @@ const next = catalog.missions[index + 1];
 ---
 
 <Base title={`${mission.titleDe} (${mission.title})`} description={mission.objective} width="narrow">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('speak/')} class="hover:text-ink">Speak</a>
-    <span aria-hidden="true"> / </span>
-    <a href={url('speak/conversations/')} class="hover:text-ink">Conversations</a>
-    <span aria-hidden="true"> / </span>
-    <span>{mission.title}</span>
-  </nav>
 
   <header class="mt-4">
     <p class="eyebrow">{mission.level.toUpperCase()} mission</p>

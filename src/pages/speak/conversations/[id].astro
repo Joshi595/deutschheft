@@ -14,13 +14,6 @@ const talk = catalog.talks.find((candidate) => candidate.id === Astro.params.id)
 ---
 
 <Base title={`${talk.titleDe} (${talk.title})`} description={talk.scene} width="narrow">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('speak/')} class="hover:text-ink">Speak</a>
-    <span aria-hidden="true"> / </span>
-    <a href={url('speak/conversations/')} class="hover:text-ink">Conversations</a>
-    <span aria-hidden="true"> / </span>
-    <span>{talk.title}</span>
-  </nav>
 
   <header class="mt-4">
     <p class="eyebrow">{talk.level.toUpperCase()} conversation</p>

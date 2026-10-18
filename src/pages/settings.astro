@@ -9,7 +9,11 @@ const levels = catalog.levels
   .map(({ id, title, name }) => ({ id, title, name }));
 ---
 
-<Base title="Settings" description="Level and daily goal, theme, audio, optional AI key and data backup." width="narrow">
+<Base area="settings" localNav={[
+  { id: 'learning', label: 'Learning' }, { id: 'appearance', label: 'Appearance' },
+  { id: 'audio', label: 'Audio' }, { id: 'speaking', label: 'Speaking' },
+  { id: 'ai', label: 'AI explanations' }, { id: 'data', label: 'Your data' },
+]} title="Settings" description="Level and daily goal, appearance, audio, optional AI key and data backup." width="narrow">
   <header>
     <p class="eyebrow" lang="de">Einstellungen</p>
     <h1 class="mt-1 text-4xl sm:text-5xl">Settings</h1>

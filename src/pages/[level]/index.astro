@@ -3,7 +3,6 @@ import ReadinessPanel from '../../components/dashboard/ReadinessPanel';
 import ProgressMeter from '../../components/ui/ProgressMeter.astro';
 import Base from '../../layouts/Base.astro';
 import { getCatalog, toLevelSummary } from '../../lib/content/catalog';
-import { url } from '../../lib/url';
 
 export async function getStaticPaths() {
   const catalog = await getCatalog();
@@ -18,13 +17,8 @@ const units = level.units.filter((unit) => unit.lessonKeys.length > 0);
 ---
 
 <Base title={`${level.title} ${level.name}`} description={level.description}>
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('learn/')} class="hover:text-ink">Learn</a>
-    <span aria-hidden="true"> / </span>
-    <span>{level.title}</span>
-  </nav>
 
-  <header class="mt-4 max-w-3xl">
+  <header class="mt-4">
     <p class="eyebrow">{level.name}</p>
     <h1 class="mt-1 text-5xl">{level.title}</h1>
     <p class="mt-4 text-lg text-muted">{level.description}</p>

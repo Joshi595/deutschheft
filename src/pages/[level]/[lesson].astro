@@ -13,6 +13,7 @@ import ProgressMeter from '../../components/ui/ProgressMeter.astro';
 import Base from '../../layouts/Base.astro';
 import { getCatalog } from '../../lib/content/catalog';
 import { url } from '../../lib/url';
+import type { LocalSection } from '../../lib/navigation';
 
 export async function getStaticPaths() {
   const catalog = await getCatalog();
@@ -36,22 +37,19 @@ const next = level.lessons[index + 1];
 const { Content } = await render(lesson.entry);
 const exerciseIds = lesson.exercises.map((exercise) => exercise.id);
 
-const sections = [
-  { id: 'lesson', label: 'Lesson' },
-  ...(lesson.vocab.length > 0 ? [{ id: 'vocabulary', label: 'Vocabulary' }] : []),
-  ...(lesson.sets.length > 0 ? [{ id: 'practice', label: 'Practice' }] : []),
-  { id: 'notes', label: 'Notes' },
+const sections: LocalSection[] = [
+  { id: 'lesson', label: 'Lesson', tone: 'lesson' },
+  ...(lesson.vocab.length > 0 ? [{ id: 'vocabulary', label: 'Vocabulary', tone: 'vocabulary' as const }] : []),
+  ...(lesson.sets.length > 0 ? [{ id: 'practice', label: 'Practice', tone: 'practice' as const }] : []),
+  { id: 'notes', label: 'Notes', tone: 'notes' },
 ];
 ---
 
-<Base title={`${lesson.title} (${level.title})`} description={lesson.summary} width="narrow">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('learn/')} class="hover:text-ink">Learn</a>
-    <span aria-hidden="true"> / </span>
-    <a href={level.href} class="hover:text-ink">{level.title}</a>
-    <span aria-hidden="true"> / </span>
-    <span>Lesson {lesson.order}</span>
-  </nav>
+<Base title={`${lesson.title} (${level.title})`} description={lesson.summary} width="narrow" area="learn" localNav={sections} breadcrumbs={[
+  { label: 'Learn', href: 'learn/' },
+  { label: level.title, href: `${level.id}/` },
+  { label: `Lesson ${lesson.order}: ${lesson.title}` },
+]}>
 
   <header class="mt-4">
     {lesson.titleDe && <p class="eyebrow" lang="de">{lesson.titleDe}</p>}
@@ -65,17 +63,9 @@ const sections = [
     {exerciseIds.length > 0 && <div class="mt-5"><ProgressMeter ids={exerciseIds} /></div>}
   </header>
 
-  <nav aria-label="In this lesson" class="top-[3.4rem] z-30 -mx-4 mt-8 sm:sticky border-y border-line bg-bg/95 px-4 backdrop-blur">
-    <ul class="flex gap-1 overflow-x-auto text-sm font-semibold">
-      {
-        sections.map((section) => (
-          <li><a href={`#${section.id}`} data-section-link class="block border-b-2 border-transparent px-3 py-2.5 text-muted hover:text-ink aria-[current=true]:border-accent aria-[current=true]:text-ink">{section.label}</a></li>
-        ))
-      }
-    </ul>
-  </nav>
 
-  <section id="lesson" class="mt-8">
+  <section id="lesson" data-tone="lesson" class="mt-8">
+    <div class="section-heading"><h2>Lesson</h2><p>Understand the ideas, then put them into practice.</p></div>
     {
       lesson.objectives.length > 0 && (
         <div class="card mb-8 border-l-4 border-l-accent p-5">
@@ -91,18 +81,20 @@ const sections = [
         </div>
       )
     }
-    <div class="prose">
+    <div class="prose lesson-reading">
       <Content components={{ GrammarBox, Example, Step, Compare, Mistake, Summary }} />
     </div>
   </section>
 
   {
     lesson.vocab.length > 0 && (
-      <section id="vocabulary" class="mt-14">
+      <section id="vocabulary" data-tone="vocabulary" class="mt-14">
+        <div class="section-heading">
         <h2 class="text-3xl">Vocabulary</h2>
         <p class="mt-2 mb-5 text-muted">
           Tap the speaker to hear a word. These join your review deck when you start the exercises.
         </p>
+        </div>
         <VocabList items={lesson.vocab} />
       </section>
     )
@@ -110,11 +102,13 @@ const sections = [
 
   {
     lesson.sets.length > 0 && (
-      <section id="practice" class="mt-14">
+      <section id="practice" data-tone="practice" class="mt-14">
+        <div class="section-heading">
         <h2 class="text-3xl">Practice</h2>
         <p class="mt-2 mb-6 text-muted">
           You get a second try on typed answers. Anything you miss comes back in Review.
         </p>
+        </div>
         <ExerciseRunner
           client:only="react"
           topic={lesson.title}
@@ -128,8 +122,8 @@ const sections = [
     )
   }
 
-  <section id="notes" class="mt-14">
-    <h2 class="text-3xl">Notes</h2>
+  <section id="notes" data-tone="notes" class="mt-14">
+    <div class="section-heading"><h2>Notes</h2><p>Keep your own reminders from this lesson.</p></div>
     <div class="mt-4">
       <LessonNotes client:only="react" lessonKey={lesson.key} notebookHref={url('notebook/')} />
     </div>
@@ -161,21 +155,3 @@ const sections = [
     }
   </nav>
 </Base>
-
-<script>
-  // Highlight the section-nav link for whichever section is in view.
-  const links = document.querySelectorAll<HTMLAnchorElement>('[data-section-link]');
-  const observer = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        links.forEach((link) => link.setAttribute('aria-current', String(link.hash === `#${entry.target.id}`)));
-      }
-    },
-    { rootMargin: '-30% 0px -60% 0px' },
-  );
-  links.forEach((link) => {
-    const section = document.querySelector(link.hash);
-    if (section) observer.observe(section);
-  });
-</script>

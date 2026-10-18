@@ -23,7 +23,7 @@ const ok = (name, condition, detail = '') => results.push(`${condition ? 'PASS' 
 const tokenize = (sentence) => sentence.trim().replace(/[.!?]+$/, '').split(/\s+/).filter(Boolean);
 
 // A fake microphone, so that recording can be tried without a person in the room.
-const browser = await chromium.launch({ channel: 'msedge', headless: true, args: ['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream'] });
+const browser = await chromium.launch({ channel: process.env.E2E_BROWSER ?? 'msedge', headless: true, args: ['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream'] });
 const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, permissions: ['microphone'] });
 // A learner's browser normally has a German voice. Automation hides the online ones, so one
 // is supplied here and kept silent; section 10 checks what happens with other voice lists.
@@ -269,7 +269,7 @@ ok('sentences: a new sentence is shown to be read aloud', (await page.getByText(
 await page.getByRole('button', { name: 'Speak', exact: true }).click();
 await page.waitForTimeout(700);
 await page.getByRole('button', { name: 'Stop' }).click();
-ok('sentences: the learner’s recording appears next to the model', await page.getByLabel('Your recording').isVisible());
+ok('sentences: the learner’s recording appears next to the model', await appears(page.getByLabel('Your recording')));
 await shot('8-sentence');
 await page.getByRole('button', { name: 'I have read it aloud' }).click();
 let recallHidden = true;
@@ -348,7 +348,7 @@ for (const route of [...routes, ...speakRoutes]) {
   ok(`phone: /${route} fits the screen`, overflow <= 0, overflow > 0 ? `${overflow}px too wide` : '');
 }
 ok('phone: tab bar is shown', await mobile.locator('.tabbar').isVisible());
-ok('phone: top nav is hidden', !(await mobile.locator('header nav').isVisible()));
+ok('phone: desktop sidebar is hidden', !(await mobile.locator('.sidebar').isVisible()));
 await mobile.locator('.tabbar').getByRole('link', { name: 'Speak' }).click();
 await mobile.waitForURL(/speak\/$/);
 ok('phone: tab bar navigates', (await mobile.locator('.tabbar a[aria-current="page"]').textContent()).trim() === 'Speak');
