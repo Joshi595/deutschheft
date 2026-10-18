@@ -2,7 +2,6 @@
 import ExamSpeaking, { type ExamGroup } from '../../../components/speak/ExamSpeaking';
 import Base from '../../../layouts/Base.astro';
 import { getCatalog } from '../../../lib/content/catalog';
-import { url } from '../../../lib/url';
 
 export async function getStaticPaths() {
   const catalog = await getCatalog();
@@ -38,11 +37,6 @@ const seconds = ({ a1: 60, a2: 90 } as Record<string, number>)[level.id] ?? 180;
 ---
 
 <Base title={`Exam speaking ${level.title}`} description={`Every ${level.title} speaking task of the course, against the clock.`} width="narrow">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('speak/')} class="hover:text-ink">Speak</a>
-    <span aria-hidden="true"> / </span>
-    <span>Exam speaking {level.title}</span>
-  </nav>
 
   <header class="mt-4">
     <p class="eyebrow" lang="de">Prüfung Sprechen</p>

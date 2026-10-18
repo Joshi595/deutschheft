@@ -51,7 +51,7 @@ export default function ProgressPage() {
 
   return (
     <div className="grid gap-12">
-      <section aria-labelledby="week">
+      <section className="progress-section" aria-labelledby="week">
         <h2 id="week" className="text-2xl">
           The last seven days
         </h2>
@@ -70,7 +70,7 @@ export default function ProgressPage() {
         {!started && <p className="mt-3 text-muted">Nothing here yet. Your first answers will fill this page in.</p>}
       </section>
 
-      <section aria-labelledby="totals">
+      <section className="progress-section" aria-labelledby="totals">
         <h2 id="totals" className="text-2xl">
           So far
         </h2>
@@ -86,7 +86,7 @@ export default function ProgressPage() {
         </p>
       </section>
 
-      <section aria-labelledby="levels">
+      <section className="progress-section" aria-labelledby="levels">
         <h2 id="levels" className="text-2xl">
           Levels
         </h2>
@@ -120,7 +120,7 @@ export default function ProgressPage() {
         </ul>
       </section>
 
-      <section aria-labelledby="topics">
+      <section className="progress-section" aria-labelledby="topics">
         <h2 id="topics" className="text-2xl">
           Topics
         </h2>
@@ -133,7 +133,7 @@ export default function ProgressPage() {
         </div>
       </section>
 
-      <section aria-labelledby="stamps">
+      <section className="progress-section" aria-labelledby="stamps">
         <h2 id="stamps" className="text-2xl">
           Stamps
         </h2>

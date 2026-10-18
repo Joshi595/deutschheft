@@ -2,7 +2,6 @@
 import Base from '../../../layouts/Base.astro';
 import { getCatalog } from '../../../lib/content/catalog';
 import { MISSION_ICONS } from '../../../lib/content/icons';
-import { url } from '../../../lib/url';
 
 const catalog = await getCatalog();
 const groups = catalog.levels
@@ -11,13 +10,8 @@ const groups = catalog.levels
 ---
 
 <Base title="Conversations" description="Everyday situations to speak through: the app speaks the other person, you speak your part.">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('speak/')} class="hover:text-ink">Speak</a>
-    <span aria-hidden="true"> / </span>
-    <span>Conversations</span>
-  </nav>
 
-  <header class="mt-4 max-w-3xl">
+  <header class="mt-4">
     <p class="eyebrow" lang="de">Gespräche</p>
     <h1 class="mt-1 text-4xl sm:text-5xl">Conversations</h1>
     <p class="mt-3 text-lg text-muted">

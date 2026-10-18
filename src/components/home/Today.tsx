@@ -77,7 +77,7 @@ export default function Today() {
 
   return (
     <div className="grid gap-8">
-      <header>
+      <header className="today-header">
         <p className="eyebrow" lang="de">
           {now.toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long' })}
         </p>
@@ -242,7 +242,7 @@ function Journey({ level, levels }: { level: CourseLevel; levels: CourseLevel[] 
             return (
               <span
                 key={lesson.key}
-                className={`h-3 flex-1 rounded-sm ${newUnit ? 'ml-1.5' : ''} ${state.complete ? 'bg-good' : state.done > 0 ? 'bg-accent' : 'bg-surface-2'}`}
+                className={`h-3 flex-1 rounded-sm ${newUnit ? 'ml-1.5' : ''} ${state.complete ? 'bg-good-fill' : state.done > 0 ? 'bg-accent' : 'bg-surface-2'}`}
               />
             );
           })}

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { wordAtPoint } from '../../lib/word-at-point';
 import { saveWord } from '../../lib/stores';
 import { findWords, googleTranslateHref, MAX_CHARS, translate, type CourseWord, type Direction } from '../../lib/translate';
 
@@ -27,8 +28,7 @@ function loadWords(href: string): Promise<CourseWord[]> {
 }
 
 /**
- * A translate button on every page. Select text first and the button
- * translates it; otherwise it opens a box to type into.
+ * Click a page word for an immediate translation, or use the button for longer text.
  */
 export default function TranslatePanel({ wordsHref }: Props) {
   const [open, setOpen] = useState(false);
@@ -50,6 +50,34 @@ export default function TranslatePanel({ wordsHref }: Props) {
     if (open && focusInput.current) input.current?.focus();
   }, [open]);
 
+  useEffect(() => {
+    function onWordClick(event: MouseEvent) {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+      const target = event.target;
+      if (!(target instanceof Element) || panel.current?.contains(target) ||
+        target.closest('a, button, input, textarea, select, label, summary, [role="button"], [role="link"], [contenteditable]:not([contenteditable="false"])')) return;
+      // Preserve dragging to select a phrase for the existing Translate button.
+      if (window.getSelection()?.toString().trim()) return;
+      const picked = wordAtPoint(document, event.clientX, event.clientY);
+      if (!picked) return;
+      focusInput.current = false;
+      setOpen(true);
+      setText(picked);
+      setDirection('de-en');
+      void run(picked, 'de-en');
+    }
+    function onEscape(event: KeyboardEvent) {
+      if (event.key === 'Escape' && panel.current) close();
+    }
+    document.addEventListener('click', onWordClick);
+    document.addEventListener('keydown', onEscape);
+    return () => {
+      document.removeEventListener('click', onWordClick);
+      document.removeEventListener('keydown', onEscape);
+      request.current?.abort();
+    };
+  }, [wordsHref]);
+
   async function run(source: string, to = direction) {
     const clean = source.trim();
     if (!clean) return;
@@ -60,11 +88,15 @@ export default function TranslatePanel({ wordsHref }: Props) {
     setError('');
     setSaved(false);
     setResult(undefined);
+    setWords([]);
     const list = await loadWords(wordsHref);
     if (request.current !== controller) return;
     setWords(findWords(clean, to, list));
     try {
-      setResult({ source: clean, direction: to, text: await translate(clean, to, controller.signal) });
+      const translated = await translate(clean, to, controller.signal);
+      if (request.current === controller && !controller.signal.aborted) {
+        setResult({ source: clean, direction: to, text: translated });
+      }
     } catch (caught) {
       if (!controller.signal.aborted) setError(caught instanceof Error ? caught.message : String(caught));
     } finally {
@@ -93,11 +125,15 @@ export default function TranslatePanel({ wordsHref }: Props) {
   }
 
   function close() {
+    request.current?.abort();
+    setBusy(false);
     setOpen(false);
     button.current?.focus();
   }
 
   function swap() {
+    request.current?.abort();
+    setBusy(false);
     setDirection(direction === 'de-en' ? 'en-de' : 'de-en');
     setResult(undefined);
     setWords([]);
@@ -112,7 +148,7 @@ export default function TranslatePanel({ wordsHref }: Props) {
   }
 
   const german = result && (result.direction === 'de-en' ? result.source : result.text);
-  const [from, to] = direction.split('-');
+  const [from] = direction.split('-');
 
   return (
     <>
@@ -123,8 +159,11 @@ export default function TranslatePanel({ wordsHref }: Props) {
           role="dialog"
           aria-label="Translate"
           onKeyDown={(event) => event.key === 'Escape' && close()}
-          className="card fixed inset-x-3 bottom-[calc(7.75rem+env(safe-area-inset-bottom))] z-40 grid max-h-[calc(100dvh-11rem)] gap-3 overflow-y-auto p-4 shadow-[var(--lift)] sm:inset-x-auto sm:right-6 sm:bottom-22 sm:w-[25rem]"
+          className="card translate-panel"
         >
+          <div className="flex items-center justify-between gap-2">
+            <h2 className="text-lg font-semibold">Word translation</h2>
+          </div>
           <div className="flex items-center gap-2">
             <button type="button" className="btn btn-small" onClick={swap} aria-label={`${LABEL[direction]}. Swap languages`}>
               {LABEL[direction]}
@@ -175,8 +214,12 @@ export default function TranslatePanel({ wordsHref }: Props) {
           </form>
 
           {!result && !error && !busy && !text && (
-            <p className="text-sm text-muted">Tip: select text on any page, then press Translate.</p>
+            <p className="text-sm text-muted">Click any word on a page to translate it. For a phrase, select text and press Translate.</p>
           )}
+
+          <div role="status" aria-live="polite" aria-atomic="true">
+            {busy && <p className="rounded-lg bg-accent-soft p-4 font-semibold">Translating “{text}” …</p>}
+          </div>
 
           {error && (
             <p role="alert" className="rounded-lg bg-bad-soft px-3 py-2 text-sm">
@@ -185,8 +228,10 @@ export default function TranslatePanel({ wordsHref }: Props) {
           )}
 
           {result && (
-            <div className="rounded-lg bg-surface-2 p-3" aria-live="polite">
-              <p lang={to} className="text-lg">
+            <div className="translate-result" role="status" aria-live="polite" aria-atomic="true">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted">{result.direction === 'de-en' ? 'English translation' : 'German translation'}</p>
+              <p className="mt-1 text-sm text-muted">{result.source}</p>
+              <p lang={result.direction.split('-')[1]} className="mt-1 text-2xl font-semibold">
                 {result.text}
               </p>
               <div className="mt-2 flex flex-wrap items-center gap-2">
@@ -255,16 +300,16 @@ export default function TranslatePanel({ wordsHref }: Props) {
         aria-label="Translate"
         aria-expanded={open}
         aria-controls="translate-panel"
-        title="Translate (select text first to translate it)"
+        title="Click a word to translate, or open the translator"
         onPointerDown={rememberSelection}
         onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && rememberSelection()}
         onClick={onButton}
-        className="fixed right-4 bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-40 flex size-12 items-center justify-center gap-2 rounded-full bg-ink font-semibold text-bg shadow-[var(--lift)] transition-colors hover:bg-accent hover:text-accent-ink sm:right-6 sm:bottom-6 sm:w-auto sm:px-4"
+        className="translate-launcher"
       >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M3 5h8M7 3v2M9.5 5c-.6 3.4-2.7 6-5.5 7.5M5.5 8.5c1 1.6 2.6 2.9 4.5 3.5M12.5 21l4-9 4 9M14 18h5" />
         </svg>
-        <span className="hidden sm:inline">Translate</span>
+        <span>Translate</span>
       </button>
     </>
   );

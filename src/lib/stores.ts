@@ -1,4 +1,5 @@
 import { persistentAtom } from '@nanostores/persistent';
+import { lightAppearance } from './appearance';
 import { buildBackup, parseBackup, type Backup } from './backup';
 import {
   addWord,
@@ -21,7 +22,7 @@ import { cardId, enroll, schedule, type CardKind, type ReviewGrade, type ReviewS
  */
 
 export interface Settings {
-  theme: 'system' | 'light' | 'dark';
+  theme: 'light';
   /** Playback speed for spoken German, 0.5 to 1.2. */
   speechRate: number;
   /** Name of the browser voice the learner chose. Unset means the best one available. */
@@ -44,7 +45,7 @@ export const DAILY_GOALS = [
 ] as const;
 
 export const defaultSettings: Settings = {
-  theme: 'system',
+  theme: 'light',
   speechRate: 0.9,
   aiKey: '',
   aiModel: 'llama-3.3-70b-versatile',
@@ -81,7 +82,7 @@ export const $seenMilestones = persistentAtom<string[]>('lg:milestones-seen:v1',
 export const $settings = persistentAtom<Settings>(
   SETTINGS_KEY,
   defaultSettings,
-  json(defaultSettings, (value) => ({ ...defaultSettings, ...(value as Partial<Settings>) })),
+  json(defaultSettings, (value) => lightAppearance({ ...defaultSettings, ...(value as Partial<Settings>) })),
 );
 
 // --- Exercises -------------------------------------------------------------
@@ -189,7 +190,7 @@ export function clearMistakes(): void {
 // --- Settings and backup ----------------------------------------------------
 
 export function updateSettings(patch: Partial<Settings>): void {
-  $settings.set({ ...$settings.get(), ...patch });
+  $settings.set(lightAppearance({ ...$settings.get(), ...patch }));
 }
 
 export function exportBackup(now = new Date()): Backup {

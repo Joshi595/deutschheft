@@ -1,0 +1,15 @@
+---
+import type { LocalSection } from '../../lib/navigation';
+interface Props { sections: LocalSection[] }
+const { sections } = Astro.props;
+---
+<nav class="local-nav" aria-label="On this page" data-local-nav>
+  <div class="local-nav-inner">
+    <span class="local-nav-label">On this page</span>
+    <ul>
+      {sections.map((section, index) => (
+        <li><a href={`#${section.id}`} data-section-link data-tone={section.tone} aria-current={index === 0 ? 'location' : undefined}>{section.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</nav>

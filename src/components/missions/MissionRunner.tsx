@@ -244,7 +244,7 @@ export default function MissionRunner({ mission, next, listHref, speakHref }: Pr
         tabIndex={-1}
         role="group"
         aria-label={`Step ${stage.step + 1} of ${mission.steps.length}`}
-        className="rise scroll-mt-24 outline-none"
+        className="rise outline-none"
       >
         <ExerciseCard
           item={step.task}

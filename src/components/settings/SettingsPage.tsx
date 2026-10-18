@@ -13,17 +13,11 @@ import {
   importBackup,
   resetAll,
   updateSettings,
-  type Settings,
 } from '../../lib/stores';
 
 /** Short, with sounds a poor voice gets wrong: ch, ü, ei, and a question's melody. */
 const SAMPLE = 'Guten Tag! Ich möchte ein Brötchen und zwei Stück Kuchen. Wie geht es Ihnen heute?';
 
-const THEMES: { value: Settings['theme']; label: string }[] = [
-  { value: 'system', label: 'Match device' },
-  { value: 'light', label: 'Light' },
-  { value: 'dark', label: 'Dark' },
-];
 
 interface Props {
   /** Levels that have chapters, for the level choice. */
@@ -56,10 +50,6 @@ export default function SettingsPage({ levels }: Props) {
     void hearingMode().then(setHearing);
   }, []);
 
-  // The page renders after the browser has tried to jump to "#learning", so do the jump again.
-  useEffect(() => {
-    if (window.location.hash) document.querySelector(window.location.hash)?.scrollIntoView();
-  }, []);
 
   function download() {
     const backup = exportBackup();
@@ -140,20 +130,10 @@ export default function SettingsPage({ levels }: Props) {
         </fieldset>
       </Section>
 
-      <Section title="Appearance">
-        <div role="radiogroup" aria-label="Theme" className="flex flex-wrap gap-2">
-          {THEMES.map(({ value, label }) => (
-            <button
-              key={value}
-              type="button"
-              role="radio"
-              aria-checked={settings.theme === value}
-              className={`btn ${settings.theme === value ? 'btn-primary' : ''}`}
-              onClick={() => updateSettings({ theme: value })}
-            >
-              {label}
-            </button>
-          ))}
+      <Section title="Appearance" id="appearance">
+        <div className="flex items-start gap-3">
+          <span className="appearance-swatches" aria-hidden="true"><i /><i /><i /><i /></span>
+          <div><p className="font-semibold">A brighter space to learn</p><p className="mt-1 text-sm text-muted">Always light, with a different soft color for each area. Follow the colors and labels to find your way.</p></div>
         </div>
       </Section>
 
@@ -281,7 +261,7 @@ export default function SettingsPage({ levels }: Props) {
         )}
       </Section>
 
-      <Section title="AI explanations (optional)">
+      <Section title="AI explanations (optional)" id="ai">
         <p className="text-sm text-muted">
           Everything works without this. With your own Groq API key, a wrong answer gets an "Explain my mistake" button and
           writing exercises can be checked. The key is stored in this browser only, is sent only to Groq, and is never
@@ -322,7 +302,7 @@ export default function SettingsPage({ levels }: Props) {
         </label>
       </Section>
 
-      <Section title="Your data">
+      <Section title="Your data" id="data">
         <p className="text-sm text-muted">
           Stored in this browser only: {Object.keys(progress.exercises).length} answered exercises,{' '}
           {Object.keys(review).length} review cards, {notebook.words.length} saved words,{' '}
@@ -358,7 +338,7 @@ export default function SettingsPage({ levels }: Props) {
 
 function Section({ title, id, children }: { title: string; id?: string; children: React.ReactNode }) {
   return (
-    <section id={id} className="card grid scroll-mt-24 gap-4 p-5">
+    <section id={id} className="section-card grid gap-4">
       <h2 className="text-2xl">{title}</h2>
       {children}
     </section>

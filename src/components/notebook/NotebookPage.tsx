@@ -56,7 +56,7 @@ export default function NotebookPage({ lessons }: Props) {
         onChange={(event) => setQuery(event.target.value)}
       />
 
-      <div role="tablist" aria-label="Notebook sections" className="flex gap-1 border-b border-line">
+      <div role="tablist" aria-label="Notebook sections" className="notebook-tabs">
         {tabs.map(({ id, label, count }) => (
           <button
             key={id}
@@ -65,10 +65,19 @@ export default function NotebookPage({ lessons }: Props) {
             id={`tab-${id}`}
             aria-selected={tab === id}
             aria-controls={`panel-${id}`}
+            tabIndex={tab === id ? 0 : -1}
+            onKeyDown={(event) => {
+              if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+              event.preventDefault();
+              const current = tabs.findIndex((item) => item.id === tab);
+              const index = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1
+                : (current + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+              const next = tabs[index]!;
+              setTab(next.id);
+              document.getElementById(`tab-${next.id}`)?.focus();
+            }}
             onClick={() => setTab(id)}
-            className={`-mb-px border-b-2 px-3 py-2.5 text-sm font-semibold ${
-              tab === id ? 'border-accent text-ink' : 'border-transparent text-muted hover:text-ink'
-            }`}
+
           >
             {label} <span className="font-normal tabular-nums text-muted">{count}</span>
           </button>

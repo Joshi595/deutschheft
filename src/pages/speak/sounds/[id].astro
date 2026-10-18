@@ -16,13 +16,6 @@ const next = sounds[index + 1];
 ---
 
 <Base title={`The sound ${sound.title}`} description={sound.name} width="narrow">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('speak/')} class="hover:text-ink">Speak</a>
-    <span aria-hidden="true"> / </span>
-    <a href={url('speak/sounds/')} class="hover:text-ink">Sounds</a>
-    <span aria-hidden="true"> / </span>
-    <span>{sound.title}</span>
-  </nav>
 
   <header class="mt-4">
     <p class="eyebrow">Sound {sound.order} of {sounds.length}</p>
