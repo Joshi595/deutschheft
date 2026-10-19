@@ -118,15 +118,17 @@ await page.waitForURL(/a1\/01-/);
 const settings = await store('lg:settings:v1');
 ok('onboarding saved level and goal', settings.level === 'a1' && settings.dailyGoal === 100, JSON.stringify({ level: settings.level, goal: settings.dailyGoal }));
 
-// --- 2. Chapter practice as a focused session -----------------------------------
+// --- 2. Chapter practice, one part on one page -----------------------------------
 const lesson = yaml('exercises/a1/01-begruessung.yaml');
 const items = lesson.sets.flatMap((set) => set.items);
 // The practice section loads after the page; wait for it before counting its parts.
 await page.getByRole('button', { name: 'Start part 1' }).waitFor();
 ok('a chapter comes in two parts', (await page.getByText(/^Part [12] ·/).count()) === 2);
 await page.getByRole('button', { name: 'Start part 1' }).click();
-ok('session shows one exercise at a time', (await page.locator('article').count()) === 1);
-ok('session has a progress bar', await page.getByRole('progressbar', { name: 'Session progress' }).isVisible());
+// A part is one page: every exercise of it at once, to scroll through, with no Continue between them.
+const partSize = await page.locator('article').count();
+ok('a part shows all its exercises on one page', partSize > 5 && partSize < items.length, `${partSize} cards`);
+ok('session has a progress bar', await page.getByRole('progressbar', { name: 'Exercises checked' }).isVisible());
 
 // First item wrong on purpose, to see the explanation and the summary's review list.
 let card = await answer(items[0], { wrong: true });
@@ -136,22 +138,15 @@ if (await card.getByRole('button', { name: 'Check' }).count()) {
   // typed answers get a second try
   await answer(items[0]);
 }
-await card.getByRole('button', { name: 'Continue' }).click();
 
 card = await answer(items[1]);
 ok('right answer is confirmed with points', (await card.getByText('Richtig!').isVisible()) && (await card.getByText('+10 points').isVisible()));
 await shot('2-right');
-await card.getByRole('button', { name: 'Continue' }).click();
-// Part 1 is the first sets in order, so the queue follows the file until "Finish".
-for (let i = 2; ; i++) {
-  card = await answer(items[i]);
-  const finish = card.getByRole('button', { name: 'Finish' });
-  if (await finish.count()) {
-    await finish.click();
-    break;
-  }
-  await card.getByRole('button', { name: 'Continue' }).click();
-}
+ok('no Continue button between exercises', (await page.getByRole('button', { name: 'Continue' }).count()) === 0);
+// Part 1 is the first sets in order, so the page follows the file.
+for (let i = 2; i < partSize; i++) await answer(items[i]);
+ok('the bar counts every checked exercise', (await page.getByText(`${partSize} of ${partSize} checked`).count()) === 1);
+await page.getByRole('button', { name: 'See how it went' }).click();
 ok('part ends with a summary', await page.getByRole('heading', { name: 'Part 1 done' }).isVisible());
 ok('summary lists what to look at again', await page.getByText('Worth another look').isVisible());
 ok('summary shows the wrong answer struck through', (await page.locator('#practice li del, #practice li [role=radio]').count()) > 0);
@@ -165,8 +160,6 @@ ok('header shows points against the goal', (await page.locator('[data-goal-text]
 ok('missed exercise joined the review deck', Object.keys(await store('lg:review:v1')).some((id) => id.startsWith('exercise:')));
 await page.getByRole('button', { name: 'Done for now' }).click();
 ok('overview offers to continue', await page.getByRole('button', { name: 'Continue with part 1' }).isVisible());
-await page.getByRole('button', { name: 'Show all exercises as a list' }).click();
-ok('the full list is still available', (await page.locator('article').count()) === items.length, `${await page.locator('article').count()} cards`);
 
 // --- 3. Today, as a returning learner -----------------------------------------
 await page.goto(BASE, { waitUntil: 'networkidle' });

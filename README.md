@@ -38,7 +38,7 @@ On a phone, open the site and choose **Add to Home Screen** to install it as an 
   straight into the first chapter.
 - **Exercises** of eleven kinds, from multiple choice and gap texts to reading and listening tasks,
   forms, and writing and speaking tasks with a checklist and a model answer. A chapter's exercises
-  come in at most two parts of about ten minutes, one exercise on screen, with a summary after each
+  come in at most two parts of about ten minutes, each a single page to scroll through, with a summary after each
   part. Every checked answer shows what you gave next to the right answer, struck through in red
   when it was wrong. Typed answers get a second try, a hint, and then the solution with an
   explanation.
