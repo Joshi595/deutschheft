@@ -52,7 +52,7 @@ export function useStepFocus(step: number) {
   return ref;
 }
 
-export function SessionBar({ position, total, label, onExit }: { position: number; total: number; label: string; onExit: () => void }) {
+export function SessionBar({ position, total, label, count, onExit }: { position: number; total: number; label: string; count?: string; onExit: () => void }) {
   return (
     <div className="flex items-center gap-3">
       <button type="button" className="btn btn-quiet btn-small -ml-2" onClick={onExit}>
@@ -69,7 +69,7 @@ export function SessionBar({ position, total, label, onExit }: { position: numbe
         <div className="meter-fill" style={{ width: `${(position / total) * 100}%` }} />
       </div>
       <span className="text-sm text-muted tabular-nums">
-        {Math.min(position + 1, total)} / {total}
+        {count ?? `${Math.min(position + 1, total)} / ${total}`}
       </span>
     </div>
   );
