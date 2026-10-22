@@ -8,41 +8,49 @@ sets:
         tags: [modal verbs]
         prompt: "Ich ___ gut schwimmen. (können)"
         answers: [kann]
+        explanation: "Modal verbs have no ending with ich and er: ich kann, er kann."
       - id: form2
         type: fill-blank
         tags: [modal verbs]
         prompt: "___ du morgen kommen? (können)"
         answers: [Kannst]
+        explanation: "können changes to kann in the singular; du adds -st: du kannst."
       - id: form3
         type: fill-blank
         tags: [modal verbs]
         prompt: "Er ___ am Samstag arbeiten. (müssen)"
         answers: [muss]
+        explanation: "müssen becomes muss in the singular, with no ending for er: er muss."
       - id: form4
         type: fill-blank
         tags: [modal verbs]
         prompt: "Wir ___ ins Kino gehen. (wollen)"
         answers: [wollen]
+        explanation: "In the plural, modal verbs are regular: wir wollen."
       - id: form5
         type: fill-blank
         tags: [modal verbs]
         prompt: "___ ich hier parken? (dürfen)"
         answers: [Darf]
+        explanation: "dürfen becomes darf in the singular: Darf ich hier parken?"
       - id: form6
         type: fill-blank
         tags: [modal verbs]
         prompt: "Was ___ du heute machen? (wollen)"
         answers: [willst]
+        explanation: "wollen becomes will in the singular, and du adds -st: du willst."
       - id: form7
         type: fill-blank
         tags: [modal verbs]
         prompt: "Ihr ___ viel lernen. (müssen)"
         answers: [müsst]
+        explanation: "In the plural there is no vowel change: ihr müsst."
       - id: form8
         type: fill-blank
         tags: [modal verbs]
         prompt: "Ich ___ viel Wasser trinken. (sollen)"
         answers: [soll]
+        explanation: "sollen keeps its o and has no ending with ich: ich soll."
 
   - title: The infinitive goes to the end
     instructions: Put the words in the right order.
@@ -52,21 +60,25 @@ sets:
         tags: [sentence bracket]
         prompt: I can swim well.
         answer: Ich kann gut schwimmen.
+        explanation: "The modal verb comes second and the infinitive goes to the end: Ich kann gut schwimmen."
       - id: order2
         type: word-order
         tags: [sentence bracket]
         prompt: We have to work today.
         answer: Wir müssen heute arbeiten.
+        explanation: "müssen comes second, heute after it, and the infinitive arbeiten at the end."
       - id: order3
         type: word-order
         tags: [sentence bracket]
         prompt: Can you help me, please? (formal)
         answer: Können Sie mir bitte helfen?
+        explanation: "In a question the modal verb comes first and the infinitive helfen goes to the end."
       - id: order4
         type: word-order
         tags: [sentence bracket, separable verbs]
         prompt: I have to get up at six o'clock.
         answer: Ich muss um sechs Uhr aufstehen.
+        explanation: "The modal verb is second, and the separable verb stays whole at the end: aufstehen."
       - id: order5
         type: multiple-choice
         tags: [sentence bracket]
@@ -76,6 +88,7 @@ sets:
           - Ich will fahren morgen nach Berlin.
           - Ich will morgen fahren nach Berlin.
         answer: Ich will morgen nach Berlin fahren.
+        explanation: "The infinitive always goes to the very end of the sentence, after the place: … nach Berlin fahren."
 
   - title: Which modal verb?
     items:
@@ -85,12 +98,14 @@ sets:
         prompt: Hier ___ man nicht rauchen. (It is forbidden.)
         options: [darf, muss, will]
         answer: darf
+        explanation: "man darf nicht means it is not allowed. muss nicht would mean 'does not have to'."
       - id: which2
         type: multiple-choice
         tags: [modal verbs, meaning]
         prompt: Ich ___ leider nicht kommen. Ich habe keine Zeit.
         options: [kann, darf, soll]
         answer: kann
+        explanation: "können is for what you are able to do; with no time, Anna is not able to come."
       - id: which3
         type: multiple-choice
         tags: [modal verbs, meaning]
@@ -124,6 +139,7 @@ sets:
           - { left: wollen, right: want to }
           - { left: dürfen, right: be allowed to }
           - { left: sollen, right: be supposed to }
+        explanation: "können is ability, müssen necessity, wollen wish, dürfen permission, and sollen what someone else expects."
 
   - title: Read the signs
     instructions: As in the reading exam. Is the statement right or wrong?
@@ -137,6 +153,7 @@ sets:
           text: Rauchen verboten!
         prompt: Hier darf man rauchen.
         answer: false
+        explanation: "Rauchen verboten! means smoking is forbidden, so you may not smoke here."
       - id: sign2
         type: true-false
         tags: [reading, signs, modal verbs]
@@ -149,6 +166,7 @@ sets:
             Montag bis Samstag, 8 bis 20 Uhr
         prompt: Kunden dürfen hier am Freitag parken.
         answer: true
+        explanation: "Customers may park Monday to Saturday, 8 to 20 o'clock, and Friday is one of those days."
       - id: sign3
         type: true-false
         tags: [reading, signs, modal verbs]
@@ -160,6 +178,7 @@ sets:
             Kinder unter 10 Jahren dürfen nur mit den Eltern schwimmen.
         prompt: Ein Kind mit acht Jahren darf allein schwimmen.
         answer: false
+        explanation: "Children under 10 may only swim with their parents, and eight is under 10."
 
   - title: Listen
     stimulus:
@@ -180,11 +199,13 @@ sets:
         tags: [listening, modal verbs]
         prompt: Anna muss am Samstag arbeiten.
         answer: true
+        explanation: "Anna says: Am Samstag kann ich leider nicht. Ich muss arbeiten."
       - id: listen2
         type: true-false
         tags: [listening, modal verbs]
         prompt: Anna kann am Sonntag nicht kommen.
         answer: false
+        explanation: "Anna says: Am Sonntag muss ich nicht arbeiten. Da kann ich kommen."
 
   - title: Say it in German
     items:
@@ -194,12 +215,14 @@ sets:
         prompt: I have to go now.
         answers:
           - Ich muss jetzt gehen.
+        explanation: "müssen becomes muss with ich, and the infinitive gehen goes to the end."
       - id: tr2
         type: translation
         tags: [modal verbs]
         prompt: Can you swim? (informal)
         answers:
           - Kannst du schwimmen?
+        explanation: "A yes/no question starts with the modal verb: Kannst du schwimmen?"
       - id: tr3
         type: translation
         tags: [modal verbs]
@@ -207,6 +230,7 @@ sets:
         answers:
           - Ich kann leider nicht kommen.
           - Leider kann ich nicht kommen.
+        explanation: "leider (unfortunately) goes after the verb or at the start; nicht stands before the infinitive at the end."
       - id: speak1
         type: speaking-task
         tags: [speaking, requests]

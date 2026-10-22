@@ -8,43 +8,51 @@ sets:
         tags: [numbers]
         prompt: "sieben = ___"
         answers: ["7"]
+        explanation: "sieben is 7. In 17 and 70 it loses its -en: siebzehn, siebzig."
       - id: digit2
         type: fill-blank
         tags: [numbers]
         prompt: "zwölf = ___"
         answers: ["12"]
+        explanation: "elf and zwölf are 11 and 12, the two teens with their own names."
       - id: digit3
         type: fill-blank
         tags: [numbers]
         prompt: "sechzehn = ___"
         answers: ["16"]
+        explanation: "Teens are the small number plus -zehn. sechs drops its s before -zehn: sechzehn."
       - id: digit4
         type: fill-blank
         tags: [numbers]
         prompt: "dreißig = ___"
         answers: ["30"]
+        explanation: "dreißig is 30, the one tens number with ß instead of -zig."
       - id: digit5
         type: fill-blank
         tags: [numbers, unit before ten]
         prompt: "einundzwanzig = ___"
         answers: ["21"]
         hint: The unit is said first.
+        explanation: "German says the ones first: einundzwanzig is 'one-and-twenty', 21."
       - id: digit6
         type: fill-blank
         tags: [numbers, unit before ten]
         prompt: "siebenundvierzig = ___"
         answers: ["47"]
         hint: The unit is said first.
+        explanation: "Ones first, then the tens: sieben-und-vierzig is 47."
       - id: digit7
         type: fill-blank
         tags: [numbers, unit before ten]
         prompt: "dreiundneunzig = ___"
         answers: ["93"]
+        explanation: "drei-und-neunzig, 'three-and-ninety', is 93: the ones come before the tens."
       - id: digit8
         type: fill-blank
         tags: [numbers]
         prompt: "zweihundertfünfzig = ___"
         answers: ["250"]
+        explanation: "Hundreds come first, then the rest is read as usual: zweihundert-fünfzig is 250."
 
   - title: Digits to words
     items:
@@ -61,29 +69,34 @@ sets:
         prompt: "60"
         options: [sechzig, sechszig, sechzehn]
         answer: sechzig
+        explanation: "sechs loses its s before -zig and -zehn: sechzig (60), sechzehn (16)."
       - id: word3
         type: multiple-choice
         tags: [numbers, unit before ten]
         prompt: "35"
         options: [fünfunddreißig, dreiundfünfzig, dreißigfünf]
         answer: fünfunddreißig
+        explanation: "Ones first, joined with und: fünf-und-dreißig is 35."
       - id: word4
         type: multiple-choice
         tags: [numbers, unit before ten]
         prompt: "82"
         options: [zweiundachtzig, achtundzwanzig, achtzigzwei]
         answer: zweiundachtzig
+        explanation: "Ones first: zwei-und-achtzig is 82. achtundzwanzig would be 28."
       - id: word5
         type: fill-blank
         tags: [numbers]
         prompt: "21 = ___"
         answers: [einundzwanzig]
         hint: eins loses its s.
+        explanation: "21 is one-and-twenty: einundzwanzig, written as one word, with ein, not eins."
       - id: word6
         type: fill-blank
         tags: [numbers]
         prompt: "13 = ___"
         answers: [dreizehn]
+        explanation: "Teens are the small number plus -zehn: drei + zehn = dreizehn."
 
   - title: Listen and write the number
     instructions: Write what you hear in digits.
@@ -98,6 +111,7 @@ sets:
             - text: "vierundzwanzig"
         prompt: "Die Zahl ist ___."
         answers: ["24"]
+        explanation: "vier-und-zwanzig: the ones come first, so you hear 4 before 20."
       - id: hear2
         type: fill-blank
         tags: [listening, numbers]
@@ -108,6 +122,7 @@ sets:
             - text: "achtundsechzig"
         prompt: "Die Zahl ist ___."
         answers: ["68"]
+        explanation: "acht-und-sechzig: 8 and 60, so 68."
       - id: hear3
         type: fill-blank
         tags: [listening, numbers]
@@ -118,6 +133,7 @@ sets:
             - text: "dreihundertfünfzehn"
         prompt: "Die Zahl ist ___."
         answers: ["315"]
+        explanation: "dreihundert-fünfzehn: three hundred, then fünfzehn (15)."
       - id: hear4
         type: multiple-choice
         tags: [listening, prices]
@@ -132,6 +148,7 @@ sets:
         prompt: Was kostet das Buch?
         options: ["12,90 €", "20,90 €", "12,19 €"]
         answer: "12,90 €"
+        explanation: "zwölf Euro neunzig: the euros first, then the cents, so 12,90 €."
       - id: hear5
         type: multiple-choice
         tags: [listening, phone numbers]
@@ -144,6 +161,7 @@ sets:
         prompt: Wie ist die Telefonnummer von Frau Weber?
         options: ["030 47 291", "030 74 291", "030 47 921"]
         answer: "030 47 291"
+        explanation: "Phone numbers are read digit by digit: null-drei-null, vier-sieben, zwei-neun-eins."
 
   - title: Age
     items:
@@ -158,11 +176,13 @@ sets:
         tags: [age]
         prompt: How old are you? (formal)
         answer: Wie alt sind Sie?
+        explanation: "Age is asked with sein: Wie alt sind Sie? The verb comes after the question words wie alt."
       - id: age3
         type: word-order
         tags: [age]
         prompt: I am twenty-five years old.
         answer: Ich bin fünfundzwanzig Jahre alt.
+        explanation: "German gives age with sein plus Jahre alt: Ich bin 25 Jahre alt."
 
   - title: Prices
     items:
@@ -175,6 +195,7 @@ sets:
           - { left: "0,99 €", right: neunundneunzig Cent }
           - { left: "15,00 €", right: fünfzehn Euro }
           - { left: "50,30 €", right: fünfzig Euro dreißig }
+        explanation: "Prices are said as euros then cents, without the word Cent: drei Euro fünfzig. Below one euro you say only the cents."
       - id: price2
         type: multiple-choice
         tags: [prices]
@@ -197,6 +218,7 @@ sets:
           - { label: Hausnummer, answers: ["8"] }
           - { label: Postleitzahl, answers: ["50667"] }
           - { label: Wohnort, answers: [Köln] }
+        explanation: "Take each answer straight from the text: Alter is the age, Postleitzahl the postcode, and the street and house number are separate."
 
   - title: Say it in German
     items:
@@ -207,6 +229,7 @@ sets:
         answers:
           - Ich bin dreißig Jahre alt.
           - Ich bin 30 Jahre alt.
+        explanation: "German says age with sein, not haben: Ich bin 30 Jahre alt."
       - id: tr2
         type: translation
         tags: [prices]
@@ -214,12 +237,14 @@ sets:
         answers:
           - Was kostet das?
           - Wie viel kostet das?
+        explanation: "Was kostet das? or Wie viel kostet das? Both ask for the price; kosten agrees with das."
       - id: tr3
         type: translation
         tags: [age]
         prompt: How old are you? (informal)
         answers:
           - Wie alt bist du?
+        explanation: "With a friend you use du, so sein becomes bist: Wie alt bist du?"
       - id: speak1
         type: speaking-task
         tags: [speaking]

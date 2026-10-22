@@ -10,21 +10,25 @@ sets:
         answers:
           - Kommen Sie bitte!
           - Bitte kommen Sie!
+        explanation: "The polite imperative is the verb, then Sie: Kommen Sie bitte! bitte makes it a request."
       - id: sie2
         type: word-order
         tags: [imperative]
         prompt: Please speak slowly.
         answer: Sprechen Sie bitte langsam.
+        explanation: "Sie imperative: the verb first, then Sie, then bitte and the rest."
       - id: sie3
         type: word-order
         tags: [imperative]
         prompt: Please wait a moment.
         answer: Warten Sie bitte einen Moment.
+        explanation: "Verb first, then Sie: Warten Sie bitte einen Moment."
       - id: sie4
         type: word-order
         tags: [imperative, separable verbs]
         prompt: Please fill in the form.
         answer: Füllen Sie bitte das Formular aus.
+        explanation: "ausfüllen is separable: Füllen comes first and aus goes to the end."
 
   - title: The du form
     instructions: Write the imperative for du. One word.
@@ -34,11 +38,13 @@ sets:
         tags: [imperative]
         prompt: "___ bitte her! (kommen)"
         answers: [Komm]
+        explanation: "The du imperative is the stem with no du and no -st: kommen → komm."
       - id: du2
         type: fill-blank
         tags: [imperative]
         prompt: "___ bitte die Tür zu. (machen)"
         answers: [Mach]
+        explanation: "machen → mach; zumachen is separable, so zu goes to the end."
       - id: du3
         type: fill-blank
         tags: [imperative]
@@ -50,11 +56,13 @@ sets:
         tags: [imperative, stem-changing verbs]
         prompt: "___ den Bus! (nehmen)"
         answers: [Nimm]
+        explanation: "Verbs with e→i keep the change in the du imperative: du nimmst → nimm!"
       - id: du5
         type: fill-blank
         tags: [imperative, stem-changing verbs]
         prompt: "___ mir bitte das Buch. (geben)"
         answers: [Gib]
+        explanation: "geben changes e→i with du (du gibst), so the imperative is gib!"
       - id: du6
         type: fill-blank
         tags: [imperative, stem-changing verbs]
@@ -66,11 +74,13 @@ sets:
         tags: [imperative, stem-changing verbs]
         prompt: "___ bitte den Text. (lesen)"
         answers: [Lies]
+        explanation: "lesen changes e→ie (du liest), so the imperative is lies!"
       - id: du8
         type: fill-blank
         tags: [imperative]
         prompt: "___ bitte ruhig! (sein)"
         answers: [Sei]
+        explanation: "sein has its own imperative: sei! (Sie: seien Sie!, ihr: seid!)."
 
   - title: Which form?
     items:
@@ -80,24 +90,28 @@ sets:
         prompt: You speak to your friend Tom.
         options: [Komm bitte!, Kommen Sie bitte!, Kommt bitte!]
         answer: Komm bitte!
+        explanation: "One friend is du, so the imperative is the stem: Komm bitte!"
       - id: form2
         type: multiple-choice
         tags: [imperative]
         prompt: You speak to your children, Lena and Max.
         options: [Kommt bitte!, Komm bitte!, Kommen Sie bitte!]
         answer: Kommt bitte!
+        explanation: "Two children are ihr, and the ihr imperative is the ihr form without ihr: Kommt bitte!"
       - id: form3
         type: multiple-choice
         tags: [imperative]
         prompt: You speak to a customer in a shop.
         options: [Kommen Sie bitte!, Komm bitte!, Kommt bitte!]
         answer: Kommen Sie bitte!
+        explanation: "A customer is addressed as Sie: Kommen Sie bitte!"
       - id: form4
         type: multiple-choice
         tags: [imperative]
         prompt: Which is correct?
         options: [Nimm den Bus!, Nehm den Bus!, Nimmst den Bus!]
         answer: Nimm den Bus!
+        explanation: "nehmen changes to nimmst with du, and the imperative keeps the i: nimm!"
       - id: form5
         type: multiple-choice
         tags: [imperative, separable verbs]
@@ -107,6 +121,7 @@ sets:
           - Aufmachen Sie bitte das Fenster.
           - Machen Sie auf bitte das Fenster.
         answer: Machen Sie bitte das Fenster auf.
+        explanation: "aufmachen is separable: the verb comes first, auf goes to the end."
 
   - title: Signs and instructions
     items:
@@ -123,6 +138,7 @@ sets:
           - Man muss hier rauchen.
           - Man kann hier Zigaretten kaufen.
         answer: Man darf hier nicht rauchen.
+        explanation: "Bitte nicht rauchen asks you not to smoke, so smoking is not allowed."
       - id: sign2
         type: multiple-choice
         tags: [reading, signs]
@@ -138,6 +154,7 @@ sets:
           - Sofort zur Anmeldung gehen.
           - Ein Formular unterschreiben.
         answer: Eine Nummer nehmen und warten.
+        explanation: "The sign asks you to take a number (eine Nummer ziehen) and wait."
       - id: sign3
         type: true-false
         tags: [reading, signs]
@@ -149,6 +166,7 @@ sets:
             Tür bitte immer schließen.
         prompt: Die Tür soll offen bleiben.
         answer: false
+        explanation: "Tür bitte immer schließen asks you to always close the door."
 
   - title: Request and answer
     items:
@@ -161,12 +179,14 @@ sets:
           - { left: Können Sie das bitte wiederholen?, right: "Ja, natürlich. Noch einmal …" }
           - { left: Haben Sie einen Ausweis?, right: "Ja, einen Moment." }
           - { left: Machen Sie bitte das Fenster zu., right: "Ja, gern. Es ist kalt." }
+        explanation: "Hier, bitte goes with handing something over, Ja, natürlich with repeating, Einen Moment with looking for an ID, and Es ist kalt with closing the window."
       - id: ask2
         type: multiple-choice
         tags: [requests]
         prompt: "Someone asks: Können Sie mir bitte helfen? You are happy to. You say:"
         options: ["Ja, gern.", "Nein, danke.", "Bitte nicht."]
         answer: "Ja, gern."
+        explanation: "Ja, gern means 'yes, gladly'. Nein, danke would turn down an offer."
 
   - title: At the office
     stimulus:
@@ -185,6 +205,7 @@ sets:
         tags: [listening, requests]
         prompt: Herr Kaya soll ein Formular ausfüllen.
         answer: true
+        explanation: "The clerk says: Füllen Sie bitte das Formular aus."
       - id: office2
         type: multiple-choice
         tags: [listening, requests]
@@ -194,11 +215,13 @@ sets:
           - Er hat keinen Ausweis.
           - Er möchte gehen.
         answer: Die Frau soll langsam sprechen.
+        explanation: "Herr Kaya asks: können Sie bitte langsam sprechen?"
       - id: office3
         type: true-false
         tags: [listening, requests]
         prompt: Die Angestellte möchte den Ausweis sehen.
         answer: true
+        explanation: "At the end she says: zeigen Sie mir bitte Ihren Ausweis."
 
   - title: Now you ask
     items:
@@ -209,12 +232,14 @@ sets:
         answers:
           - Geben Sie mir bitte das Buch.
           - Bitte geben Sie mir das Buch.
+        explanation: "Polite imperative: Geben Sie, then mir (to me), then the object das Buch."
       - id: tr2
         type: translation
         tags: [imperative]
         prompt: Do not forget the book! (informal, one person)
         answers:
           - Vergiss das Buch nicht!
+        explanation: "vergessen changes e→i (du vergisst), so the du imperative is vergiss! nicht goes at the end."
       - id: speak1
         type: speaking-task
         tags: [speaking, requests]

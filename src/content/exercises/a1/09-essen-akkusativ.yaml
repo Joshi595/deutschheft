@@ -7,21 +7,25 @@ sets:
         tags: [food, noun gender]
         prompt: "___ Kaffee"
         answers: [der]
+        explanation: "Kaffee is masculine: der Kaffee. So are most drinks except das Bier and das Wasser."
       - id: art2
         type: fill-blank
         tags: [food, noun gender]
         prompt: "___ Milch"
         answers: [die]
+        explanation: "Milch is feminine: die Milch."
       - id: art3
         type: fill-blank
         tags: [food, noun gender]
         prompt: "___ Brot"
         answers: [das]
+        explanation: "Brot is neuter: das Brot."
       - id: art4
         type: fill-blank
         tags: [food, noun gender]
         prompt: "___ Apfel"
         answers: [der]
+        explanation: "Apfel is masculine: der Apfel."
       - id: art5
         type: matching
         tags: [food]
@@ -33,6 +37,7 @@ sets:
           - { left: der Käse, right: cheese }
           - { left: das Ei, right: egg }
           - { left: der Saft, right: juice }
+        explanation: "Gemüse and Obst are collective words with no plural; Fleisch and Ei are neuter, Käse and Saft masculine."
 
   - title: den, die or das?
     instructions: The noun is the direct object. Remember that only masculine changes.
@@ -42,6 +47,7 @@ sets:
         tags: [accusative]
         prompt: "Ich trinke ___ Kaffee. (der)"
         answers: [den]
+        explanation: "Kaffee is the direct object of trinken, and only der changes in the accusative: der → den."
       - id: acc2
         type: fill-blank
         tags: [accusative]
@@ -59,11 +65,13 @@ sets:
         tags: [accusative]
         prompt: "Sie nimmt ___ Salat. (der)"
         answers: [den]
+        explanation: "Salat is masculine and the object of nehmen, so der becomes den."
       - id: acc5
         type: fill-blank
         tags: [accusative]
         prompt: "Ich brauche ___ Eier. (die, plural)"
         answers: [die]
+        explanation: "Only masculine nouns change in the accusative. Plural die stays die."
 
   - title: ein, eine or einen?
     items:
@@ -72,21 +80,25 @@ sets:
         tags: [accusative]
         prompt: "Ich esse ___ Apfel."
         answers: [einen]
+        explanation: "Apfel is masculine and the object of essen, so ein becomes einen."
       - id: ein2
         type: fill-blank
         tags: [accusative]
         prompt: "Sie möchte ___ Suppe."
         answers: [eine]
+        explanation: "Suppe is feminine; eine stays eine in the accusative."
       - id: ein3
         type: fill-blank
         tags: [accusative]
         prompt: "Wir kaufen ___ Brot."
         answers: [ein]
+        explanation: "Brot is neuter; ein stays ein in the accusative."
       - id: ein4
         type: fill-blank
         tags: [accusative]
         prompt: "Ich möchte ___ Tee, bitte."
         answers: [einen]
+        explanation: "Tee is masculine and the object of möchten, so it is einen Tee."
       - id: ein5
         type: cloze
         tags: [accusative]
@@ -110,16 +122,19 @@ sets:
         tags: [accusative, kein]
         prompt: "Er trinkt ___ Kaffee."
         answers: [keinen]
+        explanation: "Kaffee is masculine and the object, so kein becomes keinen, just like ein becomes einen."
       - id: kein2
         type: fill-blank
         tags: [accusative, kein]
         prompt: "Ich esse ___ Fleisch."
         answers: [kein]
+        explanation: "Fleisch is neuter, so kein stays kein."
       - id: kein3
         type: fill-blank
         tags: [accusative, kein]
         prompt: "Wir haben ___ Milch."
         answers: [keine]
+        explanation: "Milch is feminine, so it is keine Milch."
 
   - title: mögen or möchten?
     items:
@@ -128,16 +143,19 @@ sets:
         tags: [mögen]
         prompt: "Ich ___ Kaffee. (mögen)"
         answers: [mag]
+        explanation: "mögen is irregular: ich mag, du magst, er mag. ich has no ending."
       - id: mag2
         type: fill-blank
         tags: [mögen]
         prompt: "___ du Fisch? (mögen)"
         answers: [Magst]
+        explanation: "With du, mögen becomes magst, and the verb comes first in a yes/no question."
       - id: mag3
         type: fill-blank
         tags: [möchten]
         prompt: "Was ___ Sie trinken? (möchten)"
         answers: [möchten]
+        explanation: "möchten with formal Sie keeps its -en ending: Was möchten Sie trinken?"
       - id: mag4
         type: multiple-choice
         tags: [mögen, möchten]
@@ -146,12 +164,14 @@ sets:
           - "Ich möchte einen Kaffee, bitte."
           - "Ich mag einen Kaffee, bitte."
         answer: "Ich möchte einen Kaffee, bitte."
+        explanation: "To order, use möchte (would like). Ich mag means 'I like' in general and sounds odd when ordering."
       - id: mag5
         type: multiple-choice
         tags: [gern]
         prompt: How do you say "I like eating pizza"?
         options: [Ich esse gern Pizza., Ich mag essen Pizza., Ich gern esse Pizza.]
         answer: Ich esse gern Pizza.
+        explanation: "To like doing something, use the verb plus gern: Ich esse gern Pizza."
 
   - title: In the café
     stimulus:
@@ -175,17 +195,20 @@ sets:
         prompt: Was trinkt die Frau?
         options: [einen Tee, einen Kaffee, einen Saft]
         answer: einen Tee
+        explanation: "The woman orders einen Tee und ein Stück Kuchen. The man has the coffee."
       - id: cafe2
         type: true-false
         tags: [listening, food]
         prompt: Der Mann isst ein Stück Kuchen.
         answer: false
+        explanation: "The man only takes a coffee: Ich esse nichts, danke. The cake is the woman's."
       - id: cafe3
         type: multiple-choice
         tags: [listening, prices]
         prompt: Was kostet alles zusammen?
         options: ["9,40 €", "9,14 €", "19,40 €"]
         answer: "9,40 €"
+        explanation: "The waiter says neun Euro vierzig, which is 9,40 €."
 
   - title: Say it in German
     items:
@@ -194,21 +217,25 @@ sets:
         tags: [accusative, möchten]
         prompt: I would like a coffee and a piece of cake.
         answer: Ich möchte einen Kaffee und ein Stück Kuchen.
+        explanation: "Kaffee is masculine, so einen Kaffee; Stück is neuter, so ein Stück Kuchen."
       - id: tr1
         type: translation
         tags: [accusative]
         prompt: I am eating an apple.
         answers: [Ich esse einen Apfel.]
+        explanation: "Apfel is masculine and the object of essen, so 'an apple' is einen Apfel."
       - id: tr2
         type: translation
         tags: [mögen]
         prompt: He does not like cheese.
         answers: [Er mag keinen Käse.]
+        explanation: "'Not … any' with a noun is kein. Käse is masculine and the object, so keinen Käse."
       - id: tr3
         type: translation
         tags: [möchten]
         prompt: We would like to pay.
         answers: [Wir möchten zahlen.]
+        explanation: "möchten plus an infinitive at the end: Wir möchten zahlen."
       - id: speak1
         type: speaking-task
         tags: [speaking, food]

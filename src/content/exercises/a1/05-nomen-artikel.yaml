@@ -8,36 +8,43 @@ sets:
         tags: [noun gender]
         prompt: "___ Tisch"
         answers: [der]
+        explanation: "Tisch is masculine: der Tisch. There is no rule for this one; learn the article with the noun."
       - id: art2
         type: fill-blank
         tags: [noun gender]
         prompt: "___ Lampe"
         answers: [die]
+        explanation: "Most nouns ending in -e are feminine: die Lampe, die Tasche, die Straße."
       - id: art3
         type: fill-blank
         tags: [noun gender]
         prompt: "___ Buch"
         answers: [das]
+        explanation: "Buch is neuter: das Buch. Learn every noun with its article."
       - id: art4
         type: fill-blank
         tags: [noun gender]
         prompt: "___ Stuhl"
         answers: [der]
+        explanation: "Stuhl is masculine: der Stuhl. Learn the article together with the word."
       - id: art5
         type: fill-blank
         tags: [noun gender]
         prompt: "___ Tasche"
         answers: [die]
+        explanation: "Nouns ending in -e are usually feminine: die Tasche."
       - id: art6
         type: fill-blank
         tags: [noun gender]
         prompt: "___ Fenster"
         answers: [das]
+        explanation: "Fenster is neuter: das Fenster. Learn it as one unit with its article."
       - id: art7
         type: fill-blank
         tags: [noun gender]
         prompt: "___ Kind"
         answers: [das]
+        explanation: "Kind is neuter, whether the child is a boy or a girl: das Kind."
 
   - title: Use the ending
     instructions: You may not know these words, but the ending tells you the gender.
@@ -99,39 +106,46 @@ sets:
         tags: [plural]
         prompt: "das Kind, drei ___"
         answers: [Kinder]
+        explanation: "Many short neuter nouns add -er: das Kind, die Kinder."
       - id: plural3
         type: fill-blank
         tags: [plural]
         prompt: "das Auto, vier ___"
         answers: [Autos]
+        explanation: "Words from other languages, often ending in a vowel, add -s: das Auto, die Autos."
       - id: plural4
         type: fill-blank
         tags: [plural]
         prompt: "der Tisch, zwei ___"
         answers: [Tische]
+        explanation: "Many masculine nouns add -e: der Tisch, die Tische."
       - id: plural5
         type: fill-blank
         tags: [plural]
         prompt: "das Buch, fünf ___"
         answers: [Bücher]
         hint: This one takes -er and an umlaut.
+        explanation: "Buch adds -er and its vowel gets an umlaut: das Buch, die Bücher."
       - id: plural6
         type: fill-blank
         tags: [plural]
         prompt: "der Stuhl, sechs ___"
         answers: [Stühle]
         hint: This one takes -e and an umlaut.
+        explanation: "Stuhl adds -e and its u becomes ü: der Stuhl, die Stühle."
       - id: plural7
         type: fill-blank
         tags: [plural]
         prompt: "die Frau, zwei ___"
         answers: [Frauen]
+        explanation: "Most feminine nouns add -n or -en: die Frau, die Frauen."
       - id: plural8
         type: multiple-choice
         tags: [plural]
         prompt: What is the article of every plural noun?
         options: [die, der, das]
         answer: die
+        explanation: "In the plural every noun takes die, whatever its gender in the singular."
 
   - title: er, sie or es?
     instructions: Replace the noun with the right pronoun.
@@ -141,21 +155,25 @@ sets:
         tags: [pronouns, noun gender]
         prompt: "Der Tisch ist neu. ___ ist groß."
         answers: [Er]
+        explanation: "A der noun is replaced by er, even when it is a thing: der Tisch → er."
       - id: pron2
         type: fill-blank
         tags: [pronouns, noun gender]
         prompt: "Die Lampe ist alt. ___ ist klein."
         answers: [Sie]
+        explanation: "A die noun is replaced by sie: die Lampe → sie."
       - id: pron3
         type: fill-blank
         tags: [pronouns, noun gender]
         prompt: "Das Buch ist gut. ___ ist interessant."
         answers: [Es]
+        explanation: "A das noun is replaced by es: das Buch → es."
       - id: pron4
         type: fill-blank
         tags: [pronouns, noun gender]
         prompt: "Die Bücher sind neu. ___ sind teuer."
         answers: [Sie]
+        explanation: "Plural nouns are replaced by sie (they), and the verb takes the plural form: sie sind."
 
   - title: Singular and plural
     items:
@@ -169,6 +187,7 @@ sets:
           - { left: die Uhr, right: die Uhren }
           - { left: das Handy, right: die Handys }
           - { left: der Lehrer, right: die Lehrer }
+        explanation: "Plurals have to be learned: Mann adds -er with an umlaut, Uhr adds -en, Handy adds -s, and Lehrer stays the same."
       - id: cloze1
         type: cloze
         tags: [noun gender]
@@ -179,6 +198,7 @@ sets:
           - [Der]
           - [die]
           - [Die]
+        explanation: "Zimmer is das, Tisch is der, Lampe is die, and every plural takes die: die Bücher."
 
   - title: Say it in German
     items:
@@ -187,16 +207,19 @@ sets:
         tags: [noun gender]
         prompt: The book is good.
         answers: [Das Buch ist gut.]
+        explanation: "Buch is neuter: das Buch ist gut."
       - id: tr2
         type: translation
         tags: [noun gender]
         prompt: The lamp is new.
         answers: [Die Lampe ist neu.]
+        explanation: "Lampe ends in -e and is feminine: die Lampe ist neu."
       - id: tr3
         type: translation
         tags: [plural]
         prompt: The children are small.
         answers: [Die Kinder sind klein.]
+        explanation: "The plural of Kind is Kinder, and every plural takes die; the verb is sind."
       - id: tr4
         type: translation
         tags: [pronouns]
@@ -204,3 +227,4 @@ sets:
         answers:
           - Wo ist der Stift? Er ist hier.
         hint: der Stift is masculine, so "it" is er.
+        explanation: "Stift is masculine, so 'it' is er: Wo ist der Stift? Er ist hier."

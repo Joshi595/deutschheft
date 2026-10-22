@@ -8,27 +8,32 @@ sets:
         tags: [participles]
         prompt: "machen: ___"
         answers: [gemacht]
+        explanation: "Regular verbs make the participle as ge- + stem + -t: ge-mach-t."
       - id: reg2
         type: fill-blank
         tags: [participles]
         prompt: "kaufen: ___"
         answers: [gekauft]
+        explanation: "ge- + kauf + -t gives gekauft."
       - id: reg3
         type: fill-blank
         tags: [participles]
         prompt: "lernen: ___"
         answers: [gelernt]
+        explanation: "ge- + lern + -t gives gelernt."
       - id: reg4
         type: fill-blank
         tags: [participles]
         prompt: "arbeiten: ___"
         answers: [gearbeitet]
         hint: The stem ends in -t.
+        explanation: "The stem arbeit- ends in -t, so an e is added before the ending: gearbeitet."
       - id: reg5
         type: fill-blank
         tags: [participles]
         prompt: "spielen: ___"
         answers: [gespielt]
+        explanation: "ge- + spiel + -t gives gespielt."
 
   - title: Irregular participles
     items:
@@ -43,26 +48,31 @@ sets:
           - { left: nehmen, right: genommen }
           - { left: sprechen, right: gesprochen }
           - { left: helfen, right: geholfen }
+        explanation: "Irregular participles end in -en and often change the vowel: getrunken, geschrieben, genommen, gesprochen, geholfen."
       - id: irr2
         type: fill-blank
         tags: [participles]
         prompt: "sehen: ___"
         answers: [gesehen]
+        explanation: "sehen is irregular: ge- + seh + -en gives gesehen."
       - id: irr3
         type: fill-blank
         tags: [participles]
         prompt: "lesen: ___"
         answers: [gelesen]
+        explanation: "lesen: ge- + les + -en gives gelesen."
       - id: irr4
         type: fill-blank
         tags: [participles]
         prompt: "schlafen: ___"
         answers: [geschlafen]
+        explanation: "schlafen: ge- + schlaf + -en gives geschlafen."
       - id: irr5
         type: fill-blank
         tags: [participles]
         prompt: "finden: ___"
         answers: [gefunden]
+        explanation: "finden changes its vowel: gefunden."
 
   - title: With ge- or without?
     items:
@@ -93,18 +103,21 @@ sets:
         prompt: anrufen
         options: [angerufen, geanrufen, anruft]
         answer: angerufen
+        explanation: "In separable verbs, ge- goes between the prefix and the verb: an-ge-rufen."
       - id: ge5
         type: multiple-choice
         tags: [participles, no ge]
         prompt: verstehen
         options: [verstanden, geverstanden, vergestanden]
         answer: verstanden
+        explanation: "Verbs starting with ver-, be-, er- or ent- take no ge-: verstanden."
       - id: ge6
         type: multiple-choice
         tags: [participles, no ge]
         prompt: bezahlen
         options: [bezahlt, gebezahlt, bezahlen]
         answer: bezahlt
+        explanation: "be- verbs take no ge-: bezahlen → bezahlt."
 
   - title: The right form of haben
     items:
@@ -113,21 +126,25 @@ sets:
         tags: [perfect tense]
         prompt: "Ich ___ gestern Deutsch gelernt."
         answers: [habe]
+        explanation: "In the Perfekt, haben takes the normal present form: ich habe … gelernt."
       - id: haben2
         type: fill-blank
         tags: [perfect tense]
         prompt: "Was ___ du am Wochenende gemacht?"
         answers: [hast]
+        explanation: "With du, haben is hast: Was hast du … gemacht?"
       - id: haben3
         type: fill-blank
         tags: [perfect tense]
         prompt: "Er ___ lange gearbeitet."
         answers: [hat]
+        explanation: "With er, haben is hat: Er hat lange gearbeitet."
       - id: haben4
         type: fill-blank
         tags: [perfect tense]
         prompt: "Wir ___ Pizza gegessen."
         answers: [haben]
+        explanation: "With wir, haben stays haben: Wir haben Pizza gegessen."
 
   - title: Build the sentence
     instructions: Put the words in the right order. The participle goes to the end.
@@ -137,21 +154,25 @@ sets:
         tags: [perfect tense, word order]
         prompt: I bought a book yesterday.
         answer: Ich habe gestern ein Buch gekauft.
+        explanation: "haben is in second place and the participle gekauft goes to the very end."
       - id: order2
         type: word-order
         tags: [perfect tense, word order]
         prompt: Have you seen the film?
         answer: Hast du den Film gesehen?
+        explanation: "In a yes/no question, haben comes first and the participle gesehen goes to the end."
       - id: order3
         type: word-order
         tags: [perfect tense, word order]
         prompt: Yesterday we watched TV.
         answer: Gestern haben wir ferngesehen.
+        explanation: "Gestern takes first place, so haben comes second, then wir, and ferngesehen goes to the end."
       - id: order4
         type: word-order
         tags: [perfect tense, word order]
         prompt: I did not understand that.
         answer: Ich habe das nicht verstanden.
+        explanation: "nicht goes before the participle at the end: … das nicht verstanden."
 
   - title: From present to past
     instructions: Rewrite the sentence in the Perfekt.
@@ -161,21 +182,25 @@ sets:
         tags: [perfect tense]
         prompt: "Ich kaufe Brot."
         answers: [Ich habe Brot gekauft.]
+        explanation: "Perfekt = present form of haben + participle at the end: Ich habe Brot gekauft."
       - id: past2
         type: translation
         tags: [perfect tense]
         prompt: "Sie liest die Zeitung. [she]"
         answers: [Sie hat die Zeitung gelesen.]
+        explanation: "sie (she) takes hat; lesen has the irregular participle gelesen."
       - id: past3
         type: translation
         tags: [perfect tense]
         prompt: "Wir besuchen Anna."
         answers: [Wir haben Anna besucht.]
+        explanation: "besuchen starts with be-, so its participle has no ge-: besucht."
       - id: past4
         type: translation
         tags: [perfect tense]
         prompt: "Er ruft seine Mutter an."
         answers: [Er hat seine Mutter angerufen.]
+        explanation: "anrufen is separable, so ge- goes in the middle: angerufen."
 
   - title: What happened?
     stimulus:
@@ -194,6 +219,7 @@ sets:
         tags: [listening, perfect tense]
         prompt: Sara hat am Samstag gekocht.
         answer: true
+        explanation: "Sara says: Am Samstag habe ich eingekauft und für meine Freunde gekocht."
       - id: listen2
         type: multiple-choice
         tags: [listening, perfect tense]
@@ -203,6 +229,7 @@ sets:
           - Sie hat eingekauft.
           - Sie hat ihre Eltern besucht.
         answer: Sie hat lange geschlafen und gelesen.
+        explanation: "Sara: Am Sonntag habe ich lange geschlafen und ein Buch gelesen."
       - id: listen3
         type: true-false
         tags: [listening, perfect tense]
@@ -218,12 +245,14 @@ sets:
         prompt: What did you do yesterday? (informal)
         answers:
           - Was hast du gestern gemacht?
+        explanation: "Ask with Was, then hast du, then the time, and the participle gemacht at the end."
       - id: tr2
         type: translation
         tags: [perfect tense]
         prompt: I have not eaten yet.
         answers:
           - Ich habe noch nicht gegessen.
+        explanation: "'Not yet' is noch nicht, and it goes before the participle: noch nicht gegessen."
       - id: write1
         type: writing-task
         tags: [writing, perfect tense]

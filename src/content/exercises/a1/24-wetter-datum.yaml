@@ -12,24 +12,28 @@ sets:
           - { left: Die Sonne scheint., right: The sun is shining. }
           - { left: Es ist bewölkt., right: It is cloudy. }
           - { left: Es ist windig., right: It is windy. }
+        explanation: "Weather verbs take es: es regnet, es schneit. Sun is the exception: die Sonne scheint."
       - id: weather2
         type: multiple-choice
         tags: [weather]
         prompt: Es sind 35 Grad. Es ist ___.
         options: [heiß, kalt, kühl]
         answer: heiß
+        explanation: "35 degrees is hot: heiß. kühl is cool and kalt is cold."
       - id: weather3
         type: multiple-choice
         tags: [weather]
         prompt: Which is correct?
         options: [Es regnet., Es ist regnet., Es regnen.]
         answer: Es regnet.
+        explanation: "Weather verbs are verbs on their own, with es as the subject: Es regnet. No ist."
       - id: weather4
         type: multiple-choice
         tags: [weather]
         prompt: Im Winter ___ es oft.
         options: [schneit, scheint, sonnig]
         answer: schneit
+        explanation: "schneien is to snow: im Winter schneit es. scheint is what the sun does."
 
   - title: Months and seasons
     items:
@@ -39,12 +43,14 @@ sets:
         prompt: Welcher Monat kommt nach März?
         options: [April, Mai, Februar]
         answer: April
+        explanation: "The months go März, April, Mai: April comes after March."
       - id: month2
         type: multiple-choice
         tags: [seasons]
         prompt: Juni, Juli und August sind die Monate im …
         options: [Sommer, Winter, Herbst]
         answer: Sommer
+        explanation: "June, July and August are the summer months in Germany: der Sommer."
       - id: month3
         type: matching
         tags: [seasons]
@@ -54,6 +60,7 @@ sets:
           - { left: der Sommer, right: summer }
           - { left: der Herbst, right: autumn }
           - { left: der Winter, right: winter }
+        explanation: "Frühling spring, Sommer summer, Herbst autumn, Winter winter; all four are masculine."
 
   - title: um, am or im?
     items:
@@ -62,21 +69,25 @@ sets:
         tags: [time prepositions]
         prompt: "___ Sommer ist es warm."
         answers: [Im]
+        explanation: "Seasons take im (in + dem): im Sommer."
       - id: prep2
         type: fill-blank
         tags: [time prepositions]
         prompt: "___ Januar habe ich Geburtstag."
         answers: [Im]
+        explanation: "Months take im too: im Januar."
       - id: prep3
         type: fill-blank
         tags: [time prepositions]
         prompt: "Der Kurs beginnt ___ ersten September."
         answers: [am]
+        explanation: "A date is a day, so it takes am: am ersten September."
       - id: prep4
         type: fill-blank
         tags: [time prepositions]
         prompt: "Der Film fängt ___ acht Uhr an."
         answers: [um]
+        explanation: "A clock time takes um: um acht Uhr."
       - id: prep5
         type: multiple-choice
         tags: [time prepositions]
@@ -92,33 +103,39 @@ sets:
         tags: [ordinals]
         prompt: "1. = der ___"
         answers: [erste]
+        explanation: "1st is irregular: der erste."
       - id: ord2
         type: fill-blank
         tags: [ordinals]
         prompt: "3. = der ___"
         answers: [dritte]
+        explanation: "3rd is irregular too: der dritte."
       - id: ord3
         type: fill-blank
         tags: [ordinals]
         prompt: "7. = der ___"
         answers: [siebte]
+        explanation: "7th drops the -en of sieben: der siebte."
       - id: ord4
         type: fill-blank
         tags: [ordinals]
         prompt: "10. = der ___"
         answers: [zehnte]
+        explanation: "Up to 19 the ordinal adds -te: zehn → der zehnte."
       - id: ord5
         type: fill-blank
         tags: [ordinals]
         prompt: "20. = der ___"
         answers: [zwanzigste]
         hint: From 20 upwards the ending is -ste.
+        explanation: "From 20 on the ordinal adds -ste: der zwanzigste."
       - id: ord6
         type: multiple-choice
         tags: [ordinals, dates]
         prompt: Heute ist der ___ Mai.
         options: [dritte, dritten, drei]
         answer: dritte
+        explanation: "After der, as the subject, the ordinal ends in -e: der dritte Mai. After am it would be am dritten."
       - id: ord7
         type: multiple-choice
         tags: [ordinals, dates]
@@ -141,6 +158,7 @@ sets:
         prompt: Wie ist das Wetter morgen Nachmittag?
         options: [Es regnet., Die Sonne scheint., Es schneit.]
         answer: Es regnet.
+        explanation: "The forecast says: Am Nachmittag regnet es. The sun is in the morning."
       - id: hear2
         type: fill-blank
         tags: [listening, numbers]
@@ -151,6 +169,7 @@ sets:
             - text: "Und nun das Wetter für morgen. Am Vormittag scheint die Sonne. Am Nachmittag regnet es. Die Temperaturen liegen bei fünfzehn Grad."
         prompt: "Es sind ___ Grad."
         answers: ["15"]
+        explanation: "The temperature is fünfzehn Grad, 15."
       - id: hear3
         type: multiple-choice
         tags: [listening, dates]
@@ -165,6 +184,7 @@ sets:
         prompt: Wann beginnt der Kurs?
         options: ["am 12.10.", "am 20.10.", "am 12.08."]
         answer: "am 12.10."
+        explanation: "Frau Lang says: am zwölften Oktober, the 12th of October, written 12.10."
       - id: hear4
         type: multiple-choice
         tags: [listening, dates]
@@ -181,6 +201,7 @@ sets:
         prompt: Wann hat Anna Geburtstag?
         options: ["am 7. Juli", "am 31. März", "am 17. Juli"]
         answer: "am 7. Juli"
+        explanation: "Anna says: am siebten Juli. Tom's birthday is the 31st of March."
 
   - title: Dates on a form
     instructions: Write the date as on a German form, day.month.year.
@@ -194,6 +215,7 @@ sets:
           - { label: Geburtsdatum, answers: ["07.04.1990", "7.4.1990"] }
           - { label: Geburtsort, answers: [Sofia] }
           - { label: In Deutschland seit, answers: ["01.06.2020", "1.6.2020"] }
+        explanation: "German forms write the date as day.month.year: the seventh of April 1990 is 07.04.1990."
 
   - title: Say and write it
     items:
@@ -202,12 +224,14 @@ sets:
         tags: [dates]
         prompt: My birthday is on the fifth of May.
         answer: Ich habe am fünften Mai Geburtstag.
+        explanation: "German says 'I have birthday on the fifth of May'; with am the ordinal ends in -en: am fünften Mai."
       - id: tr1
         type: translation
         tags: [weather]
         prompt: What is the weather like?
         answers:
           - Wie ist das Wetter?
+        explanation: "German asks 'how is the weather': Wie ist das Wetter?"
       - id: tr2
         type: translation
         tags: [dates]
@@ -215,6 +239,7 @@ sets:
         answers:
           - Heute ist der erste Mai.
           - Heute ist der 1. Mai.
+        explanation: "A date after der takes -e: der erste Mai."
       - id: speak1
         type: speaking-task
         tags: [speaking, dates]

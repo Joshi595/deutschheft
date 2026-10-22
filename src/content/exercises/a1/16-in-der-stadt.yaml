@@ -12,21 +12,25 @@ sets:
           - { left: der Bahnhof, right: mit dem Zug fahren }
           - { left: die Apotheke, right: Medikamente kaufen }
           - { left: das Kino, right: einen Film sehen }
+        explanation: "Post is for letters, Bank for money, Bahnhof for trains, Apotheke for medicine and Kino for films."
       - id: place2
         type: fill-blank
         tags: [town, noun gender]
         prompt: "___ Bahnhof"
         answers: [der]
+        explanation: "Bahnhof is masculine: der Bahnhof."
       - id: place3
         type: fill-blank
         tags: [town, noun gender]
         prompt: "___ Post"
         answers: [die]
+        explanation: "Post is feminine: die Post."
       - id: place4
         type: fill-blank
         tags: [town, noun gender]
         prompt: "___ Rathaus"
         answers: [das]
+        explanation: "Rathaus is neuter, like Haus, its last part: das Rathaus."
 
   - title: The dative article
     instructions: Put the article in brackets into the dative.
@@ -36,26 +40,31 @@ sets:
         tags: [dative]
         prompt: "Die Apotheke ist neben ___ Bank. (die)"
         answers: [der]
+        explanation: "neben answers wo? (where), so it takes the dative, and feminine die becomes der."
       - id: dat2
         type: fill-blank
         tags: [dative]
         prompt: "Wir treffen uns vor ___ Kino. (das)"
         answers: [dem]
+        explanation: "vor for a place takes the dative, and neuter das becomes dem."
       - id: dat3
         type: fill-blank
         tags: [dative]
         prompt: "Der Parkplatz ist hinter ___ Supermarkt. (der)"
         answers: [dem]
+        explanation: "hinter for a place takes the dative, and masculine der becomes dem."
       - id: dat4
         type: fill-blank
         tags: [dative]
         prompt: "Ich warte an ___ Haltestelle. (die)"
         answers: [der]
+        explanation: "an for a place takes the dative, and feminine die becomes der."
       - id: dat5
         type: fill-blank
         tags: [dative]
         prompt: "Das Buch ist auf ___ Tisch. (der)"
         answers: [dem]
+        explanation: "auf for a place takes the dative, and masculine der becomes dem."
       - id: dat6
         type: cloze
         tags: [dative]
@@ -72,21 +81,25 @@ sets:
         tags: [dative, contractions]
         prompt: "Ich bin ___ Supermarkt. (in + dem)"
         answers: [im]
+        explanation: "in + dem is always shortened to im."
       - id: short2
         type: fill-blank
         tags: [dative, contractions]
         prompt: "Das Hotel ist ___ Bahnhof. (an + dem)"
         answers: [am]
+        explanation: "an + dem is always shortened to am."
       - id: short3
         type: fill-blank
         tags: [dative, contractions]
         prompt: "Wie komme ich ___ Bahnhof?"
         answers: [zum]
+        explanation: "zu always takes the dative. Bahnhof is masculine, so zu + dem becomes zum."
       - id: short4
         type: fill-blank
         tags: [dative, contractions]
         prompt: "Wie komme ich ___ Post?"
         answers: [zur]
+        explanation: "Post is feminine, so zu + der becomes zur."
       - id: short5
         type: multiple-choice
         tags: [dative, contractions]
@@ -100,6 +113,7 @@ sets:
         prompt: Wie komme ich ___ Krankenhaus?
         options: [zum, zur, zu]
         answer: zum
+        explanation: "Krankenhaus is neuter like Haus, so zu + dem gives zum."
 
   - title: Which preposition?
     items:
@@ -113,18 +127,21 @@ sets:
           - { left: hinter, right: behind }
           - { left: zwischen, right: between }
           - { left: unter, right: under }
+        explanation: "neben next to, vor in front of, hinter behind, zwischen between, unter under."
       - id: prep2
         type: multiple-choice
         tags: [prepositions of place]
         prompt: Ich warte ___ der Haltestelle.
         options: [an, in, unter]
         answer: an
+        explanation: "You wait an der Haltestelle: at a stop, by its edge, is an."
       - id: prep3
         type: multiple-choice
         tags: [prepositions of place]
         prompt: Wir kaufen Obst ___ dem Markt.
         options: [auf, in, zwischen]
         answer: auf
+        explanation: "A market is an open space, and open places take auf: auf dem Markt."
 
   - title: Follow the directions
     stimulus:
@@ -146,18 +163,21 @@ sets:
         prompt: Wohin möchte der Tourist?
         options: [zum Bahnhof, zur Post, zur Ampel]
         answer: zum Bahnhof
+        explanation: "The tourist asks: wie komme ich zum Bahnhof?"
       - id: dir2
         type: multiple-choice
         tags: [listening, directions]
         prompt: Wo geht man an der Ampel?
         options: [links, rechts, geradeaus]
         answer: links
+        explanation: "Go straight on to the traffic lights, then: Dann gehen Sie links."
       - id: dir3
         type: multiple-choice
         tags: [listening, directions]
         prompt: Wie lange geht man zu Fuß?
         options: [zehn Minuten, zwei Minuten, zwanzig Minuten]
         answer: zehn Minuten
+        explanation: "The woman says: nur zehn Minuten zu Fuß."
 
   - title: Read the note
     stimulus:
@@ -175,16 +195,19 @@ sets:
         prompt: Wo ist das Café?
         options: [am Marktplatz, am Bahnhof, im Rathaus]
         answer: am Marktplatz
+        explanation: "Lena writes: Das Café ist am Marktplatz, zwischen der Bank und dem Kino."
       - id: note2
         type: true-false
         tags: [reading, town]
         prompt: Sara kann vor dem Rathaus parken.
         answer: true
+        explanation: "The note says: Du kannst vor dem Rathaus parken."
       - id: note3
         type: true-false
         tags: [reading, town]
         prompt: Das Café ist neben der Post.
         answer: false
+        explanation: "The café is between the bank and the cinema. The note does not mention a post office."
 
   - title: Say it in German
     items:
@@ -193,21 +216,25 @@ sets:
         tags: [dative]
         prompt: The pharmacy is next to the bank.
         answer: Die Apotheke ist neben der Bank.
+        explanation: "neben takes the dative for a place, so die Bank becomes der Bank."
       - id: order2
         type: word-order
         tags: [directions]
         prompt: How do I get to the station?
         answer: Wie komme ich zum Bahnhof?
+        explanation: "Bahnhof is masculine, so zu + dem becomes zum. The verb comes after the question word."
       - id: tr1
         type: translation
         tags: [dative]
         prompt: I am in the cinema.
         answers: [Ich bin im Kino.]
+        explanation: "Being somewhere takes the dative: in + dem Kino becomes im Kino."
       - id: tr2
         type: translation
         tags: [directions]
         prompt: Excuse me, where is the post office?
         answers: ["Entschuldigung, wo ist die Post?"]
+        explanation: "Entschuldigung starts a question to a stranger; wo asks for the place, and Post is die Post."
       - id: speak1
         type: speaking-task
         tags: [speaking, directions]

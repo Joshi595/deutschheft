@@ -12,18 +12,21 @@ sets:
           - { left: Ruhetag, right: geschlossen }
           - { left: nur nach Anmeldung, right: Man braucht einen Termin. }
           - { left: verboten, right: nicht erlaubt }
+        explanation: "Exam texts say the same thing in other words: täglich = jeden Tag, kostenlos = nichts zahlen, Ruhetag = geschlossen, nach Anmeldung = mit Termin, verboten = nicht erlaubt."
       - id: para2
         type: multiple-choice
         tags: [exam reading]
         prompt: "A sign says: Geöffnet täglich außer Montag. When is the shop closed?"
         options: [am Montag, jeden Tag, am Sonntag]
         answer: am Montag
+        explanation: "außer Montag means 'except Monday', so the shop is closed only on Monday."
       - id: para3
         type: multiple-choice
         tags: [exam reading]
         prompt: "A sign says: Ab 18 Uhr geschlossen. Can you go in at 19 Uhr?"
         options: [Nein, Ja]
         answer: Nein
+        explanation: "Ab 18 Uhr geschlossen means closed from 6 pm, so at 7 pm the door is shut."
 
   - title: "Teil 1: richtig oder falsch?"
     instructions: Lesen Sie den Text und die Aufgaben. Sind die Aussagen richtig oder falsch?
@@ -42,6 +45,7 @@ sets:
         tags: [exam reading]
         prompt: Carla kommt zum Geburtstag von Sofia.
         answer: true
+        explanation: "Carla writes: Ich komme gern. She will only arrive at eight."
       - id: t1b
         type: true-false
         tags: [exam reading]
@@ -77,6 +81,7 @@ sets:
         tags: [exam reading]
         prompt: Der Kurs beginnt um 18 Uhr.
         answer: true
+        explanation: "The text says: Wir fangen wie immer um 18 Uhr an. Only the room has changed."
 
   - title: "Teil 2: a oder b?"
     instructions: Lesen Sie die Situation und die zwei Anzeigen. Welche Anzeige passt?
@@ -110,6 +115,7 @@ sets:
         options: [Anzeige a, Anzeige b]
         answer: Anzeige b
         shuffle: false
+        explanation: "Only advert b has a Garten: Erdgeschoss mit kleinem Garten. Advert a has not even a balcony."
       - id: t2c
         type: multiple-choice
         tags: [exam reading]
@@ -155,6 +161,7 @@ sets:
             Ab 16. August sind wir wieder für Sie da.
         prompt: Am 10. August können Sie hier Brot kaufen.
         answer: false
+        explanation: "The shop is on holiday from 1 to 15 August, so on 10 August it is closed."
       - id: t3b
         type: true-false
         tags: [exam reading]
@@ -164,6 +171,7 @@ sets:
           text: Bitte beim Fahrer einsteigen und die Fahrkarte zeigen.
         prompt: Sie müssen dem Fahrer Ihre Fahrkarte zeigen.
         answer: true
+        explanation: "The sign says to get on at the driver's door and show your ticket: die Fahrkarte zeigen."
       - id: t3c
         type: true-false
         tags: [exam reading]
@@ -175,6 +183,7 @@ sets:
             Kinder bis 12 Jahre: Eintritt frei.
         prompt: Ein Kind mit zehn Jahren muss Eintritt bezahlen.
         answer: false
+        explanation: "Children up to 12 get in free (Eintritt frei), and ten is under 12."
       - id: t3d
         type: true-false
         tags: [exam reading]
@@ -186,6 +195,7 @@ sets:
             Frau Berger ist krank. Der Kurs findet morgen statt.
         prompt: Der Kurs ist heute.
         answer: false
+        explanation: "Heute kein Unterricht: no class today; the course takes place tomorrow."
       - id: t3e
         type: true-false
         tags: [exam reading]
@@ -197,3 +207,4 @@ sets:
             Andere Autos werden abgeschleppt.
         prompt: Hier dürfen alle parken.
         answer: false
+        explanation: "Parking is only for hotel guests (nur für Gäste); other cars are towed away."

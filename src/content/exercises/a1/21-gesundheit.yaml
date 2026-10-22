@@ -13,31 +13,37 @@ sets:
           - { left: der Rücken, right: back }
           - { left: das Ohr, right: ear }
           - { left: der Zahn, right: tooth }
+        explanation: "Kopf head, Bauch stomach, Bein leg, Rücken back, Ohr ear, Zahn tooth."
       - id: body2
         type: fill-blank
         tags: [body, noun gender]
         prompt: "___ Kopf"
         answers: [der]
+        explanation: "Kopf is masculine: der Kopf."
       - id: body3
         type: fill-blank
         tags: [body, noun gender]
         prompt: "___ Auge"
         answers: [das]
+        explanation: "Auge is neuter, even though it ends in -e: das Auge."
       - id: body4
         type: fill-blank
         tags: [body, noun gender]
         prompt: "___ Hand"
         answers: [die]
+        explanation: "Hand is feminine: die Hand."
       - id: body5
         type: fill-blank
         tags: [body, plural]
         prompt: "der Fuß, zwei ___"
         answers: [Füße]
+        explanation: "Fuß adds -e and takes an umlaut in the plural: die Füße."
       - id: body6
         type: fill-blank
         tags: [body, plural]
         prompt: "das Auge, zwei ___"
         answers: [Augen]
+        explanation: "Auge adds -n in the plural: die Augen."
 
   - title: What hurts?
     items:
@@ -46,11 +52,13 @@ sets:
         tags: [health]
         prompt: "Mein Kopf tut weh. Ich habe ___."
         answers: [Kopfschmerzen]
+        explanation: "Pain is the body part plus -schmerzen: Kopf + Schmerzen = Kopfschmerzen."
       - id: hurt2
         type: fill-blank
         tags: [health]
         prompt: "Mein Bauch tut weh. Ich habe ___."
         answers: [Bauchschmerzen]
+        explanation: "Bauch + Schmerzen = Bauchschmerzen, usually used in the plural."
       - id: hurt3
         type: multiple-choice
         tags: [health, wehtun]
@@ -64,12 +72,14 @@ sets:
         prompt: Mein Rücken ___ weh.
         options: [tut, tun, ist]
         answer: tut
+        explanation: "Mein Rücken is singular, so the verb is tut: … tut weh."
       - id: hurt5
         type: multiple-choice
         tags: [health]
         prompt: Ich ___ Fieber.
         options: [habe, bin, tue]
         answer: habe
+        explanation: "German says you 'have' a fever: Ich habe Fieber."
       - id: hurt6
         type: multiple-choice
         tags: [health]
@@ -82,6 +92,7 @@ sets:
         tags: [health]
         prompt: I have had a cough for three days.
         answer: Ich habe seit drei Tagen Husten.
+        explanation: "For something that started in the past and still goes on, German uses seit + dative with the present tense."
 
   - title: mich, dich, ihn
     instructions: Replace the noun with the right accusative pronoun.
@@ -91,11 +102,13 @@ sets:
         tags: [accusative pronouns]
         prompt: "Kennst du Herrn Weber? Ja, ich kenne ___."
         answers: [ihn]
+        explanation: "Herr Weber is the object of kennen, and the accusative of er is ihn."
       - id: pron2
         type: fill-blank
         tags: [accusative pronouns]
         prompt: "Wo ist die Tablette? Ich habe ___ hier."
         answers: [sie]
+        explanation: "die Tablette is replaced by sie, which stays sie in the accusative."
       - id: pron3
         type: fill-blank
         tags: [accusative pronouns]
@@ -107,24 +120,28 @@ sets:
         tags: [accusative pronouns]
         prompt: "Das Buch ist gut. Ich lese ___ gern."
         answers: [es]
+        explanation: "das Buch is replaced by es, which stays es in the accusative."
       - id: pron5
         type: multiple-choice
         tags: [accusative pronouns]
         prompt: Der Arzt untersucht ___. (me)
         options: [mich, ich, mir]
         answer: mich
+        explanation: "me as an object is mich: Der Arzt untersucht mich."
       - id: pron6
         type: multiple-choice
         tags: [accusative pronouns]
         prompt: Ich rufe ___ morgen an. (you, informal)
         options: [dich, du, dir]
         answer: dich
+        explanation: "anrufen takes the accusative, so 'you' (du) becomes dich."
       - id: pron7
         type: multiple-choice
         tags: [accusative pronouns]
         prompt: Besuchst du ___ am Wochenende? (us)
         options: [uns, wir, unser]
         answer: uns
+        explanation: "us as an object is uns."
 
   - title: A message from the surgery
     instructions: As in the listening exam. You hear the message twice.
@@ -140,16 +157,19 @@ sets:
         prompt: Wann ist der neue Termin?
         options: [am Mittwoch um 8:30 Uhr, am Dienstag um 10 Uhr, am Mittwoch um 9:30 Uhr]
         answer: am Mittwoch um 8:30 Uhr
+        explanation: "The surgery offers Mittwoch um halb neun; halb neun is 8:30."
       - id: msg2
         type: true-false
         tags: [listening, health]
         prompt: Herr Novak soll die Praxis anrufen.
         answer: true
+        explanation: "The message says: Bitte rufen Sie uns an."
       - id: msg3
         type: fill-blank
         tags: [listening, numbers]
         prompt: "Die Telefonnummer ist ___."
         answers: ["44702"]
+        explanation: "The number is read digit by digit: vier, vier, sieben, null, zwei."
 
   - title: At the doctor's
     stimulus:
@@ -173,16 +193,19 @@ sets:
         prompt: Was hat Frau Kaya?
         options: [Halsschmerzen und Fieber, Bauchschmerzen, Zahnschmerzen]
         answer: Halsschmerzen und Fieber
+        explanation: "Frau Kaya says: Ich habe seit zwei Tagen Halsschmerzen und Fieber."
       - id: doc2
         type: true-false
         tags: [listening, health]
         prompt: Frau Kaya soll viel Tee trinken.
         answer: true
+        explanation: "The doctor says: trinken Sie viel Tee."
       - id: doc3
         type: true-false
         tags: [listening, health]
         prompt: Frau Kaya darf diese Woche arbeiten.
         answer: false
+        explanation: "The doctor says: diese Woche dürfen Sie nicht arbeiten."
 
   - title: Read the notice
     stimulus:
@@ -200,11 +223,13 @@ sets:
         tags: [reading, health]
         prompt: Am Mittwoch um 16 Uhr ist die Praxis geöffnet.
         answer: false
+        explanation: "On Wednesday the surgery is only open from 8 to 13 Uhr, so it is closed at 16 Uhr."
       - id: notice2
         type: true-false
         tags: [reading, health]
         prompt: Man braucht einen Termin.
         answer: true
+        explanation: "Termine nur nach Anmeldung means appointments only after booking."
 
   - title: Say and write it
     items:
@@ -214,12 +239,14 @@ sets:
         prompt: I have a headache.
         answers:
           - Ich habe Kopfschmerzen.
+        explanation: "German says 'I have head-pains': Ich habe Kopfschmerzen, in the plural."
       - id: tr2
         type: translation
         tags: [health]
         prompt: I need an appointment.
         answers:
           - Ich brauche einen Termin.
+        explanation: "Termin is masculine and the object of brauchen, so einen Termin."
       - id: write1
         type: writing-task
         tags: [writing, health]

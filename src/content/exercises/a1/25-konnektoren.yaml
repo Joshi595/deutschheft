@@ -8,18 +8,21 @@ sets:
         prompt: Möchtest du Kaffee ___ Tee?
         options: [oder, aber, denn]
         answer: oder
+        explanation: "oder offers a choice: Kaffee oder Tee?"
       - id: con2
         type: multiple-choice
         tags: [connectors]
         prompt: "Ich bin müde, ___ ich muss arbeiten."
         options: [aber, oder, sondern]
         answer: aber
+        explanation: "aber brings in a contrast: tired, but still has to work."
       - id: con3
         type: multiple-choice
         tags: [connectors]
         prompt: "Ich gehe nach Hause, ___ ich bin müde."
         options: [denn, aber, oder]
         answer: denn
+        explanation: "denn gives the reason: I go home because I am tired."
       - id: con4
         type: multiple-choice
         tags: [connectors, sondern]
@@ -33,6 +36,7 @@ sets:
         prompt: Sie kauft Brot ___ Käse.
         options: [und, denn, sondern]
         answer: und
+        explanation: "und simply adds: Brot und Käse."
       - id: con6
         type: multiple-choice
         tags: [connectors, sondern]
@@ -46,6 +50,7 @@ sets:
         prompt: "Das ist kein Kaffee, ___ Tee."
         options: [sondern, aber, und]
         answer: sondern
+        explanation: "After a negative (kein, nicht), 'but rather' is sondern: kein Kaffee, sondern Tee."
       - id: con8
         type: matching
         tags: [connectors]
@@ -57,6 +62,7 @@ sets:
           - { left: denn, right: because }
           - { left: deshalb, right: that is why }
           - { left: danach, right: after that }
+        explanation: "und and, oder or, aber but, denn because, deshalb that is why, danach after that."
 
   - title: Position zero or position one?
     instructions: Choose the sentence with the correct word order.
@@ -69,6 +75,7 @@ sets:
           - Dann fahre ich zur Arbeit.
           - Dann ich fahre zur Arbeit.
         answer: Dann fahre ich zur Arbeit.
+        explanation: "Dann takes the first place, so the verb comes second: Dann fahre ich …"
       - id: pos2
         type: multiple-choice
         tags: [connectors, word order]
@@ -77,6 +84,7 @@ sets:
           - "Ich bin müde, aber ich muss arbeiten."
           - "Ich bin müde, aber muss ich arbeiten."
         answer: "Ich bin müde, aber ich muss arbeiten."
+        explanation: "aber stands outside the sentence (position zero), so the word order after it stays normal: aber ich muss …"
       - id: pos3
         type: multiple-choice
         tags: [connectors, word order]
@@ -85,6 +93,7 @@ sets:
           - "Ich bin krank. Deshalb bleibe ich zu Hause."
           - "Ich bin krank. Deshalb ich bleibe zu Hause."
         answer: "Ich bin krank. Deshalb bleibe ich zu Hause."
+        explanation: "deshalb takes the first place itself, so the verb comes right after it: Deshalb bleibe ich …"
       - id: pos4
         type: multiple-choice
         tags: [connectors, word order]
@@ -94,6 +103,7 @@ sets:
           - "Wir bleiben zu Hause, denn regnet es."
           - "Denn es regnet, wir bleiben zu Hause."
         answer: "Wir bleiben zu Hause, denn es regnet."
+        explanation: "denn stands at position zero and keeps normal order: denn es regnet. A denn clause cannot start the sentence."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -103,21 +113,25 @@ sets:
         tags: [connectors, word order]
         prompt: Then I go to work.
         answer: Dann fahre ich zur Arbeit.
+        explanation: "Dann is first, so the verb fahre comes second, then ich."
       - id: order2
         type: word-order
         tags: [connectors, word order]
         prompt: I am tired, but I have to work.
         answer: "Ich bin müde, aber ich muss arbeiten."
+        explanation: "aber is at position zero; after it comes a normal sentence: ich muss arbeiten."
       - id: order3
         type: word-order
         tags: [connectors, word order]
         prompt: After that we go to the cinema.
         answer: Danach gehen wir ins Kino.
+        explanation: "Danach takes the first place, so the verb gehen comes second and wir follows."
       - id: order4
         type: word-order
         tags: [connectors, word order]
         prompt: She cannot come because she is ill.
         answer: "Sie kann nicht kommen, denn sie ist krank."
+        explanation: "denn joins the reason with normal word order: denn sie ist krank."
 
   - title: Join the sentences
     instructions: Make one sentence with the word in brackets.
@@ -129,18 +143,21 @@ sets:
         answers:
           - Ich komme aus Indien und ich wohne in Köln.
           - Ich komme aus Indien und wohne in Köln.
+        explanation: "und adds the second sentence; with the same subject you can leave out the second ich."
       - id: join2
         type: translation
         tags: [connectors]
         prompt: "Ich möchte kommen. Ich habe keine Zeit. (aber)"
         answers:
           - "Ich möchte kommen, aber ich habe keine Zeit."
+        explanation: "aber needs a comma before it, and normal word order after it."
       - id: join3
         type: translation
         tags: [connectors]
         prompt: "Wir bleiben zu Hause. Es regnet. (denn)"
         answers:
           - "Wir bleiben zu Hause, denn es regnet."
+        explanation: "denn needs a comma before it and keeps normal word order: denn es regnet."
       - id: join4
         type: translation
         tags: [connectors, word order]
@@ -149,6 +166,7 @@ sets:
           - "Ich bin krank. Deshalb gehe ich zum Arzt."
           - "Ich bin krank, deshalb gehe ich zum Arzt."
         hint: deshalb takes position one, so the verb comes straight after it.
+        explanation: "deshalb takes the first place, so the verb comes straight after it: Deshalb gehe ich …"
 
   - title: Complete the text
     items:
@@ -163,6 +181,7 @@ sets:
           - [aber]
           - [Deshalb]
         bank: [und, Dann, aber, Deshalb, oder, sondern]
+        explanation: "und joins two actions, Dann orders them in time, aber brings in a contrast, and Deshalb draws the result."
 
   - title: Read and answer
     stimulus:
@@ -181,16 +200,19 @@ sets:
         prompt: Warum kann Lena am Freitag nicht kommen?
         options: [Sie muss arbeiten., Sie ist krank., Sie hat keine Lust.]
         answer: Sie muss arbeiten.
+        explanation: "Lena writes: denn ich muss arbeiten."
       - id: read2
         type: true-false
         tags: [reading, connectors]
         prompt: Lena möchte zuerst kochen und dann in die Stadt gehen.
         answer: false
+        explanation: "Lena suggests zuerst in die Stadt gehen und danach zusammen kochen: the city first, then cooking."
       - id: read3
         type: true-false
         tags: [reading, connectors]
         prompt: Lena bringt Saft mit.
         answer: true
+        explanation: "Lena writes: Ich bringe keinen Wein mit, sondern Saft."
 
   - title: Write a connected text
     items:

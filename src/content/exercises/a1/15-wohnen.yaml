@@ -11,18 +11,21 @@ sets:
           - { left: das Schlafzimmer, right: schlafen }
           - { left: das Bad, right: duschen }
           - { left: das Wohnzimmer, right: fernsehen }
+        explanation: "Küche is where you cook, Schlafzimmer where you sleep, Bad where you shower and Wohnzimmer where you watch TV."
       - id: room2
         type: multiple-choice
         tags: [home]
         prompt: Where is the Kühlschrank?
         options: [in der Küche, im Schlafzimmer, im Bad]
         answer: in der Küche
+        explanation: "A Kühlschrank (fridge) is kept cold for food, so it is in the kitchen."
       - id: room3
         type: multiple-choice
         tags: [home]
         prompt: Where is the Bett?
         options: [im Schlafzimmer, in der Küche, im Flur]
         answer: im Schlafzimmer
+        explanation: "Das Bett is the bed, so it belongs in the Schlafzimmer, the bedroom."
       - id: room4
         type: fill-blank
         tags: [home, noun gender]
@@ -34,11 +37,13 @@ sets:
         tags: [home, noun gender]
         prompt: "___ Küche"
         answers: [die]
+        explanation: "Küche ends in -e and is feminine: die Küche."
       - id: room6
         type: fill-blank
         tags: [home, noun gender]
         prompt: "___ Balkon"
         answers: [der]
+        explanation: "Balkon is masculine: der Balkon."
       - id: room7
         type: matching
         tags: [home]
@@ -49,6 +54,7 @@ sets:
           - { left: der Herd, right: cooker }
           - { left: die Miete, right: rent }
           - { left: der Flur, right: hall }
+        explanation: "Schrank is a cupboard or wardrobe, Regal shelves, Herd the cooker, Miete the rent and Flur the hall."
 
   - title: es gibt and haben
     instructions: Both take the accusative.
@@ -58,32 +64,38 @@ sets:
         tags: [es gibt, accusative]
         prompt: "In der Küche gibt es ___ Kühlschrank. (ein)"
         answers: [einen]
+        explanation: "es gibt is followed by the accusative. Kühlschrank is masculine, so ein becomes einen."
       - id: gibt2
         type: fill-blank
         tags: [es gibt, accusative]
         prompt: "Im Wohnzimmer gibt es ___ Sofa. (ein)"
         answers: [ein]
+        explanation: "Sofa is neuter, so ein stays ein in the accusative."
       - id: gibt3
         type: fill-blank
         tags: [es gibt, accusative]
         prompt: "Die Wohnung hat ___ Balkon. (ein)"
         answers: [einen]
+        explanation: "haben takes the accusative. Balkon is masculine, so it is einen Balkon."
       - id: gibt4
         type: fill-blank
         tags: [es gibt, accusative]
         prompt: "Es gibt ___ Garten. (kein)"
         answers: [keinen]
+        explanation: "Garten is masculine and in the accusative after es gibt, so kein becomes keinen."
       - id: gibt5
         type: fill-blank
         tags: [es gibt, accusative]
         prompt: "Wir haben ___ Waschmaschine. (kein)"
         answers: [keine]
+        explanation: "Waschmaschine is feminine, so kein takes -e: keine Waschmaschine."
       - id: gibt6
         type: multiple-choice
         tags: [es gibt]
         prompt: Which sentence is correct?
         options: [Es gibt zwei Schlafzimmer., Es geben zwei Schlafzimmer.]
         answer: Es gibt zwei Schlafzimmer.
+        explanation: "es gibt never changes, even with a plural: es gibt zwei Schlafzimmer."
 
   - title: Describing
     items:
@@ -97,17 +109,20 @@ sets:
           - { left: ruhig, right: laut }
           - { left: billig, right: teuer }
           - { left: neu, right: alt }
+        explanation: "Opposites: groß/klein, hell/dunkel, ruhig/laut, billig/teuer, neu/alt."
       - id: adj2
         type: multiple-choice
         tags: [adjectives]
         prompt: Die Wohnung kostet 2000 Euro. Sie ist ___ teuer für mich.
         options: [zu, sehr gern, nicht]
         answer: zu
+        explanation: "zu means 'too': more than is good. zu teuer is too expensive."
       - id: adj3
         type: fill-blank
         tags: [accusative]
         prompt: "Ich finde ___ Balkon zu klein. (der)"
         answers: [den]
+        explanation: "den Balkon is the object of finden, so masculine der becomes den."
       - id: adj4
         type: multiple-choice
         tags: [home]
@@ -132,6 +147,7 @@ sets:
         prompt: Wie viele Zimmer hat die Wohnung?
         options: [zwei, fünf, fünfundfünfzig]
         answer: zwei
+        explanation: "2-Zi. is short for zwei Zimmer. 55 qm is the size in square metres."
       - id: ad2
         type: true-false
         tags: [reading, adverts]
@@ -158,6 +174,7 @@ sets:
         prompt: Sie suchen ein Zimmer mit Möbeln. Passt diese Anzeige?
         options: ["Ja, das Zimmer ist möbliert.", "Nein, es gibt keine Möbel."]
         answer: "Ja, das Zimmer ist möbliert."
+        explanation: "Möbliertes Zimmer means a furnished room, so the furniture is included."
 
   - title: Listen to the description
     stimulus:
@@ -171,17 +188,20 @@ sets:
         tags: [listening, home]
         prompt: Die Wohnung hat einen Garten.
         answer: false
+        explanation: "The speaker says: Es gibt einen Balkon, aber keinen Garten."
       - id: listen2
         type: multiple-choice
         tags: [listening, home]
         prompt: Wie ist das Wohnzimmer?
         options: [groß und hell, klein und dunkel, klein und hell]
         answer: groß und hell
+        explanation: "She says: Das Wohnzimmer ist groß und hell. It is the kitchen that is small."
       - id: listen3
         type: fill-blank
         tags: [listening, numbers]
         prompt: "Die Miete ist ___ Euro."
         answers: ["580"]
+        explanation: "fünfhundertachtzig is 500 plus 80, so 580."
 
   - title: Say and write it
     items:
@@ -190,16 +210,19 @@ sets:
         tags: [home]
         prompt: My flat has two rooms and a kitchen.
         answer: Meine Wohnung hat zwei Zimmer und eine Küche.
+        explanation: "Wohnung is feminine, so meine Wohnung; haben takes the accusative, and Küche stays eine Küche."
       - id: tr1
         type: translation
         tags: [es gibt]
         prompt: There is no garden.
         answers: [Es gibt keinen Garten.]
+        explanation: "'There is no' is es gibt kein-. Garten is masculine and in the accusative, so keinen Garten."
       - id: tr2
         type: translation
         tags: [adjectives]
         prompt: The flat is too expensive.
         answers: [Die Wohnung ist zu teuer.]
+        explanation: "Too is zu before an adjective: zu teuer. Wohnung is feminine, so die Wohnung."
       - id: write1
         type: writing-task
         tags: [writing, home]

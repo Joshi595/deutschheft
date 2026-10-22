@@ -13,12 +13,14 @@ sets:
           - { left: der Onkel, right: uncle }
           - { left: die Großeltern, right: grandparents }
           - { left: der Sohn, right: son }
+        explanation: "Eltern (parents), Geschwister (siblings) and Großeltern (grandparents) are only used in the plural."
       - id: fam2
         type: multiple-choice
         tags: [family]
         prompt: Der Vater und die Mutter sind die …
         options: [Eltern, Geschwister, Großeltern]
         answer: Eltern
+        explanation: "Father and mother together are die Eltern. Geschwister are brothers and sisters."
       - id: fam3
         type: multiple-choice
         tags: [family]
@@ -32,6 +34,7 @@ sets:
         prompt: Which word means "single"?
         options: [ledig, verheiratet, geschieden]
         answer: ledig
+        explanation: "ledig is single, verheiratet married, and geschieden divorced."
 
   - title: The verb haben
     instructions: Complete with a form of haben.
@@ -41,31 +44,37 @@ sets:
         tags: [haben]
         prompt: "Ich ___ eine Schwester."
         answers: [habe]
+        explanation: "haben with ich is habe: ich habe eine Schwester."
       - id: haben2
         type: fill-blank
         tags: [haben]
         prompt: "___ du Geschwister?"
         answers: [Hast]
+        explanation: "haben drops its b with du: du hast. In a yes/no question the verb comes first."
       - id: haben3
         type: fill-blank
         tags: [haben]
         prompt: "Sie ___ zwei Kinder. [she]"
         answers: [hat]
+        explanation: "With er, sie and es, haben becomes hat."
       - id: haben4
         type: fill-blank
         tags: [haben]
         prompt: "Wir ___ eine große Familie."
         answers: [haben]
+        explanation: "With wir, haben stays as it is: wir haben."
       - id: haben5
         type: fill-blank
         tags: [haben]
         prompt: "___ ihr Zeit?"
         answers: [Habt]
+        explanation: "With ihr, haben becomes habt. The verb comes first in a yes/no question."
       - id: haben6
         type: fill-blank
         tags: [haben]
         prompt: "___ Sie Kinder, Herr Schmidt?"
         answers: [Haben]
+        explanation: "Formal Sie takes haben, and the verb comes first in a yes/no question."
 
   - title: mein or meine?
     instructions: Add the ending -e where it is needed.
@@ -75,11 +84,13 @@ sets:
         tags: [possessives]
         prompt: "Das ist ___ Vater. (mein)"
         answers: [mein]
+        explanation: "Vater is a der noun, so mein has no ending: mein Vater."
       - id: poss2
         type: fill-blank
         tags: [possessives]
         prompt: "Das ist ___ Mutter. (mein)"
         answers: [meine]
+        explanation: "Mutter is a die noun, so mein adds -e: meine Mutter."
       - id: poss3
         type: fill-blank
         tags: [possessives]
@@ -91,16 +102,19 @@ sets:
         tags: [possessives]
         prompt: "Wie heißt ___ Bruder? (dein)"
         answers: [dein]
+        explanation: "Bruder is a der noun, so dein has no ending."
       - id: poss5
         type: fill-blank
         tags: [possessives]
         prompt: "Wo wohnt ___ Schwester? (dein)"
         answers: [deine]
+        explanation: "Schwester is a die noun, so dein adds -e: deine Schwester."
       - id: poss6
         type: fill-blank
         tags: [possessives]
         prompt: "___ Kinder lernen Deutsch. (unser)"
         answers: [Unsere]
+        explanation: "Kinder is plural, and possessives add -e in the plural: unsere Kinder."
 
   - title: sein or ihr?
     instructions: First decide who the owner is, then add the ending.
@@ -125,12 +139,14 @@ sets:
         prompt: Maria wohnt in Köln. ___ Eltern wohnen in Rom.
         options: [Ihre, Ihr, Seine]
         answer: Ihre
+        explanation: "Maria is a woman, so 'her' is ihr; Eltern is plural, so it adds -e: ihre Eltern."
       - id: his4
         type: multiple-choice
         tags: [possessives, sein and ihr]
         prompt: Tom ist verheiratet. ___ Frau heißt Elena.
         options: [Seine, Sein, Ihre]
         answer: Seine
+        explanation: "Tom is a man, so 'his' is sein; Frau is a die noun, so it adds -e: seine Frau."
 
   - title: Read about a family
     instructions: Read the text, then answer.
@@ -149,23 +165,27 @@ sets:
         tags: [reading, family]
         prompt: Priya ist ledig.
         answer: false
+        explanation: "Priya writes: Ich bin verheiratet. Her sister Anita is the one who is ledig."
       - id: read2
         type: true-false
         tags: [reading, family]
         prompt: Priya und Arjun haben zwei Kinder.
         answer: true
+        explanation: "The text says: Wir haben zwei Kinder, a son and a daughter."
       - id: read3
         type: multiple-choice
         tags: [reading, family]
         prompt: Wie alt ist die Tochter?
         options: [fünf Jahre, acht Jahre, zwei Jahre]
         answer: fünf Jahre
+        explanation: "Unsere Tochter heißt Mira und ist fünf. The son is eight."
       - id: read4
         type: multiple-choice
         tags: [reading, family]
         prompt: Wo wohnt Priyas Schwester?
         options: [in Berlin, in Indien, in Hamburg]
         answer: in Berlin
+        explanation: "Her sister Anita wohnt in Berlin. Her parents live in India."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -175,11 +195,13 @@ sets:
         tags: [haben]
         prompt: Do you have children? (formal)
         answer: Haben Sie Kinder?
+        explanation: "A yes/no question starts with the verb: Haben Sie Kinder?"
       - id: order2
         type: word-order
         tags: [possessives]
         prompt: My parents live in Hamburg.
         answer: Meine Eltern wohnen in Hamburg.
+        explanation: "Eltern is plural, so it is meine Eltern, and the verb wohnen comes second."
 
   - title: Say and write it
     items:
@@ -188,16 +210,19 @@ sets:
         tags: [possessives]
         prompt: That is my mother.
         answers: [Das ist meine Mutter.]
+        explanation: "Mutter is a die noun, so 'my' is meine: Das ist meine Mutter."
       - id: tr2
         type: translation
         tags: [haben]
         prompt: I have a sister.
         answers: [Ich habe eine Schwester.]
+        explanation: "Schwester is a die noun, so 'a' is eine: Ich habe eine Schwester."
       - id: tr3
         type: translation
         tags: [family]
         prompt: Are you married? (formal)
         answers: [Sind Sie verheiratet?]
+        explanation: "Being married is sein + verheiratet; the question starts with the verb: Sind Sie verheiratet?"
       - id: write1
         type: writing-task
         tags: [writing, family]

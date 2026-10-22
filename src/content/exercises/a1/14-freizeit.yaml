@@ -13,24 +13,28 @@ sets:
           - { left: wandern, right: to hike }
           - { left: Musik hören, right: to listen to music }
           - { left: kochen, right: to cook }
+        explanation: "Some activities are a noun plus a verb, like Rad fahren or Freunde treffen; spazieren gehen pairs two verbs."
       - id: act2
         type: multiple-choice
         tags: [free time]
         prompt: Ich ___ gern Gitarre.
         options: [spiele, mache, gehe]
         answer: spiele
+        explanation: "Instruments and games take spielen: Gitarre spielen, Fußball spielen."
       - id: act3
         type: multiple-choice
         tags: [free time]
         prompt: Wir ___ heute Abend ins Kino.
         options: [gehen, spielen, machen]
         answer: gehen
+        explanation: "Going somewhere is gehen: ins Kino gehen, to go to the cinema."
       - id: act4
         type: multiple-choice
         tags: [free time]
         prompt: Sie ___ zweimal pro Woche Sport.
         options: [macht, spielt, fährt]
         answer: macht
+        explanation: "Sport goes with machen: Sport machen. spielen is for a particular game."
 
   - title: gern, lieber, am liebsten
     items:
@@ -39,35 +43,41 @@ sets:
         tags: [gern]
         prompt: I like listening to music.
         answer: Ich höre gern Musik.
+        explanation: "To like doing something, put gern after the verb: Ich höre gern Musik."
       - id: gern2
         type: word-order
         tags: [gern]
         prompt: I do not like dancing.
         answer: Ich tanze nicht gern.
+        explanation: "nicht gern means 'do not like doing': nicht goes before gern."
       - id: gern3
         type: fill-blank
         tags: [gern]
         prompt: "Ich spiele gern Tennis, aber ich spiele ___ Fußball."
         answers: [lieber]
         translation: I like playing tennis, but I prefer playing football.
+        explanation: "lieber is the comparative of gern: to prefer doing one thing over another."
       - id: gern4
         type: fill-blank
         tags: [gern]
         prompt: "Am ___ treffe ich meine Freunde."
         answers: [liebsten]
         translation: Best of all I like meeting my friends.
+        explanation: "am liebsten is the superlative of gern: best of all. The verb still comes second."
       - id: gern5
         type: multiple-choice
         tags: [gern]
         prompt: How do you say "I like swimming"?
         options: [Ich schwimme gern., Ich mag schwimmen., Ich gern schwimme.]
         answer: Ich schwimme gern.
+        explanation: "Liking an activity is the verb plus gern: Ich schwimme gern."
       - id: gern6
         type: multiple-choice
         tags: [gern]
         prompt: Ich trinke lieber Tee ___ Kaffee.
         options: [als, wie, und]
         answer: als
+        explanation: "After lieber, the thing you like less follows als: lieber Tee als Kaffee."
 
   - title: How often?
     items:
@@ -81,6 +91,7 @@ sets:
           - { left: manchmal, right: sometimes }
           - { left: selten, right: rarely }
           - { left: nie, right: never }
+        explanation: "From most to least: immer, oft, manchmal, selten, nie."
 
   - title: Making an arrangement
     items:
@@ -90,6 +101,7 @@ sets:
         prompt: "Your friend asks: Wollen wir ins Kino gehen? You want to go. You say:"
         options: ["Ja, gern!", "Tut mir leid.", "Um acht Uhr."]
         answer: "Ja, gern!"
+        explanation: "Ja, gern! is the friendly way to accept a suggestion."
       - id: plan2
         type: multiple-choice
         tags: [arrangements]
@@ -99,6 +111,7 @@ sets:
           - "Nein."
           - "Ich will nicht."
         answer: "Am Samstag kann ich leider nicht. Geht es am Sonntag?"
+        explanation: "A polite refusal says leider and offers another day: Geht es am Sonntag?"
       - id: plan3
         type: cloze
         tags: [arrangements]
@@ -111,16 +124,19 @@ sets:
           - [Um]
           - [Bis]
         bank: [Zeit, gehen, kann, Um, Bis, Am, muss]
+        explanation: "Hast du Zeit? asks if someone is free; essen gehen is going out to eat; um goes with clock times; Bis Samstag! means see you Saturday."
       - id: plan4
         type: word-order
         tags: [arrangements]
         prompt: When shall we meet?
         answer: Wann treffen wir uns?
+        explanation: "sich treffen is reflexive: wir treffen uns, so uns comes after the subject."
       - id: plan5
         type: word-order
         tags: [arrangements]
         prompt: Shall we go to the cinema?
         answer: Wollen wir ins Kino gehen?
+        explanation: "Wollen wir …? starts a suggestion, and the infinitive gehen goes to the end."
 
   - title: Listen to the arrangement
     stimulus:
@@ -144,17 +160,20 @@ sets:
         prompt: Was wollen Lena und Paul machen?
         options: [schwimmen gehen, ins Kino gehen, essen gehen]
         answer: schwimmen gehen
+        explanation: "Lena asks: Wollen wir schwimmen gehen?"
       - id: listen2
         type: multiple-choice
         tags: [listening, arrangements]
         prompt: Wann treffen sie sich?
         options: [am Sonntag um zehn Uhr, am Samstag um zehn Uhr, am Sonntag um zwölf Uhr]
         answer: am Sonntag um zehn Uhr
+        explanation: "Paul can't on Saturday, so they meet am Sonntag um zehn Uhr."
       - id: listen3
         type: true-false
         tags: [listening, arrangements]
         prompt: Paul hat am Samstag Zeit.
         answer: false
+        explanation: "Paul says: Am Samstag muss ich leider arbeiten."
 
   - title: Read the message
     stimulus:
@@ -170,6 +189,7 @@ sets:
         tags: [reading, arrangements]
         prompt: Jan kommt heute Abend ins Kino.
         answer: false
+        explanation: "Jan writes: ich kann heute Abend leider nicht ins Kino kommen."
       - id: read2
         type: multiple-choice
         tags: [reading, arrangements]
@@ -185,11 +205,13 @@ sets:
         tags: [gern]
         prompt: I like cooking.
         answers: [Ich koche gern.]
+        explanation: "To like doing something, use the verb plus gern: Ich koche gern."
       - id: tr2
         type: translation
         tags: [arrangements]
         prompt: Do you have time on Saturday? (informal)
         answers: [Hast du am Samstag Zeit?]
+        explanation: "A yes/no question starts with the verb; days take am, and Zeit usually goes at the end."
       - id: write1
         type: writing-task
         tags: [writing, arrangements]
