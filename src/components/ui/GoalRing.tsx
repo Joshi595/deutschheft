@@ -20,7 +20,7 @@ export function GoalRing({ earned, goal, size = 104 }: Props) {
         cy="50"
         r={RADIUS}
         fill="none"
-        stroke={share >= 1 ? 'var(--good)' : 'var(--accent)'}
+        stroke={share >= 1 ? 'var(--good)' : 'var(--signal)'}
         strokeWidth="10"
         strokeLinecap="round"
         strokeDasharray={LENGTH}
@@ -28,7 +28,7 @@ export function GoalRing({ earned, goal, size = 104 }: Props) {
         transform="rotate(-90 50 50)"
         style={{ transition: 'stroke-dashoffset 0.6s ease' }}
       />
-      <text x="50" y="47" textAnchor="middle" dominantBaseline="central" fontSize="27" fontWeight="600" fill="currentColor" className="font-display">
+      <text x="50" y="47" textAnchor="middle" dominantBaseline="central" fontSize="27" fontWeight="800" fill="currentColor" className="font-display">
         {earned}
       </text>
       <text x="50" y="68" textAnchor="middle" fontSize="10.5" fill="var(--muted)">

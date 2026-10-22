@@ -1,4 +1,5 @@
 ---
+import ArticleGame, { packNouns, type Noun } from '../components/home/ArticleGame';
 import PageHeader from '../components/ui/PageHeader.astro';
 import ReviewSession from '../components/review/ReviewSession';
 import Base from '../layouts/Base.astro';
@@ -6,6 +7,17 @@ import { getCatalog } from '../lib/content/catalog';
 import { url } from '../lib/url';
 
 const catalog = await getCatalog();
+
+// Every noun in the active levels, once each, for the article game.
+const seen = new Set<string>();
+const nouns: Noun[] = catalog.levels
+  .filter((level) => level.status === 'active')
+  .flatMap((level) =>
+    level.lessons.flatMap((lesson) =>
+      lesson.vocab.flatMap((item) => (item.article ? [{ article: item.article, de: item.de, en: item.en, level: level.id }] : [])),
+    ),
+  )
+  .filter((noun) => !seen.has(noun.de) && seen.add(noun.de));
 const vocab = catalog.lessons.flatMap((lesson) => lesson.vocab);
 // In review an exercise appears on its own, so it takes its set's reading or listening text with it.
 const exercises = [
@@ -29,4 +41,15 @@ const lessons = Object.fromEntries([
       <div slot="fallback" class="skeleton min-h-48" role="status"><span class="sr-only">Loading your cards …</span></div>
     </ReviewSession>
   </div>
+
+  <section id="warm-up" class="mt-16 border-t-2 border-ink pt-4" aria-labelledby="warm-up-title">
+    <h2 id="warm-up-title" class="text-3xl">Der, die oder das?</h2>
+    <p class="mt-2 mb-6 text-muted">
+      A two-minute warm-up with the nouns of the course. Guessing is the fastest way to get a feel for them: no
+      points, no pressure.
+    </p>
+    <ArticleGame client:only="react" data={packNouns(nouns)}>
+      <div slot="fallback" class="skeleton min-h-80" role="status"><span class="sr-only">Loading the game …</span></div>
+    </ArticleGame>
+  </section>
 </Base>

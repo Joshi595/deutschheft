@@ -1,22 +1,7 @@
 ---
-import ArticleGame, { packNouns, type Noun } from '../components/home/ArticleGame';
 import Today from '../components/home/Today';
 import CourseData from '../components/ui/CourseData.astro';
 import Base from '../layouts/Base.astro';
-import { getCatalog } from '../lib/content/catalog';
-
-const catalog = await getCatalog();
-
-// Every noun in the active levels, once each, for the article game.
-const seen = new Set<string>();
-const nouns: Noun[] = catalog.levels
-  .filter((level) => level.status === 'active')
-  .flatMap((level) =>
-    level.lessons.flatMap((lesson) =>
-      lesson.vocab.flatMap((item) => (item.article ? [{ article: item.article, de: item.de, en: item.en, level: level.id }] : [])),
-    ),
-  )
-  .filter((noun) => !seen.has(noun.de) && seen.add(noun.de));
 ---
 
 <Base>
@@ -25,18 +10,4 @@ const nouns: Noun[] = catalog.levels
   <Today client:only="react">
     <div slot="fallback" class="skeleton min-h-96" role="status"><span class="sr-only">Opening your notebook …</span></div>
   </Today>
-
-  <section class="mt-14 grid items-center gap-6 lg:grid-cols-[1fr_1.3fr] lg:gap-12" aria-labelledby="warm-up">
-    <div>
-      <p class="eyebrow" lang="de">Zum Aufwärmen</p>
-      <h2 id="warm-up" class="mt-1 text-3xl">A two-minute warm-up</h2>
-      <p class="mt-3 text-muted">
-        Every German noun comes with der, die or das, and guessing is the fastest way to get a feel for them. Every
-        word in the game comes from the course. It is practice for its own sake: no points, no pressure.
-      </p>
-    </div>
-    <ArticleGame client:only="react" data={packNouns(nouns)}>
-      <div slot="fallback" class="skeleton min-h-80" role="status"><span class="sr-only">Loading the game …</span></div>
-    </ArticleGame>
-  </section>
 </Base>
