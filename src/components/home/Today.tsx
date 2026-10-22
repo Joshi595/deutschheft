@@ -89,7 +89,7 @@ export default function Today() {
 
       <div className="grid gap-4 lg:grid-cols-[1.55fr_1fr]">
         {primary ? (
-          <section className="page flex flex-col justify-between gap-6 p-5 pl-9 sm:p-8 sm:pl-12" aria-labelledby="next-up">
+          <section className="page flex flex-col justify-between gap-6 p-5 pt-7 sm:p-8 sm:pt-10" aria-labelledby="next-up">
             <div>
               <p className="eyebrow">Next up: {KIND_LABEL[primary.kind].toLowerCase()}</p>
               <h2 id="next-up" className="mt-1 text-3xl sm:text-4xl">
@@ -105,7 +105,7 @@ export default function Today() {
             </div>
           </section>
         ) : (
-          <section className="page p-5 pl-9 sm:p-8 sm:pl-12">
+          <section className="page p-5 pt-7 sm:p-8 sm:pt-10">
             <div>
               <p className="eyebrow" lang="de">Alles geschafft</p>
               <h2 className="mt-1 text-3xl sm:text-4xl">Every chapter is done and nothing is due.</h2>
@@ -279,7 +279,7 @@ function Welcome({ levels }: { levels: CourseLevel[] }) {
   const save = () => updateSettings({ level: levelId, dailyGoal: goal });
 
   return (
-    <div className="page p-5 pl-9 sm:p-10 sm:pl-14">
+    <div className="page p-5 pt-7 sm:p-10 sm:pt-12">
       <header className="max-w-2xl">
         <p className="eyebrow" lang="de">Willkommen</p>
         <h1 className="mt-1 text-4xl sm:text-5xl">Where shall we start?</h1>

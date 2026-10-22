@@ -91,7 +91,7 @@ export default function ConversationRunner({ talk, listHref }: Props) {
     const next = HELP[Math.min(reached, HELP.length - 1)]!;
     return (
       <div className="grid gap-6">
-        <div className="page p-5 pl-9 sm:p-8 sm:pl-12">
+        <div className="page p-5 pt-7 sm:p-8 sm:pt-10">
           <p className="text-lg">{talk.scene}</p>
           <p className="mt-2 text-muted">
             You speak with: <span lang="de" className="font-semibold text-ink">{talk.partner}</span>. {mine.length || talk.lines.filter((line) => line.who === 'you').length} lines are yours.
@@ -142,7 +142,7 @@ export default function ConversationRunner({ talk, listHref }: Props) {
     const good = stage.grades.filter((grade) => grade === 'good').length;
     return (
       <div className="grid gap-6">
-        <div className="page rise p-5 pl-9 sm:p-8 sm:pl-12" aria-live="polite">
+        <div className="page rise p-5 pt-7 sm:p-8 sm:pt-10" aria-live="polite">
           <p className="eyebrow" lang="de">Geschafft!</p>
           <h2 className="mt-1 text-3xl">Conversation spoken</h2>
           <p className="mt-2 text-muted">

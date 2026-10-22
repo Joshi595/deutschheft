@@ -1,4 +1,6 @@
 ---
+import VoiceNotice from '../../../components/ui/VoiceNotice.astro';
+import PageHeader from '../../../components/ui/PageHeader.astro';
 import Base from '../../../layouts/Base.astro';
 import { getCatalog } from '../../../lib/content/catalog';
 import { MISSION_ICONS } from '../../../lib/content/icons';
@@ -11,20 +13,12 @@ const groups = catalog.levels
 ---
 
 <Base title="Conversations" description="Everyday situations to speak through: the app speaks the other person, you speak your part.">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('speak/')} class="hover:text-ink">Speak</a>
-    <span aria-hidden="true"> / </span>
-    <span>Conversations</span>
-  </nav>
-
-  <header class="mt-4 max-w-3xl">
-    <p class="eyebrow" lang="de">Gespräche</p>
-    <h1 class="mt-1 text-4xl sm:text-5xl">Conversations</h1>
-    <p class="mt-3 text-lg text-muted">
-      The app speaks the other person and you speak your part: first reading your lines, then from a cue, then from
-      memory. Some situations also have a guided mission, which teaches the lines step by step before you speak them.
-    </p>
-  </header>
+  <PageHeader
+    title="Conversations"
+    crumbs={[{ label: 'Speak', href: url('speak/') }, { label: 'Conversations' }]}
+    lead="The app speaks the other person and you speak your part: first reading your lines, then from a cue, then from memory. Some situations also have a guided mission, which teaches the lines step by step before you speak them."
+  />
+  <VoiceNotice />
 
   {
     groups.map(({ level, talks }) => (

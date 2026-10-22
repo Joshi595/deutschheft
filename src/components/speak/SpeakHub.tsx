@@ -63,7 +63,7 @@ export default function SpeakHub({ talks, sounds, exams, hrefs }: Props) {
 
   return (
     <div className="grid gap-8">
-      <section className="page flex flex-col gap-6 p-5 pl-9 sm:p-8 sm:pl-12" aria-labelledby="speak-next">
+      <section className="page flex flex-col gap-6 p-5 pt-7 sm:p-8 sm:pt-10" aria-labelledby="speak-next">
         <div>
           <p className="eyebrow">Next up</p>
           <h2 id="speak-next" className="mt-1 text-3xl sm:text-4xl" lang={step.kind === 'conversation' ? 'de' : undefined}>

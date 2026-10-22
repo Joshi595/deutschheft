@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { saveWord } from '../../lib/stores';
 import { findWords, googleTranslateHref, MAX_CHARS, translate, type CourseWord, type Direction } from '../../lib/translate';
+import { Icon } from '../ui/Icon';
 
 interface Props {
   /** The course word list, fetched the first time something is translated. */
@@ -27,8 +28,9 @@ function loadWords(href: string): Promise<CourseWord[]> {
 }
 
 /**
- * A translate button on every page. Select text first and the button
- * translates it; otherwise it opens a box to type into.
+ * The translator behind the shell's Translate button ([data-translate-open]).
+ * Select text first and the button translates it; otherwise it opens a box to
+ * type into. While text is selected, a small chip beside it does the same.
  */
 export default function TranslatePanel({ wordsHref }: Props) {
   const [open, setOpen] = useState(false);
@@ -41,7 +43,8 @@ export default function TranslatePanel({ wordsHref }: Props) {
   const [saved, setSaved] = useState(false);
   const panel = useRef<HTMLDivElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
-  const button = useRef<HTMLButtonElement>(null);
+  const trigger = useRef<HTMLElement | null>(null);
+  const [chip, setChip] = useState<{ x: number; y: number }>();
   const selected = useRef('');
   const focusInput = useRef(false);
   const request = useRef<AbortController>(undefined);
@@ -94,8 +97,54 @@ export default function TranslatePanel({ wordsHref }: Props) {
 
   function close() {
     setOpen(false);
-    button.current?.focus();
+    trigger.current?.focus();
   }
+
+  // The shell's button lives outside React; reach it through the document.
+  const onButtonRef = useRef(onButton);
+  onButtonRef.current = onButton;
+  useEffect(() => {
+    const triggerOf = (event: Event) => (event.target as Element | null)?.closest?.<HTMLElement>('[data-translate-open]');
+    const down = (event: Event) => triggerOf(event) && rememberSelection();
+    const click = (event: Event) => {
+      const found = triggerOf(event);
+      if (!found) return;
+      trigger.current = found;
+      onButtonRef.current();
+    };
+    // A chip next to selected page text, gone again as soon as the selection or the scroll position changes.
+    let frame = 0;
+    const select = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const selection = window.getSelection();
+        const node = selection?.anchorNode;
+        const element = node instanceof Element ? node : node?.parentElement;
+        const picked = selection?.toString().trim() ?? '';
+        if (!picked || !selection?.rangeCount || !element?.closest('main') || element.closest('input, textarea, [contenteditable]')) {
+          setChip(undefined);
+          return;
+        }
+        const rect = selection.getRangeAt(0).getBoundingClientRect();
+        setChip({ x: Math.max(8, Math.min(rect.left, window.innerWidth - 130)), y: Math.min(rect.bottom + 8, window.innerHeight - 120) });
+      });
+    };
+    const hide = () => setChip(undefined);
+    document.addEventListener('pointerdown', down, true);
+    document.addEventListener('click', click);
+    document.addEventListener('selectionchange', select);
+    window.addEventListener('scroll', hide, { passive: true });
+    return () => {
+      document.removeEventListener('pointerdown', down, true);
+      document.removeEventListener('click', click);
+      document.removeEventListener('selectionchange', select);
+      window.removeEventListener('scroll', hide);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.querySelectorAll('[data-translate-open]').forEach((each) => each.setAttribute('aria-expanded', String(open)));
+  }, [open]);
 
   function swap() {
     setDirection(direction === 'de-en' ? 'en-de' : 'de-en');
@@ -123,17 +172,15 @@ export default function TranslatePanel({ wordsHref }: Props) {
           role="dialog"
           aria-label="Translate"
           onKeyDown={(event) => event.key === 'Escape' && close()}
-          className="card fixed inset-x-3 bottom-[calc(7.75rem+env(safe-area-inset-bottom))] z-40 grid max-h-[calc(100dvh-11rem)] gap-3 overflow-y-auto p-4 shadow-[var(--lift)] sm:inset-x-auto sm:right-6 sm:bottom-22 sm:w-[25rem]"
+          className="fixed inset-x-3 bottom-[calc(var(--tabbar-h)+0.75rem+env(safe-area-inset-bottom))] z-50 grid max-h-[calc(100dvh-var(--header-h)-var(--tabbar-h)-2rem)] gap-3 overflow-y-auto rounded border-2 border-ink bg-surface p-4 sm:inset-x-auto sm:right-6 sm:bottom-6 sm:max-h-[calc(100dvh-3rem)] sm:w-[25rem]"
         >
           <div className="flex items-center gap-2">
             <button type="button" className="btn btn-small" onClick={swap} aria-label={`${LABEL[direction]}. Swap languages`}>
               {LABEL[direction]}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="m17 3 3 3-3 3M4 6h16M7 21l-3-3 3-3M20 18H4" />
-              </svg>
+              <Icon name="swap" size={16} />
             </button>
             <button type="button" className="btn btn-quiet btn-small ml-auto" onClick={close} aria-label="Close translator">
-              ✕
+              <Icon name="cross" size={18} />
             </button>
           </div>
 
@@ -175,7 +222,7 @@ export default function TranslatePanel({ wordsHref }: Props) {
           </form>
 
           {!result && !error && !busy && !text && (
-            <p className="text-sm text-muted">Tip: select text on any page, then press Translate.</p>
+            <p className="text-sm text-muted">Tip: select text on any page and a Translate button appears next to it.</p>
           )}
 
           {error && (
@@ -191,11 +238,7 @@ export default function TranslatePanel({ wordsHref }: Props) {
               </p>
               <div className="mt-2 flex flex-wrap items-center gap-2">
                 <button type="button" className="speak" data-speak={german} aria-label={`Listen: ${german}`} title="Listen">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M11 5 6 9H3v6h3l5 4z" />
-                    <path d="M15.5 8.5a5 5 0 0 1 0 7" />
-                    <path d="M18.5 5.5a9 9 0 0 1 0 13" />
-                  </svg>
+                  <Icon name="listen" size={16} />
                 </button>
                 <button type="button" className="btn btn-small" onClick={save} disabled={saved}>
                   {saved ? 'Saved' : 'Save to Notebook'}
@@ -241,7 +284,8 @@ export default function TranslatePanel({ wordsHref }: Props) {
                   rel="noreferrer"
                   className="underline underline-offset-2 hover:text-ink"
                 >
-                  Compare in Google Translate ↗
+                  Compare in Google Translate
+                  <Icon name="external" size={12} className="ml-1 inline align-baseline" />
                 </a>
               </>
             )}
@@ -249,23 +293,25 @@ export default function TranslatePanel({ wordsHref }: Props) {
         </div>
       )}
 
-      <button
-        ref={button}
-        type="button"
-        aria-label="Translate"
-        aria-expanded={open}
-        aria-controls="translate-panel"
-        title="Translate (select text first to translate it)"
-        onPointerDown={rememberSelection}
-        onKeyDown={(event) => (event.key === 'Enter' || event.key === ' ') && rememberSelection()}
-        onClick={onButton}
-        className="fixed right-4 bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-40 flex size-12 items-center justify-center gap-2 rounded-full bg-ink font-semibold text-bg shadow-[var(--lift)] transition-colors hover:bg-accent hover:text-accent-ink sm:right-6 sm:bottom-6 sm:w-auto sm:px-4"
-      >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M3 5h8M7 3v2M9.5 5c-.6 3.4-2.7 6-5.5 7.5M5.5 8.5c1 1.6 2.6 2.9 4.5 3.5M12.5 21l4-9 4 9M14 18h5" />
-        </svg>
-        <span className="hidden sm:inline">Translate</span>
-      </button>
+      {chip && (
+        <button
+          type="button"
+          className="btn btn-primary btn-small fixed z-50"
+          style={{ left: chip.x, top: chip.y }}
+          onPointerDown={(event) => {
+            // Keep the selection: the click must not clear what it is about to translate.
+            event.preventDefault();
+            rememberSelection();
+          }}
+          onClick={() => {
+            setChip(undefined);
+            onButton();
+          }}
+        >
+          <Icon name="translate" size={16} />
+          Translate
+        </button>
+      )}
     </>
   );
 }

@@ -1,4 +1,6 @@
 ---
+import VoiceNotice from '../../components/ui/VoiceNotice.astro';
+import PageHeader from '../../components/ui/PageHeader.astro';
 import SentenceSession from '../../components/speak/SentenceSession';
 import CourseData from '../../components/ui/CourseData.astro';
 import Base from '../../layouts/Base.astro';
@@ -8,23 +10,16 @@ import { url } from '../../lib/url';
 <Base title="Sentences" description="Say German sentences aloud from a cue, and have them come back until they are automatic." width="narrow">
   <CourseData />
 
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('speak/')} class="hover:text-ink">Speak</a>
-    <span aria-hidden="true"> / </span>
-    <span>Sentences</span>
-  </nav>
-
-  <header class="mt-4">
-    <p class="eyebrow" lang="de">Sätze</p>
-    <h1 class="mt-1 text-4xl sm:text-5xl">Sentences</h1>
-    <p class="mt-3 text-muted">
-      Knowing a sentence and being able to say it are different things. Here you say it, every time, before you see it.
-    </p>
-  </header>
+  <PageHeader
+    title="Sentences"
+    crumbs={[{ label: 'Speak', href: url('speak/') }, { label: 'Sentences' }]}
+    lead="Knowing a sentence and being able to say it are different things. Here you say it, every time, before you see it."
+  />
+  <VoiceNotice />
 
   <div class="mt-8">
     <SentenceSession client:only="react" bankHref={url('speak/phrases.json')} speakHref={url('speak/')} conversationsHref={url('speak/conversations/')}>
-      <div slot="fallback" class="card p-6 text-muted">Loading your sentences …</div>
+      <div slot="fallback" class="skeleton min-h-48" role="status"><span class="sr-only">Loading your sentences …</span></div>
     </SentenceSession>
   </div>
 </Base>

@@ -1,4 +1,6 @@
 ---
+import VoiceNotice from '../../../components/ui/VoiceNotice.astro';
+import PageHeader from '../../../components/ui/PageHeader.astro';
 import ExamSpeaking, { type ExamGroup } from '../../../components/speak/ExamSpeaking';
 import Base from '../../../layouts/Base.astro';
 import { getCatalog } from '../../../lib/content/catalog';
@@ -38,24 +40,16 @@ const seconds = ({ a1: 60, a2: 90 } as Record<string, number>)[level.id] ?? 180;
 ---
 
 <Base title={`Exam speaking ${level.title}`} description={`Every ${level.title} speaking task of the course, against the clock.`} width="narrow">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('speak/')} class="hover:text-ink">Speak</a>
-    <span aria-hidden="true"> / </span>
-    <span>Exam speaking {level.title}</span>
-  </nav>
-
-  <header class="mt-4">
-    <p class="eyebrow" lang="de">Prüfung Sprechen</p>
-    <h1 class="mt-1 text-4xl sm:text-5xl">Exam speaking {level.title}</h1>
-    <p class="mt-3 text-muted">
-      {count} speaking tasks, grouped by exam part. Start the clock, speak, then compare with the model answer and tick
-      what your answer managed. {level.exam && `They follow the ${level.exam}.`}
-    </p>
-  </header>
+  <PageHeader
+    title={`Exam speaking ${level.title}`}
+    crumbs={[{ label: 'Speak', href: url('speak/') }, { label: `Exam speaking ${level.title}` }]}
+    lead={`${count} speaking tasks, grouped by exam part. Start the clock, speak, then compare with the model answer and tick what your answer managed.${level.exam ? ` They follow the ${level.exam}.` : ''}`}
+  />
+  <VoiceNotice />
 
   <div class="mt-8">
     <ExamSpeaking client:only="react" groups={groups} seconds={seconds}>
-      <div slot="fallback" class="card p-6 text-muted">Loading the tasks …</div>
+      <div slot="fallback" class="skeleton min-h-48" role="status"><span class="sr-only">Loading the tasks …</span></div>
     </ExamSpeaking>
   </div>
 </Base>

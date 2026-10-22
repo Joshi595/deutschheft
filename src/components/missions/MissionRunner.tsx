@@ -81,7 +81,7 @@ export default function MissionRunner({ mission, next, listHref, speakHref }: Pr
   if (stage.name === 'intro') {
     return (
       <div className="grid gap-6">
-        <div className="page p-5 pl-9 sm:p-8 sm:pl-12">
+        <div className="page p-5 pt-7 sm:p-8 sm:pt-10">
           <div className="flex items-start gap-4">
             <span className="grid size-16 flex-none place-items-center rounded-2xl bg-accent-soft">
               <svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
