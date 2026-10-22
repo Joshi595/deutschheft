@@ -8,29 +8,34 @@ sets:
         prompt: "An email to a company you do not know starts with …"
         options: ["Sehr geehrte Damen und Herren,", "Hallo zusammen,", "Liebe Firma,"]
         answer: "Sehr geehrte Damen und Herren,"
+        explanation: "When you do not know the reader, write Sehr geehrte Damen und Herren,"
       - id: lvl2
         type: multiple-choice
         tags: [register]
         prompt: "A friendly email to your teacher, Frau Brandt, starts with …"
         options: ["Liebe Frau Brandt,", "Hi Brandt,", "Liebe Brandt,"]
         answer: "Liebe Frau Brandt,"
+        explanation: "Liebe Frau Brandt is friendly but still formal: Frau + surname, and Sie in the text."
       - id: lvl3
         type: multiple-choice
         tags: [register]
         prompt: "The standard formal closing is …"
         options: ["Mit freundlichen Grüßen", "LG", "Bis bald!"]
         answer: "Mit freundlichen Grüßen"
+        explanation: "Mit freundlichen Grüßen is the standard formal closing. LG (Liebe Grüße) is for friends."
       - id: lvl4
         type: multiple-choice
         tags: [register]
         prompt: "Which word is colloquial?"
         options: [kriegen, erhalten, bekommen]
         answer: kriegen
+        explanation: "kriegen is colloquial; erhalten is formal and bekommen neutral."
       - id: lvl5
         type: true-false
         tags: [register]
         prompt: "After 'Sehr geehrte Damen und Herren,' the next word normally starts with a capital letter."
         answer: false
+        explanation: "After the opening and its comma, the letter continues with a small letter, unless the word is a noun."
 
   - title: Colloquial to neutral
     items:
@@ -44,28 +49,33 @@ sets:
           - { left: Kumpel, right: Freund }
           - { left: Kohle, right: Geld }
           - { left: quatschen, right: sich unterhalten }
+        explanation: "Colloquial and neutral pairs: kriegen/bekommen, gucken/sehen, Kumpel/Freund, Kohle/Geld, quatschen/sich unterhalten."
       - id: col3
         type: multiple-choice
         tags: [spoken written]
         prompt: "Which is the written, formal version of 'wegen dem Umzug'?"
         options: ["wegen des Umzugs", "wegen der Umzug", "wegen Umzug von mir"]
         answer: "wegen des Umzugs"
+        explanation: "In writing, wegen takes the genitive: wegen des Umzugs. wegen dem is spoken."
       - id: col4
         type: multiple-choice
         tags: [spoken written]
         prompt: "'Ich hab's dir doch gesagt!' is typical of …"
         options: [spoken German, a formal letter, a newspaper report]
         answer: spoken German
+        explanation: "Short forms like hab's and the particle doch are typical of speech."
       - id: col5
         type: fill-blank
         tags: [du Sie]
         prompt: "Mein Chef hat mir das Du ___. (offered)"
         answers: [angeboten]
+        explanation: "jemandem das Du anbieten means offering to switch from Sie to du."
       - id: col2
         type: fill-blank
         tags: [vocabulary]
         prompt: "Haben Sie meine Bewerbung ___? (received – formal)"
         answers: [erhalten, bekommen]
+        explanation: "erhalten is the formal word for receiving; bekommen is also fine."
 
   - title: Make it formal
     instructions: Rewrite the informal request formally with Sie and Konjunktiv II.
@@ -77,6 +87,7 @@ sets:
         answers:
           - "Könnten Sie mir bitte helfen?"
           - "Könnten Sie mir helfen?"
+        explanation: "Formal: Sie and Konjunktiv II: Könnten Sie mir bitte helfen?"
       - id: f2
         type: translation
         tags: [requests]
@@ -84,17 +95,20 @@ sets:
         answers:
           - "Könnten Sie mir bitte die Informationen schicken?"
           - "Könnten Sie mir die Informationen schicken?"
+        explanation: "An imperative becomes a polite question with Könnten Sie; Infos becomes the full word Informationen."
       - id: f3
         type: translation
         tags: [requests]
         prompt: "Können wir den Termin verschieben? → Wäre es möglich, …"
         answers:
           - "Wäre es möglich, den Termin zu verschieben?"
+        explanation: "Wäre es möglich, … zu + infinitive is a very polite way to ask."
       - id: f4
         type: word-order
         tags: [requests]
         prompt: I would be grateful if you could call me back.
         answer: "Ich wäre Ihnen dankbar, wenn Sie mich zurückrufen könnten."
+        explanation: "Ich wäre Ihnen dankbar, wenn … : in the wenn clause the modal könnten goes last."
 
   - title: Spot the mistake
     items:
@@ -104,18 +118,21 @@ sets:
         prompt: "'Sehr geehrter Herr Wolf, kannst du mir bitte Bescheid sagen? Mit freundlichen Grüßen, Lea Kraus' What is wrong?"
         options: ["du does not fit the formal opening", "the closing is too informal", "nothing"]
         answer: "du does not fit the formal opening"
+        explanation: "Sehr geehrter Herr Wolf is formal, so the text must use Sie, not du."
       - id: spot2
         type: multiple-choice
         tags: [consistency]
         prompt: "'Hallo Tom, ich wäre Ihnen sehr dankbar, wenn Sie mir das Buch zurückgeben könnten. LG Ana' What is wrong?"
         options: ["Sie does not fit a message to a friend", "LG is too formal", "nothing"]
         answer: "Sie does not fit a message to a friend"
+        explanation: "Hallo Tom and LG show a friendly message, so the text should use du, not Sie."
       - id: spot3
         type: multiple-choice
         tags: [du Sie]
         prompt: "Who normally offers to switch from Sie to du?"
         options: ["the older or more senior person", "the younger person", "whoever speaks first"]
         answer: "the older or more senior person"
+        explanation: "The older or more senior person, or the woman in a social setting, offers the Du."
 
   - title: A formal email
     items:
@@ -132,6 +149,7 @@ sets:
           - [Wäre]
           - [Rückmeldung]
           - [freundlichen]
+        explanation: "Sehr geehrte (formal opening); leider (bad news); da (reason, verb last); Wäre es möglich (polite request); um Rückmeldung bitten; Mit freundlichen Grüßen."
 
   - title: Write two messages
     items:

@@ -8,39 +8,46 @@ sets:
         prompt: "Das ist der Kollege, ___ ich das Projekt mache."
         options: [mit dem, mit den, den mit]
         answer: mit dem
+        explanation: "The preposition comes first, then the pronoun: mit + dative masculine = mit dem."
       - id: prep2
         type: multiple-choice
         tags: [prepositions]
         prompt: "Die Stadt, ___ ich aufgewachsen bin, ist klein."
         options: [in der, in die, die in]
         answer: in der
+        explanation: "in for a place takes the dative; Stadt is feminine: in der."
       - id: prep3
         type: multiple-choice
         tags: [prepositions]
         prompt: "Die Firma, ___ ich arbeite, hat 200 Mitarbeiter."
         options: [für die, für der, bei die]
         answer: für die
+        explanation: "arbeiten für + accusative; Firma is feminine: für die."
       - id: prep4
         type: multiple-choice
         tags: [prepositions]
         prompt: "Die Freunde, ___ ich warte, kommen immer zu spät."
         options: [auf die, auf denen, für die]
         answer: auf die
+        explanation: "warten auf + accusative; Freunde is plural: auf die."
       - id: prep5
         type: fill-blank
         tags: [prepositions]
         prompt: "Das ist das Thema, über ___ wir gesprochen haben."
         answers: [das]
+        explanation: "sprechen über + accusative; Thema is neuter: über das."
       - id: prep6
         type: fill-blank
         tags: [prepositions]
         prompt: "Sie ist eine Freundin, auf ___ ich mich verlassen kann."
         answers: [die]
+        explanation: "sich verlassen auf + accusative; Freundin is feminine: auf die."
       - id: prep7
         type: fill-blank
         tags: [prepositions]
         prompt: "Der Mann, von ___ ich das Fahrrad gekauft habe, wohnt nebenan."
         answers: [dem]
+        explanation: "von takes the dative; Mann is masculine: von dem."
 
   - title: wo, was or a pronoun?
     items:
@@ -50,42 +57,49 @@ sets:
         prompt: "Das ist alles, ___ ich weiß."
         options: [was, das, wo]
         answer: was
+        explanation: "After alles, etwas, nichts or vieles, the relative pronoun is was."
       - id: ww2
         type: multiple-choice
         tags: [wo]
         prompt: "Ich fahre nach Hamburg, ___ meine Schwester wohnt."
         options: [wo, in der, was]
         answer: wo
+        explanation: "For a place, especially a town or country, the relative word can be wo."
       - id: ww3
         type: multiple-choice
         tags: [was]
         prompt: "Der Zug war pünktlich, ___ nicht oft passiert."
         options: [was, der, das]
         answer: was
+        explanation: "When the relative clause refers to the whole sentence before it, use was."
       - id: ww4
         type: multiple-choice
         tags: [was]
         prompt: "Es gibt nichts, ___ ich lieber mache."
         options: [was, das, wo]
         answer: was
+        explanation: "After nichts the relative pronoun is was."
       - id: ww5
         type: multiple-choice
         tags: [was]
         prompt: "Das ist das Beste, ___ ich je gegessen habe."
         options: [was, das, den]
         answer: was
+        explanation: "After a superlative used as a noun (das Beste), use was."
       - id: ww6
         type: multiple-choice
         tags: [wo(r) + preposition]
         prompt: "Er hat mir geholfen, ___ ich ihm dankbar bin."
         options: [wofür, was, für den]
         answer: wofür
+        explanation: "Referring to a whole sentence with a preposition: wo(r) + preposition, here wofür."
       - id: ww7
         type: multiple-choice
         tags: [wer]
         prompt: "___ Fragen hat, kann mich jederzeit anrufen."
         options: [Wer, Der, Was]
         answer: Wer
+        explanation: "Wer … means whoever, with no noun before it: Wer Fragen hat, kann …"
 
   - title: Join the sentences
     items:
@@ -95,22 +109,26 @@ sets:
         prompt: "Das ist mein Freund. Ich reise oft mit ihm."
         answers:
           - "Das ist mein Freund, mit dem ich oft reise."
+        explanation: "mit takes the dative; Freund is masculine: mit dem. The verb reise goes to the end."
       - id: join2
         type: translation
         tags: [prepositions]
         prompt: "Der Urlaub beginnt morgen. Ich freue mich schon lange auf den Urlaub."
         answers:
           - "Der Urlaub, auf den ich mich schon lange freue, beginnt morgen."
+        explanation: "sich freuen auf + accusative, masculine Urlaub: auf den. The clause sits right after der Urlaub."
       - id: join3
         type: word-order
         tags: [wo]
         prompt: That is the café where we met.
         answer: "Das ist das Café, wo wir uns kennengelernt haben."
+        explanation: "wo can refer to a place: das Café, wo …; the verb haben goes last."
       - id: join4
         type: word-order
         tags: [was]
         prompt: What you said is not true.
         answer: "Das, was du gesagt hast, stimmt nicht."
+        explanation: "After das (meaning 'that which'), the relative pronoun is was."
 
   - title: My town
     items:
@@ -127,6 +145,7 @@ sets:
           - [auf den]
           - [was]
           - [über die]
+        explanation: "wo for the town; in der Straße (dative place); mit dem Freund; sich freuen auf den; alles, was; schreiben über die Leute."
 
   - title: A friend to rely on
     stimulus:
@@ -148,16 +167,19 @@ sets:
         prompt: Was ist für Frau Berg eine gute Freundin?
         options: ["jemand, auf den man sich verlassen kann", "jemand, der immer lacht", "jemand, der in der Nähe wohnt"]
         answer: "jemand, auf den man sich verlassen kann"
+        explanation: "Frau Berg says: jemand, auf den man sich verlassen kann."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Frau Berg hat ihre beste Freundin in Lissabon kennengelernt.
         answer: true
+        explanation: "She met her in Lissabon, wo ich zwei Jahre gearbeitet habe."
       - id: listen3
         type: true-false
         tags: [listening]
         prompt: Das Café, in dem sie sich getroffen haben, ist heute geschlossen.
         answer: false
+        explanation: "She says the café … gibt es heute noch: it still exists."
 
   - title: Your favourite place
     items:

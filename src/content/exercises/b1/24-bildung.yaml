@@ -8,22 +8,26 @@ sets:
         prompt: "Which school ends with the Abitur?"
         options: [das Gymnasium, die Realschule, die Grundschule]
         answer: das Gymnasium
+        explanation: "The Gymnasium leads to the Abitur, the entrance qualification for university."
       - id: sys2
         type: multiple-choice
         tags: [school system]
         prompt: "In the German system a mark of 1 means …"
         options: [very good, failed, average]
         answer: very good
+        explanation: "German school marks run from 1 (sehr gut) to 6 (ungenügend), so 1 is the best."
       - id: sys3
         type: true-false
         tags: [school system]
         prompt: "In the dual system, apprentices work in a company and also go to a vocational school."
         answer: true
+        explanation: "The duale Ausbildung combines practical work in a company with lessons at a Berufsschule."
       - id: sys4
         type: true-false
         tags: [school system]
         prompt: "Most public universities in Germany charge high tuition fees."
         answer: false
+        explanation: "Public universities in Germany charge no or very low tuition fees."
       - id: sys5
         type: matching
         tags: [vocabulary]
@@ -35,6 +39,7 @@ sets:
           - { left: das Zeugnis, right: the school report }
           - { left: die Volkshochschule, right: adult education centre }
           - { left: die Anerkennung, right: recognition }
+        explanation: "Vorlesung lecture, Stipendium scholarship, Azubi apprentice, Zeugnis school report, Volkshochschule adult education centre, Anerkennung recognition."
 
   - title: Grammar in context
     items:
@@ -44,33 +49,39 @@ sets:
         prompt: "Mein Sohn ___ in die 5. Klasse."
         options: [geht, studiert, lernt]
         answer: geht
+        explanation: "Pupils go to a class: in die 5. Klasse gehen. studieren is for university only."
       - id: g2
         type: multiple-choice
         tags: [prepositions]
         prompt: "Sie macht eine Ausbildung ___ Bankkauffrau."
         options: [zur, zum, für]
         answer: zur
+        explanation: "eine Ausbildung zu … machen; Bankkauffrau is feminine, so zur."
       - id: g3
         type: multiple-choice
         tags: [passive]
         prompt: "Mein Abschluss ___ in Deutschland anerkannt."
         options: [wurde, hat, wird geworden]
         answer: wurde
+        explanation: "The Präteritum passive is wurde + participle: wurde … anerkannt."
       - id: g4
         type: fill-blank
         tags: [reflexive]
         prompt: "Ich kann ___ neue Wörter gut merken."
         answers: [mir]
+        explanation: "sich etwas merken takes a dative reflexive: ich kann mir … merken."
       - id: g5
         type: fill-blank
         tags: [separable]
         prompt: "Ich bilde mich gerade beruflich ___."
         answers: [weiter]
+        explanation: "sich weiterbilden is separable: ich bilde mich … weiter."
       - id: g6
         type: word-order
         tags: [um zu]
         prompt: I am doing further training to have better chances.
         answer: "Ich bilde mich weiter, um bessere Chancen zu haben."
+        explanation: "sich weiterbilden splits; um … zu gives the aim, with the same subject."
 
   - title: Say it in German
     items:
@@ -80,24 +91,28 @@ sets:
         prompt: I am in my fourth semester of computer science.
         answers:
           - "Ich studiere im vierten Semester Informatik."
+        explanation: "German says im vierten Semester to give the semester you are in."
       - id: tr2
         type: translation
         tags: [learning]
         prompt: I learn best when I repeat words out loud.
         answers:
           - "Ich lerne am besten, wenn ich Wörter laut wiederhole."
+        explanation: "am besten is the superlative of gut; the wenn clause sends wiederhole to the end."
       - id: tr4
         type: translation
         tags: [exams]
         prompt: I passed the exam.
         answers:
           - "Ich habe die Prüfung bestanden."
+        explanation: "To pass an exam is bestehen: Ich habe die Prüfung bestanden."
       - id: tr3
         type: translation
         tags: [passive]
         prompt: The qualification must be recognised.
         answers:
           - "Der Abschluss muss anerkannt werden."
+        explanation: "A modal passive: muss + participle + werden at the end."
 
   - title: My education
     items:
@@ -114,6 +129,7 @@ sets:
           - [Abschluss]
           - [anerkannt]
           - [Weiterbildung]
+        explanation: "das Abitur machen; Architektur studiert; nach dem achten Semester; den Abschluss haben; anerkannt (recognised); eine Weiterbildung machen."
 
   - title: A reading text
     stimulus:
@@ -126,17 +142,20 @@ sets:
         tags: [reading]
         prompt: Senioren lernen genauso schnell wie junge Leute.
         answer: false
+        explanation: "The text says seniors lernen zwar langsamer als junge Leute: more slowly."
       - id: read2
         type: true-false
         tags: [reading]
         prompt: Senioren können sich interessante Dinge gut merken.
         answer: true
+        explanation: "They remember things just as well, wenn es für sie interessant ist."
       - id: read3
         type: multiple-choice
         tags: [reading]
         prompt: Warum lernen viele ältere Menschen?
         options: ["um aktiv zu bleiben und Kontakte zu finden", "um einen neuen Job zu finden", "weil die Kurse kostenlos sind"]
         answer: "um aktiv zu bleiben und Kontakte zu finden"
+        explanation: "Learning helps them, aktiv zu bleiben und neue Kontakte zu finden."
 
   - title: Present it
     items:

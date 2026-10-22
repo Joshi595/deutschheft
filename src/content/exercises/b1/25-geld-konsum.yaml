@@ -13,39 +13,46 @@ sets:
           - { left: die Laufzeit, right: the term of a contract }
           - { left: erstatten, right: to refund }
           - { left: die Werbung, right: advertising }
+        explanation: "Gebühr fee, Zinsen interest, Kredit loan, Laufzeit term, erstatten refund, Werbung advertising."
       - id: w2
         type: multiple-choice
         tags: [contracts]
         prompt: "You want to end your gym contract. What do you write?"
         options: ["Hiermit kündige ich meinen Vertrag.", "Hiermit sage ich meinen Vertrag ab.", "Hiermit schließe ich meinen Vertrag ab."]
         answer: "Hiermit kündige ich meinen Vertrag."
+        explanation: "kündigen is to end a contract; absagen cancels an appointment, abschließen signs a contract."
       - id: w5
         type: multiple-choice
         tags: [bank]
         prompt: "You take cash out of a machine. You …"
         options: [heben Geld ab, zahlen Geld ein, überweisen Geld]
         answer: heben Geld ab
+        explanation: "Geld abheben is taking money out, for example at a cash machine."
       - id: w6
         type: multiple-choice
         tags: [bank]
         prompt: "You send money from your account to the landlord's account. You …"
         options: [überweisen das Geld, heben das Geld ab, sparen das Geld]
         answer: überweisen das Geld
+        explanation: "überweisen is transferring money from one account to another."
       - id: w7
         type: fill-blank
         tags: [bank]
         prompt: "Ich ___ jeden Monat 100 Euro für den Urlaub. (save)"
         answers: [spare]
+        explanation: "sparen means to save money; ich spare."
       - id: w3
         type: fill-blank
         tags: [vocabulary]
         prompt: "Die Jacke war im ___, nur 30 Euro! (on special offer)"
         answers: [Angebot]
+        explanation: "im Angebot means on special offer."
       - id: w4
         type: fill-blank
         tags: [reflexive]
         prompt: "Ein neues Auto kann ich ___ nicht leisten."
         answers: [mir]
+        explanation: "sich etwas leisten können means to be able to afford something; the reflexive is dative: mir."
 
   - title: Contracts
     items:
@@ -54,17 +61,20 @@ sets:
         tags: [contracts]
         prompt: "'Der Vertrag verlängert sich automatisch' means it ends automatically."
         answer: false
+        explanation: "sich verlängern means to be extended: the contract renews itself unless you cancel."
       - id: c2
         type: word-order
         tags: [contracts]
         prompt: I hereby cancel my contract.
         answer: "Hiermit kündige ich meinen Vertrag."
+        explanation: "Hiermit takes position one, so kündige comes next, then ich."
       - id: c3
         type: multiple-choice
         tags: [contracts]
         prompt: "The period you must wait between giving notice and the end of the contract is the …"
         options: [Kündigungsfrist, Laufzeit, Gebühr]
         answer: Kündigungsfrist
+        explanation: "The Kündigungsfrist is the notice period before the contract ends."
 
   - title: Complaint phrases
     items:
@@ -77,30 +87,35 @@ sets:
           - "Euer Gerät ist total kaputt!!!"
           - "Hey, das Ding geht nicht."
         answer: "Leider musste ich feststellen, dass das Gerät nicht funktioniert."
+        explanation: "A formal complaint stays polite: Leider musste ich feststellen, dass …"
       - id: cp2
         type: multiple-choice
         tags: [complaint]
         prompt: "Ich bitte Sie, mir den Kaufpreis ___."
         options: [zu erstatten, erstatten, erstattet]
         answer: zu erstatten
+        explanation: "Ich bitte Sie, … zu + infinitive: mir den Kaufpreis zu erstatten."
       - id: cp3
         type: multiple-choice
         tags: [complaint]
         prompt: "Bitte antworten Sie ___ von zwei Wochen."
         options: [innerhalb, während, außerhalb]
         answer: innerhalb
+        explanation: "innerhalb von + dative: within two weeks."
       - id: cp4
         type: translation
         tags: [complaint]
         prompt: My order has not arrived yet.
         answers:
           - "Meine Bestellung ist noch nicht angekommen."
+        explanation: "noch nicht means not yet; ankommen takes sein in the Perfekt."
       - id: cp5
         type: translation
         tags: [complaint]
         prompt: I would be grateful if you could send me a new device.
         answers:
           - "Ich wäre Ihnen dankbar, wenn Sie mir ein neues Gerät schicken könnten."
+        explanation: "Ich wäre Ihnen dankbar, wenn … : in the wenn clause the modal könnten goes last."
 
   - title: A complaint letter
     items:
@@ -117,6 +132,7 @@ sets:
           - [innerhalb]
           - [erstatten]
           - [freundlichen]
+        explanation: "bestellt (ordered); feststellen (find out); angerufen (called); innerhalb (within); erstatten (refund); Mit freundlichen Grüßen."
 
   - title: Shopping habits
     stimulus:
@@ -138,17 +154,20 @@ sets:
         prompt: Warum kauft die erste Frau online?
         options: ["Es ist bequemer.", "Es ist billiger.", "Es ist besser für die Umwelt."]
         answer: "Es ist bequemer."
+        explanation: "She buys online because das ist bequemer, and returns are easy."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Der Mann kauft am liebsten neue Kleidung.
         answer: false
+        explanation: "The man says: Ich kaufe lieber gebraucht, at flea markets and second-hand shops."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Was ist das Problem der jungen Frau?
         options: ["Sie gibt zu viel Geld für Marken aus.", "Sie findet keine Kleidung.", "Ihre Bestellungen kommen nicht an."]
         answer: "Sie gibt zu viel Geld für Marken aus."
+        explanation: "She says: Ich gebe zu viel Geld für Marken aus."
 
   - title: Write a complaint
     items:

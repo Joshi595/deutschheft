@@ -8,36 +8,42 @@ sets:
         prompt: "___ Erklärung"
         options: [die, der, das]
         answer: die
+        explanation: "Nouns ending in -ung are always feminine: die Erklärung."
       - id: art2
         type: multiple-choice
         tags: [gender]
         prompt: "___ Freiheit"
         options: [die, der, das]
         answer: die
+        explanation: "Nouns ending in -heit and -keit are always feminine: die Freiheit."
       - id: art3
         type: multiple-choice
         tags: [gender]
         prompt: "___ Haustür"
         options: [die, das, der]
         answer: die
+        explanation: "In a compound the last part decides the gender: die Tür → die Haustür."
       - id: art4
         type: multiple-choice
         tags: [gender]
         prompt: "___ Kühlschrank"
         options: [der, die, das]
         answer: der
+        explanation: "The last part is der Schrank, so der Kühlschrank."
       - id: art5
         type: multiple-choice
         tags: [gender]
         prompt: "___ Dokument"
         options: [das, die, der]
         answer: das
+        explanation: "Nouns ending in -ment are usually neuter: das Dokument."
       - id: art6
         type: multiple-choice
         tags: [gender]
         prompt: "___ Lernen"
         options: [das, die, der]
         answer: das
+        explanation: "An infinitive used as a noun is always neuter: das Lernen."
 
   - title: Make a noun
     items:
@@ -46,21 +52,25 @@ sets:
         tags: [nouns]
         prompt: "einladen → die ___"
         answers: [Einladung]
+        explanation: "Verbs become nouns with -ung: einladen → die Einladung."
       - id: noun2
         type: fill-blank
         tags: [nouns]
         prompt: "möglich → die ___"
         answers: [Möglichkeit]
+        explanation: "Adjectives ending in -lich take -keit: möglich → die Möglichkeit."
       - id: noun3
         type: fill-blank
         tags: [nouns]
         prompt: "krank → die ___"
         answers: [Krankheit]
+        explanation: "Many adjectives take -heit: krank → die Krankheit."
       - id: noun4
         type: fill-blank
         tags: [nouns]
         prompt: "der Freund → die ___ (relationship)"
         answers: [Freundschaft]
+        explanation: "-schaft forms a feminine noun for a relationship or group: die Freundschaft."
 
   - title: Make an adjective
     items:
@@ -74,16 +84,19 @@ sets:
           - { left: arbeitslos, right: without work }
           - { left: unmöglich, right: not possible }
           - { left: sinnvoll, right: makes sense }
+        explanation: "-los means without (kostenlos, arbeitslos), -bar means can be done (essbar), un- negates, -voll means full of (sinnvoll)."
       - id: adj2
         type: fill-blank
         tags: [un-]
         prompt: "Der Kellner war nicht freundlich. Er war ___."
         answers: [unfreundlich]
+        explanation: "un- turns an adjective into its opposite: unfreundlich."
       - id: adj3
         type: fill-blank
         tags: [adjectives]
         prompt: "Ich bin ab 9 Uhr telefonisch ___. (can be reached)"
         answers: [erreichbar]
+        explanation: "-bar means 'can be …': erreichbar, can be reached."
 
   - title: Compounds
     items:
@@ -92,22 +105,26 @@ sets:
         tags: [compounds]
         prompt: "die Arbeit + die Zeit → die ___"
         answers: [Arbeitszeit]
+        explanation: "Arbeit + s + Zeit: a joining -s is common after -t; the last part gives the gender: die Arbeitszeit."
       - id: comp2
         type: fill-blank
         tags: [compounds]
         prompt: "die Wohnung + die Suche → die ___"
         answers: [Wohnungssuche]
+        explanation: "After -ung a joining -s is added: die Wohnungssuche."
       - id: comp3
         type: multiple-choice
         tags: [compounds]
         prompt: "What is a 'Kinderbetreuungskosten'?"
         options: ["the costs of childcare", "children who look after costs", "a cost for children's books"]
         answer: "the costs of childcare"
+        explanation: "Read a compound from the end: Kosten (costs) of Kinderbetreuung (childcare)."
       - id: comp4
         type: true-false
         tags: [compounds]
         prompt: "In a compound noun, the first part decides the gender."
         answer: false
+        explanation: "The last part decides the gender: das Haus + die Tür = die Haustür."
 
   - title: Prefixes
     items:
@@ -117,12 +134,14 @@ sets:
         prompt: "Bitte ___ Sie alle Fragen."
         options: [beantworten, antworten, verantworten]
         answer: beantworten
+        explanation: "beantworten takes a direct object: Fragen beantworten. antworten needs auf: auf Fragen antworten."
       - id: pre2
         type: multiple-choice
         tags: [prefixes]
         prompt: "In der fremden Stadt habe ich mich ___."
         options: [verlaufen, gelaufen, entlaufen]
         answer: verlaufen
+        explanation: "sich verlaufen means to get lost on foot."
 
   - title: Read and guess
     stimulus:
@@ -136,13 +155,16 @@ sets:
         prompt: "What is the 'Stadtverwaltung'?"
         options: ["the town administration", "a city tour", "a town map"]
         answer: "the town administration"
+        explanation: "Read it from the end: Verwaltung (administration) of the Stadt (town)."
       - id: read2
         type: true-false
         tags: [reading]
         prompt: "Schüler müssen ab Juni im Hallenbad nichts bezahlen."
         answer: true
+        explanation: "The text says the pool is für Schülerinnen und Schüler kostenlos."
       - id: read3
         type: true-false
         tags: [reading]
         prompt: "Das Geld für das Angebot ist schon sicher."
         answer: false
+        explanation: "The text says: Die Finanzierung ist allerdings noch unsicher."

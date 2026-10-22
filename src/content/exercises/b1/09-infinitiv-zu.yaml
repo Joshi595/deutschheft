@@ -8,23 +8,27 @@ sets:
         prompt: "Ich versuche, pünktlich ___."
         options: [zu sein, sein, zu bin]
         answer: zu sein
+        explanation: "versuchen takes zu + infinitive: versuchen, pünktlich zu sein."
       - id: zu2
         type: multiple-choice
         tags: [zu]
         prompt: "Ich kann gut ___."
         options: [schwimmen, zu schwimmen]
         answer: schwimmen
+        explanation: "Modal verbs like können take a plain infinitive without zu."
       - id: zu3
         type: multiple-choice
         tags: [zu]
         prompt: "Es fängt an ___."
         options: [zu regnen, regnen]
         answer: zu regnen
+        explanation: "anfangen takes zu + infinitive: Es fängt an zu regnen."
       - id: zu4
         type: true-false
         tags: [zu]
         prompt: "Modal verbs like können and müssen are followed by zu."
         answer: false
+        explanation: "Modal verbs take a bare infinitive: Ich kann schwimmen, never kann zu schwimmen."
 
   - title: Where does zu go?
     items:
@@ -33,21 +37,25 @@ sets:
         tags: [separable verbs]
         prompt: "Ich habe vergessen, dich ___. (anrufen)"
         answers: [anzurufen]
+        explanation: "With a separable verb, zu goes between the prefix and the verb, written as one word: anzurufen."
       - id: pos2
         type: fill-blank
         tags: [separable verbs]
         prompt: "Es ist nicht leicht, früh ___. (aufstehen)"
         answers: [aufzustehen]
+        explanation: "aufstehen is separable, so zu goes inside: aufzustehen."
       - id: pos3
         type: fill-blank
         tags: [separable verbs]
         prompt: "Ich freue mich, Sie ___. (kennenlernen)"
         answers: [kennenzulernen]
+        explanation: "kennenlernen: zu goes before the last part, lernen: kennenzulernen."
       - id: pos4
         type: fill-blank
         tags: [inseparable verbs]
         prompt: "Es ist schwer, ihn ___. (verstehen)"
         answers: [zu verstehen]
+        explanation: "verstehen is not separable (ver- stays on), so zu stands before it: zu verstehen."
 
   - title: um … zu or damit?
     items:
@@ -57,24 +65,28 @@ sets:
         prompt: "Ich lerne Deutsch, ___ in Deutschland zu arbeiten."
         options: [um, damit, für]
         answer: um
+        explanation: "um … zu when the subject is the same in both parts: I learn so that I can work."
       - id: ud2
         type: multiple-choice
         tags: [um zu damit]
         prompt: "Ich spreche langsam, ___ du mich verstehst."
         options: [damit, um, dass zu]
         answer: damit
+        explanation: "damit when the subjects differ: I speak slowly so that you understand."
       - id: ud3
         type: multiple-choice
         tags: [um zu damit]
         prompt: "Wir kaufen ein größeres Auto, ___ die Kinder mehr Platz haben."
         options: [damit, um]
         answer: damit
+        explanation: "Different subjects (wir and die Kinder), so damit."
       - id: ud4
         type: multiple-choice
         tags: [um zu damit]
         prompt: "Er fährt nach Berlin, ___ seine Freundin zu besuchen."
         options: [um, damit]
         answer: um
+        explanation: "The same subject (er) does both, so um … zu."
       - id: ud5
         type: translation
         tags: [um zu]
@@ -82,12 +94,14 @@ sets:
         answers:
           - "Ich mache jeden Tag Sport, um gesund zu bleiben."
           - "Um gesund zu bleiben, mache ich jeden Tag Sport."
+        explanation: "Same subject, so um … zu with the infinitive at the end: um gesund zu bleiben."
       - id: ud6
         type: translation
         tags: [damit]
         prompt: "I am saving so that my son can study. (damit)"
         answers:
           - "Ich spare, damit mein Sohn studieren kann."
+        explanation: "Different subjects (ich, mein Sohn), so damit with the verb at the end."
 
   - title: ohne … zu, statt … zu
     items:
@@ -96,17 +110,20 @@ sets:
         tags: [ohne zu]
         prompt: He left without saying goodbye.
         answer: "Er ging, ohne Tschüss zu sagen."
+        explanation: "ohne … zu means without doing something; zu sagen ends the phrase."
       - id: os2
         type: word-order
         tags: [statt zu]
         prompt: Instead of driving, I take the bike.
         answer: "Statt mit dem Auto zu fahren, nehme ich das Fahrrad."
+        explanation: "Statt … zu means instead of doing; the infinitive phrase takes position one, so nehme comes next."
       - id: os3
         type: multiple-choice
         tags: [ohne zu]
         prompt: "Sie hat das Formular unterschrieben, ___ es zu lesen."
         options: [ohne, statt, um]
         answer: ohne
+        explanation: "ohne … zu: she signed without reading it."
 
   - title: Expressions
     items:
@@ -116,12 +133,14 @@ sets:
         prompt: It is important to sleep enough.
         answers:
           - "Es ist wichtig, genug zu schlafen."
+        explanation: "Es ist wichtig, … zu + infinitive; zu schlafen goes at the end."
       - id: ex2
         type: translation
         tags: [expressions]
         prompt: Do you feel like going to the cinema?
         answers:
           - "Hast du Lust, ins Kino zu gehen?"
+        explanation: "Lust haben is followed by zu + infinitive: Lust, ins Kino zu gehen."
 
   - title: Why I learn German
     items:
@@ -138,6 +157,7 @@ sets:
           - [damit]
           - [anzurufen]
           - [ohne]
+        explanation: "um … zu (aim, same subject); versuchen … zu lernen; Statt … zu (instead); damit (different subject); vergessen + anzurufen; ohne … zu wiederholen."
 
   - title: Write about your goals
     items:

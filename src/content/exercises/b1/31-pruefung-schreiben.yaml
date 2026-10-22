@@ -8,12 +8,14 @@ sets:
         prompt: "Which opening fits Teil 3 (formal message)?"
         options: ["Sehr geehrte Frau Neumann,", "Hallo Frau Neumann!", "Liebe Anna,"]
         answer: "Sehr geehrte Frau Neumann,"
+        explanation: "Teil 3 is a formal message, so it opens with Sehr geehrte Frau Neumann,"
       - id: task2
         type: multiple-choice
         tags: [structure]
         prompt: "A good first sentence for the opinion post (Teil 2) is …"
         options: ["Paul meint, dass Kinder kein Smartphone haben sollten. Ich sehe das anders.", "Liebe Grüße, Maria", "Sehr geehrte Damen und Herren,"]
         answer: "Paul meint, dass Kinder kein Smartphone haben sollten. Ich sehe das anders."
+        explanation: "An opinion post starts by referring to the other person's view and then gives your own."
       - id: task3
         type: true-false
         tags: [length]
@@ -87,9 +89,11 @@ sets:
         prompt: "'Sehr geehrter Herr Lorenz, kannst du mir bitte antworten? Liebe Grüße' – what is wrong?"
         options: ["du and the closing do not fit the formal opening", "nothing", "the opening is too informal"]
         answer: "du and the closing do not fit the formal opening"
+        explanation: "Sehr geehrter Herr Lorenz is formal, so the text needs Sie and a formal closing like Mit freundlichen Grüßen."
       - id: check2
         type: multiple-choice
         tags: [checking]
         prompt: "'Ich bin umgezogen, weil die alte Wohnung war zu klein.' – what is wrong?"
         options: ["The verb must go to the end after weil.", "weil must be denn.", "nothing"]
         answer: "The verb must go to the end after weil."
+        explanation: "weil sends the verb to the end: weil die alte Wohnung zu klein war."

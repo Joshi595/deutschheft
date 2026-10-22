@@ -7,22 +7,26 @@ sets:
         tags: [present]
         prompt: "Hier ___ Deutsch gesprochen."
         answers: [wird]
+        explanation: "The passive is werden + participle; Deutsch is singular, so wird … gesprochen."
       - id: pres2
         type: fill-blank
         tags: [present]
         prompt: "Die Briefe ___ jeden Morgen gebracht."
         answers: [werden]
+        explanation: "Die Briefe is plural, so werden … gebracht."
       - id: pres3
         type: fill-blank
         tags: [present]
         prompt: "Das Bad wird gerade ___. (renovieren)"
         answers: [renoviert]
+        explanation: "The participle goes to the end: wird … renoviert. -ieren verbs have no ge-."
       - id: pres4
         type: multiple-choice
         tags: [present]
         prompt: "Ich ___ oft nach meinem Akzent gefragt."
         options: [werde, wird, bin]
         answer: werde
+        explanation: "The subject is ich, so werden is werde: Ich werde … gefragt."
 
   - title: Past and Perfekt
     items:
@@ -31,23 +35,27 @@ sets:
         tags: [past]
         prompt: "Das Haus ___ 1910 gebaut."
         answers: [wurde]
+        explanation: "The Präteritum passive uses wurde: Das Haus wurde 1910 gebaut."
       - id: past2
         type: fill-blank
         tags: [past]
         prompt: "Die Verletzten ___ ins Krankenhaus gebracht."
         answers: [wurden]
+        explanation: "Plural subject, so wurden: Die Verletzten wurden … gebracht."
       - id: past3
         type: multiple-choice
         tags: [Perfekt]
         prompt: "Mein Fahrrad ist gestohlen ___."
         options: [worden, geworden, werden]
         answer: worden
+        explanation: "In the Perfekt passive, werden's participle drops ge-: ist … gestohlen worden."
       - id: past4
         type: multiple-choice
         tags: [Perfekt]
         prompt: "Die Rechnung ___ schon bezahlt worden."
         options: [ist, hat, wird]
         answer: ist
+        explanation: "The Perfekt passive uses sein: ist … bezahlt worden."
 
   - title: With modal verbs
     items:
@@ -60,16 +68,19 @@ sets:
           - "Das Formular muss bis Freitag werden abgegeben."
           - "Das Formular wird bis Freitag abgegeben müssen."
         answer: "Das Formular muss bis Freitag abgegeben werden."
+        explanation: "Modal + participle + werden at the end: muss … abgegeben werden."
       - id: mod2
         type: word-order
         tags: [modal]
         prompt: Unfortunately it cannot be repaired.
         answer: "Das kann leider nicht repariert werden."
+        explanation: "kann … repariert werden: the passive infinitive goes to the end, nicht before it."
       - id: mod3
         type: word-order
         tags: [modal]
         prompt: Smoking is not allowed here.
         answer: "Hier darf nicht geraucht werden."
+        explanation: "An impersonal passive: Hier darf nicht geraucht werden."
 
   - title: Active to passive
     instructions: Rewrite the sentence in the passive. Leave out the doer unless it is a name.
@@ -80,24 +91,28 @@ sets:
         prompt: "Man repariert das Auto. → Das Auto …"
         answers:
           - "Das Auto wird repariert."
+        explanation: "The object of the active sentence becomes the subject: Das Auto wird repariert. man disappears."
       - id: ap2
         type: translation
         tags: [transform]
         prompt: "Man baute die Brücke 1890. → Die Brücke …"
         answers:
           - "Die Brücke wurde 1890 gebaut."
+        explanation: "Präteritum passive: wurde + participle at the end."
       - id: ap3
         type: translation
         tags: [transform]
         prompt: "Picasso hat das Bild gemalt. → Das Bild … (Präteritum)"
         answers:
           - "Das Bild wurde von Picasso gemalt."
+        explanation: "A named doer is added with von + dative: von Picasso."
       - id: ap4
         type: translation
         tags: [transform]
         prompt: "Man muss die Rechnung bis Montag bezahlen. → Die Rechnung …"
         answers:
           - "Die Rechnung muss bis Montag bezahlt werden."
+        explanation: "With a modal: muss + participle + werden at the end."
 
   - title: State or action?
     items:
@@ -107,12 +122,14 @@ sets:
         prompt: "It is 8 pm. The shop is shut. Das Geschäft ___ geschlossen."
         options: [ist, wird]
         answer: ist
+        explanation: "sein + participle describes a state: the shop is closed now."
       - id: sa2
         type: multiple-choice
         tags: [state passive]
         prompt: "Every evening at 8 pm the shop is shut (by someone). Das Geschäft ___ um 20 Uhr geschlossen."
         options: [wird, ist]
         answer: wird
+        explanation: "werden + participle describes an action: someone closes the shop at 8 pm."
 
   - title: A recipe
     items:
@@ -129,6 +146,7 @@ sets:
           - [gekocht]
           - [werden]
           - [serviert]
+        explanation: "Every step is a passive: werden … geschält, werden … geschnitten und gekocht, werden … dazugegeben, wird … serviert."
 
   - title: City history
     stimulus:
@@ -142,16 +160,19 @@ sets:
         prompt: Von wem wurde die Stadt gegründet?
         options: [von Kaufleuten, von einem König, von Touristen]
         answer: von Kaufleuten
+        explanation: "The text says: Die Stadt wurde im Jahr 1120 von Kaufleuten gegründet."
       - id: read2
         type: true-false
         tags: [reading]
         prompt: Von der Stadtmauer ist heute nichts mehr zu sehen.
         answer: false
+        explanation: "The text says parts of the wall are still visible: von der heute noch Teile zu sehen sind."
       - id: read3
         type: true-false
         tags: [reading]
         prompt: Nach dem Krieg wurden wichtige Gebäude wieder aufgebaut.
         answer: true
+        explanation: "Nach dem Krieg wurden die wichtigsten Gebäude wieder aufgebaut."
 
   - title: Describe a process
     items:

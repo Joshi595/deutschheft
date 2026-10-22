@@ -7,28 +7,33 @@ sets:
         tags: [genitive]
         prompt: "Am Ende des ___ haben alle geweint. (Film)"
         answers: [Films]
+        explanation: "Masculine nouns add -s in the genitive: des Films."
       - id: gen2
         type: fill-blank
         tags: [genitive]
         prompt: "Die Fenster des ___ sind alt. (Haus)"
         answers: [Hauses]
+        explanation: "Short masculine and neuter nouns often add -es: des Hauses (Haus ends in -s, so -es is needed)."
       - id: gen3
         type: multiple-choice
         tags: [genitive]
         prompt: "Das ist die Meinung ___ Kollegin."
         options: [meiner, meines, meine]
         answer: meiner
+        explanation: "Feminine genitive takes -er on the possessive: meiner Kollegin."
       - id: gen4
         type: multiple-choice
         tags: [genitive adjectives]
         prompt: "Wegen des ___ Wetters fällt das Fest aus."
         options: [schlechten, schlechtes, schlechte]
         answer: schlechten
+        explanation: "After des the adjective ends in -en: wegen des schlechten Wetters."
       - id: gen5
         type: fill-blank
         tags: [genitive adjectives]
         prompt: "Die Preise der ___ Wohnungen sind hoch. (neu)"
         answers: [neuen]
+        explanation: "Genitive plural: der … -en: der neuen Wohnungen."
 
   - title: Genitive prepositions
     items:
@@ -43,23 +48,27 @@ sets:
           - { left: innerhalb, right: within }
           - { left: außerhalb, right: outside }
           - { left: aufgrund, right: due to }
+        explanation: "These prepositions take the genitive: wegen, trotz, während, innerhalb, außerhalb, aufgrund."
       - id: prep2
         type: multiple-choice
         tags: [genitive prepositions]
         prompt: "___ des Urlaubs habe ich keine E-Mails gelesen."
         options: [Während, Innerhalb, Statt]
         answer: Während
+        explanation: "während means during and takes the genitive: während des Urlaubs."
       - id: prep3
         type: multiple-choice
         tags: [genitive prepositions]
         prompt: "Bitte antworten Sie ___ einer Woche."
         options: [innerhalb, außerhalb, trotz]
         answer: innerhalb
+        explanation: "innerhalb means within: innerhalb einer Woche."
       - id: prep4
         type: fill-blank
         tags: [genitive prepositions]
         prompt: "Wir wohnen außerhalb ___ Stadt."
         answers: [der]
+        explanation: "außerhalb takes the genitive; Stadt is feminine: außerhalb der Stadt."
 
   - title: The n-declension
     items:
@@ -69,28 +78,33 @@ sets:
         prompt: "Ich habe den ___ angerufen."
         options: [Kunden, Kunde, Kundes]
         answer: Kunden
+        explanation: "Kunde is an n-noun: it adds -n in every case except the nominative singular: den Kunden."
       - id: n2
         type: multiple-choice
         tags: [n-declension]
         prompt: "Kannst du dem ___ helfen?"
         options: [Jungen, Junge, Junges]
         answer: Jungen
+        explanation: "Junge is an n-noun: dem Jungen."
       - id: n3
         type: multiple-choice
         tags: [n-declension]
         prompt: "Ich habe mit ___ Müller gesprochen."
         options: [Herrn, Herr, Herren]
         answer: Herrn
+        explanation: "Herr is an n-noun and adds -n: mit Herrn Müller."
       - id: n4
         type: fill-blank
         tags: [n-declension]
         prompt: "Ich habe einen ___ nach dem Weg gefragt. (Polizist)"
         answers: [Polizisten]
+        explanation: "Nouns in -ist are n-nouns: einen Polizisten."
       - id: n5
         type: fill-blank
         tags: [n-declension]
         prompt: "Die Bedeutung des ___ ist interessant. (Name)"
         answers: [Namens]
+        explanation: "Name adds -ns in the genitive: des Namens."
       - id: n6
         type: true-false
         tags: [n-declension]
@@ -107,18 +121,21 @@ sets:
         prompt: "das Haus von meinen Eltern →"
         answers:
           - "das Haus meiner Eltern"
+        explanation: "In writing, the genitive replaces von + dative: das Haus meiner Eltern."
       - id: form2
         type: translation
         tags: [genitive style]
         prompt: "wegen dem Streik →"
         answers:
           - "wegen des Streiks"
+        explanation: "wegen takes the genitive in good German: wegen des Streiks."
       - id: form3
         type: translation
         tags: [genitive style]
         prompt: "das Büro von dem neuen Chef →"
         answers:
           - "das Büro des neuen Chefs"
+        explanation: "Genitive masculine: des neuen Chefs, with -en on the adjective and -s on the noun."
 
   - title: A formal email
     items:
@@ -135,6 +152,7 @@ sets:
           - [innerhalb]
           - [des]
           - [der]
+        explanation: "aufgrund + genitive; Herrn (n-noun); Kunden (n-noun plural); innerhalb + genitive; des Betrags; der Woche."
 
   - title: Write formally
     items:

@@ -13,21 +13,25 @@ sets:
           - { left: weder, right: noch }
           - { left: zwar, right: aber }
           - { left: je, right: desto }
+        explanation: "The pairs: sowohl … als auch (both), nicht nur … sondern auch (not only), entweder … oder (either), weder … noch (neither), zwar … aber (admittedly), je … desto (the more)."
       - id: pair2
         type: fill-blank
         tags: [sowohl als auch]
         prompt: "Ich spreche sowohl Englisch ___ Spanisch."
         answers: [als auch]
+        explanation: "sowohl … als auch means both … and."
       - id: pair3
         type: fill-blank
         tags: [weder noch]
         prompt: "Ich habe weder Zeit ___ Geld."
         answers: [noch]
+        explanation: "weder … noch means neither … nor; no extra nicht is needed."
       - id: pair4
         type: fill-blank
         tags: [nicht nur sondern auch]
         prompt: "Sie spricht nicht nur Deutsch, ___ Chinesisch."
         answers: [sondern auch]
+        explanation: "nicht nur … sondern auch means not only … but also."
 
   - title: Which pair fits?
     items:
@@ -37,24 +41,28 @@ sets:
         prompt: "You can only choose one: train or car. Wir fahren ___ mit dem Zug ___ mit dem Auto."
         options: ["entweder … oder", "sowohl … als auch", "weder … noch"]
         answer: "entweder … oder"
+        explanation: "Only one of two options: entweder … oder."
       - id: fit2
         type: multiple-choice
         tags: [meaning]
         prompt: "He drinks no coffee and no tea. Er trinkt ___ Kaffee ___ Tee."
         options: ["weder … noch", "entweder … oder", "zwar … aber"]
         answer: "weder … noch"
+        explanation: "Neither of the two: weder … noch."
       - id: fit3
         type: multiple-choice
         tags: [meaning]
         prompt: "The car is old (true), but it runs well. Das Auto ist ___ alt, ___ es fährt noch gut."
         options: ["zwar … aber", "sowohl … als auch", "je … desto"]
         answer: "zwar … aber"
+        explanation: "Admitting one point, then a contrast: zwar … aber."
       - id: fit5
         type: multiple-choice
         tags: [nicht nur sondern auch]
         prompt: "Er spricht nicht nur Deutsch, ___ Chinesisch."
         options: [sondern auch, aber auch, und auch]
         answer: sondern auch
+        explanation: "After nicht nur the second part is always sondern auch."
       - id: fit6
         type: multiple-choice
         tags: [sowohl als auch]
@@ -67,6 +75,7 @@ sets:
         tags: [weder noch]
         prompt: "In 'weder … noch' you also need nicht or kein."
         answer: false
+        explanation: "weder … noch is already negative; adding nicht or kein would be a double negative."
 
   - title: je … desto
     items:
@@ -79,16 +88,19 @@ sets:
           - "Je mehr ich lerne, desto ich verstehe besser."
           - "Je ich lerne mehr, desto besser verstehe ich."
         answer: "Je mehr ich lerne, desto besser verstehe ich."
+        explanation: "In the je part the verb goes to the end; desto is followed by the comparative, then the verb."
       - id: je2
         type: word-order
         tags: [je desto]
         prompt: The earlier we set off, the less traffic there is.
         answer: "Je früher wir losfahren, desto weniger Verkehr gibt es."
+        explanation: "Je + comparative, verb at the end (losfahren); desto + comparative + verb (gibt) + subject."
       - id: je3
         type: word-order
         tags: [je desto]
         prompt: The older he gets, the calmer he becomes.
         answer: "Je älter er wird, umso ruhiger wird er."
+        explanation: "umso can replace desto; after umso ruhiger comes the verb wird."
       - id: je4
         type: translation
         tags: [je desto]
@@ -96,6 +108,7 @@ sets:
         answers:
           - "Je öfter du übst, desto leichter wird es."
           - "Je öfter du übst, umso leichter wird es."
+        explanation: "Je öfter du übst (verb last), desto leichter wird es (verb straight after the comparative)."
 
   - title: Say it in German
     items:
@@ -105,17 +118,20 @@ sets:
         prompt: The hotel was not only expensive but also dirty.
         answers:
           - "Das Hotel war nicht nur teuer, sondern auch schmutzig."
+        explanation: "nicht nur teuer, sondern auch schmutzig: the second part takes sondern."
       - id: tr2
         type: translation
         tags: [zwar aber]
         prompt: The city is loud, admittedly, but very lively.
         answers:
           - "Die Stadt ist zwar laut, aber sehr lebendig."
+        explanation: "zwar … aber concedes one point and then adds a contrast."
       - id: tr3
         type: word-order
         tags: [sowohl als auch]
         prompt: Both my brother and my sister live in Cologne.
         answer: "Sowohl mein Bruder als auch meine Schwester wohnen in Köln."
+        explanation: "sowohl … als auch joins two subjects, so the verb is plural: wohnen."
 
   - title: City or country?
     items:
@@ -134,6 +150,7 @@ sets:
           - [noch]
           - [Je]
           - [desto]
+        explanation: "sowohl … als auch (both), zwar … aber (concession), weder … noch (neither), Je … desto (the more … the more)."
 
   - title: Weigh it up
     items:

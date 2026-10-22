@@ -13,16 +13,19 @@ sets:
           - { left: vermeiden, right: to avoid }
           - { left: das Pfand, right: the deposit }
           - { left: erneuerbar, right: renewable }
+        explanation: "Klimawandel climate change, nachhaltig sustainable, verschwenden waste, vermeiden avoid, Pfand deposit, erneuerbar renewable."
       - id: w2
         type: fill-blank
         tags: [vocabulary]
         prompt: "Das Fahrrad ist sehr ___. (environmentally friendly)"
         answers: [umweltfreundlich]
+        explanation: "umweltfreundlich means good for the environment."
       - id: w3
         type: fill-blank
         tags: [vocabulary]
         prompt: "Ich nutze meistens öffentliche ___. (public transport)"
         answers: [Verkehrsmittel]
+        explanation: "öffentliche Verkehrsmittel are buses, trams and trains."
 
   - title: Which bin?
     items:
@@ -32,23 +35,27 @@ sets:
         prompt: "Eine alte Zeitung"
         options: [Papiertonne, Gelber Sack, Biotonne]
         answer: Papiertonne
+        explanation: "Paper and cardboard go in the blue Papiertonne."
       - id: bin2
         type: multiple-choice
         tags: [rubbish]
         prompt: "Eine leere Joghurtverpackung aus Plastik"
         options: [Gelber Sack, Papiertonne, Biotonne]
         answer: Gelber Sack
+        explanation: "Plastic and metal packaging go in the Gelber Sack (yellow bag)."
       - id: bin3
         type: multiple-choice
         tags: [rubbish]
         prompt: "Kartoffelschalen"
         options: [Biotonne, Restmüll, Gelber Sack]
         answer: Biotonne
+        explanation: "Food and garden waste go in the brown Biotonne."
       - id: bin4
         type: true-false
         tags: [rubbish]
         prompt: "Bottles with a deposit go into the yellow bag."
         answer: false
+        explanation: "Bottles with a Pfand go back to the shop, where you get the deposit back."
 
   - title: Advice and proposals
     items:
@@ -58,28 +65,33 @@ sets:
         prompt: "Man sollte weniger Auto ___."
         options: [fahren, zu fahren, fährt]
         answer: fahren
+        explanation: "After a modal (sollte) the infinitive comes without zu."
       - id: adv2
         type: multiple-choice
         tags: [grammar]
         prompt: "Es ist wichtig, Energie ___."
         options: [zu sparen, sparen, spart]
         answer: zu sparen
+        explanation: "Es ist wichtig, … takes zu + infinitive: Energie zu sparen."
       - id: adv3
         type: multiple-choice
         tags: [grammar]
         prompt: "Die Städte sollten Radwege bauen, ___ mehr Menschen Fahrrad fahren."
         options: [damit, um, dass zu]
         answer: damit
+        explanation: "Different subjects (die Städte, mehr Menschen), so damit."
       - id: adv4
         type: word-order
         tags: [grammar]
         prompt: One should eat less meat to protect the environment.
         answer: "Man sollte weniger Fleisch essen, um die Umwelt zu schonen."
+        explanation: "sollte + infinitive at the end; um … zu gives the aim, with the same subject."
       - id: adv5
         type: word-order
         tags: [passive]
         prompt: In Germany the rubbish is separated.
         answer: "In Deutschland wird der Müll getrennt."
+        explanation: "The passive with werden: wird … getrennt; the person doing it is not important."
 
   - title: Statistics
     items:
@@ -89,17 +101,20 @@ sets:
         prompt: "Die Zahl ist ___ 20 Prozent gestiegen. (by)"
         options: [um, auf, mit]
         answer: um
+        explanation: "um + number gives the size of a change: gestiegen um 20 Prozent."
       - id: st2
         type: multiple-choice
         tags: [statistics]
         prompt: "Der Anteil ist von 40 ___ 60 Prozent gestiegen. (to)"
         options: [auf, um, zu]
         answer: auf
+        explanation: "von … auf gives the old and the new value: from 40 to 60 percent."
       - id: st3
         type: fill-blank
         tags: [statistics]
         prompt: "50 Prozent = die ___"
         answers: [Hälfte]
+        explanation: "50 percent is die Hälfte, half."
       - id: st4
         type: translation
         tags: [cause]
@@ -107,6 +122,7 @@ sets:
         answers:
           - "Das liegt am Verkehr."
           - "Das liegt an dem Verkehr."
+        explanation: "liegen an + dative gives the cause: Das liegt am Verkehr."
 
   - title: A short article
     stimulus:
@@ -119,17 +135,20 @@ sets:
         tags: [reading]
         prompt: Fast 50 Prozent kaufen Obst und Gemüse ohne Verpackung.
         answer: true
+        explanation: "The text says: fast die Hälfte der Befragten kauft … ohne Verpackung."
       - id: read2
         type: true-false
         tags: [reading]
         prompt: Seit 2015 ist der Anteil gesunken.
         answer: false
+        explanation: "The share ist um 20 Prozent gestiegen: it rose."
       - id: read3
         type: multiple-choice
         tags: [reading]
         prompt: Was sagen die Kritiker?
         options: ["Es gibt in Deutschland immer noch sehr viel Verpackungsmüll.", "Stofftaschen sind zu teuer.", "Die Umfrage ist falsch."]
         answer: "Es gibt in Deutschland immer noch sehr viel Verpackungsmüll."
+        explanation: "Critics say per-person packaging waste in Germany is still one of the highest in Europe."
 
   - title: Your opinion
     items:

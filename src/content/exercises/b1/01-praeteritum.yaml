@@ -8,21 +8,25 @@ sets:
         tags: [regular]
         prompt: "ich (machen): ich ___"
         answers: [machte]
+        explanation: "Regular verbs add -te to the stem in the Präteritum: mach-te."
       - id: reg2
         type: fill-blank
         tags: [regular]
         prompt: "wir (wohnen): wir ___"
         answers: [wohnten]
+        explanation: "With wir the Präteritum ending is -ten: wohn-ten."
       - id: reg3
         type: fill-blank
         tags: [regular]
         prompt: "er (arbeiten): er ___"
         answers: [arbeitete]
+        explanation: "Stems ending in -t add an extra e: arbeit-ete."
       - id: reg4
         type: fill-blank
         tags: [regular]
         prompt: "du (warten): du ___"
         answers: [wartetest]
+        explanation: "wart- ends in -t, so -ete, plus the du ending -st: wartetest."
 
   - title: Irregular verbs
     items:
@@ -37,6 +41,7 @@ sets:
           - { left: nehmen, right: nahm }
           - { left: finden, right: fand }
           - { left: schreiben, right: schrieb }
+        explanation: "Irregular verbs change their vowel and add no -te: ging, kam, sah, nahm, fand, schrieb."
       - id: irr2
         type: matching
         tags: [irregular]
@@ -48,27 +53,32 @@ sets:
           - { left: essen, right: aß }
           - { left: beginnen, right: begann }
           - { left: treffen, right: traf }
+        explanation: "More strong forms to learn: fuhr, stand, saß, aß, begann, traf."
       - id: irr3
         type: fill-blank
         tags: [irregular]
         prompt: "Gestern ___ ich meinen alten Lehrer. (treffen)"
         answers: [traf]
+        explanation: "treffen is irregular: ich traf. ich and er have no ending in the Präteritum."
       - id: irr4
         type: fill-blank
         tags: [irregular]
         prompt: "Wir ___ bis Mitternacht. (bleiben)"
         answers: [blieben]
+        explanation: "bleiben → blieb; wir add -en: wir blieben."
       - id: irr5
         type: fill-blank
         tags: [irregular]
         prompt: "Du ___ immer so schnell. (sprechen)"
         answers: [sprachst]
+        explanation: "sprechen → sprach; du adds -st: du sprachst."
       - id: irr6
         type: multiple-choice
         tags: [irregular]
         prompt: "Er ___ nach Hause."
         options: [ging, gingte, gang]
         answer: ging
+        explanation: "gehen is irregular: ging, with no -te. gingte mixes two patterns."
 
   - title: Mixed verbs
     items:
@@ -78,21 +88,25 @@ sets:
         prompt: "Ich ___, du bist schon weg."
         options: [dachte, denkte, dankte]
         answer: dachte
+        explanation: "denken is mixed: a vowel change plus -te: dachte."
       - id: mix2
         type: fill-blank
         tags: [mixed]
         prompt: "Das ___ ich nicht. (wissen)"
         answers: [wusste]
+        explanation: "wissen is mixed: wusste."
       - id: mix3
         type: fill-blank
         tags: [mixed]
         prompt: "Der Kellner ___ uns die Speisekarte. (bringen)"
         answers: [brachte]
+        explanation: "bringen is mixed: brachte."
       - id: mix4
         type: fill-blank
         tags: [mixed]
         prompt: "Damals ___ sie niemanden in der Stadt. (kennen)"
         answers: [kannte]
+        explanation: "kennen is mixed: kannte."
 
   - title: Separable verbs
     items:
@@ -101,11 +115,13 @@ sets:
         tags: [separable]
         prompt: The train arrived on time.
         answer: "Der Zug kam pünktlich an."
+        explanation: "In the Präteritum, separable verbs split like in the present: kam … an."
       - id: sep2
         type: word-order
         tags: [separable]
         prompt: She got up at six.
         answer: "Sie stand um sechs Uhr auf."
+        explanation: "aufstehen → stand … auf, with the prefix at the end."
 
   - title: Perfekt or Präteritum?
     items:
@@ -115,17 +131,20 @@ sets:
         prompt: "Which sentence sounds most natural in a chat with a friend?"
         options: ["Gestern habe ich einen tollen Film gesehen.", "Gestern sah ich einen tollen Film."]
         answer: "Gestern habe ich einen tollen Film gesehen."
+        explanation: "In conversation Germans use the Perfekt for most verbs: habe … gesehen."
       - id: style2
         type: true-false
         tags: [style]
         prompt: "In speech, Germans normally say 'Ich war müde' rather than 'Ich bin müde gewesen'."
         answer: true
+        explanation: "For sein, haben and the modals, even speech prefers the Präteritum: ich war, ich hatte."
       - id: style3
         type: multiple-choice
         tags: [style]
         prompt: Which text type is normally written in the Präteritum?
         options: [a newspaper report, a WhatsApp message, a phone call]
         answer: a newspaper report
+        explanation: "Newspapers, stories and reports are written in the Präteritum."
 
   - title: A newspaper report
     items:
@@ -141,6 +160,7 @@ sets:
           - [war]
           - [fiel]
           - [brachte]
+        explanation: "geben → gab, fahren → fuhr, bremsen → bremste (regular), sein → war, fallen → fiel, bringen → brachte."
 
   - title: An old story
     stimulus:
@@ -153,18 +173,21 @@ sets:
         tags: [reading]
         prompt: Der Schuster hatte viel Geld.
         answer: false
+        explanation: "The text says he arbeitete jeden Tag … aber er hatte nie genug Geld."
       - id: read2
         type: multiple-choice
         tags: [reading]
         prompt: Was fand der Schuster am Morgen?
         options: ["fertige Schuhe", "Geld", "einen Brief"]
         answer: "fertige Schuhe"
+        explanation: "Am nächsten Morgen fand er … ein Paar wunderschöne Schuhe."
       - id: read3
         type: multiple-choice
         tags: [reading]
         prompt: "Which infinitive belongs to 'schnitt … zu'?"
         options: [zuschneiden, zuschnitten, schneiden zu]
         answer: zuschneiden
+        explanation: "schnitt … zu is the Präteritum of the separable verb zuschneiden (to cut out)."
 
   - title: Write a story
     items:

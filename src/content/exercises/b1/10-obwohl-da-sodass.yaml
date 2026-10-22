@@ -8,29 +8,34 @@ sets:
         prompt: "___ es regnet, gehen wir spazieren."
         options: [Obwohl, Trotzdem, Trotz]
         answer: Obwohl
+        explanation: "obwohl starts a clause with its verb at the end: Obwohl es regnet, …"
       - id: con2
         type: multiple-choice
         tags: [contrast]
         prompt: "Es regnet. ___ gehen wir spazieren."
         options: [Trotzdem, Obwohl, Trotz]
         answer: Trotzdem
+        explanation: "trotzdem starts a new main clause and the verb follows it straight away: Trotzdem gehen wir …"
       - id: con3
         type: multiple-choice
         tags: [contrast]
         prompt: "___ des Regens gehen wir spazieren."
         options: [Trotz, Obwohl, Trotzdem]
         answer: Trotz
+        explanation: "trotz is a preposition with a noun in the genitive: trotz des Regens."
       - id: con4
         type: multiple-choice
         tags: [contrast]
         prompt: "Er kam zur Arbeit, …"
         options: ["obwohl er krank war.", "obwohl war er krank.", "obwohl er war krank."]
         answer: "obwohl er krank war."
+        explanation: "obwohl sends the verb to the end: obwohl er krank war."
       - id: con5
         type: word-order
         tags: [contrast]
         prompt: Although she has little time, she always helps me.
         answer: "Obwohl sie wenig Zeit hat, hilft sie mir immer."
+        explanation: "The obwohl clause ends with hat; the main clause then starts with its verb: hilft sie mir immer."
 
   - title: Reasons
     items:
@@ -40,18 +45,21 @@ sets:
         prompt: "Warum kommst du nicht? – ___ ich krank bin."
         options: [Weil, Da, Deshalb]
         answer: Weil
+        explanation: "The answer to a warum question usually starts with weil."
       - id: rea2
         type: multiple-choice
         tags: [reason]
         prompt: "___ des Streiks fahren heute keine Züge."
         options: [Wegen, Weil, Da]
         answer: Wegen
+        explanation: "wegen is a preposition with a noun (genitive): wegen des Streiks."
       - id: rea3
         type: multiple-choice
         tags: [reason]
         prompt: "___ der Kurs ausgebucht ist, können wir Sie leider nicht anmelden."
         options: [Da, Deshalb, Wegen]
         answer: Da
+        explanation: "da gives a known reason, often at the start, with the verb at the end; it is more formal than weil."
       - id: rea4
         type: matching
         tags: [connector groups]
@@ -61,6 +69,7 @@ sets:
           - { left: trotzdem, right: verb straight after it }
           - { left: trotz, right: followed by a noun }
           - { left: denn, right: normal word order after it }
+        explanation: "obwohl sends the verb to the end; trotzdem is followed by the verb; trotz by a noun; denn keeps normal order."
 
   - title: Results
     items:
@@ -70,27 +79,32 @@ sets:
         prompt: "Es hat stark geregnet, ___ das Spiel ausfallen musste."
         options: [sodass, obwohl, damit]
         answer: sodass
+        explanation: "sodass introduces the result: it rained, so the match was cancelled."
       - id: res2
         type: fill-blank
         tags: [result]
         prompt: "Ich war so müde, ___ ich sofort eingeschlafen bin."
         answers: [dass]
+        explanation: "so … dass: so tired that I fell asleep at once."
       - id: res3
         type: word-order
         tags: [result]
         prompt: He overslept, so he missed the train.
         answer: "Er hat verschlafen, sodass er den Zug verpasst hat."
+        explanation: "sodass gives the result, with the verb at the end: sodass er den Zug verpasst hat."
       - id: res4
         type: true-false
         tags: [result]
         prompt: "sodass introduces the result, not the reason."
         answer: true
+        explanation: "sodass gives the consequence: … sodass das Spiel ausfiel."
       - id: res5
         type: translation
         tags: [result]
         prompt: "The music was so loud that I could not sleep."
         answers:
           - "Die Musik war so laut, dass ich nicht schlafen konnte."
+        explanation: "so + adjective in the main clause, then dass with the verb at the end: so laut, dass ich nicht schlafen konnte."
 
   - title: Say it another way
     instructions: Rewrite the sentence with the word in brackets.
@@ -102,24 +116,28 @@ sets:
         answers:
           - "Obwohl das Hotel teuer war, haben wir es gebucht."
           - "Wir haben das Hotel gebucht, obwohl es teuer war."
+        explanation: "obwohl replaces trotzdem; its verb (war) goes to the end of its clause."
       - id: rw2
         type: translation
         tags: [rephrasing]
         prompt: "Ich war krank. Deshalb bin ich zu Hause geblieben. (da)"
         answers:
           - "Da ich krank war, bin ich zu Hause geblieben."
+        explanation: "da starts the reason clause with its verb at the end; the main clause starts with its verb."
       - id: rw3
         type: translation
         tags: [rephrasing]
         prompt: "Obwohl das Wetter schlecht war, war es ein schöner Tag. (trotz)"
         answers:
           - "Trotz des schlechten Wetters war es ein schöner Tag."
+        explanation: "trotz + genitive replaces the obwohl clause: trotz des schlechten Wetters."
       - id: rw4
         type: translation
         tags: [rephrasing]
         prompt: "Weil es einen Streik gibt, fahren keine Busse. (wegen)"
         answers:
           - "Wegen des Streiks fahren keine Busse."
+        explanation: "wegen + genitive replaces the weil clause: wegen des Streiks."
 
   - title: A bad day
     items:
@@ -136,6 +154,7 @@ sets:
           - [sodass]
           - [Da]
           - [Trotzdem]
+        explanation: "Obwohl (despite setting the alarm); so … dass; wegen + genitive; sodass (result); Da (reason); Trotzdem (still)."
 
   - title: Write about a decision
     items:

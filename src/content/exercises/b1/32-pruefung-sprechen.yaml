@@ -8,18 +8,21 @@ sets:
         prompt: "In Teil 1, which phrase makes a suggestion?"
         options: ["Was hältst du davon, wenn wir …?", "Vielen Dank für Ihre Aufmerksamkeit.", "Besonders interessant fand ich …"]
         answer: "Was hältst du davon, wenn wir …?"
+        explanation: "Was hältst du davon, wenn wir …? puts a suggestion to your partner when planning together."
       - id: ph2
         type: multiple-choice
         tags: [presentation]
         prompt: "Which phrase ends a presentation?"
         options: ["Vielen Dank für Ihre Aufmerksamkeit.", "Ich möchte heute über das Thema … sprechen.", "In meinem Heimatland …"]
         answer: "Vielen Dank für Ihre Aufmerksamkeit."
+        explanation: "A presentation ends by thanking the audience: Vielen Dank für Ihre Aufmerksamkeit."
       - id: ph3
         type: multiple-choice
         tags: [feedback]
         prompt: "Which phrase gives feedback in Teil 3?"
         options: ["Mir hat gut gefallen, dass …", "Wir könnten …", "Zuerst … dann …"]
         answer: "Mir hat gut gefallen, dass …"
+        explanation: "In Teil 3 you react to your partner's presentation: Mir hat gut gefallen, dass …"
       - id: ph4
         type: matching
         tags: [presentation]
@@ -30,6 +33,7 @@ sets:
           - { left: Folie 3, right: die Situation im Heimatland }
           - { left: Folie 4, right: Vor- und Nachteile und Meinung }
           - { left: Folie 5, right: Schluss und Dank }
+        explanation: "The five slides follow a fixed order: topic and structure, your experience, your home country, pros and cons with your opinion, then the end and thanks."
 
   - title: "Teil 1: plan together"
     items:

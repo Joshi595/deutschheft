@@ -12,11 +12,13 @@ sets:
         type: true-false
         prompt: Der Kurs findet am Donnerstag in einem anderen Raum statt.
         answer: true
+        explanation: "The course is nicht im Raum 12 …, sondern im Raum 5, because room 12 is being renovated."
       - id: h1-2
         type: multiple-choice
         prompt: Ab nächster Woche beginnt der Kurs …
         options: ["um 17:30 Uhr.", "um 18 Uhr.", "um 16 Uhr."]
         answer: "um 17:30 Uhr."
+        explanation: "From next week the course starts schon um 17:30 Uhr statt um 18 Uhr. 16 Uhr is only until when she can be reached."
 
   - title: "Teil 3: a conversation (once)"
     instructions: Sie hören ein Gespräch einmal. Richtig oder falsch?
@@ -40,14 +42,17 @@ sets:
         type: true-false
         prompt: Laura möchte dem Vater wieder ein Buch schenken.
         answer: false
+        explanation: "Laura says: Bücher hat er genug. She suggests a cooking course instead."
       - id: h3-2
         type: true-false
         prompt: Am Ende entscheiden sie sich für ein Wochenende in Wien.
         answer: true
+        explanation: "Tim suggests Vienna; Laura agrees if Uncle Peter helps to pay: Ja, warum nicht."
       - id: h3-3
         type: true-false
         prompt: Laura ruft Onkel Peter an.
         answer: true
+        explanation: "Laura says: Ich rufe ihn heute Abend an, meaning Onkel Peter."
       - id: h3-4
         type: true-false
         prompt: Tim bucht ein Hotel.
@@ -79,15 +84,18 @@ sets:
         options: [Moderatorin, Frau Wolf, Herr Kaya]
         answer: Herr Kaya
         shuffle: false
+        explanation: "Herr Kaya says: Ich spare jeden Tag zwei Stunden Fahrzeit."
       - id: h4-2
         type: multiple-choice
         prompt: Manche Menschen fühlen sich im Homeoffice einsam.
         options: [Moderatorin, Frau Wolf, Herr Kaya]
         answer: Frau Wolf
         shuffle: false
+        explanation: "Frau Wolf says many employees sich allein fühlen."
       - id: h4-3
         type: multiple-choice
         prompt: Gibt es eine Lösung zwischen beiden Positionen?
         options: [Moderatorin, Frau Wolf, Herr Kaya]
         answer: Moderatorin
         shuffle: false
+        explanation: "It is the presenter who asks: Gibt es denn einen Kompromiss?"

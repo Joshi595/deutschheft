@@ -8,43 +8,51 @@ sets:
         tags: [endings]
         prompt: "Wir haben den ___ Schrank verkauft. (alt)"
         answers: [alten]
+        explanation: "After den (masculine accusative) the adjective ends in -en."
       - id: all2
         type: fill-blank
         tags: [endings]
         prompt: "Ich wohne in einem ___ Haus. (alt)"
         answers: [alten]
+        explanation: "Dative after einem: the adjective ends in -en."
       - id: all3
         type: fill-blank
         tags: [endings]
         prompt: "Das ist ein ___ Punkt. (wichtig)"
         answers: [wichtiger]
+        explanation: "ein + masculine nominative: the adjective shows the gender with -er."
       - id: all4
         type: fill-blank
         tags: [endings]
         prompt: "Die Mieter des ___ Hauses sind zufrieden. (neu)"
         answers: [neuen]
+        explanation: "Genitive after des: -en."
       - id: all5
         type: fill-blank
         tags: [endings]
         prompt: "Wir suchen Mitarbeiter mit ___ Deutschkenntnissen. (gut)"
         answers: [guten]
+        explanation: "mit + dative plural with no article: the adjective ends in -en."
       - id: all6
         type: fill-blank
         tags: [endings]
         prompt: "Ich trinke gern ___ Wein. (rot)"
         answers: [roten]
+        explanation: "Wein is masculine accusative with no article, so the adjective takes the article's ending: roten."
       - id: all7
         type: multiple-choice
         tags: [endings]
         prompt: "___ Leute ziehen in die Stadt."
         options: [Viele junge, Viele jungen, Viele junger]
         answer: Viele junge
+        explanation: "viele works like no article, so the adjective takes the strong ending -e: viele junge Leute."
       - id: all8
         type: multiple-choice
         tags: [endings]
         prompt: "___ Leute ziehen in die Stadt."
         options: [Alle jungen, Alle junge, Alle junger]
         answer: Alle jungen
+        explanation: "alle works like die, so the adjective takes -en: alle jungen Leute."
 
   - title: Adjectives as nouns
     items:
@@ -54,33 +62,39 @@ sets:
         prompt: "Mein Nachbar ist ein ___."
         options: [Deutscher, Deutsche, Deutschen]
         answer: Deutscher
+        explanation: "An adjective used as a noun keeps adjective endings: ein Deutscher (masculine after ein)."
       - id: nom2
         type: multiple-choice
         tags: [nominalised]
         prompt: "Ich habe mit dem ___ gesprochen."
         options: [Angestellten, Angestellte, Angestellter]
         answer: Angestellten
+        explanation: "After dem the ending is -en: dem Angestellten."
       - id: nom3
         type: multiple-choice
         tags: [nominalised]
         prompt: "Gibt es etwas ___?"
         options: [Neues, neues, Neue]
         answer: Neues
+        explanation: "After etwas, an adjective becomes a capitalised noun in -es: etwas Neues."
       - id: nom4
         type: fill-blank
         tags: [nominalised]
         prompt: "Heute ist nichts ___ passiert. (besonders)"
         answers: [Besonderes]
+        explanation: "After nichts, the same: nichts Besonderes."
       - id: nom5
         type: fill-blank
         tags: [nominalised]
         prompt: "Das ___ am Urlaub war das Essen. (best-)"
         answers: [Beste]
+        explanation: "das Beste: the superlative as a noun, capitalised, with -e after das."
       - id: nom6
         type: fill-blank
         tags: [nominalised]
         prompt: "Der Eintritt ist für ___ frei. (jugendlich, plural, no article)"
         answers: [Jugendliche]
+        explanation: "Plural with no article takes the strong ending -e: für Jugendliche."
 
   - title: Participles
     items:
@@ -90,23 +104,27 @@ sets:
         prompt: "Wegen der ___ Preise kaufen viele weniger. (rising)"
         options: [steigenden, gestiegene, steigende]
         answer: steigenden
+        explanation: "The present participle (infinitive + d) means something happening: steigende → der steigenden Preise."
       - id: part2
         type: multiple-choice
         tags: [participles]
         prompt: "Das ___ Auto steht vor der Tür. (repaired)"
         options: [reparierte, reparierende, repariertes]
         answer: reparierte
+        explanation: "The past participle used as an adjective means something completed: das reparierte Auto."
       - id: part3
         type: fill-blank
         tags: [participles]
         prompt: "Bitte schicken Sie uns das ___ Formular. (ausgefüllt)"
         answers: [ausgefüllte]
+        explanation: "ausgefüllt as an adjective after das: das ausgefüllte Formular."
       - id: part4
         type: translation
         tags: [participles]
         prompt: the laughing child
         answers:
           - "das lachende Kind"
+        explanation: "The present participle lachend + the ending -e after das: das lachende Kind."
 
   - title: A job advert
     items:
@@ -122,6 +140,7 @@ sets:
           - [en]
           - [es]
           - [es]
+        explanation: "einen freundlichen (masc. acc.); unser neues (neuter); gute (plural, no article); schwierigen (dative plural); ein junges, ein faires (neuter)."
 
   - title: Describe someone
     items:

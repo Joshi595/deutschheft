@@ -11,21 +11,25 @@ sets:
           - "Ich gehe ins Kino heute Abend."
           - "Ich heute Abend gehe ins Kino."
         answer: "Ich gehe heute Abend ins Kino."
+        explanation: "In the middle of the sentence, time comes before place: heute Abend, then ins Kino."
       - id: tekamolo2
         type: word-order
         tags: [TeKaMoLo]
         prompt: Tomorrow I am going to Vienna by train.
         answer: "Ich fahre morgen mit dem Zug nach Wien."
+        explanation: "Te-Ka-Mo-Lo: time (morgen), manner (mit dem Zug), then place (nach Wien)."
       - id: tekamolo3
         type: word-order
         tags: [TeKaMoLo]
         prompt: Yesterday she went home quickly because of the cold.
         answer: "Sie ist gestern wegen der Kälte schnell nach Hause gegangen."
+        explanation: "Te-Ka-Mo-Lo: gestern (time), wegen der Kälte (reason), schnell (manner), nach Hause (place)."
       - id: tekamolo4
         type: word-order
         tags: [TeKaMoLo]
         prompt: We are flying to Spain with friends in August.
         answer: "Wir fliegen im August mit Freunden nach Spanien."
+        explanation: "Time (im August), then manner (mit Freunden), then place (nach Spanien)."
 
   - title: Position 1
     items:
@@ -38,16 +42,19 @@ sets:
           - "Morgen ich fahre nach Wien."
           - "Morgen mit dem Zug fahre ich nach Wien."
         answer: "Morgen fahre ich nach Wien."
+        explanation: "Only one element goes before the verb. Morgen is first, so fahre comes second, then ich."
       - id: pos2
         type: word-order
         tags: [position 1]
         prompt: "Unfortunately I had to wait a long time for the bus yesterday. (start with Gestern)"
         answer: "Gestern musste ich leider lange auf den Bus warten."
+        explanation: "Gestern is first, so musste comes second, then ich; leider and lange follow; warten goes last."
       - id: pos3
         type: true-false
         tags: [position 1]
         prompt: "Only one element can stand before the conjugated verb in a main clause."
         answer: true
+        explanation: "In a main clause exactly one element, which can be a whole phrase, stands before the conjugated verb."
 
   - title: Pronouns and objects
     items:
@@ -60,17 +67,20 @@ sets:
           - "Ich habe gestern das Buch ihr gegeben."
           - "Ich habe das Buch gestern ihr gegeben."
         answer: "Ich habe ihr gestern das Buch gegeben."
+        explanation: "A short pronoun (ihr) comes early, before time words and before a noun object."
       - id: obj2
         type: multiple-choice
         tags: [object order]
         prompt: "Ich habe ___ gestern gegeben. (it to her)"
         options: [es ihr, ihr es]
         answer: es ihr
+        explanation: "When both objects are pronouns, the accusative comes first: es ihr."
       - id: obj3
         type: word-order
         tags: [object order]
         prompt: Can you explain it to me?
         answer: "Kannst du es mir erklären?"
+        explanation: "Two pronouns: the accusative es before the dative mir; the infinitive erklären goes last."
 
   - title: Where does nicht go?
     items:
@@ -83,6 +93,7 @@ sets:
           - "Ich habe nicht ihn gestern gesehen."
           - "Ich habe ihn gestern gesehen nicht."
         answer: "Ich habe ihn gestern nicht gesehen."
+        explanation: "nicht negating the whole sentence goes after the objects and time words, before the participle."
       - id: nicht2
         type: multiple-choice
         tags: [nicht]
@@ -98,11 +109,13 @@ sets:
         tags: [nicht]
         prompt: I do not know the man.
         answer: "Ich kenne den Mann nicht."
+        explanation: "To negate the whole sentence, nicht goes at the end, after the object."
       - id: nicht4
         type: word-order
         tags: [nicht]
         prompt: I could not wait for you.
         answer: "Ich konnte nicht auf dich warten."
+        explanation: "nicht goes before a prepositional phrase that belongs to the verb: nicht auf dich warten."
 
   - title: aber or sondern?
     items:
@@ -112,18 +125,21 @@ sets:
         prompt: "Ich fahre nicht morgen, ___ übermorgen."
         options: [sondern, aber]
         answer: sondern
+        explanation: "After a negation, 'but rather' is sondern: nicht morgen, sondern übermorgen."
       - id: sond2
         type: multiple-choice
         tags: [sondern]
         prompt: "Das Hotel war teuer, ___ sehr schön."
         options: [aber, sondern]
         answer: aber
+        explanation: "aber adds a contrast without correcting anything: expensive but beautiful."
       - id: sond3
         type: multiple-choice
         tags: [sondern]
         prompt: "Nicht ich habe das gesagt, ___ mein Chef."
         options: [sondern, aber]
         answer: sondern
+        explanation: "nicht ich … sondern corrects who said it, so sondern."
 
   - title: Correct the email
     items:
@@ -139,6 +155,7 @@ sets:
           - [nicht]
           - [sondern]
           - [ihr]
+        explanation: "nicht negates kommen; weil gives the reason with the verb last; nicht morgen, sondern Donnerstag; geben takes a dative, ihr."
 
   - title: Say it in German
     items:
@@ -149,6 +166,7 @@ sets:
         answers:
           - "Heute bin ich wegen des Wetters mit dem Fahrrad zur Arbeit gefahren."
           - "Ich bin heute wegen des Wetters mit dem Fahrrad zur Arbeit gefahren."
+        explanation: "Heute is first, so bin comes second; reason (wegen des Wetters), manner (mit dem Fahrrad), place (zur Arbeit), and gefahren goes last."
 
   - title: Tell me about it
     items:
