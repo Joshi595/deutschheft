@@ -54,20 +54,29 @@ function Fix({ given, expected, correct }: { given: string; expected: string; co
 
 const choiceClass = (state: 'plain' | 'chosen' | 'right' | 'wrong', locked: boolean) =>
   [
-    'rounded-xl border px-4 py-3 text-left transition-colors disabled:cursor-default',
-    state === 'chosen' && 'border-ink bg-accent-soft',
+    'flex min-h-12 items-center gap-3 rounded border-2 px-3 py-2.5 text-left transition-colors disabled:cursor-default',
+    state === 'chosen' && 'border-accent bg-accent-soft',
     state === 'right' && 'border-good bg-good-soft text-good font-semibold',
     state === 'wrong' && 'border-bad bg-bad-soft text-bad',
-    state === 'plain' && 'border-line bg-surface' + (locked ? ' opacity-60' : ' hover:border-ink'),
+    state === 'plain' && 'border-line bg-surface' + (locked ? ' opacity-50' : ' hover:border-ink'),
   ]
     .filter(Boolean)
     .join(' ');
+
+/** The key that picks an option: 1, 2, 3 … (the practice dialog listens for them). */
+function OptionKey({ index }: { index: number }) {
+  return (
+    <span className="grid size-6 flex-none place-items-center rounded-sm border border-current text-xs font-bold opacity-60" aria-hidden="true">
+      {index + 1}
+    </span>
+  );
+}
 
 export function MultipleChoice({ item, response, onChange, locked }: WidgetProps<'multiple-choice'>) {
   const options = useMemo(() => (item.shuffle ? seededShuffle(item.options, item.id) : item.options), [item]);
   return (
     <div role="radiogroup" aria-label={item.prompt} className="grid gap-2 sm:grid-cols-2">
-      {options.map((option) => {
+      {options.map((option, index) => {
         const chosen = response.choice === option;
         const state = !locked ? (chosen ? 'chosen' : 'plain') : option === item.answer ? 'right' : chosen ? 'wrong' : 'plain';
         return (
@@ -80,7 +89,8 @@ export function MultipleChoice({ item, response, onChange, locked }: WidgetProps
             onClick={() => onChange({ type: 'multiple-choice', choice: option })}
             className={choiceClass(state, locked)}
           >
-            {option}
+            <OptionKey index={index} />
+            <span>{option}</span>
           </button>
         );
       })}
@@ -91,7 +101,7 @@ export function MultipleChoice({ item, response, onChange, locked }: WidgetProps
 export function TrueFalse({ item, response, onChange, locked }: WidgetProps<'true-false'>) {
   return (
     <div role="radiogroup" aria-label={item.prompt} className="grid grid-cols-2 gap-2 sm:max-w-sm">
-      {[true, false].map((value) => {
+      {[true, false].map((value, index) => {
         const chosen = response.value === value;
         const state = !locked ? (chosen ? 'chosen' : 'plain') : value === item.answer ? 'right' : chosen ? 'wrong' : 'plain';
         return (
@@ -102,9 +112,10 @@ export function TrueFalse({ item, response, onChange, locked }: WidgetProps<'tru
             aria-checked={chosen}
             disabled={locked}
             onClick={() => onChange({ type: 'true-false', value })}
-            className={choiceClass(state, locked) + ' text-center'}
+            className={choiceClass(state, locked)}
           >
-            {value ? 'Richtig' : 'Falsch'}
+            <OptionKey index={index} />
+            <span lang="de">{value ? 'Richtig' : 'Falsch'}</span>
           </button>
         );
       })}

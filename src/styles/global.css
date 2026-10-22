@@ -100,6 +100,11 @@
     scroll-padding-top: calc(var(--shell-top) + 1.5rem);
   }
 
+  /* A full-screen dialog (practice) is the only thing that scrolls while it is open. */
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
+
   body {
     min-height: 100dvh;
     font-size: 1.0625rem;
