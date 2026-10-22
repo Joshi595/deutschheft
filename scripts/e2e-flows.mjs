@@ -4,6 +4,7 @@
 //
 //   npm run build && npm run preview          (serves http://localhost:4321/deutschheft/)
 //   npm install --no-save playwright-core     (not a project dependency; uses the installed Edge)
+//   (axe-core, for the accessibility checks in section 11, is a dev dependency)
 //   node scripts/e2e-flows.mjs [baseUrl]
 //
 // Set E2E_SHOTS to a folder to keep screenshots of each stage.
@@ -48,7 +49,7 @@ await context.addInitScript(() => {
 });
 const page = await context.newPage();
 page.on('console', (m) => m.type() === 'error' && problems.push(`console: ${m.text()} @ ${m.location().url}`));
-page.on('pageerror', (e) => problems.push(`pageerror: ${e.message}`));
+page.on('pageerror', (e) => problems.push(`pageerror: ${e.message} @ ${page.url()}`));
 page.on('response', (r) => r.status() >= 400 && problems.push(`http ${r.status()}: ${r.url()}`));
 const shot = async (name) => {
   if (process.env.E2E_SHOTS) await page.screenshot({ path: join(process.env.E2E_SHOTS, `flow-${name}.png`) });
@@ -103,7 +104,8 @@ async function answer(item, { wrong = false } = {}) {
       for (const box of await card.getByRole('checkbox').all()) await box.check();
       break;
   }
-  await card.getByRole('button', { name: /^(Check|Done)$/ }).click();
+  // A tap answers a choice; everything else is checked with a button.
+  if (item.type !== 'multiple-choice' && item.type !== 'true-false') await card.getByRole('button', { name: /^(Check|Done)$/ }).click();
   return card;
 }
 
@@ -118,15 +120,16 @@ await page.waitForURL(/a1\/01-/);
 const settings = await store('lg:settings:v1');
 ok('onboarding saved level and goal', settings.level === 'a1' && settings.dailyGoal === 100, JSON.stringify({ level: settings.level, goal: settings.dailyGoal }));
 
-// --- 2. Chapter practice, one part on one page -----------------------------------
+// --- 2. Chapter practice: a part in a full-screen dialog, one column to scroll ------
 const lesson = yaml('exercises/a1/01-begruessung.yaml');
 const items = lesson.sets.flatMap((set) => set.items);
 // The practice section loads after the page; wait for it before counting its parts.
 await page.getByRole('button', { name: 'Start part 1' }).waitFor();
-ok('a chapter comes in two parts', (await page.getByText(/^Part [12] ·/).count()) === 2);
+ok('a chapter comes in two parts', (await page.getByText(/^Part [12]\s+\d+ of \d+ solved/).count()) === 2);
 await page.getByRole('button', { name: 'Start part 1' }).click();
-// A part is one page: every exercise of it at once, to scroll through, with no Continue between them.
-const partSize = await page.locator('article').count();
+ok('practice opens full screen', await page.locator('dialog[open]').isVisible());
+// A part is one column: every exercise of it at once, to scroll through, with no Continue between them.
+const partSize = await page.locator('dialog article').count();
 ok('a part shows all its exercises on one page', partSize > 5 && partSize < items.length, `${partSize} cards`);
 ok('session has a progress bar', await page.getByRole('progressbar', { name: 'Exercises checked' }).isVisible());
 
@@ -139,10 +142,14 @@ if (await card.getByRole('button', { name: 'Check' }).count()) {
   await answer(items[0]);
 }
 
-card = await answer(items[1]);
+// Number keys answer the exercise marked as next (items[1] is a choice; options may be shuffled on screen).
+card = page.locator('article').filter({ has: page.locator(`[id$=".${items[1].id}-prompt"]`) });
+const shown = await card.getByRole('radio').allTextContents();
+ok('the next exercise is marked', (await page.locator('[data-active]').filter({ has: card }).count()) === 1);
+await page.keyboard.press(String(shown.findIndex((text) => text.endsWith(items[1].answer)) + 1));
 ok('right answer is confirmed with points', (await card.getByText('Richtig!').isVisible()) && (await card.getByText('+10 points').isVisible()));
 await shot('2-right');
-ok('no Continue button between exercises', (await page.getByRole('button', { name: 'Continue' }).count()) === 0);
+ok('no Continue button between exercises', (await page.locator('dialog').getByRole('button', { name: 'Continue', exact: true }).count()) === 0);
 // Part 1 is the first sets in order, so the page follows the file.
 for (let i = 2; i < partSize; i++) await answer(items[i]);
 ok('the bar counts every checked exercise', (await page.getByText(`${partSize} of ${partSize} checked`).count()) === 1);
@@ -160,6 +167,12 @@ ok('header shows points against the goal', (await page.locator('[data-goal-text]
 ok('missed exercise joined the review deck', Object.keys(await store('lg:review:v1')).some((id) => id.startsWith('exercise:')));
 await page.getByRole('button', { name: 'Done for now' }).click();
 ok('overview offers to continue', await page.getByRole('button', { name: 'Continue with part 1' }).isVisible());
+await page.getByRole('button', { name: 'Continue with part 1' }).click();
+await page.keyboard.press('Escape');
+ok('Esc closes the practice', (await page.locator('dialog[open]').count()) === 0);
+await page.getByRole('button', { name: 'Continue with part 1' }).click();
+await page.goBack();
+ok('Back closes the practice and stays on the chapter', (await page.locator('dialog[open]').count()) === 0 && /01-begruessung/.test(page.url()));
 
 // --- 3. Today, as a returning learner -----------------------------------------
 await page.goto(BASE, { waitUntil: 'networkidle' });
@@ -341,7 +354,18 @@ for (const route of [...routes, ...speakRoutes]) {
   ok(`phone: /${route} fits the screen`, overflow <= 0, overflow > 0 ? `${overflow}px too wide` : '');
 }
 ok('phone: tab bar is shown', await mobile.locator('.tabbar').isVisible());
-ok('phone: top nav is hidden', !(await mobile.locator('header nav').isVisible()));
+// A laptop gets the icon rail at 1024 and the full sidebar at 1366; neither may push the page sideways.
+for (const width of [1024, 1366]) {
+  const wide = await browser.newContext({ viewport: { width, height: 800 }, storageState: await context.storageState() });
+  const desk = await wide.newPage();
+  for (const route of ['', 'a1/', 'a1/01-begruessung/', 'review/', 'speak/conversations/']) {
+    await desk.goto(BASE + route, { waitUntil: 'networkidle' });
+    const overflow = await desk.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+    ok(`${width}px: /${route} fits the screen`, overflow <= 0, overflow > 0 ? `${overflow}px too wide` : '');
+  }
+  await wide.close();
+}
+ok('phone: sidebar nav is hidden', !(await mobile.locator('header.shell nav').isVisible()));
 await mobile.locator('.tabbar').getByRole('link', { name: 'Speak' }).click();
 await mobile.waitForURL(/speak\/$/);
 ok('phone: tab bar navigates', (await mobile.locator('.tabbar a[aria-current="page"]').textContent()).trim() === 'Speak');
@@ -415,6 +439,25 @@ await audio.getByRole('button', { name: 'Start mission' }).click();
 await audio.waitForTimeout(300);
 voicesUsed = await audio.evaluate(() => window.__spoken);
 ok('audio: without a German voice nothing is read out by another language’s voice', voicesUsed.length === 0, `${voicesUsed.length} utterances`);
+
+// --- 11. Accessibility: axe on the main screens, light and dark ------------------
+const axePath = createRequire(join(repo, 'package.json')).resolve('axe-core/axe.min.js');
+for (const scheme of ['light', 'dark']) {
+  const a11y = await browser.newContext({ viewport: { width: 1280, height: 900 }, colorScheme: scheme, storageState: await context.storageState() });
+  const view = await a11y.newPage();
+  for (const route of ['', 'learn/', 'a1/', 'a1/01-begruessung/', 'review/', 'speak/', 'speak/conversations/', 'progress/', 'settings/', 'notebook/']) {
+    await view.goto(BASE + route, { waitUntil: 'networkidle' });
+    await view.addScriptTag({ path: axePath });
+    const found = await view.evaluate(async () => {
+      const report = await window.axe.run(document, { runOnly: ['wcag2a', 'wcag2aa'] });
+      return report.violations
+        .filter((violation) => violation.impact === 'serious' || violation.impact === 'critical')
+        .map((violation) => `${violation.id} (${violation.nodes.length}): ${violation.nodes[0]?.target.join(' ')}`);
+    });
+    ok(`a11y ${scheme}: /${route} has no serious problems`, found.length === 0, found.join('; '));
+  }
+  await a11y.close();
+}
 
 await browser.close();
 console.log(results.join('\n'));

@@ -20,7 +20,8 @@
   --accent-soft: light-dark(#e8eefc, #1a2649);
   --good: light-dark(#0b7a45, #4fcb8a);
   --good-soft: light-dark(#e3f3ea, #12301f);
-  --bad: light-dark(#d52b1e, #ff7a6e);
+  /* A shade deeper than die-red, so it stays readable on its own pale background. */
+  --bad: light-dark(#c4261b, #ff7a6e);
   --bad-soft: light-dark(#fce9e7, #3b1715);
   /* Yellow is kept for one thing: today's goal and the streak. */
   --signal: #ffc400;
@@ -86,13 +87,6 @@
   --shadow-sm: 0 1px 0 var(--line);
 }
 
-@view-transition {
-  navigation: auto;
-}
-/* A quick cross-fade between pages; the shell is named, so it stays put. */
-::view-transition-group(root) {
-  animation-duration: 0.15s;
-}
 
 @layer base {
   html {
@@ -152,9 +146,6 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    @view-transition {
-      navigation: none;
-    }
     html {
       scroll-behavior: auto;
     }
@@ -448,7 +439,6 @@
     border-style: dashed;
     outline: none;
     color: var(--muted);
-    opacity: 0.6;
     transform: none;
   }
   .stamp-new {
@@ -484,7 +474,6 @@
     border-bottom: 1px solid var(--line);
     background: color-mix(in srgb, var(--bg) 92%, transparent);
     backdrop-filter: blur(10px);
-    view-transition-name: shell;
   }
   .shell-tools {
     display: flex;
@@ -584,7 +573,6 @@
     border-top: 1px solid var(--line);
     background: color-mix(in srgb, var(--bg) 94%, transparent);
     backdrop-filter: blur(10px);
-    view-transition-name: tabbar;
   }
   .tabbar a {
     position: relative;
