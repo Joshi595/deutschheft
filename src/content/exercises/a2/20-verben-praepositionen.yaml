@@ -8,30 +8,35 @@ sets:
         prompt: "Ich warte ___ den Bus."
         options: [auf, für, an]
         answer: auf
+        explanation: "warten always goes with auf + accusative: auf den Bus warten."
       - id: prep2
         type: multiple-choice
         tags: [verbs with prepositions]
         prompt: "Er interessiert sich ___ Fußball."
         options: [für, in, an]
         answer: für
+        explanation: "sich interessieren always takes für: sich für Fußball interessieren."
       - id: prep3
         type: multiple-choice
         tags: [verbs with prepositions]
         prompt: "Ich denke oft ___ meine Familie."
         options: [an, auf, über]
         answer: an
+        explanation: "denken an + accusative means to think of someone: an meine Familie denken."
       - id: prep4
         type: multiple-choice
         tags: [verbs with prepositions]
         prompt: "Das Kind hat Angst ___ dem Hund."
         options: [vor, von, für]
         answer: vor
+        explanation: "Angst haben goes with vor + dative: Angst vor dem Hund."
       - id: prep5
         type: multiple-choice
         tags: [verbs with prepositions]
         prompt: "Wer kümmert sich ___ die Katze?"
         options: [um, für, auf]
         answer: um
+        explanation: "sich kümmern um means to look after: sich um die Katze kümmern."
       - id: prep6
         type: matching
         tags: [verbs with prepositions]
@@ -42,6 +47,7 @@ sets:
           - { left: teilnehmen, right: an }
           - { left: fragen, right: nach }
           - { left: telefonieren, right: mit }
+        explanation: "Learn each verb with its preposition: träumen von, sich ärgern über, teilnehmen an, fragen nach, telefonieren mit."
 
   - title: auf or über?
     items:
@@ -51,12 +57,14 @@ sets:
         prompt: "Nächste Woche fahren wir weg. Ich freue mich ___ den Urlaub."
         options: [auf, über]
         answer: auf
+        explanation: "sich freuen auf is for something still to come, like a holiday next week."
       - id: freuen2
         type: multiple-choice
         tags: [sich freuen]
         prompt: "Danke für das Geschenk! Ich freue mich sehr ___ das Buch."
         options: [über, auf]
         answer: über
+        explanation: "sich freuen über is for something you already have or that has happened, like a present."
 
   - title: The case
     items:
@@ -65,16 +73,19 @@ sets:
         tags: [case]
         prompt: "Ich warte auf ___ Zug. (der)"
         answers: [den]
+        explanation: "auf with warten takes the accusative: auf den Zug."
       - id: case2
         type: fill-blank
         tags: [case]
         prompt: "Ich spreche mit ___ Chefin. (die)"
         answers: [der]
+        explanation: "mit always takes the dative; die becomes der: mit der Chefin."
       - id: case3
         type: fill-blank
         tags: [case]
         prompt: "Ich nehme an ___ Kurs teil. (ein)"
         answers: [einem]
+        explanation: "teilnehmen an takes the dative: an einem Kurs."
 
   - title: Ask the question
     items:
@@ -84,29 +95,34 @@ sets:
         prompt: "___ wartest du? – Auf den Bus."
         options: [Worauf, Auf wen, Wofür]
         answer: Worauf
+        explanation: "For a thing, the question is wo(r) + preposition: Worauf wartest du?"
       - id: q2
         type: multiple-choice
         tags: [wo-words]
         prompt: "___ wartest du? – Auf meine Schwester."
         options: [Auf wen, Worauf, Wem]
         answer: Auf wen
+        explanation: "For a person, the question is preposition + wen/wem: Auf wen wartest du?"
       - id: q3
         type: multiple-choice
         tags: [wo-words]
         prompt: "___ interessierst du dich? – Für Geschichte."
         options: [Wofür, Für wen, Worauf]
         answer: Wofür
+        explanation: "Geschichte is a thing, so wo + für: Wofür interessierst du dich?"
       - id: q4
         type: multiple-choice
         tags: [wo-words]
         prompt: "___ hast du telefoniert? – Mit meinem Vater."
         options: [Mit wem, Womit, Mit wen]
         answer: Mit wem
+        explanation: "For a person, mit + wem (dative): Mit wem hast du telefoniert?"
       - id: q5
         type: fill-blank
         tags: [wo-words]
         prompt: "___ habt ihr gesprochen? – Über das Wetter."
         answers: [Worüber]
+        explanation: "über + a thing becomes worüber; an r is added before a vowel."
 
   - title: Answer short
     items:
@@ -116,6 +132,7 @@ sets:
         prompt: "Freust du dich auf die Party? – Ja, ich freue mich ___."
         options: [darauf, auf sie, worauf]
         answer: darauf
+        explanation: "To point back to a thing, use da(r) + preposition: darauf, 'about it'."
       - id: da2
         type: multiple-choice
         tags: [da-words]
@@ -128,6 +145,7 @@ sets:
         tags: [da-words]
         prompt: "Interessierst du dich für Politik? – Nein, ___ interessiere ich mich nicht."
         answers: [dafür]
+        explanation: "Politik is a thing, so da + für: dafür. It takes position one, so the verb comes next."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -137,11 +155,13 @@ sets:
         tags: [verbs with prepositions]
         prompt: I am looking forward to the holidays.
         answer: "Ich freue mich auf die Ferien."
+        explanation: "sich freuen auf + accusative: auf die Ferien. The reflexive mich follows the verb."
       - id: order2
         type: word-order
         tags: [verbs with prepositions]
         prompt: Who looks after the children?
         answer: "Wer kümmert sich um die Kinder?"
+        explanation: "sich kümmern um + accusative: um die Kinder."
 
   - title: Plans and worries
     stimulus:
@@ -165,17 +185,20 @@ sets:
         prompt: Wovor hat Max Angst?
         options: ["vor der Prüfung", "vor dem Meer", "vor dem Hund"]
         answer: "vor der Prüfung"
+        explanation: "Max says he is thinking about the exam: Ich habe ein bisschen Angst davor."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Max freut sich auf die Reise ans Meer.
         answer: true
+        explanation: "Max says: darauf freue ich mich auch."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Wer kann sich vielleicht um den Hund kümmern?
         options: ["Max' Schwester", "Nina", "Max' Eltern"]
         answer: "Max' Schwester"
+        explanation: "Nina says: Frag doch deine Schwester. Sie interessiert sich doch so für Hunde."
 
   - title: About you
     items:

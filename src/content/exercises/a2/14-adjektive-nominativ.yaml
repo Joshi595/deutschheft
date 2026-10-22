@@ -15,11 +15,13 @@ sets:
         prompt: "Das ist eine ___ Wohnung."
         options: [kleine, klein, kleiner]
         answer: kleine
+        explanation: "Before a noun the adjective needs an ending; after eine with a feminine noun it is -e: eine kleine Wohnung."
       - id: pos3
         type: true-false
         tags: [adjective endings]
         prompt: "'Der Kaffee ist heißer' is the normal way to say 'The coffee is hot'."
         answer: false
+        explanation: "After sein, at the end of the sentence, the adjective takes no ending: Der Kaffee ist heiß. heißer means hotter."
 
   - title: After der, die, das
     instructions: Fill in the ending (or write the whole adjective).
@@ -29,26 +31,31 @@ sets:
         tags: [definite article endings]
         prompt: "Der ___ Kollege heißt Ben. (neu)"
         answers: [neue]
+        explanation: "After der, die or das in the nominative singular, the ending is -e: der neue Kollege."
       - id: def2
         type: fill-blank
         tags: [definite article endings]
         prompt: "Die ___ Küche ist sehr praktisch. (klein)"
         answers: [kleine]
+        explanation: "After die (singular), the ending is -e: die kleine Küche."
       - id: def3
         type: fill-blank
         tags: [definite article endings]
         prompt: "Das ___ Sofa ist bequem. (alt)"
         answers: [alte]
+        explanation: "After das, the ending is -e: das alte Sofa."
       - id: def4
         type: fill-blank
         tags: [definite article endings]
         prompt: "Die ___ Fenster sind schmutzig. (groß, plural)"
         answers: [großen]
+        explanation: "After die in the plural, the ending is -en: die großen Fenster."
       - id: def5
         type: fill-blank
         tags: [definite article endings]
         prompt: "Dieser ___ Pullover gefällt mir. (rot)"
         answers: [rote]
+        explanation: "dieser works like der, so the ending is -e: dieser rote Pullover."
 
   - title: After ein, kein, mein
     items:
@@ -58,23 +65,27 @@ sets:
         prompt: "Das ist ein ___ Film."
         options: [guter, gute, gutes]
         answer: guter
+        explanation: "ein shows no gender, so the adjective shows it: masculine Film → ein guter Film."
       - id: indef2
         type: multiple-choice
         tags: [indefinite article endings]
         prompt: "Das ist ein ___ Problem."
         options: [großes, großer, große]
         answer: großes
+        explanation: "Problem is neuter, and ein does not show it, so the adjective takes -es: ein großes Problem."
       - id: indef3
         type: multiple-choice
         tags: [indefinite article endings]
         prompt: "Hier ist eine ___ Wohnung."
         options: [schöne, schöner, schönes]
         answer: schöne
+        explanation: "After eine (feminine) the ending is -e: eine schöne Wohnung."
       - id: indef4
         type: fill-blank
         tags: [indefinite article endings]
         prompt: "Meine ___ Nachbarn sind sehr nett. (neu)"
         answers: [neuen]
+        explanation: "After mein- in the plural, the ending is -en: meine neuen Nachbarn."
       - id: indef5
         type: fill-blank
         tags: [indefinite article endings]
@@ -86,6 +97,7 @@ sets:
         tags: [indefinite article endings]
         prompt: "Das ist mein ___ Freund Tom. (best-)"
         answers: [bester]
+        explanation: "mein shows no gender for a masculine noun, so the adjective takes -er: mein bester Freund."
 
   - title: No article
     items:
@@ -95,17 +107,20 @@ sets:
         prompt: "___ Kaffee ist der beste Kaffee."
         options: [Frischer, Frische, Frisches]
         answer: Frischer
+        explanation: "With no article the adjective takes the article's ending: der Kaffee → frischer Kaffee."
       - id: none2
         type: multiple-choice
         tags: [no article endings]
         prompt: "___ Wasser ist gesund."
         options: [Kaltes, Kalter, Kalte]
         answer: Kaltes
+        explanation: "Wasser is das, so with no article the adjective ends in -es: kaltes Wasser."
       - id: none3
         type: fill-blank
         tags: [no article endings]
         prompt: "___ Milch, bitte! (frisch)"
         answers: [Frische]
+        explanation: "Milch is die, so with no article the adjective ends in -e: frische Milch."
 
   - title: A flat advert
     items:
@@ -121,6 +136,7 @@ sets:
           - [er]
           - [en]
           - [e]
+        explanation: "No article + Wohnung (f) → Schöne; eine große Küche; ein helles Bad (n); ein kleiner Keller (m); die neuen Fenster (plural); Günstige Miete (f, no article)."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -130,11 +146,13 @@ sets:
         tags: [adjective endings]
         prompt: That is a very good idea.
         answer: "Das ist eine sehr gute Idee."
+        explanation: "sehr comes before the adjective, and eine gute Idee takes -e for a feminine noun."
       - id: order2
         type: word-order
         tags: [adjective endings]
         prompt: The new neighbours are very friendly.
         answer: "Die neuen Nachbarn sind sehr freundlich."
+        explanation: "After die in the plural the adjective ends in -en: die neuen Nachbarn."
 
   - title: Say it in German
     items:
@@ -144,12 +162,14 @@ sets:
         prompt: That is a big problem.
         answers:
           - "Das ist ein großes Problem."
+        explanation: "ein + neuter Problem: the adjective shows the gender with -es: ein großes Problem."
       - id: tr2
         type: translation
         tags: [adjective endings]
         prompt: The old flat was dark.
         answers:
           - "Die alte Wohnung war dunkel."
+        explanation: "After die (singular) the adjective ends in -e: die alte Wohnung. dunkel after sein has no ending."
 
   - title: Looking at a flat
     stimulus:
@@ -172,18 +192,21 @@ sets:
         tags: [listening]
         prompt: Das Wohnzimmer ist laut.
         answer: false
+        explanation: "The landlady says the living room is hell und ruhig, because the windows face the courtyard."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Was ist neu in der Küche?
         options: ["der Herd und der Kühlschrank", "die Fenster", "der Tisch"]
         answer: "der Herd und der Kühlschrank"
+        explanation: "She says: der Herd und der Kühlschrank sind ganz neu."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Wie ist der Keller?
         options: [klein, groß, neu]
         answer: klein
+        explanation: "She says: ein kleiner Keller ist dabei."
 
   - title: Describe it
     items:

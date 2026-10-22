@@ -8,21 +8,25 @@ sets:
         tags: [dass word order]
         prompt: "Ich glaube, dass der Film gut ___."
         answers: [ist]
+        explanation: "dass sends the conjugated verb to the end: dass der Film gut ist."
       - id: verb2
         type: fill-blank
         tags: [dass word order]
         prompt: "Ich weiß, dass du viel Arbeit ___."
         answers: [hast]
+        explanation: "In the dass clause the verb goes last: dass du viel Arbeit hast."
       - id: verb3
         type: fill-blank
         tags: [dass word order]
         prompt: "Ich glaube, dass er nicht kommen ___. (können)"
         answers: [kann]
+        explanation: "The modal goes last, after the infinitive: dass er nicht kommen kann."
       - id: verb4
         type: fill-blank
         tags: [dass word order]
         prompt: "Ich weiß, dass sie in Berlin gewohnt ___. [she]"
         answers: [hat]
+        explanation: "In the Perfekt the helper goes last: dass sie in Berlin gewohnt hat."
       - id: verb5
         type: fill-blank
         tags: [dass word order]
@@ -40,6 +44,7 @@ sets:
           - "Ich finde, dass Deutsch nicht schwer ist."
           - "Ich finde, dass Deutsch ist nicht schwer."
         answer: "Ich finde, dass Deutsch nicht schwer ist."
+        explanation: "dass sends ist to the end: dass Deutsch nicht schwer ist."
       - id: pos2
         type: multiple-choice
         tags: [dass word order]
@@ -58,6 +63,7 @@ sets:
           - "Ich hoffe, dass du fühlst dich bald besser."
           - "Ich hoffe, dass du dich fühlst bald besser."
         answer: "Ich hoffe, dass du dich bald besser fühlst."
+        explanation: "The reflexive dich stays near the subject; only the verb fühlst moves to the end."
 
   - title: das or dass?
     items:
@@ -67,12 +73,14 @@ sets:
         prompt: Ich weiß, ___ du recht hast.
         options: [dass, das]
         answer: dass
+        explanation: "dass with double s joins a clause: Ich weiß, dass … das with one s is an article or a pronoun."
       - id: das2
         type: multiple-choice
         tags: [das and dass]
         prompt: ___ Buch ist sehr interessant.
         options: [Das, Dass]
         answer: Das
+        explanation: "Before a noun, das is the article: das Buch."
       - id: das3
         type: cloze
         tags: [das and dass]
@@ -81,6 +89,7 @@ sets:
         gaps:
           - [dass]
           - [das]
+        explanation: "The first gap starts a clause (dass); the second is the article of das Wetter."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -90,21 +99,25 @@ sets:
         tags: [dass word order]
         prompt: I think that we need more time.
         answer: "Ich denke, dass wir mehr Zeit brauchen."
+        explanation: "After the comma, dass sends the verb brauchen to the end."
       - id: order2
         type: word-order
         tags: [dass word order]
         prompt: I am glad that you are coming.
         answer: "Ich freue mich, dass du kommst."
+        explanation: "sich freuen, dass … : the main clause comes first, and kommst goes last in the dass clause."
       - id: order3
         type: word-order
         tags: [dass word order]
         prompt: I do not think that is correct.
         answer: "Ich glaube nicht, dass das richtig ist."
+        explanation: "nicht goes in the main clause with glaube; in the dass clause ist goes last."
       - id: order4
         type: word-order
         tags: [dass word order]
         prompt: I am sorry that I am late.
         answer: "Es tut mir leid, dass ich zu spät bin."
+        explanation: "Es tut mir leid is the main clause; in the dass clause the verb bin goes to the end."
 
   - title: Report what they said
     instructions: Start with the words given and use dass.
@@ -115,24 +128,28 @@ sets:
         prompt: "Tom: Ich komme später. → Tom sagt, …"
         answers:
           - "Tom sagt, dass er später kommt."
+        explanation: "In reported speech, ich becomes er and the verb goes to the end: dass er später kommt."
       - id: rep2
         type: translation
         tags: [reported speech]
         prompt: "Anna: Ich habe keine Zeit. → Anna sagt, …"
         answers:
           - "Anna sagt, dass sie keine Zeit hat."
+        explanation: "ich becomes sie, and the verb goes last: dass sie keine Zeit hat."
       - id: rep3
         type: translation
         tags: [reported speech]
         prompt: "Die Lehrerin: Der Test ist am Montag. → Die Lehrerin sagt, …"
         answers:
           - "Die Lehrerin sagt, dass der Test am Montag ist."
+        explanation: "The dass clause keeps the content; the verb ist goes to the end."
       - id: rep4
         type: translation
         tags: [reported speech]
         prompt: "Paul: Ich kann nicht kommen. → Paul schreibt, …"
         answers:
           - "Paul schreibt, dass er nicht kommen kann."
+        explanation: "The modal kann goes last, after the infinitive: dass er nicht kommen kann."
 
   - title: Opinion phrases
     items:
@@ -146,6 +163,7 @@ sets:
           - { left: "Schade, dass …", right: A pity that … }
           - { left: "Das sehe ich anders.", right: I see that differently. }
           - { left: "Das stimmt.", right: That is right. }
+        explanation: "Ich bin sicher sure, Ich hoffe hope, Schade a pity, Das sehe ich anders I disagree, Das stimmt that's right."
       - id: phr2
         type: multiple-choice
         tags: [opinions]
@@ -155,6 +173,7 @@ sets:
           - "Ich glaube, dass das nicht."
           - "Das ist falsch, dass."
         answer: "Ich glaube nicht, dass das stimmt."
+        explanation: "Put nicht with glauben and add a full dass clause: Ich glaube nicht, dass das stimmt."
 
   - title: Read the messages
     stimulus:
@@ -171,17 +190,20 @@ sets:
         tags: [reading, dass]
         prompt: Felix kommt am Samstag um acht Uhr.
         answer: false
+        explanation: "Leon says Felix can only be there at nine, because he works until eight."
       - id: read2
         type: true-false
         tags: [reading, dass]
         prompt: Leon glaubt, dass es am Samstag regnet.
         answer: false
+        explanation: "Leon writes: Ich glaube nicht, dass es regnet."
       - id: read3
         type: multiple-choice
         tags: [reading, dass]
         prompt: Was bringt Felix mit?
         options: [Getränke, Essen, nichts]
         answer: Getränke
+        explanation: "Leon writes: Felix schreibt, dass er Getränke mitbringt."
 
   - title: Your opinion
     items:

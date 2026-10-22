@@ -8,16 +8,19 @@ sets:
         prompt: "Das ist ___ Fahrrad."
         options: [Toms, Tom's, von Toms]
         answer: Toms
+        explanation: "With names, German adds -s with no apostrophe: Toms Fahrrad."
       - id: name2
         type: fill-blank
         tags: [names]
         prompt: "___ Schwester wohnt in Wien. (Peter)"
         answers: [Peters]
+        explanation: "A name shows ownership with -s and no apostrophe: Peters Schwester."
       - id: name3
         type: true-false
         tags: [names]
         prompt: "German writes an apostrophe in 'Annas Auto'."
         answer: false
+        explanation: "German writes Annas Auto without an apostrophe."
 
   - title: von + dative
     items:
@@ -26,22 +29,26 @@ sets:
         tags: [von]
         prompt: "Das ist das Auto von ___ Bruder. (mein)"
         answers: [meinem]
+        explanation: "von takes the dative; Bruder is masculine, so mein becomes meinem."
       - id: von2
         type: fill-blank
         tags: [von]
         prompt: "Die Wohnung von ___ Freundin ist groß. (meine)"
         answers: [meiner]
+        explanation: "von takes the dative; Freundin is feminine, so meine becomes meiner."
       - id: von3
         type: fill-blank
         tags: [von]
         prompt: "Das ist das Zimmer von den ___. (Kinder)"
         answers: [Kindern]
+        explanation: "Dative plural adds -n to the noun: von den Kindern."
       - id: von4
         type: translation
         tags: [von]
         prompt: "That is my sister's bike. (use von)"
         answers:
           - "Das ist das Fahrrad von meiner Schwester."
+        explanation: "In speech, ownership is often von + dative: das Fahrrad von meiner Schwester."
 
   - title: The genitive
     items:
@@ -51,29 +58,34 @@ sets:
         prompt: "das Auto ___ Lehrers"
         options: [des, der, dem]
         answer: des
+        explanation: "Masculine genitive is des, and the noun adds -s: des Lehrers."
       - id: gen2
         type: multiple-choice
         tags: [genitive]
         prompt: "das Büro ___ Chefin"
         options: [der, des, die]
         answer: der
+        explanation: "Feminine genitive is der: das Büro der Chefin. The noun does not change."
       - id: gen3
         type: multiple-choice
         tags: [genitive]
         prompt: "Ende des ___"
         options: [Monats, Monat, Monaten]
         answer: Monats
+        explanation: "Masculine and neuter nouns add -s in the genitive: des Monats."
       - id: gen4
         type: multiple-choice
         tags: [genitive]
         prompt: "die Spielsachen ___ Kinder"
         options: [der, des, den]
         answer: der
+        explanation: "Plural genitive is der: die Spielsachen der Kinder."
       - id: gen5
         type: fill-blank
         tags: [genitive]
         prompt: "Das ist das Haus ___ Eltern. (mein-, genitive)"
         answers: [meiner]
+        explanation: "In the plural genitive, mein- takes -er: das Haus meiner Eltern."
       - id: gen6
         type: matching
         tags: [genitive phrases]
@@ -83,6 +95,7 @@ sets:
           - { left: wegen des Wetters, right: because of the weather }
           - { left: während der Arbeit, right: during work }
           - { left: die Hälfte der Zeit, right: half the time }
+        explanation: "These are common genitive phrases: Ende des Monats, wegen des Wetters, während der Arbeit, die Hälfte der Zeit."
 
   - title: Mine and yours
     items:
@@ -92,23 +105,27 @@ sets:
         prompt: "Ist das dein Handy? – Ja, das ist ___."
         options: [meins, meiner, meine]
         answer: meins
+        explanation: "Handy is neuter, so on its own mein becomes meins: das ist meins."
       - id: poss2
         type: multiple-choice
         tags: [possessive pronouns]
         prompt: "Ist das dein Schlüssel? – Ja, das ist ___."
         options: [meiner, meins, meine]
         answer: meiner
+        explanation: "Schlüssel is masculine, so on its own it is meiner."
       - id: poss3
         type: multiple-choice
         tags: [possessive pronouns]
         prompt: "Sind das deine Schuhe? – Nein, das sind nicht ___."
         options: [meine, meins, meiner]
         answer: meine
+        explanation: "Schuhe is plural, so on its own it is meine."
       - id: poss4
         type: fill-blank
         tags: [possessive pronouns]
         prompt: "Das ist nicht mein Handy, das ist ___. (his)"
         answers: [seins]
+        explanation: "Handy is neuter; 'his' standing alone is seins."
 
   - title: Whose is it?
     items:
@@ -121,6 +138,7 @@ sets:
           - [Lisas]
           - [meiner]
           - [meinem]
+        explanation: "Lisa's jacket: Lisas Jacke; der Schal standing alone → meiner; von + dative: von meinem Bruder."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -130,11 +148,13 @@ sets:
         tags: [genitive phrases]
         prompt: The concert is cancelled because of the weather.
         answer: "Das Konzert fällt wegen des Wetters aus."
+        explanation: "wegen takes the genitive: des Wetters. ausfallen splits, with aus at the end."
       - id: order2
         type: word-order
         tags: [genitive]
         prompt: The owner of the house lives in Spain.
         answer: "Der Besitzer des Hauses wohnt in Spanien."
+        explanation: "The owner of the house: genitive des Hauses (das Haus adds -es)."
 
   - title: A family photo
     stimulus:
@@ -156,6 +176,7 @@ sets:
         prompt: Wessen Hochzeit war das?
         options: ["die Hochzeit von Janas Bruder", "die Hochzeit von Janas Cousine", "Janas Hochzeit"]
         answer: "die Hochzeit von Janas Bruder"
+        explanation: "Jana says it was bei der Hochzeit von meinem Bruder."
       - id: listen2
         type: multiple-choice
         tags: [listening]
@@ -168,6 +189,7 @@ sets:
         tags: [listening]
         prompt: Der Hund gehört Jana.
         answer: false
+        explanation: "Jana says: der Hund gehört meinen Eltern."
 
   - title: Your family
     items:

@@ -13,26 +13,31 @@ sets:
           - { left: sprechen, right: gesprochen }
           - { left: verlieren, right: verloren }
           - { left: bleiben, right: geblieben }
+        explanation: "Irregular participles end in -en and often change the vowel: geschrieben, geflogen, gefunden, gesprochen, verloren (no ge- after ver-), geblieben."
       - id: fam2
         type: fill-blank
         tags: [participles]
         prompt: "trinken: ___"
         answers: [getrunken]
+        explanation: "trinken follows the i–a–u pattern: trinken, trank, getrunken."
       - id: fam3
         type: fill-blank
         tags: [participles]
         prompt: "helfen: ___"
         answers: [geholfen]
+        explanation: "helfen changes e to o in the participle: geholfen."
       - id: fam4
         type: fill-blank
         tags: [participles]
         prompt: "singen: ___"
         answers: [gesungen]
+        explanation: "singen follows the i–a–u pattern like trinken: gesungen."
       - id: fam5
         type: fill-blank
         tags: [participles]
         prompt: "steigen: ___"
         answers: [gestiegen]
+        explanation: "steigen follows the ei–ie pattern: gestiegen, like geblieben and geschrieben."
 
   - title: Mixed verbs
     items:
@@ -41,22 +46,26 @@ sets:
         tags: [participles, mixed verbs]
         prompt: "bringen: ___"
         answers: [gebracht]
+        explanation: "bringen is a mixed verb: a vowel change like an irregular verb, but the -t ending of a regular one: gebracht."
       - id: mix2
         type: fill-blank
         tags: [participles, mixed verbs]
         prompt: "denken: ___"
         answers: [gedacht]
+        explanation: "denken is mixed: the vowel changes and it ends in -t: gedacht."
       - id: mix3
         type: fill-blank
         tags: [participles, mixed verbs]
         prompt: "wissen: ___"
         answers: [gewusst]
+        explanation: "wissen is mixed: gewusst, with the -t ending."
       - id: mix4
         type: multiple-choice
         tags: [participles, mixed verbs]
         prompt: Ich habe ihn nicht ___.
         options: [gekannt, gekennt, gekennen]
         answer: gekannt
+        explanation: "kennen is mixed: the vowel changes to a and it ends in -t: gekannt."
 
   - title: Where does ge- go?
     items:
@@ -66,6 +75,7 @@ sets:
         prompt: aufstehen
         options: [aufgestanden, geaufstanden, aufstanden]
         answer: aufgestanden
+        explanation: "In separable verbs, ge- goes between the prefix and the verb: auf-ge-standen."
       - id: ge2
         type: multiple-choice
         tags: [participles, prefixes]
@@ -79,24 +89,28 @@ sets:
         prompt: mitbringen
         options: [mitgebracht, gemitbracht, mitbracht]
         answer: mitgebracht
+        explanation: "mitbringen is separable: mit-ge-bracht."
       - id: ge4
         type: multiple-choice
         tags: [participles, prefixes]
         prompt: erzählen
         options: [erzählt, geerzählt, ergezählt]
         answer: erzählt
+        explanation: "Verbs starting with er-, ver-, be-, ent-, emp- or zer- take no ge-: erzählt."
       - id: ge5
         type: multiple-choice
         tags: [participles, prefixes]
         prompt: zurückkommen
         options: [zurückgekommen, gezurückkommen, zurückkommen]
         answer: zurückgekommen
+        explanation: "zurück is a separable prefix, so ge- goes after it: zurück-ge-kommen."
       - id: ge6
         type: multiple-choice
         tags: [participles, prefixes]
         prompt: empfehlen
         options: [empfohlen, geempfohlen, empgefohlen]
         answer: empfohlen
+        explanation: "emp- is an inseparable prefix, so there is no ge-: empfohlen."
 
   - title: haben or sein?
     items:
@@ -105,26 +119,31 @@ sets:
         tags: [haben or sein]
         prompt: "Wir ___ nach Italien gefahren."
         answers: [sind]
+        explanation: "fahren is movement from A to B, so it takes sein: wir sind gefahren."
       - id: hs2
         type: fill-blank
         tags: [haben or sein]
         prompt: "Ich ___ einen Brief bekommen."
         answers: [habe]
+        explanation: "bekommen has an object and no movement, so it takes haben; the be- also means no ge-."
       - id: hs3
         type: fill-blank
         tags: [haben or sein]
         prompt: "Das Kind ___ schnell gewachsen."
         answers: [ist]
+        explanation: "wachsen is a change of state, so it takes sein: das Kind ist gewachsen."
       - id: hs4
         type: fill-blank
         tags: [haben or sein]
         prompt: "Was ___ passiert?"
         answers: [ist]
+        explanation: "passieren takes sein: Was ist passiert? It also has no ge-, because it ends in -ieren."
       - id: hs5
         type: fill-blank
         tags: [haben or sein]
         prompt: "Ich ___ gut geschlafen."
         answers: [habe]
+        explanation: "schlafen is no movement and no change, so haben: ich habe geschlafen."
       - id: hs6
         type: fill-blank
         tags: [haben or sein]
@@ -136,6 +155,7 @@ sets:
         tags: [haben or sein]
         prompt: "Sie ___ Ärztin geworden. [she]"
         answers: [ist]
+        explanation: "werden is a change of state and takes sein: sie ist Ärztin geworden."
 
   - title: Complete the story
     items:
@@ -151,6 +171,7 @@ sets:
           - [gemacht]
           - [geschrieben]
           - [verloren]
+        explanation: "fliegen takes sein (geflogen); wohnen and machen are regular (gewohnt, gemacht); essen, schreiben and verlieren are irregular (gegessen, geschrieben, verloren)."
 
   - title: Listen
     stimulus:
@@ -177,16 +198,19 @@ sets:
           - Er ist zu Hause geblieben.
           - Er hat viel geschlafen.
         answer: Er hat seine Schwester besucht.
+        explanation: "Ben says: Ich bin am Samstag nach Köln gefahren und habe meine Schwester besucht."
       - id: listen2
         type: true-false
         tags: [listening, perfect tense]
         prompt: Ben war noch nie in Köln.
         answer: false
+        explanation: "Mia asks if he has been to Cologne before, and Ben says: Ja, schon zweimal."
       - id: listen3
         type: true-false
         tags: [listening, perfect tense]
         prompt: Mia hatte Kopfschmerzen.
         answer: true
+        explanation: "Mia says: Ich hatte Kopfschmerzen und habe viel geschlafen."
 
   - title: Say and write it
     items:
@@ -195,23 +219,27 @@ sets:
         tags: [perfect tense, word order]
         prompt: Have you ever been to Berlin?
         answer: Warst du schon einmal in Berlin?
+        explanation: "For sein, German prefers the simple past: Warst du schon einmal in Berlin?"
       - id: order2
         type: word-order
         tags: [perfect tense, word order]
         prompt: I have brought you something.
         answer: Ich habe dir etwas mitgebracht.
+        explanation: "dir (to you) comes before etwas, and the participle mitgebracht goes to the end."
       - id: tr1
         type: translation
         tags: [perfect tense]
         prompt: I have lost my key.
         answers:
           - Ich habe meinen Schlüssel verloren.
+        explanation: "verlieren has no ge- (ver- prefix): verloren. Schlüssel is masculine, so meinen Schlüssel."
       - id: tr2
         type: translation
         tags: [perfect tense]
         prompt: What happened?
         answers:
           - Was ist passiert?
+        explanation: "passieren takes sein, and -ieren verbs have no ge-: Was ist passiert?"
       - id: write1
         type: writing-task
         tags: [writing, perfect tense]

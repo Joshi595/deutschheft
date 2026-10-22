@@ -12,26 +12,31 @@ sets:
           - { left: haben, right: hätte }
           - { left: sein, right: wäre }
           - { left: sollen, right: sollte }
+        explanation: "The Konjunktiv II forms: könnte, würde, hätte, wäre, sollte. Most add an umlaut to the past stem."
       - id: form2
         type: fill-blank
         tags: [Konjunktiv II forms]
         prompt: "___ du mir bitte helfen? (können)"
         answers: [Könntest]
+        explanation: "könnte with du adds -st: Könntest du mir helfen? It sounds softer than kannst du."
       - id: form3
         type: fill-blank
         tags: [Konjunktiv II forms]
         prompt: "Du ___ mehr schlafen. (sollen)"
         answers: [solltest]
+        explanation: "sollte gives advice: Du solltest mehr schlafen. With du it is solltest."
       - id: form4
         type: fill-blank
         tags: [Konjunktiv II forms]
         prompt: "Wir ___ gern ein Doppelzimmer. (haben)"
         answers: [hätten]
+        explanation: "hätten (from haben) with gern is the polite way to ask for something: Wir hätten gern …"
       - id: form5
         type: fill-blank
         tags: [Konjunktiv II forms]
         prompt: "Das ___ toll! (sein)"
         answers: [wäre]
+        explanation: "wäre is the Konjunktiv of sein: Das wäre toll! (That would be great.)"
 
   - title: Polite or past?
     items:
@@ -41,6 +46,7 @@ sets:
         prompt: "___ Sie mir bitte den Weg zeigen? (polite request)"
         options: [Könnten, Konnten]
         answer: Könnten
+        explanation: "The umlaut makes the polite form: Könnten Sie …? Konnten without it is the past, 'could' as in 'were able to'."
       - id: umlaut2
         type: multiple-choice
         tags: [Konjunktiv II forms]
@@ -53,6 +59,7 @@ sets:
         tags: [Konjunktiv II forms]
         prompt: "'Ich würde gern einen Kaffee.' is a complete, correct sentence."
         answer: false
+        explanation: "würde needs an infinitive at the end. For things you want, say Ich hätte gern einen Kaffee."
 
   - title: What fits?
     items:
@@ -62,24 +69,28 @@ sets:
         prompt: "In a café: ___ einen Tee, bitte."
         options: [Ich hätte gern, Ich sollte, Ich wäre]
         answer: Ich hätte gern
+        explanation: "To order politely: Ich hätte gern … , I would like."
       - id: fit2
         type: multiple-choice
         tags: [advice]
         prompt: "Your friend has a headache. You say: Du ___ eine Tablette nehmen."
         options: [solltest, hättest, wärst]
         answer: solltest
+        explanation: "Advice uses sollte: Du solltest eine Tablette nehmen."
       - id: fit3
         type: multiple-choice
         tags: [suggestions]
         prompt: "Wie wäre es ___ einem Ausflug?"
         options: [mit, für, zu]
         answer: mit
+        explanation: "Wie wäre es mit …? suggests something: How about …?"
       - id: fit4
         type: multiple-choice
         tags: [wishes]
         prompt: "Ich ___ jetzt gern im Urlaub."
         options: [wäre, hätte, würde]
         answer: wäre
+        explanation: "Being somewhere is sein, so the wish uses wäre: Ich wäre jetzt gern im Urlaub."
 
   - title: Make it polite
     instructions: Rewrite the order as a polite request with Könnten Sie or Könntest du.
@@ -91,6 +102,7 @@ sets:
         answers:
           - "Könnten Sie mir helfen?"
           - "Könnten Sie mir bitte helfen?"
+        explanation: "Könnten Sie … turns an order into a polite question; the infinitive helfen goes to the end."
       - id: pol2
         type: translation
         tags: [requests]
@@ -98,6 +110,7 @@ sets:
         answers:
           - "Könntest du mich anrufen?"
           - "Könntest du mich bitte anrufen?"
+        explanation: "Könntest du … is the polite form with du; anrufen stays whole at the end."
       - id: pol3
         type: translation
         tags: [requests]
@@ -105,6 +118,7 @@ sets:
         answers:
           - "Würden Sie langsamer sprechen?"
           - "Würden Sie bitte langsamer sprechen?"
+        explanation: "Würden Sie … plus the infinitive at the end makes a polite request."
 
   - title: Planning a weekend
     items:
@@ -120,6 +134,7 @@ sets:
           - [würde]
           - [wäre]
           - [solltest]
+        explanation: "Hättest du Lust (do you fancy), wir könnten (suggestion), ich würde lieber (preference), Wie wäre es (proposal), du solltest (advice)."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -129,11 +144,13 @@ sets:
         tags: [advice]
         prompt: You should go to the doctor.
         answer: "Du solltest zum Arzt gehen."
+        explanation: "sollte gives advice: Du solltest … , and the infinitive gehen goes to the end."
       - id: order2
         type: word-order
         tags: [advice]
         prompt: If I were you I would take the job.
         answer: "An deiner Stelle würde ich den Job nehmen."
+        explanation: "An deiner Stelle (in your place) takes position one, so würde comes next, then ich, and nehmen at the end."
 
   - title: At the hotel reception
     stimulus:
@@ -155,17 +172,20 @@ sets:
         prompt: Was möchten die Gäste?
         options: ["ein Doppelzimmer für zwei Nächte", "ein Einzelzimmer für zwei Nächte", "ein Zimmer mit Balkon"]
         answer: "ein Doppelzimmer für zwei Nächte"
+        explanation: "The guest says: Wir hätten gern ein Doppelzimmer für zwei Nächte."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Die Gäste nehmen das Zimmer mit Balkon.
         answer: false
+        explanation: "The guest says: Nein, danke, ein normales Zimmer ist gut."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Was rät der Rezeptionist?
         options: ["vorher reservieren", "früh essen", "mit dem Taxi fahren"]
         answer: "vorher reservieren"
+        explanation: "The receptionist says: Sie sollten vorher reservieren, es ist immer voll."
 
   - title: Give advice
     items:

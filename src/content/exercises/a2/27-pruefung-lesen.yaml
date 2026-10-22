@@ -17,16 +17,19 @@ sets:
         prompt: Der alte Bahnhof …
         options: ["war zehn Jahre lang leer.", "ist seit zehn Jahren ein Kulturzentrum.", "ist seit Mai geschlossen."]
         answer: "war zehn Jahre lang leer."
+        explanation: "The article starts: Zehn Jahre lang war der alte Bahnhof in Lindau leer. The cultural centre has only been there since May."
       - id: r1-2
         type: multiple-choice
         prompt: Das Café …
         options: ["wird von Jugendlichen geführt.", "ist im ersten Stock.", "ist jeden Tag geöffnet."]
         answer: "wird von Jugendlichen geführt."
+        explanation: "The text says the café wird von Jugendlichen aus der Stadt geführt. It is on the ground floor and closed on Mondays."
       - id: r1-3
         type: multiple-choice
         prompt: Die Kurse …
         options: ["kosten für Schüler nichts.", "kosten für alle fünf Euro.", "sind nur für Erwachsene."]
         answer: "kosten für Schüler nichts."
+        explanation: "The courses sind für Schüler kostenlos; only adults pay five euros."
       - id: r1-4
         type: multiple-choice
         prompt: Sabine Kurz sagt, dass …
@@ -52,12 +55,14 @@ sets:
         options: [Untergeschoss, Erdgeschoss, anderer Stock]
         answer: Untergeschoss
         shuffle: false
+        explanation: "Toys (Spielwaren) are in the Untergeschoss, the basement."
       - id: r2-2
         type: multiple-choice
         prompt: Sie brauchen Laufschuhe.
         options: [1. Stock, 2. Stock, anderer Stock]
         answer: 1. Stock
         shuffle: false
+        explanation: "Running shoes are sportswear and shoes, which are in the 1. Stock."
       - id: r2-3
         type: multiple-choice
         prompt: Sie haben eine Jacke gekauft, aber sie ist kaputt. Sie möchten sie zurückgeben.
@@ -93,16 +98,19 @@ sets:
         prompt: Wer holt Jana vom Flughafen ab?
         options: [Paul, Martina, niemand]
         answer: Paul
+        explanation: "Martina has to work, aber mein Mann Paul hat frei, er holt dich ab."
       - id: r3-2
         type: multiple-choice
         prompt: Wo schläft Jana?
         options: ["im Gästezimmer", "im Hotel", "in den Bergen"]
         answer: "im Gästezimmer"
+        explanation: "Martina writes: Du kannst natürlich bei uns schlafen. Unser Gästezimmer ist klein, aber gemütlich."
       - id: r3-3
         type: multiple-choice
         prompt: Was soll Jana mitbringen?
         options: ["warme Kleidung und gute Schuhe", "ein Geschenk für Paul", "Sommerkleidung"]
         answer: "warme Kleidung und gute Schuhe"
+        explanation: "Martina asks her to bring gute Schuhe und eine warme Jacke for the mountains."
 
   - title: "Teil 4: adverts"
     instructions: Welche Anzeige passt? Für eine Person gibt es keine Anzeige. Wählen Sie dann X.
@@ -128,6 +136,7 @@ sets:
         options: [a, b, c, d, e, f, X]
         answer: f
         shuffle: false
+        explanation: "Yoga im Park on Sundays is sport at the weekend and kostenlos."
       - id: r4-2
         type: multiple-choice
         prompt: Tom sucht ein billiges Fahrrad für sich.
@@ -141,3 +150,4 @@ sets:
         options: [a, b, c, d, e, f, X]
         answer: b
         shuffle: false
+        explanation: "The salsa course is on Tuesday evenings at 8, and Paare are welcome."

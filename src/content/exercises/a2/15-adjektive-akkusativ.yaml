@@ -8,21 +8,25 @@ sets:
         tags: [accusative endings]
         prompt: "Ich nehme den ___ Pullover. (blau)"
         answers: [blauen]
+        explanation: "After den (masculine accusative) the adjective ends in -en: den blauen Pullover."
       - id: def2
         type: fill-blank
         tags: [accusative endings]
         prompt: "Kennst du die ___ Kollegin? (neu)"
         answers: [neue]
+        explanation: "Feminine die stays the same in the accusative, and the ending stays -e: die neue Kollegin."
       - id: def3
         type: fill-blank
         tags: [accusative endings]
         prompt: "Wir kaufen das ___ Sofa. (groß)"
         answers: [große]
+        explanation: "Neuter das stays the same in the accusative: das große Sofa."
       - id: def4
         type: fill-blank
         tags: [accusative endings]
         prompt: "Ich mag die ___ Häuser. (alt)"
         answers: [alten]
+        explanation: "After die in the plural the ending is -en: die alten Häuser."
 
   - title: After einen, eine, ein
     items:
@@ -32,34 +36,40 @@ sets:
         prompt: "Ich suche einen ___ Mantel."
         options: [warmen, warmer, warme]
         answer: warmen
+        explanation: "einen is masculine accusative, and the adjective after it ends in -en: einen warmen Mantel."
       - id: indef2
         type: multiple-choice
         tags: [accusative endings]
         prompt: "Wir haben ein ___ Haus gekauft."
         options: [kleines, kleinen, kleine]
         answer: kleines
+        explanation: "ein with a neuter noun does not show the gender, so the adjective takes -es: ein kleines Haus."
       - id: indef3
         type: multiple-choice
         tags: [accusative endings]
         prompt: "Sie hat eine ___ Idee."
         options: [tolle, tollen, toller]
         answer: tolle
+        explanation: "eine + feminine noun: the adjective ends in -e, as in the nominative."
       - id: indef4
         type: multiple-choice
         tags: [accusative endings]
         prompt: "Ich suche ___ Schreibtisch."
         options: [einen neuen, ein neuen, einen neuer]
         answer: einen neuen
+        explanation: "Schreibtisch is masculine and the object, so einen, and the adjective takes -en."
       - id: indef5
         type: fill-blank
         tags: [accusative endings]
         prompt: "Ich habe keine ___ Socken mehr. (sauber)"
         answers: [sauberen]
+        explanation: "After keine in the plural, the adjective ends in -en: keine sauberen Socken."
       - id: indef6
         type: fill-blank
         tags: [accusative endings]
         prompt: "Ich brauche ein ___ Hemd. (weiß)"
         answers: [weißes]
+        explanation: "Hemd is neuter; ein does not show it, so the adjective takes -es: ein weißes Hemd."
 
   - title: Nominative or accusative?
     items:
@@ -76,6 +86,7 @@ sets:
         prompt: "Ich kaufe ___ Mantel."
         options: [den schwarzen, der schwarze]
         answer: den schwarzen
+        explanation: "Mantel is the object, so masculine der becomes den, and the adjective ends in -en."
       - id: nomacc3
         type: multiple-choice
         tags: [nominative accusative]
@@ -88,6 +99,7 @@ sets:
         tags: [nominative accusative]
         prompt: "In the accusative, only the masculine endings differ from the nominative."
         answer: true
+        explanation: "Feminine, neuter and plural look the same in nominative and accusative; only masculine changes (der → den, ein → einen)."
 
   - title: No article
     items:
@@ -96,11 +108,13 @@ sets:
         tags: [no article endings]
         prompt: "Ich trinke gern ___ Kaffee. (schwarz)"
         answers: [schwarzen]
+        explanation: "No article: the adjective takes the article's ending. den Kaffee → schwarzen Kaffee."
       - id: none2
         type: fill-blank
         tags: [no article endings]
         prompt: "Wir brauchen ___ Brot. (frisch)"
         answers: [frisches]
+        explanation: "No article and Brot is das, so the adjective ends in -es: frisches Brot."
 
   - title: In the shop
     items:
@@ -116,6 +130,7 @@ sets:
           - [en]
           - [e]
           - [es]
+        explanation: "Pullover is masculine accusative: einen warmen, einen grauen, einen roten, den roten; Mütze (f) → eine passende; Tuch (n) → ein buntes."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -125,11 +140,13 @@ sets:
         tags: [accusative endings]
         prompt: He is wearing a grey suit.
         answer: "Er trägt einen grauen Anzug."
+        explanation: "Anzug is masculine and the object: einen grauen Anzug."
       - id: order2
         type: word-order
         tags: [was fuer ein]
         prompt: What kind of car do you have?
         answer: "Was für ein Auto hast du?"
+        explanation: "Was für ein …? asks what kind of thing; Auto is neuter, so ein Auto."
 
   - title: Say it in German
     items:
@@ -139,6 +156,7 @@ sets:
         prompt: I am looking for a warm coat.
         answers:
           - "Ich suche einen warmen Mantel."
+        explanation: "Mantel is masculine and the object of suchen: einen warmen Mantel."
       - id: tr2
         type: translation
         tags: [accusative endings]
@@ -146,6 +164,7 @@ sets:
         answers:
           - "Welche Jacke gefällt dir? – Die grüne."
           - "Welche Jacke gefällt dir? Die grüne."
+        explanation: "welch- takes the ending of the article; die grüne refers back to die Jacke, so the noun can be left out."
 
   - title: Shopping for clothes
     stimulus:
@@ -175,17 +194,20 @@ sets:
         prompt: Wofür braucht die Frau die Hose?
         options: ["für die Arbeit", "für eine Party", "für den Urlaub"]
         answer: "für die Arbeit"
+        explanation: "The customer says: ich suche eine Hose für die Arbeit."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Die schwarze Hose in Größe 38 passt gut.
         answer: false
+        explanation: "She says the black pair in 38 is ein bisschen eng: a bit tight."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Welche Hose kauft sie?
         options: ["die dunkelblaue in 40", "die schwarze in 40", "die schwarze in 38"]
         answer: "die dunkelblaue in 40"
+        explanation: "Black is not available in 40, so: dann nehme ich die dunkelblaue."
 
   - title: Your turn
     items:

@@ -8,24 +8,28 @@ sets:
         prompt: "Ich arbeite ___ Krankenpflegerin."
         options: [als, bei, wie]
         answer: als
+        explanation: "als says the role you work in: als Krankenpflegerin."
       - id: abs2
         type: multiple-choice
         tags: [work phrases]
         prompt: "Ich arbeite ___ einer Bank."
         options: [bei, für, als]
         answer: bei
+        explanation: "bei names the company or place: bei einer Bank."
       - id: abs3
         type: multiple-choice
         tags: [work phrases]
         prompt: "Ich arbeite ___ zwei Jahren dort."
         options: [seit, vor, für]
         answer: seit
+        explanation: "seit + dative for something still going on: seit zwei Jahren."
       - id: abs4
         type: multiple-choice
         tags: [work phrases]
         prompt: Choose the correct sentence.
         options: ["Ich bin Lehrer.", "Ich bin ein Lehrer.", "Ich bin als Lehrer."]
         answer: "Ich bin Lehrer."
+        explanation: "A job is stated without an article: Ich bin Lehrer."
 
   - title: Work words
     items:
@@ -39,17 +43,20 @@ sets:
           - { left: das Gehalt, right: the salary }
           - { left: der Lebenslauf, right: the CV }
           - { left: die Bewerbung, right: the application }
-          - { left: die Stelle, right: the job, the position }
+          - { left: die Stelle, right: "the job, the position" }
+        explanation: "Teilzeit part-time, Schicht shift, Gehalt salary, Lebenslauf CV, Bewerbung application, Stelle job or position."
       - id: word2
         type: fill-blank
         tags: [work vocabulary]
         prompt: "Diese Woche habe ich viele ___ gemacht. (overtime)"
         answers: [Überstunden]
+        explanation: "Überstunden are hours worked beyond the normal time: overtime."
       - id: word3
         type: fill-blank
         tags: [work vocabulary]
         prompt: "Ich bewerbe mich ___ die Stelle als Verkäuferin."
         answers: [um]
+        explanation: "sich bewerben um means to apply for: sich um eine Stelle bewerben."
 
   - title: School and training
     items:
@@ -59,23 +66,27 @@ sets:
         prompt: Which school leads to the Abitur?
         options: [das Gymnasium, die Grundschule, die Hauptschule]
         answer: das Gymnasium
+        explanation: "The Gymnasium is the school that ends with the Abitur, which you need for university."
       - id: school2
         type: true-false
         tags: [school system]
         prompt: An Ausbildung combines work at a company with lessons at a Berufsschule.
         answer: true
+        explanation: "An Ausbildung is a training scheme: practical work in a company plus lessons at a Berufsschule."
       - id: school3
         type: multiple-choice
         tags: [school system]
         prompt: "Mein Sohn ___ in die dritte Klasse."
         options: [geht, studiert, lernt]
         answer: geht
+        explanation: "Children go to a class: in die dritte Klasse gehen. studieren is only for university."
       - id: school4
         type: multiple-choice
         tags: [school system]
         prompt: "Sie ___ Jura an der Universität Köln."
         options: [studiert, lernt, geht]
         answer: studiert
+        explanation: "At a university you studieren a subject; lernen is for learning in general."
 
   - title: Your career
     items:
@@ -92,6 +103,7 @@ sets:
           - [studiert]
           - [Seit]
           - [arbeite]
+        explanation: "Perfekt: habe … gemacht, habe … studiert; sein in the past: war; seit with the present for now: Seit 2021 arbeite ich."
 
   - title: At work
     items:
@@ -101,22 +113,26 @@ sets:
         prompt: I am ill and cannot come today.
         answers:
           - "Ich bin krank und kann heute nicht kommen."
+        explanation: "Two verbs joined by und; the modal kann sends the infinitive kommen to the end, with nicht before it."
       - id: work2
         type: translation
         tags: [at work]
         prompt: Can I leave a message?
         answers:
           - "Kann ich eine Nachricht hinterlassen?"
+        explanation: "eine Nachricht hinterlassen means to leave a message."
       - id: work3
         type: word-order
         tags: [at work]
         prompt: Could you call me back, please?
         answer: "Könnten Sie mich bitte zurückrufen?"
+        explanation: "Könnten Sie bitte … is polite; zurückrufen stays whole at the end."
       - id: work4
         type: word-order
         tags: [work phrases]
         prompt: I have been working as a cook for two years.
         answer: "Ich arbeite seit zwei Jahren als Koch."
+        explanation: "seit + present for a job still going on; als Koch says the role."
 
   - title: A job advert
     stimulus:
@@ -129,17 +145,20 @@ sets:
         tags: [reading]
         prompt: Die Stelle ist eine Vollzeitstelle.
         answer: false
+        explanation: "The advert says in Teilzeit, 20 Stunden pro Woche: part-time."
       - id: read2
         type: true-false
         tags: [reading]
         prompt: Man muss auch am Wochenende arbeiten.
         answer: true
+        explanation: "The advert says: auch am Wochenende."
       - id: read3
         type: multiple-choice
         tags: [reading]
         prompt: Was muss man schicken?
         options: ["Bewerbung und Lebenslauf", "nur ein Foto", "nur den Lebenslauf per Post"]
         answer: "Bewerbung und Lebenslauf"
+        explanation: "The advert says: Schicken Sie Ihre Bewerbung mit Lebenslauf per E-Mail."
 
   - title: A call to work
     stimulus:
@@ -163,17 +182,20 @@ sets:
         prompt: Wie lange kann Herr Okafor nicht arbeiten?
         options: ["heute und morgen", "nur heute", "eine Woche"]
         answer: "heute und morgen"
+        explanation: "He says: ich kann heute und morgen nicht kommen."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Herr Okafor war schon beim Arzt.
         answer: false
+        explanation: "He says: Ich habe um zehn einen Termin. He has not been yet."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Was soll die Sekretärin machen?
         options: ["Frau Berger informieren", "einen Arzttermin machen", "die Krankmeldung schicken"]
         answer: "Frau Berger informieren"
+        explanation: "He asks: Könnten Sie bitte Frau Berger Bescheid sagen?"
 
   - title: About you
     items:

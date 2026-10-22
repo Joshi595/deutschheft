@@ -38,7 +38,7 @@ const TEMPLATE_LEVELS = ['a1', 'a2', 'b1'];
  * Levels where every exercise marked by the app explains its answer, so a
  * wrong answer always says why. A level joins once its explanations are written.
  */
-const EXPLAINED_LEVELS: string[] = ['a1'];
+const EXPLAINED_LEVELS: string[] = ['a1', 'a2'];
 
 const REQUIRED_HEADINGS = {
   grammar: ['The idea', 'Step by step', 'Compared with English', 'Typical mistakes', 'Summary'],

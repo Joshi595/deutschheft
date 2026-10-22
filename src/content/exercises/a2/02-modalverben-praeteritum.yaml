@@ -8,36 +8,43 @@ sets:
         tags: [modal past]
         prompt: "Ich ___ gestern nicht kommen. (können)"
         answers: [konnte]
+        explanation: "Modal verbs form the past with -te and drop the umlaut: können → konnte."
       - id: form2
         type: fill-blank
         tags: [modal past]
         prompt: "Wir ___ lange warten. (müssen)"
         answers: [mussten]
+        explanation: "müssen drops its umlaut in the past: mussten for wir."
       - id: form3
         type: fill-blank
         tags: [modal past]
         prompt: "Was ___ du sagen? (wollen)"
         answers: [wolltest]
+        explanation: "wollen → wollte, and du adds -st: du wolltest."
       - id: form4
         type: fill-blank
         tags: [modal past]
         prompt: "Als Kind ___ ich nicht lange fernsehen. (dürfen)"
         answers: [durfte]
+        explanation: "dürfen drops its umlaut: durfte. ich and er have no extra ending."
       - id: form5
         type: fill-blank
         tags: [modal past]
         prompt: "Er ___ um neun Uhr da sein. (sollen)"
         answers: [sollte]
+        explanation: "sollen → sollte; er has no extra ending."
       - id: form6
         type: fill-blank
         tags: [modal past]
         prompt: "___ ihr den Text verstehen? (können)"
         answers: [Konntet]
+        explanation: "können → konnte, and ihr adds -t: ihr konntet."
       - id: form7
         type: fill-blank
         tags: [modal past]
         prompt: "Sie ___ nicht bezahlen. (müssen) [they]"
         answers: [mussten]
+        explanation: "müssen → musste, and sie (they) adds -n: sie mussten."
       - id: form8
         type: matching
         tags: [modal past]
@@ -48,6 +55,7 @@ sets:
           - { left: dürfen, right: durfte }
           - { left: wollen, right: wollte }
           - { left: mögen, right: mochte }
+        explanation: "The past of modals: konnte, musste, durfte, wollte, mochte. None keeps an umlaut."
 
   - title: Umlaut or no umlaut?
     items:
@@ -64,6 +72,7 @@ sets:
         prompt: Wir ___ gestern lange arbeiten.
         options: [mussten, müssten, müssen]
         answer: mussten
+        explanation: "The past mussten has no umlaut. müssten with the umlaut is Konjunktiv II: 'would have to'."
       - id: uml3
         type: multiple-choice
         tags: [modal past]
@@ -80,24 +89,28 @@ sets:
         prompt: "Ich ___ dich anrufen, aber ich hatte keine Zeit."
         options: [wollte, durfte, konnte nicht]
         answer: wollte
+        explanation: "wollte expresses what you intended to do: I wanted to call you, but had no time."
       - id: fit2
         type: multiple-choice
         tags: [modal past, meaning]
         prompt: Im Hotel ___ man nicht rauchen. Es war verboten.
         options: [durfte, wollte, musste]
         answer: durfte
+        explanation: "It was forbidden, so you were not allowed: man durfte nicht."
       - id: fit3
         type: multiple-choice
         tags: [modal past, meaning]
         prompt: Der Bus ist nicht gekommen. Wir ___ ein Taxi nehmen.
         options: [mussten, durften, sollten nicht]
         answer: mussten
+        explanation: "There was no other choice, so it was a necessity: wir mussten."
       - id: fit4
         type: multiple-choice
         tags: [modal past, meaning]
         prompt: Mit drei Jahren ___ er schon Rad fahren.
         options: [konnte, musste, sollte]
         answer: konnte
+        explanation: "Being able to ride a bike is an ability: er konnte."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -107,21 +120,25 @@ sets:
         tags: [modal past, sentence bracket]
         prompt: I had to work until eight o'clock.
         answer: Ich musste bis acht Uhr arbeiten.
+        explanation: "musste comes second and the infinitive arbeiten goes to the end."
       - id: order2
         type: word-order
         tags: [modal past, sentence bracket]
         prompt: As a child I wanted to become a pilot.
         answer: Als Kind wollte ich Pilot werden.
+        explanation: "Als Kind takes the first place, so wollte comes second, then ich, and werden at the end."
       - id: order3
         type: word-order
         tags: [modal past, sentence bracket]
         prompt: Were you able to understand the text?
         answer: Konntest du den Text verstehen?
+        explanation: "A yes/no question starts with the modal, and the infinitive verstehen goes to the end."
       - id: order4
         type: word-order
         tags: [modal past, sentence bracket]
         prompt: We were not allowed to smoke in the hotel.
         answer: Wir durften im Hotel nicht rauchen.
+        explanation: "durften is second, the place im Hotel comes next, and nicht stands before the infinitive."
 
   - title: From present to past
     instructions: Rewrite the sentence in the past.
@@ -131,21 +148,25 @@ sets:
         tags: [modal past]
         prompt: "Ich kann nicht kommen."
         answers: [Ich konnte nicht kommen.]
+        explanation: "kann becomes konnte in the past; the infinitive stays at the end."
       - id: past2
         type: translation
         tags: [modal past]
         prompt: "Wir müssen warten."
         answers: [Wir mussten warten.]
+        explanation: "müssen loses its umlaut in the past: wir mussten."
       - id: past3
         type: translation
         tags: [modal past]
         prompt: "Sie will nach Hause gehen. [she]"
         answers: [Sie wollte nach Hause gehen.]
+        explanation: "will becomes wollte; sie (she) has no extra ending."
       - id: past4
         type: translation
         tags: [modal past]
         prompt: "Darfst du allein in die Stadt gehen?"
         answers: [Durftest du allein in die Stadt gehen?]
+        explanation: "darfst becomes durftest: the past stem durf-te plus the du ending -st."
 
   - title: Read and answer
     stimulus:
@@ -163,17 +184,20 @@ sets:
         tags: [reading, modal past]
         prompt: Emma war auf der Party.
         answer: false
+        explanation: "Emma writes: ich konnte gestern nicht zu deiner Party kommen."
       - id: read2
         type: multiple-choice
         tags: [reading, modal past]
         prompt: Warum konnte Emma nicht mit dem Auto fahren?
         options: [Das Auto war kaputt., Sie hatte keine Zeit., Der Bus war weg.]
         answer: Das Auto war kaputt.
+        explanation: "She wanted to drive, aber mein Auto war kaputt."
       - id: read3
         type: true-false
         tags: [reading, modal past]
         prompt: Emma ist mit dem Bus gefahren.
         answer: false
+        explanation: "The last bus had already gone, so she had to stay at home."
 
   - title: Write an excuse
     items:

@@ -13,6 +13,7 @@ sets:
           - { left: der Kassenbon, right: the receipt }
           - { left: das Trinkgeld, right: the tip }
           - { left: die Speisekarte, right: the menu }
+        explanation: "Rechnung bill, Konto account, Briefmarke stamp, Kassenbon receipt, Trinkgeld tip, Speisekarte menu."
       - id: word2
         type: matching
         tags: [services vocabulary]
@@ -23,6 +24,7 @@ sets:
           - { left: sperren, right: to block }
           - { left: umtauschen, right: to exchange }
           - { left: abholen, right: to collect }
+        explanation: "abheben withdraw (money), überweisen transfer, sperren block (a card), umtauschen exchange, abholen collect."
 
   - title: In the restaurant
     items:
@@ -32,27 +34,32 @@ sets:
         prompt: "The waiter asks: Zusammen oder getrennt? What does he want to know?"
         options: ["whether you pay together or separately", "whether you want to sit together", "whether you want one dish or two"]
         answer: "whether you pay together or separately"
+        explanation: "Zusammen oder getrennt? asks whether you pay as one bill or separately."
       - id: rest2
         type: multiple-choice
         tags: [restaurant]
         prompt: "You give 20 euros for a bill of 18.40 and want no change. You say:"
         options: ["Stimmt so.", "Das stimmt nicht.", "Zahlen, bitte."]
         answer: "Stimmt so."
+        explanation: "Stimmt so means 'keep the change'; the rest is the tip."
       - id: rest3
         type: fill-blank
         tags: [restaurant]
         prompt: "Was können Sie ___? (recommend)"
         answers: [empfehlen]
+        explanation: "empfehlen means to recommend: Was können Sie empfehlen?"
       - id: rest4
         type: fill-blank
         tags: [restaurant]
         prompt: "Als ___ hätte ich gern das Schnitzel. (main course)"
         answers: [Hauptgericht]
+        explanation: "The main course is das Hauptgericht; the starter is die Vorspeise."
       - id: rest5
         type: true-false
         tags: [restaurant]
         prompt: In Germany, 'Wasser' in a restaurant always means still water.
         answer: false
+        explanation: "Wasser often means sparkling water (mit Kohlensäure). Ask for stilles Wasser for still water."
 
   - title: Where are you?
     items:
@@ -62,18 +69,21 @@ sets:
         prompt: "Ich möchte ein Konto eröffnen."
         options: [in der Bank, in der Post, im Restaurant]
         answer: in der Bank
+        explanation: "You open an account (ein Konto eröffnen) at a bank."
       - id: where2
         type: multiple-choice
         tags: [services]
         prompt: "Ich möchte das Paket per Einschreiben schicken."
         options: [in der Post, in der Bank, im Kaufhaus]
         answer: in der Post
+        explanation: "Sending a parcel by Einschreiben (registered post) is done at the post office."
       - id: where3
         type: multiple-choice
         tags: [services]
         prompt: "Haben Sie den Kassenbon noch?"
         options: [im Geschäft, in der Bank, beim Arzt]
         answer: im Geschäft
+        explanation: "A Kassenbon is the receipt you need to return something to a shop."
 
   - title: Complaints
     items:
@@ -89,18 +99,21 @@ sets:
           - [bestellt]
           - [kalt]
           - [zurücknehmen]
+        explanation: "A polite complaint starts with Entschuldigung; then warten (waiting), bestellt (ordered), kalt (cold), and zurücknehmen (take back)."
       - id: comp2
         type: translation
         tags: [complaints]
         prompt: The bill is not right.
         answers:
           - "Die Rechnung stimmt nicht."
+        explanation: "stimmen means to be right or correct: Die Rechnung stimmt nicht."
       - id: comp3
         type: translation
         tags: [complaints]
         prompt: I would like to exchange this.
         answers:
           - "Ich möchte das umtauschen."
+        explanation: "umtauschen is to exchange something in a shop; after möchte it stays whole at the end."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -110,16 +123,19 @@ sets:
         tags: [restaurant]
         prompt: I would like to book a table for two people.
         answer: "Ich möchte einen Tisch für zwei Personen reservieren."
+        explanation: "möchte comes second and reservieren goes to the end; für zwei Personen says who it is for."
       - id: order2
         type: word-order
         tags: [bank]
         prompt: Could you block my card, please?
         answer: "Könnten Sie bitte meine Karte sperren?"
+        explanation: "Könnten Sie bitte … is polite; sperren, to block, goes to the end."
       - id: order3
         type: word-order
         tags: [post office]
         prompt: How long does it take to Poland?
         answer: "Wie lange dauert das nach Polen?"
+        explanation: "Wie lange dauert …? asks how long something takes; nach Polen because Poland is a country."
 
   - title: At the post office
     stimulus:
@@ -145,17 +161,20 @@ sets:
         prompt: Wohin schickt der Mann das Paket?
         options: [nach Italien, nach Polen, nach Spanien]
         answer: nach Italien
+        explanation: "The customer says: ich möchte dieses Paket nach Italien schicken."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Wie lange dauert der normale Versand?
         options: ["vier bis sechs Werktage", "zwei Tage", "drei Tage"]
         answer: "vier bis sechs Werktage"
+        explanation: "The clerk says: Ungefähr vier bis sechs Werktage."
       - id: listen3
         type: true-false
         tags: [listening]
         prompt: Der Mann schickt das Paket mit Express.
         answer: false
+        explanation: "Express costs thirty euros more, and he says: Nein, normal reicht."
 
   - title: Something is wrong
     items:

@@ -8,22 +8,26 @@ sets:
         tags: [wenn word order]
         prompt: "Wenn er Hunger ___, isst er einen Apfel. (haben)"
         answers: [hat]
+        explanation: "In a wenn clause the conjugated verb goes last: Wenn er Hunger hat, …"
       - id: sub2
         type: fill-blank
         tags: [wenn word order]
         prompt: "Wenn du Fragen ___, kannst du mich anrufen. (haben)"
         answers: [hast]
+        explanation: "The verb hast goes to the end of the wenn clause."
       - id: sub3
         type: fill-blank
         tags: [wenn word order]
         prompt: "Wenn du nach Berlin ___, musst du das Brandenburger Tor sehen. (fahren)"
         answers: [fährst]
         hint: fahren changes its vowel in the du form.
+        explanation: "fahren changes a to ä with du, and the verb goes to the end: wenn du nach Berlin fährst."
       - id: sub4
         type: fill-blank
         tags: [wenn word order]
         prompt: "Wenn du mitkommen ___, musst du dich beeilen. (wollen)"
         answers: [willst]
+        explanation: "The modal goes last, after the infinitive: wenn du mitkommen willst."
 
   - title: The verb in the main clause
     instructions: The main verb comes straight after the comma.
@@ -33,21 +37,25 @@ sets:
         tags: [wenn word order]
         prompt: "Wenn es regnet, ___ ich zu Hause. (bleiben)"
         answers: [bleibe]
+        explanation: "The wenn clause fills position one, so the main verb comes straight after the comma: bleibe ich."
       - id: main2
         type: fill-blank
         tags: [wenn word order]
         prompt: "Wenn ich Zeit habe, ___ ich ins Kino. (gehen)"
         answers: [gehe]
+        explanation: "After the wenn clause comes the main verb, then the subject: gehe ich."
       - id: main3
         type: fill-blank
         tags: [wenn word order]
         prompt: "Wenn die Sonne scheint, ___ wir einen Ausflug. (machen)"
         answers: [machen]
+        explanation: "After the comma, the verb comes first, then wir: machen wir einen Ausflug."
       - id: main4
         type: fill-blank
         tags: [wenn word order]
         prompt: "Wenn du Hunger hast, ___ wir etwas essen. (können)"
         answers: [können]
+        explanation: "The modal können comes right after the comma, and essen goes to the end."
 
   - title: Which sentence is correct?
     items:
@@ -60,6 +68,7 @@ sets:
           - "Wenn ich glücklich bin, tanze ich."
           - "Wenn ich glücklich bin, ich tanze."
         answer: "Wenn ich glücklich bin, tanze ich."
+        explanation: "In the wenn clause the verb goes last (glücklich bin); after the comma comes the main verb first (tanze ich)."
       - id: mc2
         type: multiple-choice
         tags: [wenn word order, separable verbs]
@@ -78,6 +87,7 @@ sets:
           - "Ich komme, wenn ich habe Zeit."
           - "Ich komme, wenn ich Zeit habe."
         answer: "Ich komme, wenn ich Zeit habe."
+        explanation: "When the wenn clause comes second, its verb still goes last: wenn ich Zeit habe."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -87,21 +97,25 @@ sets:
         tags: [wenn word order]
         prompt: If it is cold, I wear a jacket.
         answer: "Wenn es kalt ist, trage ich eine Jacke."
+        explanation: "The wenn clause ends with ist; the main clause starts with its verb trage."
       - id: order2
         type: word-order
         tags: [wenn word order]
         prompt: I go to the cinema if I have time.
         answer: "Ich gehe ins Kino, wenn ich Zeit habe."
+        explanation: "The main clause comes first with normal order; the wenn clause sends habe to the end."
       - id: order3
         type: word-order
         tags: [wenn word order]
         prompt: If you study hard, you will pass the exam.
         answer: "Wenn du fleißig lernst, bestehst du die Prüfung."
+        explanation: "German uses the present here: Wenn du fleißig lernst, bestehst du …"
       - id: order4
         type: word-order
         tags: [wenn word order]
         prompt: What do we do if it rains?
         answer: "Was machen wir, wenn es regnet?"
+        explanation: "The question comes first; in the wenn clause the verb regnet goes last."
 
   - title: wenn, wann or als?
     items:
@@ -118,6 +132,7 @@ sets:
         prompt: "___ ich Zeit habe, rufe ich dich an."
         options: [Wenn, Wann, Als]
         answer: Wenn
+        explanation: "wenn is for 'if' and for things that happen whenever a condition is met. wann asks 'when?', als is for one event in the past."
       - id: www3
         type: multiple-choice
         tags: [wenn wann als]
@@ -150,6 +165,7 @@ sets:
         answers:
           - "Wenn ich Zeit habe, komme ich."
           - "Wenn ich Zeit habe, dann komme ich."
+        explanation: "The first sentence becomes the wenn clause with its verb last; the main clause starts with komme."
       - id: join2
         type: translation
         tags: [wenn word order]
@@ -157,6 +173,7 @@ sets:
         answers:
           - "Wenn es regnet, bleiben wir zu Hause."
           - "Wenn es regnet, dann bleiben wir zu Hause."
+        explanation: "Wenn es regnet, then the main verb bleiben comes straight after the comma."
       - id: join3
         type: translation
         tags: [wenn word order]
@@ -164,6 +181,7 @@ sets:
         answers:
           - "Wenn du müde bist, musst du schlafen."
           - "Wenn du müde bist, dann musst du schlafen."
+        explanation: "The wenn clause ends with bist; then the modal musst comes first, and schlafen goes last."
 
   - title: Planning a day out
     stimulus:
@@ -185,17 +203,20 @@ sets:
         prompt: Was machen Ida und Ole, wenn das Wetter schön ist?
         options: [Sie fahren an den See., Sie gehen ins Museum., Sie bleiben zu Hause.]
         answer: Sie fahren an den See.
+        explanation: "Ida says: Wenn das Wetter schön ist, können wir an den See fahren."
       - id: listen2
         type: true-false
         tags: [listening, wenn]
         prompt: Wenn es regnet, gehen sie ins Museum.
         answer: true
+        explanation: "Ida says: Wenn es regnet, gehen wir ins Museum."
       - id: listen3
         type: multiple-choice
         tags: [listening, wenn]
         prompt: Wann will Ole Ida abholen?
         options: [um zehn Uhr, um neun Uhr, um elf Uhr]
         answer: um zehn Uhr
+        explanation: "Ole says: Wenn du willst, hole ich dich um zehn Uhr ab."
 
   - title: Now you
     items:
@@ -205,6 +226,7 @@ sets:
         prompt: What do you do when the weather is nice? Answer in one sentence with wenn.
         mustInclude: [wenn]
         sample: "Wenn das Wetter schön ist, fahre ich mit dem Fahrrad an den See."
+        explanation: "In the wenn clause the verb goes last; after the comma the main clause starts with its verb."
       - id: speak1
         type: speaking-task
         tags: [speaking, wenn, planning]

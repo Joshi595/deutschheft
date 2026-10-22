@@ -8,32 +8,38 @@ sets:
         tags: [dative endings]
         prompt: "Ich wohne in einer ___ Stadt. (klein)"
         answers: [kleinen]
+        explanation: "In the dative, after any article, the adjective ends in -en: in einer kleinen Stadt."
       - id: dat2
         type: fill-blank
         tags: [dative endings]
         prompt: "Er fährt mit dem ___ Auto. (neu)"
         answers: [neuen]
+        explanation: "mit takes the dative; after dem the adjective ends in -en: mit dem neuen Auto."
       - id: dat3
         type: fill-blank
         tags: [dative endings]
         prompt: "Wir sprechen mit unseren ___ Nachbarn. (alt)"
         answers: [alten]
+        explanation: "Dative plural: the adjective ends in -en: mit unseren alten Nachbarn."
       - id: dat4
         type: fill-blank
         tags: [dative endings]
         prompt: "Das Bild hängt an der ___ Wand. (weiß)"
         answers: [weißen]
+        explanation: "an der Wand is dative (a position); after der the adjective ends in -en."
       - id: dat5
         type: fill-blank
         tags: [dative endings]
         prompt: "Nach einem ___ Tag bin ich müde. (lang)"
         answers: [langen]
+        explanation: "nach takes the dative; after einem the adjective ends in -en: nach einem langen Tag."
       - id: dat6
         type: multiple-choice
         tags: [dative endings]
         prompt: "Ich helfe meinem ___ Bruder."
         options: [kleinen, kleinem, kleiner]
         answer: kleinen
+        explanation: "helfen takes the dative; after meinem the adjective ends in -en: meinem kleinen Bruder."
 
   - title: No article
     items:
@@ -43,22 +49,26 @@ sets:
         prompt: "Ein Haus mit ___ Garten."
         options: [großem, großen, großer]
         answer: großem
+        explanation: "With no article, the adjective takes the dative article's ending: dem Garten → mit großem Garten."
       - id: none2
         type: multiple-choice
         tags: [no article endings]
         prompt: "Tee mit ___ Milch."
         options: [warmer, warmen, warmem]
         answer: warmer
+        explanation: "Milch is feminine; with no article the adjective takes the ending of der: mit warmer Milch."
       - id: none3
         type: fill-blank
         tags: [no article endings]
         prompt: "Zimmer mit ___ Bad. (eigen)"
         answers: [eigenem]
+        explanation: "Bad is neuter; with no article the dative ending is -em, as in dem: mit eigenem Bad."
       - id: none4
         type: fill-blank
         tags: [no article endings]
         prompt: "Ich wohne mit ___ Leuten zusammen. (nett)"
         answers: [netten]
+        explanation: "Dative plural without an article ends in -en, as in den: mit netten Leuten."
 
   - title: Which case?
     items:
@@ -68,35 +78,41 @@ sets:
         prompt: "___ Kollegin heißt Sara."
         options: [Die neue, Der neuen, Die neuen]
         answer: Die neue
+        explanation: "The subject is nominative: die neue Kollegin."
       - id: mix2
         type: multiple-choice
         tags: [all cases]
         prompt: "Kennst du ___ Kollegen?"
         options: [den neuen, der neue, dem neuen]
         answer: den neuen
+        explanation: "Kollege is the object of kennen, so the accusative: den neuen Kollegen."
       - id: mix3
         type: multiple-choice
         tags: [all cases]
         prompt: "Ich gehe mit ___ Kollegen essen."
         options: [dem neuen, den neuen, der neue]
         answer: dem neuen
+        explanation: "mit takes the dative: mit dem neuen Kollegen."
       - id: mix4
         type: multiple-choice
         tags: [all cases]
         prompt: "Wir haben ___ Wohnung gefunden."
         options: [eine schöne, einer schönen, ein schönes]
         answer: eine schöne
+        explanation: "The flat is the object of finden, so the accusative; feminine stays eine schöne."
       - id: mix5
         type: multiple-choice
         tags: [all cases]
         prompt: "Wir wohnen in ___ Wohnung."
         options: [einer schönen, eine schöne, einem schönen]
         answer: einer schönen
+        explanation: "in for a place takes the dative: in einer schönen Wohnung."
       - id: mix6
         type: true-false
         tags: [all cases]
         prompt: "After dem, der and den in the dative, the adjective always ends in -en."
         answer: true
+        explanation: "In the dative, every adjective after an article ends in -en."
 
   - title: A postcard
     items:
@@ -112,6 +128,7 @@ sets:
           - [en]
           - [en]
           - [en]
+        explanation: "in einem kleinen Dorf, in einer hübschen Wohnung (dative, -en), mit großem Balkon (no article, -em), an den langen Strand (accusative), mit einem netten Fischer, frischen Fisch (accusative, no article)."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -121,11 +138,13 @@ sets:
         tags: [dative endings]
         prompt: I live in a small town.
         answer: "Ich wohne in einer kleinen Stadt."
+        explanation: "in for a place takes the dative: in einer kleinen Stadt."
       - id: order2
         type: word-order
         tags: [no article endings]
         prompt: I like cooking with fresh vegetables.
         answer: "Ich koche gern mit frischem Gemüse."
+        explanation: "mit takes the dative; Gemüse is neuter with no article, so frischem."
 
   - title: Say it in German
     items:
@@ -135,12 +154,14 @@ sets:
         prompt: She lives in a pretty house.
         answers:
           - "Sie wohnt in einem hübschen Haus."
+        explanation: "in for a place takes the dative; Haus is neuter: in einem hübschen Haus."
       - id: tr2
         type: translation
         tags: [dative endings]
         prompt: I am talking to a friendly man.
         answers:
           - "Ich spreche mit einem freundlichen Mann."
+        explanation: "mit takes the dative; after einem the adjective ends in -en: mit einem freundlichen Mann."
 
   - title: A room to rent
     stimulus:
@@ -153,17 +174,20 @@ sets:
         tags: [reading]
         prompt: Das Zimmer hat einen eigenen Balkon.
         answer: true
+        explanation: "The advert says: Das Zimmer … hat einen kleinen Balkon."
       - id: read2
         type: true-false
         tags: [reading]
         prompt: Die Wohnung ist an einer lauten Straße.
         answer: false
+        explanation: "The flat liegt in einer ruhigen Straße: a quiet street."
       - id: read3
         type: multiple-choice
         tags: [reading]
         prompt: Was kostet das Zimmer?
         options: ["420 Euro mit Nebenkosten", "420 Euro ohne Nebenkosten", "16 Euro pro m²"]
         answer: "420 Euro mit Nebenkosten"
+        explanation: "The advert says: Miete: 420 Euro mit Nebenkosten."
 
   - title: Answer the advert
     items:

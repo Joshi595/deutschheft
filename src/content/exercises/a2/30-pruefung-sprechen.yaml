@@ -9,24 +9,28 @@ sets:
         prompt: "Card: Wohnort?"
         answers:
           - "Wo wohnst du?"
+        explanation: "Wohnort asks where someone lives: Wo wohnst du?"
       - id: q2
         type: translation
         tags: [questions]
         prompt: "Card: Geburtstag? (when)"
         answers:
           - "Wann hast du Geburtstag?"
+        explanation: "German says you 'have' a birthday: Wann hast du Geburtstag?"
       - id: q3
         type: translation
         tags: [questions]
         prompt: "Card: Sprachen? (which)"
         answers:
           - "Welche Sprachen sprichst du?"
+        explanation: "welche agrees with Sprachen (plural): Welche Sprachen sprichst du? sprechen changes to sprichst with du."
       - id: q4
         type: multiple-choice
         tags: [questions]
         prompt: "Card: Lieblingsessen? Which question fits?"
         options: ["Was isst du am liebsten?", "Lieblingsessen du?", "Du isst gern?"]
         answer: "Was isst du am liebsten?"
+        explanation: "Lieblingsessen is your favourite food, so ask what someone likes eating most: Was isst du am liebsten?"
 
   - title: "Teil 3: planning phrases"
     items:
@@ -36,12 +40,14 @@ sets:
         prompt: "You want to suggest a time."
         options: ["Wie wäre es um drei?", "Das passt.", "Einverstanden."]
         answer: "Wie wäre es um drei?"
+        explanation: "Wie wäre es um …? proposes a time politely."
       - id: plan2
         type: multiple-choice
         tags: [planning]
         prompt: "Your partner suggests ten o'clock, but you have a doctor's appointment."
         options: ["Um zehn kann ich leider nicht, da muss ich zum Arzt.", "Ja, gute Idee!", "Wann hast du Zeit?"]
         answer: "Um zehn kann ich leider nicht, da muss ich zum Arzt."
+        explanation: "Say no with leider and give a reason, so the planning can continue."
       - id: plan3
         type: cloze
         tags: [planning]
@@ -54,6 +60,7 @@ sets:
           - [leider]
           - [passt]
           - [treffen]
+        explanation: "Wann hast du Zeit? asks when someone is free; Wie wäre es proposes; leider refuses politely; es passt agrees; wir treffen uns fixes the meeting."
 
   - title: Speak
     items:

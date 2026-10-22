@@ -11,6 +11,7 @@ sets:
           - "Er kommt nicht, weil er ist krank."
           - "Er kommt nicht, weil er krank ist."
         answer: "Er kommt nicht, weil er krank ist."
+        explanation: "weil sends the conjugated verb to the end of its clause: weil er krank ist."
       - id: pos2
         type: multiple-choice
         tags: [weil word order]
@@ -40,6 +41,7 @@ sets:
           - "Wir müssen gehen, weil der Zug um acht fährt ab."
           - "Wir müssen gehen, weil der Zug fährt um acht ab."
         answer: "Wir müssen gehen, weil der Zug um acht abfährt."
+        explanation: "At the end of a weil clause a separable verb joins up again: abfährt."
 
   - title: The missing verb
     instructions: Complete the weil clause.
@@ -49,16 +51,19 @@ sets:
         tags: [weil word order]
         prompt: "Ich esse, weil ich Hunger ___."
         answers: [habe]
+        explanation: "In a weil clause the conjugated verb stands last: weil ich Hunger habe."
       - id: verb2
         type: fill-blank
         tags: [weil word order]
         prompt: "Sie schläft lange, weil sie müde ___."
         answers: [ist]
+        explanation: "The verb goes to the end: weil sie müde ist."
       - id: verb3
         type: fill-blank
         tags: [weil word order]
         prompt: "Er bleibt zu Hause, weil er arbeiten ___."
         answers: [muss]
+        explanation: "With a modal, the modal itself goes last, after the infinitive: weil er arbeiten muss."
       - id: verb4
         type: fill-blank
         tags: [weil word order]
@@ -70,6 +75,7 @@ sets:
         tags: [weil word order]
         prompt: "Wir sind zu spät, weil der Bus nicht gekommen ___."
         answers: [ist]
+        explanation: "In the Perfekt, the helper ist goes last, after the participle: gekommen ist."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -79,21 +85,25 @@ sets:
         tags: [weil word order]
         prompt: I am going home because I am tired.
         answer: "Ich gehe nach Hause, weil ich müde bin."
+        explanation: "The main clause keeps verb second; after the comma, weil sends bin to the end."
       - id: order2
         type: word-order
         tags: [weil word order]
         prompt: He is not coming because he has to work.
         answer: "Er kommt nicht, weil er arbeiten muss."
+        explanation: "In the weil clause the modal muss comes last, after arbeiten."
       - id: order3
         type: word-order
         tags: [weil word order]
         prompt: Because it is raining, we are staying at home.
         answer: "Weil es regnet, bleiben wir zu Hause."
+        explanation: "When the weil clause comes first, it fills position one, so the main verb bleiben comes straight after the comma."
       - id: order4
         type: word-order
         tags: [weil word order]
         prompt: She is tired because she slept badly.
         answer: "Sie ist müde, weil sie schlecht geschlafen hat."
+        explanation: "In the Perfekt the helper hat comes last: weil sie schlecht geschlafen hat."
 
   - title: Join the sentences
     instructions: Make one sentence with weil. The second sentence is the reason.
@@ -104,12 +114,14 @@ sets:
         prompt: "Ich lerne Deutsch. Es ist wichtig."
         answers:
           - "Ich lerne Deutsch, weil es wichtig ist."
+        explanation: "The second sentence becomes the weil clause, and its verb ist moves to the end."
       - id: join2
         type: translation
         tags: [weil word order]
         prompt: "Er kommt nicht. Er hat keine Zeit."
         answers:
           - "Er kommt nicht, weil er keine Zeit hat."
+        explanation: "weil sends hat to the end: weil er keine Zeit hat."
       - id: join3
         type: translation
         tags: [weil word order]
@@ -117,12 +129,14 @@ sets:
         answers:
           - "Ich kaufe das Buch, weil ich es lesen möchte."
         hint: The modal verb goes last, after the infinitive.
+        explanation: "The modal möchte goes last, after the infinitive: weil ich es lesen möchte."
       - id: join4
         type: translation
         tags: [weil word order]
         prompt: "Sie ist glücklich. Sie hat die Prüfung bestanden."
         answers:
           - "Sie ist glücklich, weil sie die Prüfung bestanden hat."
+        explanation: "In the Perfekt the helper hat goes last: weil sie die Prüfung bestanden hat."
 
   - title: weil or denn?
     items:
@@ -139,6 +153,7 @@ sets:
         prompt: "Ich bleibe zu Hause, ___ ich krank bin."
         options: [weil, denn]
         answer: weil
+        explanation: "The verb bin is at the end, which only happens with weil. After denn the order stays normal: denn ich bin krank."
       - id: wd3
         type: multiple-choice
         tags: [weil and denn]
@@ -158,6 +173,7 @@ sets:
           - { left: "Sie bestellt eine Pizza,", right: "weil sie Hunger hat." }
           - { left: "Er liest das Buch,", right: "weil es interessant ist." }
           - { left: "Wir nehmen ein Taxi,", right: "weil der Bus nicht kommt." }
+        explanation: "Each reason has to explain the action: a coat because it is cold, pizza because of hunger, a taxi because the bus is not coming."
 
   - title: Listen
     stimulus:
@@ -182,11 +198,13 @@ sets:
           - Weil sie arbeiten muss.
           - Weil sie krank ist.
         answer: Weil ihre Schwester sie besucht.
+        explanation: "Nina says: Ich muss zu Hause bleiben, weil meine Schwester mich besucht."
       - id: listen2
         type: true-false
         tags: [listening, weil]
         prompt: Nina hat am Freitag Zeit.
         answer: true
+        explanation: "Nina says: Aber am Freitag habe ich Zeit."
 
   - title: Say why
     items:
@@ -196,6 +214,7 @@ sets:
         prompt: Why are you learning German? Answer in one sentence with weil.
         mustInclude: [weil]
         sample: "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte."
+        explanation: "A weil clause gives the reason, and its conjugated verb goes to the very end."
       - id: speak1
         type: speaking-task
         tags: [speaking, weil]

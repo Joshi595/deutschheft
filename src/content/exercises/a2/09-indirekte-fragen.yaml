@@ -8,26 +8,31 @@ sets:
         tags: [indirect questions]
         prompt: "Können Sie mir sagen, wo die Post ___?"
         answers: [ist]
+        explanation: "An indirect question is a subordinate clause, so its verb goes to the end: wo die Post ist."
       - id: verb2
         type: fill-blank
         tags: [indirect questions]
         prompt: "Wissen Sie, wann der Kurs ___? (beginnen)"
         answers: [beginnt]
+        explanation: "After wann the verb moves to the end: wann der Kurs beginnt."
       - id: verb3
         type: fill-blank
         tags: [indirect questions]
         prompt: "Ich weiß nicht, warum er nicht ___. (kommen)"
         answers: [kommt]
+        explanation: "warum starts the indirect question and sends kommt to the end."
       - id: verb4
         type: fill-blank
         tags: [indirect questions]
         prompt: "Wissen Sie, wo ich parken ___? (können)"
         answers: [kann]
+        explanation: "The modal goes last, after the infinitive: wo ich parken kann."
       - id: verb5
         type: fill-blank
         tags: [indirect questions]
         prompt: "Können Sie mir sagen, wann der Zug ___? (abfahren)"
         answers: [abfährt]
+        explanation: "At the end, the separable verb joins up again: wann der Zug abfährt."
 
   - title: Which sentence is correct?
     items:
@@ -39,6 +44,7 @@ sets:
           - "Können Sie mir sagen, wo der Bahnhof ist?"
           - "Können Sie mir sagen, wo ist der Bahnhof?"
         answer: "Können Sie mir sagen, wo der Bahnhof ist?"
+        explanation: "In an indirect question the verb ist goes to the end: wo der Bahnhof ist."
       - id: pos2
         type: multiple-choice
         tags: [indirect questions]
@@ -48,6 +54,7 @@ sets:
           - "Ich weiß nicht, ob kommt er heute."
           - "Ich weiß nicht, er kommt heute."
         answer: "Ich weiß nicht, ob er heute kommt."
+        explanation: "A yes/no question becomes an indirect question with ob, and the verb goes to the end."
       - id: pos3
         type: multiple-choice
         tags: [indirect questions]
@@ -73,18 +80,21 @@ sets:
         prompt: "Können Sie mir sagen, ___ der Kurs kostet?"
         options: [was, ob, wo]
         answer: was
+        explanation: "The direct question is Was kostet der Kurs?, so the indirect one keeps was. ob is only for yes/no questions."
       - id: ob3
         type: multiple-choice
         tags: [ob]
         prompt: "Ich bin nicht sicher, ___ ich Zeit habe."
         options: [ob, wenn, dass]
         answer: ob
+        explanation: "'Whether' I have time is a yes/no question, so ob."
       - id: ob4
         type: multiple-choice
         tags: [ob]
         prompt: "Ich möchte wissen, ___ der Zug ankommt."
         options: [wann, ob, wenn]
         answer: wann
+        explanation: "The direct question is Wann kommt der Zug an?, so the question word wann stays."
 
   - title: ob, wenn or dass?
     items:
@@ -94,18 +104,21 @@ sets:
         prompt: "Ich weiß nicht, ___ er kommt oder nicht."
         options: [ob, wenn, dass]
         answer: ob
+        explanation: "ob means 'whether': I don't know whether he is coming or not."
       - id: owd2
         type: multiple-choice
         tags: [ob wenn dass]
         prompt: "Ich freue mich, ___ er kommt. (if he does)"
         options: [wenn, ob, was]
         answer: wenn
+        explanation: "wenn is a condition: I'll be glad if he comes."
       - id: owd3
         type: multiple-choice
         tags: [ob wenn dass]
         prompt: "Ich weiß, ___ er morgen kommt. (It is certain.)"
         options: [dass, ob, wenn]
         answer: dass
+        explanation: "dass reports a fact you know; ob is for something open."
 
   - title: Make it polite
     instructions: Turn the direct question into an indirect one. Start as shown.
@@ -116,30 +129,35 @@ sets:
         prompt: "Wo ist die Toilette? → Können Sie mir sagen, …"
         answers:
           - "Können Sie mir sagen, wo die Toilette ist?"
+        explanation: "Keep the question word wo and send the verb ist to the end."
       - id: turn2
         type: translation
         tags: [indirect questions]
         prompt: "Wann beginnt der Film? → Wissen Sie, …"
         answers:
           - "Wissen Sie, wann der Film beginnt?"
+        explanation: "Keep wann and send beginnt to the end: Wissen Sie, wann der Film beginnt?"
       - id: turn3
         type: translation
         tags: [indirect questions, ob]
         prompt: "Ist der Platz frei? → Darf ich fragen, …"
         answers:
           - "Darf ich fragen, ob der Platz frei ist?"
+        explanation: "Ist der Platz frei? is a yes/no question, so it becomes ob … frei ist."
       - id: turn4
         type: translation
         tags: [indirect questions, ob]
         prompt: "Kommt Anna auch? → Ich weiß nicht, …"
         answers:
           - "Ich weiß nicht, ob Anna auch kommt."
+        explanation: "A yes/no question becomes ob + verb at the end: ob Anna auch kommt."
       - id: turn5
         type: translation
         tags: [indirect questions]
         prompt: "Was kostet das Ticket? → Ich möchte wissen, …"
         answers:
           - "Ich möchte wissen, was das Ticket kostet."
+        explanation: "Keep was and move kostet to the end: was das Ticket kostet."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -149,16 +167,19 @@ sets:
         tags: [indirect questions]
         prompt: Do you know when the train arrives?
         answer: "Wissen Sie, wann der Zug ankommt?"
+        explanation: "The indirect question starts with wann, and the separable verb ankommt stays whole at the end."
       - id: order2
         type: word-order
         tags: [indirect questions, ob]
         prompt: I am not sure whether I have time.
         answer: "Ich bin nicht sicher, ob ich Zeit habe."
+        explanation: "ob introduces the clause, and habe goes to the end."
       - id: order3
         type: word-order
         tags: [indirect questions]
         prompt: I have no idea how that works.
         answer: "Ich habe keine Ahnung, wie das funktioniert."
+        explanation: "keine Ahnung is followed by the clause wie das funktioniert, with the verb at the end."
 
   - title: At the information desk
     stimulus:
@@ -183,18 +204,21 @@ sets:
         tags: [listening, indirect questions]
         prompt: Das Museum ist am Montag geöffnet.
         answer: false
+        explanation: "The employee says: am Montag ist es geschlossen."
       - id: listen2
         type: multiple-choice
         tags: [listening, indirect questions]
         prompt: Wann gibt es eine Führung auf Englisch?
         options: ["um 14 Uhr", "um 10 Uhr", "um 17 Uhr"]
         answer: "um 14 Uhr"
+        explanation: "The English tour is jeden Tag um vierzehn Uhr."
       - id: listen3
         type: multiple-choice
         tags: [listening, prices]
         prompt: Was bezahlen Studenten?
         options: ["5 Euro", "8 Euro", "nichts"]
         answer: "5 Euro"
+        explanation: "Entry is eight euros; Studenten zahlen fünf Euro."
 
   - title: Now you ask
     items:
