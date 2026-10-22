@@ -47,7 +47,8 @@ export function GermanInput({ value, onChange, label, placeholder, disabled, mul
   };
 
   return (
-    <span className={size ? 'inline-flex flex-col gap-1 align-middle' : 'flex flex-col gap-2'}>
+    // A gap inside a sentence keeps the sentence flowing: its letters drop down below it only while it has focus.
+    <span className={size ? 'group relative inline-block align-baseline' : 'flex flex-col gap-2'}>
       {multiline ? (
         <textarea {...shared} rows={rows} className="field resize-y" />
       ) : (
@@ -62,13 +63,18 @@ export function GermanInput({ value, onChange, label, placeholder, disabled, mul
         />
       )}
       {!disabled && (
-        <span className="flex flex-wrap gap-1" aria-label="Insert a German letter">
+        <span
+          className={size ? 'absolute top-full left-0 z-10 mt-1 hidden gap-1 border border-line bg-surface p-1 group-focus-within:flex' : 'flex flex-wrap gap-1'}
+          aria-label="Insert a German letter"
+        >
           {SPECIAL.map((char) => (
             <button
               key={char}
               type="button"
               tabIndex={-1}
               className="btn btn-small h-8 min-h-0 w-8 px-0 font-medium"
+              // Keep the focus (and the caret) in the field while a letter is added.
+              onMouseDown={(event) => event.preventDefault()}
               onClick={() => insert(char)}
               aria-label={`Insert ${char}`}
             >
