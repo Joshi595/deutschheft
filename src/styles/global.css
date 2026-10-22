@@ -89,6 +89,10 @@
 @view-transition {
   navigation: auto;
 }
+/* A quick cross-fade between pages; the shell is named, so it stays put. */
+::view-transition-group(root) {
+  animation-duration: 0.15s;
+}
 
 @layer base {
   html {

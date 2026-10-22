@@ -2,7 +2,9 @@
 // A German example sentence with its translation and a listen button.
 // Available in every lesson's MDX without an import. Mark the part to notice
 // with **double asterisks**: <Example de="Sie **ist** nett." en="She is nice." />
+import Icon from '../ui/Icon.astro';
 import SpeakButton from '../ui/SpeakButton.astro';
+import { mark, NOTICE, plain } from './mark';
 
 interface Props {
   de: string;
@@ -12,17 +14,15 @@ interface Props {
 }
 const { de, en, wrong = false } = Astro.props;
 
-const escape = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-const html = escape(de).replace(/\*\*(.+?)\*\*/g, wrong ? '<strong>$1</strong>' : '<strong class="bg-accent-soft rounded px-0.5">$1</strong>');
-const plain = de.replace(/\*\*/g, '');
+const html = mark(de, wrong ? '' : NOTICE);
 ---
 
 <p class="flex items-start gap-2">
   {
     wrong ? (
-      <span class="flex h-8 w-8 flex-none items-center justify-center font-bold text-bad" aria-label="Wrong">✗</span>
+      <span class="flex h-8 w-8 flex-none items-center justify-center text-bad" role="img" aria-label="Wrong"><Icon name="cross" size={18} /></span>
     ) : (
-      <SpeakButton text={plain} />
+      <SpeakButton text={plain(de)} />
     )
   }
   <span class="pt-0.5">

@@ -8,17 +8,19 @@ interface Props {
 const { items } = Astro.props;
 
 const headword = (item: ClientVocabItem) => (item.article ? `${item.article} ${item.de}` : item.de);
+// A noun's gender as a bar down the left edge; the classes are written out so Tailwind finds them.
+const bar = { der: 'border-l-der', die: 'border-l-die', das: 'border-l-das' } as const;
 ---
 
 <div class="vocab">
   <label class="mb-2 inline-flex cursor-pointer items-center gap-2 text-sm text-muted">
-    <input type="checkbox" class="hide-en size-4 accent-[var(--ink)]" />
+    <input type="checkbox" class="hide-en size-4 accent-[var(--accent)]" />
     Hide English to test yourself
   </label>
-  <ul class="card divide-y divide-line">
+  <ul class="divide-y divide-line border-y-2 border-ink">
     {
       items.map((item) => (
-        <li class="flex items-start gap-2 px-3 py-3 sm:px-4">
+        <li class:list={['flex items-start gap-2 border-l-4 py-3 pr-1 pl-3 sm:pl-4', item.article ? bar[item.article] : 'border-l-transparent']}>
           <SpeakButton text={headword(item)} />
           <div class="min-w-0 flex-1">
             <p class="flex flex-wrap items-baseline gap-x-2">
