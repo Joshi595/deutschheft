@@ -84,7 +84,7 @@ export default function NotebookPage({ lessons }: Props) {
             <input className="field" lang="de" placeholder="German, e.g. die Herausforderung" aria-label="German" value={de} onChange={(event) => setDe(event.target.value)} />
             <input className="field" placeholder="English" aria-label="English" value={en} onChange={(event) => setEn(event.target.value)} />
             <input className="field sm:col-span-2" placeholder="Note or example sentence (optional)" aria-label="Note" value={note} onChange={(event) => setNote(event.target.value)} />
-            <button type="submit" className="btn btn-primary justify-self-start" disabled={!de.trim() || !en.trim()}>
+            <button type="submit" className="btn btn-accent justify-self-start" disabled={!de.trim() || !en.trim()}>
               Save word
             </button>
           </form>

@@ -199,7 +199,7 @@ export default function ArticleGame({ data }: Props) {
           {tip && <span className="mt-1 block">{tip}</span>}
         </p>
         {answered && !correct ? (
-          <button type="button" className="btn btn-primary btn-small" onClick={next} autoFocus>
+          <button type="button" className="btn btn-accent btn-small" onClick={next} autoFocus>
             Next word
           </button>
         ) : (

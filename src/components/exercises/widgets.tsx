@@ -4,6 +4,7 @@ import { countWords, type GradeResult, type Response, type ResponseOf } from '..
 import { seededShuffle, tokenize } from '../../lib/grading/shuffle';
 import { speak } from '../../lib/speech';
 import { GermanInput } from './GermanInput';
+import { Icon } from '../ui/Icon';
 import { useRecording } from './useRecording';
 
 /**
@@ -315,8 +316,8 @@ export function Matching({ item, response, onChange, locked, result }: WidgetPro
               </select>
             )}
             <span className="w-5 text-center font-bold" aria-live="polite">
-              {mark === true && <span className="text-good" aria-label="correct">✓</span>}
-              {mark === false && <span className="text-bad" aria-label="wrong">✗</span>}
+              {mark === true && <span className="text-good" role="img" aria-label="correct"><Icon name="check" size={18} /></span>}
+              {mark === false && <span className="text-bad" role="img" aria-label="wrong"><Icon name="cross" size={18} /></span>}
             </span>
           </li>
         );

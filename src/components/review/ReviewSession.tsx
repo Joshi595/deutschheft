@@ -199,7 +199,7 @@ export default function ReviewSession({ vocab, exercises, lessons, homeHref }: P
             <p className="text-muted">
               {remaining} {remaining === 1 ? 'card is' : 'cards are'} due.
             </p>
-            <button type="button" className="btn btn-primary mt-3" onClick={nextRound}>
+            <button type="button" className="btn btn-accent mt-3" onClick={nextRound}>
               Keep going
             </button>
           </div>

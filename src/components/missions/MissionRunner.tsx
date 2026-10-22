@@ -6,6 +6,7 @@ import { completion } from '../../lib/progress/logic';
 import { speak, speakLines, stopSpeaking } from '../../lib/speech';
 import { $notebook, $progress, $settings, saveWord } from '../../lib/stores';
 import { ExerciseCard } from '../exercises/ExerciseCard';
+import { Icon } from '../ui/Icon';
 import { SessionBar, SessionSummary, useSessionLog } from '../session/Session';
 import { Say } from '../speak/SpeakTurn';
 
@@ -163,7 +164,7 @@ export default function MissionRunner({ mission, next, listHref, speakHref }: Pr
           <ul className="mt-1 grid gap-1">
             {mission.practised.map((point) => (
               <li key={point} className="flex gap-2">
-                <span className="font-bold text-good" aria-hidden="true">✓</span>
+                <Icon name="check" size={18} className="flex-none text-good" />
                 <span>{point}</span>
               </li>
             ))}
