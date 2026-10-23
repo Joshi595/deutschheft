@@ -13,21 +13,25 @@ sets:
           - { left: müssen, right: müsste }
           - { left: wissen, right: wüsste }
           - { left: kommen, right: käme }
+        explanation: "Konjunktiv II comes from the Präteritum, usually with an umlaut: hätte, wäre, könnte, müsste, wüsste, käme."
       - id: form2
         type: fill-blank
         tags: [forms]
         prompt: "Wenn du Zeit ___, … (haben, du)"
         answers: [hättest]
+        explanation: "hätte + the du ending -st: hättest."
       - id: form3
         type: fill-blank
         tags: [forms]
         prompt: "Wenn wir reich ___, … (sein, wir)"
         answers: [wären]
+        explanation: "wäre with wir becomes wären."
       - id: form4
         type: fill-blank
         tags: [forms]
         prompt: "Was ___ du an meiner Stelle machen? (werden)"
         answers: [würdest]
+        explanation: "würde + infinitive for most verbs; with du it is würdest."
 
   - title: Unreal conditions
     items:
@@ -37,28 +41,33 @@ sets:
         prompt: "Wenn ich mehr Geld ___, würde ich reisen."
         options: [hätte, habe, würde haben]
         answer: hätte
+        explanation: "An unreal condition takes Konjunktiv II in the wenn clause too: wenn ich mehr Geld hätte."
       - id: cond2
         type: multiple-choice
         tags: [conditions]
         prompt: "Wenn es nicht so weit wäre, ___ wir zu Fuß gehen."
         options: [könnten, können, konnten]
         answer: könnten
+        explanation: "The main clause of an unreal condition is in the Konjunktiv II: wir könnten."
       - id: cond3
         type: true-false
         tags: [conditions]
         prompt: "'Wenn ich Zeit habe, komme ich' means that I definitely do not have time."
         answer: false
+        explanation: "With the indicative (habe) the condition is real and possible. Unreal would be Wenn ich Zeit hätte."
       - id: cond4
         type: word-order
         tags: [conditions]
         prompt: If I had more time, I would learn the piano.
         answer: "Wenn ich mehr Zeit hätte, würde ich Klavier lernen."
+        explanation: "In the wenn clause hätte goes last; the main clause starts with würde, and lernen goes last."
       - id: cond5
         type: translation
         tags: [conditions]
         prompt: I would help you if I could.
         answers:
           - "Ich würde dir helfen, wenn ich könnte."
+        explanation: "würde + infinitive in the main clause; in the wenn clause the modal könnte stands alone."
 
   - title: Wishes
     items:
@@ -68,12 +77,14 @@ sets:
         prompt: "Wenn es ___ schon Sommer wäre!"
         options: [nur, aber, auch]
         answer: nur
+        explanation: "Wishes with wenn often use nur: Wenn es nur schon Sommer wäre!"
       - id: wish2
         type: translation
         tags: [wishes]
         prompt: I wish I could sing better.
         answers:
           - "Ich wünschte, ich könnte besser singen."
+        explanation: "Ich wünschte, … plus a Konjunktiv II clause: ich könnte besser singen."
 
   - title: The past
     items:
@@ -83,12 +94,14 @@ sets:
         prompt: "Wenn ich mehr gelernt ___, hätte ich die Prüfung bestanden."
         options: [hätte, habe, wäre]
         answer: hätte
+        explanation: "For the past, use hätte/wäre + participle: wenn ich mehr gelernt hätte."
       - id: past2
         type: multiple-choice
         tags: [past]
         prompt: "Wenn du früher gekommen ___, hättest du ihn gesehen."
         options: [wärst, hättest, bist]
         answer: wärst
+        explanation: "kommen takes sein, so the past Konjunktiv is wärst … gekommen."
       - id: past3
         type: multiple-choice
         tags: [regrets]
@@ -98,17 +111,20 @@ sets:
           - "Ich hätte ihn sollen anrufen."
           - "Ich sollte ihn angerufen hätte."
         answer: "Ich hätte ihn anrufen sollen."
+        explanation: "With a modal, the past Konjunktiv is hätte + two infinitives at the end: anrufen sollen."
       - id: past4
         type: word-order
         tags: [regrets]
         prompt: You could have told me that!
         answer: "Du hättest mir das sagen können!"
+        explanation: "hätte + infinitive + modal infinitive at the end: hättest … sagen können."
       - id: past5
         type: translation
         tags: [past]
         prompt: "If I had known that, I would have come. (wissen, kommen)"
         answers:
           - "Wenn ich das gewusst hätte, wäre ich gekommen."
+        explanation: "wissen takes haben (gewusst hätte); kommen takes sein (wäre gekommen)."
 
   - title: A dream
     items:
@@ -125,6 +141,7 @@ sets:
           - [hätte]
           - [würden, könnten]
           - [wäre]
+        explanation: "Most verbs use würde + infinitive (gewinnen, kündigen, kaufen); haben, sein and können use their own forms: hätte, wäre, könnten."
 
   - title: A missed chance
     stimulus:
@@ -145,18 +162,21 @@ sets:
         tags: [listening]
         prompt: Felix hat den Job bekommen.
         answer: false
+        explanation: "Felix says: Nein. Ich war zu spät beim Vorstellungsgespräch."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Was hätte Felix tun sollen?
         options: ["einen früheren Zug nehmen", "mit dem Auto fahren", "ein neues Handy kaufen"]
         answer: "einen früheren Zug nehmen"
+        explanation: "Felix says: Ich hätte den früheren Zug nehmen sollen."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Warum hat Felix nicht angerufen?
         options: ["Sein Akku war leer.", "Er hatte keine Nummer.", "Er wollte nicht."]
         answer: "Sein Akku war leer."
+        explanation: "Felix says: Mein Akku war leer."
 
   - title: What if?
     items:

@@ -8,24 +8,28 @@ sets:
         prompt: "Ich habe mich ___ das Wetter gewöhnt."
         options: [an, zu, auf]
         answer: an
+        explanation: "sich gewöhnen an + accusative: sich an das Wetter gewöhnen."
       - id: v2
         type: multiple-choice
         tags: [verbs]
         prompt: "Das hängt ___ Wetter ab."
         options: [vom, auf das, am]
         answer: vom
+        explanation: "abhängen von + dative: von dem → vom Wetter."
       - id: v3
         type: multiple-choice
         tags: [verbs]
         prompt: "Die Nachbarn beschweren sich ___ den Lärm."
         options: [über, von, für]
         answer: über
+        explanation: "sich beschweren über + accusative: über den Lärm."
       - id: v4
         type: multiple-choice
         tags: [verbs]
         prompt: "Die Prüfung besteht ___ vier Teilen."
         options: [aus, von, mit]
         answer: aus
+        explanation: "bestehen aus means to consist of: aus vier Teilen."
       - id: v5
         type: matching
         tags: [verbs]
@@ -36,6 +40,7 @@ sets:
           - { left: sich konzentrieren, right: auf }
           - { left: sich erkundigen, right: nach }
           - { left: sich entschuldigen (bei jemandem), right: bei }
+        explanation: "sich bewerben um, sich beschäftigen mit, sich konzentrieren auf, sich erkundigen nach, sich entschuldigen bei (a person)."
 
   - title: Adjectives and nouns
     items:
@@ -45,33 +50,39 @@ sets:
         prompt: "Ich bin stolz ___ dich."
         options: [auf, von, über]
         answer: auf
+        explanation: "stolz auf + accusative: proud of."
       - id: an2
         type: multiple-choice
         tags: [adjectives]
         prompt: "Sind Sie zufrieden ___ dem Service?"
         options: [mit, über, von]
         answer: mit
+        explanation: "zufrieden mit + dative: satisfied with."
       - id: an3
         type: multiple-choice
         tags: [nouns]
         prompt: "Ich habe Angst ___ der Prüfung."
         options: [vor, von, für]
         answer: vor
+        explanation: "Angst vor + dative: afraid of."
       - id: an4
         type: fill-blank
         tags: [adjectives]
         prompt: "Die Stadt ist bekannt ___ ihr Bier."
         answers: [für]
+        explanation: "bekannt für: known for."
       - id: an5
         type: fill-blank
         tags: [nouns]
         prompt: "Haben Sie Erfahrung ___ Kindern?"
         answers: [mit]
+        explanation: "Erfahrung mit + dative: experience with."
       - id: an6
         type: fill-blank
         tags: [adjectives]
         prompt: "Ich bin gespannt ___ den Film."
         answers: [auf]
+        explanation: "gespannt auf + accusative: curious about something to come."
 
   - title: Pointing forward
     items:
@@ -81,22 +92,26 @@ sets:
         prompt: "Ich freue mich ___, dass du kommst."
         options: [darauf, auf, worauf]
         answer: darauf
+        explanation: "A da-word points forward to a dass clause: sich darauf freuen, dass …"
       - id: fw2
         type: multiple-choice
         tags: [da-words]
         prompt: "Es hängt ___ ab, ob ich Zeit habe."
         options: [davon, vom, wovon]
         answer: davon
+        explanation: "abhängen von becomes davon before an ob clause."
       - id: fw3
         type: fill-blank
         tags: [da-words]
         prompt: "Er hat sich ___ beschwert, dass die Musik laut war."
         answers: [darüber]
+        explanation: "sich beschweren über becomes darüber before the dass clause."
       - id: fw4
         type: word-order
         tags: [da-words]
         prompt: I have got used to getting up early.
         answer: "Ich habe mich daran gewöhnt, früh aufzustehen."
+        explanation: "sich gewöhnen an becomes daran, pointing to the infinitive clause früh aufzustehen."
 
   - title: Ask the question
     items:
@@ -106,17 +121,20 @@ sets:
         prompt: "___ bist du so stolz? – Auf meinen Abschluss."
         options: [Worauf, Auf wen, Wofür]
         answer: Worauf
+        explanation: "For a thing (the degree), ask with wo(r) + preposition: Worauf?"
       - id: q2
         type: multiple-choice
         tags: [wo-words]
         prompt: "___ bist du böse? – Auf meinen Bruder."
         options: [Auf wen, Worauf, Wem]
         answer: Auf wen
+        explanation: "For a person, ask with the preposition + wen: Auf wen?"
       - id: q3
         type: fill-blank
         tags: [wo-words]
         prompt: "___ beschäftigst du dich gerade? – Mit einem Projekt."
         answers: [Womit]
+        explanation: "mit + a thing becomes womit."
 
   - title: A complaint
     items:
@@ -133,6 +151,7 @@ sets:
           - [darüber]
           - [bei]
           - [für]
+        explanation: "sich beschweren über; zufrieden mit; warten auf; sich ärgern darüber, dass; sich entschuldigen bei (person) für (reason)."
 
   - title: About yourself
     items:

@@ -8,22 +8,26 @@ sets:
         prompt: "___ ist meine Brille?"
         options: [Wo, Wohin]
         answer: Wo
+        explanation: "wo asks where something is, with no movement. wohin asks where something is going."
       - id: wo2
         type: multiple-choice
         tags: [wo wohin]
         prompt: "___ fahrt ihr am Wochenende?"
         options: [Wohin, Wo]
         answer: Wohin
+        explanation: "fahren is movement to a destination, so the question is wohin."
       - id: wo3
         type: true-false
         tags: [wo wohin]
         prompt: "'Ich lege das Buch auf den Tisch' answers the question Wohin?"
         answer: true
+        explanation: "legen moves the book to a new place, so the sentence answers wohin? and takes the accusative (den Tisch)."
       - id: wo4
         type: true-false
         tags: [wo wohin]
         prompt: "'Wir laufen im Park' describes a movement into the park."
         answer: false
+        explanation: "im Park (dative) means the running happens inside the park. Into the park would be in den Park."
 
   - title: Dative or accusative?
     items:
@@ -33,40 +37,47 @@ sets:
         prompt: "Das Buch liegt auf ___ Tisch."
         options: [dem, den]
         answer: dem
+        explanation: "liegen is a position, no movement, so auf takes the dative: auf dem Tisch."
       - id: case2
         type: multiple-choice
         tags: [two-way prepositions]
         prompt: "Ich lege das Buch auf ___ Tisch."
         options: [den, dem]
         answer: den
+        explanation: "legen is a movement to a place, so auf takes the accusative: auf den Tisch."
       - id: case3
         type: multiple-choice
         tags: [two-way prepositions]
         prompt: "Das Bild hängt an ___ Wand."
         options: [der, die]
         answer: der
+        explanation: "hängen here is a position (wo?), so an takes the dative: an der Wand."
       - id: case4
         type: multiple-choice
         tags: [two-way prepositions]
         prompt: "Wir gehen heute Abend ___ Kino."
         options: [ins, im]
         answer: ins
+        explanation: "Going into the cinema is movement (wohin?), so the accusative: in das → ins Kino."
       - id: case5
         type: multiple-choice
         tags: [two-way prepositions]
         prompt: "Die Katze schläft unter ___ Sofa."
         options: [dem, das]
         answer: dem
+        explanation: "schlafen is a position, so unter takes the dative: unter dem Sofa."
       - id: case6
         type: fill-blank
         tags: [two-way prepositions]
         prompt: "Stell die Milch bitte in ___ Kühlschrank."
         answers: [den]
+        explanation: "stellen moves the milk into the fridge (wohin?), so the accusative: in den Kühlschrank."
       - id: case7
         type: fill-blank
         tags: [two-way prepositions]
         prompt: "Das Auto steht vor ___ Haus."
         answers: [dem]
+        explanation: "stehen is a position, so vor takes the dative: vor dem Haus."
 
   - title: Which verb?
     items:
@@ -83,18 +94,21 @@ sets:
         prompt: "Ich ___ das Handy auf den Schreibtisch."
         options: [lege, liege, stelle]
         answer: lege
+        explanation: "legen is to put something down flat; liegen means it already lies there; stellen is for upright things."
       - id: verb3
         type: multiple-choice
         tags: [position verbs]
         prompt: "Er ___ sich auf den Stuhl."
         options: [setzt, sitzt]
         answer: setzt
+        explanation: "sich setzen is the movement of sitting down; sitzen is being seated."
       - id: verb4
         type: multiple-choice
         tags: [position verbs]
         prompt: "Die Kinder ___ schon im Auto."
         options: [sitzen, setzen]
         answer: sitzen
+        explanation: "The children are already in the car, a position, so sitzen."
       - id: verb5
         type: matching
         tags: [position verbs]
@@ -104,6 +118,7 @@ sets:
           - { left: liegen, right: legen }
           - { left: sitzen, right: sich setzen }
           - { left: hängen (gehangen), right: hängen (gehängt) }
+        explanation: "Each position verb (stehen, liegen, sitzen, hängen) has a movement partner (stellen, legen, sich setzen, hängen with gehängt)."
 
   - title: Tidying up
     items:
@@ -119,6 +134,7 @@ sets:
           - [den]
           - [dem]
           - [die]
+        explanation: "liegen and stehen are positions, so the dative (dem Boden, dem Bett, dem Schreibtisch); stellen, hängen and bringen are movements, so the accusative (das Regal, den Schrank, die Küche)."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -128,16 +144,19 @@ sets:
         tags: [two-way prepositions]
         prompt: The lamp hangs above the table.
         answer: "Die Lampe hängt über dem Tisch."
+        explanation: "hängen is a position here, so über takes the dative: über dem Tisch."
       - id: order2
         type: word-order
         tags: [two-way prepositions]
         prompt: I am putting the glasses in the cupboard.
         answer: "Ich stelle die Gläser in den Schrank."
+        explanation: "stellen is a movement into the cupboard, so the accusative: in den Schrank."
       - id: order3
         type: word-order
         tags: [two-way prepositions]
         prompt: The sofa is between the door and the window.
         answer: "Das Sofa steht zwischen der Tür und dem Fenster."
+        explanation: "stehen is a position, so zwischen takes the dative: der Tür und dem Fenster."
 
   - title: Say it in German
     items:
@@ -147,12 +166,14 @@ sets:
         prompt: The key is lying on the desk.
         answers:
           - "Der Schlüssel liegt auf dem Schreibtisch."
+        explanation: "liegen is a position, so auf takes the dative: auf dem Schreibtisch."
       - id: tr2
         type: translation
         tags: [two-way prepositions]
         prompt: We are going to the park.
         answers:
           - "Wir gehen in den Park."
+        explanation: "Going into the park is movement, so the accusative: in den Park."
 
   - title: Where is everything?
     stimulus:
@@ -178,17 +199,20 @@ sets:
         prompt: Wo steht das Sofa?
         options: ["zwischen den Fenstern", "neben der Tür", "vor dem Fernseher"]
         answer: "zwischen den Fenstern"
+        explanation: "Carla says: Zwischen die zwei Fenster. Afterwards the sofa stands zwischen den Fenstern."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Wo hängt das große Bild?
         options: ["über dem Sofa", "über dem Bett", "neben der Tür"]
         answer: "über dem Sofa"
+        explanation: "Carla says: Das große Bild hängen wir über das Sofa."
       - id: listen3
         type: true-false
         tags: [listening]
         prompt: Die Katze liegt unter dem Sofa.
         answer: false
+        explanation: "Carla says the cat liegt schon im Bett, in the bed."
 
   - title: Describe your room
     items:

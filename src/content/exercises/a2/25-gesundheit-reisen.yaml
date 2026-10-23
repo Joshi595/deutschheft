@@ -8,23 +8,27 @@ sets:
         prompt: "Ich ___ Fieber und Husten."
         options: [habe, bin, tue]
         answer: habe
+        explanation: "German says you 'have' a fever and a cough: Ich habe Fieber und Husten."
       - id: doc2
         type: multiple-choice
         tags: [symptoms]
         prompt: "Der Rücken tut ___ weh."
         options: [mir, mich, ich]
         answer: mir
+        explanation: "wehtun takes the person in the dative: Der Rücken tut mir weh."
       - id: doc3
         type: multiple-choice
         tags: [symptoms]
         prompt: "Ich habe ___ drei Tagen Halsschmerzen."
         options: [seit, für, vor]
         answer: seit
+        explanation: "seit + present for something still going on: seit drei Tagen."
       - id: doc4
         type: fill-blank
         tags: [symptoms]
         prompt: "Ich bin hingefallen und habe mich ___. (hurt)"
         answers: [verletzt]
+        explanation: "sich verletzen, to hurt yourself; ver- verbs have no ge-: verletzt."
       - id: doc5
         type: matching
         tags: [health vocabulary]
@@ -35,6 +39,7 @@ sets:
           - { left: der Termin, right: the appointment }
           - { left: Mir ist schlecht., right: I feel sick. }
           - { left: Gute Besserung!, right: Get well soon! }
+        explanation: "Rezept prescription, Apotheke pharmacy, Termin appointment, Mir ist schlecht I feel sick, Gute Besserung get well soon."
 
   - title: Medicine instructions
     stimulus:
@@ -47,17 +52,20 @@ sets:
         tags: [reading]
         prompt: Erwachsene nehmen die Tabletten vor dem Essen.
         answer: false
+        explanation: "The leaflet says the tablets are taken nach dem Essen: after meals."
       - id: med2
         type: true-false
         tags: [reading]
         prompt: Man darf die Tabletten höchstens fünf Tage nehmen.
         answer: true
+        explanation: "Nicht länger als 5 Tage nehmen: no longer than five days."
       - id: med3
         type: multiple-choice
         tags: [reading]
         prompt: Was gilt für Kinder unter 12?
         options: ["Sie müssen zuerst den Arzt fragen.", "Sie nehmen eine halbe Tablette.", "Sie dürfen die Tabletten nie nehmen."]
         answer: "Sie müssen zuerst den Arzt fragen."
+        explanation: "Children under 12 only nach Rücksprache mit dem Arzt: after asking the doctor."
 
   - title: Travel
     items:
@@ -67,16 +75,19 @@ sets:
         prompt: "You want a ticket there and back. You ask for a ticket ___."
         options: [hin und zurück, einfach, mit Anschluss]
         answer: hin und zurück
+        explanation: "hin und zurück means there and back: a return ticket. einfach is one way."
       - id: travel2
         type: fill-blank
         tags: [travel]
         prompt: "Von welchem ___ fährt der Zug nach Bonn? (platform)"
         answers: [Gleis]
+        explanation: "das Gleis is the platform or track a train leaves from."
       - id: travel3
         type: fill-blank
         tags: [travel]
         prompt: "Der Zug hat zwanzig Minuten ___. (delay)"
         answers: [Verspätung]
+        explanation: "die Verspätung is the delay: Der Zug hat zwanzig Minuten Verspätung."
       - id: travel4
         type: translation
         tags: [travel]
@@ -84,12 +95,14 @@ sets:
         answers:
           - "Ich hätte gern ein Doppelzimmer mit Frühstück."
           - "Ich möchte ein Doppelzimmer mit Frühstück."
+        explanation: "Ich hätte gern … is the polite way to ask for something; Doppelzimmer is a double room."
       - id: travel5
         type: multiple-choice
         tags: [travel, perfect tense]
         prompt: "Letztes Jahr ___ wir nach Portugal geflogen."
         options: [sind, haben]
         answer: sind
+        explanation: "fliegen is movement, so the Perfekt uses sein: wir sind geflogen."
 
   - title: A holiday story
     items:
@@ -106,6 +119,7 @@ sets:
           - [Leider]
           - [hat]
           - [gefallen]
+        explanation: "geflogen takes sein (sind); war for a description in the past; gebadet takes haben; Leider for bad news; gefallen takes haben: hat … gefallen."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -115,11 +129,13 @@ sets:
         tags: [advice]
         prompt: You should stay in bed for a few days.
         answer: "Sie sollten ein paar Tage im Bett bleiben."
+        explanation: "sollten gives advice; the time ein paar Tage comes before the place im Bett, and bleiben goes last."
       - id: order2
         type: word-order
         tags: [medicine]
         prompt: Take the tablets three times a day after meals.
         answer: "Nehmen Sie die Tabletten dreimal täglich nach dem Essen."
+        explanation: "Polite instruction: Nehmen Sie …; time (dreimal täglich) comes before nach dem Essen."
 
   - title: An announcement
     stimulus:
@@ -135,17 +151,20 @@ sets:
         prompt: Wie viel Verspätung hat der ICE?
         options: ["circa 25 Minuten", "circa 12 Minuten", "circa 20 Minuten"]
         answer: "circa 25 Minuten"
+        explanation: "The announcement says: hat heute circa 25 Minuten Verspätung."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Von welchem Gleis fährt der Zug nach Ulm?
         options: ["Gleis 8", "Gleis 5", "Gleis 14"]
         answer: "Gleis 8"
+        explanation: "Passengers for Ulm take the Regionalexpress … von Gleis 8."
       - id: listen3
         type: true-false
         tags: [listening]
         prompt: Der ICE nach Stuttgart fällt heute aus.
         answer: false
+        explanation: "The ICE is only late, by about 25 minutes. ausfallen would mean it does not run at all."
 
   - title: Call the surgery
     items:

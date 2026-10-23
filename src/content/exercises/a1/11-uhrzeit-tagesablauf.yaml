@@ -9,18 +9,21 @@ sets:
         prompt: vierzehn Uhr dreißig
         options: ["14:30", "4:13", "14:13"]
         answer: "14:30"
+        explanation: "Official times use the 24-hour clock: hours, then minutes. vierzehn Uhr dreißig is 14:30."
       - id: off2
         type: multiple-choice
         tags: [time]
         prompt: neun Uhr fünfzehn
         options: ["9:15", "9:50", "19:15"]
         answer: "9:15"
+        explanation: "neun Uhr fünfzehn: the hour first, then the minutes, so 9:15."
       - id: off3
         type: multiple-choice
         tags: [time]
         prompt: achtzehn Uhr fünfundvierzig
         options: ["18:45", "18:54", "8:45"]
         answer: "18:45"
+        explanation: "achtzehn Uhr fünfundvierzig is 18:45. In fünfundvierzig the ones come before the tens."
 
   - title: Everyday time
     instructions: Careful with halb.
@@ -38,39 +41,46 @@ sets:
         prompt: Viertel nach acht
         options: ["8:15", "7:45", "8:45"]
         answer: "8:15"
+        explanation: "Viertel nach means a quarter past: Viertel nach acht is 8:15."
       - id: day3
         type: multiple-choice
         tags: [time]
         prompt: Viertel vor zehn
         options: ["9:45", "10:15", "10:45"]
         answer: "9:45"
+        explanation: "Viertel vor means a quarter to: Viertel vor zehn is 9:45."
       - id: day4
         type: multiple-choice
         tags: [time, halb]
         prompt: halb eins
         options: ["12:30", "1:30", "12:00"]
         answer: "12:30"
+        explanation: "halb counts towards the next hour: halb eins is half an hour before one, so 12:30."
       - id: day5
         type: multiple-choice
         tags: [time]
         prompt: zehn nach sieben
         options: ["7:10", "6:50", "10:07"]
         answer: "7:10"
+        explanation: "nach means 'past': zehn nach sieben is ten past seven, 7:10."
       - id: day6
         type: fill-blank
         tags: [time, halb]
         prompt: "6:30 = halb ___"
         answers: [sieben]
+        explanation: "halb points to the coming hour: 6:30 is halfway to seven, so halb sieben."
       - id: day7
         type: fill-blank
         tags: [time]
         prompt: "5:15 = Viertel ___ fünf"
         answers: [nach]
+        explanation: "Fifteen minutes after the hour is Viertel nach: Viertel nach fünf."
       - id: day8
         type: fill-blank
         tags: [time]
         prompt: "5:45 = Viertel ___ sechs"
         answers: [vor]
+        explanation: "Fifteen minutes before the hour is Viertel vor: 5:45 is Viertel vor sechs."
 
   - title: Listen for the time
     instructions: Announcements use the official way.
@@ -86,6 +96,7 @@ sets:
         prompt: Wann fährt der Zug nach München?
         options: ["16:20", "6:20", "16:12"]
         answer: "16:20"
+        explanation: "The announcement says sechzehn Uhr zwanzig: 16 hours, 20 minutes."
       - id: hear2
         type: multiple-choice
         tags: [listening, time]
@@ -109,6 +120,7 @@ sets:
         prompt: Wann ist die Praxis geschlossen?
         options: [am Freitag, am Donnerstag, am Montag]
         answer: am Freitag
+        explanation: "The practice is open Monday to Thursday; am Freitag ist die Praxis geschlossen."
 
   - title: um, am or von … bis?
     items:
@@ -117,21 +129,25 @@ sets:
         tags: [time prepositions]
         prompt: "Der Kurs beginnt ___ neun Uhr."
         answers: [um]
+        explanation: "For a time on the clock, German uses um: um neun Uhr."
       - id: prep2
         type: fill-blank
         tags: [time prepositions]
         prompt: "___ Samstag arbeite ich nicht."
         answers: [Am]
+        explanation: "For days, German uses am: am Samstag, am Montag."
       - id: prep3
         type: fill-blank
         tags: [time prepositions]
         prompt: "___ Abend sehe ich fern."
         answers: [Am]
+        explanation: "Parts of the day also take am: am Morgen, am Abend. Only die Nacht is in der Nacht."
       - id: prep4
         type: fill-blank
         tags: [time prepositions]
         prompt: "Ich arbeite von acht ___ sechzehn Uhr."
         answers: [bis]
+        explanation: "From … to … is von … bis …: von acht bis sechzehn Uhr."
       - id: prep5
         type: matching
         tags: [days]
@@ -142,6 +158,7 @@ sets:
           - { left: Mittwoch, right: Wednesday }
           - { left: Samstag, right: Saturday }
           - { left: Sonntag, right: Sunday }
+        explanation: "Mittwoch means 'mid-week'. Most other days end in -tag; Donnerstag is named after the god Donar (Thor)."
 
   - title: Separable verbs
     instructions: Put the words in the right order. The prefix goes to the end.
@@ -151,26 +168,31 @@ sets:
         tags: [separable verbs]
         prompt: I get up at seven o'clock.
         answer: Ich stehe um sieben Uhr auf.
+        explanation: "aufstehen is separable: stehe comes second and auf goes to the very end."
       - id: sep2
         type: word-order
         tags: [separable verbs]
         prompt: We go shopping on Saturday.
         answer: Wir kaufen am Samstag ein.
+        explanation: "einkaufen splits: kaufen comes second and ein goes to the end of the sentence."
       - id: sep3
         type: word-order
         tags: [separable verbs]
         prompt: When does the film start?
         answer: Wann fängt der Film an?
+        explanation: "anfangen splits: fängt comes after the question word and an goes to the end."
       - id: sep4
         type: fill-blank
         tags: [separable verbs]
         prompt: "Sie ruft ihre Mutter ___. (anrufen)"
         answers: [an]
+        explanation: "anrufen splits in a main clause: ruft is second, an goes to the end."
       - id: sep5
         type: fill-blank
         tags: [separable verbs]
         prompt: "Am Abend sehe ich ___. (fernsehen)"
         answers: [fern]
+        explanation: "fernsehen splits: sehe comes second, fern goes to the end."
       - id: sep6
         type: multiple-choice
         tags: [separable verbs]
@@ -180,6 +202,7 @@ sets:
           - Ich aufstehe um sechs Uhr.
           - Ich stehe auf um sechs Uhr.
         answer: Ich stehe um sechs Uhr auf.
+        explanation: "The prefix auf goes to the very end, after the time: Ich stehe um sechs Uhr auf."
 
   - title: Say and write it
     items:
@@ -190,11 +213,13 @@ sets:
         answers:
           - Wie spät ist es?
           - Wie viel Uhr ist es?
+        explanation: "German asks 'how late is it?': Wie spät ist es? Wie viel Uhr ist es? means the same."
       - id: tr2
         type: translation
         tags: [time, halb]
         prompt: It is half past three. (everyday way)
         answers: [Es ist halb vier.]
+        explanation: "halb looks to the next hour: 3:30 is halb vier."
       - id: tr3
         type: translation
         tags: [time prepositions]
@@ -202,6 +227,7 @@ sets:
         answers:
           - Am Montag arbeite ich.
           - Ich arbeite am Montag.
+        explanation: "Days take am. If Am Montag comes first, the verb arbeite still comes second, before ich."
       - id: write1
         type: writing-task
         tags: [writing, daily routine]

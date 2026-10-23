@@ -7,21 +7,25 @@ sets:
         tags: [nominative]
         prompt: "Der Mann, ___ dort steht, ist mein Chef."
         answers: [der]
+        explanation: "der Mann is masculine and is the subject of steht, so the relative pronoun is der."
       - id: nom2
         type: fill-blank
         tags: [nominative]
         prompt: "Ich habe eine Kollegin, ___ fünf Sprachen spricht."
         answers: [die]
+        explanation: "Kollegin is feminine and the subject of spricht, so die."
       - id: nom3
         type: fill-blank
         tags: [nominative]
         prompt: "Das ist das Kind, ___ so gut singt."
         answers: [das]
+        explanation: "Kind is neuter and the subject of singt, so das."
       - id: nom4
         type: fill-blank
         tags: [nominative]
         prompt: "Die Leute, ___ hier wohnen, sind sehr nett."
         answers: [die]
+        explanation: "Leute is plural and the subject of wohnen, so die."
 
   - title: Accusative
     items:
@@ -31,23 +35,27 @@ sets:
         prompt: "Der Film, ___ ich gestern gesehen habe, war super."
         options: [den, der, dem]
         answer: den
+        explanation: "Film is masculine and the object of gesehen, so the accusative den."
       - id: acc2
         type: multiple-choice
         tags: [accusative]
         prompt: "Die Frau, ___ du kennst, ist meine Tante."
         options: [die, der, den]
         answer: die
+        explanation: "Frau is feminine; the accusative is still die."
       - id: acc3
         type: multiple-choice
         tags: [accusative]
         prompt: "Der Pullover, ___ du trägst, ist schön."
         options: [den, der, das]
         answer: den
+        explanation: "Pullover is masculine and the object of trägst, so den."
       - id: acc4
         type: fill-blank
         tags: [accusative]
         prompt: "Das Buch, ___ sie mir geschenkt hat, ist spannend."
         answers: [das]
+        explanation: "Buch is neuter and the object of geschenkt, so das."
 
   - title: Dative
     items:
@@ -57,23 +65,27 @@ sets:
         prompt: "Der Freund, ___ ich geholfen habe, hat mich eingeladen."
         options: [dem, den, der]
         answer: dem
+        explanation: "helfen takes the dative; Freund is masculine, so dem."
       - id: dat2
         type: multiple-choice
         tags: [dative]
         prompt: "Die Kollegin, ___ das Auto gehört, ist im Urlaub."
         options: [der, die, dem]
         answer: der
+        explanation: "gehören takes the dative; Kollegin is feminine, so der."
       - id: dat3
         type: multiple-choice
         tags: [dative]
         prompt: "Das sind die Nachbarn, ___ ich die Schlüssel gegeben habe."
         options: [denen, den, die]
         answer: denen
+        explanation: "geben has the receivers in the dative; in the plural the relative pronoun is denen."
       - id: dat4
         type: fill-blank
         tags: [dative]
         prompt: "Das Kind, ___ ich das Buch vorgelesen habe, ist eingeschlafen."
         answers: [dem]
+        explanation: "vorlesen has the listener in the dative; Kind is neuter, so dem."
 
   - title: Whose
     items:
@@ -83,17 +95,20 @@ sets:
         prompt: "Das ist der Mann, ___ Auto vor meiner Tür steht."
         options: [dessen, deren, dem]
         answer: dessen
+        explanation: "'Whose' for a masculine noun is dessen: der Mann, dessen Auto …"
       - id: gen2
         type: multiple-choice
         tags: [dessen deren]
         prompt: "Die Frau, ___ Sohn in meiner Klasse ist, ist Ärztin."
         options: [deren, dessen, der]
         answer: deren
+        explanation: "'Whose' for a feminine noun is deren: die Frau, deren Sohn …"
       - id: gen3
         type: fill-blank
         tags: [dessen deren]
         prompt: "Die Familie, ___ Haus wir gekauft haben, wohnt jetzt in Spanien."
         answers: [deren]
+        explanation: "Familie is feminine, so 'whose' is deren."
 
   - title: Join the sentences
     instructions: Make one sentence with a relative clause.
@@ -104,17 +119,20 @@ sets:
         prompt: "Ich habe einen Freund. Der Freund wohnt in Rom."
         answers:
           - "Ich habe einen Freund, der in Rom wohnt."
+        explanation: "Freund is masculine and the subject of wohnt, so der; the verb goes to the end."
       - id: join2
         type: translation
         tags: [building relative clauses]
         prompt: "Die Wohnung ist zu teuer. Wir haben die Wohnung gestern besichtigt."
         answers:
           - "Die Wohnung, die wir gestern besichtigt haben, ist zu teuer."
+        explanation: "Wohnung is feminine and the object, so die; the relative clause sits after the noun, with haben last."
       - id: join3
         type: word-order
         tags: [building relative clauses]
         prompt: The restaurant you recommended to me was great.
         answer: "Das Restaurant, das du mir empfohlen hast, war toll."
+        explanation: "Restaurant is neuter and the object of empfohlen, so das; hast goes to the end."
 
   - title: True or false?
     items:
@@ -123,11 +141,13 @@ sets:
         tags: [rules]
         prompt: "In German you can leave out the relative pronoun, as in English 'the film I saw'."
         answer: false
+        explanation: "German always needs the relative pronoun: der Film, den ich gesehen habe."
       - id: tf2
         type: true-false
         tags: [rules]
         prompt: "The case of the relative pronoun comes from its job in the relative clause."
         answer: true
+        explanation: "Gender and number come from the noun; the case comes from the pronoun's job inside its own clause."
 
   - title: People in my building
     items:
@@ -143,6 +163,7 @@ sets:
           - [der]
           - [denen]
           - [den]
+        explanation: "Herr Kurz is the subject (der); the family's children (deren); helfen + dative for a woman (der); tragen für… the plural dative (denen); kennen + accusative (den)."
 
   - title: Describe it
     items:

@@ -8,22 +8,26 @@ sets:
         prompt: "'Er wird wohl noch im Büro sein.' What does it mean?"
         options: ["He is probably still at the office.", "He will be at the office later.", "He is well and at the office."]
         answer: "He is probably still at the office."
+        explanation: "werden + wohl + infinitive is a guess about the present: he is probably still there."
       - id: fg2
         type: multiple-choice
         tags: [werden]
         prompt: "'In zwanzig Jahren werden wir anders leben.' What is it?"
         options: [a prediction about the future, a guess about now, a promise]
         answer: a prediction about the future
+        explanation: "With a future time like In zwanzig Jahren, werden + infinitive is a prediction."
       - id: fg3
         type: fill-blank
         tags: [werden wohl]
         prompt: "Sie antwortet nicht. Sie ___ wohl schon schlafen."
         answers: [wird]
+        explanation: "A guess about now: wird + wohl + infinitive at the end (schlafen)."
       - id: fg4
         type: word-order
         tags: [werden wohl]
         prompt: That will probably be the new colleague.
         answer: "Das wird wohl der neue Kollege sein."
+        explanation: "werden + wohl expresses a guess; sein goes to the end."
 
   - title: How sure?
     items:
@@ -37,23 +41,27 @@ sets:
           - { left: vielleicht, right: about 50 % }
           - { left: kaum, right: about 20 % }
           - { left: auf keinen Fall, right: 0 % }
+        explanation: "From certain to impossible: auf jeden Fall, wahrscheinlich, vielleicht, kaum, auf keinen Fall."
       - id: sure2
         type: multiple-choice
         tags: [certainty]
         prompt: "You are almost sure he is coming, but not 100 %. Er kommt ___."
         options: [wahrscheinlich, auf keinen Fall, kaum]
         answer: wahrscheinlich
+        explanation: "wahrscheinlich means probably: very likely, but not certain."
       - id: sure3
         type: multiple-choice
         tags: [certainty]
         prompt: "Das glaube ich ___. (I hardly think so.)"
         options: [kaum, wohl, bestimmt]
         answer: kaum
+        explanation: "kaum means hardly: Das glaube ich kaum, I hardly think so."
       - id: sure4
         type: true-false
         tags: [certainty]
         prompt: "'vielleicht' and 'möglicherweise' mean roughly the same."
         answer: true
+        explanation: "vielleicht and möglicherweise both mean maybe or possibly."
 
   - title: Phrases with dass
     items:
@@ -66,6 +74,7 @@ sets:
           - "Ich nehme an, dass die Preise werden steigen."
           - "Ich nehme an, die Preise steigen werden."
         answer: "Ich nehme an, dass die Preise steigen werden."
+        explanation: "In the dass clause the future goes to the end: steigen werden, with werden last."
       - id: dass2
         type: translation
         tags: [dass phrases]
@@ -73,11 +82,13 @@ sets:
         answers:
           - "Es kann sein, dass der Zug Verspätung hat."
           - "Es kann sein, dass der Zug zu spät kommt."
+        explanation: "Es kann sein, dass … means it may be that; the verb hat goes to the end."
       - id: dass3
         type: word-order
         tags: [dass phrases]
         prompt: I am sure that she will pass the exam.
         answer: "Ich bin sicher, dass sie die Prüfung bestehen wird."
+        explanation: "Ich bin sicher, dass …; in the clause, bestehen wird goes to the end with werden last."
 
   - title: müsste, dürfte, könnte
     items:
@@ -87,23 +98,27 @@ sets:
         prompt: "It is seven o'clock and you expect her home any minute. Which sentence fits?"
         options: ["Sie müsste gleich da sein.", "Sie musste gleich da sein."]
         answer: "Sie müsste gleich da sein."
+        explanation: "müsste (with umlaut) expresses a strong expectation: she should be here any moment. musste is the past."
       - id: mod2
         type: multiple-choice
         tags: [modal assumptions]
         prompt: "Das ___ ein Problem werden. (might)"
         options: [könnte, konnte]
         answer: könnte
+        explanation: "könnte (with umlaut) means might; konnte is the past 'could'."
       - id: mod4
         type: translation
         tags: [modal assumptions]
         prompt: "The parcel should arrive tomorrow. (I expect – use müsste)"
         answers:
           - "Das Paket müsste morgen ankommen."
+        explanation: "müsste expresses what you expect: Das Paket müsste morgen ankommen."
       - id: mod3
         type: fill-blank
         tags: [modal assumptions]
         prompt: "Das ___ etwa fünfzig Euro kosten. (is probably – dürfen)"
         answers: [dürfte]
+        explanation: "dürfte expresses a probable estimate: it probably costs about 50 euros."
 
   - title: The future of work
     items:
@@ -119,6 +134,7 @@ sets:
           - [wahrscheinlich]
           - [kaum]
           - [könnte]
+        explanation: "Ich bin sicher, dass …; viele werden wahrscheinlich … arbeiten (prediction); das glaube ich kaum; das könnte schwierig werden."
 
   - title: Where is Tom?
     stimulus:
@@ -140,17 +156,20 @@ sets:
         prompt: Was vermutet Ben zuerst?
         options: ["Tom steht im Stau.", "Tom hat es vergessen.", "Tom ist krank."]
         answer: "Tom steht im Stau."
+        explanation: "Ben guesses: Er wird wohl wieder im Stau stehen."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Ben glaubt, dass Tom das Kino vergessen hat.
         answer: false
+        explanation: "Ben says: Nein, auf keinen Fall. Tom wrote to him at lunchtime."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Wann beginnt der Film?
         options: ["in zehn Minuten", "in einer Stunde", "um zwölf"]
         answer: "in zehn Minuten"
+        explanation: "Lisa says: Der Film fängt in zehn Minuten an."
 
   - title: Your view of the future
     items:

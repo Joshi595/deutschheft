@@ -13,23 +13,27 @@ sets:
           - { left: abbiegen, right: to turn }
           - { left: umsteigen, right: to change }
           - { left: die Haltestelle, right: the stop }
+        explanation: "geradeaus straight on, Ampel traffic lights, Kreuzung crossroads, abbiegen turn, umsteigen change, Haltestelle stop."
       - id: word2
         type: multiple-choice
         tags: [directions]
         prompt: "Entschuldigung, wie komme ich ___ Bahnhof?"
         options: [zum, nach, zur]
         answer: zum
+        explanation: "To a place in town you use zu + dative. Bahnhof is der, so zu dem → zum."
       - id: word3
         type: multiple-choice
         tags: [directions]
         prompt: "Entschuldigung, wie komme ich ___ Post?"
         options: [zur, zum, nach]
         answer: zur
+        explanation: "Post is die, so zu der → zur Post."
       - id: word4
         type: fill-blank
         tags: [directions]
         prompt: "Die Bank ist auf der rechten ___."
         answers: [Seite]
+        explanation: "auf der rechten Seite means on the right-hand side."
 
   - title: Route prepositions
     items:
@@ -39,28 +43,33 @@ sets:
         prompt: "Gehen Sie ___ den Park."
         options: [durch, entlang, bis]
         answer: durch
+        explanation: "durch means through, and it always takes the accusative: durch den Park."
       - id: prep2
         type: multiple-choice
         tags: [route prepositions]
         prompt: "Gehen Sie über ___ Brücke."
         options: [die, der]
         answer: die
+        explanation: "über with movement across takes the accusative: über die Brücke."
       - id: prep3
         type: multiple-choice
         tags: [route prepositions]
         prompt: "Fahren Sie die Straße ___."
         options: [entlang, durch, vorbei]
         answer: entlang
+        explanation: "entlang (along) usually comes after the noun: die Straße entlang."
       - id: prep4
         type: fill-blank
         tags: [route prepositions]
         prompt: "Gehen Sie bis ___ Ampel. (zu + der)"
         answers: [zur]
+        explanation: "bis zu means as far as; zu + der becomes zur: bis zur Ampel."
       - id: prep5
         type: fill-blank
         tags: [route prepositions]
         prompt: "Sie gehen am Kino ___."
         answers: [vorbei]
+        explanation: "an … vorbei means past: am Kino vorbei, with vorbei at the end."
 
   - title: Separable verbs on the way
     items:
@@ -69,17 +78,20 @@ sets:
         tags: [separable verbs]
         prompt: "An der Kreuzung biegen Sie links ___."
         answers: [ab]
+        explanation: "abbiegen is separable: biegen comes second and ab goes to the end."
       - id: sep2
         type: multiple-choice
         tags: [separable verbs]
         prompt: "Gestern ___ ich am Hauptbahnhof umgestiegen."
         options: [bin, habe]
         answer: bin
+        explanation: "umsteigen is a movement from one train to another, so the Perfekt uses sein: bin umgestiegen."
       - id: sep3
         type: fill-blank
         tags: [separable verbs]
         prompt: "Sie müssen am Marktplatz ___. (to get off)"
         answers: [aussteigen]
+        explanation: "After a modal the verb stays whole at the end: aussteigen, to get off."
 
   - title: Give the directions
     items:
@@ -96,6 +108,7 @@ sets:
           - [über]
           - [vorbei]
           - [Seite]
+        explanation: "Zuerst starts the directions, geradeaus is straight on, links abbiegen turn left, über die Brücke across the bridge, am Supermarkt vorbei past it, and Seite for the side."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -105,16 +118,19 @@ sets:
         tags: [directions]
         prompt: Turn right at the traffic lights.
         answer: "An der Ampel biegen Sie rechts ab."
+        explanation: "An der Ampel is first, so biegen comes second, then Sie; ab goes to the end."
       - id: order2
         type: word-order
         tags: [transport]
         prompt: Take the number 4 towards the centre.
         answer: "Nehmen Sie die Linie 4 Richtung Zentrum."
+        explanation: "Polite imperative: Nehmen Sie …; Richtung + place says which direction the line goes."
       - id: order3
         type: word-order
         tags: [directions]
         prompt: Is there a pharmacy near here?
         answer: "Gibt es hier in der Nähe eine Apotheke?"
+        explanation: "Gibt es …? asks if something exists; hier in der Nähe means near here."
 
   - title: Say it in German
     items:
@@ -124,6 +140,7 @@ sets:
         prompt: "Excuse me, how do I get to the town hall?"
         answers:
           - "Entschuldigung, wie komme ich zum Rathaus?"
+        explanation: "Rathaus is neuter, so zu dem becomes zum: zum Rathaus."
       - id: tr2
         type: translation
         tags: [directions]
@@ -131,6 +148,7 @@ sets:
         answers:
           - "Können Sie das bitte wiederholen?"
           - "Könnten Sie das bitte wiederholen?"
+        explanation: "Asking someone to repeat: Können Sie das bitte wiederholen? Könnten is even more polite."
 
   - title: On the street
     stimulus:
@@ -154,17 +172,20 @@ sets:
         prompt: Wie lange braucht die Frau zu Fuß?
         options: ["etwa zehn Minuten", "etwa zwei Minuten", "etwa eine halbe Stunde"]
         answer: "etwa zehn Minuten"
+        explanation: "The man says: ungefähr zehn Minuten zu Fuß."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Wo biegt sie rechts ab?
         options: ["an der Kirche", "an der Ampel", "an der Bäckerei"]
         answer: "an der Kirche"
+        explanation: "Go straight on bis zur Kirche; dort biegen Sie rechts ab."
       - id: listen3
         type: true-false
         tags: [listening]
         prompt: Das Museum ist auf der rechten Seite.
         answer: false
+        explanation: "The man says the museum is auf der linken Seite."
 
   - title: Explain the way
     items:

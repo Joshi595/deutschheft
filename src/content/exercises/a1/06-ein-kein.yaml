@@ -7,21 +7,25 @@ sets:
         tags: [indefinite article]
         prompt: "Das ist ___ Tisch."
         answers: [ein]
+        explanation: "Tisch is a der noun, and der nouns take ein: ein Tisch."
       - id: ein2
         type: fill-blank
         tags: [indefinite article]
         prompt: "Das ist ___ Lampe."
         answers: [eine]
+        explanation: "Lampe is a die noun, and die nouns take eine: eine Lampe."
       - id: ein3
         type: fill-blank
         tags: [indefinite article]
         prompt: "Das ist ___ Buch."
         answers: [ein]
+        explanation: "Buch is a das noun; das nouns take ein, the same as der nouns."
       - id: ein4
         type: fill-blank
         tags: [indefinite article]
         prompt: "Hier ist ___ Tasche."
         answers: [eine]
+        explanation: "Tasche is a die noun, so it takes eine."
       - id: ein5
         type: fill-blank
         tags: [indefinite article]
@@ -36,6 +40,7 @@ sets:
         tags: [kein]
         prompt: "Das ist ___ Tisch. Das ist ein Stuhl."
         answers: [kein]
+        explanation: "kein is the negative of ein and takes the same endings: ein Tisch → kein Tisch."
       - id: kein2
         type: fill-blank
         tags: [kein]
@@ -47,6 +52,7 @@ sets:
         tags: [kein]
         prompt: "Wir haben ___ Auto."
         answers: [kein]
+        explanation: "Auto is a das noun, so ein Auto becomes kein Auto."
       - id: kein4
         type: fill-blank
         tags: [kein]
@@ -58,6 +64,7 @@ sets:
         tags: [kein]
         prompt: "Das ist ___ Problem."
         answers: [kein]
+        explanation: "Problem is a das noun: ein Problem → kein Problem."
 
   - title: kein or nicht?
     instructions: A noun with ein or no article takes kein. Everything else takes nicht.
@@ -96,6 +103,7 @@ sets:
         prompt: Sie hat ___ Idee.
         options: [keine, nicht, kein]
         answer: keine
+        explanation: "Idee is a die noun with ein (eine Idee), so the negative is keine Idee. nicht never stands before a noun like this."
       - id: choose6
         type: multiple-choice
         tags: [kein or nicht]
@@ -119,21 +127,25 @@ sets:
         tags: [kein or nicht]
         prompt: "Ich habe Zeit."
         answers: [Ich habe keine Zeit.]
+        explanation: "Zeit has no article, and a noun without an article is made negative with kein: keine Zeit (die Zeit)."
       - id: neg2
         type: translation
         tags: [kein or nicht]
         prompt: "Das ist richtig."
         answers: [Das ist nicht richtig.]
+        explanation: "richtig is an adjective, not a noun, so it takes nicht."
       - id: neg3
         type: translation
         tags: [kein or nicht]
         prompt: "Das ist ein Problem."
         answers: [Das ist kein Problem.]
+        explanation: "A noun with ein is made negative with kein: ein Problem → kein Problem."
       - id: neg4
         type: translation
         tags: [kein or nicht]
         prompt: "Er arbeitet."
         answers: [Er arbeitet nicht.]
+        explanation: "A verb on its own is made negative with nicht at the end: Er arbeitet nicht."
 
   - title: Where does nicht go?
     instructions: Put the words in the right order.
@@ -143,16 +155,19 @@ sets:
         tags: [nicht position]
         prompt: The book is not expensive.
         answer: Das Buch ist nicht teuer.
+        explanation: "nicht goes straight before the adjective it negates: nicht teuer."
       - id: order2
         type: word-order
         tags: [nicht position]
         prompt: He is not coming today.
         answer: Er kommt heute nicht.
+        explanation: "nicht goes after time words like heute, at the end here: Er kommt heute nicht."
       - id: order3
         type: word-order
         tags: [nicht position]
         prompt: I do not live in Hamburg.
         answer: Ich wohne nicht in Hamburg.
+        explanation: "nicht goes before a place with a preposition: nicht in Hamburg."
 
   - title: Listen and decide
     stimulus:
@@ -173,16 +188,19 @@ sets:
         tags: [listening]
         prompt: Anna hat heute Zeit.
         answer: false
+        explanation: "Anna says: Heute habe ich keine Zeit. Ich arbeite."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Anna arbeitet heute.
         answer: true
+        explanation: "Anna says she has no time today because Ich arbeite."
       - id: listen3
         type: true-false
         tags: [listening]
         prompt: Anna arbeitet morgen.
         answer: false
+        explanation: "Anna says: Morgen arbeite ich nicht. Morgen habe ich Zeit."
 
   - title: Say it in German
     items:
@@ -191,18 +209,22 @@ sets:
         tags: [kein]
         prompt: I have no time.
         answers: [Ich habe keine Zeit.]
+        explanation: "'No' before a noun is kein. Zeit is die, so it becomes keine: Ich habe keine Zeit."
       - id: tr2
         type: translation
         tags: [kein]
         prompt: That is no problem.
         answers: [Das ist kein Problem.]
+        explanation: "Problem is a das noun: kein Problem. It is a set phrase meaning 'no problem'."
       - id: tr3
         type: translation
         tags: [nicht position]
         prompt: That is not right.
         answers: [Das ist nicht richtig.]
+        explanation: "richtig is an adjective, so the negative is nicht: nicht richtig."
       - id: tr4
         type: translation
         tags: [indefinite article]
         prompt: What is that? That is a bag.
         answers: [Was ist das? Das ist eine Tasche.]
+        explanation: "Tasche is a die noun, so 'a bag' is eine Tasche."

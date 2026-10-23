@@ -12,12 +12,14 @@ sets:
           - { left: EG, right: ground floor }
           - { left: EBK, right: fitted kitchen }
           - { left: WG, right: flat share }
+        explanation: "Flat adverts use short forms: KM Kaltmiete, NK Nebenkosten, EG Erdgeschoss, EBK Einbauküche, WG Wohngemeinschaft."
       - id: ad2
         type: multiple-choice
         tags: [adverts]
         prompt: "Kaltmiete 700 Euro, Nebenkosten 150 Euro. How much is the Warmmiete?"
         options: ["850 Euro", "700 Euro", "550 Euro"]
         answer: "850 Euro"
+        explanation: "Warmmiete is the Kaltmiete plus the Nebenkosten: 700 + 150 = 850 Euro."
       - id: ad3
         type: true-false
         tags: [adverts]
@@ -33,34 +35,40 @@ sets:
         prompt: "Wir ___ letztes Jahr nach Hamburg umgezogen."
         options: [sind, haben]
         answer: sind
+        explanation: "umziehen is moving from one home to another, so the Perfekt uses sein."
       - id: move2
         type: multiple-choice
         tags: [moving verbs]
         prompt: "Mit 18 bin ich bei meinen Eltern ___."
         options: [ausgezogen, eingezogen, umgezogen]
         answer: ausgezogen
+        explanation: "ausziehen bei means moving out of someone's home. einziehen is moving in."
       - id: move3
         type: fill-blank
         tags: [moving verbs]
         prompt: "Am Samstag ziehen wir in die neue Wohnung ___."
         answers: [ein]
+        explanation: "einziehen is separable: ziehen comes second and ein goes to the end."
       - id: move4
         type: multiple-choice
         tags: [moving verbs, two-way prepositions]
         prompt: "Wir ziehen ___ neue Wohnung ein."
         options: [in die, in der]
         answer: in die
+        explanation: "Moving into a flat is a direction, so in takes the accusative: in die Wohnung."
       - id: move5
         type: fill-blank
         tags: [contract]
         prompt: "Ich habe meine alte Wohnung ___. Die Frist ist drei Monate. (given notice)"
         answers: [gekündigt]
+        explanation: "kündigen means to give notice; its participle is gekündigt."
       - id: move6
         type: multiple-choice
         tags: [contract]
         prompt: "Die ___ ist Geld, das der Vermieter zurückgibt, wenn man auszieht."
         options: [Kaution, Miete, Nebenkosten]
         answer: Kaution
+        explanation: "The Kaution is the deposit you get back when you move out."
 
   - title: Asking about a flat
     items:
@@ -70,23 +78,27 @@ sets:
         prompt: "You want to know how much the deposit is."
         options: ["Wie hoch ist die Kaution?", "Wie hoch ist die Miete?", "Wann ist die Wohnung frei?"]
         answer: "Wie hoch ist die Kaution?"
+        explanation: "die Kaution is the deposit; Wie hoch ist …? asks for an amount."
       - id: ask2
         type: fill-blank
         tags: [questions]
         prompt: "Sind Haustiere ___? (allowed)"
         answers: [erlaubt]
+        explanation: "erlaubt means allowed: Sind Haustiere erlaubt?"
       - id: ask3
         type: translation
         tags: [questions]
         prompt: When could I view the flat?
         answers:
           - "Wann könnte ich die Wohnung besichtigen?"
+        explanation: "könnte is polite; besichtigen (to view) goes to the end."
       - id: ask4
         type: translation
         tags: [questions, indirect questions]
         prompt: "Can you tell me whether the flat is still available? (Können Sie mir sagen, ob …)"
         answers:
           - "Können Sie mir sagen, ob die Wohnung noch frei ist?"
+        explanation: "A yes/no question becomes an ob clause with the verb at the end: ob die Wohnung noch frei ist."
 
   - title: A note to the neighbours
     items:
@@ -102,6 +114,7 @@ sets:
           - [laut]
           - [Verständnis]
           - [eingeladen]
+        explanation: "Liebe Nachbarn opens the note; Einzug is moving in; laut loud; um Verständnis bitten asks for understanding; herzlich eingeladen means warmly invited."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -111,11 +124,13 @@ sets:
         tags: [house rules]
         prompt: Please separate the rubbish.
         answer: "Bitte trennen Sie den Müll."
+        explanation: "A polite instruction: the verb first, then Sie; Müll trennen means separating the rubbish."
       - id: order2
         type: word-order
         tags: [moving]
         prompt: I have to register at the local office.
         answer: "Ich muss mich beim Bürgeramt anmelden."
+        explanation: "sich anmelden is reflexive; after muss, mich comes early and anmelden goes last."
 
   - title: Flat adverts
     stimulus:
@@ -135,17 +150,20 @@ sets:
         options: [Anzeige A, Anzeige B, Anzeige C]
         answer: Anzeige B
         shuffle: false
+        explanation: "Only flat B has a garden (im EG mit Garten), and Haustiere erlaubt means pets are allowed."
       - id: read2
         type: multiple-choice
         tags: [reading]
         prompt: "Wie hoch ist die Warmmiete in Anzeige A?"
         options: ["750 €", "620 €", "1.240 €"]
         answer: "750 €"
+        explanation: "Flat A has KM 620 € plus NK 130 €, so 750 € in total."
       - id: read3
         type: true-false
         tags: [reading]
         prompt: Wohnung A hat einen Aufzug.
         answer: false
+        explanation: "Flat A is in the 3. OG ohne Aufzug: without a lift."
 
   - title: Ask about the flat
     items:

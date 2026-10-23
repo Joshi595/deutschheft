@@ -8,42 +8,49 @@ sets:
         prompt: "A friendly invitation: Komm ___ mit!"
         options: [doch, denn, halt]
         answer: doch
+        explanation: "doch in an imperative makes it a friendly invitation: Komm doch mit!"
       - id: p2
         type: multiple-choice
         tags: [particles]
         prompt: "A natural question: Was machst du ___ hier?"
         options: [denn, mal, eben]
         answer: denn
+        explanation: "denn in a question makes it sound natural and interested."
       - id: p3
         type: multiple-choice
         tags: [particles]
         prompt: "Surprise: Das ist ___ toll!"
         options: [ja, denn, mal]
         answer: ja
+        explanation: "ja expresses surprise: Das ist ja toll!"
       - id: p4
         type: multiple-choice
         tags: [particles]
         prompt: "Resignation: Das ist ___ so."
         options: [halt, mal, denn]
         answer: halt
+        explanation: "halt expresses resignation: that's just how it is."
       - id: p5
         type: multiple-choice
         tags: [particles]
         prompt: "Reassurance: Keine Sorge, das schaffst du ___!"
         options: [schon, denn, mal]
         answer: schon
+        explanation: "schon reassures: you'll manage, don't worry."
       - id: p6
         type: multiple-choice
         tags: [particles]
         prompt: "A soft request: Kannst du ___ das Fenster aufmachen?"
         options: [mal, ja, eben]
         answer: mal
+        explanation: "mal softens a request: Kannst du mal …?"
       - id: p7
         type: multiple-choice
         tags: [particles]
         prompt: "By the way: Wie alt bist du ___?"
         options: [eigentlich, halt, schon]
         answer: eigentlich
+        explanation: "eigentlich adds 'by the way' to a question."
 
   - title: What does the speaker feel?
     items:
@@ -53,23 +60,27 @@ sets:
         prompt: "'Das habe ich dir doch gesagt!'"
         options: [a little annoyed, very happy, unsure]
         answer: a little annoyed
+        explanation: "doch in a statement like this reminds someone, with slight annoyance: I told you so!"
       - id: f2
         type: multiple-choice
         tags: [tone]
         prompt: "'Du bist ja schon da!'"
         options: [surprised, angry, sad]
         answer: surprised
+        explanation: "ja marks surprise: oh, you're here already!"
       - id: f3
         type: multiple-choice
         tags: [tone]
         prompt: "'Dann nehmen wir halt den nächsten Zug.'"
         options: [resigned, excited, worried]
         answer: resigned
+        explanation: "halt shows acceptance of something you can't change."
       - id: f4
         type: true-false
         tags: [tone]
         prompt: "Modal particles change the facts of a sentence."
         answer: false
+        explanation: "Modal particles only colour the tone; the facts stay the same."
 
   - title: Position
     items:
@@ -79,21 +90,25 @@ sets:
         prompt: Choose the correct sentence.
         options: ["Ruf mich doch mal an!", "Doch ruf mich mal an!", "Ruf doch mal mich an!"]
         answer: "Ruf mich doch mal an!"
+        explanation: "Particles come after pronouns and before the rest: Ruf mich doch mal an!"
       - id: pos2
         type: word-order
         tags: [position]
         prompt: Why don't you sit down!
         answer: "Setz dich doch!"
+        explanation: "In an imperative the particle follows the pronoun: Setz dich doch!"
       - id: pos3
         type: word-order
         tags: [position]
         prompt: So what happened?
         answer: "Was ist denn passiert?"
+        explanation: "denn comes right after the verb (and any pronoun) in a question."
       - id: pos4
         type: word-order
         tags: [position]
         prompt: Can you just help me?
         answer: "Kannst du mir mal helfen?"
+        explanation: "mal goes after the pronoun mir and before the infinitive."
 
   - title: Make it friendlier
     instructions: Add the particle in brackets in the right place.
@@ -104,18 +119,21 @@ sets:
         prompt: "Gib mir das Salz. (mal)"
         answers:
           - "Gib mir mal das Salz."
+        explanation: "mal goes after the dative pronoun mir and before the object."
       - id: fr2
         type: translation
         tags: [softening]
         prompt: "Besuch uns am Wochenende! (doch)"
         answers:
           - "Besuch uns doch am Wochenende!"
+        explanation: "doch goes after the pronoun uns."
       - id: fr3
         type: translation
         tags: [softening]
         prompt: "Wie heißt du? (eigentlich)"
         answers:
           - "Wie heißt du eigentlich?"
+        explanation: "eigentlich goes after the subject in the question: Wie heißt du eigentlich?"
 
   - title: A phone call
     stimulus:
@@ -137,9 +155,11 @@ sets:
         prompt: Warum ist Jan müde?
         options: ["Sein Zug ist ausgefallen.", "Er hat schlecht geschlafen.", "Er hat zu viel gearbeitet."]
         answer: "Sein Zug ist ausgefallen."
+        explanation: "Jan says: mein Zug ist ausgefallen, and the next one is an hour away."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Was schlägt Mia vor?
         options: ["Jan soll zu ihr kommen.", "Jan soll ein Taxi nehmen.", "Jan soll nach Hause gehen."]
         answer: "Jan soll zu ihr kommen."
+        explanation: "Mia says: Komm doch einfach zu mir, ich wohne ja direkt am Bahnhof."

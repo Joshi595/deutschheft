@@ -118,7 +118,7 @@ export default function QuizRunner({ quiz }: Props) {
             </li>
           </ul>
 
-          <button type="button" className="btn btn-primary mt-6" onClick={() => go({ name: 'section', index: 0 })}>
+          <button type="button" className="btn btn-accent btn-lg mt-6" onClick={() => go({ name: 'section', index: 0 })}>
             Start
           </button>
         </div>
@@ -189,7 +189,7 @@ export default function QuizRunner({ quiz }: Props) {
         <div className="flex flex-wrap items-center gap-3 border-t border-line pt-5">
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-accent"
             onClick={() => {
               if (unanswered === 0 || window.confirm(`${unanswered} ${unanswered === 1 ? 'task is' : 'tasks are'} unanswered. Hand in anyway?`)) {
                 afterSection(stage.index);
@@ -228,7 +228,7 @@ export default function QuizRunner({ quiz }: Props) {
             phase="assess"
           />
         ))}
-        <button type="button" className="btn btn-primary justify-self-start" onClick={finish}>
+        <button type="button" className="btn btn-accent justify-self-start" onClick={finish}>
           See my result
         </button>
       </div>
@@ -270,7 +270,7 @@ export default function QuizRunner({ quiz }: Props) {
         )}
 
         <div className="mt-6 flex flex-wrap gap-2">
-          <a href={quiz.backHref} className="btn btn-primary">
+          <a href={quiz.backHref} className="btn btn-accent">
             Back to the level
           </a>
           <button
@@ -339,7 +339,7 @@ function QuizItem({ item, number, response, onChange, phase, result }: QuizItemP
           {headingOf(item)}
         </p>
         {done && (
-          <span className={`chip ${result.correct ? 'chip-good' : ''}`} style={result.correct ? undefined : { background: 'var(--bad-soft)', color: 'var(--bad)' }}>
+          <span className={`chip ${result.correct ? 'chip-good' : 'chip-bad'}`}>
             {result.correct ? 'Right' : 'Wrong'}
           </span>
         )}

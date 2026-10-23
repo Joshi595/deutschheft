@@ -1,0 +1,41 @@
+---
+// The top of a page: breadcrumbs, the title, and one line on what the page is for.
+interface Props {
+  title: string;
+  /** The German name, set under the title where it is part of the content (a chapter, a conversation). */
+  titleDe?: string;
+  lead?: string;
+  /** Trail back up; the last entry is the current page and gets no link. */
+  crumbs?: { label: string; href?: string }[];
+  /** The title itself is German. */
+  lang?: string;
+  class?: string;
+}
+const { title, titleDe, lead, crumbs, lang, class: className } = Astro.props;
+---
+
+<header class:list={['max-w-3xl', className]}>
+  {
+    crumbs && (
+      <nav aria-label="Breadcrumb" class="mb-5 flex flex-wrap items-center gap-x-1.5 text-sm text-muted">
+        {crumbs.map((crumb, index) => (
+          <>
+            {index > 0 && <span aria-hidden="true">/</span>}
+            {crumb.href ? (
+              <a href={crumb.href} class="hover:text-ink hover:underline">
+                {crumb.label}
+              </a>
+            ) : (
+              <span aria-current="page">{crumb.label}</span>
+            )}
+          </>
+        ))}
+      </nav>
+    )
+  }
+  <slot name="above" />
+  <h1 class="text-4xl sm:text-[3.25rem]" lang={lang}>{title}</h1>
+  {titleDe && <p class="mt-2 text-xl font-semibold text-muted" lang="de">{titleDe}</p>}
+  {lead && <p class="mt-4 text-lg text-muted">{lead}</p>}
+  <slot />
+</header>

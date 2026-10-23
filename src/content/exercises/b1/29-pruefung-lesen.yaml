@@ -16,18 +16,22 @@ sets:
         type: true-false
         prompt: Die Freunde glaubten, dass sie ohne Auto gut leben kann.
         answer: false
+        explanation: "Her friends laughed and said: Das schaffst du nie. They did not believe she could manage."
       - id: t1-2
         type: true-false
         prompt: Am Wochenende fährt der Bus öfter.
         answer: false
+        explanation: "The text says the bus runs every hour, und am Wochenende noch seltener: even less often."
       - id: t1-3
         type: true-false
         prompt: Mit dem E-Bike braucht sie länger zur Arbeit als mit dem Auto.
         answer: true
+        explanation: "By e-bike it now takes forty minutes; im Auto waren es zwanzig."
       - id: t1-4
         type: true-false
         prompt: Sie spart jeden Monat mehr als 300 Euro.
         answer: true
+        explanation: "She saves über 300 Euro im Monat: more than 300 euros a month."
 
   - title: "Teil 4: for or against?"
     instructions: "Thema: Sollte man in Innenstädten Autos verbieten? Ist die Person dafür?"
@@ -42,6 +46,7 @@ sets:
         options: [ja, nein]
         answer: nein
         shuffle: false
+        explanation: "Jana grants the air would be better (zwar), but concludes: Ein Verbot ist für mich keine Lösung."
       - id: t4-2
         type: multiple-choice
         stimulus:
@@ -52,6 +57,7 @@ sets:
         options: [ja, nein]
         answer: ja
         shuffle: false
+        explanation: "Mehmet reports more customers since cars were banned and says: Ich kann es nur empfehlen."
       - id: t4-3
         type: multiple-choice
         stimulus:
@@ -62,6 +68,7 @@ sets:
         options: [ja, nein]
         answer: ja
         shuffle: false
+        explanation: "Lisa was sceptical at first, but trotzdem says the cities belong to people, not cars."
 
   - title: "Teil 5: rules"
     instructions: Lesen Sie die Regeln. Wählen Sie die richtige Lösung.
@@ -85,8 +92,10 @@ sets:
         prompt: Im Lesesaal darf man …
         options: ["Wasser aus einer geschlossenen Flasche trinken.", "einen Kaffee trinken.", "ein Sandwich essen."]
         answer: "Wasser aus einer geschlossenen Flasche trinken."
+        explanation: "Rule 4 bans food and drink, but Wasser in geschlossenen Flaschen ist erlaubt."
       - id: t5-3
         type: multiple-choice
         prompt: Wenn man zwei DVDs drei Tage zu spät zurückbringt, …
         options: ["zahlt man 3 Euro.", "zahlt man 1,50 Euro.", "zahlt man nichts."]
         answer: "zahlt man 3 Euro."
+        explanation: "The fee is 0,50 € per day and per item: 2 DVDs × 3 days × 0,50 € = 3 €."

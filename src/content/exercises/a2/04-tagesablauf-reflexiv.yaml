@@ -8,36 +8,43 @@ sets:
         tags: [reflexive pronouns]
         prompt: "Ich wasche ___."
         answers: [mich]
+        explanation: "The reflexive pronoun for ich is mich: ich wasche mich, I wash myself."
       - id: ref2
         type: fill-blank
         tags: [reflexive pronouns]
         prompt: "Er rasiert ___ jeden Morgen."
         answers: [sich]
+        explanation: "For er, sie, es and Sie the reflexive pronoun is always sich."
       - id: ref3
         type: fill-blank
         tags: [reflexive pronouns]
         prompt: "Wir treffen ___ um acht."
         answers: [uns]
+        explanation: "For wir the reflexive pronoun is uns: wir treffen uns."
       - id: ref4
         type: fill-blank
         tags: [reflexive pronouns]
         prompt: "Freust du ___?"
         answers: [dich]
+        explanation: "For du the reflexive pronoun is dich: Freust du dich?"
       - id: ref5
         type: fill-blank
         tags: [reflexive pronouns]
         prompt: "Ihr müsst ___ beeilen."
         answers: [euch]
+        explanation: "For ihr the reflexive pronoun is euch."
       - id: ref6
         type: fill-blank
         tags: [reflexive pronouns]
         prompt: "Setzen Sie ___, bitte."
         answers: [sich]
+        explanation: "Polite Sie also takes sich, written small: Setzen Sie sich."
       - id: ref7
         type: fill-blank
         tags: [reflexive pronouns]
         prompt: "Die Kinder freuen ___ auf die Ferien."
         answers: [sich]
+        explanation: "Die Kinder are sie (they), and the reflexive for sie is sich."
 
   - title: What does it mean?
     items:
@@ -52,12 +59,14 @@ sets:
           - { left: sich ärgern, right: to be annoyed }
           - { left: sich erkälten, right: to catch a cold }
           - { left: sich unterhalten, right: to chat }
+        explanation: "sich beeilen hurry, sich ausruhen rest, sich erinnern remember, sich ärgern be annoyed, sich erkälten catch a cold, sich unterhalten chat."
       - id: mean2
         type: multiple-choice
         tags: [reflexive verbs]
         prompt: Er interessiert sich ___ Musik.
         options: [für, auf, über]
         answer: für
+        explanation: "sich interessieren always goes with für: sich für Musik interessieren."
       - id: mean3
         type: multiple-choice
         tags: [reflexive verbs]
@@ -75,30 +84,35 @@ sets:
         prompt: Ich wasche ___.
         options: [mich, mir]
         answer: mich
+        explanation: "When the whole person is washed, the pronoun is accusative: ich wasche mich."
       - id: dat2
         type: multiple-choice
         tags: [dative reflexive]
         prompt: Ich wasche ___ die Hände.
         options: [mir, mich]
         answer: mir
+        explanation: "When a body part is named, it becomes the object and the pronoun moves to the dative: ich wasche mir die Hände."
       - id: dat3
         type: multiple-choice
         tags: [dative reflexive]
         prompt: Ich putze ___ die Zähne.
         options: [mir, mich]
         answer: mir
+        explanation: "die Zähne is the object, so the pronoun is dative: mir."
       - id: dat4
         type: multiple-choice
         tags: [dative reflexive]
         prompt: Du kämmst ___ die Haare.
         options: [dir, dich]
         answer: dir
+        explanation: "die Haare is the object, so the pronoun for du is the dative dir."
       - id: dat5
         type: multiple-choice
         tags: [dative reflexive]
         prompt: Ich ziehe ___ schnell an.
         options: [mich, mir]
         answer: mich
+        explanation: "No other object is named, so the accusative: ich ziehe mich an."
 
   - title: Word order
     instructions: Put the words in the right order.
@@ -108,21 +122,25 @@ sets:
         tags: [reflexive verbs, word order]
         prompt: Today I do not feel well.
         answer: Heute fühle ich mich nicht gut.
+        explanation: "Heute is first, the verb fühle second, then ich, then the pronoun mich; nicht comes before gut."
       - id: order2
         type: word-order
         tags: [reflexive verbs, word order]
         prompt: You have to hurry. (informal)
         answer: Du musst dich beeilen.
+        explanation: "The modal musst is second; the reflexive dich comes early and the infinitive beeilen goes last."
       - id: order3
         type: word-order
         tags: [time manner place]
         prompt: I go to work by bus every day.
         answer: Ich fahre jeden Tag mit dem Bus zur Arbeit.
+        explanation: "The usual middle order is time, manner, place: jeden Tag – mit dem Bus – zur Arbeit."
       - id: order4
         type: word-order
         tags: [time manner place]
         prompt: We are going to the cinema together on Saturday.
         answer: Wir gehen am Samstag zusammen ins Kino.
+        explanation: "Time before manner before place: am Samstag – zusammen – ins Kino."
       - id: order5
         type: multiple-choice
         tags: [time manner place]
@@ -131,6 +149,7 @@ sets:
           - Sie fährt heute mit dem Rad in die Stadt.
           - Sie fährt in die Stadt mit dem Rad heute.
         answer: Sie fährt heute mit dem Rad in die Stadt.
+        explanation: "German puts time first, then manner, then place: heute – mit dem Rad – in die Stadt."
 
   - title: In the past
     items:
@@ -146,11 +165,13 @@ sets:
         tags: [reflexive verbs, perfect tense]
         prompt: She was pleased with the present.
         answer: Sie hat sich über das Geschenk gefreut.
+        explanation: "Reflexive verbs take haben in the Perfekt; sich comes after hat, and the participle goes last."
       - id: past3
         type: fill-blank
         tags: [reflexive verbs, perfect tense]
         prompt: "Wir haben ___ im Café getroffen."
         answers: [uns]
+        explanation: "For wir the reflexive pronoun is uns: Wir haben uns … getroffen."
 
   - title: Sara's morning
     stimulus:
@@ -165,6 +186,7 @@ sets:
         prompt: Wann steht Sara auf?
         options: ["um 6:15 Uhr", "um 6:00 Uhr", "um 7:00 Uhr"]
         answer: "um 6:15 Uhr"
+        explanation: "Sara says: ich stehe erst um Viertel nach sechs auf, which is 6:15."
       - id: listen2
         type: true-false
         tags: [listening, daily routine]
@@ -177,6 +199,7 @@ sets:
         prompt: Was macht Sara im Bus?
         options: [Sie ruht sich aus., Sie frühstückt., Sie beeilt sich.]
         answer: Sie ruht sich aus.
+        explanation: "Sara says: Im Bus ruhe ich mich noch ein bisschen aus."
 
   - title: Say and write it
     items:
@@ -186,12 +209,14 @@ sets:
         prompt: I am looking forward to the weekend.
         answers:
           - Ich freue mich auf das Wochenende.
+        explanation: "Looking forward to something is sich freuen auf + accusative: auf das Wochenende."
       - id: tr2
         type: translation
         tags: [dative reflexive]
         prompt: I brush my teeth.
         answers:
           - Ich putze mir die Zähne.
+        explanation: "die Zähne is the object, so the reflexive pronoun is dative: Ich putze mir die Zähne."
       - id: write1
         type: writing-task
         tags: [writing, daily routine]

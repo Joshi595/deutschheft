@@ -12,32 +12,38 @@ sets:
           - { left: der Arzt, right: Er hilft kranken Menschen. }
           - { left: die Verkäuferin, right: Sie arbeitet im Geschäft. }
           - { left: der Fahrer, right: Er fährt einen Bus. }
+        explanation: "Koch cook, Lehrerin teacher, Arzt doctor, Verkäuferin shop assistant, Fahrer driver."
       - id: job2
         type: fill-blank
         tags: [jobs, female forms]
         prompt: "der Lehrer, die ___"
         answers: [Lehrerin]
+        explanation: "Most jobs add -in for a woman: der Lehrer, die Lehrerin."
       - id: job3
         type: fill-blank
         tags: [jobs, female forms]
         prompt: "der Arzt, die ___"
         answers: [Ärztin]
         hint: This one takes an umlaut.
+        explanation: "Arzt adds -in and takes an umlaut: die Ärztin."
       - id: job4
         type: fill-blank
         tags: [jobs, female forms]
         prompt: "der Verkäufer, die ___"
         answers: [Verkäuferin]
+        explanation: "der Verkäufer + -in gives die Verkäuferin."
       - id: job5
         type: fill-blank
         tags: [jobs, female forms]
         prompt: "der Koch, die ___"
         answers: [Köchin]
+        explanation: "Koch adds -in with an umlaut: die Köchin."
       - id: job6
         type: fill-blank
         tags: [jobs, female forms]
         prompt: "der Student, die ___"
         answers: [Studentin]
+        explanation: "der Student + -in gives die Studentin."
 
   - title: Article or no article?
     items:
@@ -47,24 +53,28 @@ sets:
         prompt: Which is correct?
         options: [Ich bin Ingenieur., Ich bin ein Ingenieur., Ich bin der Ingenieur.]
         answer: Ich bin Ingenieur.
+        explanation: "German states someone's job with no article: Ich bin Ingenieur."
       - id: art2
         type: multiple-choice
         tags: [jobs, no article]
         prompt: Meine Schwester ist ___.
         options: [Ärztin, Arzt, eine Arzt]
         answer: Ärztin
+        explanation: "A woman's job takes the -in form and no article: Sie ist Ärztin."
       - id: art3
         type: multiple-choice
         tags: [jobs]
         prompt: Ich arbeite ___ Kellner.
         options: [als, wie, bei]
         answer: als
+        explanation: "To say what you work as, use als: Ich arbeite als Kellner."
       - id: art4
         type: multiple-choice
         tags: [jobs]
         prompt: Er arbeitet ___ Siemens.
         options: [bei, als, für]
         answer: bei
+        explanation: "For the company you work for, use bei: Er arbeitet bei Siemens."
 
   - title: Where and since when?
     items:
@@ -73,26 +83,31 @@ sets:
         tags: [dative, jobs]
         prompt: "Sie arbeitet in ___ Krankenhaus. (ein)"
         answers: [einem]
+        explanation: "in for a place takes the dative. Krankenhaus is neuter, so ein becomes einem."
       - id: where2
         type: fill-blank
         tags: [dative, jobs]
         prompt: "Er arbeitet in ___ Schule. (eine)"
         answers: [einer]
+        explanation: "in for a place takes the dative. Schule is feminine, so eine becomes einer."
       - id: where3
         type: fill-blank
         tags: [seit]
         prompt: "Ich arbeite ___ zwei Jahren bei dieser Firma."
         answers: [seit]
+        explanation: "seit says how long something has gone on until now, and it takes the dative: seit zwei Jahren."
       - id: where4
         type: word-order
         tags: [jobs]
         prompt: What is your job? (formal)
         answer: Was sind Sie von Beruf?
+        explanation: "The fixed question for a job is Was sind Sie von Beruf?"
       - id: where5
         type: word-order
         tags: [jobs, seit]
         prompt: I have been working here for three years.
         answer: Ich arbeite seit drei Jahren hier.
+        explanation: "German uses the present with seit for something still going on: Ich arbeite seit drei Jahren hier."
 
   - title: Work words
     items:
@@ -107,6 +122,7 @@ sets:
           - { left: die Stelle, right: position }
           - { left: arbeitslos, right: unemployed }
           - { left: verdienen, right: to earn }
+        explanation: "Firma company, Kollege colleague, Pause break, Stelle position, arbeitslos unemployed, verdienen to earn."
 
   - title: Listen to three people
     items:
@@ -121,6 +137,7 @@ sets:
         prompt: Was ist Elena von Beruf?
         options: [Krankenpflegerin, Ärztin, Lehrerin]
         answer: Krankenpflegerin
+        explanation: "Elena says: Ich bin Krankenpflegerin."
       - id: hear2
         type: multiple-choice
         tags: [listening, jobs]
@@ -132,6 +149,7 @@ sets:
         prompt: Wann hat Karim frei?
         options: [am Freitag, am Montag, am Donnerstag]
         answer: am Freitag
+        explanation: "Karim works from Monday to Thursday: Am Freitag habe ich frei."
       - id: hear3
         type: true-false
         tags: [listening, jobs]
@@ -161,6 +179,7 @@ sets:
         prompt: Wann muss man arbeiten?
         options: [am Wochenende, von Montag bis Freitag, am Abend]
         answer: am Wochenende
+        explanation: "The working hours are Samstag und Sonntag, which is the weekend."
       - id: ad2
         type: true-false
         tags: [reading, adverts]
@@ -188,6 +207,7 @@ sets:
         prompt: Sie haben keinen Führerschein. Passt die Stelle?
         options: ["Nein, man braucht einen Führerschein.", "Ja, man braucht keinen Führerschein."]
         answer: "Nein, man braucht einen Führerschein."
+        explanation: "The advert says Führerschein … nötig: you need a driving licence."
 
   - title: Say and write it
     items:
@@ -197,12 +217,14 @@ sets:
         prompt: I am a teacher. (said by a woman)
         answers:
           - Ich bin Lehrerin.
+        explanation: "A woman's job takes -in, and there is no article: Ich bin Lehrerin."
       - id: tr2
         type: translation
         tags: [jobs]
         prompt: I work as a cook. (said by a man)
         answers:
           - Ich arbeite als Koch.
+        explanation: "'As' a job is als, with no article: Ich arbeite als Koch."
       - id: speak1
         type: speaking-task
         tags: [speaking, jobs]

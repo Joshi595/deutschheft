@@ -8,26 +8,31 @@ sets:
         tags: [dative articles]
         prompt: "Ich helfe ___ Mann. (der)"
         answers: [dem]
+        explanation: "helfen takes the dative, and der becomes dem: dem Mann."
       - id: art2
         type: fill-blank
         tags: [dative articles]
         prompt: "Ich spreche mit ___ Lehrerin. (die)"
         answers: [der]
+        explanation: "mit always takes the dative; feminine die becomes der."
       - id: art3
         type: fill-blank
         tags: [dative articles]
         prompt: "Wir fahren mit ___ Auto. (unser)"
         answers: [unserem]
+        explanation: "mit takes the dative; Auto is neuter, so unser takes -em: unserem Auto."
       - id: art4
         type: fill-blank
         tags: [dative articles]
         prompt: "Sie wohnt bei ___ Freundin. (eine)"
         answers: [einer]
+        explanation: "bei takes the dative; feminine eine becomes einer."
       - id: art5
         type: fill-blank
         tags: [dative plural]
         prompt: "Ich spiele mit den ___. (Kinder)"
         answers: [Kindern]
+        explanation: "In the dative plural the noun adds -n if it does not already end in -n or -s: den Kindern."
       - id: art6
         type: fill-blank
         tags: [dative plural]
@@ -48,29 +53,34 @@ sets:
           - { left: sie (she), right: ihr }
           - { left: wir, right: uns }
           - { left: Sie, right: Ihnen }
+        explanation: "The dative pronouns: mir, dir, ihm, ihr, uns, Ihnen."
       - id: pron2
         type: multiple-choice
         tags: [dative pronouns]
         prompt: "Kannst du ___ helfen? (me)"
         options: [mir, mich, ich]
         answer: mir
+        explanation: "helfen takes the dative, so 'me' is mir."
       - id: pron3
         type: multiple-choice
         tags: [dative pronouns]
         prompt: "Das Kleid gefällt ___. (her)"
         options: [ihr, sie, ihm]
         answer: ihr
+        explanation: "gefallen takes the dative; 'her' is ihr."
       - id: pron4
         type: multiple-choice
         tags: [dative pronouns]
         prompt: "Wie geht es ___? (formal)"
         options: [Ihnen, Sie, ihnen]
         answer: Ihnen
+        explanation: "Wie geht es …? takes the dative; formal 'you' in the dative is Ihnen, with a capital I."
       - id: pron5
         type: fill-blank
         tags: [dative pronouns]
         prompt: "Ich gebe ___ meine Nummer. (him)"
         answers: [ihm]
+        explanation: "geben has a person in the dative: 'him' is ihm."
 
   - title: Dative or accusative?
     items:
@@ -101,11 +111,13 @@ sets:
         prompt: "Ich danke ___ Arzt."
         options: [dem, den]
         answer: dem
+        explanation: "danken takes the dative, so the article is dem: Ich danke dem Arzt."
       - id: case5
         type: true-false
         tags: [dative verbs]
         prompt: "In 'Ich schenke meiner Mutter Blumen', meiner Mutter is the dative."
         answer: true
+        explanation: "The person who receives something is the dative: meiner Mutter. The thing given (Blumen) is accusative."
 
   - title: Prepositions
     items:
@@ -115,6 +127,7 @@ sets:
         prompt: "Ich gehe heute ___ Arzt."
         options: [zum, zur, nach]
         answer: zum
+        explanation: "To a person, like a doctor, you use zu: zu + dem = zum Arzt."
       - id: prep2
         type: multiple-choice
         tags: [dative prepositions]
@@ -127,11 +140,13 @@ sets:
         tags: [dative prepositions]
         prompt: "Ich lerne ___ einem Jahr Deutsch. (for one year)"
         answers: [seit]
+        explanation: "seit with the present says something started in the past and is still going on: seit einem Jahr."
       - id: prep4
         type: fill-blank
         tags: [dative prepositions]
         prompt: "Er kommt gerade ___ Training. (von + dem)"
         answers: [vom]
+        explanation: "von takes the dative; von + dem shortens to vom."
       - id: prep5
         type: cloze
         tags: [dative prepositions, dative articles]
@@ -143,6 +158,7 @@ sets:
           - [der]
           - [zum]
           - [meiner, der]
+        explanation: "Every gap follows mit, nach or zu, which always take the dative: dem Bus, den Kollegen (plural), der Arbeit, zum Supermarkt, meiner Schwester."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -152,16 +168,19 @@ sets:
         tags: [object order]
         prompt: I am giving the child a ball.
         answer: "Ich gebe dem Kind einen Ball."
+        explanation: "The person (dative, dem Kind) usually comes before the thing (accusative, einen Ball)."
       - id: order2
         type: word-order
         tags: [object order, dative pronouns]
         prompt: Can you show me the photo?
         answer: "Kannst du mir das Foto zeigen?"
+        explanation: "The modal comes first in the question; mir, then das Foto, and zeigen at the end."
       - id: order3
         type: word-order
         tags: [dative verbs]
         prompt: The flat does not please us.
         answer: "Die Wohnung gefällt uns nicht."
+        explanation: "With gefallen the thing is the subject (die Wohnung) and the person is dative (uns)."
 
   - title: Say it in German
     items:
@@ -172,18 +191,21 @@ sets:
         answers:
           - "Der Film gefällt mir."
           - "Mir gefällt der Film."
+        explanation: "With gefallen the film is the subject and the person is in the dative: Der Film gefällt mir."
       - id: tr2
         type: translation
         tags: [dative phrases]
         prompt: I am cold.
         answers:
           - "Mir ist kalt."
+        explanation: "Feeling cold is said with the dative: Mir ist kalt. Ich bin kalt would describe your personality."
       - id: tr3
         type: translation
         tags: [dative verbs]
         prompt: The car belongs to my father.
         answers:
           - "Das Auto gehört meinem Vater."
+        explanation: "gehören takes the dative: meinem Vater (mein + -em for a masculine noun)."
 
   - title: A birthday present
     stimulus:
@@ -206,18 +228,21 @@ sets:
         tags: [listening]
         prompt: Letztes Jahr haben Lena und Paul der Oma ein Buch geschenkt.
         answer: false
+        explanation: "Paul says: Letztes Jahr haben wir ihr Blumen geschenkt. The book is only an idea for this year."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Was schenken sie der Oma dieses Jahr?
         options: [eine Reise, ein Buch, Blumen]
         answer: eine Reise
+        explanation: "They decide on a trip: Wir fahren mit ihr an den Bodensee."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Warum kein Buch?
         options: ["Oma liest nicht mehr so gern.", "Oma hat schon viele Bücher.", "Bücher sind zu teuer."]
         answer: "Oma liest nicht mehr so gern."
+        explanation: "Lena says: Sie liest nicht mehr so gern. Ihre Augen sind nicht mehr so gut."
 
   - title: Write it
     items:

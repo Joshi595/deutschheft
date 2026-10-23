@@ -131,7 +131,7 @@ export default function SentenceSession({ bankHref, speakHref, conversationsHref
 
   if (view.name === 'done') {
     return (
-      <div className="page rise p-5 pl-9 sm:p-8 sm:pl-12" aria-live="polite">
+      <div className="page rise p-5 pt-7 sm:p-8 sm:pt-10" aria-live="polite">
         <div className="flex flex-wrap items-center justify-between gap-5">
           <div>
             <p className="eyebrow" lang="de">Gut gesprochen!</p>

@@ -6,6 +6,7 @@ import { describeResponse, grade, type GradeResult, type Response } from '../../
 import { emptyResponse, headingOf, isReady, isSelfAssessed, promptOf, showsOwnSolution, spokenSolution } from '../../lib/grading/response';
 import { speak } from '../../lib/speech';
 import { $progress, $settings, recordAnswer } from '../../lib/stores';
+import { Icon } from '../ui/Icon';
 import { StimulusView } from './StimulusView';
 import { ItemWidget } from './widgets';
 
@@ -27,9 +28,12 @@ interface Props {
   nextLabel?: string;
 }
 
-/** Choosing between a few options, or marking your own work, gets one go. Typed answers get two. */
+/** Choosing between a few options is answered by the tap itself, and gets one go. */
+const answeredOnTap = (item: ClientExercise) => item.type === 'multiple-choice' || item.type === 'true-false';
+
+/** Choosing, or marking your own work, gets one go. Typed answers get two. */
 function defaultAttempts(item: ClientExercise): number {
-  return item.type === 'multiple-choice' || item.type === 'true-false' || isSelfAssessed(item) ? 1 : 2;
+  return answeredOnTap(item) || isSelfAssessed(item) ? 1 : 2;
 }
 
 export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFinish, onNext, nextLabel = 'Continue' }: Props) {
@@ -49,17 +53,18 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
   const ready = isReady(item, response);
   const selfAssessed = isSelfAssessed(item);
   const freeText = item.type === 'writing' || item.type === 'writing-task';
+  const onTap = answeredOnTap(item);
 
-  function check() {
-    if (locked || !ready) return;
-    const graded = grade(item, response);
+  function check(given: Response = response) {
+    if (locked || !isReady(item, given)) return;
+    const graded = grade(item, given);
     setEarned(
       recordAnswer({
         exerciseId: item.id,
         lessonKey: item.lessonKey,
         correct: graded.correct,
         prompt: promptOf(item),
-        given: describeResponse(response),
+        given: describeResponse(given),
         expected: graded.expected,
       }),
     );
@@ -67,15 +72,20 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
     setResult(graded);
     if (graded.correct) {
       setStatus('solved');
-      onFinish?.(true, response, graded);
+      onFinish?.(true, given, graded);
     } else if (attempts + 1 >= allowed) {
       setAttempts(attempts + 1);
       setStatus('revealed');
-      onFinish?.(false, response, graded);
+      onFinish?.(false, given, graded);
     } else {
       setAttempts(attempts + 1);
       setStatus('retry');
     }
+  }
+
+  function change(next: Response) {
+    setResponse(next);
+    if (onTap) check(next);
   }
 
   function restart() {
@@ -104,19 +114,25 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
 
   const solution = result && locked && !selfAssessed ? spokenSolution(item, result) : undefined;
   const ownSolution = showsOwnSolution(item);
+  // Choices mark the right option themselves, and some widgets write the answer into the sentence.
+  const showAnswer = result && !ownSolution && !onTap && (status === 'revealed' || item.type === 'writing');
   const aiAvailable =
     settings.aiKey.trim() !== '' &&
     item.type !== 'speaking-task' &&
     (status === 'revealed' || (locked && freeText));
+  const hasButtons = (!locked && !onTap) || (locked && (onNext || selfAssessed)) || solution || (aiAvailable && ai.state !== 'loading' && ai.state !== 'done');
 
   return (
-    <article className="card p-4 sm:p-5" aria-labelledby={`${item.id}-prompt`}>
-      <header className="mb-3 flex items-start justify-between gap-3">
-        <p id={`${item.id}-prompt`} className="font-semibold">
-          <span className="mr-2 text-muted tabular-nums">{number}.</span>
+    <article className="card p-4 sm:p-6" aria-labelledby={`${item.id}-prompt`}>
+      <header className="mb-4 flex items-start gap-3">
+        <span className="numeral min-w-6 pt-0.5 text-2xl text-muted" aria-hidden="true">
+          {number}
+        </span>
+        <p id={`${item.id}-prompt`} className="flex-1 pt-0.5 font-semibold">
+          <span className="sr-only">{number}. </span>
           {headingOf(item)}
         </p>
-        {record?.correct && <span className="chip chip-good">Solved</span>}
+        {record?.correct && status === 'idle' && <span className="chip chip-good">Solved</span>}
       </header>
 
       {item.stimulus && (
@@ -125,80 +141,100 @@ export function ExerciseCard({ item, number, topic, maxAttempts, onAttempt, onFi
         </div>
       )}
 
-      <ItemWidget key={round} item={item} response={response} onChange={setResponse} locked={locked} result={result} onSubmit={check} />
+      <ItemWidget key={round} item={item} response={response} onChange={change} locked={locked} result={result} onSubmit={() => check()} />
 
-      <div className="mt-4 grid gap-3" aria-live="polite">
+      <div className="grid gap-3 not-empty:mt-4" aria-live="polite">
         {status === 'retry' && (
-          <div className="shake rounded-xl bg-bad-soft px-4 py-3 text-bad">
-            <p className="font-semibold">Not quite. Try once more.</p>
+          <div className="shake border-l-4 border-bad bg-bad-soft px-4 py-3">
+            <p className="font-semibold text-bad">Not quite. Try once more.</p>
             {result?.note && <p className="text-sm">{result.note}</p>}
             {item.hint && <p className="text-sm">Hint: {item.hint}</p>}
           </div>
         )}
 
         {status === 'solved' && (
-          <div className="pop rounded-xl bg-good-soft px-4 py-3 text-good">
-            <p className="flex items-baseline justify-between gap-3 font-semibold">
+          <div className="pop border-l-4 border-good bg-good-soft px-4 py-3">
+            <p className="flex items-center gap-2 font-semibold text-good">
+              <Icon name="check" size={18} />
               <span lang="de">{selfAssessed ? 'Gut gemacht!' : 'Richtig!'}</span>
-              {earned > 0 && <span className="text-sm tabular-nums">+{earned} points</span>}
+              {earned > 0 && <span className="ml-auto text-sm tabular-nums">+{earned} points</span>}
             </p>
-            {result?.note && <p className="text-sm">{result.note}</p>}
+            {result?.note && <p className="mt-1 text-sm">{result.note}</p>}
+            {item.explanation && (
+              <details className="mt-1 text-sm">
+                <summary className="cursor-pointer font-semibold text-muted hover:text-ink">Why?</summary>
+                <p className="mt-1">{item.explanation}</p>
+              </details>
+            )}
           </div>
         )}
 
         {status === 'revealed' && result && (
-          <div className="shake rounded-xl bg-bad-soft px-4 py-3 text-bad">
-            <p className="font-semibold">Not this time. It is back in your review queue.</p>
-            {result.note && <p className="text-sm">{result.note}</p>}
+          <div className="shake border-l-4 border-bad bg-bad-soft px-4 py-3">
+            <p className="flex items-center gap-2 font-semibold text-bad">
+              <Icon name="cross" size={18} />
+              Not this time.
+            </p>
+            {showAnswer && (
+              <p className="mt-1">
+                <span className="text-muted">{item.type === 'writing' ? 'One possible answer: ' : 'Answer: '}</span>
+                <span className="de" lang="de">
+                  {result.expected}
+                </span>
+              </p>
+            )}
+            {result.note && <p className="mt-1 text-sm">{result.note}</p>}
+            {item.explanation && <p className="mt-1">{item.explanation}</p>}
+            <p className="mt-1 text-sm text-muted">It comes back in Review.</p>
           </div>
         )}
 
-        {locked && result && (!ownSolution || item.explanation) && (
-          <div className="rounded-xl bg-surface-2 px-4 py-3 text-sm">
-            {!ownSolution && (status === 'revealed' || item.type === 'writing') && (
-              <p>
-                <span className="text-muted">{item.type === 'writing' ? 'One possible answer: ' : 'Answer: '}</span>
-                <span className="de text-base" lang="de">{result.expected}</span>
-              </p>
-            )}
-            {item.explanation && <p className={ownSolution ? '' : 'mt-1'}>{item.explanation}</p>}
-          </div>
+        {status === 'solved' && showAnswer && (
+          <p className="text-sm">
+            <span className="text-muted">One possible answer: </span>
+            <span className="de" lang="de">
+              {result!.expected}
+            </span>
+          </p>
         )}
 
         {ai.state !== 'idle' && (
-          <div className={`rounded-xl border px-4 py-3 text-sm ${ai.state === 'error' ? 'border-bad text-bad' : 'border-line'}`}>
+          <div className={`border-l-4 px-4 py-3 text-sm ${ai.state === 'error' ? 'border-bad text-bad' : 'border-accent bg-surface-2'}`}>
             <p className="eyebrow mb-1">AI feedback</p>
             <p className="whitespace-pre-line">{ai.state === 'loading' ? 'Thinking …' : ai.text}</p>
           </div>
         )}
 
-        <div className="flex flex-wrap items-center gap-2">
-          {!locked && (
-            <button type="button" className="btn btn-accent" onClick={check} disabled={!ready}>
-              {selfAssessed ? 'Done' : 'Check'}
-            </button>
-          )}
-          {locked && onNext && (
-            <button type="button" className="btn btn-accent" onClick={onNext} autoFocus>
-              {nextLabel}
-            </button>
-          )}
-          {locked && (
-            <button type="button" className={onNext ? 'btn btn-quiet' : 'btn'} onClick={restart}>
-              Try again
-            </button>
-          )}
-          {solution && (
-            <button type="button" className="listen btn btn-quiet" onClick={() => speak(solution, settings.speechRate)}>
-              Listen to the sentence
-            </button>
-          )}
-          {aiAvailable && ai.state !== 'loading' && ai.state !== 'done' && (
-            <button type="button" className="btn btn-quiet" onClick={askAi}>
-              {freeText ? 'Get feedback on my text' : 'Explain my mistake'}
-            </button>
-          )}
-        </div>
+        {hasButtons && (
+          <div className="flex flex-wrap items-center gap-2">
+            {!locked && !onTap && (
+              <button type="button" className="btn btn-accent" onClick={() => check()} disabled={!ready}>
+                {selfAssessed ? 'Done' : 'Check'}
+              </button>
+            )}
+            {locked && onNext && (
+              <button type="button" className="btn btn-accent" onClick={onNext} autoFocus>
+                {nextLabel}
+              </button>
+            )}
+            {locked && selfAssessed && (
+              <button type="button" className={onNext ? 'btn btn-quiet' : 'btn'} onClick={restart}>
+                Try again
+              </button>
+            )}
+            {solution && (
+              <button type="button" className="listen btn btn-quiet" onClick={() => speak(solution, settings.speechRate)}>
+                <Icon name="listen" size={18} />
+                Listen to the sentence
+              </button>
+            )}
+            {aiAvailable && ai.state !== 'loading' && ai.state !== 'done' && (
+              <button type="button" className="btn btn-quiet" onClick={askAi}>
+                {freeText ? 'Get feedback on my text' : 'Explain my mistake'}
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </article>
   );

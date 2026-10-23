@@ -18,9 +18,9 @@ export function WeekStrip({ days, goal, height = 3 }: Props) {
         const label = date.toLocaleDateString(undefined, { weekday: 'long', day: 'numeric', month: 'long' });
         return (
           <li key={day} className="flex flex-1 flex-col items-center gap-1" title={`${label}: ${xp} points`}>
-            <span className="flex w-full items-end rounded-md bg-surface-2" style={{ height: `${height}rem` }}>
+            <span className="flex w-full items-end bg-surface-2" style={{ height: `${height}rem` }}>
               <span
-                className={`w-full rounded-md ${reached ? 'bg-good' : 'bg-accent'}`}
+                className={`w-full ${reached ? 'bg-good' : 'bg-signal'}`}
                 // A day studied before points existed still shows as a sliver.
                 style={{ height: xp > 0 ? `${Math.max(12, (xp / top) * 100)}%` : studied ? '12%' : 0 }}
               />

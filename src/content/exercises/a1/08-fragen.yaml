@@ -8,16 +8,19 @@ sets:
         tags: [verb second]
         prompt: Today I am learning German.
         answer: Heute lerne ich Deutsch.
+        explanation: "The verb is always the second element. When Heute comes first, the subject ich moves behind the verb."
       - id: v2b
         type: word-order
         tags: [verb second]
         prompt: Now we live in Cologne.
         answer: Jetzt wohnen wir in Köln.
+        explanation: "Jetzt takes the first place, so the verb wohnen comes second and wir follows it."
       - id: v2c
         type: word-order
         tags: [verb second]
         prompt: Tomorrow my sister is coming.
         answer: Morgen kommt meine Schwester.
+        explanation: "Morgen is first, the verb kommt second, and the subject meine Schwester comes after the verb."
       - id: v2d
         type: multiple-choice
         tags: [verb second]
@@ -27,6 +30,7 @@ sets:
           - Heute ich arbeite nicht.
           - Heute nicht ich arbeite.
         answer: Heute arbeite ich nicht.
+        explanation: "Verb second: after Heute comes arbeite, then ich. nicht goes at the end."
       - id: v2e
         type: multiple-choice
         tags: [verb second]
@@ -52,6 +56,7 @@ sets:
         prompt: ___ kommt der Bus? Um acht Uhr.
         options: [Wann, Wo, Wie]
         answer: Wann
+        explanation: "Um acht Uhr is a time, so the question word is wann (when)."
       - id: w3
         type: multiple-choice
         tags: [question words]
@@ -72,12 +77,14 @@ sets:
         prompt: ___ kostet das Buch? Zwölf Euro.
         options: [Wie viel, Wie viele, Wann]
         answer: Wie viel
+        explanation: "Wie viel asks for an amount or a price. Wie viele is for things you can count: Wie viele Kinder?"
       - id: w6
         type: multiple-choice
         tags: [question words]
         prompt: ___ lernst du Deutsch? Ich arbeite in Deutschland.
         options: [Warum, Wann, Wer]
         answer: Warum
+        explanation: "The answer gives a reason, so the question is warum (why)."
       - id: w7
         type: matching
         tags: [question words]
@@ -89,6 +96,7 @@ sets:
           - { left: warum, right: why }
           - { left: wie, right: how }
           - { left: was, right: what }
+        explanation: "Most question words start with w: wer who, wo where, wann when, warum why, wie how, was what."
 
   - title: Make a yes/no question
     instructions: Turn the statement into a question.
@@ -98,21 +106,25 @@ sets:
         tags: [yes-no questions]
         prompt: "Du kommst aus Polen."
         answers: [Kommst du aus Polen?]
+        explanation: "A yes/no question starts with the verb; the subject comes straight after it: Kommst du …?"
       - id: yn2
         type: translation
         tags: [yes-no questions]
         prompt: "Sie haben Kinder. (formal)"
         answers: [Haben Sie Kinder?]
+        explanation: "Put the verb first: Haben Sie Kinder?"
       - id: yn3
         type: translation
         tags: [yes-no questions]
         prompt: "Er ist verheiratet."
         answers: [Ist er verheiratet?]
+        explanation: "Put the verb first: Ist er verheiratet?"
       - id: yn4
         type: translation
         tags: [yes-no questions]
         prompt: "Ihr wohnt in Berlin."
         answers: [Wohnt ihr in Berlin?]
+        explanation: "Put the verb first; the ihr form wohnt stays the same: Wohnt ihr in Berlin?"
 
   - title: ja, nein or doch?
     items:
@@ -129,18 +141,21 @@ sets:
         prompt: "Kommst du aus Spanien? ___, ich komme aus Spanien."
         options: [Ja, Doch, Nein]
         answer: Ja
+        explanation: "The question has no nicht or kein, so a yes is ja."
       - id: doch3
         type: multiple-choice
         tags: [ja nein doch]
         prompt: "Sprechen Sie nicht Deutsch? ___, ich spreche Deutsch."
         options: [Doch, Ja, Nein]
         answer: Doch
+        explanation: "To contradict a negative question (nicht Deutsch?), you say doch, not ja."
       - id: doch4
         type: multiple-choice
         tags: [ja nein doch]
         prompt: "Hast du keinen Hunger? ___, ich habe keinen Hunger."
         options: [Nein, Doch, Ja]
         answer: Nein
+        explanation: "To agree with a negative question, you say nein: Nein, ich habe keinen Hunger."
 
   - title: Ask the question
     instructions: This is what the speaking exam asks of you. Build a question for the answer given.
@@ -150,16 +165,19 @@ sets:
         tags: [W-questions]
         prompt: "Answer: Ich wohne in Hamburg. Ask the question (formal)."
         answer: Wo wohnen Sie?
+        explanation: "The answer is a place, so ask with wo. Formal Sie takes the -en ending: Wo wohnen Sie?"
       - id: ask2
         type: word-order
         tags: [W-questions]
         prompt: "Answer: Ich habe zwei Geschwister. Ask the question (informal)."
         answer: Wie viele Geschwister hast du?
+        explanation: "Geschwister can be counted, so ask with wie viele, followed by the noun and then the verb."
       - id: ask3
         type: word-order
         tags: [W-questions]
         prompt: "Answer: Ich spreche Englisch und Hindi. Ask the question (formal)."
         answer: Welche Sprachen sprechen Sie?
+        explanation: "welche asks 'which': Welche Sprachen sprechen Sie? The verb comes after the question words."
 
   - title: Listen and answer
     stimulus:
@@ -185,12 +203,14 @@ sets:
         prompt: Woher kommt der Mann?
         options: [aus Ungarn, aus Stuttgart, aus England]
         answer: aus Ungarn
+        explanation: "The man says: Ich komme aus Ungarn. Stuttgart is where he lives now."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Wie lange wohnt er schon in Stuttgart?
         options: [drei Jahre, zwei Jahre, ein Jahr]
         answer: drei Jahre
+        explanation: "He says: Ich wohne schon drei Jahre hier."
       - id: listen3
         type: true-false
         tags: [listening]

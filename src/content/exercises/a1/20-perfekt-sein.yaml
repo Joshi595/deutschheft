@@ -9,6 +9,7 @@ sets:
         prompt: Ich ___ nach Berlin gefahren.
         options: [bin, habe]
         answer: bin
+        explanation: "fahren is movement from one place to another, so the Perfekt uses sein: ich bin gefahren."
       - id: hs2
         type: multiple-choice
         tags: [haben or sein]
@@ -22,6 +23,7 @@ sets:
         prompt: Wir ___ ins Kino gegangen.
         options: [sind, haben]
         answer: sind
+        explanation: "gehen is movement, so it takes sein: wir sind gegangen."
       - id: hs4
         type: multiple-choice
         tags: [haben or sein]
@@ -49,12 +51,14 @@ sets:
         prompt: Wir ___ Pizza gegessen.
         options: [haben, sind]
         answer: haben
+        explanation: "essen has an object and no movement, so it takes haben: wir haben gegessen."
       - id: hs8
         type: multiple-choice
         tags: [haben or sein]
         prompt: Wann ___ du nach Hause gekommen?
         options: [bist, hast]
         answer: bist
+        explanation: "kommen is movement, so it takes sein; with du that is bist."
 
   - title: The participles
     items:
@@ -69,21 +73,25 @@ sets:
           - { left: fliegen, right: geflogen }
           - { left: bleiben, right: geblieben }
           - { left: aufstehen, right: aufgestanden }
+        explanation: "These movement verbs take sein and have irregular participles: gegangen, gefahren, gekommen, geflogen, geblieben, aufgestanden."
       - id: part2
         type: fill-blank
         tags: [participles]
         prompt: "Wir sind nach Spanien ___. (fliegen)"
         answers: [geflogen]
+        explanation: "fliegen changes its vowel: geflogen."
       - id: part3
         type: fill-blank
         tags: [participles]
         prompt: "Der Zug ist pünktlich ___. (ankommen)"
         answers: [angekommen]
+        explanation: "ankommen is separable, so ge- goes in the middle: angekommen."
       - id: part4
         type: fill-blank
         tags: [participles]
         prompt: "Ich bin zu Hause ___. (bleiben)"
         answers: [geblieben]
+        explanation: "bleiben takes sein even though nobody moves; its participle is geblieben."
 
   - title: war and hatte
     items:
@@ -92,31 +100,37 @@ sets:
         tags: [war and hatte]
         prompt: "Ich ___ gestern im Kino. (sein)"
         answers: [war]
+        explanation: "For sein, German usually uses the simple past war, even when speaking: ich war."
       - id: war2
         type: fill-blank
         tags: [war and hatte]
         prompt: "Wo ___ du am Samstag? (sein)"
         answers: [warst]
+        explanation: "With du, war becomes warst."
       - id: war3
         type: fill-blank
         tags: [war and hatte]
         prompt: "Wir ___ in Italien. (sein)"
         answers: [waren]
+        explanation: "With wir, war becomes waren."
       - id: war4
         type: fill-blank
         tags: [war and hatte]
         prompt: "Ich ___ keine Zeit. (haben)"
         answers: [hatte]
+        explanation: "haben in the past is hatte: ich hatte keine Zeit."
       - id: war5
         type: fill-blank
         tags: [war and hatte]
         prompt: "Wir ___ viel Spaß. (haben)"
         answers: [hatten]
+        explanation: "With wir, hatte becomes hatten."
       - id: war6
         type: fill-blank
         tags: [war and hatte]
         prompt: "Das Wetter ___ schön. (sein)"
         answers: [war]
+        explanation: "das Wetter is es, so the form is war, like ich war."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -126,16 +140,19 @@ sets:
         tags: [perfect tense, word order]
         prompt: I went to Berlin by train.
         answer: Ich bin mit dem Zug nach Berlin gefahren.
+        explanation: "sein is second, mit dem Zug (how) comes before nach Berlin (where), and the participle goes last."
       - id: order2
         type: word-order
         tags: [perfect tense, word order]
         prompt: Yesterday we went to the cinema.
         answer: Gestern sind wir ins Kino gegangen.
+        explanation: "Gestern is first, so sind comes second, then wir, and gegangen goes to the end."
       - id: order3
         type: word-order
         tags: [perfect tense, word order]
         prompt: When did you get up?
         answer: Wann bist du aufgestanden?
+        explanation: "After the question word comes bist (aufstehen takes sein), then du, and the participle at the end."
 
   - title: A weekend in Hamburg
     instructions: Read the text, then answer.
@@ -155,17 +172,20 @@ sets:
         tags: [reading, perfect tense]
         prompt: Tom ist mit dem Auto nach Hamburg gefahren.
         answer: false
+        explanation: "Tom writes: Ich bin … mit dem Zug gefahren."
       - id: read2
         type: multiple-choice
         tags: [reading, perfect tense]
         prompt: Wann ist Tom in Hamburg angekommen?
         options: [um elf Uhr, um sieben Uhr, am Abend]
         answer: um elf Uhr
+        explanation: "Tom writes: Um elf Uhr bin ich angekommen."
       - id: read3
         type: true-false
         tags: [reading, perfect tense]
         prompt: Das Wetter war schön.
         answer: false
+        explanation: "The text says: Das Wetter war leider nicht gut."
       - id: read4
         type: multiple-choice
         tags: [reading, perfect tense]
@@ -175,6 +195,7 @@ sets:
           - Sie sind in die Stadt gegangen.
           - Sie haben Fisch gegessen.
         answer: Sie sind zu Hause geblieben.
+        explanation: "Am Sonntag sind wir zu Hause geblieben und haben einen Film gesehen."
 
   - title: Complete the story
     items:
@@ -189,6 +210,7 @@ sets:
           - [bin]
           - [habe]
           - [sind]
+        explanation: "Movement and change take sein (aufgestanden, gefahren, gegangen); frühstücken and treffen take haben."
 
   - title: Say and write it
     items:
@@ -198,18 +220,21 @@ sets:
         prompt: I stayed at home.
         answers:
           - Ich bin zu Hause geblieben.
+        explanation: "bleiben takes sein in the Perfekt: Ich bin zu Hause geblieben."
       - id: tr2
         type: translation
         tags: [war and hatte]
         prompt: Where were you yesterday? (informal)
         answers:
           - Wo warst du gestern?
+        explanation: "For sein in the past, use war; with du it is warst."
       - id: tr3
         type: translation
         tags: [perfect tense]
         prompt: We went to the cinema.
         answers:
           - Wir sind ins Kino gegangen.
+        explanation: "gehen is movement, so sein; ins Kino is in + das, going into the cinema."
       - id: speak1
         type: speaking-task
         tags: [speaking, perfect tense]

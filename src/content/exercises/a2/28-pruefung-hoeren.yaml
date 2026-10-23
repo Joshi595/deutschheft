@@ -13,6 +13,7 @@ sets:
         prompt: Wann soll Frau Becker kommen?
         options: ["am Freitag um 10:30 Uhr", "am Donnerstag um 9 Uhr", "am Freitag um 9:30 Uhr"]
         answer: "am Freitag um 10:30 Uhr"
+        explanation: "Thursday at nine is cancelled; the new time is am Freitag um halb elf, 10:30."
       - id: h1-2
         type: multiple-choice
         stimulus:
@@ -23,6 +24,7 @@ sets:
         prompt: Wo sind die Angebote?
         options: ["im ersten Stock", "im Erdgeschoss", "in der Schuhabteilung im zweiten Stock"]
         answer: "im ersten Stock"
+        explanation: "The announcement says: im ersten Stock, direkt neben den Schuhen."
       - id: h1-3
         type: multiple-choice
         stimulus:
@@ -33,6 +35,7 @@ sets:
         prompt: Wann möchte Ben sich treffen?
         options: ["um 19:30 Uhr", "um 19 Uhr", "um 20 Uhr"]
         answer: "um 19:30 Uhr"
+        explanation: "Ben can't make seven: Lieber um halb acht? That is 19:30; the film starts at eight."
 
   - title: "Teil 2: a conversation (once)"
     instructions: "Was macht Kemal an welchem Tag? Sie hören den Text einmal."
@@ -60,12 +63,14 @@ sets:
         options: [Fußball, Deutschkurs, Zahnarzt, Umzug, Café]
         answer: Fußball
         shuffle: false
+        explanation: "Kemal says: Am Montag spiele ich Fußball, wie immer."
       - id: h2-2
         type: multiple-choice
         prompt: Mittwoch
         options: [Fußball, Deutschkurs, Zahnarzt, Umzug, Café]
         answer: Zahnarzt
         shuffle: false
+        explanation: "Kemal says: Am Mittwoch muss ich zum Zahnarzt."
       - id: h2-3
         type: multiple-choice
         prompt: Donnerstag
@@ -92,6 +97,7 @@ sets:
         prompt: Was bekommt der Mann zum Geburtstag?
         options: [eine Uhr, ein Buch, eine Tasche]
         answer: eine Uhr
+        explanation: "He has enough books and says a new watch would be nice: dann bekommst du eine Uhr."
       - id: h3-2
         type: multiple-choice
         stimulus:
@@ -105,6 +111,7 @@ sets:
         prompt: Wie ist die Frau zur Arbeit gekommen?
         options: [mit dem Bus, mit dem Fahrrad, mit dem Auto]
         answer: mit dem Bus
+        explanation: "She wanted to cycle, but it rained: Dann habe ich den Bus genommen."
 
   - title: "Teil 4: a radio interview"
     instructions: Sie hören ein Interview. Richtig oder falsch? Sie hören den Text zweimal.
@@ -129,15 +136,19 @@ sets:
         type: true-false
         prompt: Herr Schulz ist seit fünfzehn Jahren Busfahrer.
         answer: true
+        explanation: "He answers: Seit fünfzehn Jahren."
       - id: h4-2
         type: true-false
         prompt: Als Lkw-Fahrer war er oft zu Hause.
         answer: false
+        explanation: "As a lorry driver he was immer weg von meiner Familie: always away."
       - id: h4-3
         type: true-false
         prompt: Ihm gefällt die Frühschicht sehr.
         answer: false
+        explanation: "He says the early shift is nicht so schön, because he has to get up at four."
       - id: h4-4
         type: true-false
         prompt: Am Wochenende fährt er gern Auto.
         answer: false
+        explanation: "At the weekend he cycles; das Auto steht am Wochenende in der Garage."

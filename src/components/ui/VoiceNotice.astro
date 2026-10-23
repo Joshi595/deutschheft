@@ -1,0 +1,19 @@
+---
+// Shown only where listening matters, and only when the browser has no German voice.
+// The layout's script hides it for good once it is closed.
+import { url } from '../../lib/url';
+import Icon from './Icon.astro';
+
+/** Spacing around the notice; the page knows what sits next to it. */
+const { class: className = 'mt-6' } = Astro.props as { class?: string };
+---
+
+<p data-voice-notice class:list={['voice-notice max-w-3xl items-start gap-3 border-l-4 border-signal bg-surface-2 px-4 py-3 text-sm', className]}>
+  <span class="flex-1">
+    This browser has no German voice, so listening is off wherever there is no recording.{' '}
+    <a href={`${url('settings/')}#audio`} class="font-semibold underline underline-offset-4">How to get it back</a>
+  </span>
+  <button type="button" data-voice-dismiss class="-m-1 grid size-8 flex-none place-items-center text-muted hover:text-ink" aria-label="Close this notice">
+    <Icon name="cross" size={18} />
+  </button>
+</p>

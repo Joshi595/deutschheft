@@ -12,11 +12,13 @@ sets:
           - { left: der Geburtstag, right: Alles Gute zum Geburtstag! }
           - { left: Ostern, right: Frohe Ostern! }
           - { left: die Hochzeit, right: Herzlichen Glückwunsch zur Hochzeit! }
+        explanation: "Frohe Weihnachten, Guten Rutsch (for New Year's Eve), Alles Gute zum Geburtstag, Frohe Ostern, Herzlichen Glückwunsch zur Hochzeit."
       - id: greet2
         type: true-false
         tags: [greetings]
         prompt: "'Frohen Geburtstag!' is the normal birthday greeting in German."
         answer: false
+        explanation: "The usual birthday wish is Alles Gute zum Geburtstag! or Herzlichen Glückwunsch zum Geburtstag!"
 
   - title: Congratulating
     items:
@@ -26,23 +28,27 @@ sets:
         prompt: "Ich gratuliere ___ zum Geburtstag!"
         options: [dir, dich, du]
         answer: dir
+        explanation: "gratulieren takes the dative: Ich gratuliere dir."
       - id: cong2
         type: multiple-choice
         tags: [gratulieren]
         prompt: "Herzlichen Glückwunsch ___ Hochzeit!"
         options: [zur, zum, für]
         answer: zur
+        explanation: "Glückwunsch zu + dative; Hochzeit is feminine, so zu der → zur."
       - id: cong3
         type: multiple-choice
         tags: [gratulieren]
         prompt: "Herzlichen Glückwunsch ___ neuen Job!"
         options: [zum, zur, für]
         answer: zum
+        explanation: "Job is masculine, so zu dem → zum: zum neuen Job."
       - id: cong4
         type: fill-blank
         tags: [presents]
         prompt: "Was schenkst du ___ Mutter zum Geburtstag? (deine, dative)"
         answers: [deiner]
+        explanation: "The person you give something to is dative: deiner Mutter."
 
   - title: Invitations
     items:
@@ -51,12 +57,14 @@ sets:
         tags: [separable verbs]
         prompt: "Ich lade dich zu meiner Party ___."
         answers: [ein]
+        explanation: "einladen is separable: lade comes second and ein goes to the end."
       - id: inv2
         type: multiple-choice
         tags: [replies]
         prompt: "Which reply accepts the invitation?"
         options: ["Ich komme gern!", "Schade, ich kann leider nicht.", "Vielleicht ein anderes Mal."]
         answer: "Ich komme gern!"
+        explanation: "Ich komme gern! accepts. The other two are polite ways of saying no."
       - id: inv3
         type: multiple-choice
         tags: [word order]
@@ -66,24 +74,28 @@ sets:
           - "Leider ich kann nicht kommen."
           - "Ich leider kann nicht kommen."
         answer: "Leider kann ich nicht kommen."
+        explanation: "Leider takes position one, so the verb kann comes next, then ich."
       - id: inv4
         type: multiple-choice
         tags: [du Sie]
         prompt: "Liebe Frau Klein, ___ Sie am Freitag Zeit?"
         options: [haben, hast, habt]
         answer: haben
+        explanation: "Frau Klein is addressed as Sie, so the verb is haben."
       - id: inv6
         type: multiple-choice
         tags: [replies]
         prompt: "A polite refusal should contain thanks, a reason and …"
         options: ["a good wish", "a present", "a new date for the party"]
         answer: "a good wish"
+        explanation: "A polite refusal thanks, gives a reason, and ends with a good wish such as Viel Spaß!"
       - id: inv5
         type: translation
         tags: [replies]
         prompt: Shall I bring something?
         answers:
           - "Soll ich etwas mitbringen?"
+        explanation: "Soll ich …? offers to do something; mitbringen stays whole at the end."
 
   - title: A refusal
     items:
@@ -100,6 +112,7 @@ sets:
           - [Schade]
           - [Spaß]
           - [Grüße]
+        explanation: "Danke für die Einladung; ich kann leider nicht; weil sends muss to the end; Schade!; viel Spaß; Viele Grüße."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -109,11 +122,13 @@ sets:
         tags: [invitations]
         prompt: Please let me know by Friday.
         answer: "Sag mir bitte bis Freitag Bescheid."
+        explanation: "Bescheid sagen means to let someone know; the du imperative Sag starts the sentence."
       - id: order2
         type: word-order
         tags: [replies]
         prompt: Thank you for the invitation, I would love to come.
         answer: "Danke für die Einladung, ich komme gern."
+        explanation: "Danke für + accusative: für die Einladung; ich komme gern accepts."
 
   - title: A message on the phone
     stimulus:
@@ -129,17 +144,20 @@ sets:
         prompt: Was feiert Katrin?
         options: ["ihre bestandene Prüfung", "ihren Geburtstag", "ihren neuen Job"]
         answer: "ihre bestandene Prüfung"
+        explanation: "Katrin says: ich habe am Freitag meine Prüfung bestanden! Das möchte ich feiern."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Was soll Jonas mitbringen?
         options: [seine Gitarre, einen Salat, Getränke]
         answer: seine Gitarre
+        explanation: "She asks: kannst du vielleicht deine Gitarre mitbringen?"
       - id: listen3
         type: true-false
         tags: [listening]
         prompt: Jonas soll bis Freitag zurückrufen.
         answer: false
+        explanation: "She says: Ruf mich bitte bis Donnerstag zurück."
 
   - title: Write an invitation
     items:

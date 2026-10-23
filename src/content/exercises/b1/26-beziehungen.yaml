@@ -13,28 +13,33 @@ sets:
           - { left: die Schwiegereltern, right: parents-in-law }
           - { left: der Lebensgefährte, right: partner (unmarried) }
           - { left: die Patchworkfamilie, right: blended family }
+        explanation: "geschieden divorced, alleinerziehend single parent, Geschwister siblings, Schwiegereltern in-laws, Lebensgefährte unmarried partner, Patchworkfamilie blended family."
       - id: f2
         type: fill-blank
         tags: [vocabulary]
         prompt: "Er ist nicht verheiratet, er ist ___. (single)"
         answers: [ledig]
+        explanation: "ledig is single, never married."
       - id: f3
         type: multiple-choice
         tags: [each other]
         prompt: "Wir helfen ___. (each other)"
         options: [einander, uns selbst, miteinander]
         answer: einander
+        explanation: "einander means each other: wir helfen einander."
       - id: f4
         type: multiple-choice
         tags: [each other]
         prompt: "Am wichtigsten ist, dass man ___ redet."
         options: [miteinander, einander, sich]
         answer: miteinander
+        explanation: "miteinander means with each other: miteinander reden."
       - id: f5
         type: true-false
         tags: [vocabulary]
         prompt: "'Sie haben sich getrennt' means they got married."
         answer: false
+        explanation: "sich trennen means to separate: they split up."
 
   - title: Reflexive verbs
     items:
@@ -44,39 +49,46 @@ sets:
         prompt: "Wir haben ___ auf einer Party kennengelernt."
         options: [uns, euch, sich]
         answer: uns
+        explanation: "For wir the reflexive pronoun is uns: wir haben uns kennengelernt."
       - id: r2
         type: multiple-choice
         tags: [prepositions]
         prompt: "Sie hat sich ___ ihren Nachbarn verliebt."
         options: [in, mit, an]
         answer: in
+        explanation: "sich verlieben in + accusative: to fall in love with."
       - id: r3
         type: multiple-choice
         tags: [reflexive]
         prompt: "Meine Eltern haben ___ scheiden lassen."
         options: [sich, ihnen, uns]
         answer: sich
+        explanation: "sich scheiden lassen: to get divorced; with they the reflexive is sich."
       - id: r4
         type: multiple-choice
         tags: [vocabulary]
         prompt: "First meeting: Wir haben uns 2018 ___."
         options: [kennengelernt, getroffen, gesehen]
         answer: kennengelernt
+        explanation: "kennenlernen is meeting someone for the first time; treffen is meeting someone you already know."
       - id: r5
         type: fill-blank
         tags: [reflexive]
         prompt: "Nach dem Streit haben wir ___ schnell versöhnt."
         answers: [uns]
+        explanation: "sich versöhnen, to make up after a quarrel; for wir: uns."
       - id: r6
         type: fill-blank
         tags: [prepositions]
         prompt: "Wir streiten uns oft ___ die Hausarbeit."
         answers: [über]
+        explanation: "sich streiten über + accusative: to argue about."
       - id: r7
         type: word-order
         tags: [reflexive]
         prompt: I get on well with my brother.
         answer: "Ich verstehe mich gut mit meinem Bruder."
+        explanation: "sich gut verstehen mit means to get on well with someone."
 
   - title: Tell the story
     items:
@@ -85,6 +97,7 @@ sets:
         tags: [story]
         prompt: When I saw him for the first time, I fell in love.
         answer: "Als ich ihn zum ersten Mal sah, habe ich mich verliebt."
+        explanation: "als for one moment in the past, with sah at the end; the main clause starts with habe."
       - id: st2
         type: translation
         tags: [story]
@@ -92,12 +105,14 @@ sets:
         answers:
           - "Wir sind nach einem Jahr zusammengezogen."
           - "Nach einem Jahr sind wir zusammengezogen."
+        explanation: "zusammenziehen is movement, so the Perfekt uses sein: sind zusammengezogen."
       - id: st3
         type: translation
         tags: [story]
         prompt: Unfortunately we lost touch.
         answers:
           - "Leider haben wir den Kontakt verloren."
+        explanation: "den Kontakt verlieren means to lose touch."
 
   - title: A love story
     items:
@@ -114,6 +129,7 @@ sets:
           - [geheiratet]
           - [streiten]
           - [Kompromiss]
+        explanation: "sich kennenlernen (meet), sich verlieben (fall in love), zusammenziehen (move in), heiraten (marry), sich streiten (argue), einen Kompromiss finden."
 
   - title: Then and now
     stimulus:
@@ -134,18 +150,21 @@ sets:
         tags: [listening]
         prompt: Früher war die Erziehung lockerer als heute.
         answer: false
+        explanation: "Frau Keller says: Früher war alles strenger. Stricter, not more relaxed."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Wer hat früher in Frau Kellers Familie entschieden?
         options: [der Vater, die Mutter, die Kinder]
         answer: der Vater
+        explanation: "She says: Mein Vater hat entschieden."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Was macht Frau Keller nachmittags?
         options: ["Sie kümmert sich um ihre Urenkel.", "Sie arbeitet.", "Sie trifft Freundinnen."]
         answer: "Sie kümmert sich um ihre Urenkel."
+        explanation: "She says: ich kümmere mich nachmittags um meine Urenkel."
 
   - title: Your view
     items:

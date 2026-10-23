@@ -34,6 +34,12 @@ const root = join(import.meta.dirname, '..', 'src', 'content');
  */
 const TEMPLATE_LEVELS = ['a1', 'a2', 'b1'];
 
+/**
+ * Levels where every exercise marked by the app explains its answer, so a
+ * wrong answer always says why. A level joins once its explanations are written.
+ */
+const EXPLAINED_LEVELS: string[] = ['a1', 'a2', 'b1'];
+
 const REQUIRED_HEADINGS = {
   grammar: ['The idea', 'Step by step', 'Compared with English', 'Typical mistakes', 'Summary'],
   topic: ['The idea', 'Step by step', 'Compared with English', 'Typical mistakes', 'Summary'],
@@ -233,6 +239,18 @@ describe('answer keys', () => {
   for (const { path, data } of exerciseFiles) {
     it(`${label(path)}: every model answer is accepted by the grader`, () => {
       checkItems(data.sets.flatMap((set) => set.items), data.lesson);
+    });
+  }
+});
+
+describe('explanations', () => {
+  for (const { path, data } of exerciseFiles.filter((file) => EXPLAINED_LEVELS.includes(levelOf(file.data.lesson)))) {
+    it(`${label(path)}: every exercise the app marks says why`, () => {
+      const missing = data.sets
+        .flatMap((set) => set.items)
+        .filter((item) => item.type !== 'writing-task' && item.type !== 'speaking-task' && !item.explanation?.trim())
+        .map((item) => item.id);
+      expect(missing, 'items without an explanation').toEqual([]);
     });
   }
 });

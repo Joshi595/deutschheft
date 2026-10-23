@@ -8,6 +8,7 @@ sets:
         prompt: "Ich bin krank. ___ bleibe ich zu Hause."
         options: [Deshalb, Trotzdem, Sonst]
         answer: Deshalb
+        explanation: "Staying at home is the result of being ill, so deshalb (therefore)."
       - id: con2
         type: multiple-choice
         tags: [deshalb trotzdem sonst]
@@ -21,24 +22,28 @@ sets:
         prompt: "Beeil dich, ___ kommen wir zu spät."
         options: [sonst, deshalb, trotzdem]
         answer: sonst
+        explanation: "sonst means 'otherwise': hurry, or else we will be late."
       - id: con4
         type: multiple-choice
         tags: [deshalb trotzdem sonst]
         prompt: "Das Auto ist sehr teuer. ___ kaufe ich es."
         options: [Trotzdem, Deshalb, Sonst]
         answer: Trotzdem
+        explanation: "Buying it despite the price is a contrast: trotzdem (nevertheless)."
       - id: con5
         type: multiple-choice
         tags: [deshalb trotzdem sonst]
         prompt: "Ich habe kein Geld. ___ kann ich nicht ins Kino gehen."
         options: [Deshalb, Trotzdem, Sonst]
         answer: Deshalb
+        explanation: "No money, and as a result no cinema: deshalb."
       - id: con6
         type: multiple-choice
         tags: [deshalb trotzdem sonst]
         prompt: "Zieh eine Jacke an, ___ erkältest du dich."
         options: [sonst, also, trotzdem]
         answer: sonst
+        explanation: "sonst gives the bad result if you don't do it: otherwise you'll catch a cold."
       - id: con7
         type: matching
         tags: [deshalb trotzdem sonst]
@@ -49,6 +54,7 @@ sets:
           - { left: sonst, right: otherwise }
           - { left: außerdem, right: besides }
           - { left: also, right: so }
+        explanation: "deshalb therefore, trotzdem nevertheless, sonst otherwise, außerdem besides, also so."
 
   - title: Word order
     instructions: Choose the correct sentence.
@@ -62,6 +68,7 @@ sets:
           - Deshalb ich bleibe zu Hause.
           - Deshalb ich zu Hause bleibe.
         answer: Deshalb bleibe ich zu Hause.
+        explanation: "deshalb takes position one itself, so the verb comes right after it: Deshalb bleibe ich …"
       - id: wo2
         type: multiple-choice
         tags: [connectors, word order]
@@ -70,6 +77,7 @@ sets:
           - "Ich bin müde, trotzdem muss ich arbeiten."
           - "Ich bin müde, trotzdem ich muss arbeiten."
         answer: "Ich bin müde, trotzdem muss ich arbeiten."
+        explanation: "trotzdem also takes position one, so the verb follows straight away: trotzdem muss ich …"
       - id: wo3
         type: multiple-choice
         tags: [connectors, word order]
@@ -85,16 +93,19 @@ sets:
         tags: [connectors, word order]
         prompt: That is why I am taking an umbrella.
         answer: Deshalb nehme ich einen Schirm mit.
+        explanation: "Deshalb is first, so nehme comes second; mitnehmen splits, with mit at the end."
       - id: wo5
         type: word-order
         tags: [connectors, word order]
         prompt: Nevertheless we are going for a walk.
         answer: Trotzdem gehen wir spazieren.
+        explanation: "Trotzdem is first, the verb gehen second, then wir; spazieren completes the verb at the end."
       - id: wo6
         type: word-order
         tags: [connectors, word order]
         prompt: Hurry up, otherwise we will be late.
         answer: "Beeil dich, sonst kommen wir zu spät."
+        explanation: "sonst counts as position one, so the verb kommen follows it straight away."
 
   - title: weil or deshalb?
     items:
@@ -118,6 +129,7 @@ sets:
         prompt: "Der Bus hatte Verspätung, ___ bin ich zu spät gekommen."
         options: [deshalb, weil]
         answer: deshalb
+        explanation: "The verb bin comes straight after the gap, which fits deshalb. After weil the verb would go to the end."
 
   - title: Rewrite with deshalb
     instructions: Turn the weil sentence round. Start the second part with deshalb.
@@ -129,6 +141,7 @@ sets:
         answers:
           - "Ich bin müde, deshalb gehe ich ins Bett."
           - "Ich bin müde. Deshalb gehe ich ins Bett."
+        explanation: "The reason now comes first; deshalb starts the result and is followed by the verb: deshalb gehe ich …"
       - id: turn2
         type: translation
         tags: [weil and deshalb]
@@ -136,6 +149,7 @@ sets:
         answers:
           - "Der Bus kommt nicht, deshalb nimmt er ein Taxi."
           - "Der Bus kommt nicht. Deshalb nimmt er ein Taxi."
+        explanation: "deshalb is followed directly by the verb: deshalb nimmt er ein Taxi."
       - id: turn3
         type: translation
         tags: [weil and deshalb]
@@ -143,6 +157,7 @@ sets:
         answers:
           - "Es regnet, deshalb bleiben wir zu Hause."
           - "Es regnet. Deshalb bleiben wir zu Hause."
+        explanation: "Es regnet is the reason; deshalb then takes the first place, followed by bleiben."
 
   - title: Complete the text
     items:
@@ -156,6 +171,7 @@ sets:
           - [Trotzdem]
           - [sonst]
         bank: [Deshalb, Trotzdem, sonst, weil, aber]
+        explanation: "The exam is the reason for studying (Deshalb); being tired yet not going to bed is a contrast (Trotzdem); the bad result if not is sonst."
 
   - title: Read and answer
     stimulus:
@@ -183,11 +199,13 @@ sets:
           - Weil das Restaurant am Samstag geschlossen ist.
           - Weil der Kuchen am Sonntag besser ist.
         answer: Weil sie am Samstag keine Zeit hat.
+        explanation: "Clara writes: Am Samstag habe ich leider keine Zeit, deshalb schlage ich Sonntag vor."
       - id: read3
         type: true-false
         tags: [reading, connectors]
         prompt: Man soll einen Tisch reservieren.
         answer: true
+        explanation: "Clara writes: Wir müssen aber einen Tisch reservieren, sonst bekommen wir keinen Platz."
 
   - title: Write
     items:

@@ -9,7 +9,9 @@ import Step from '../../components/lesson/Step.astro';
 import Summary from '../../components/lesson/Summary.astro';
 import VocabList from '../../components/lesson/VocabList.astro';
 import LessonNotes from '../../components/notebook/LessonNotes';
+import Icon from '../../components/ui/Icon.astro';
 import ProgressMeter from '../../components/ui/ProgressMeter.astro';
+import VoiceNotice from '../../components/ui/VoiceNotice.astro';
 import Base from '../../layouts/Base.astro';
 import { getCatalog } from '../../lib/content/catalog';
 import { url } from '../../lib/url';
@@ -33,149 +35,213 @@ const lesson = level.lessons[index]!;
 const previous = level.lessons[index - 1];
 const next = level.lessons[index + 1];
 
-const { Content } = await render(lesson.entry);
+const { Content, headings } = await render(lesson.entry);
 const exerciseIds = lesson.exercises.map((exercise) => exercise.id);
+const number = String(lesson.order).padStart(2, '0');
 
-const sections = [
-  { id: 'lesson', label: 'Lesson' },
-  ...(lesson.vocab.length > 0 ? [{ id: 'vocabulary', label: 'Vocabulary' }] : []),
+// The contents: the chapter's own sections, then words, practice and notes.
+const contents = [
+  ...headings.filter((heading) => heading.depth === 2).map((heading) => ({ id: heading.slug, label: heading.text })),
+  ...(lesson.vocab.length > 0 ? [{ id: 'vocabulary', label: `Words (${lesson.vocab.length})` }] : []),
   ...(lesson.sets.length > 0 ? [{ id: 'practice', label: 'Practice' }] : []),
   { id: 'notes', label: 'Notes' },
 ];
 ---
 
-<Base title={`${lesson.title} (${level.title})`} description={lesson.summary} width="narrow">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('learn/')} class="hover:text-ink">Learn</a>
-    <span aria-hidden="true"> / </span>
-    <a href={level.href} class="hover:text-ink">{level.title}</a>
-    <span aria-hidden="true"> / </span>
-    <span>Lesson {lesson.order}</span>
+<Base title={`${lesson.title} (${level.title})`} description={lesson.summary}>
+  <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-x-1.5 text-sm text-muted">
+    <a href={url('learn/')} class="hover:text-ink hover:underline">Learn</a>
+    <span aria-hidden="true">/</span>
+    <a href={level.href} class="hover:text-ink hover:underline">{level.title} {level.name}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Chapter {lesson.order}</span>
   </nav>
 
-  <header class="mt-4">
-    {lesson.titleDe && <p class="eyebrow" lang="de">{lesson.titleDe}</p>}
-    <h1 class="mt-1 text-4xl sm:text-5xl">{lesson.title}</h1>
-    <p class="mt-4 text-lg text-muted">{lesson.summary}</p>
-    <p class="mt-4 flex flex-wrap gap-2">
-      <span class="chip">{lesson.minutes} min</span>
-      {lesson.vocab.length > 0 && <span class="chip">{lesson.vocab.length} words</span>}
-      {exerciseIds.length > 0 && <span class="chip">{exerciseIds.length} exercises</span>}
-    </p>
-    {exerciseIds.length > 0 && <div class="mt-5"><ProgressMeter ids={exerciseIds} /></div>}
+  <header class="mt-6 xl:grid xl:grid-cols-[11rem_minmax(0,40rem)] xl:gap-14">
+    <p class="numeral text-7xl text-accent sm:text-8xl xl:text-right xl:text-[8.5rem]" aria-hidden="true">{number}</p>
+    <div class="mt-4 xl:mt-0">
+      <h1 class="text-4xl sm:text-[3.25rem]">{lesson.title}</h1>
+      {lesson.titleDe && <p class="mt-2 text-xl font-semibold text-muted" lang="de">{lesson.titleDe}</p>}
+      <p class="mt-4 text-lg text-muted">{lesson.summary}</p>
+      <p class="mt-5 flex flex-wrap gap-2">
+        <span class="chip">{lesson.minutes} min</span>
+        {lesson.vocab.length > 0 && <span class="chip">{lesson.vocab.length} words</span>}
+        {exerciseIds.length > 0 && <span class="chip">{exerciseIds.length} exercises</span>}
+      </p>
+      {exerciseIds.length > 0 && <div class="mt-5"><ProgressMeter ids={exerciseIds} /></div>}
+    </div>
   </header>
 
-  <nav aria-label="In this lesson" class="top-[3.4rem] z-30 -mx-4 mt-8 sm:sticky border-y border-line bg-bg/95 px-4 backdrop-blur">
-    <ul class="flex gap-1 overflow-x-auto text-sm font-semibold">
-      {
-        sections.map((section) => (
-          <li><a href={`#${section.id}`} data-section-link class="block border-b-2 border-transparent px-3 py-2.5 text-muted hover:text-ink aria-[current=true]:border-accent aria-[current=true]:text-ink">{section.label}</a></li>
-        ))
-      }
-    </ul>
-  </nav>
-
-  <section id="lesson" class="mt-8">
+  <!-- Below 80rem: one slim bar with the contents, where you are, and a way to practice. -->
+  <div class="sticky top-(--shell-top) z-30 -mx-4 mt-8 flex items-center gap-3 border-y border-line bg-bg/95 px-4 py-2 backdrop-blur sm:-mx-10 sm:px-10 xl:hidden">
+    <details class="relative" data-contents>
+      <summary class="btn btn-small cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+        <Icon name="list" size={18} />
+        Contents
+      </summary>
+      <ol class="absolute top-full left-0 mt-2 grid max-h-[60vh] w-72 overflow-y-auto border-2 border-ink bg-surface p-1.5">
+        {
+          contents.map((entry) => (
+            <li>
+              <a href={`#${entry.id}`} data-section-link class="block rounded px-3 py-2 hover:bg-surface-2 aria-[current=true]:font-semibold aria-[current=true]:text-accent">
+                {entry.label}
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </details>
+    <span data-current-section class="min-w-0 flex-1 truncate text-sm text-muted"></span>
     {
-      lesson.objectives.length > 0 && (
-        <div class="card mb-8 border-l-4 border-l-accent p-5">
-          <p class="eyebrow">After this chapter you can</p>
-          <ul class="mt-2 grid gap-1.5">
-            {lesson.objectives.map((objective) => (
-              <li class="flex gap-2">
-                <span class="font-bold text-good" aria-hidden="true">✓</span>
-                <span>{objective}</span>
-              </li>
-            ))}
-          </ul>
+      lesson.sets.length > 0 && (
+        <a href="#practice" class="btn btn-accent btn-small">
+          Practice
+        </a>
+      )
+    }
+  </div>
+
+  <div class="mt-10 xl:grid xl:grid-cols-[11rem_minmax(0,40rem)] xl:gap-14">
+    <!-- From 80rem: the contents stay in sight beside the text. -->
+    <nav aria-label="In this chapter" class="hidden xl:block">
+      <ol class="sticky top-8 grid border-l-2 border-line text-sm">
+        {
+          contents.map((entry) => (
+            <li>
+              <a
+                href={`#${entry.id}`}
+                data-section-link
+                class="-ml-0.5 block border-l-2 border-transparent py-1.5 pl-4 text-muted hover:text-ink aria-[current=true]:border-accent aria-[current=true]:font-semibold aria-[current=true]:text-ink"
+              >
+                {entry.label}
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+
+    <div class="min-w-0">
+      <section id="lesson">
+        {
+          lesson.objectives.length > 0 && (
+            <div class="mb-10 border-l-4 border-accent bg-surface-2 p-5">
+              <p class="font-semibold">After this chapter you can</p>
+              <ul class="mt-2 grid gap-1.5">
+                {lesson.objectives.map((objective) => (
+                  <li class="flex gap-2.5">
+                    <Icon name="check" size={18} class="mt-1 flex-none text-good" />
+                    <span>{objective}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+        <VoiceNotice class="mb-8" />
+        <div class="prose">
+          <Content components={{ GrammarBox, Example, Step, Compare, Mistake, Summary }} />
         </div>
-      )
-    }
-    <div class="prose">
-      <Content components={{ GrammarBox, Example, Step, Compare, Mistake, Summary }} />
-    </div>
-  </section>
-
-  {
-    lesson.vocab.length > 0 && (
-      <section id="vocabulary" class="mt-14">
-        <h2 class="text-3xl">Vocabulary</h2>
-        <p class="mt-2 mb-5 text-muted">
-          Tap the speaker to hear a word. These join your review deck when you start the exercises.
-        </p>
-        <VocabList items={lesson.vocab} />
       </section>
-    )
-  }
 
-  {
-    lesson.sets.length > 0 && (
-      <section id="practice" class="mt-14">
-        <h2 class="text-3xl">Practice</h2>
-        <p class="mt-2 mb-6 text-muted">
-          You get a second try on typed answers. Anything you miss comes back in Review.
-        </p>
-        <ExerciseRunner
-          client:only="react"
-          topic={lesson.title}
-          sets={lesson.sets}
-          vocabIds={lesson.vocabIds}
-          next={next && { href: next.href, title: next.title }}
-        >
-          <p slot="fallback" class="text-muted">Loading exercises …</p>
-        </ExerciseRunner>
+      {
+        lesson.vocab.length > 0 && (
+          <section id="vocabulary" class="mt-16 border-t-2 border-ink pt-4">
+            <h2 class="text-3xl">Words</h2>
+            <p class="mt-2 mb-5 text-muted">Tap the speaker to hear a word. They join your review deck when you start practising.</p>
+            <VocabList items={lesson.vocab} />
+          </section>
+        )
+      }
+
+      {
+        lesson.sets.length > 0 && (
+          <section id="practice" class="mt-16 border-t-2 border-ink pt-4">
+            <h2 class="text-3xl">Practice</h2>
+            <p class="mt-2 mb-6 text-muted">A tap answers a choice. Typed answers get a second try, and anything you miss comes back in Review.</p>
+            <ExerciseRunner
+              client:only="react"
+              topic={lesson.title}
+              sets={lesson.sets}
+              vocabIds={lesson.vocabIds}
+              next={next && { href: next.href, title: next.title }}
+            >
+              <div slot="fallback" class="skeleton min-h-40" role="status">
+                <span class="sr-only">Loading exercises …</span>
+              </div>
+            </ExerciseRunner>
+          </section>
+        )
+      }
+
+      <section id="notes" class="mt-16 border-t-2 border-ink pt-4">
+        <h2 class="text-3xl">Notes</h2>
+        <div class="mt-4">
+          <LessonNotes client:only="react" lessonKey={lesson.key} notebookHref={url('notebook/')} />
+        </div>
       </section>
-    )
-  }
 
-  <section id="notes" class="mt-14">
-    <h2 class="text-3xl">Notes</h2>
-    <div class="mt-4">
-      <LessonNotes client:only="react" lessonKey={lesson.key} notebookHref={url('notebook/')} />
+      <nav aria-label="Chapters" class="mt-16 grid gap-px border-y-2 border-ink bg-line sm:grid-cols-2">
+        {
+          previous ? (
+            <a href={previous.href} class="group flex items-center gap-4 bg-bg py-5 pr-4 hover:bg-surface-2">
+              <Icon name="back" size={22} class="flex-none text-muted group-hover:text-ink" />
+              <span class="min-w-0">
+                <span class="block text-sm text-muted">Chapter {previous.order}</span>
+                <span class="block font-semibold">{previous.title}</span>
+              </span>
+            </a>
+          ) : (
+            <span class="hidden bg-bg sm:block" />
+          )
+        }
+        {
+          next ? (
+            <a href={next.href} class="group flex items-center justify-end gap-4 bg-bg py-5 pl-4 text-right hover:bg-surface-2">
+              <span class="min-w-0">
+                <span class="block text-sm text-muted">Chapter {next.order}</span>
+                <span class="block font-semibold">{next.title}</span>
+              </span>
+              <Icon name="next" size={22} class="flex-none text-muted group-hover:text-ink" />
+            </a>
+          ) : (
+            <a href={level.href} class="group flex items-center justify-end gap-4 bg-bg py-5 pl-4 text-right hover:bg-surface-2">
+              <span>
+                <span class="block text-sm text-muted">End of {level.title}</span>
+                <span class="block font-semibold">Back to all chapters</span>
+              </span>
+              <Icon name="next" size={22} class="flex-none text-muted group-hover:text-ink" />
+            </a>
+          )
+        }
+      </nav>
     </div>
-  </section>
-
-  <nav aria-label="Lessons" class="mt-14 grid gap-3 border-t border-line pt-6 sm:grid-cols-2">
-    {
-      previous ? (
-        <a href={previous.href} class="card p-4 hover:border-ink">
-          <span class="eyebrow">Previous</span>
-          <span class="mt-1 block font-semibold">{previous.title}</span>
-        </a>
-      ) : (
-        <span />
-      )
-    }
-    {
-      next ? (
-        <a href={next.href} class="card p-4 text-right hover:border-ink">
-          <span class="eyebrow">Next</span>
-          <span class="mt-1 block font-semibold">{next.title}</span>
-        </a>
-      ) : (
-        <a href={level.href} class="card p-4 text-right hover:border-ink">
-          <span class="eyebrow">End of {level.title}</span>
-          <span class="mt-1 block font-semibold">Back to all lessons</span>
-        </a>
-      )
-    }
-  </nav>
+  </div>
 </Base>
 
 <script>
-  // Highlight the section-nav link for whichever section is in view.
-  const links = document.querySelectorAll<HTMLAnchorElement>('[data-section-link]');
-  const observer = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        links.forEach((link) => link.setAttribute('aria-current', String(link.hash === `#${entry.target.id}`)));
-      }
-    },
-    { rootMargin: '-30% 0px -60% 0px' },
-  );
-  links.forEach((link) => {
-    const section = document.querySelector(link.hash);
-    if (section) observer.observe(section);
+  // Mark the contents entry for the section being read, in the sidebar and the slim bar alike.
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('[data-section-link]')];
+  const hashes = [...new Set(links.map((link) => link.hash))];
+  const targets = hashes.map((hash) => document.getElementById(decodeURIComponent(hash.slice(1))));
+  const label = document.querySelector<HTMLElement>('[data-current-section]');
+  let frame = 0;
+  function spy() {
+    frame = 0;
+    const line = window.innerHeight * 0.3;
+    let current = 0;
+    targets.forEach((target, index) => {
+      if (target && target.getBoundingClientRect().top < line) current = index;
+    });
+    links.forEach((link) => link.setAttribute('aria-current', String(link.hash === hashes[current])));
+    if (label) label.textContent = links.find((link) => link.hash === hashes[current])?.textContent?.trim() ?? '';
+  }
+  window.addEventListener('scroll', () => (frame ||= requestAnimationFrame(spy)), { passive: true });
+  spy();
+
+  // Picking an entry from the slim bar's list closes it.
+  const details = document.querySelector<HTMLDetailsElement>('[data-contents]');
+  details?.addEventListener('click', (event) => {
+    if ((event.target as HTMLElement).closest('a')) details.open = false;
   });
 </script>

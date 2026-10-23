@@ -12,32 +12,38 @@ sets:
           - { left: Wohnort, right: Ich wohne in München. }
           - { left: Beruf, right: Ich bin Köchin. }
           - { left: Hobby, right: Ich lese gern. }
+        explanation: "Each card word asks for one fact: Alter your age, Land where you come from, Wohnort where you live, Beruf your job, Hobby what you like doing."
       - id: block2
         type: word-order
         tags: [exam speaking, questions]
         prompt: "Card: Frühstück. Ask what the other person has for breakfast."
         answer: Was essen Sie zum Frühstück?
+        explanation: "Turn the card into a question with a question word: Was, then the verb, then Sie. Meals take zum: zum Frühstück."
       - id: block3
         type: word-order
         tags: [exam speaking, questions]
         prompt: "Card: Wochenende. Ask what the other person does at the weekend."
         answer: Was machen Sie am Wochenende?
+        explanation: "Was machen Sie …? asks what someone does; am Wochenende gives the time."
       - id: block4
         type: word-order
         tags: [exam speaking, requests]
         prompt: "Card: a pen. Ask for it politely."
         answer: Geben Sie mir bitte den Stift.
+        explanation: "A polite request: the imperative with Sie and bitte. Stift is masculine and the object: den Stift."
       - id: block5
         type: word-order
         tags: [exam speaking, requests]
         prompt: "Card: a window. Ask for it to be closed."
         answer: Machen Sie bitte das Fenster zu.
+        explanation: "zumachen is separable: Machen Sie … zu, with zu at the end."
       - id: block6
         type: multiple-choice
         tags: [exam speaking, questions]
         prompt: "Card: Auto. Which question works?"
         options: [Haben Sie ein Auto?, Sie haben Auto?, Auto Sie haben?]
         answer: Haben Sie ein Auto?
+        explanation: "A yes/no question starts with the verb, and a noun needs its article: Haben Sie ein Auto?"
       - id: block7
         type: multiple-choice
         tags: [exam speaking, requests]
@@ -47,6 +53,7 @@ sets:
           - "Nein."
           - "Ja, gern. Hier, bitte."
         answer: "Tut mir leid, ich habe keinen Stift."
+        explanation: "If you cannot do what is asked, say sorry and give the reason: Tut mir leid, ich habe keinen Stift."
       - id: block8
         type: multiple-choice
         tags: [exam speaking]
@@ -56,6 +63,7 @@ sets:
           - Was?
           - Ich möchte gehen.
         answer: Können Sie das bitte wiederholen?
+        explanation: "Asking to hear it again is allowed in the exam and polite: Können Sie das bitte wiederholen?"
 
   - title: "Teil 1: sich vorstellen"
     instructions: Speak for about half a minute. Record yourself if you can, then compare.

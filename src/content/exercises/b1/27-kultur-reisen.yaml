@@ -13,16 +13,19 @@ sets:
           - { left: der Brauch, right: the custom }
           - { left: das Mitglied, right: the member }
           - { left: die Sehenswürdigkeit, right: the sight }
+        explanation: "Ausstellung exhibition, Handlung plot, Unterkunft accommodation, Brauch custom, Mitglied member, Sehenswürdigkeit sight."
       - id: w2
         type: fill-blank
         tags: [vocabulary]
         prompt: "Sie arbeitet ___ im Tierheim. (as a volunteer)"
         answers: [ehrenamtlich]
+        explanation: "ehrenamtlich means unpaid, as a volunteer."
       - id: w3
         type: fill-blank
         tags: [vocabulary]
         prompt: "Zum Karneval ___ ich mich als Pirat. (verkleiden)"
         answers: [verkleide]
+        explanation: "sich verkleiden, to dress up; ver- stays on the verb: ich verkleide mich."
 
   - title: Grammar in context
     items:
@@ -32,41 +35,48 @@ sets:
         prompt: "Der Film handelt ___ einer Frau, die allein reist."
         options: [von, über, mit]
         answer: von
+        explanation: "handeln von + dative: a film or book is about something."
       - id: g2
         type: multiple-choice
         tags: [reflexive]
         prompt: "Die Ausstellung ___ wirklich."
         options: [lohnt sich, lohnt, lohnt es]
         answer: lohnt sich
+        explanation: "sich lohnen means to be worth it: Die Ausstellung lohnt sich."
       - id: g3
         type: multiple-choice
         tags: [Perfekt]
         prompt: "Letzten Sommer ___ wir durch Portugal gereist."
         options: [sind, haben]
         answer: sind
+        explanation: "reisen through a country is movement, so the Perfekt uses sein: sind gereist."
       - id: g4
         type: multiple-choice
         tags: [passive]
         prompt: "In meiner Heimat ___ das Neujahrsfest im Frühling gefeiert."
         options: [wird, ist, hat]
         answer: wird
+        explanation: "A passive with werden: das Fest wird … gefeiert."
       - id: g5
         type: multiple-choice
         tags: [relative clauses]
         prompt: "Wir haben eine Ferienwohnung gebucht, ___ direkt am Strand liegt."
         options: [die, der, das]
         answer: die
+        explanation: "Ferienwohnung is feminine and the subject of liegt, so die."
       - id: g6
         type: multiple-choice
         tags: [Konjunktiv II]
         prompt: "Wenn ich das gewusst hätte, ___ ich ein anderes Hotel gebucht."
         options: [hätte, habe, würde]
         answer: hätte
+        explanation: "Past unreal condition: hätte … gebucht in the main clause too."
       - id: g7
         type: word-order
         tags: [recommendation]
         prompt: I would recommend the film to everyone.
         answer: "Ich würde den Film jedem empfehlen."
+        explanation: "würde + infinitive at the end; jedem (to everyone) is dative."
 
   - title: Write a review
     items:
@@ -76,6 +86,7 @@ sets:
         prompt: The book is about a journey to India.
         answers:
           - "Das Buch handelt von einer Reise nach Indien."
+        explanation: "handeln von + dative: von einer Reise; nach Indien because it is a country."
       - id: rev2
         type: translation
         tags: [review]
@@ -83,6 +94,7 @@ sets:
         answers:
           - "Die Schauspieler waren super, aber die Handlung war langweilig."
           - "Die Schauspieler waren toll, aber die Handlung war langweilig."
+        explanation: "A review contrasts with aber; die Handlung is the plot."
 
   - title: What went wrong?
     items:
@@ -92,18 +104,21 @@ sets:
         prompt: "Der Zug ist ___. (was cancelled)"
         options: [ausgefallen, verspätet, abgefahren]
         answer: ausgefallen
+        explanation: "ausfallen means a train or class does not take place: Der Zug ist ausgefallen."
       - id: prob2
         type: multiple-choice
         tags: [travel problems]
         prompt: "Mein Koffer ist nicht ___."
         options: [angekommen, ankommen, angekommt]
         answer: angekommen
+        explanation: "ankommen is separable: angekommen, and it takes sein."
       - id: prob3
         type: translation
         tags: [travel problems]
         prompt: The flight was three hours late.
         answers:
           - "Der Flug hatte drei Stunden Verspätung."
+        explanation: "German says the flight 'had' delay: Der Flug hatte drei Stunden Verspätung."
 
   - title: A trip report
     items:
@@ -120,6 +135,7 @@ sets:
           - [Verspätung]
           - [gelohnt]
           - [würde]
+        explanation: "zurückkommen takes sein (sind); besichtigt (visited); das Highlight; Verspätung haben; sich gelohnt (was worth it); würde … empfehlen."
 
   - title: An event programme
     stimulus:
@@ -138,17 +154,20 @@ sets:
         prompt: Was kostet das Theater für Studenten?
         options: ["8 €", "15 €", "nichts"]
         answer: "8 €"
+        explanation: "The programme says: Schüler und Studenten 8 €."
       - id: read2
         type: true-false
         tags: [reading]
         prompt: Für die Ausstellung muss man Eintritt bezahlen.
         answer: false
+        explanation: "For the exhibition: Eintritt frei."
       - id: read3
         type: multiple-choice
         tags: [reading]
         prompt: Wo ist das Konzert, wenn es regnet?
         options: ["in der Aula der Gesamtschule", "im Stadttheater", "in der Kunsthalle"]
         answer: "in der Aula der Gesamtschule"
+        explanation: "The concert moves bei Regen in der Aula der Gesamtschule."
 
   - title: Tell a friend
     items:

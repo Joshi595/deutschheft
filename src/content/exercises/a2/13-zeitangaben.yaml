@@ -8,41 +8,48 @@ sets:
         prompt: "Ich wohne ___ drei Jahren in Leipzig."
         options: [seit, vor, für]
         answer: seit
+        explanation: "seit: it started in the past and is still going on, so German uses the present tense."
       - id: word2
         type: multiple-choice
         tags: [vor]
         prompt: "Ich bin ___ drei Jahren nach Leipzig gekommen."
         options: [vor, seit, in]
         answer: vor
+        explanation: "vor + a period means 'ago': vor drei Jahren, three years ago."
       - id: word3
         type: multiple-choice
         tags: [in]
         prompt: "Der Zug kommt ___ zehn Minuten."
         options: [in, vor, seit]
         answer: in
+        explanation: "in + a period points to the future: in zehn Minuten, ten minutes from now."
       - id: word4
         type: multiple-choice
         tags: [fuer]
         prompt: "Wir fahren ___ zwei Wochen in die Berge."
         options: [für, seit, vor]
         answer: für
+        explanation: "für gives a planned length of time: für zwei Wochen."
       - id: word5
         type: multiple-choice
         tags: [ab]
         prompt: "___ Montag habe ich einen neuen Job."
         options: [Ab, Seit, Vor]
         answer: Ab
+        explanation: "ab means 'from … on', starting at a point: ab Montag."
       - id: word6
         type: multiple-choice
         tags: [nach]
         prompt: "___ dem Essen trinken wir einen Kaffee."
         options: [Nach, Seit, Ab]
         answer: Nach
+        explanation: "nach means 'after': nach dem Essen."
       - id: word7
         type: fill-blank
         tags: [von bis]
         prompt: "Die Praxis ist von 8 ___ 12 Uhr geöffnet."
         answers: [bis]
+        explanation: "von … bis gives a span of time: von 8 bis 12 Uhr."
 
   - title: The dative endings
     items:
@@ -51,28 +58,33 @@ sets:
         tags: [dative plural]
         prompt: "vor zwei ___ (Jahre)"
         answers: [Jahren]
+        explanation: "vor takes the dative, and in the dative plural the noun adds -n: vor zwei Jahren."
       - id: dat2
         type: fill-blank
         tags: [dative articles]
         prompt: "seit ___ Woche (eine)"
         answers: [einer]
+        explanation: "seit takes the dative; Woche is feminine, so eine becomes einer."
       - id: dat3
         type: fill-blank
         tags: [dative articles]
         prompt: "in ___ Monat (ein)"
         answers: [einem]
+        explanation: "in for time takes the dative; Monat is masculine, so ein becomes einem."
       - id: dat4
         type: multiple-choice
         tags: [accusative time]
         prompt: "___ Monat war ich in Paris."
         options: [Letzten, Letzte, Letztes]
         answer: Letzten
+        explanation: "A time expression without a preposition is accusative: letzten Monat (Monat is masculine)."
       - id: dat5
         type: multiple-choice
         tags: [accusative time]
         prompt: "Ich gehe ___ Tag spazieren."
         options: [jeden, jede, jedes]
         answer: jeden
+        explanation: "jeden Tag is accusative: masculine Tag, so jeden."
 
   - title: seit or not?
     items:
@@ -81,6 +93,7 @@ sets:
         tags: [seit]
         prompt: "'Ich wohne seit 2020 hier' means that I still live here."
         answer: true
+        explanation: "seit + present means it is still true now: I still live here."
       - id: tense2
         type: multiple-choice
         tags: [seit]
@@ -99,6 +112,7 @@ sets:
           - "Ich habe zwei Jahre in Rom gewohnt."
           - "Ich wohne seit zwei Jahren in Rom."
         answer: "Ich habe zwei Jahre in Rom gewohnt."
+        explanation: "If it is over, use the Perfekt without seit: Ich habe zwei Jahre in Rom gewohnt."
 
   - title: A short life story
     items:
@@ -115,6 +129,7 @@ sets:
           - [bis]
           - [Ab]
           - [in]
+        explanation: "vor fünf Jahren (ago), Nach dem Kurs (after), Seit zwei Jahren (and still), von … bis (span), Ab nächstem Monat (from then on), in einem Jahr (future)."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -124,11 +139,13 @@ sets:
         tags: [seit]
         prompt: How long have you been learning German?
         answer: "Seit wann lernst du Deutsch?"
+        explanation: "Seit wann …? asks how long something has been going on; the present tense follows."
       - id: order2
         type: word-order
         tags: [vor]
         prompt: The bus left five minutes ago.
         answer: "Der Bus ist vor fünf Minuten abgefahren."
+        explanation: "vor fünf Minuten means five minutes ago; abfahren takes sein in the Perfekt."
 
   - title: Say it in German
     items:
@@ -139,6 +156,7 @@ sets:
         answers:
           - "Ich wohne seit einem Jahr hier."
           - "Ich wohne hier seit einem Jahr."
+        explanation: "'Have been living … for' is seit + present: Ich wohne seit einem Jahr hier."
       - id: tr2
         type: translation
         tags: [in]
@@ -146,6 +164,7 @@ sets:
         answers:
           - "Ich bin in zehn Minuten da."
           - "In zehn Minuten bin ich da."
+        explanation: "in + time means 'in … from now'; German uses the present for this future."
 
   - title: On the phone
     stimulus:
@@ -170,18 +189,21 @@ sets:
         tags: [listening]
         prompt: Der Kunde bekommt einen Termin in dieser Woche.
         answer: false
+        explanation: "The hairdresser says: Diese Woche sind wir leider voll."
       - id: listen2
         type: multiple-choice
         tags: [listening]
         prompt: Bis wann arbeitet der Kunde?
         options: ["bis 17 Uhr", "bis 19 Uhr", "bis halb sechs"]
         answer: "bis 17 Uhr"
+        explanation: "The customer says: Ich arbeite bis siebzehn Uhr."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Wann ist der Termin?
         options: ["Dienstag um 17:30 Uhr", "Dienstag um 19 Uhr", "Montag um 17 Uhr"]
         answer: "Dienstag um 17:30 Uhr"
+        explanation: "The appointment is next Tuesday um halb sechs, which is 17:30."
 
   - title: About you
     items:

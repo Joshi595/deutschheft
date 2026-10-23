@@ -7,26 +7,31 @@ sets:
         tags: [werden forms]
         prompt: "Ich ___ dich morgen anrufen."
         answers: [werde]
+        explanation: "The future is werden + infinitive; with ich, werden is werde."
       - id: form2
         type: fill-blank
         tags: [werden forms]
         prompt: "Du ___ die Prüfung bestimmt schaffen."
         answers: [wirst]
+        explanation: "werden is irregular with du: du wirst."
       - id: form3
         type: fill-blank
         tags: [werden forms]
         prompt: "Morgen ___ es regnen."
         answers: [wird]
+        explanation: "With es (and er, sie), werden becomes wird."
       - id: form4
         type: fill-blank
         tags: [werden forms]
         prompt: "Wir ___ nächstes Jahr umziehen."
         answers: [werden]
+        explanation: "With wir, werden stays werden."
       - id: form5
         type: fill-blank
         tags: [werden forms]
         prompt: "Was ___ ihr in den Ferien machen?"
         answers: [werdet]
+        explanation: "With ihr, werden becomes werdet."
 
   - title: Word order
     items:
@@ -39,6 +44,7 @@ sets:
           - "Ich werde kommen morgen früher."
           - "Ich kommen werde morgen früher."
         answer: "Ich werde morgen früher kommen."
+        explanation: "werden takes the verb's place (second), and the infinitive kommen goes to the very end."
       - id: wo2
         type: multiple-choice
         tags: [word order]
@@ -48,16 +54,19 @@ sets:
           - "Ich glaube, dass es morgen wird regnen."
           - "Ich glaube, dass es wird morgen regnen."
         answer: "Ich glaube, dass es morgen regnen wird."
+        explanation: "In a dass clause, werden goes last, after the infinitive: dass es morgen regnen wird."
       - id: wo3
         type: word-order
         tags: [word order]
         prompt: Next year I will do more sport.
         answer: "Nächstes Jahr werde ich mehr Sport machen."
+        explanation: "Nächstes Jahr is first, so werde comes second, then ich, and machen at the end."
       - id: wo4
         type: word-order
         tags: [word order]
         prompt: Will you help me?
         answer: "Wirst du mir helfen?"
+        explanation: "In a yes/no question werden comes first: Wirst du mir helfen?"
 
   - title: will or werde?
     items:
@@ -67,12 +76,14 @@ sets:
         prompt: "I want to become a doctor."
         options: ["Ich will Arzt werden.", "Ich werde Arzt wollen.", "Ich werde Arzt."]
         answer: "Ich will Arzt werden."
+        explanation: "wollen means want: Ich will Arzt werden. ich will is not the future, unlike English 'I will'."
       - id: ff2
         type: multiple-choice
         tags: [false friends]
         prompt: "I will help you, I promise."
         options: ["Ich werde dir helfen, versprochen.", "Ich will dir helfen, versprochen."]
         answer: "Ich werde dir helfen, versprochen."
+        explanation: "A promise about the future uses werden: Ich werde dir helfen. Ich will dir helfen means I want to help."
       - id: ff3
         type: true-false
         tags: [false friends]
@@ -88,17 +99,20 @@ sets:
         prompt: "What does 'Es wird kalt.' mean?"
         options: ["It is getting cold.", "It will be cold one day.", "It was cold."]
         answer: "It is getting cold."
+        explanation: "werden on its own means to become or get: Es wird kalt, it is getting cold."
       - id: become2
         type: multiple-choice
         tags: [werden become]
         prompt: "Sie ___ Lehrerin geworden."
         options: [ist, hat, wird]
         answer: ist
+        explanation: "werden as 'become' takes sein in the Perfekt, with the participle geworden: sie ist Lehrerin geworden."
       - id: become3
         type: fill-blank
         tags: [werden become]
         prompt: "Er ___ im Mai dreißig. (turns)"
         answers: [wird]
+        explanation: "Turning an age uses werden: Er wird dreißig."
 
   - title: Present or werden?
     items:
@@ -107,12 +121,14 @@ sets:
         tags: [present for future]
         prompt: "'Morgen fahre ich nach Berlin.' is a normal way to talk about a plan for tomorrow."
         answer: true
+        explanation: "German often uses the present with a time word for plans: Morgen fahre ich nach Berlin."
       - id: tense2
         type: translation
         tags: [present for future]
         prompt: "What are you doing at the weekend? (use the present)"
         answers:
           - "Was machst du am Wochenende?"
+        explanation: "For plans, the present plus a time phrase is normal: Was machst du am Wochenende?"
 
   - title: Resolutions
     items:
@@ -126,6 +142,7 @@ sets:
           - [essen]
           - [werden]
           - [Wirst]
+        explanation: "werden in second place with an infinitive at the end: ich werde … leben, werde … essen, wir werden … joggen, Wirst du …?"
 
   - title: The weather forecast
     stimulus:
@@ -141,6 +158,7 @@ sets:
         prompt: Wie wird das Wetter am Samstag im Süden?
         options: [sonnig und warm, bewölkt mit Regen, kühl]
         answer: sonnig und warm
+        explanation: "The forecast says: Im Süden bleibt es sonnig und warm."
       - id: listen2
         type: true-false
         tags: [listening]
@@ -153,6 +171,7 @@ sets:
         prompt: Wie warm wird es am Sonntag?
         options: ["um 18 Grad", "bis 25 Grad", "um 8 Grad"]
         answer: "um 18 Grad"
+        explanation: "On Sunday it gets cooler, mit Temperaturen um achtzehn Grad."
 
   - title: Your plans
     items:

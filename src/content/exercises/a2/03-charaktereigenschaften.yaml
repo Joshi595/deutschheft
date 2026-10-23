@@ -13,6 +13,7 @@ sets:
           - { left: schüchtern, right: shy }
           - { left: ehrlich, right: honest }
           - { left: ernst, right: serious }
+        explanation: "geduldig patient, zuverlässig reliable, großzügig generous, schüchtern shy, ehrlich honest, ernst serious."
       - id: char2
         type: matching
         tags: [character, opposites]
@@ -23,21 +24,25 @@ sets:
           - { left: lustig, right: ernst }
           - { left: großzügig, right: geizig }
           - { left: ruhig, right: nervös }
+        explanation: "Opposites: fleißig/faul, mutig/feige, lustig/ernst, großzügig/geizig, ruhig/nervös."
       - id: char3
         type: fill-blank
         tags: [character, opposites]
         prompt: "freundlich ↔ ___"
         answers: [unfreundlich]
+        explanation: "Many adjectives form their opposite with un-: freundlich → unfreundlich."
       - id: char4
         type: fill-blank
         tags: [character, opposites]
         prompt: "geduldig ↔ ___"
         answers: [ungeduldig]
+        explanation: "un- turns an adjective into its opposite: geduldig → ungeduldig."
       - id: char5
         type: fill-blank
         tags: [character, opposites]
         prompt: "höflich ↔ ___"
         answers: [unhöflich]
+        explanation: "höflich → unhöflich: un- means 'not'."
 
   - title: Ending or no ending?
     items:
@@ -54,6 +59,7 @@ sets:
         prompt: Meine Eltern sind sehr ___.
         options: [geduldig, geduldige, geduldigen]
         answer: geduldig
+        explanation: "An adjective after sein, at the end, takes no ending: sie sind geduldig."
       - id: pred3
         type: multiple-choice
         tags: [predicate adjectives]
@@ -70,34 +76,40 @@ sets:
         prompt: Sie ___ lange, blonde Haare.
         options: [hat, ist, sieht]
         answer: hat
+        explanation: "Hair is something you have: Sie hat lange, blonde Haare."
       - id: look2
         type: multiple-choice
         tags: [appearance]
         prompt: Er ___ groß und schlank.
         options: [ist, hat, trägt]
         answer: ist
+        explanation: "Size and build go with sein: Er ist groß und schlank."
       - id: look3
         type: multiple-choice
         tags: [appearance]
         prompt: Mein Vater ___ eine Brille.
         options: [trägt, ist, sieht]
         answer: trägt
+        explanation: "Glasses and clothes are worn: tragen, which becomes trägt with er."
       - id: look4
         type: word-order
         tags: [appearance, separable verbs]
         prompt: What does your brother look like?
         answer: Wie sieht dein Bruder aus?
+        explanation: "aussehen means to look like; it splits: sieht … aus, with aus at the end."
       - id: look5
         type: word-order
         tags: [appearance, separable verbs]
         prompt: You look tired.
         answer: Du siehst müde aus.
+        explanation: "aussehen splits: du siehst, and aus goes to the end after the adjective."
       - id: look6
         type: multiple-choice
         tags: [appearance]
         prompt: "\"Wie ist deine Schwester?\" asks about her …"
         options: [character, appearance, age]
         answer: character
+        explanation: "Wie ist …? asks what someone is like as a person. Appearance would be Wie sieht … aus?"
 
   - title: Stronger and weaker
     items:
@@ -111,16 +123,19 @@ sets:
           - { left: gar nicht, right: not at all }
           - { left: viel zu, right: far too }
           - { left: besonders, right: especially }
+        explanation: "ziemlich quite, ein bisschen a little, gar nicht not at all, viel zu far too, besonders especially."
       - id: int2
         type: word-order
         tags: [intensifiers]
         prompt: My sister is quite self-confident.
         answer: Meine Schwester ist ziemlich selbstbewusst.
+        explanation: "ziemlich goes straight before the adjective it weakens."
       - id: int3
         type: word-order
         tags: [intensifiers]
         prompt: She is not shy at all.
         answer: Sie ist gar nicht schüchtern.
+        explanation: "gar nicht is a strong 'not at all' and stands before the adjective."
 
   - title: Your opinion
     items:
@@ -129,11 +144,13 @@ sets:
         tags: [finden, accusative pronouns]
         prompt: "Kennst du den neuen Kollegen? Ja, ich finde ___ sehr nett."
         answers: [ihn]
+        explanation: "finden takes the accusative; der Kollege becomes ihn."
       - id: op2
         type: fill-blank
         tags: [finden, accusative pronouns]
         prompt: "Das ist meine Chefin. Ich finde ___ ein bisschen streng."
         answers: [sie]
+        explanation: "Chefin is a woman, so sie, which stays sie in the accusative."
 
   - title: Who is it?
     instructions: Listen to the descriptions.
@@ -152,6 +169,7 @@ sets:
           - Er ist klein und hat blonde Haare.
           - Er hat lange Haare und einen Bart.
         answer: Er ist groß und trägt eine Brille.
+        explanation: "The speaker says Paul is sehr groß and trägt eine Brille."
       - id: who2
         type: true-false
         tags: [listening, character]
@@ -162,6 +180,7 @@ sets:
             - text: "Mein Bruder Paul ist dreißig Jahre alt. Er ist sehr groß und hat kurze, dunkle Haare. Er trägt eine Brille. Paul ist ruhig und ein bisschen schüchtern, aber sehr zuverlässig."
         prompt: Paul ist laut und selbstbewusst.
         answer: false
+        explanation: "Paul is described as ruhig and ein bisschen schüchtern: quiet and a little shy."
 
   - title: Say and write it
     items:
@@ -172,12 +191,14 @@ sets:
         answers:
           - Er ist mutig und fleißig.
           - Er ist fleißig und mutig.
+        explanation: "Character adjectives after sein take no ending: Er ist mutig und fleißig."
       - id: tr2
         type: translation
         tags: [intensifiers]
         prompt: My brother is far too lazy.
         answers:
           - Mein Bruder ist viel zu faul.
+        explanation: "'Far too' is viel zu, placed before the adjective."
       - id: write1
         type: writing-task
         tags: [writing, character]

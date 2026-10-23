@@ -13,24 +13,28 @@ sets:
           - { left: es, right: it }
           - { left: ihr, right: you (several friends) }
           - { left: du, right: you (one friend) }
+        explanation: "German has three words for 'you': du for one friend, ihr for several friends, and formal Sie for one or more people."
       - id: pron2
         type: multiple-choice
         tags: [du and Sie]
         prompt: You ask a police officer for directions. Which word for "you"?
         options: [Sie, du, ihr]
         answer: Sie
+        explanation: "A police officer is a stranger and an adult, so you use the formal Sie."
       - id: pron3
         type: multiple-choice
         tags: [du and Sie]
         prompt: You talk to your two friends Anna and Tom. Which word for "you"?
         options: [ihr, du, Sie]
         answer: ihr
+        explanation: "Two friends together are ihr. du is for one friend only."
       - id: pron4
         type: multiple-choice
         tags: [du and Sie]
         prompt: You talk to a five-year-old child. Which word for "you"?
         options: [du, Sie, ihr]
         answer: du
+        explanation: "Children are always du, even when you do not know them."
 
   - title: The right ending
     instructions: Put the verb in brackets into the right form.
@@ -40,37 +44,44 @@ sets:
         tags: [present tense]
         prompt: "Ich ___ Deutsch. (lernen)"
         answers: [lerne]
+        explanation: "With ich the verb ends in -e: ich lerne."
       - id: end2
         type: fill-blank
         tags: [present tense]
         prompt: "Was ___ du? (machen)"
         answers: [machst]
+        explanation: "With du the verb ends in -st: du machst."
       - id: end3
         type: fill-blank
         tags: [present tense]
         prompt: "Sie ___ Kaffee. (trinken) [she]"
         answers: [trinkt]
+        explanation: "sie meaning 'she' takes the -t ending, like er: sie trinkt."
       - id: end4
         type: fill-blank
         tags: [present tense]
         prompt: "Wir ___ in Köln. (wohnen)"
         answers: [wohnen]
+        explanation: "With wir the verb looks like the infinitive: wir wohnen."
       - id: end5
         type: fill-blank
         tags: [present tense]
         prompt: "Woher ___ ihr? (kommen)"
         answers: [kommt]
+        explanation: "With ihr the verb ends in -t: ihr kommt."
       - id: end6
         type: fill-blank
         tags: [present tense]
         prompt: "Die Kinder ___ Fußball. (spielen)"
         answers: [spielen]
         hint: Die Kinder is plural, like sie (they).
+        explanation: "Die Kinder means 'they', so the verb takes the -en ending: sie spielen."
       - id: end7
         type: fill-blank
         tags: [present tense]
         prompt: "___ Sie Musik, Herr Schmidt? (hören)"
         answers: [Hören]
+        explanation: "Formal Sie takes the -en ending, and in a yes/no question the verb comes first: Hören Sie …?"
 
   - title: Stems in -t, -d and s-sounds
     instructions: Watch for the extra e, and for du after an s-sound.
@@ -80,16 +91,19 @@ sets:
         tags: [present tense, stem endings]
         prompt: "Er ___ in Berlin. (arbeiten)"
         answers: [arbeitet]
+        explanation: "When the stem ends in -t or -d, an e is added before the ending so you can say it: er arbeitet."
       - id: stem2
         type: fill-blank
         tags: [present tense, stem endings]
         prompt: "Wo ___ du? (arbeiten)"
         answers: [arbeitest]
+        explanation: "arbeit- ends in -t, so du gets an extra e: du arbeitest."
       - id: stem3
         type: fill-blank
         tags: [present tense, stem endings]
         prompt: "___ ihr schon lange? (warten)"
         answers: [Wartet]
+        explanation: "wart- ends in -t, so ihr gets an extra e: ihr wartet. The verb comes first in a yes/no question."
       - id: stem4
         type: fill-blank
         tags: [present tense, stem endings]
@@ -101,6 +115,7 @@ sets:
         tags: [present tense, stem endings]
         prompt: "Sie ___ das Buch nicht. (finden) [she]"
         answers: [findet]
+        explanation: "find- ends in -d, so it needs an extra e before -t: sie findet."
 
   - title: Who is sie?
     items:
@@ -117,12 +132,14 @@ sets:
         prompt: "\"Was machen Sie, Frau Weber?\" Who is meant by Sie?"
         options: [you (formal), she, they]
         answer: you (formal)
+        explanation: "Capital Sie with a name like Frau Weber is the polite 'you'. The verb ending -en is the same as for 'they'."
       - id: sie3
         type: multiple-choice
         tags: [pronouns]
         prompt: "\"Anna und Tom? Sie wohnen in Köln.\" Who lives in Cologne?"
         options: [they, she, you (formal)]
         answer: they
+        explanation: "Anna und Tom are two people, so sie with the verb wohnen means 'they'."
 
   - title: Complete the text
     items:
@@ -136,6 +153,7 @@ sets:
           - [wohnt]
           - [lernen]
           - [arbeitet]
+        explanation: "Paul is er, so kommt and wohnt. Paul und Anna are sie (they), so lernen. Anna is sie, and arbeit- needs an extra e: arbeitet."
 
   - title: Build the sentence
     instructions: Put the words in the right order.
@@ -145,16 +163,19 @@ sets:
         tags: [present tense, word order]
         prompt: We are learning German together.
         answer: Wir lernen zusammen Deutsch.
+        explanation: "The verb lernen is the second element, right after wir."
       - id: order2
         type: word-order
         tags: [present tense, word order]
         prompt: Where do you work? (informal)
         answer: Wo arbeitest du?
+        explanation: "After a question word the verb comes next, then the subject: Wo arbeitest du?"
       - id: order3
         type: word-order
         tags: [present tense, word order]
         prompt: Tomorrow I am not working.
         answer: Morgen arbeite ich nicht.
+        explanation: "When the sentence starts with Morgen, the verb still comes second, so ich moves behind it: Morgen arbeite ich nicht."
 
   - title: Say it in German
     items:
@@ -163,24 +184,29 @@ sets:
         tags: [present tense]
         prompt: I am learning German.
         answers: [Ich lerne Deutsch.]
+        explanation: "German has one present tense for 'I learn' and 'I am learning': Ich lerne Deutsch."
       - id: tr2
         type: translation
         tags: [present tense]
         prompt: She works in Berlin.
         answers: [Sie arbeitet in Berlin.]
+        explanation: "Sie with an -et ending means 'she': arbeit- needs an extra e before -t."
       - id: tr3
         type: translation
         tags: [present tense]
         prompt: What are you doing? (informal, one person)
         answers: [Was machst du?]
+        explanation: "machen means both 'make' and 'do'. With du it ends in -st: Was machst du?"
       - id: tr4
         type: translation
         tags: [present tense]
         prompt: We live in Cologne.
         answers: [Wir wohnen in Köln.]
+        explanation: "With wir the verb looks like the infinitive: wir wohnen. Köln is the German name for Cologne."
       - id: write1
         type: writing
         tags: [present tense]
         prompt: Write one sentence about what you and a friend do together. Start with Wir.
         mustInclude: [wir]
         sample: Wir lernen zusammen Deutsch und hören gern Musik.
+        explanation: "With wir the verb takes the -en ending, just like the infinitive: wir lernen, wir hören."

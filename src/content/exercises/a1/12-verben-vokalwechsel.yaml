@@ -8,27 +8,32 @@ sets:
         tags: [stem-changing verbs]
         prompt: "Er ___ gut Deutsch. (sprechen)"
         answers: [spricht]
+        explanation: "sprechen changes its e to i with du and er/sie/es: er spricht."
       - id: ei2
         type: fill-blank
         tags: [stem-changing verbs]
         prompt: "Was ___ du gern? (essen)"
         answers: [isst]
+        explanation: "essen changes e to i with du, and the s of the ending merges with ss: du isst."
       - id: ei3
         type: fill-blank
         tags: [stem-changing verbs]
         prompt: "Sie ___ mir das Buch. (geben) [she]"
         answers: [gibt]
+        explanation: "geben changes e to i with du and er/sie/es: sie gibt."
       - id: ei4
         type: fill-blank
         tags: [stem-changing verbs]
         prompt: "___ du mir? (helfen)"
         answers: [Hilfst]
+        explanation: "helfen changes e to i with du: du hilfst. The verb comes first in a yes/no question."
       - id: ei5
         type: fill-blank
         tags: [stem-changing verbs]
         prompt: "Er ___ den Bus. (nehmen)"
         answers: [nimmt]
         hint: The consonants change too.
+        explanation: "nehmen is extra irregular: the h drops and the m doubles, so er nimmt."
       - id: ei6
         type: fill-blank
         tags: [stem-changing verbs]
@@ -43,16 +48,19 @@ sets:
         tags: [stem-changing verbs]
         prompt: "Sie ___ die Zeitung. (lesen) [she]"
         answers: [liest]
+        explanation: "lesen changes e to ie with du and er/sie/es: sie liest."
       - id: eie2
         type: fill-blank
         tags: [stem-changing verbs]
         prompt: "___ du den Mann dort? (sehen)"
         answers: [Siehst]
+        explanation: "sehen changes e to ie: du siehst. The verb comes first in a yes/no question."
       - id: eie3
         type: fill-blank
         tags: [stem-changing verbs, separable verbs]
         prompt: "Er ___ am Abend fern. (fernsehen)"
         answers: [sieht]
+        explanation: "fernsehen works like sehen, sieht, and fern goes to the end: Er sieht am Abend fern."
 
   - title: a becomes ä
     items:
@@ -61,21 +69,25 @@ sets:
         tags: [stem-changing verbs]
         prompt: "Er ___ nach Hamburg. (fahren)"
         answers: [fährt]
+        explanation: "fahren changes a to ä with du and er/sie/es: er fährt."
       - id: ae2
         type: fill-blank
         tags: [stem-changing verbs]
         prompt: "Das Kind ___. (schlafen)"
         answers: [schläft]
+        explanation: "schlafen changes a to ä: das Kind schläft."
       - id: ae3
         type: fill-blank
         tags: [stem-changing verbs]
         prompt: "Wann ___ der Kurs an? (anfangen)"
         answers: [fängt]
+        explanation: "anfangen changes a to ä (fängt), and the prefix an goes to the end."
       - id: ae4
         type: fill-blank
         tags: [stem-changing verbs]
         prompt: "___ du mit dem Bus? (fahren)"
         answers: [Fährst]
+        explanation: "fahren changes a to ä with du: du fährst."
 
   - title: Change or no change?
     instructions: The plural and the ich form stay regular.
@@ -93,24 +105,28 @@ sets:
         prompt: Ihr ___ sehr gut Deutsch.
         options: [sprecht, spricht, sprichst]
         answer: sprecht
+        explanation: "The vowel only changes with du and er/sie/es. ihr keeps the e: ihr sprecht."
       - id: plural3
         type: multiple-choice
         tags: [stem-changing verbs]
         prompt: Ich ___ ein Buch.
         options: [lese, liese, liest]
         answer: lese
+        explanation: "The ich form never changes its vowel: ich lese."
       - id: plural4
         type: multiple-choice
         tags: [stem-changing verbs]
         prompt: Die Kinder ___ schon.
         options: [schlafen, schläfen, schläft]
         answer: schlafen
+        explanation: "Plural forms keep the vowel of the infinitive: sie schlafen."
       - id: plural5
         type: multiple-choice
         tags: [stem-changing verbs]
         prompt: Du ___ zu viel Schokolade.
         options: [isst, esst, essst]
         answer: isst
+        explanation: "essen changes e to i with du, and ess- plus -st is written isst."
 
   - title: Infinitive and er form
     items:
@@ -125,6 +141,7 @@ sets:
           - { left: fahren, right: fährt }
           - { left: geben, right: gibt }
           - { left: wissen, right: weiß }
+        explanation: "These verbs change their stem vowel in the er form: e→i (nimmt, gibt), e→ie (liest, sieht), a→ä (fährt). wissen is fully irregular: weiß."
 
   - title: wissen
     items:
@@ -133,11 +150,13 @@ sets:
         tags: [wissen]
         prompt: "Ich ___ es nicht. (wissen)"
         answers: [weiß]
+        explanation: "wissen is irregular in the singular: ich weiß, du weißt, er weiß. ich and er have no ending."
       - id: wissen2
         type: fill-blank
         tags: [wissen]
         prompt: "___ du, wo der Bahnhof ist? (wissen)"
         answers: [Weißt]
+        explanation: "With du, wissen becomes weißt."
       - id: wissen3
         type: multiple-choice
         tags: [wissen]
@@ -158,6 +177,7 @@ sets:
           - [liest]
           - [fährt]
           - [trifft]
+        explanation: "All four verbs change their vowel with sie (she): spricht, liest, fährt, and treffen becomes trifft."
 
   - title: Say it in German
     items:
@@ -166,11 +186,13 @@ sets:
         tags: [stem-changing verbs]
         prompt: He takes the bus at eight o'clock.
         answer: Er nimmt um acht Uhr den Bus.
+        explanation: "nehmen changes to nimmt with er. The time um acht Uhr comes before the object den Bus."
       - id: tr1
         type: translation
         tags: [stem-changing verbs]
         prompt: She speaks English.
         answers: [Sie spricht Englisch.]
+        explanation: "sprechen changes e to i with sie (she): sie spricht."
       - id: tr2
         type: translation
         tags: [wissen]
@@ -179,8 +201,10 @@ sets:
           - Ich weiß es nicht.
           - Ich weiß nicht.
           - Das weiß ich nicht.
+        explanation: "wissen is irregular: ich weiß. Ich weiß es nicht is the usual phrase."
       - id: tr3
         type: translation
         tags: [stem-changing verbs]
         prompt: The child is sleeping.
         answers: [Das Kind schläft.]
+        explanation: "schlafen changes a to ä with das Kind: das Kind schläft."

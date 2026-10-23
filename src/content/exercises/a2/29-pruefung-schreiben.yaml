@@ -8,23 +8,27 @@ sets:
         prompt: "You write to your course teacher, Frau Roth. Which opening fits?"
         options: ["Liebe Frau Roth,", "Hallo Roth,", "Liebe Roth,"]
         answer: "Liebe Frau Roth,"
+        explanation: "A teacher you know is addressed as Liebe Frau Roth, always with Frau and the surname."
       - id: form2
         type: multiple-choice
         tags: [register]
         prompt: "Liebe Frau Roth, könnten ___ mir bitte die Hausaufgaben schicken?"
         options: [Sie, du, ihr]
         answer: Sie
+        explanation: "A teacher addressed as Frau Roth gets Sie: könnten Sie …?"
       - id: form3
         type: multiple-choice
         tags: [register]
         prompt: "Which closing fits an email to an office you do not know?"
         options: ["Mit freundlichen Grüßen", "Bis bald!", "Hab dich lieb"]
         answer: "Mit freundlichen Grüßen"
+        explanation: "To an office you do not know, end with Mit freundlichen Grüßen."
       - id: form4
         type: true-false
         tags: [register]
         prompt: "In a message to a friend you can leave out the greeting and your name."
         answer: false
+        explanation: "Even to a friend the exam expects a greeting (Liebe …) and your name at the end."
 
   - title: Which point is missing?
     items:
@@ -34,12 +38,14 @@ sets:
         prompt: "Task: Write to your friend Ana: thank her for the invitation, say you are coming, ask what you should bring. Text: 'Liebe Ana, danke für die Einladung! Ich komme sehr gern. Bis Samstag! Tom'. Which point is missing?"
         options: ["what to bring", "the thanks", "that he is coming"]
         answer: "what to bring"
+        explanation: "Tom thanks Ana and says he is coming, but never asks what he should bring."
       - id: miss2
         type: multiple-choice
         tags: [content points]
         prompt: "Task: Write to your landlord: the heating is broken, since when, ask when someone can come. Text: 'Sehr geehrter Herr Weiß, seit Montag funktioniert die Heizung in meiner Wohnung nicht. Mit freundlichen Grüßen, Lea Braun'. Which point is missing?"
         options: ["when someone can come", "what is broken", "since when"]
         answer: "when someone can come"
+        explanation: "Lea says the heating is broken and since when, but does not ask when someone can come."
 
   - title: Teil 1 – a text message
     items:

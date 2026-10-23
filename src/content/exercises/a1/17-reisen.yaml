@@ -29,18 +29,21 @@ sets:
         prompt: Ich gehe ___ Hause.
         options: [nach, zu, ins]
         answer: nach
+        explanation: "Going home is the fixed phrase nach Hause. Being at home is zu Hause."
       - id: to5
         type: multiple-choice
         tags: [wohin]
         prompt: Sie fährt ___ Arbeit.
         options: [zur, nach, ins]
         answer: zur
+        explanation: "To a building or a person, use zu: zu der Arbeit becomes zur Arbeit."
       - id: to6
         type: multiple-choice
         tags: [wohin]
         prompt: Wir fliegen ___ Italien.
         options: [nach, zu, in]
         answer: nach
+        explanation: "Towns and most countries take nach: nach Italien, nach Berlin."
       - id: to7
         type: multiple-choice
         tags: [wohin]
@@ -58,36 +61,42 @@ sets:
         prompt: Ich bin ___ Kino.
         options: [im, ins]
         answer: im
+        explanation: "Being somewhere (wo?) takes the dative: in dem Kino → im Kino."
       - id: wo2
         type: multiple-choice
         tags: [wo and wohin]
         prompt: Ich gehe ___ Kino.
         options: [ins, im]
         answer: ins
+        explanation: "Going somewhere (wohin?) takes the accusative: in das Kino → ins Kino."
       - id: wo3
         type: multiple-choice
         tags: [wo and wohin]
         prompt: Wir fahren ___ Stadt.
         options: [in die, in der]
         answer: in die
+        explanation: "fahren is movement, so in takes the accusative: in die Stadt."
       - id: wo4
         type: multiple-choice
         tags: [wo and wohin]
         prompt: Wir wohnen ___ Stadt.
         options: [in der, in die]
         answer: in der
+        explanation: "wohnen is staying in one place, so in takes the dative: in der Stadt."
       - id: wo5
         type: multiple-choice
         tags: [wo and wohin]
         prompt: Die Kinder gehen ___ Park.
         options: [in den, im]
         answer: in den
+        explanation: "gehen is movement into the park, so the accusative: in den Park."
       - id: wo6
         type: multiple-choice
         tags: [wo and wohin]
         prompt: Die Kinder spielen ___ Park.
         options: [im, in den]
         answer: im
+        explanation: "Playing happens in one place, so the dative: in dem Park → im Park."
 
   - title: How do you travel?
     items:
@@ -96,22 +105,26 @@ sets:
         tags: [transport, dative]
         prompt: "Ich fahre mit ___ Bus. (der)"
         answers: [dem]
+        explanation: "mit always takes the dative: der Bus becomes dem Bus."
       - id: mit2
         type: fill-blank
         tags: [transport, dative]
         prompt: "Sie fährt mit ___ U-Bahn. (die)"
         answers: [der]
+        explanation: "mit takes the dative, so die U-Bahn becomes der U-Bahn."
       - id: mit3
         type: fill-blank
         tags: [transport, dative]
         prompt: "Wir fahren mit ___ Auto. (das)"
         answers: [dem]
+        explanation: "mit takes the dative: das Auto becomes dem Auto."
       - id: mit4
         type: multiple-choice
         tags: [transport]
         prompt: You walk to work. What do you say?
         options: [Ich gehe zu Fuß., Ich fahre zu Fuß., Ich gehe mit dem Fuß.]
         answer: Ich gehe zu Fuß.
+        explanation: "On foot is zu Fuß, and walking is gehen, not fahren."
       - id: mit5
         type: matching
         tags: [transport]
@@ -123,6 +136,7 @@ sets:
           - { left: die Abfahrt, right: departure }
           - { left: die Ankunft, right: arrival }
           - { left: umsteigen, right: to change trains }
+        explanation: "Fahrkarte ticket, Gleis platform, Verspätung delay, Abfahrt departure, Ankunft arrival, umsteigen to change trains."
 
   - title: Station announcements
     instructions: As in the listening exam. You hear each announcement twice.
@@ -138,6 +152,7 @@ sets:
         prompt: Von welchem Gleis fährt der Zug nach Hamburg?
         options: [Gleis 8, Gleis 5, Gleis 18]
         answer: Gleis 8
+        explanation: "Gleis fünf is only where the announcement is made. The Hamburg train goes von Gleis acht, as it repeats."
       - id: ann2
         type: multiple-choice
         tags: [listening, travel]
@@ -149,6 +164,7 @@ sets:
         prompt: Wie viel Verspätung hat der Zug?
         options: [15 Minuten, 10 Minuten, 50 Minuten]
         answer: 15 Minuten
+        explanation: "The announcement says circa fünfzehn Minuten Verspätung, about fifteen minutes."
       - id: ann3
         type: true-false
         tags: [listening, travel]
@@ -178,6 +194,7 @@ sets:
         prompt: Was kostet die Fahrkarte?
         options: ["58 €", "85 €", "48 €"]
         answer: "58 €"
+        explanation: "achtundfünfzig: the ones come first, so 8 and 50 make 58."
 
   - title: Read the timetable
     stimulus:
@@ -195,17 +212,20 @@ sets:
         prompt: Sie möchten nach Hamburg fahren. Wann fährt der Zug?
         options: ["09:50", "09:20", "09:35"]
         answer: "09:50"
+        explanation: "The IC nach Hamburg leaves at 09:50 from Gleis 4."
       - id: plan2
         type: true-false
         tags: [reading, travel]
         prompt: Der Zug nach Bonn fährt pünktlich.
         answer: false
+        explanation: "The RE nach Bonn has 10 Minuten Verspätung, so it is not on time."
       - id: plan3
         type: multiple-choice
         tags: [reading, travel]
         prompt: Von welchem Gleis fährt der Zug nach Frankfurt?
         options: [Gleis 2, Gleis 4, Gleis 7]
         answer: Gleis 2
+        explanation: "The ICE nach Frankfurt leaves at 09:20 from Gleis 2."
 
   - title: Say it in German
     items:
@@ -214,11 +234,13 @@ sets:
         tags: [travel, separable verbs]
         prompt: When does the train arrive in Berlin?
         answer: Wann kommt der Zug in Berlin an?
+        explanation: "ankommen is separable: kommt comes after the question word and an goes to the end."
       - id: order2
         type: word-order
         tags: [transport]
         prompt: I go to work by bus.
         answer: Ich fahre mit dem Bus zur Arbeit.
+        explanation: "mit dem Bus says how, zur Arbeit says where to; how usually comes before where."
       - id: tr1
         type: translation
         tags: [travel]
@@ -226,6 +248,7 @@ sets:
         answers:
           - "Eine Fahrkarte nach München, bitte."
           - "Ein Ticket nach München, bitte."
+        explanation: "Fahrkarte is feminine, so eine; to a city is nach: nach München."
       - id: tr2
         type: translation
         tags: [wohin]
@@ -233,6 +256,7 @@ sets:
         answers:
           - Ich gehe nach Hause.
           - Ich fahre nach Hause.
+        explanation: "Going home is the fixed phrase nach Hause."
       - id: speak1
         type: speaking-task
         tags: [speaking, travel]

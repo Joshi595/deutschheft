@@ -13,17 +13,20 @@ sets:
           - { left: Vorstellungsgespräch, right: job interview }
           - { left: Anschreiben, right: cover letter }
           - { left: Einarbeitung, right: induction }
+        explanation: "Job advert words: Berufserfahrung, unbefristeter Vertrag, zuverlässig, Vorstellungsgespräch, Anschreiben, Einarbeitung."
       - id: ad2
         type: multiple-choice
         tags: [vocabulary]
         prompt: "What does '(m/w/d)' in a job advert mean?"
         options: ["any gender", "Monday to Wednesday", "with a German degree"]
         answer: "any gender"
+        explanation: "m/w/d stands for männlich, weiblich, divers: the job is open to any gender."
       - id: ad3
         type: fill-blank
         tags: [vocabulary]
         prompt: "Ich bin ___ und arbeite gern mit anderen zusammen. (good at teamwork)"
         answers: [teamfähig]
+        explanation: "teamfähig means good at working in a team."
 
   - title: The letter
     items:
@@ -33,23 +36,27 @@ sets:
         prompt: "Ich bewerbe mich ___ die Stelle als Verkäuferin."
         options: [um, für, an]
         answer: um
+        explanation: "sich bewerben um: to apply for a position."
       - id: let2
         type: multiple-choice
         tags: [prepositions]
         prompt: "Ich bin ___ die Betreuung der Kunden verantwortlich."
         options: [für, um, über]
         answer: für
+        explanation: "verantwortlich für: responsible for."
       - id: let3
         type: multiple-choice
         tags: [polite]
         prompt: "Über eine Einladung zu einem Vorstellungsgespräch ___ ich mich sehr freuen."
         options: [würde, werde, wurde]
         answer: würde
+        explanation: "würde … freuen is the polite Konjunktiv II used at the end of a cover letter."
       - id: let4
         type: word-order
         tags: [letter]
         prompt: I have been working as a cook for five years.
         answer: "Ich arbeite seit fünf Jahren als Koch."
+        explanation: "seit + present for a job still going on; als Koch says the role."
 
   - title: The CV
     items:
@@ -59,18 +66,21 @@ sets:
         prompt: "Under which heading do you write 'Deutsch (B1), Englisch (fließend)'?"
         options: [Sprachkenntnisse, Berufserfahrung, Persönliche Daten]
         answer: Sprachkenntnisse
+        explanation: "Languages go under Sprachkenntnisse."
       - id: cv2
         type: multiple-choice
         tags: [CV]
         prompt: "In a German CV, which job usually comes first?"
         options: ["the newest", "the oldest", "the best paid"]
         answer: "the newest"
+        explanation: "A German CV lists the newest job first (reverse order)."
       - id: cv3
         type: multiple-choice
         tags: [CV]
         prompt: "What are 'Zeugnisse'?"
         options: ["certificates and references", "photos", "hobbies"]
         answer: "certificates and references"
+        explanation: "Zeugnisse are certificates and employer references, usually attached to an application."
 
   - title: The interview
     items:
@@ -83,12 +93,14 @@ sets:
           - { left: Warum möchten Sie bei uns arbeiten?, right: Ihre Firma ist bekannt für gute Produkte. }
           - { left: Wo sehen Sie sich in fünf Jahren?, right: Ich würde gern ein Team leiten. }
           - { left: Haben Sie noch Fragen?, right: Wie sieht die Einarbeitung aus? }
+        explanation: "Each answer fits its question: strengths, a reason for the company, a goal in five years, and a question about the induction."
       - id: int2
         type: translation
         tags: [interview]
         prompt: Could you tell me what the induction looks like?
         answers:
           - "Könnten Sie mir sagen, wie die Einarbeitung aussieht?"
+        explanation: "An indirect question after Könnten Sie mir sagen: wie die Einarbeitung aussieht, with the verb at the end."
       - id: int3
         type: translation
         tags: [interview]
@@ -96,11 +108,13 @@ sets:
         answers:
           - "Gibt es die Möglichkeit, Weiterbildungen zu machen?"
           - "Gibt es die Möglichkeit einer Weiterbildung?"
+        explanation: "Gibt es die Möglichkeit, … zu + infinitive? asks politely about an option."
       - id: int4
         type: true-false
         tags: [interview]
         prompt: "In a German interview it is a good idea to ask your own questions at the end."
         answer: true
+        explanation: "Asking your own questions at the end shows interest and is expected."
 
   - title: A cover letter
     items:
@@ -118,6 +132,7 @@ sets:
           - [zuverlässig]
           - [würde]
           - [freundlichen]
+        explanation: "Sehr geehrte; sich bewerben um; Erfahrung haben; verantwortlich für; zuverlässig; würde … freuen; Mit freundlichen Grüßen."
 
   - title: An advert
     stimulus:
@@ -130,17 +145,20 @@ sets:
         tags: [reading]
         prompt: Die Stelle ist eine Teilzeitstelle.
         answer: false
+        explanation: "The advert says in Vollzeit: full-time."
       - id: read2
         type: true-false
         tags: [reading]
         prompt: Man muss auch am Wochenende arbeiten.
         answer: true
+        explanation: "The profile asks for Bereitschaft zur Arbeit am Wochenende."
       - id: read3
         type: multiple-choice
         tags: [reading]
         prompt: Was bietet das Hotel?
         options: ["einen unbefristeten Vertrag und eine Unterkunft", "ein hohes Gehalt und ein Auto", "freie Wochenenden"]
         answer: "einen unbefristeten Vertrag und eine Unterkunft"
+        explanation: "The hotel offers einen unbefristeten Vertrag, Unterkunft im Personalhaus and free meals."
 
   - title: Apply
     items:

@@ -8,16 +8,19 @@ sets:
         tags: [present tense]
         prompt: "Ich ___ aus Indien. (kommen)"
         answers: [komme]
+        explanation: "With ich the verb ends in -e: ich komme, ich wohne, ich heiße."
       - id: verb2
         type: fill-blank
         tags: [present tense]
         prompt: "Woher ___ du? (kommen)"
         answers: [kommst]
+        explanation: "With du the verb ends in -st: du kommst, du wohnst."
       - id: verb3
         type: fill-blank
         tags: [present tense]
         prompt: "Er ___ in Berlin. (wohnen)"
         answers: [wohnt]
+        explanation: "With er, sie and es the verb ends in -t: er wohnt, sie kommt."
       - id: verb4
         type: fill-blank
         tags: [present tense]
@@ -36,6 +39,7 @@ sets:
         prompt: "Sie ___ Anna. (heißen)"
         answers: [heißt]
         translation: Her name is Anna.
+        explanation: "Sie with a verb ending in -t means 'she'. heißen already ends in ß, so it only adds -t: sie heißt."
 
   - title: The verb sein
     instructions: Complete with a form of sein.
@@ -45,21 +49,25 @@ sets:
         tags: [sein]
         prompt: "Ich ___ Tom."
         answers: [bin]
+        explanation: "sein is irregular. With ich it is bin: ich bin Tom."
       - id: sein2
         type: fill-blank
         tags: [sein]
         prompt: "___ du Anna?"
         answers: [Bist]
+        explanation: "With du, sein becomes bist. In a yes/no question the verb comes first: Bist du Anna?"
       - id: sein3
         type: fill-blank
         tags: [sein]
         prompt: "Das ___ Herr Schmidt."
         answers: [ist]
+        explanation: "With er, sie, es and das, sein becomes ist: Das ist Herr Schmidt."
       - id: sein4
         type: fill-blank
         tags: [sein]
         prompt: "___ Sie Frau Weber?"
         answers: [Sind]
+        explanation: "Formal Sie takes sind, the same form as wir and sie (they): Sind Sie Frau Weber?"
 
   - title: Which question word?
     items:
@@ -69,6 +77,7 @@ sets:
         prompt: ___ heißen Sie?
         options: [Wie, Wo, Woher]
         answer: Wie
+        explanation: "Wie asks for a name or a way: Wie heißen Sie? Wo asks for a place, woher for where someone comes from."
       - id: w2
         type: multiple-choice
         tags: [W-questions]
@@ -82,12 +91,14 @@ sets:
         prompt: ___ wohnen Sie? In Hamburg.
         options: [Wo, Woher, Wie]
         answer: Wo
+        explanation: "The answer In Hamburg is a place, so the question word is wo (where). Woher asks where someone comes from."
       - id: w4
         type: multiple-choice
         tags: [W-questions]
         prompt: ___ ist das? Das ist Frau Weber.
         options: [Wer, Wie, Wo]
         answer: Wer
+        explanation: "Wer asks about a person: Wer ist das? Das ist Frau Weber."
       - id: w5
         type: matching
         tags: [W-questions]
@@ -97,6 +108,7 @@ sets:
           - { left: Woher kommst du?, right: Aus Polen. }
           - { left: Wo wohnst du?, right: In Köln. }
           - { left: Welche Sprachen sprichst du?, right: Polnisch und Deutsch. }
+        explanation: "Wie asks for the name, woher for the country (aus …), wo for the town (in …), and welche Sprachen for languages."
 
   - title: aus or in?
     items:
@@ -105,11 +117,13 @@ sets:
         tags: [aus and in]
         prompt: "Ich komme ___ Italien."
         answers: [aus]
+        explanation: "For the country or town someone comes from, German uses aus: Ich komme aus Italien."
       - id: prep2
         type: fill-blank
         tags: [aus and in]
         prompt: "Sie wohnt ___ München."
         answers: [in]
+        explanation: "For where someone lives now, German uses in: Sie wohnt in München."
       - id: prep3
         type: multiple-choice
         tags: [aus and in]
@@ -127,11 +141,13 @@ sets:
         prompt: Where do you come from? (formal)
         answer: Woher kommen Sie?
         hint: Question word first, verb second.
+        explanation: "In a question with a question word, the verb comes second: Woher kommen Sie?"
       - id: order2
         type: word-order
         tags: [word order]
         prompt: I speak English and a little German.
         answer: Ich spreche Englisch und ein bisschen Deutsch.
+        explanation: "The verb spreche comes second, after ich. The languages follow, joined by und."
       - id: order3
         type: word-order
         tags: [word order]
@@ -156,6 +172,7 @@ sets:
         tags: [reading]
         prompt: Karim kommt aus Syrien.
         answer: true
+        explanation: "The text says: Ich komme aus Syrien, aus Damaskus."
       - id: read2
         type: true-false
         tags: [reading]
@@ -167,11 +184,13 @@ sets:
         tags: [reading]
         prompt: Elena wohnt in Berlin.
         answer: true
+        explanation: "The text says Elena kommt aus Spanien und wohnt in Berlin."
       - id: read4
         type: true-false
         tags: [reading]
         prompt: Elena spricht Arabisch.
         answer: false
+        explanation: "Karim speaks Arabic. Elena speaks Spanish and very good German."
 
   - title: Fill in the form
     instructions: This is the first writing task of the A1 exam. Take the information from the text.
@@ -186,6 +205,7 @@ sets:
           - { label: Familienname, answers: [Rossi] }
           - { label: Land, answers: [Italien] }
           - { label: Wohnort, answers: [München] }
+        explanation: "Vorname is the first name, Familienname the surname, Land the country she comes from, and Wohnort the town she lives in."
 
   - title: Say it in German
     items:
@@ -194,21 +214,25 @@ sets:
         tags: [introducing yourself]
         prompt: What is your name? (formal)
         answers: [Wie heißen Sie?]
+        explanation: "Formal questions use Sie, and the verb then has the -en ending: Wie heißen Sie?"
       - id: tr2
         type: translation
         tags: [introducing yourself]
         prompt: I come from India.
         answers: [Ich komme aus Indien.]
+        explanation: "Where you come from is aus, plus the country with no article: Ich komme aus Indien."
       - id: tr3
         type: translation
         tags: [introducing yourself]
         prompt: Where do you live? (informal)
         answers: [Wo wohnst du?]
+        explanation: "Wo asks for a place. With du the verb ends in -st: Wo wohnst du?"
       - id: tr4
         type: translation
         tags: [introducing yourself]
         prompt: That is Mrs Weber.
         answers: [Das ist Frau Weber.]
+        explanation: "Das ist introduces someone, and a woman is addressed or named as Frau plus her surname."
 
   - title: Write and speak about yourself
     items:

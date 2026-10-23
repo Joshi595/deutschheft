@@ -8,8 +8,8 @@ interface Props {
 const { title, label = 'Grammar' } = Astro.props;
 ---
 
-<aside class="card border-l-4 border-l-accent p-5">
+<aside class="border-l-4 border-accent bg-surface-2 p-5">
   <p class="eyebrow">{label}</p>
-  <p class="font-display mt-1 text-xl font-semibold">{title}</p>
+  <p class="font-display mt-1 text-xl">{title}</p>
   <div class="mt-3 grid gap-3"><slot /></div>
 </aside>

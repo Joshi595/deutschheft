@@ -1,4 +1,6 @@
 ---
+import VoiceNotice from '../../components/ui/VoiceNotice.astro';
+import PageHeader from '../../components/ui/PageHeader.astro';
 import MissionRunner from '../../components/missions/MissionRunner';
 import Base from '../../layouts/Base.astro';
 import { getCatalog } from '../../lib/content/catalog';
@@ -16,19 +18,13 @@ const next = catalog.missions[index + 1];
 ---
 
 <Base title={`${mission.titleDe} (${mission.title})`} description={mission.objective} width="narrow">
-  <nav aria-label="Breadcrumb" class="text-sm text-muted">
-    <a href={url('speak/')} class="hover:text-ink">Speak</a>
-    <span aria-hidden="true"> / </span>
-    <a href={url('speak/conversations/')} class="hover:text-ink">Conversations</a>
-    <span aria-hidden="true"> / </span>
-    <span>{mission.title}</span>
-  </nav>
-
-  <header class="mt-4">
-    <p class="eyebrow">{mission.level.toUpperCase()} mission</p>
-    <h1 class="mt-1 text-4xl sm:text-5xl" lang="de">{mission.titleDe}</h1>
-    <p class="mt-2 text-lg text-muted">{mission.title}</p>
-  </header>
+  <PageHeader
+    title={mission.titleDe}
+    lang="de"
+    crumbs={[{ label: 'Speak', href: url('speak/') }, { label: 'Conversations', href: url('speak/conversations/') }, { label: `${mission.level.toUpperCase()} mission` }]}
+    lead={mission.title}
+  />
+  <VoiceNotice />
 
   <div class="mt-8">
     <MissionRunner
@@ -38,7 +34,7 @@ const next = catalog.missions[index + 1];
       listHref={url('speak/conversations/')}
       speakHref={url(`speak/conversations/${mission.id}/`)}
     >
-      <div slot="fallback" class="card p-6 text-muted">Setting the scene …</div>
+      <div slot="fallback" class="skeleton min-h-48" role="status"><span class="sr-only">Setting the scene …</span></div>
     </MissionRunner>
   </div>
 </Base>

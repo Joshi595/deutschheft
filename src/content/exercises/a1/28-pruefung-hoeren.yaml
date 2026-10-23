@@ -14,6 +14,7 @@ sets:
         prompt: Which number do you hear?
         options: ["30", "13"]
         answer: "30"
+        explanation: "dreißig ends in -ßig, so it is a tens number, 30. 13 would be dreizehn, ending in -zehn."
       - id: ear2
         type: multiple-choice
         tags: [exam listening, numbers]
@@ -25,6 +26,7 @@ sets:
         prompt: Which number do you hear?
         options: ["16", "60"]
         answer: "16"
+        explanation: "sechzehn ends in -zehn, so it is a teen, 16. 60 would be sechzig."
       - id: ear3
         type: fill-blank
         tags: [exam listening, numbers]
@@ -35,6 +37,7 @@ sets:
             - text: "siebenundachtzig"
         prompt: "Die Zahl ist ___."
         answers: ["87"]
+        explanation: "sieben-und-achtzig: the ones come first, 7 and 80, so 87."
       - id: ear4
         type: multiple-choice
         tags: [exam listening, time]
@@ -46,6 +49,7 @@ sets:
         prompt: Wie spät ist es?
         options: ["8:30", "9:30", "9:00"]
         answer: "8:30"
+        explanation: "halb neun is half an hour before nine: 8:30."
 
   - title: "Teil 1: kurze Gespräche"
     instructions: Was ist richtig? Sie hören jeden Text zweimal.
@@ -83,6 +87,7 @@ sets:
         prompt: Wann gehen sie ins Kino?
         options: [am Samstag, am Freitag, am Sonntag]
         answer: am Samstag
+        explanation: "The woman can't on Friday: aber am Samstag habe ich Zeit, and the man agrees."
       - id: h1c
         type: multiple-choice
         tags: [exam listening]
@@ -97,6 +102,7 @@ sets:
         prompt: Wo ist die Post?
         options: [neben der Bank, neben dem Bahnhof, an der Ampel]
         answer: neben der Bank
+        explanation: "The woman ends with: Die Post ist neben der Bank."
       - id: h1d
         type: multiple-choice
         tags: [exam listening]
@@ -127,6 +133,7 @@ sets:
             - text: "Achtung an Gleis drei! Der Regionalexpress nach Leipzig fährt heute nicht von Gleis drei, sondern von Gleis sechs."
         prompt: Der Zug nach Leipzig fährt von Gleis 3.
         answer: false
+        explanation: "The train goes nicht von Gleis drei, sondern von Gleis sechs. Gleis 3 is only where you hear it."
       - id: h2b
         type: true-false
         tags: [exam listening]
@@ -138,6 +145,7 @@ sets:
             - text: "Liebe Kundinnen und Kunden! Heute im Angebot: frische Tomaten, das Kilo nur ein Euro neunundneunzig. Sie finden die Tomaten am Eingang."
         prompt: Ein Kilo Tomaten kostet heute 1,99 Euro.
         answer: true
+        explanation: "The offer is das Kilo nur ein Euro neunundneunzig, which is 1,99 €."
       - id: h2c
         type: true-false
         tags: [exam listening]
@@ -149,6 +157,7 @@ sets:
             - text: "Sehr geehrte Fluggäste, der Flug nach Wien hat circa vierzig Minuten Verspätung. Wir bitten um Entschuldigung."
         prompt: Das Flugzeug nach Wien fliegt pünktlich.
         answer: false
+        explanation: "The flight has circa vierzig Minuten Verspätung, so it is not on time."
       - id: h2d
         type: true-false
         tags: [exam listening]
@@ -160,6 +169,7 @@ sets:
             - text: "Liebe Besucher, das Museum schließt in fünfzehn Minuten. Bitte gehen Sie zum Ausgang."
         prompt: Das Museum ist noch eine Stunde geöffnet.
         answer: false
+        explanation: "The museum schließt in fünfzehn Minuten: it closes in 15 minutes, not an hour."
 
   - title: "Teil 3: Nachrichten am Telefon"
     instructions: Was ist richtig? Sie hören jeden Text zweimal.
@@ -175,6 +185,7 @@ sets:
         prompt: Wann kommt Jan?
         options: ["um 19:30 Uhr", "um 18:00 Uhr", "um 20:30 Uhr"]
         answer: "um 19:30 Uhr"
+        explanation: "Jan says: Ich kann erst um halb acht kommen. halb acht is 7:30."
       - id: h3b
         type: multiple-choice
         tags: [exam listening]
@@ -186,6 +197,7 @@ sets:
         prompt: Wann soll Frau Kaya kommen?
         options: [am Donnerstag um elf Uhr, morgen um neun Uhr, am Donnerstag um neun Uhr]
         answer: am Donnerstag um elf Uhr
+        explanation: "Tomorrow at nine does not work: Bitte kommen Sie am Donnerstag um elf Uhr."
       - id: h3c
         type: multiple-choice
         tags: [exam listening]
@@ -197,6 +209,7 @@ sets:
         prompt: Welche Nummer soll Tom anrufen?
         options: ["73048", "73084", "37048"]
         answer: "73048"
+        explanation: "Lena reads the number digit by digit: sieben, drei, null, vier, acht."
       - id: h3d
         type: multiple-choice
         tags: [exam listening]

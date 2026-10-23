@@ -11,16 +11,19 @@ sets:
           - "Meiner Meinung nach Kinder sollten weniger fernsehen."
           - "Meiner Meinung nach Kinder weniger fernsehen sollten."
         answer: "Meiner Meinung nach sollten Kinder weniger fernsehen."
+        explanation: "Meiner Meinung nach fills position one, so the verb sollten comes straight after it."
       - id: wo2
         type: word-order
         tags: [word order]
         prompt: I am convinced that sport is important.
         answer: "Ich bin davon überzeugt, dass Sport wichtig ist."
+        explanation: "davon überzeugt sein, dass …: davon points to the dass clause, where ist goes last."
       - id: wo3
         type: word-order
         tags: [word order]
         prompt: On the one hand it is practical, on the other hand it is expensive.
         answer: "Einerseits ist es praktisch, andererseits ist es teuer."
+        explanation: "Einerseits and andererseits each take position one, so the verb ist follows each of them."
 
   - title: Agree, partly agree or disagree?
     items:
@@ -31,6 +34,7 @@ sets:
         options: [agree, partly agree, disagree]
         answer: agree
         shuffle: false
+        explanation: "Das sehe ich genauso means 'I see it exactly the same way': full agreement."
       - id: ag2
         type: multiple-choice
         tags: [reactions]
@@ -38,6 +42,7 @@ sets:
         options: [agree, partly agree, disagree]
         answer: partly agree
         shuffle: false
+        explanation: "Das stimmt zwar, aber … grants a point and then disagrees: partial agreement."
       - id: ag3
         type: multiple-choice
         tags: [reactions]
@@ -45,6 +50,7 @@ sets:
         options: [agree, partly agree, disagree]
         answer: disagree
         shuffle: false
+        explanation: "Da bin ich anderer Meinung means 'I have a different opinion': disagreement."
       - id: ag4
         type: multiple-choice
         tags: [reactions]
@@ -52,6 +58,7 @@ sets:
         options: [agree, partly agree, disagree]
         answer: disagree
         shuffle: false
+        explanation: "Ich sehe das ein bisschen anders is a polite, softened disagreement."
       - id: ag5
         type: multiple-choice
         tags: [reactions]
@@ -59,6 +66,7 @@ sets:
         options: [agree, partly agree, disagree]
         answer: agree
         shuffle: false
+        explanation: "Da hast du völlig Recht means 'you are completely right': full agreement."
 
   - title: Fixed phrases
     items:
@@ -67,27 +75,32 @@ sets:
         tags: [phrases]
         prompt: "Da hast du ___. (You are right.)"
         answers: [Recht, recht]
+        explanation: "Recht haben means to be right: Da hast du Recht."
       - id: fix2
         type: fill-blank
         tags: [phrases]
         prompt: "Ich stimme ___ zu. (you, informal)"
         answers: [dir]
+        explanation: "zustimmen takes the dative: Ich stimme dir zu."
       - id: fix3
         type: fill-blank
         tags: [phrases]
         prompt: "___ spricht, dass man Zeit spart. (In favour of it)"
         answers: [Dafür]
+        explanation: "Dafür spricht, dass … gives an argument in favour."
       - id: fix4
         type: fill-blank
         tags: [phrases]
         prompt: "___ kann man sagen, dass … (in summary)"
         answers: [Zusammenfassend]
+        explanation: "Zusammenfassend kann man sagen … sums up a discussion."
       - id: fix6
         type: multiple-choice
         tags: [phrases]
         prompt: "How do you say 'I think so' in German?"
         options: ["Ich denke schon.", "Ich denke so.", "Ich glaube es so."]
         answer: "Ich denke schon."
+        explanation: "'I think so' is Ich denke schon or Ich glaube schon. German does not use so here."
       - id: fix5
         type: matching
         tags: [phrases]
@@ -98,6 +111,7 @@ sets:
           - { left: Andererseits, right: On the other hand }
           - { left: Insgesamt, right: Overall }
           - { left: Ich verstehe deinen Punkt, right: I see your point }
+        explanation: "Meiner Meinung nach in my opinion, Der Grund dafür ist the reason is, Andererseits on the other hand, Insgesamt overall, Ich verstehe deinen Punkt I see your point."
 
   - title: An opinion post
     items:
@@ -114,6 +128,7 @@ sets:
           - [Einerseits]
           - [andererseits]
           - [Zusammenfassend]
+        explanation: "Meiner Meinung nach (opinion), Der Grund dafür (reason), Dafür spricht (argument for), Einerseits … andererseits (both sides), Zusammenfassend (conclusion)."
 
   - title: A discussion
     stimulus:
@@ -137,17 +152,20 @@ sets:
         prompt: Was meint Herr Kraft?
         options: ["Handys sollten in Schulen verboten werden.", "Handys sind ein gutes Lernwerkzeug.", "Die Kinder sollten in den Pausen spielen dürfen, was sie wollen."]
         answer: "Handys sollten in Schulen verboten werden."
+        explanation: "Herr Kraft says: Ich bin ganz klar dafür, for banning phones."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Frau Aydin stimmt Herrn Kraft am Anfang zu.
         answer: false
+        explanation: "Frau Aydin begins: Da bin ich anderer Meinung."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Welchen Kompromiss schlägt Frau Aydin vor?
         options: ["eine Regel nur für die Pausen", "Handys nur für Lehrer", "Handys nur in der Mathestunde"]
         answer: "eine Regel nur für die Pausen"
+        explanation: "She suggests: eine Regel nur für die Pausen."
 
   - title: Your opinion
     items:

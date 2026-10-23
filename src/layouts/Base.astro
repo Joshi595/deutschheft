@@ -1,9 +1,9 @@
 ---
-import '@fontsource-variable/inter';
-import '@fontsource-variable/fraunces/full.css';
-import '@fontsource-variable/fraunces/full-italic.css';
+import '@fontsource-variable/archivo/wdth.css';
 import '../styles/global.css';
 import TranslatePanel from '../components/translate/TranslatePanel';
+import Icon from '../components/ui/Icon.astro';
+import type { IconName } from '../components/ui/icons';
 import { site } from '../site';
 import { url } from '../lib/url';
 
@@ -18,13 +18,12 @@ const { title, description = site.description, width = 'wide' } = Astro.props;
 const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.tagline}`;
 const path = Astro.url.pathname;
 
-// Icons are 24px line drawings, one path each.
-const nav = [
-  { href: url(''), label: 'Today', icon: 'M7 3v3M17 3v3M4 9.5h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1ZM8.5 14.5l2.3 2.3 4.7-4.8' },
-  { href: url('learn/'), label: 'Learn', icon: 'M12 6.5c-1.8-1.3-4-2-7-2v13c3 0 5.2.7 7 2 1.8-1.3 4-2 7-2v-13c-3 0-5.2.7-7 2Zm0 0v13' },
-  { href: url('speak/'), label: 'Speak', icon: 'M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3ZM6 11a6 6 0 0 0 12 0M12 17v4M9 21h6' },
-  { href: url('review/'), label: 'Review', icon: 'm17 3 3 3-3 3M4 11V9a3 3 0 0 1 3-3h13M7 21l-3-3 3-3M20 13v2a3 3 0 0 1-3 3H4' },
-  { href: url('notebook/'), label: 'Notebook', icon: 'M7 3h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 0v18M13 8h2.5M13 12h2.5' },
+const nav: { href: string; label: string; icon: IconName }[] = [
+  { href: url(''), label: 'Today', icon: 'today' },
+  { href: url('learn/'), label: 'Learn', icon: 'learn' },
+  { href: url('speak/'), label: 'Speak', icon: 'speak' },
+  { href: url('review/'), label: 'Review', icon: 'review' },
+  { href: url('notebook/'), label: 'Notebook', icon: 'notebook' },
 ];
 const [today, learn, speak] = nav as [(typeof nav)[number], (typeof nav)[number], (typeof nav)[number], ...typeof nav];
 const elsewhere = [url('settings/'), url('progress/')];
@@ -46,8 +45,8 @@ const active =
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#131210" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101318" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
     <link rel="manifest" href={url('manifest.webmanifest')} />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
@@ -64,77 +63,63 @@ const active =
       } catch (error) {}
     </script>
   </head>
-  <body class="flex flex-col pb-[calc(3.5rem+env(safe-area-inset-bottom))] sm:pb-0">
+  <body class="flex flex-col pb-[calc(var(--tabbar-h)+env(safe-area-inset-bottom))] sm:pb-0 sm:pl-(--sidebar-w)">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 btn">Skip to content</a>
 
-    <div class="flex h-1" aria-hidden="true">
-      <span class="flex-1" style="background: #000"></span>
-      <span class="flex-1" style="background: var(--flag-red)"></span>
-      <span class="flex-1 bg-accent"></span>
-    </div>
+    <header class="shell">
+      <a href={url('')} class="flex items-center gap-2.5 sm:max-lg:justify-center sm:px-0.5 lg:px-1.5" aria-label={`${site.name}, today`}>
+        <span class="mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="font-display text-lg leading-none sm:max-lg:sr-only">{site.name}</span>
+      </a>
 
-    <header class="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
-      <div class="mx-auto flex max-w-5xl items-center gap-x-5 px-4 py-2.5">
-        <a href={url('')} class="font-display text-xl font-semibold tracking-tight">
-          {site.name}<span class="text-accent">.</span>
+      <nav aria-label="Main" class="hidden flex-col gap-1 sm:flex">
+        {
+          nav.map((item) => (
+            <a href={item.href} aria-current={item === active ? 'page' : undefined} class="shell-link" title={item.label}>
+              <Icon name={item.icon} size={22} />
+              <span class="max-lg:sr-only">{item.label}</span>
+              {item.label === 'Review' && <span data-due-badge hidden class="badge absolute top-0.5 right-0.5 lg:static lg:ml-auto" />}
+            </a>
+          ))
+        }
+      </nav>
+
+      <div class="shell-tools">
+        <a
+          href={url('progress/')}
+          data-goal-chip
+          aria-current={path.startsWith(url('progress/')) ? 'page' : undefined}
+          class="shell-link tabular-nums"
+          title="Today's points. Open your progress."
+        >
+          <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" class="flex-none">
+            <circle cx="11" cy="11" r="8.5" fill="none" stroke="var(--line)" stroke-width="3.5"></circle>
+            <circle data-goal-arc cx="11" cy="11" r="8.5" fill="none" stroke="var(--signal)" stroke-width="3.5" stroke-dasharray="53.4" stroke-dashoffset="53.4" transform="rotate(-90 11 11)" style="transition: stroke-dashoffset 0.5s ease"></circle>
+          </svg>
+          <span class="text-ink sm:max-lg:sr-only"><span data-goal-text>Progress</span><span class="max-lg:hidden font-normal text-muted"> today</span></span>
         </a>
-        <nav aria-label="Main" class="hidden items-center text-sm font-semibold sm:flex">
-          {
-            nav.map((item) => (
-              <a
-                href={item.href}
-                aria-current={item === active ? 'page' : undefined}
-                class:list={[
-                  'relative rounded-lg px-3 py-2 transition-colors hover:text-ink',
-                  item === active ? 'text-ink' : 'text-muted',
-                ]}
-              >
-                {item.label}
-                {item.label === 'Review' && <span data-due-badge hidden class="chip chip-accent ml-1 px-1.5 text-[0.7rem]" />}
-                {item === active && <span class="absolute inset-x-3 -bottom-0.5 h-0.5 rounded bg-accent" />}
-              </a>
-            ))
-          }
-        </nav>
-        <div class="ml-auto flex items-center gap-1.5">
-          <a
-            href={url('progress/')}
-            data-goal-chip
-            aria-current={path.startsWith(url('progress/')) ? 'page' : undefined}
-            class="flex min-h-9 items-center gap-2 rounded-full border border-line bg-surface py-1 pr-3 pl-1.5 text-sm font-semibold tabular-nums transition-colors hover:border-ink aria-[current=page]:border-ink"
-          >
-            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
-              <circle cx="11" cy="11" r="8.5" fill="none" stroke="var(--surface-2)" stroke-width="3.5"></circle>
-              <circle data-goal-arc cx="11" cy="11" r="8.5" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="53.4" stroke-dashoffset="53.4" transform="rotate(-90 11 11)" style="transition: stroke-dashoffset 0.5s ease"></circle>
-            </svg>
-            <span data-goal-text>Progress</span>
-          </a>
-          <a
-            href={url('settings/')}
-            aria-label="Settings"
-            title="Settings"
-            aria-current={path.startsWith(url('settings/')) ? 'page' : undefined}
-            class="grid size-9 place-items-center rounded-full text-muted transition-colors hover:bg-surface-2 hover:text-ink aria-[current=page]:bg-surface-2 aria-[current=page]:text-ink"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-              <path d="M4 7h9M17 7h3M4 17h3M11 17h9M15 4.5v5M9 14.5v5"></path>
-            </svg>
-          </a>
-        </div>
+        <button type="button" class="shell-link" data-translate-open aria-controls="translate-panel" aria-expanded="false" title="Translate. Select text first to translate it.">
+          <Icon name="translate" size={22} />
+          <span class="max-lg:sr-only">Translate</span>
+        </button>
+        <a
+          href={url('settings/')}
+          aria-current={path.startsWith(url('settings/')) ? 'page' : undefined}
+          class="shell-link"
+          title="Settings"
+        >
+          <Icon name="settings" size={22} />
+          <span class="max-lg:sr-only">Settings</span>
+        </a>
       </div>
     </header>
 
-    <p data-voice-notice class="voice-notice border-b border-line bg-accent-soft px-4 py-2 text-center text-sm">
-      This browser has no German voice, so listening is switched off wherever there is no recording.{' '}
-      <a href={`${url('settings/')}#audio`} class="font-semibold underline underline-offset-4">How to get it back</a>
-    </p>
-
-    <main id="main" class:list={['mx-auto w-full flex-1 px-4 py-8 sm:py-12', width === 'narrow' ? 'max-w-3xl' : 'max-w-5xl']}>
+    <main id="main" class:list={['w-full flex-1 px-4 pt-8 pb-16 sm:px-10 sm:pt-12 lg:px-16', width === 'narrow' ? 'max-w-[54rem]' : 'max-w-[80rem]']}>
       <slot />
     </main>
 
-    <footer class="border-t border-line">
-      <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-6 text-sm text-muted">
+    <footer class="border-t border-line px-4 py-6 text-sm text-muted sm:px-10 lg:px-16">
+      <div class="flex max-w-[64rem] flex-wrap items-center justify-between gap-3">
         <p>{site.name}. Your progress is stored in this browser only.</p>
         <a href={site.repo} class="underline underline-offset-4 hover:text-ink">Source on GitHub</a>
       </div>
@@ -144,11 +129,9 @@ const active =
       {
         nav.map((item) => (
           <a href={item.href} aria-current={item === active ? 'page' : undefined}>
-            <span class="tab-icon relative">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d={item.icon} />
-              </svg>
-              {item.label === 'Review' && <span data-due-badge hidden class="chip chip-accent absolute -top-1 left-7 px-1.5 text-[0.65rem] ring-2 ring-bg" />}
+            <span class="tab-icon">
+              <Icon name={item.icon} size={22} />
+              {item.label === 'Review' && <span data-due-badge hidden class="badge absolute -top-1 left-7 ring-2 ring-bg" />}
             </span>
             {item.label}
           </a>
@@ -184,7 +167,26 @@ const active =
       checkVoices();
       window.speechSynthesis?.addEventListener('voiceschanged', checkVoices);
 
-      // Due-card count next to "Review", in the top bar and in the tab bar.
+      // The no-German-voice notice says its piece once; closing it hides it on every page.
+      const NOTICE_KEY = 'lg:voice-notice-dismissed';
+      function readDismissed() {
+        try {
+          return localStorage.getItem(NOTICE_KEY) === '1';
+        } catch {
+          return false;
+        }
+      }
+      if (readDismissed()) document.querySelectorAll('[data-voice-notice]').forEach((notice) => notice.setAttribute('data-dismissed', ''));
+      document.addEventListener('click', (event) => {
+        const notice = (event.target as HTMLElement).closest('[data-voice-dismiss]')?.closest('[data-voice-notice]');
+        if (!notice) return;
+        document.querySelectorAll('[data-voice-notice]').forEach((each) => each.setAttribute('data-dismissed', ''));
+        try {
+          localStorage.setItem(NOTICE_KEY, '1');
+        } catch {}
+      });
+
+      // Due-card count next to "Review", in the sidebar and in the tab bar.
       $review.subscribe((review) => {
         const due = dueCards(review, new Date()).length;
         document.querySelectorAll<HTMLElement>('[data-due-badge]').forEach((badge) => {
@@ -194,7 +196,7 @@ const active =
         });
       });
 
-      // Today's points against the daily goal, in the top bar.
+      // Today's points against the daily goal, in the shell.
       function paintGoal() {
         const chip = document.querySelector<HTMLElement>('[data-goal-chip]');
         const arc = chip?.querySelector<SVGCircleElement>('[data-goal-arc]');
@@ -204,7 +206,7 @@ const active =
         const goal = $settings.get().dailyGoal;
         const share = goal > 0 ? Math.min(1, earned / goal) : 0;
         arc.style.strokeDashoffset = String(53.4 * (1 - share));
-        arc.style.stroke = share >= 1 ? 'var(--good)' : 'var(--accent)';
+        arc.style.stroke = share >= 1 ? 'var(--good)' : 'var(--signal)';
         text.textContent = goal > 0 ? `${earned}/${goal}` : `${earned}`;
         chip.setAttribute(
           'aria-label',

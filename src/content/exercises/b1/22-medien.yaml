@@ -13,26 +13,31 @@ sets:
           - { left: löschen, right: to delete }
           - { left: speichern, right: to save }
           - { left: überprüfen, right: to check }
+        explanation: "herunterladen download, hochladen upload, teilen share, löschen delete, speichern save, überprüfen check."
       - id: v2
         type: fill-blank
         tags: [Perfekt]
         prompt: "Ich habe die App ___. (herunterladen)"
         answers: [heruntergeladen]
+        explanation: "herunterladen is separable, so ge- goes in the middle: heruntergeladen."
       - id: v3
         type: fill-blank
         tags: [Perfekt]
         prompt: "Sie hat ein Foto ___. (posten)"
         answers: [gepostet]
+        explanation: "English loan verbs are made regular: posten → gepostet."
       - id: v4
         type: fill-blank
         tags: [Perfekt]
         prompt: "Ich habe mich noch nicht ___. (anmelden)"
         answers: [angemeldet]
+        explanation: "sich anmelden is separable: angemeldet."
       - id: v5
         type: fill-blank
         tags: [Perfekt]
         prompt: "Hast du das schon ___? (googeln)"
         answers: [gegoogelt]
+        explanation: "googeln is a regular verb: gegoogelt."
 
   - title: Habits
     items:
@@ -42,17 +47,20 @@ sets:
         prompt: "Ich verbringe zu viel Zeit ___ Handy."
         options: [am, mit dem, im]
         answer: am
+        explanation: "Time spent on a device is am Handy (an + dem)."
       - id: h2
         type: multiple-choice
         tags: [habits]
         prompt: "Ich informiere mich ___ die Nachrichten im Internet."
         options: [über, für, auf]
         answer: über
+        explanation: "sich informieren über + accusative: about something."
       - id: h3
         type: word-order
         tags: [habits]
         prompt: In the evening I like watching series.
         answer: "Abends schaue ich gern Serien."
+        explanation: "Abends takes position one, so schaue comes next; gern follows the subject."
 
   - title: Surveys
     items:
@@ -65,11 +73,13 @@ sets:
           - "Laut einer Umfrage 90 Prozent nutzen das Internet täglich."
           - "Laut einer Umfrage nutzen das Internet täglich 90 Prozent die."
         answer: "Laut einer Umfrage nutzen 90 Prozent das Internet täglich."
+        explanation: "Laut einer Umfrage fills position one, so the verb nutzen comes straight after it."
       - id: s2
         type: fill-blank
         tags: [surveys]
         prompt: "60 Prozent der ___ sind zufrieden. (people asked)"
         answers: [Befragten]
+        explanation: "die Befragten are the people asked; after der in the genitive plural the ending is -en."
       - id: s3
         type: translation
         tags: [surveys]
@@ -77,12 +87,14 @@ sets:
         answers:
           - "Eine Studie hat ergeben, dass Jugendliche zu wenig schlafen."
           - "Eine Studie hat ergeben, dass junge Leute zu wenig schlafen."
+        explanation: "Eine Studie hat ergeben, dass … : in the dass clause the verb schlafen goes last."
       - id: s4
         type: multiple-choice
         tags: [surveys]
         prompt: "'Die Mehrheit' means …"
         options: [the majority, the minority, the average]
         answer: the majority
+        explanation: "die Mehrheit is the majority, more than half."
 
   - title: Reliable or not?
     items:
@@ -91,18 +103,21 @@ sets:
         tags: [media literacy]
         prompt: "'Bevor ich etwas teile, überprüfe ich die Quelle' means you check the source before sharing."
         answer: true
+        explanation: "die Quelle überprüfen means checking the source."
       - id: r2
         type: multiple-choice
         tags: [prepositions]
         prompt: "Auf Informationen aus dem Internet kann man sich nicht immer ___."
         options: [verlassen, vertrauen, glauben]
         answer: verlassen
+        explanation: "sich verlassen auf means to rely on: you can't always rely on information from the internet."
       - id: r3
         type: multiple-choice
         tags: [vocabulary]
         prompt: "'seriös' means …"
         options: [reliable, serious illness, secret]
         answer: reliable
+        explanation: "seriös means trustworthy or reliable, not 'serious' in the English sense."
 
   - title: Social media
     items:
@@ -119,6 +134,7 @@ sets:
           - [andererseits]
           - [abhängig]
           - [Datenschutz]
+        explanation: "Laut (according to); Einerseits … andererseits (both sides); Ideen teilen; abhängig von (addicted to); Datenschutz (data protection)."
 
   - title: A radio report
     stimulus:
@@ -134,17 +150,20 @@ sets:
         prompt: Wie viele Jugendliche lesen eine gedruckte Zeitung?
         options: ["10 Prozent", "70 Prozent", "die Mehrheit"]
         answer: "10 Prozent"
+        explanation: "The study says: nur noch zehn Prozent der Jugendlichen lesen eine gedruckte Zeitung."
       - id: listen2
         type: true-false
         tags: [listening]
         prompt: Die meisten Jugendlichen informieren sich über soziale Netzwerke.
         answer: true
+        explanation: "Die Mehrheit, nämlich siebzig Prozent, informiert sich über soziale Netzwerke."
       - id: listen3
         type: multiple-choice
         tags: [listening]
         prompt: Was empfehlen die Experten?
         options: ["mehr Medienunterricht in der Schule", "Handys verbieten", "mehr Zeitungen kaufen"]
         answer: "mehr Medienunterricht in der Schule"
+        explanation: "The experts recommend: in der Schule mehr über Medien zu lernen."
 
   - title: Present it
     items:
